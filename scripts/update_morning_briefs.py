@@ -39,6 +39,15 @@ GOOGLE_NEWS = "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=
 
 BRIEFS = [
     {
+        "id": "ai",
+        "name": "AI / Analytics",
+        "headline": "AI & Analytics Brief",
+        # The AI section is populated from the vetted Daily AI Briefing output,
+        # not the old generic AI RSS/news-card pipeline.
+        "queries": [],
+        "fallbackQueries": [],
+    },
+    {
         "id": "energy",
         "name": "Energy / Utilities",
         "headline": "Morning Energy Brief",
@@ -53,15 +62,6 @@ BRIEFS = [
             '("LG&E" OR "Louisville Gas and Electric" OR "Kentucky Utilities" OR "PPL") (utility OR utilities OR power OR electricity OR rates OR grid) when:7d',
             '("LG&E" OR "Kentucky Utilities" OR "PPL") ("data center" OR "power demand") when:7d',
         ],
-    },
-    {
-        "id": "ai",
-        "name": "AI / Analytics",
-        "headline": "AI & Analytics Brief",
-        # The AI section is populated from the vetted Daily AI Briefing output,
-        # not the old generic AI RSS/news-card pipeline.
-        "queries": [],
-        "fallbackQueries": [],
     },
 ]
 
@@ -215,6 +215,13 @@ def clean_text(value: str) -> str:
     value = re.sub(r"<[^>]+>", " ", value)
     value = re.sub(r"\s+", " ", value).strip()
     return value
+
+
+def truncate(value: str, limit: int = 150) -> str:
+    value = clean_text(value)
+    if len(value) <= limit:
+        return value
+    return value[: limit - 1].rstrip(" ,;:-") + "…"
 
 
 def extract_article_description(page_html: str) -> str:
@@ -453,6 +460,17 @@ def morning_brief_summary(brief_id: str, item: dict, source_label: str) -> str:
     return " ".join([base, explainer, context, source_note])
 
 
+def email_brief_summary(brief_id: str, item: dict, source_label: str) -> str:
+    """Short one-glance summary used only by the email renderer."""
+    title = item["title"].strip()
+    raw_summary = clean_text(item.get("summary", ""))
+    if summary_is_duplicate_or_thin(title, raw_summary):
+        base = f"{source_label} is reporting on {sentence_case_fragment(title)}."
+    else:
+        base = raw_summary.rstrip(".") + "."
+    return truncate(base, 145)
+
+
 def glossary_terms(item: dict) -> list[dict]:
     text = f"{item['title']} {item.get('summary', '')}"
     terms = []
@@ -519,6 +537,7 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
             "title": item["title"],
             "kicker": source_label,
             "summary": summary,
+            "emailSummary": email_brief_summary(brief["id"], summary_item, source_label),
             "whyItMatters": why_matters(brief["id"], item),
             "dataSignals": data_signals(brief["id"], item),
             "sourceLabel": f"{source_label} · {item['publishedLabel']}",
