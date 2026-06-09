@@ -15,14 +15,6 @@ export const briefTemplates = [
     headline: 'AI & Analytics Brief',
     deck: 'Useful AI, analytics, data-platform, and automation updates without hype or long summaries.',
   },
-  {
-    id: 'sports',
-    name: 'College Sports Chaos',
-    eyebrow: '24-hour scan',
-    label: 'College Sports Chaos',
-    headline: 'College Chaos Wire',
-    deck: 'The wildest real college football and basketball stories from the last 24 hours, ranked for quick scanning.',
-  },
 ];
 
 export const briefRails = [
