@@ -460,12 +460,43 @@ def morning_brief_summary(brief_id: str, item: dict, source_label: str) -> str:
     return " ".join([base, explainer, context, source_note])
 
 
+def title_based_email_summary(brief_id: str, item: dict) -> str:
+    """Fallback summary for feeds whose RSS description is just the headline."""
+    title = item.get("title", "").strip().rstrip(".")
+    text = f"{title} {item.get('summary', '')}".lower()
+    if brief_id == "energy":
+        if "test facility" in text and "data center" in text:
+            return "DOE is testing how data centers can connect to the grid with less reliability risk."
+        if "communities push back" in text and "data center" in text:
+            return "Kentucky is pitching cheap power for data centers, while local communities question the tradeoffs."
+        if "ban" in text and "data center" in text:
+            return "Louisville is weighing limits on hyperscale data centers plus stricter rules for smaller facilities."
+        if "zoo" in text and "data center" in text:
+            return "A proposed data center near Nashville Zoo is becoming a public fight over local risk and infrastructure siting."
+        if "ppl" in text and any(term in text for term in ["fair value", "valuation", "nyse", "weakness"]):
+            return "Market coverage is questioning PPL’s valuation, a utility-stock sentiment signal to keep on the radar."
+        if "data center" in text:
+            return "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity."
+        if any(term in text for term in ["lg&e", "kentucky utilities", "ppl"]):
+            return "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning."
+        if "grid" in text:
+            return "A grid story to watch for reliability, infrastructure, cost, or planning implications."
+        return "An energy/utility item to scan for cost, reliability, regulatory, or customer-impact signals."
+    if brief_id == "ai":
+        if "agent" in text:
+            return "An AI-agent workflow story to scan for practical automation, controls, and operator impact."
+        if "analytics" in text or "data" in text:
+            return "A data/analytics story to scan for workflow, governance, or tooling ideas worth testing."
+        return "A practical AI story to scan for tool changes, risks, and useful business workflows."
+    return title + "."
+
+
 def email_brief_summary(brief_id: str, item: dict, source_label: str) -> str:
     """Short one-glance summary used only by the email renderer."""
     title = item["title"].strip()
     raw_summary = clean_text(item.get("summary", ""))
     if summary_is_duplicate_or_thin(title, raw_summary):
-        base = f"{source_label} is reporting on {sentence_case_fragment(title)}."
+        base = title_based_email_summary(brief_id, item)
     else:
         base = raw_summary.rstrip(".") + "."
     return truncate(base, 145)
