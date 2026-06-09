@@ -28,6 +28,7 @@ LOOKBACK_HOURS = int(os.environ.get("MORNING_BRIEF_LOOKBACK_HOURS", "24"))
 MAX_ITEMS_PER_BRIEF = int(os.environ.get("MORNING_BRIEF_MAX_ITEMS", "5"))
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "public" / "data" / "morning-briefs.json"
+AI_BRIEF_OUTPUT_DIR = Path("/home/hermes/.hermes/cron/output/de4414aaf746")
 USER_AGENT = "Mozilla/5.0 (compatible; DustinColeDataMorningBrief/1.0; +https://dustincoledata.com)"
 
 NOW = datetime.now(timezone.utc)
@@ -57,15 +58,10 @@ BRIEFS = [
         "id": "ai",
         "name": "AI / Analytics",
         "headline": "AI & Analytics Brief",
-        "queries": [
-            '("AI analytics" OR "agentic analytics" OR "data analytics" OR "Power BI" OR Snowflake) (AI OR agent OR governance OR automation) when:1d',
-            '(OpenAI OR Anthropic OR Google OR Microsoft OR Snowflake OR Databricks) (analytics OR agent OR data platform OR governance) when:1d',
-            '("AI agent" OR "agentic AI") (enterprise OR analytics OR workflow OR automation) when:1d',
-            '(site:theverge.com OR site:techcrunch.com OR site:venturebeat.com OR site:zdnet.com OR site:infoworld.com) (AI agent OR analytics OR data platform OR automation) when:1d',
-        ],
-        "fallbackQueries": [
-            '("AI analytics" OR "agentic analytics" OR "data analytics" OR "Power BI" OR Snowflake) when:7d',
-        ],
+        # The AI section is populated from the vetted Daily AI Briefing output,
+        # not the old generic AI RSS/news-card pipeline.
+        "queries": [],
+        "fallbackQueries": [],
     },
 ]
 
@@ -534,6 +530,39 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
     return output, used_fallback, errors
 
 
+def latest_ai_daily_brief() -> tuple[list[dict], bool, list[str]]:
+    """Use the vetted Daily AI Briefing output, not the old AI RSS section."""
+    if not AI_BRIEF_OUTPUT_DIR.exists():
+        return [], False, [f"AI daily brief output directory missing: {AI_BRIEF_OUTPUT_DIR}"]
+
+    files = sorted(AI_BRIEF_OUTPUT_DIR.glob("*.md"), key=lambda path: path.stat().st_mtime, reverse=True)
+    if not files:
+        return [], False, [f"No AI daily brief outputs found in {AI_BRIEF_OUTPUT_DIR}"]
+
+    source_file = files[0]
+    text = source_file.read_text(encoding="utf-8")
+    response = text.split("## Response", 1)[-1].strip() if "## Response" in text else text.strip()
+    if not response:
+        return [], False, [f"Latest AI daily brief output has no response: {source_file}"]
+
+    title_line = next((line.strip() for line in response.splitlines() if line.strip()), "Daily AI Briefing")
+    published = datetime.fromtimestamp(source_file.stat().st_mtime, timezone.utc)
+    article = {
+        "id": f"ai-daily-{source_file.stem}",
+        "title": title_line,
+        "kicker": "Hermes Daily AI Brief",
+        "summary": response,
+        "whyItMatters": "This is the vetted Daily AI Briefing output created for Dustin, replacing the old generic AI RSS/news-card section.",
+        "dataSignals": [],
+        "sourceLabel": f"Hermes Daily AI Brief · {local_label(published)}",
+        "sourceUrl": "https://dustincole-data.github.io/dustin-ai-playground/",
+        "googleNewsUrl": None,
+        "publishedAt": published.isoformat(),
+        "glossary": [],
+    }
+    return [article], False, []
+
+
 def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     generated = {
@@ -544,7 +573,10 @@ def main() -> int:
         "errors": [],
     }
     for brief in BRIEFS:
-        articles, used_fallback, errors = build_articles(brief)
+        if brief["id"] == "ai":
+            articles, used_fallback, errors = latest_ai_daily_brief()
+        else:
+            articles, used_fallback, errors = build_articles(brief)
         generated["errors"].extend(errors)
         generated["briefs"].append({
             "id": brief["id"],

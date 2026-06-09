@@ -23,21 +23,6 @@ export const briefRails = [
   ['GLOSSARY', 'Plain-language terms when needed.'],
 ];
 
-export const articleQuestions = [
-  {
-    id: 'impact',
-    question: 'Why does this matter to me?',
-  },
-  {
-    id: 'data',
-    question: 'What data should I watch?',
-  },
-  {
-    id: 'terms',
-    question: 'Explain the jargon.',
-  },
-];
-
 export const emptyNewsData = {
   generatedAt: null,
   generatedLabel: 'Not generated yet',
