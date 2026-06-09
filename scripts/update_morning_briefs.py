@@ -530,6 +530,26 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
     return output, used_fallback, errors
 
 
+def extract_ai_brief_response(text: str) -> str:
+    """Return the actual briefing body from a cron output file, if present."""
+    response = text.split("## Response", 1)[-1].strip() if "## Response" in text else text.strip()
+    archive_marker = "Briefing text for local archive:"
+    if archive_marker in response:
+        response = response.split(archive_marker, 1)[1].strip()
+    if not response:
+        return ""
+    first_line = next((line.strip() for line in response.splitlines() if line.strip()), "")
+    status_only_patterns = (
+        "Gmail send succeeded",
+        "Gmail send failed",
+    )
+    if first_line.startswith(status_only_patterns):
+        return ""
+    if "Daily AI Briefing" not in response and "Daily AI briefing" not in response:
+        return ""
+    return response
+
+
 def latest_ai_daily_brief() -> tuple[list[dict], bool, list[str]]:
     """Use the vetted Daily AI Briefing output, not the old AI RSS section."""
     if not AI_BRIEF_OUTPUT_DIR.exists():
@@ -539,28 +559,33 @@ def latest_ai_daily_brief() -> tuple[list[dict], bool, list[str]]:
     if not files:
         return [], False, [f"No AI daily brief outputs found in {AI_BRIEF_OUTPUT_DIR}"]
 
-    source_file = files[0]
-    text = source_file.read_text(encoding="utf-8")
-    response = text.split("## Response", 1)[-1].strip() if "## Response" in text else text.strip()
-    if not response:
-        return [], False, [f"Latest AI daily brief output has no response: {source_file}"]
+    skipped_status_files: list[str] = []
+    for source_file in files:
+        text = source_file.read_text(encoding="utf-8")
+        response = extract_ai_brief_response(text)
+        if not response:
+            skipped_status_files.append(source_file.name)
+            continue
 
-    title_line = next((line.strip() for line in response.splitlines() if line.strip()), "Daily AI Briefing")
-    published = datetime.fromtimestamp(source_file.stat().st_mtime, timezone.utc)
-    article = {
-        "id": f"ai-daily-{source_file.stem}",
-        "title": title_line,
-        "kicker": "Hermes Daily AI Brief",
-        "summary": response,
-        "whyItMatters": "This is the vetted Daily AI Briefing output created for Dustin, replacing the old generic AI RSS/news-card section.",
-        "dataSignals": [],
-        "sourceLabel": f"Hermes Daily AI Brief · {local_label(published)}",
-        "sourceUrl": "https://dustincole-data.github.io/dustin-ai-playground/",
-        "googleNewsUrl": None,
-        "publishedAt": published.isoformat(),
-        "glossary": [],
-    }
-    return [article], False, []
+        title_line = next((line.strip() for line in response.splitlines() if line.strip()), "Daily AI Briefing")
+        published = datetime.fromtimestamp(source_file.stat().st_mtime, timezone.utc)
+        article = {
+            "id": f"ai-daily-{source_file.stem}",
+            "title": title_line,
+            "kicker": "Hermes Daily AI Brief",
+            "summary": response,
+            "whyItMatters": "This is the vetted Daily AI Briefing output created for Dustin, replacing the old generic AI RSS/news-card section.",
+            "dataSignals": [],
+            "sourceLabel": f"Hermes Daily AI Brief · {local_label(published)}",
+            "sourceUrl": "https://dustincole-data.github.io/dustin-ai-playground/",
+            "googleNewsUrl": None,
+            "publishedAt": published.isoformat(),
+            "glossary": [],
+        }
+        return [article], False, []
+
+    skipped = ", ".join(skipped_status_files[:5])
+    return [], False, [f"No usable AI daily briefing body found in {AI_BRIEF_OUTPUT_DIR}; skipped status-only files: {skipped}"]
 
 
 def main() -> int:
