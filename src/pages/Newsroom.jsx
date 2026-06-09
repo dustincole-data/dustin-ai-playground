@@ -97,7 +97,80 @@ function EmptyArticleState({ message }) {
   );
 }
 
+function parseDailyAiBrief(summary) {
+  const lines = (summary ?? '').split('\n');
+  const title = lines.find((line) => line.trim()) ?? 'Daily AI Briefing';
+  const sections = [];
+  let current = null;
+
+  for (const rawLine of lines.slice(1)) {
+    const line = rawLine.trimEnd();
+    const match = line.match(/^(\d+)\.\s+(.+)$/);
+    if (match) {
+      if (current) sections.push(current);
+      current = { number: match[1], title: match[2], lines: [] };
+      continue;
+    }
+
+    if (current) {
+      current.lines.push(line);
+    }
+  }
+
+  if (current) sections.push(current);
+  return { title, sections };
+}
+
+function DailyAiBriefCard({ article, selected, onClick }) {
+  const { title, sections } = parseDailyAiBrief(article.summary);
+
+  return (
+    <a
+      href={article.sourceUrl}
+      target="_blank"
+      rel="noreferrer"
+      onClick={onClick}
+      aria-pressed={selected}
+      className={classNames(
+        'block rounded-2xl border p-3 text-left transition focus:outline-none focus:ring-2 focus:ring-slate focus:ring-offset-2 md:p-4',
+        selected
+          ? 'border-slate bg-white shadow-[0_0_0_2px_rgba(74,127,165,0.18)]'
+          : 'border-border bg-white/80 hover:border-slate/45 hover:bg-white'
+      )}
+    >
+      <div className="mb-3 flex items-center justify-between gap-2 border-b border-border pb-2">
+        <span className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">{article.kicker}</span>
+        <ExternalLink className="h-3.5 w-3.5 shrink-0 text-slate/70" />
+      </div>
+      <h3 className="text-base font-black leading-5 text-charcoal md:text-lg">{title}</h3>
+      <p className="mt-1 text-[11px] font-bold text-slate/80">Click anywhere to open the source page</p>
+
+      <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+        {sections.map((section) => (
+          <section key={`${section.number}-${section.title}`} className="rounded-2xl border border-border bg-offwhite/70 p-3 shadow-sm">
+            <div className="mb-2 flex items-start gap-2">
+              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-xl bg-navy text-xs font-black text-white">
+                {section.number}
+              </span>
+              <h4 className="pt-1 text-sm font-black leading-5 text-navy">{section.title}</h4>
+            </div>
+            <div className="space-y-2 text-[13px] leading-5 text-charcoal/70">
+              {section.lines.filter((line) => line.trim()).map((line) => (
+                <p key={line}>{line.replace(/^-\s*/, '')}</p>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </a>
+  );
+}
+
 function ArticleCard({ article, selected, onClick }) {
+  if (article.id?.startsWith('ai-daily-')) {
+    return <DailyAiBriefCard article={article} selected={selected} onClick={onClick} />;
+  }
+
   return (
     <a
       href={article.sourceUrl}
@@ -150,7 +223,7 @@ function BriefCard({ brief, selectedArticleId, onSelectArticle }) {
       <div className="mt-4">
         <p className="mb-2 text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Live inputs from the morning scan</p>
         {hasArticles ? (
-          <div className="grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+          <div className={classNames('grid gap-2', brief.id === 'ai' ? 'md:grid-cols-1' : 'md:grid-cols-2 xl:grid-cols-3')}>
             {brief.articles.map((article) => (
               <ArticleCard
                 key={article.id}
