@@ -1,27 +1,13 @@
 {
-  "generatedAt": "2026-06-09T20:59:36.101127+00:00",
-  "generatedLabel": "Jun 9, 4:59 PM ET",
+  "generatedAt": "2026-06-10T18:22:57.846909+00:00",
+  "generatedLabel": "Jun 10, 2:22 PM ET",
   "lookbackHours": 24,
   "briefs": [
     {
       "id": "ai",
-      "updatedLabel": "Last 24 hours",
+      "updatedLabel": "No qualified stories found",
       "emptyMessage": "No qualified AI / Analytics stories found in the last 24 hours.",
-      "articles": [
-        {
-          "id": "ai-daily-2026-06-09_09-50-20",
-          "title": "Daily AI Briefing — Tuesday, June 9, 2026 ET",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "Daily AI Briefing — Tuesday, June 9, 2026 ET\n\n1. Today’s actual signal\n- GitHub made Copilot cloud-agent tasks scriptable: Pro/Pro+/Max users can start and track background agent tasks via REST API; agents work in isolated dev environments, validate changes, then open PRs. Source: https://github.blog/changelog/2026-06-04-agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max — credible because it’s GitHub’s official changelog.\n- GitHub is also turning agent usage into a managed/costed workflow: Copilot now has 1M-token context + configurable reasoning, but higher context/reasoning can consume more AI credits; usage-based billing is active for all Copilot plans. Sources: https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot and https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/ — credible because these are official billing/product notices.\n- Free learning window: Google/Kaggle’s no-cost 5-day AI Agents/Vibe Coding course runs June 15–19 and includes tool/API integration plus a capstone. Source: https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-genai-intensive-course-vibe-coding-june-2026/ — credible because it’s Google’s official blog.\n\n2. Dustin relevance\n- Hermes/agents: Agent orchestration is moving from “chat with a coder” to API-controlled background jobs with budgets, permissions, and audit trails. That maps directly to Hermes cron jobs and approval-gated automations.\n- Fanbase Weather: No strong new Fanbase-specific signal today. Do not rebuild the already-automated morning pipeline; the useful takeaway is governance: any public-facing weather/content agent should log sources, cost, and approval state.\n- Newsletter/Data Nerve: Strong angle: “AI agents are becoming billable workers.” The practical story is no longer model IQ; it’s budgets, contexts, permissions, PRs, and receipts.\n- App/product ideas: Cheap/free path: use the Google/Kaggle course as a capstone excuse to build a tiny agent ops dashboard — run history, source links, cost estimate, approval status — for newsletter/weather/content workflows.\n\n3. Try / Save / Ignore\n- Try today: Spend 15 minutes drafting a simple “agent job ledger” schema: job name, trigger, data sources, model/tool used, cost estimate, output link, approval required, posted/sent? This helps Hermes and any future app.\n- Save for later: GitHub Agent Tasks REST API docs/changelog as a pattern for background agents that open reviewable PRs instead of silently changing things.\n- Ignore: “1M context means dump everything in.” It can burn AI credits and often hides bad retrieval discipline.\n\n4. Content angles\n- “The intern got a timesheet: AI agents are becoming billable workflows, not magic coworkers.”\n- “The boring moat in AI apps is the receipt: what ran, what it cost, where the facts came from, and who approved it.”\n\n5. One next action\nCreate a 10-row spreadsheet or markdown table called “Agent Job Ledger” for Hermes/Fanbase/Data Nerve automations. Fill only the columns, not the automations. Goal: make future agents easier to trust before making them more powerful.\n\nVerification: sources checked, repetition check performed, no external side effects.",
-          "whyItMatters": "This is the vetted Daily AI Briefing output created for Dustin, replacing the old generic AI RSS/news-card section.",
-          "dataSignals": [],
-          "sourceLabel": "Hermes Daily AI Brief · Jun 9, 5:50 AM ET",
-          "sourceUrl": "https://dustincole-data.github.io/dustin-ai-playground/",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-06-09T09:50:20.254605+00:00",
-          "glossary": []
-        }
-      ]
+      "articles": []
     },
     {
       "id": "energy",
@@ -29,88 +15,92 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-28883",
-          "title": "DOE opens test facility to help data centers improve grid reliability",
-          "kicker": "Daily Energy Insider",
-          "summary": "Daily Energy Insider is reporting on DOE opens test facility to help data centers improve grid reliability. In plain English, this is a grid-capacity story: the important details are how much new power or infrastructure is being planned, what demand it is supposed to serve, and whether reliability or cost pressure could change for customers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "DOE is testing how data centers can connect to the grid with less reliability risk.",
+          "id": "energy-1-95280",
+          "title": "PPL electric bills to rise in July despite new data center tariffs",
+          "kicker": "PhillyBurbs",
+          "summary": "PhillyBurbs is reporting on PPL electric bills to rise in July despite new data center tariffs. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
+          "dataSignals": [
+            "PPL mention",
+            "data-center load"
+          ],
+          "sourceLabel": "PhillyBurbs · Jun 10, 4:51 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZE9XNnMyanMwNXNpa0gyRmxCOURnZnNvMmhTbFU3bGZySzZYUFNBRzJ4ajlBTHVORG5jdFJPbjI2UnpKYzlpMHY5QzhqMlhFSWstRk41T3l4dGVuMHVTNW1MQ0tzdTJQM3M5bG9NdmpwRURtSm5lYUZabWE5RXptcU9jY3NNcGNMcWJOcHltNF9Xbl9vZ0JKdjE0dXgyMUU2MzNEM18wVF9VNkdzaWdISy1zdi00NnB2WVFwY1FCMGJLd2U5NnkyR3hNaHFvLXNZM3ZrcFR4MzdnRENfd0tzN19B?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-06-10T08:51:00+00:00",
+          "glossary": []
+        },
+        {
+          "id": "energy-2-88534",
+          "title": "Easipay rates to go up: PPL",
+          "kicker": "The National | Your Number One Daily!",
+          "summary": "The National | Your Number One Daily! is reporting on Easipay rates to go up: PPL. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
+          "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
+          "dataSignals": [
+            "PPL mention",
+            "rate / bill impact"
+          ],
+          "sourceLabel": "The National | Your Number One Daily! · Jun 9, 10:59 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9YcTlnUHQwQUZTZGhXYUlLZ09KU2E5cXRZLUE5SXBHRG9iaGZndDBnbkppNEVqTDV5RWFkRGNkRTRhbzUtSzN0VVFyN0RBVEtsLW8xdXdndE1EREdrYlFwaXE2dHlaakQxMHc?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-06-10T02:59:33+00:00",
+          "glossary": []
+        },
+        {
+          "id": "energy-3-27913",
+          "title": "Utilities Regain Attention As AI Data Centers Fuel Grid Expansion",
+          "kicker": "Kalkine Media",
+          "summary": "Kalkine Media is reporting on Utilities Regain Attention As AI Data Centers Fuel Grid Expansion. In plain English, this is a grid-capacity story: the important details are how much new power or infrastructure is being planned, what demand it is supposed to serve, and whether reliability or cost pressure could change for customers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
           "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
           "dataSignals": [
             "data-center load",
             "grid reliability"
           ],
-          "sourceLabel": "Daily Energy Insider · Jun 8, 5:17 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNM3hnSzNlU2ROMDVBQ0R0UWhIbUFLMzQzOUtBa3NjbW5LazV2ZUFTZi1PbDRXcEJYb19ENmwxZmtRSElVRlpBbkJQZUdEZjRmSDZ2Q0ZwOWhlczNTRTZRdGVTeUJ0OEFFTk1Kczg3ZUg0STFqY3pZTUZ0UmVlODBXc1pvcHRNVkhNXy1iZVVtTnBPQUFjcEpabFNiQ3EwU3VFaFM2R09ueWRTd1JKdHY2X2dR?oc=5",
+          "sourceLabel": "Kalkine Media · Jun 9, 4:50 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxObDIta3JEcGlHa2RKQ2VUZFcxVHFsTktnMnNGS01hdzdJX2hTNzJ2M0FkYW05ZklaRUxXdVRFQ2NUTGVjR01VMTZTQjBVWUZpeW55V0xrbzMxTHFTS2ZmeGRnd2FMSW9IRE01LWhTRFdUSUdJb1RoekpVc0VZQVlKd0F1WlVsREttUjdYOWwyYXNhX25NdGowSWM0blU1Vkk1QnZoUjVYU0xqUkJE?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-08T21:17:58+00:00",
+          "publishedAt": "2026-06-09T20:50:00+00:00",
           "glossary": []
         },
         {
-          "id": "energy-2-1038",
-          "title": "Kentucky communities push back as state energy group says cheap power could fuel a data center boom",
-          "kicker": "Yahoo",
-          "summary": "Yahoo is reporting on Kentucky communities push back as state energy group says cheap power could fuel a data center boom. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Kentucky is pitching cheap power for data centers, while local communities question the tradeoffs.",
+          "id": "energy-4-38498",
+          "title": "Rep. Guthrie Urges Legislation Requiring Data Centers to Cover Energy Costs",
+          "kicker": "Newsmax",
+          "summary": "Newsmax is reporting on Rep. Guthrie Urges Legislation Requiring Data Centers to Cover Energy Costs. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
           "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
           "dataSignals": [
             "data-center load"
           ],
-          "sourceLabel": "Yahoo · Jun 9, 1:20 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPell2TU9EX19xZEdvVTh4Z1lZSnRoRTZMYlFJdEZYNjZzNEhJVzM0TVMxc3BDajNUSG1Ka0U2Vk5HZXhCU0hzekcxSTZ1VmJJcFRLaHY4SDZwbjgyMXhzaFFQMy1BWEcxb0gxUFo2dDNxQmtPdmVhU1VjY1k1SUxiZ3B6UWEzZnhHTGU1b2ppYlRFaDROWGVGS3FkZzA?oc=5",
+          "sourceLabel": "Newsmax · Jun 10, 1:35 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNXd0QVMwZzZlX1pTZHJRZXZLUmJySjNucjFrYjl2R1owWWw4T0JjcmxSbkE5SnRLZFNBdFR2Z2JiY3ZUcFlLNF9PbENlUHRTNTRFTVpBdUxjS3VNWUI1aEpldlo3ZGMxNGVuZUFjVDNTeWNic29sWHdHelhGT0RuUjVHbzlwdVptcnBFWTIxRV9KOHpwUVRyWTZ1dDdCZw?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-09T05:20:00+00:00",
+          "publishedAt": "2026-06-10T17:35:10+00:00",
           "glossary": []
         },
         {
-          "id": "energy-3-17797",
-          "title": "Louisville proposes ban on hyperscale data centers, sets strict rules for smaller facilities",
-          "kicker": "WDRB",
-          "summary": "WDRB is reporting on Louisville proposes ban on hyperscale data centers, sets strict rules for smaller facilities. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Louisville is weighing limits on hyperscale data centers plus stricter rules for smaller facilities.",
+          "id": "energy-5-88349",
+          "title": "Ohio lawmakers introduce sweeping new data center legislation",
+          "kicker": "Route Fifty",
+          "summary": "Route Fifty is reporting on Ohio lawmakers introduce sweeping new data center legislation. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
           "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
           "dataSignals": [
             "data-center load"
           ],
-          "sourceLabel": "WDRB · Jun 9, 3:18 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNNmRIeXdBbDRzSXJySTUtSHhGTGs3QjFLYzI1VmFuQXBGR1BQZlktRU1HNmVTTlpKS01welk5S3VSVHNvUURPang1WlBTZkxfVW8xQ3FZV25oZmh4UXBiQTZHOGRzT1FhVmpRVV82ejJ4TzRaYlpfZFViY0h4TGZFQjBSaVk3bDV4N2p6a20tMjM5S0k4U0JDQUxia1ljNkdEdGdEY1RvNWk4M1Z0TVdzUTY1NDJMZGRtUEV1SXREZWJabjVHZWg1c0JUeUVQLVZhN3Q2eTBxakRVTl83M29MR19ZNlhDbWZXZFVtOGdKVjZoU2NfNUpNRUJjVUFjUUVmOUZjWFpfZw?oc=5",
+          "sourceLabel": "Route Fifty · Jun 10, 12:00 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMlFiaGlnS3FRZ09jcER3elJRNkVpUGNRVEpOaGU4T2Nrd1BXVGJRS3lfQXRfWDFSTW1hbGdBTzhPRXhmUm01NjBZNlBiSmR3SldPN1UwMV9wSUExQTlQeVUwNXFJV1pSNldxVzBZc3ExQ1kxZ0V6elJYOEFzOUQ0Q2xZdERNNDdMd2p2bmJRSnZ1QmlNcTRLdFdKUHczVXdnQ1k3NW1sekxZMGszQ0s0SGUxT0M2ZXZQak53aUlwVmhOb3I5QklIag?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-09T19:18:00+00:00",
-          "glossary": []
-        },
-        {
-          "id": "energy-4-38307",
-          "title": "Nashville Zoo warns proposed data center next door could put its 3,000 animals at risk",
-          "kicker": "WTVQ",
-          "summary": "WTVQ is reporting on Nashville Zoo warns proposed data center next door could put its 3,000 animals at risk. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A proposed data center near Nashville Zoo is becoming a public fight over local risk and infrastructure siting.",
-          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
-          "dataSignals": [
-            "data-center load"
-          ],
-          "sourceLabel": "WTVQ · Jun 9, 8:31 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUXRlRTFxd3NfajRidGNNX2VtZ3JUZEo0QkRocHRvWHJBU2hVYkZSZzBMaWZJdTJzeU9xZjNkN0gyZWVxMzg1UkI0a2hYWGU4bExXNkl0LXBXcUFyR2FjTzJ1OVlZTU9OVlJEV3dJbXB0MlRGeE5LZ2tPUXZCVjV3T0RiNGk1ZWtOUmRNSk44eHkxN2lpUHB2MnZMTnZoalpwX2lyQUVXenJWY2s?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-06-09T12:31:01+00:00",
-          "glossary": []
-        },
-        {
-          "id": "energy-5-75989",
-          "title": "Why Is PPL Facing Fair Value Debate Amid NYSE Composite Weakness?",
-          "kicker": "Kalkine Media",
-          "summary": "Kalkine Media is reporting on Why Is PPL Facing Fair Value Debate Amid NYSE Composite Weakness?. In plain English, this is a utility-operations story: the important details are what changed, which customers or systems are affected, and whether it creates a reliability, regulatory, cost, or data-quality issue. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Market coverage is questioning PPL’s valuation, a utility-stock sentiment signal to keep on the radar.",
-          "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
-          "dataSignals": [
-            "PPL mention"
-          ],
-          "sourceLabel": "Kalkine Media · Jun 9, 5:55 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSERxMWo5TVdwc1dZQmRTbXRrU0psd0dPQkpCSXhvODNZMXczeGJrTzYyZnBOTG1ncUVaM3ppQU01QXpQNTd6QndIWGJFMGJaTUZkbkRueVNNVTBjLV9YMmxNbDZOQVpXS2pGSEpZUDV5YUN2SHU0UTlBeG0xc2RhbEdVVzFPMzhKVWY5eTZBNGFfbnl1THE1NllUckluakpmZnZvQ01vdENCSEk?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-06-09T09:55:00+00:00",
+          "publishedAt": "2026-06-10T16:00:00+00:00",
           "glossary": []
         }
       ]
     }
   ],
-  "errors": []
+  "errors": [
+    "AI daily brief output directory missing: /home/hermes/.hermes/cron/output/de4414aaf746"
+  ]
 }
