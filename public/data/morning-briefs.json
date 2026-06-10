@@ -1,13 +1,27 @@
 {
-  "generatedAt": "2026-06-10T18:22:57.846909+00:00",
-  "generatedLabel": "Jun 10, 2:22 PM ET",
+  "generatedAt": "2026-06-10T18:52:19.052165+00:00",
+  "generatedLabel": "Jun 10, 2:52 PM ET",
   "lookbackHours": 24,
   "briefs": [
     {
       "id": "ai",
-      "updatedLabel": "No qualified stories found",
+      "updatedLabel": "Last 24 hours",
       "emptyMessage": "No qualified AI / Analytics stories found in the last 24 hours.",
-      "articles": []
+      "articles": [
+        {
+          "id": "ai-daily-2026-06-10_18-42-50",
+          "title": "Daily AI Briefing — Wednesday, June 10, 2026 ET",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "Daily AI Briefing — Wednesday, June 10, 2026 ET\n\n1. Today’s actual signal\n- GitHub Copilot CLI added an experimental `/security-review` command for local code changes; it returns high-confidence security findings with severity/confidence and suggestions, and is separate from CodeQL/Dependabot/secret scanning. Source: https://github.blog/changelog/2026-06-10-dedicated-security-review-command-now-available-in-copilot-cli — credible because it’s GitHub’s official changelog.\n- GitHub also made security validation for third-party coding agents generally available: Claude/OpenAI Codex-generated PR code can be checked with CodeQL, GitHub Advisory Database, and secret scanning, without requiring GitHub Advanced Security. Source: https://github.blog/changelog/2026-06-09-security-validation-for-third-party-coding-agents — credible because it’s GitHub’s official changelog.\n- Hugging Face says its official `hf` CLI now has agent-optimized behavior: agent detection, parseable/compact output, non-interactive/retry-safe design; their benchmark says non-CLI approaches used 1.3×–1.8× more tokens overall and up to 6× more on complex Hub workflows. Source: https://huggingface.co/blog/hf-cli-for-agents — credible because it’s Hugging Face’s official blog.\n\n2. Dustin relevance\n- Hermes/agents: GitHub’s agent-security validation is directly relevant for Hermes/Codex/Claude PR workflows: route agent work through PRs where possible so automated validation can catch secrets/vulnerable deps before merge.\n- Fanbase Weather: No strong signal today. Do not duplicate the existing morning pipeline.\n- Newsletter/Data Nerve: Strong angle: “The next agent moat is boring CLI ergonomics, not another chat UI” — GitHub and Hugging Face are both optimizing terminal/PR surfaces for agents.\n- App/product ideas: Lightweight “agent PR safety checklist” for small teams: enforce PR-only agent changes, security scan, dependency diff, secret scan, human approval. Cheap wedge; avoid building until Dustin validates demand.\n\n3. Try / Save / Ignore\n- Try today: In one repo with uncommitted changes, check whether Copilot CLI experimental mode is available; if yes, run `/security-review` and compare its findings against normal tests/lints. Pricing/paywall risk: requires Copilot CLI access.\n- Save for later: Hugging Face’s `hf` CLI design pattern — structured output, no truncation, non-interactive commands, retry-safe behavior — as a template for Hermes-friendly tools.\n- Ignore: Frontier-model benchmark victory laps with no workflow consequence; today’s useful news is agent plumbing/security, not leaderboard hype.\n\n4. Content angles\n- “Agents are getting less magical and more useful: PRs, CLIs, audit trails, security gates.”\n- “If your AI agent can’t survive a terminal, a pull request, and a security scan, it’s still a demo.”\n\n5. One next action\n- Add one small “agent PR gate” checklist to Dustin’s working notes: PR-only changes, tests run, dependency diff reviewed, secret/security scan checked, human approval before merge/post/deploy.\n\nVerification: checked OpenAI/Codex, Anthropic, xAI, Google/DeepMind, GitHub Copilot, Hugging Face, Product Hunt/HN-style discovery sources; repetition check performed against available local cron outputs, with no prior output found for this newly created job; no external side effects.",
+          "whyItMatters": "This is the vetted Daily AI Briefing output created for Dustin, replacing the old generic AI RSS/news-card section.",
+          "dataSignals": [],
+          "sourceLabel": "Hermes Daily AI Brief · Jun 10, 2:42 PM ET",
+          "sourceUrl": "https://dustincole-data.github.io/dustin-ai-playground/",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-06-10T18:42:50.593462+00:00",
+          "glossary": []
+        }
+      ]
     },
     {
       "id": "energy",
@@ -15,7 +29,7 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-95280",
+          "id": "energy-1-32568",
           "title": "PPL electric bills to rise in July despite new data center tariffs",
           "kicker": "PhillyBurbs",
           "summary": "PhillyBurbs is reporting on PPL electric bills to rise in July despite new data center tariffs. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -32,7 +46,7 @@
           "glossary": []
         },
         {
-          "id": "energy-2-88534",
+          "id": "energy-2-79714",
           "title": "Easipay rates to go up: PPL",
           "kicker": "The National | Your Number One Daily!",
           "summary": "The National | Your Number One Daily! is reporting on Easipay rates to go up: PPL. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -49,7 +63,7 @@
           "glossary": []
         },
         {
-          "id": "energy-3-27913",
+          "id": "energy-3-84725",
           "title": "Utilities Regain Attention As AI Data Centers Fuel Grid Expansion",
           "kicker": "Kalkine Media",
           "summary": "Kalkine Media is reporting on Utilities Regain Attention As AI Data Centers Fuel Grid Expansion. In plain English, this is a grid-capacity story: the important details are how much new power or infrastructure is being planned, what demand it is supposed to serve, and whether reliability or cost pressure could change for customers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -66,7 +80,7 @@
           "glossary": []
         },
         {
-          "id": "energy-4-38498",
+          "id": "energy-4-23781",
           "title": "Rep. Guthrie Urges Legislation Requiring Data Centers to Cover Energy Costs",
           "kicker": "Newsmax",
           "summary": "Newsmax is reporting on Rep. Guthrie Urges Legislation Requiring Data Centers to Cover Energy Costs. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -82,7 +96,7 @@
           "glossary": []
         },
         {
-          "id": "energy-5-88349",
+          "id": "energy-5-39736",
           "title": "Ohio lawmakers introduce sweeping new data center legislation",
           "kicker": "Route Fifty",
           "summary": "Route Fifty is reporting on Ohio lawmakers introduce sweeping new data center legislation. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -100,7 +114,5 @@
       ]
     }
   ],
-  "errors": [
-    "AI daily brief output directory missing: /home/hermes/.hermes/cron/output/de4414aaf746"
-  ]
+  "errors": []
 }

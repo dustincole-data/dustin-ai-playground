@@ -28,7 +28,7 @@ LOOKBACK_HOURS = int(os.environ.get("MORNING_BRIEF_LOOKBACK_HOURS", "24"))
 MAX_ITEMS_PER_BRIEF = int(os.environ.get("MORNING_BRIEF_MAX_ITEMS", "5"))
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "public" / "data" / "morning-briefs.json"
-AI_BRIEF_OUTPUT_DIR = Path("/home/hermes/.hermes/cron/output/de4414aaf746")
+AI_BRIEF_OUTPUT_DIR = Path("/home/hermes/.hermes/cron/output/70407e2b6f3b")
 USER_AGENT = "Mozilla/5.0 (compatible; DustinColeDataMorningBrief/1.0; +https://dustincoledata.com)"
 
 NOW = datetime.now(timezone.utc)
