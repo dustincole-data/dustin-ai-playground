@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-12T09:00:29.240769+00:00",
-  "generatedLabel": "Jun 12, 5:00 AM ET",
+  "generatedAt": "2026-06-13T09:08:37.392123+00:00",
+  "generatedLabel": "Jun 13, 5:08 AM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -9,16 +9,16 @@
       "emptyMessage": "No qualified AI / Analytics stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "ai-daily-2026-06-12_08-52-27",
-          "title": "Daily AI Briefing — Friday, June 12, 2026 ET",
+          "id": "ai-daily-2026-06-13_09-06-57",
+          "title": "Daily AI Briefing — Saturday, June 13, 2026 ET",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "Daily AI Briefing — Friday, June 12, 2026 ET\n\n1. Today’s actual signal\n- GitHub Agentic Workflows entered public preview: Markdown-described agent automations compile into standard GitHub Actions, with read-only defaults, sandboxing, safe-output validation, and threat detection. Source: https://github.blog/changelog/2026-06-11-github-agentic-workflows-is-now-in-public-preview — credible because it’s GitHub Changelog; materially new vs yesterday’s “agent logs/security” theme.\n- GitHub Agentic Workflows can now use Actions’ built-in `GITHUB_TOKEN` instead of long-lived PATs; org runs bill AI credits to the org, with cost controls recommended. Source: https://github.blog/changelog/2026-06-11-agentic-workflows-no-longer-need-a-personal-access-token — credible because it’s GitHub Changelog; pricing/spend risk exists.\n- OpenCode `v1.17.4` shipped today with practical agent plumbing: `cwd` for local MCP servers, connector-based auth, stored provider credentials, v2 session APIs, sticky `X-Session-Id`, and visible errors for content-filtered model responses. Source: https://github.com/anomalyco/opencode/releases — credible because it’s the official GitHub release page for an open-source coding agent.\n\n2. Dustin relevance\n- Hermes/agents: GitHub is validating “agent workflows as auditable CI jobs,” not just chat sessions. Useful pattern: Markdown instruction → compiled runner workflow → sandbox/permissions/logs/cost cap.\n- Fanbase Weather: No strong signal today.\n- Newsletter/Data Nerve: Angle is getting sharper: agents are moving into boring infrastructure — Actions, tokens, sandboxes, cost caps, logs — because that’s where trust lives.\n- App/product ideas: A cheap “agent workflow receipt” layer could summarize: trigger, prompt/instructions, permissions, files touched, tests run, token/cost estimate, human approval status. Start local/open-source; avoid paid GitHub AI credits until validated.\n\n3. Try / Save / Ignore\n- Try today: Spend 20 minutes reading GitHub’s Agentic Workflows quickstart/docs from the changelog and write one private “would I trust this?” note: trigger, permissions, cost cap, rollback, human approval.\n- Save for later: OpenCode’s `cwd` support for local MCP servers — useful pattern for repo-specific Hermes tools without global config mess. Source: https://github.com/anomalyco/opencode/releases\n- Ignore: “fully autonomous SDLC” marketing. The useful part is smaller: agent tasks inside controlled runners with receipts.\n\n4. Content angles\n- “The agent future is less ‘AI coworker’ and more ‘weird intern inside GitHub Actions with a helmet, a budget, and logs.’”\n- “Trustworthy agents are becoming infrastructure: tokens, sandboxes, cost caps, approvals, receipts.”\n\n5. One next action\n- Draft one 6-line private template called “Agent workflow receipt”: task, trigger, permissions, files changed, validation run, approval needed. No build, no posting, no config change.\n\nVerification: sources checked, repetition check performed against recent local cron outputs, no external side effects.",
+          "summary": "Daily AI Briefing — Saturday, June 13, 2026 ET\n\n1. Today’s actual signal\n- OpenAI Codex is pushing browser-agent debugging closer to real dev work: June 11 Codex added Developer Mode with controlled Chrome DevTools Protocol access, `/init` project instructions, and faster browser use. Source: https://developers.openai.com/codex/changelog — credible because it is OpenAI’s official Codex changelog.\n- GitHub moved “agentic workflows” into public preview: natural-language Markdown workflows compile into GitHub Actions YAML, with read-only defaults, sandboxing, firewalling, safe outputs, and threat detection. Source: https://github.blog/changelog/2026-06-11-github-agentic-workflows-is-now-in-public-preview/ — credible because it is GitHub’s official changelog.\n- Kilo Code is worth watching as the cheap/open coding-agent lane: open-source, VS Code/JetBrains/CLI/Slack/Cloud support, 500+ models, BYOK/local options, and “no markup” pricing claims. Sources: https://kilo.ai/ and https://github.com/Kilo-Org/kilocode — credible because they are the product site + public repo. Pricing still needs verification before relying on cloud/gateway spend.\n\n2. Dustin relevance\n- Hermes/agents: GitHub Agentic Workflows is basically “cron + agent + guardrails” inside Actions. Good pattern to borrow: Markdown intent → generated workflow → read-only/sandboxed first.\n- Fanbase Weather: No strong signal today. Don’t duplicate the morning pipeline; if anything, borrow the GitHub guardrail pattern for approval-gated public-post experiments.\n- Newsletter/Data Nerve: Strong angle: “The agent war is moving from chat UIs to controlled execution surfaces: DevTools, GitHub Actions, IDE agent windows, and auditable workflows.”\n- App/product ideas: Small useful app: a local “agent run receipt” viewer for Hermes/Codex/Kilo that shows prompt, files touched, commands run, sources used, and approval status before anything public-facing happens.\n\n3. Try / Save / Ignore\n- Try today: Spend 20 minutes sketching one non-destructive GitHub Agentic Workflow for `dustin-ai-playground`: “summarize stale issues / broken links / failed builds,” read-only only, no auto-PR.\n- Save for later: Kilo Code as the open-source/BYOK fallback when Copilot/Codex costs or limits get annoying.\n- Ignore: Generic “AI coding agent rankings” posts unless they include pricing, repo activity, and actual workflow constraints.\n\n4. Content angles\n- “Agents are finally growing up: less ‘vibes in a chat box,’ more boring controls, logs, sandboxes, and budgets. That’s good news.”\n- “The real product isn’t the model. It’s the harness: where the agent can act, what it can touch, and how you prove it didn’t do something dumb.”\n\n5. One next action\n- Create a short note titled “Agent workflow guardrails to steal” with 5 bullets: read-only default, sandbox, approval before writes, source links required, run receipt/audit log.\n\nVerification: sources checked: OpenAI/Codex, Anthropic, xAI, Google AI/Developers, GitHub Copilot/GitHub Changelog, Hacker News, Product Hunt, GitHub/Kilo. Repetition check performed against local cron output; no matching prior AI briefing actions found, and no generic Fanbase Weather duplicate recommended. No external side effects.",
           "whyItMatters": "This is the vetted Daily AI Briefing output created for Dustin, replacing the old generic AI RSS/news-card section.",
           "dataSignals": [],
-          "sourceLabel": "Hermes Daily AI Brief · Jun 12, 4:52 AM ET",
+          "sourceLabel": "Hermes Daily AI Brief · Jun 13, 5:06 AM ET",
           "sourceUrl": "https://dustincole-data.github.io/dustin-ai-playground/",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-12T08:52:27.998347+00:00",
+          "publishedAt": "2026-06-13T09:06:57.286147+00:00",
           "glossary": []
         }
       ]
@@ -29,85 +29,84 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-95124",
-          "title": "Development application raises new questions in Cave City data center debate",
-          "kicker": "Glasgow News 1",
-          "summary": "Glasgow News 1 is reporting on Development application raises new questions in Cave City data center debate. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "id": "energy-1-99195",
+          "title": "Farmers RECC says no formal power application filed for proposed Barren County data center",
+          "kicker": "WCLU Radio",
+          "summary": "WCLU Radio is reporting on Farmers RECC says no formal power application filed for proposed Barren County data center. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
           "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
           "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
           "dataSignals": [
             "PPL mention",
             "data-center load"
           ],
-          "sourceLabel": "Glasgow News 1 · Jun 11, 9:01 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZXltQUJMUFpJbGFNNklBZnVsSkpLSC1TZDdaSUZ2cnJLelhYbHdIb3l2d0ZobERBTkpENEZzT2JPaWdMNWQzWlROSGwyRzNzdUk4dXpTeEItdlNsZ25iclNvOFQ5MXZhMmp3RjB5cXJsTXd6RWx1T2Nkc0dUT3JpcWJqbnNNLWJ1elZCM1lJUjh3bUtnYzM2UFgtTC02emdNbnVvMTY1R3pPVWpjSUJQSEk3UQ?oc=5",
+          "sourceLabel": "WCLU Radio · Jun 12, 5:02 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPenUxSDlCdHFSd29DUWhqZ1A4RHpTS2NFX0FLWm1sLS1yUVNDd09fUGdWdGR4TGNBdWdVWldZdTItN0pqYkRvc2lhWW9qQ0NZWUVIV2VyMjN0ck8wTVcxQWdWYmhoUDlUSExkMk5EVUhJWmlIaW1ZRExZRGlGUVhQZmx6RjczYzBlSnowbGtKQ2d1aWo5em1tWl9WWjJYYnM3Y2JYTmVJc19PSnl5bkNRUzRXVF9DNWFxam91MTVnTF9vaXM0LVRj?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-11T13:01:22+00:00",
+          "publishedAt": "2026-06-12T21:02:36+00:00",
           "glossary": []
         },
         {
-          "id": "energy-2-27113",
-          "title": "LG&E, KU reach agreement on rate increase request",
-          "kicker": "MSN",
-          "summary": "MSN is reporting on LG&E, KU reach agreement on rate increase request. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "id": "energy-2-87762",
+          "title": "Pennsylvania’s Power Bills Are Up 50 Percent Since 2020. The Reason Is the Data Centers.",
+          "kicker": "The Eastern Herald",
+          "summary": "The Eastern Herald is reporting on Pennsylvania’s Power Bills Are Up 50 Percent Since 2020. The Reason Is the Data Centers. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "The Eastern Herald · Jun 13, 1:42 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORVdSQWpUV1pVTUZrN1NRdk1XLUh0b3BqUEt3X2N1TUdlYmpWMGk0emhER0tZTXQtNXVGU3FRMm96ZURCNzd2LVV5WGtveWdoQkVrM3c0X1JkRnlaMkJwWkxjeVFjYjd2UnNUMjlOZDU4eDFjZkMwTzBDWWI4ODluSGNGQTEySEN3VmFDRElpQmFwQkg5aWZnVUx4Y1piU2J0?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-06-13T05:42:17+00:00",
+          "glossary": []
+        },
+        {
+          "id": "energy-3-78655",
+          "title": "Electric cooperatives release joint statement on recent Cave City data center developments",
+          "kicker": "WNKY",
+          "summary": "WNKY is reporting on Electric cooperatives release joint statement on recent Cave City data center developments. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "WNKY · Jun 12, 2:07 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPTGN5WVZfRll1dTBFUGdhQ1BrbU4yY3V2OG53NnkwOVZLd3U1Y21sSjE5ZnBsc1RJVlI1bmI5WGpQeEVCb1FYZC1SUVhmX25WOEV4RTl3UzREYkhmY1JZZnhMdmNiVEZmdll3MXp4aEhwUTJ6Y2J3aDBzaHNYaFBFSFRLNUpDcFVUMU1YOTJ6WGItTnhMb1loVGJkdndwRThPYWtvcEtFMG83WHlPeFk3cmRB?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-06-12T18:07:37+00:00",
+          "glossary": []
+        },
+        {
+          "id": "energy-4-36268",
+          "title": "EPIC: Regulations will decide if electric customers will pay for data centers' costs",
+          "kicker": "The Paintsville Herald",
+          "summary": "The Paintsville Herald is reporting on EPIC: Regulations will decide if electric customers will pay for data centers' costs. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "The Paintsville Herald · Jun 12, 12:00 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQT21hcUxIYWJ5cG1PeFBRek9ubGc4Ty0zTUluR3oyMkE1eWJ5Zl9McXhiUURlRmJJTmhxUmRLdE5TWFk4cTFvallSTFdCUEpSWkRtOTRNU3Y0QnZnMVVQRFp4b3BYaG1JWWhUdV9qcTJiZU91WGE1QnBUYWF3X1dxMGhWZEc4cWsxNmd2bE9BbWhtcHAxRE1vMGZlRnhaSnI5R1NnRTRTQzVmallOYmEtSzVSZXZsRnQtUmdxeVg5S0JWNEZ4UzBWQU1BMWxFX0k4OEdWWHM4djg0SGxPcFVPbVQybGxoOWRTazdXSVFqY0V2cElpOWdLcjI2eUJzT1ZQ?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-06-12T16:00:00+00:00",
+          "glossary": []
+        },
+        {
+          "id": "energy-5-42919",
+          "title": "PPL (PPL) Outperforms Broader Market: What You Need to Know",
+          "kicker": "Yahoo Finance Singapore",
+          "summary": "Yahoo Finance Singapore is reporting on PPL (PPL) Outperforms Broader Market: What You Need to Know. In plain English, this is a utility-operations story: the important details are what changed, which customers or systems are affected, and whether it creates a reliability, regulatory, cost, or data-quality issue. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
           "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
           "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
           "dataSignals": [
-            "LG&E / KU / PPL mention",
-            "rate / bill impact"
+            "PPL mention"
           ],
-          "sourceLabel": "MSN · Jun 11, 2:51 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMitAJBVV95cUxORnFWMmtWd29xRUp0N1RyaUlEYnpNbVMwMS1aY2dwMWtDa0NDNzhSb283Tl9aVUdQWDVqNENPcjBOVFhyczVSSEc2WE1pZE9URlJXLVJQVWs3U01jMUtRREQzYno2Q2JiblhfRmpYTlpkRFlGWkQwM2lJdWpnUnFXNUpvaktMczBIOHIxSkJDbFZ6SWRFYmpaSmFaV1hFVnRxUmN2MGhGbkY3TDE5WVJrNTRZZzJKdUxKakIzbVlDeHNYVWMtRlY3bmNiZDVVZXBVdEp3clNFZHhlZkYxZVM1TUFyREJNYVYtWGE2YU1IOXBzOFlJZU9iMnllQzdQYWZfUE9tUjZkRTJhLWlHWXNXbmMydHFqYjdFQjRrZ19lY0NwekJwNlRtTzZsY3JhUUw5N2lWVw?oc=5",
+          "sourceLabel": "Yahoo Finance Singapore · Jun 12, 6:00 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOLThPSTVZX0pnTkFQMlZQOXFOd3VfTGZHMzU3dGdyLW9XNDdxc2dFLW4yQXlyUzBrQ3VSR1M5ZkRmWHR6SklyLVFYMEh6TDY4OXJJYXlUdS1GTlBTa0VyNTExSVp2OUZoVEcyaWhEd0NVYmkyRjlMSjA3WVd1WGJETUk3WTBib2lwdWRr?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-11T18:51:18+00:00",
-          "glossary": []
-        },
-        {
-          "id": "energy-3-79397",
-          "title": "EPIC: Regulations will decide if electric customers will pay for data centers' costs",
-          "kicker": "floydct.com",
-          "summary": "floydct.com is reporting on EPIC: Regulations will decide if electric customers will pay for data centers' costs. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
-          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
-          "dataSignals": [
-            "data-center load"
-          ],
-          "sourceLabel": "floydct.com · Jun 11, 12:00 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNdXFqZjZCamRGVElaZXppa0RudldwRHdhR0hHVWVhX0t4eWowSTYyd21rTnlrWldrTElaUzB4OXQzUHdJc21nYlVfMFFMaXJoZk5ZMzFDMTFyTno2eXlteVlYb0pGY2RyQzhieFoyNlVsLXdRa183WFcwX0V2dGpBemN2TUFTRVJmdG9NZDZfbU43YlFjSnJPN3V0YnI1OWszbHQxWGg3Ni02VkotYXI3T0JReHhzWG1STWtVTm9vazRnQk5VZF9Ra2VwaDVuT1hCdWF5OFloV2FYS2ZoRno3U0NubzVsY0lHMU5kWml2WFRyVjA?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-06-11T16:00:00+00:00",
-          "glossary": []
-        },
-        {
-          "id": "energy-4-59566",
-          "title": "Warren County discusses data center regulations amid community concerns",
-          "kicker": "WBKO",
-          "summary": "WBKO is reporting on Warren County discusses data center regulations amid community concerns. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
-          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
-          "dataSignals": [
-            "data-center load"
-          ],
-          "sourceLabel": "WBKO · Jun 11, 6:43 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNX1VHdWU4c0ZNc2xuMzlWMlMzNFdlWWktNnUwNTBUU2NScnd3bnVwWTZZYTBvTUo2V0NQQXoyUUw2ZEtRNFl1RS1FclFLNTNJRjgyQklvbTg0ZTItV2ZxVTREb1JQT2tFanRDSUs5M0N1cWVNWWU4R1B3dlExMWRvNjRjN25RQ0t2S0xjMXpoUlVIWTNiVG14M2pKVUl6WFdNZnhidUk2aF9oeHdzeFE1OFJ1T2dkWl9qbDZV0gG7AUFVX3lxTE1fVUd1ZThzRk1zbG4zOVYyUzM0V2VZaS02dTA1MFRTY1Jyd3dudXBZNllhMG9NSjZXQ1BBejJRTDZkS1E0WXVFLUVyUUs1M0lGODJCSW9tODRlMi1XZnFVNERvUlBPa0VqdENJSzkzQ3VxZU1ZZThHUHd2UTExZG82NGM3blFDS3ZLTGMxemhSVUhZM2JUbXgzakpVSXpYV01meGJ1STZoX2h4d3N4UTU4UnVPZ2RaX2psNlU?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-06-11T22:43:00+00:00",
-          "glossary": []
-        },
-        {
-          "id": "energy-5-66177",
-          "title": "WKYT Investigates: Kentucky data center boom raises concerns over costs, transparency",
-          "kicker": "WKYT",
-          "summary": "WKYT is reporting on WKYT Investigates: Kentucky data center boom raises concerns over costs, transparency. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
-          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
-          "dataSignals": [
-            "data-center load"
-          ],
-          "sourceLabel": "WKYT · Jun 11, 5:26 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQaUFNOXQ0WVh2Rk1va0lhSHBRVnBaaTJNNVJTWnFfWk16ZF9MbDBxUlgxYnh3Z1QxMUl2UkcxTUpGMzkyZWlDMGhONWxrNDdja2Q1TzJ1c19nVzlKem8yM2o4YUlxRFRZekRuejhPX2NDcHB5UHNvblJLMDdoYWpSdWsxRUlCTjlVN1FBVExUd2NNb0NYZFR6T1JneUR5S1JhSlpUWWwtZ05EOThSVzhfUWIwYUxPVVE?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-06-11T21:26:00+00:00",
+          "publishedAt": "2026-06-12T22:00:04+00:00",
           "glossary": []
         }
       ]
