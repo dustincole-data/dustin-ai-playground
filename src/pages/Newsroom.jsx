@@ -277,33 +277,25 @@ function LearningPage({ article, feedStatus }) {
 
         <section className="mt-4 rounded-[1.6rem] border border-border bg-white p-5 shadow-sm md:p-8">
           <p className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.16em] text-slate">
-            <BookOpen className="h-4 w-4" /> Article lesson
+            <BookOpen className="h-4 w-4" /> Teach me
           </p>
           <h1 className="mt-3 font-heading text-3xl font-black leading-tight text-navy md:text-5xl">{page.title}</h1>
-          <p className="mt-3 max-w-3xl text-sm font-semibold text-charcoal/55">{page.sourceLabel}</p>
-          <div className="mt-5 rounded-2xl border border-slate/25 bg-offwhite/70 p-4">
-            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Story snapshot</p>
-            <p className="mt-2 text-base leading-7 text-charcoal/78">{page.storySnapshot}</p>
-          </div>
+          <p className="mt-5 text-[1.08rem] leading-8 text-charcoal/78">{page.explanationText}</p>
         </section>
 
-        <section className="mt-4 rounded-[1.6rem] border border-border bg-white p-5 shadow-sm md:p-8">
-          <p className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Plain-English walkthrough</p>
-          <div className="mt-3 space-y-5 text-[1.05rem] leading-8 text-charcoal/78">
-            {(page.lessonText ?? '').split('\n\n').map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-4 rounded-[1.35rem] border border-border bg-white p-5 shadow-sm">
-          <p className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Now read the source</p>
-          <h2 className="mt-2 text-xl font-black text-navy">{article.title}</h2>
-          <p className="mt-2 text-sm leading-6 text-charcoal/70">{article.summary}</p>
-          <a href={article.sourceUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-full bg-navy px-4 py-2 text-sm font-black text-white">
-            Open source article <ExternalLink className="h-4 w-4" />
-          </a>
-        </section>
+        {(page.glossary ?? []).length > 0 && (
+          <section className="mt-4 rounded-[1.35rem] border border-border bg-white p-5 shadow-sm md:p-8">
+            <h2 className="font-heading text-2xl font-black text-navy">Glossary</h2>
+            <dl className="mt-4 grid gap-4 md:grid-cols-2">
+              {page.glossary.map((entry) => (
+                <div key={entry.term} className="border-t border-border pt-3">
+                  <dt className="text-base font-black text-charcoal">{entry.term}</dt>
+                  <dd className="mt-1 text-sm leading-6 text-charcoal/72">{entry.definition}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
       </main>
     </div>
   );

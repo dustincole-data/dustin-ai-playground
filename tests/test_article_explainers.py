@@ -17,13 +17,19 @@ def test_builds_article_specific_learning_page_for_energy_article():
 
     page = briefs.article_learning_page("energy", item, "Utility Dive")
 
-    assert page["title"].startswith("Learn this story")
-    assert "Kentucky data center" in page["storySnapshot"]
-    assert "lessonText" in page
-    assert "data center" in page["lessonText"]
-    assert "ratepayer" in page["lessonText"]
-    assert "utility rates" in page["lessonText"]
-    assert len(page["lessonText"].split()) > 120
+    assert page["title"] == "What this means"
+    assert "explanationText" in page
+    assert "data center" in page["explanationText"]
+    assert "ratepayer" in page["explanationText"]
+    assert "utility rates" in page["explanationText"]
+    assert "article" not in page["explanationText"].lower()
+    assert "source" not in page["explanationText"].lower()
+    assert 70 <= len(page["explanationText"].split()) <= 190
+    glossary_terms = [entry["term"] for entry in page["glossary"]]
+    assert "data center" in glossary_terms
+    assert "ratepayer" in glossary_terms
+    assert "storySnapshot" not in page
+    assert "lessonText" not in page
     assert "lessonSections" not in page
     assert "concepts" not in page
 

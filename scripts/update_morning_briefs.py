@@ -624,29 +624,22 @@ def article_learning_page(brief_id: str, item: dict, source_label: str = "") -> 
                 {"term": "guardrail", "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.", "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."},
             ]
 
-    concept_body = "The most important terms in this story are " + ", ".join(concept["term"] for concept in concepts[:4]) + "." if concepts else "This story has fewer obvious jargon terms, so focus on the actors, the action, and what changes next."
-    term_explanations = " ".join(
-        f"{concept['term']} means {concept['definition'].rstrip('.')}. Why it matters here: {concept['whyItMatters']}"
-        for concept in concepts
-    )
-    question_text = " ".join(f"{idx}. {question}" for idx, question in enumerate(questions, start=1))
-    lesson_text = "\n\n".join(
-        part
-        for part in [
-            f"Here is the story in normal language: {frame}",
-            f"The reason this matters is simple: {stakes}",
-            f"To understand the article, start with the terms. {concept_body} {term_explanations}".strip(),
-            f"When you read the source, use this lens: {reading}",
-            f"The smart follow-up questions are: {question_text}",
-        ]
-        if part.strip()
-    )
+    glossary = concepts[:8]
+    core_terms = ", ".join(concept["term"] for concept in glossary[:4])
+    cleaned_frame = frame.replace("This article is about", "This is about").replace("This article", "This").replace("the article", "the story")
+    cleaned_stakes = stakes.replace("article", "story").replace("source", "details")
+    cleaned_reading = reading.replace("the article", "the story").replace("Read the article", "Read it").replace("source", "details")
+    explanation_parts = [
+        cleaned_frame,
+        cleaned_stakes,
+        f"The main terms to understand are {core_terms}." if core_terms else "The main thing to understand is what changed and who is affected.",
+        cleaned_reading,
+    ]
+    explanation_text = " ".join(part.strip() for part in explanation_parts if part.strip())
     return {
-        "title": f"Learn this story: {truncate(title, 78)}",
-        "sourceLabel": source_label or "Morning brief source",
-        "storySnapshot": f"{title}. {truncate(summary, 260) if summary else ''}".strip(),
-        "lessonText": lesson_text,
-        "questions": questions,
+        "title": "What this means",
+        "explanationText": explanation_text,
+        "glossary": glossary,
     }
 
 
