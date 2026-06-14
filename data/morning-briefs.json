@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-14T21:24:40.174264+00:00",
-  "generatedLabel": "Jun 14, 5:24 PM ET",
+  "generatedAt": "2026-06-14T21:36:39.821841+00:00",
+  "generatedLabel": "Jun 14, 5:36 PM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -24,15 +24,50 @@
           "googleNewsUrl": null,
           "publishedAt": "2026-06-14T09:56:54.283716+00:00",
           "glossary": [],
-          "explainer": {
-            "headline": "What this means in normal terms",
-            "plainEnglish": "This is a practical AI update. The key question is what changed, who can use it, and whether it helps people do real work or just sounds impressive.",
-            "sections": {
-              "Why it matters": "For Dustin, useful AI news points to tools, workflows, governance risks, or business ideas worth testing.",
-              "What to watch": "Look for availability, price or limits, business use cases, risk controls, and whether it connects to data or everyday work.",
-              "Source note": "Source context: Hermes Daily AI Brief."
-            },
-            "terms": []
+          "learningPage": {
+            "title": "Learn this story: Anthropic suspended Claude Fable 5 and Mythos 5 for all customers after a US…",
+            "sourceLabel": "Hermes Daily AI Brief",
+            "storySnapshot": "Anthropic suspended Claude Fable 5 and Mythos 5 for all customers after a US government export-control d…. Anthropic suspended Claude Fable 5 and Mythos 5 for all customers after a US government export-control directive; Anthropic says other models are unaffected. Source: https://www.anthropic.com/news/fable-mythos-access — credible because it is Anthropic’s own s…",
+            "lessonSections": [
+              {
+                "title": "First, what happened?",
+                "body": "This is an AI-access and policy story: model availability changed because a government or company rule limited who can use it."
+              },
+              {
+                "title": "Why this matters",
+                "body": "The teaching angle is dependency risk. If a product or workflow relies on one model, policy decisions can suddenly change what users are allowed to run."
+              },
+              {
+                "title": "Concepts you need",
+                "body": "The most important terms in this story are export-control directive, model access."
+              },
+              {
+                "title": "How to read this article",
+                "body": "Read for which model changed, who lost access, what authority caused the change, and whether alternative models or customers are unaffected."
+              },
+              {
+                "title": "Questions to ask next",
+                "body": "1. Which exact model or feature changed? 2. Who lost access? 3. Was the change caused by company policy or government order? 4. What alternatives remain available?"
+              }
+            ],
+            "concepts": [
+              {
+                "term": "export-control directive",
+                "definition": "A government rule that can restrict who gets access to certain technology, often because officials think it could affect national security or foreign-policy goals.",
+                "whyItMatters": "If an AI company removes access because of export controls, the story is not just a product update — it is policy directly changing who can use a model."
+              },
+              {
+                "term": "model access",
+                "definition": "Whether a customer is allowed to use a specific AI model or feature.",
+                "whyItMatters": "Access changes can break workflows, force teams to switch models, and reveal how dependent products are on one vendor."
+              }
+            ],
+            "questions": [
+              "Which exact model or feature changed?",
+              "Who lost access?",
+              "Was the change caused by company policy or government order?",
+              "What alternatives remain available?"
+            ]
           }
         },
         {
@@ -61,23 +96,79 @@
               "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer."
             }
           ],
-          "explainer": {
-            "headline": "What this means in normal terms",
-            "plainEnglish": "This is about AI moving from chat answers toward software that can take steps, use tools, and help complete a workflow.",
-            "sections": {
-              "Why it matters": "Agent stories matter when they save real work, but they also raise questions about approvals, permissions, accuracy, and oversight.",
-              "What to watch": "Look for what the agent can actually do, what systems it touches, what guardrails exist, and whether normal users can trust it.",
-              "Source note": "Source context: Hermes Daily AI Brief."
-            },
-            "terms": [
+          "learningPage": {
+            "title": "Learn this story: GitHub Agentic Workflows is in public preview: natural-language Markdown work…",
+            "sourceLabel": "Hermes Daily AI Brief",
+            "storySnapshot": "GitHub Agentic Workflows is in public preview: natural-language Markdown workflows compile to GitHub Act…. GitHub Agentic Workflows is in public preview: natural-language Markdown workflows compile to GitHub Actions, with read-only default permissions, sandboxed containers, firewall, safe outputs, and threat detection. Source: https://github.blog/changelog/2026-06…",
+            "lessonSections": [
+              {
+                "title": "First, what happened?",
+                "body": "This is an AI-agent workflow story: AI is being used to help define, run, or supervise a sequence of work instead of only chatting."
+              },
+              {
+                "title": "Why this matters",
+                "body": "The teaching angle is control. Once AI can trigger workflows, the key concepts are permissions, sandboxing, auditability, and whether humans can understand what it changed."
+              },
+              {
+                "title": "Concepts you need",
+                "body": "The most important terms in this story are agentic workflow, GitHub Actions, Markdown workflow, sandboxed container."
+              },
+              {
+                "title": "How to read this article",
+                "body": "Read for the exact job the agent can do, what tools it touches, what permissions it starts with, and what safety controls are named in the article."
+              },
+              {
+                "title": "Questions to ask next",
+                "body": "1. What action can the agent actually take? 2. Is it read-only or can it modify systems? 3. Where does human review happen? 4. What guardrail would fail first in real use?"
+              }
+            ],
+            "concepts": [
+              {
+                "term": "agentic workflow",
+                "definition": "A workflow where AI is expected to plan steps, use tools, and move work forward instead of only answering a single question.",
+                "whyItMatters": "This is where AI starts touching real operations, so permissions, logs, and safety controls matter as much as the model output."
+              },
+              {
+                "term": "GitHub Actions",
+                "definition": "GitHub's automation system for running jobs like tests, deployments, or scripted tasks when code changes.",
+                "whyItMatters": "If AI can generate or run Actions, it can affect the same pipelines that ship software."
+              },
+              {
+                "term": "Markdown workflow",
+                "definition": "A text-file workflow written in a simple document format instead of a traditional programming language.",
+                "whyItMatters": "This lowers the barrier to creating automation, but also means non-programmers may create powerful workflows that need guardrails."
+              },
+              {
+                "term": "sandboxed container",
+                "definition": "An isolated environment that limits what code can touch while it runs.",
+                "whyItMatters": "Sandboxes reduce the blast radius if an AI-generated workflow does something wrong."
+              },
+              {
+                "term": "read-only permissions",
+                "definition": "Access that lets software view information but not change or delete it.",
+                "whyItMatters": "Read-only defaults are a safety move: the AI can inspect before anyone grants it power to modify systems."
+              },
+              {
+                "term": "threat detection",
+                "definition": "Monitoring that looks for suspicious or dangerous behavior.",
+                "whyItMatters": "AI workflows need detection because mistakes and attacks can look like normal automation until damage is done."
+              },
               {
                 "term": "agentic",
-                "definition": "AI software that can plan and take steps toward a task instead of only answering one prompt."
+                "definition": "AI software that can plan and take steps toward a task instead of only answering one prompt.",
+                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon."
               },
               {
                 "term": "agent",
-                "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer."
+                "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer.",
+                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon."
               }
+            ],
+            "questions": [
+              "What action can the agent actually take?",
+              "Is it read-only or can it modify systems?",
+              "Where does human review happen?",
+              "What guardrail would fail first in real use?"
             ]
           }
         },
@@ -103,19 +194,59 @@
               "definition": "Model Context Protocol: a standard way for AI tools to connect to outside apps, files, and services."
             }
           ],
-          "explainer": {
-            "headline": "What this means in normal terms",
-            "plainEnglish": "This is a practical AI update. The key question is what changed, who can use it, and whether it helps people do real work or just sounds impressive.",
-            "sections": {
-              "Why it matters": "For Dustin, useful AI news points to tools, workflows, governance risks, or business ideas worth testing.",
-              "What to watch": "Look for availability, price or limits, business use cases, risk controls, and whether it connects to data or everyday work.",
-              "Source note": "Source context: Hermes Daily AI Brief."
-            },
-            "terms": [
+          "learningPage": {
+            "title": "Learn this story: OpenAI Codex June updates added Developer Mode for browser/CDP debugging, Sit…",
+            "sourceLabel": "Hermes Daily AI Brief",
+            "storySnapshot": "OpenAI Codex June updates added Developer Mode for browser/CDP debugging, Sites preview for hosted inter…. OpenAI Codex June updates added Developer Mode for browser/CDP debugging, Sites preview for hosted internal tools/dashboards, and Codex CLI 0.139.0 with standalone web search + richer MCP schema compatibility. Source: https://developers.openai.com/codex/chang…",
+            "lessonSections": [
+              {
+                "title": "First, what happened?",
+                "body": "This is a developer-tooling AI story: the update affects how coding agents inspect apps, connect tools, or run inside a developer workflow."
+              },
+              {
+                "title": "Why this matters",
+                "body": "The teaching angle is integration. The more an AI coding tool connects to browsers, terminals, and external services, the more useful — and riskier — it becomes."
+              },
+              {
+                "title": "Concepts you need",
+                "body": "The most important terms in this story are Developer Mode, CDP debugging, MCP, CLI."
+              },
+              {
+                "title": "How to read this article",
+                "body": "Read for what is newly available, whether it is preview or production-ready, what systems it connects to, and any limits around pricing, permissions, or rate limits."
+              },
+              {
+                "title": "Questions to ask next",
+                "body": "1. What new capability did the tool gain? 2. Does it connect to browsers, terminals, or outside services? 3. Is this broadly available or limited preview? 4. What would you test with it first?"
+              }
+            ],
+            "concepts": [
+              {
+                "term": "Developer Mode",
+                "definition": "A mode that gives developers deeper debugging or control features than normal users see.",
+                "whyItMatters": "For coding agents, developer features can make it easier to inspect web apps, reproduce bugs, and build internal tools."
+              },
+              {
+                "term": "CDP debugging",
+                "definition": "Chrome DevTools Protocol: a way for software to inspect and control a browser for testing or debugging.",
+                "whyItMatters": "CDP access can make an AI coding agent much better at fixing front-end problems because it can see the page like a developer tool does."
+              },
               {
                 "term": "MCP",
-                "definition": "Model Context Protocol: a standard way for AI tools to connect to outside apps, files, and services."
+                "definition": "Model Context Protocol: a standard way for AI tools to connect to outside apps, files, and services.",
+                "whyItMatters": "MCP matters because it is becoming a common plug shape for connecting AI agents to real tools, files, and services."
+              },
+              {
+                "term": "CLI",
+                "definition": "Command-line interface: a text-based tool run from a terminal.",
+                "whyItMatters": "CLI support matters when AI tools need to fit into developer and automation workflows instead of only a web chat."
               }
+            ],
+            "questions": [
+              "What new capability did the tool gain?",
+              "Does it connect to browsers, terminals, or outside services?",
+              "Is this broadly available or limited preview?",
+              "What would you test with it first?"
             ]
           }
         }
@@ -127,7 +258,7 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-71863",
+          "id": "energy-1-55404",
           "title": "PPL Corporation Stock (US69351T1060): Valuation, dividend and rate backdrop in focus",
           "kicker": "AD HOC NEWS",
           "summary": "AD HOC NEWS is reporting on PPL Corporation Stock (US69351T1060): Valuation, dividend and rate backdrop in focus. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -142,19 +273,54 @@
           "googleNewsUrl": null,
           "publishedAt": "2026-06-14T16:49:02+00:00",
           "glossary": [],
-          "explainer": {
-            "headline": "What this means in normal terms",
-            "plainEnglish": "This is about utility prices: what the company wants to charge, what regulators allow, and how customer bills could change.",
-            "sections": {
-              "Why it matters": "Rate stories matter because small regulatory decisions can turn into real monthly bill changes and political pressure.",
-              "What to watch": "Look for the requested increase, the approved increase, the reason given, and any customer protections.",
-              "Source note": "Source context: AD HOC NEWS."
-            },
-            "terms": []
+          "learningPage": {
+            "title": "Learn this story: PPL Corporation Stock (US69351T1060): Valuation, dividend and rate backdrop i…",
+            "sourceLabel": "AD HOC NEWS",
+            "storySnapshot": "PPL Corporation Stock (US69351T1060): Valuation, dividend and rate backdrop in focus. PPL Corporation Stock (US69351T1060): Valuation, dividend and rate backdrop in focus AD HOC NEWS",
+            "lessonSections": [
+              {
+                "title": "First, what happened?",
+                "body": "This is a utility-pricing story: a company, regulator, or market signal is pointing to costs that may eventually show up in customer bills."
+              },
+              {
+                "title": "Why this matters",
+                "body": "The teaching angle is the bridge between utility spending and public impact. Technical investments become controversial when customers are asked to pay for them."
+              },
+              {
+                "title": "Concepts you need",
+                "body": "The most important terms in this story are utility rates, ratepayer."
+              },
+              {
+                "title": "How to read this article",
+                "body": "Read for the requested amount, the approved amount, the reason for the cost, and whether the article describes customer protections or opposition."
+              },
+              {
+                "title": "Questions to ask next",
+                "body": "1. Is this a request, an approval, or market commentary? 2. What costs are being justified? 3. Which customers are affected? 4. What did regulators or advocates say?"
+              }
+            ],
+            "concepts": [
+              {
+                "term": "utility rates",
+                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
+                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
+              },
+              {
+                "term": "ratepayer",
+                "definition": "A utility customer who pays electric, gas, or water bills.",
+                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up paying for a utility decision."
+              }
+            ],
+            "questions": [
+              "Is this a request, an approval, or market commentary?",
+              "What costs are being justified?",
+              "Which customers are affected?",
+              "What did regulators or advocates say?"
+            ]
           }
         },
         {
-          "id": "energy-2-84327",
+          "id": "energy-2-81538",
           "title": "How A US$275 Million Rate Hike At PPL (PPL) Has Changed Its Investment Story",
           "kicker": "simplywall.st",
           "summary": "simplywall.st is reporting on How A US$275 Million Rate Hike At PPL (PPL) Has Changed Its Investment Story. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -169,19 +335,49 @@
           "googleNewsUrl": null,
           "publishedAt": "2026-06-14T05:20:39+00:00",
           "glossary": [],
-          "explainer": {
-            "headline": "What this means in normal terms",
-            "plainEnglish": "This is about utility prices: what the company wants to charge, what regulators allow, and how customer bills could change.",
-            "sections": {
-              "Why it matters": "Rate stories matter because small regulatory decisions can turn into real monthly bill changes and political pressure.",
-              "What to watch": "Look for the requested increase, the approved increase, the reason given, and any customer protections.",
-              "Source note": "Source context: simplywall.st."
-            },
-            "terms": []
+          "learningPage": {
+            "title": "Learn this story: How A US$275 Million Rate Hike At PPL (PPL) Has Changed Its Investment Story",
+            "sourceLabel": "simplywall.st",
+            "storySnapshot": "How A US$275 Million Rate Hike At PPL (PPL) Has Changed Its Investment Story. How A US$275 Million Rate Hike At PPL (PPL) Has Changed Its Investment Story simplywall.st",
+            "lessonSections": [
+              {
+                "title": "First, what happened?",
+                "body": "This is a utility-pricing story: a company, regulator, or market signal is pointing to costs that may eventually show up in customer bills."
+              },
+              {
+                "title": "Why this matters",
+                "body": "The teaching angle is the bridge between utility spending and public impact. Technical investments become controversial when customers are asked to pay for them."
+              },
+              {
+                "title": "Concepts you need",
+                "body": "The most important terms in this story are rate case."
+              },
+              {
+                "title": "How to read this article",
+                "body": "Read for the requested amount, the approved amount, the reason for the cost, and whether the article describes customer protections or opposition."
+              },
+              {
+                "title": "Questions to ask next",
+                "body": "1. Is this a request, an approval, or market commentary? 2. What costs are being justified? 3. Which customers are affected? 4. What did regulators or advocates say?"
+              }
+            ],
+            "concepts": [
+              {
+                "term": "rate case",
+                "definition": "A formal utility-regulator process that decides how much a utility can charge customers and what costs it can recover.",
+                "whyItMatters": "Rate cases translate utility spending into bills, so they are where technical grid plans become household costs."
+              }
+            ],
+            "questions": [
+              "Is this a request, an approval, or market commentary?",
+              "What costs are being justified?",
+              "Which customers are affected?",
+              "What did regulators or advocates say?"
+            ]
           }
         },
         {
-          "id": "energy-3-98988",
+          "id": "energy-3-82441",
           "title": "Some Congressional Lawmakers Have Attempted To Push Back Against AI Data Centers — But They Haven't Gotten Far",
           "kicker": "dailycaller.com",
           "summary": "dailycaller.com is reporting on Some Congressional Lawmakers Have Attempted To Push Back Against AI Data Centers — But They Haven't Gotten Far. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -195,19 +391,49 @@
           "googleNewsUrl": null,
           "publishedAt": "2026-06-14T14:24:00+00:00",
           "glossary": [],
-          "explainer": {
-            "headline": "What this means in normal terms",
-            "plainEnglish": "This is about whether big electricity users like data centers are creating new power demand, what grid upgrades may be needed, and who pays for those costs.",
-            "sections": {
-              "Why it matters": "It can affect utility planning, customer bills, reliability, and how regulators protect regular ratepayers.",
-              "What to watch": "Look for the size of the project, how much power it needs, whether upgrades are required, and whether costs fall on the company or ordinary customers.",
-              "Source note": "Source context: dailycaller.com."
-            },
-            "terms": []
+          "learningPage": {
+            "title": "Learn this story: Some Congressional Lawmakers Have Attempted To Push Back Against AI Data Cent…",
+            "sourceLabel": "dailycaller.com",
+            "storySnapshot": "Some Congressional Lawmakers Have Attempted To Push Back Against AI Data Centers — But They Haven't Gotten Far. Some Congressional Lawmakers Have Attempted To Push Back Against AI Data Centers — But They Haven't Gotten Far dailycaller.com",
+            "lessonSections": [
+              {
+                "title": "First, what happened?",
+                "body": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators."
+              },
+              {
+                "title": "Why this matters",
+                "body": "The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill."
+              },
+              {
+                "title": "Concepts you need",
+                "body": "The most important terms in this story are data center."
+              },
+              {
+                "title": "How to read this article",
+                "body": "Read the article by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure."
+              },
+              {
+                "title": "Questions to ask next",
+                "body": "1. How much electricity is being requested? 2. Does the article say who pays for upgrades? 3. Are regulators, lawmakers, or local residents pushing back? 4. Is this confirmed demand or speculative project talk?"
+              }
+            ],
+            "concepts": [
+              {
+                "term": "data center",
+                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
+                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
+              }
+            ],
+            "questions": [
+              "How much electricity is being requested?",
+              "Does the article say who pays for upgrades?",
+              "Are regulators, lawmakers, or local residents pushing back?",
+              "Is this confirmed demand or speculative project talk?"
+            ]
           }
         },
         {
-          "id": "energy-4-22177",
+          "id": "energy-4-82954",
           "title": "Data centers spark discussion, debate",
           "kicker": "Bowling Green Daily News",
           "summary": "Bowling Green Daily News is reporting on Data centers spark discussion, debate. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -221,19 +447,49 @@
           "googleNewsUrl": null,
           "publishedAt": "2026-06-14T13:47:07+00:00",
           "glossary": [],
-          "explainer": {
-            "headline": "What this means in normal terms",
-            "plainEnglish": "This is about whether big electricity users like data centers are creating new power demand, what grid upgrades may be needed, and who pays for those costs.",
-            "sections": {
-              "Why it matters": "It can affect utility planning, customer bills, reliability, and how regulators protect regular ratepayers.",
-              "What to watch": "Look for the size of the project, how much power it needs, whether upgrades are required, and whether costs fall on the company or ordinary customers.",
-              "Source note": "Source context: Bowling Green Daily News."
-            },
-            "terms": []
+          "learningPage": {
+            "title": "Learn this story: Data centers spark discussion, debate",
+            "sourceLabel": "Bowling Green Daily News",
+            "storySnapshot": "Data centers spark discussion, debate. Data centers spark discussion, debate Bowling Green Daily News",
+            "lessonSections": [
+              {
+                "title": "First, what happened?",
+                "body": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators."
+              },
+              {
+                "title": "Why this matters",
+                "body": "The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill."
+              },
+              {
+                "title": "Concepts you need",
+                "body": "The most important terms in this story are data center."
+              },
+              {
+                "title": "How to read this article",
+                "body": "Read the article by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure."
+              },
+              {
+                "title": "Questions to ask next",
+                "body": "1. How much electricity is being requested? 2. Does the article say who pays for upgrades? 3. Are regulators, lawmakers, or local residents pushing back? 4. Is this confirmed demand or speculative project talk?"
+              }
+            ],
+            "concepts": [
+              {
+                "term": "data center",
+                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
+                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
+              }
+            ],
+            "questions": [
+              "How much electricity is being requested?",
+              "Does the article say who pays for upgrades?",
+              "Are regulators, lawmakers, or local residents pushing back?",
+              "Is this confirmed demand or speculative project talk?"
+            ]
           }
         },
         {
-          "id": "energy-5-77665",
+          "id": "energy-5-94042",
           "title": "Worries over water as a giant data center moves into the New Mexico desert",
           "kicker": "WUKY",
           "summary": "WUKY is reporting on Worries over water as a giant data center moves into the New Mexico desert. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -252,19 +508,44 @@
               "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades."
             }
           ],
-          "explainer": {
-            "headline": "What this means in normal terms",
-            "plainEnglish": "This is about whether big electricity users like data centers are creating new power demand, what grid upgrades may be needed, and who pays for those costs.",
-            "sections": {
-              "Why it matters": "It can affect utility planning, customer bills, reliability, and how regulators protect regular ratepayers.",
-              "What to watch": "Look for the size of the project, how much power it needs, whether upgrades are required, and whether costs fall on the company or ordinary customers.",
-              "Source note": "Source context: WUKY."
-            },
-            "terms": [
+          "learningPage": {
+            "title": "Learn this story: Worries over water as a giant data center moves into the New Mexico desert",
+            "sourceLabel": "WUKY",
+            "storySnapshot": "Worries over water as a giant data center moves into the New Mexico desert. Worries over water as a giant data center moves into the New Mexico desert WUKY",
+            "lessonSections": [
+              {
+                "title": "First, what happened?",
+                "body": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators."
+              },
+              {
+                "title": "Why this matters",
+                "body": "The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill."
+              },
+              {
+                "title": "Concepts you need",
+                "body": "The most important terms in this story are data center."
+              },
+              {
+                "title": "How to read this article",
+                "body": "Read the article by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure."
+              },
+              {
+                "title": "Questions to ask next",
+                "body": "1. How much electricity is being requested? 2. Does the article say who pays for upgrades? 3. Are regulators, lawmakers, or local residents pushing back? 4. Is this confirmed demand or speculative project talk?"
+              }
+            ],
+            "concepts": [
               {
                 "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades."
+                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
+                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
               }
+            ],
+            "questions": [
+              "How much electricity is being requested?",
+              "Does the article say who pays for upgrades?",
+              "Are regulators, lawmakers, or local residents pushing back?",
+              "Is this confirmed demand or speculative project talk?"
             ]
           }
         }
