@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-14T09:00:03.899656+00:00",
-  "generatedLabel": "Jun 14, 5:00 AM ET",
+  "generatedAt": "2026-06-14T20:25:32.469451+00:00",
+  "generatedLabel": "Jun 14, 4:25 PM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -9,16 +9,61 @@
       "emptyMessage": "No qualified AI / Analytics stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "ai-daily-2026-06-14_08-53-32",
-          "title": "Daily AI Briefing — Sunday, June 14, 2026 ET",
+          "id": "ai-signal-2026-06-14_09-56-54-1",
+          "title": "Anthropic suspended Claude Fable 5 and Mythos 5 for all customers after a US government export-control d…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "Daily AI Briefing — Sunday, June 14, 2026 ET\n\n1. Today’s actual signal\n- OpenAI is running “Codex for Open Source”: selected active OSS maintainers can get 6 months of ChatGPT Pro, Codex access, possible Codex Security access, and API credits for maintainer automation/release workflows. Source: https://openai.com/form/codex-for-oss/ — credible because it is OpenAI’s official application page; materially new today because it surfaced on HN’s front page.\n- `weave` is a semantic Git merge driver aimed at multi-agent coding: it merges by functions/classes via tree-sitter, claims 31/31 benchmark scenarios, supports 28 languages, and exposes an MCP server. Source: https://ataraxy-labs.github.io/weave/ — credible enough as a practical tool lead because it gives concrete install/docs/benchmark claims, not just hype.\n- Codex releases are still alpha-churning: latest visible `0.140.0-alpha.19` is marked pre-release, while no stable signal appeared. Source: https://github.com/openai/codex/releases — credible because it is the official GitHub releases page; consequence: don’t spend morning time chasing it unless a stable lands.\n\n2. Dustin relevance\n- Hermes/agents: `weave` is directly relevant to parallel agent work: semantic merge + MCP coordination could reduce “two agents touched same file” friction if tested in a throwaway repo first. Source: https://ataraxy-labs.github.io/weave/\n- Fanbase Weather: No strong signal today.\n- Newsletter/Data Nerve: Good angle: “The useful AI opportunity isn’t another chatbot — it’s boring maintainer leverage: review load, release workflows, merge conflicts, and receipts.”\n- App/product ideas: Tiny OSS-maintainer prep kit: repo eligibility checklist, adoption evidence, issue/PR load summary, and safe use-cases for API credits before applying to programs like OpenAI’s. Source: https://openai.com/form/codex-for-oss/\n\n3. Try / Save / Ignore\n- Try today: Spend 15 minutes listing one repo/project that could plausibly qualify for Codex for OSS, plus 3 evidence bullets: usage, maintainer burden, and how credits would reduce review/release work.\n- Save for later: `weave` as a possible multi-agent merge/coordination experiment for isolated feature branches. Source: https://ataraxy-labs.github.io/weave/\n- Ignore: “latest Codex alpha” release churn until a stable release or specific Hermes-relevant fix appears. Source: https://github.com/openai/codex/releases\n\n4. Content angles\n- “AI for maintainers is more interesting than AI for demos: fewer stale PRs, safer releases, less merge-conflict babysitting.”\n- “The next agent feature I care about is not ‘bigger context.’ It’s whether two agents can edit different functions and not make me clean up the crime scene.”\n\n5. One next action\n- Create a private 3-bullet “Codex for OSS eligibility” note: candidate repo, proof it matters, and one safe maintainer workflow where credits would help. Do not apply or submit anything without approval.\n\nVerification: sources checked: OpenAI/Codex official pages, Anthropic Claude Code release notes, xAI release notes, Google/GitHub changelog searches, GitHub Copilot changelog, HN/Product Hunt/GitHub practical discovery. Repetition check performed against local outputs from June 10–13; today’s action is different from prior asset receipt, agent-policy, repo-checklist, and GitHub issue-dependency actions. No external side effects.",
-          "whyItMatters": "This is the vetted Daily AI Briefing output created for Dustin, replacing the old generic AI RSS/news-card section.",
-          "dataSignals": [],
-          "sourceLabel": "Hermes Daily AI Brief · Jun 14, 4:53 AM ET",
-          "sourceUrl": "https://dustincole-data.github.io/dustin-ai-playground/",
+          "summary": "Anthropic suspended Claude Fable 5 and Mythos 5 for all customers after a US government export-control directive; Anthropic says other models are unaffected. Source: https://www.anthropic.com/news/fable-mythos-access — credible because it is Anthropic’s own statement, not rumor. Materially new vs prior briefs: yesterday covered Fable launch/ops; today’s key fact is access suspension.",
+          "emailSummary": "Anthropic suspended Claude Fable 5 and Mythos 5 for all customers after a US government export-control directive; Anthropic says other models ar…",
+          "whyItMatters": "This is one of the vetted AI signals from Dustin’s Daily AI Briefing, split into its own card so the morning scan covers multiple AI developments instead of one giant article.",
+          "dataSignals": [
+            "Anthropic signal",
+            "model/tool release"
+          ],
+          "sourceLabel": "anthropic.com · Jun 14, 5:56 AM ET",
+          "sourceUrl": "https://www.anthropic.com/news/fable-mythos-access",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-14T08:53:32.454833+00:00",
+          "publishedAt": "2026-06-14T09:56:54.283716+00:00",
+          "glossary": []
+        },
+        {
+          "id": "ai-signal-2026-06-14_09-56-54-2",
+          "title": "GitHub Agentic Workflows is in public preview: natural-language Markdown workflows compile to GitHub Act…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "GitHub Agentic Workflows is in public preview: natural-language Markdown workflows compile to GitHub Actions, with read-only default permissions, sandboxed containers, firewall, safe outputs, and threat detection. Source: https://github.blog/changelog/2026-06-11-github-agentic-workflows-is-now-in-public-preview — credible because it is GitHub’s changelog; practical because it shows how agent automation is being governed.",
+          "emailSummary": "GitHub Agentic Workflows is in public preview: natural-language Markdown workflows compile to GitHub Actions, with read-only default permissions…",
+          "whyItMatters": "This is one of the vetted AI signals from Dustin’s Daily AI Briefing, split into its own card so the morning scan covers multiple AI developments instead of one giant article.",
+          "dataSignals": [
+            "agent workflow",
+            "developer workflow",
+            "workflow controls"
+          ],
+          "sourceLabel": "github.blog · Jun 14, 5:56 AM ET",
+          "sourceUrl": "https://github.blog/changelog/2026-06-11-github-agentic-workflows-is-now-in-public-preview",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-06-14T09:56:54.283716+00:00",
+          "glossary": [
+            {
+              "term": "agentic",
+              "definition": "AI software that can plan and take steps toward a task instead of only answering one prompt."
+            }
+          ]
+        },
+        {
+          "id": "ai-signal-2026-06-14_09-56-54-3",
+          "title": "OpenAI Codex June updates added Developer Mode for browser/CDP debugging, Sites preview for hosted inter…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "OpenAI Codex June updates added Developer Mode for browser/CDP debugging, Sites preview for hosted internal tools/dashboards, and Codex CLI 0.139.0 with standalone web search + richer MCP schema compatibility. Source: https://developers.openai.com/codex/changelog — credible because it is OpenAI’s official Codex changelog; pricing/rate-limit risk still applies.",
+          "emailSummary": "OpenAI Codex June updates added Developer Mode for browser/CDP debugging, Sites preview for hosted internal tools/dashboards, and Codex CLI 0.13…",
+          "whyItMatters": "This is one of the vetted AI signals from Dustin’s Daily AI Briefing, split into its own card so the morning scan covers multiple AI developments instead of one giant article.",
+          "dataSignals": [
+            "Codex / coding agents",
+            "OpenAI signal",
+            "MCP / integration"
+          ],
+          "sourceLabel": "developers.openai.com · Jun 14, 5:56 AM ET",
+          "sourceUrl": "https://developers.openai.com/codex/changelog",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-06-14T09:56:54.283716+00:00",
           "glossary": []
         }
       ]
@@ -29,7 +74,24 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-54508",
+          "id": "energy-1-89920",
+          "title": "PPL Corporation Stock (US69351T1060): Valuation, dividend and rate backdrop in focus",
+          "kicker": "AD HOC NEWS",
+          "summary": "AD HOC NEWS is reporting on PPL Corporation Stock (US69351T1060): Valuation, dividend and rate backdrop in focus. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "Market coverage is questioning PPL’s valuation, a utility-stock sentiment signal to keep on the radar.",
+          "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
+          "dataSignals": [
+            "PPL mention",
+            "rate / bill impact"
+          ],
+          "sourceLabel": "AD HOC NEWS · Jun 14, 12:49 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOOXEwUmlrY3dUUWFIbUdyNEhKczc4ckJNcXlSdVZsTFd2WVpNUHV4WWJlNzNFeTlZeUxONTdOaU1qdThreHpkNjZwN1ZJckpjYkZ2X193YjNPTWlYa29VeFZOZmlETG4xV0g4VHhDQWJWSEJrMGVzOFpaU2lxeHMtcS01RFhMWktxaTdFNHNHUG1IYnIxdmduY0h3ZmxUUlV2VC0tcENiZG9WVERwMmR0ZlZFc0hyOFZKQlFEM1hR?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-06-14T16:49:02+00:00",
+          "glossary": []
+        },
+        {
+          "id": "energy-2-28624",
           "title": "How A US$275 Million Rate Hike At PPL (PPL) Has Changed Its Investment Story",
           "kicker": "simplywall.st",
           "summary": "simplywall.st is reporting on How A US$275 Million Rate Hike At PPL (PPL) Has Changed Its Investment Story. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -46,55 +108,23 @@
           "glossary": []
         },
         {
-          "id": "energy-2-96103",
-          "title": "PPL Corporation Stock (US69351T1060): Utility valuation in focus as investors weigh fundamentals",
-          "kicker": "AD HOC NEWS",
-          "summary": "AD HOC NEWS is reporting on PPL Corporation Stock (US69351T1060): Utility valuation in focus as investors weigh fundamentals. In plain English, this is a utility-operations story: the important details are what changed, which customers or systems are affected, and whether it creates a reliability, regulatory, cost, or data-quality issue. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Market coverage is questioning PPL’s valuation, a utility-stock sentiment signal to keep on the radar.",
-          "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
-          "dataSignals": [
-            "PPL mention"
-          ],
-          "sourceLabel": "AD HOC NEWS · Jun 13, 2:55 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdG0zVlVKN21tX2lnbGF4MERGeHQyOUZCbUVaSFdscTBkVFVMOVFick96cjAxcVNrRGZMOXdTODh2YjFVemdhOVkwN1UySElFb3FYR2R3c0JNTnFzbmtxSkNLQ19HWmVEQ1ZFWmc4STFhYzRRWV9nWDNOMmpDNWJoS0lGa3hNZjc0dWlLV0NDRUR1cEZNZ3hzLVhXMVJXV18tXzByRmVBYms0b3JycC1wR2lhMHY4ZG5rN0ppT3dZMUI?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-06-13T18:55:28+00:00",
-          "glossary": []
-        },
-        {
-          "id": "energy-3-50205",
-          "title": "What's all the fuss: Data center info provided to community",
-          "kicker": "pmg-ky1.com",
-          "summary": "pmg-ky1.com is reporting on What's all the fuss: Data center info provided to community. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "id": "energy-3-44346",
+          "title": "Some Congressional Lawmakers Have Attempted To Push Back Against AI Data Centers — But They Haven't Gotten Far",
+          "kicker": "dailycaller.com",
+          "summary": "dailycaller.com is reporting on Some Congressional Lawmakers Have Attempted To Push Back Against AI Data Centers — But They Haven't Gotten Far. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
           "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
           "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
           "dataSignals": [
             "data-center load"
           ],
-          "sourceLabel": "pmg-ky1.com · Jun 14, 1:00 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZk04eTF1T05aVktRSElQX0tmUkZIamRFSEh5bGlUM3BuZTcyWDVFSV83ei1uUkdXb01lZFFNTUJLR1RjSUw4NlJ2ai1qVE5RaHZTNlczTWZFdmJGbjVEa2pXQkNWQzZIV2staHJJM3F0VjRXX3BQZzZQVVpwWTFCdDRvNHFob29XcC1WY3YzUldFX0lyMEtCNmZHaVRqZWNtdkx0VlJRbWYzdHY0eU5YSG5hTzNYcHZfUTYtaXZUMlZHb1Fzbm5zMldPajRhMXlBN0tLdmFWQjJKRGJFdW9uVFF4dw?oc=5",
+          "sourceLabel": "dailycaller.com · Jun 14, 10:24 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA3Z016LXBKXzVwYmhaVV94WnZHNVFIeHZkX3ZNbE5jcWN6Skg3b1Q0aGZfM0FOQ0dUU0lSaU1URFMydW9sTVNVLWNzZG1Mb25GMnRsLXQtblhUakZvRzJvZDZ1SHhWdzZhejd6ZHV5U1JwSUktVGpDVkM4VQ?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-14T05:00:00+00:00",
+          "publishedAt": "2026-06-14T14:24:00+00:00",
           "glossary": []
         },
         {
-          "id": "energy-4-66897",
-          "title": "'THE WILD WEST': Lack of local and state rules on data center developments leave officials scrambling",
-          "kicker": "Richmond Register",
-          "summary": "Richmond Register is reporting on 'THE WILD WEST': Lack of local and state rules on data center developments leave officials scrambling. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
-          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
-          "dataSignals": [
-            "data-center load"
-          ],
-          "sourceLabel": "Richmond Register · Jun 13, 12:47 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQUmRyTTgxVDVfa0Y1MXN2aXRybU5VZm9YSE5aU2lNVXFxdDlTRVBPVmd4RHpXNW9nUm9jYjlfdHo4V1Ztb1g4Z1VPZzI3UndVdlJnQW81MU1fX3BfNklzcVlaTXJJNzVXakxDSVJySjhMWHdaQjR1Z0NlZks1dUhpTEp0YzJ6cE15dGtWMzhrcG1NcHR0bGs5YU9xVzg3Q0Q2S0Y3NmRHZEd4cWFHR21udFduMjQtQ05XSXJKdVM5VUFmZEp1Uldyc19fOHdZUXhjc2Z6WW5ZRDZ6Z1NFcFdZSW4xTGNzYUVZTDRzWkNVOHNLc3BONlNOenR1X2hwYjVkZTRvZndNQmhmQW8?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-06-13T16:47:00+00:00",
-          "glossary": []
-        },
-        {
-          "id": "energy-5-86897",
+          "id": "energy-4-81291",
           "title": "Data centers spark discussion, debate",
           "kicker": "Bowling Green Daily News",
           "summary": "Bowling Green Daily News is reporting on Data centers spark discussion, debate. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
@@ -103,10 +133,26 @@
           "dataSignals": [
             "data-center load"
           ],
-          "sourceLabel": "Bowling Green Daily News · Jun 13, 7:00 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTFA2bGF5Q2hKVWpxYVQ5MzJoV2h2Q1I3bVBGV2pITWRycUxBOThFSUFaSi1YU0tFSDRUV1NHdkExQlpNUmFvZGpTZXFNdHB0TUEtbGthNzVacFFzTHBONWNaYjBMdGhfX19EMkgyVnN1eVBLdFRGd0FYUVJfb1k?oc=5",
+          "sourceLabel": "Bowling Green Daily News · Jun 14, 9:47 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBWOGdvQTlPcjBBaFBEVWlBSEsyXzhNR05uZmNKZ25jaGJmajRDbTRVUGtMbVFyNmxOcmQwVU5wNXMtbk56Z3BzbGNYSkw2RE1OWWFMdWF1bjdvSF9VMVlPYnluT2RCT2lmT0lxU0tWeUJLdmNKc2hSWDBkVGI?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-13T11:00:25+00:00",
+          "publishedAt": "2026-06-14T13:47:07+00:00",
+          "glossary": []
+        },
+        {
+          "id": "energy-5-49062",
+          "title": "Worries over water as a giant data center moves into the New Mexico desert",
+          "kicker": "WUKY",
+          "summary": "WUKY is reporting on Worries over water as a giant data center moves into the New Mexico desert. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "WUKY · Jun 14, 8:26 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVWIzejdYb18zbUZDQ2hSSkRweHIzbFZJTFREU2RpLXp6SU43TnRSd25NMk1McGV3ZnlPVUZtcDVjZ0Z5UjZ4OWpicFU4Zjg2VzhueEZRTVlfZjB2MFpXdDNhMXF5Y1hfc2JJNGpuY3hMSkpRWlVBU2dsMzNXbkpVY0RZVE1PUlhzMkowVExUeGU1SmI2cmZvRC1pdXRxN3hodWpkNmZKdnVwQQ?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-06-14T12:26:00+00:00",
           "glossary": []
         }
       ]
