@@ -18,5 +18,7 @@ def test_newsroom_has_learning_page_renderer():
     source = NEWSROOM.read_text()
 
     assert "function LearningPage" in source
-    assert "lessonSections" in source
+    assert "lessonText" in source
     assert "Back to the morning brief" in source
+    assert "lessonSections" not in source
+    assert "concepts.map" not in source

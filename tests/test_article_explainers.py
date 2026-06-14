@@ -19,16 +19,13 @@ def test_builds_article_specific_learning_page_for_energy_article():
 
     assert page["title"].startswith("Learn this story")
     assert "Kentucky data center" in page["storySnapshot"]
-    assert len(page["lessonSections"]) >= 4
-    section_titles = [section["title"] for section in page["lessonSections"]]
-    assert "First, what happened?" in section_titles
-    assert "Concepts you need" in section_titles
-    assert "How to read this article" in section_titles
-    assert "Questions to ask next" in section_titles
-    concept_terms = [concept["term"] for concept in page["concepts"]]
-    assert "data center" in concept_terms
-    assert "ratepayer" in concept_terms
-    assert all(section["body"] != "This is a practical AI update." for section in page["lessonSections"])
+    assert "lessonText" in page
+    assert "data center" in page["lessonText"]
+    assert "ratepayer" in page["lessonText"]
+    assert "utility rates" in page["lessonText"]
+    assert len(page["lessonText"].split()) > 120
+    assert "lessonSections" not in page
+    assert "concepts" not in page
 
 
 def test_builds_term_cards_from_article_text():

@@ -609,6 +609,9 @@ def article_learning_page(brief_id: str, item: dict, source_label: str = "") -> 
         reading = "Read for what changed, who is affected, why it matters now, and what happens next."
         questions = ["What is the new fact?", "Who is affected?", "What happens next?", "What would change your interpretation?"]
 
+    if brief_id == "energy" and "rates" in text and all(concept["term"] != "utility rates" for concept in concepts):
+        concepts.insert(0, {"term": "utility rates", "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.", "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."})
+
     if not concepts:
         if brief_id == "energy":
             concepts = [
@@ -622,18 +625,27 @@ def article_learning_page(brief_id: str, item: dict, source_label: str = "") -> 
             ]
 
     concept_body = "The most important terms in this story are " + ", ".join(concept["term"] for concept in concepts[:4]) + "." if concepts else "This story has fewer obvious jargon terms, so focus on the actors, the action, and what changes next."
+    term_explanations = " ".join(
+        f"{concept['term']} means {concept['definition'].rstrip('.')}. Why it matters here: {concept['whyItMatters']}"
+        for concept in concepts
+    )
+    question_text = " ".join(f"{idx}. {question}" for idx, question in enumerate(questions, start=1))
+    lesson_text = "\n\n".join(
+        part
+        for part in [
+            f"Here is the story in normal language: {frame}",
+            f"The reason this matters is simple: {stakes}",
+            f"To understand the article, start with the terms. {concept_body} {term_explanations}".strip(),
+            f"When you read the source, use this lens: {reading}",
+            f"The smart follow-up questions are: {question_text}",
+        ]
+        if part.strip()
+    )
     return {
         "title": f"Learn this story: {truncate(title, 78)}",
         "sourceLabel": source_label or "Morning brief source",
         "storySnapshot": f"{title}. {truncate(summary, 260) if summary else ''}".strip(),
-        "lessonSections": [
-            {"title": "First, what happened?", "body": frame},
-            {"title": "Why this matters", "body": stakes},
-            {"title": "Concepts you need", "body": concept_body},
-            {"title": "How to read this article", "body": reading},
-            {"title": "Questions to ask next", "body": " ".join(f"{idx}. {question}" for idx, question in enumerate(questions, start=1))},
-        ],
-        "concepts": concepts,
+        "lessonText": lesson_text,
         "questions": questions,
     }
 

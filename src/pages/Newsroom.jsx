@@ -287,32 +287,14 @@ function LearningPage({ article, feedStatus }) {
           </div>
         </section>
 
-        <section className="mt-4 grid gap-3">
-          {(page.lessonSections ?? []).map((section, index) => (
-            <article key={section.title} className="rounded-[1.35rem] border border-border bg-white p-5 shadow-sm">
-              <div className="mb-3 flex items-start gap-3">
-                <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-navy text-sm font-black text-white">{index + 1}</span>
-                <h2 className="pt-1 font-heading text-2xl font-black text-navy">{section.title}</h2>
-              </div>
-              <p className="text-base leading-7 text-charcoal/76">{section.body}</p>
-            </article>
-          ))}
+        <section className="mt-4 rounded-[1.6rem] border border-border bg-white p-5 shadow-sm md:p-8">
+          <p className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Plain-English walkthrough</p>
+          <div className="mt-3 space-y-5 text-[1.05rem] leading-8 text-charcoal/78">
+            {(page.lessonText ?? '').split('\n\n').map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
         </section>
-
-        {(page.concepts ?? []).length > 0 && (
-          <section className="mt-4 rounded-[1.35rem] border border-border bg-white p-5 shadow-sm">
-            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Concepts and terms</p>
-            <div className="mt-3 grid gap-3 md:grid-cols-2">
-              {page.concepts.map((concept) => (
-                <article key={concept.term} className="rounded-2xl border border-slate/20 bg-offwhite/70 p-4">
-                  <h3 className="text-lg font-black text-navy">{concept.term}</h3>
-                  <p className="mt-2 text-sm leading-6 text-charcoal/75">{concept.definition}</p>
-                  <p className="mt-3 rounded-xl bg-white/80 p-3 text-sm leading-6 text-charcoal/68"><span className="font-black text-charcoal">Why it matters: </span>{concept.whyItMatters}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
 
         <section className="mt-4 rounded-[1.35rem] border border-border bg-white p-5 shadow-sm">
           <p className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Now read the source</p>
