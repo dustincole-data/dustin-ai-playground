@@ -8,7 +8,6 @@ import {
   RefreshCcw,
   Search,
   Sparkles,
-  X,
   Zap,
 } from 'lucide-react';
 import { briefRails, briefTemplates, emptyNewsData } from '../data/morningBriefs';
@@ -168,69 +167,9 @@ function DailyAiBriefCard({ article, selected, onClick }) {
   );
 }
 
-function ArticleExplainer({ article, open, onClose }) {
-  const explainer = article.explainer;
-  const terms = explainer?.terms?.length ? explainer.terms : article.glossary ?? [];
-
-  if (!open || !explainer) return null;
-
-  return (
-    <div className="mt-3 rounded-2xl border border-slate/25 bg-navy/[0.03] p-3 text-left shadow-inner">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.14em] text-slate">
-            <BookOpen className="h-3.5 w-3.5" /> Explain this article
-          </p>
-          <h4 className="mt-1 text-sm font-black text-navy">{explainer.headline}</h4>
-        </div>
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close article explanation"
-          className="rounded-full border border-border bg-white p-1 text-charcoal/55 transition hover:text-charcoal focus:outline-none focus:ring-2 focus:ring-slate"
-        >
-          <X className="h-3.5 w-3.5" />
-        </button>
-      </div>
-
-      <p className="mt-2 text-[13px] leading-5 text-charcoal/72">{explainer.plainEnglish}</p>
-
-      <div className="mt-3 grid gap-2 md:grid-cols-3">
-        {Object.entries(explainer.sections ?? {}).map(([label, body]) => (
-          <div key={label} className="rounded-xl border border-border bg-white/75 p-2.5">
-            <p className="text-[10px] font-black uppercase tracking-[0.12em] text-charcoal/50">{label}</p>
-            <p className="mt-1 text-[12px] leading-5 text-charcoal/70">{body}</p>
-          </div>
-        ))}
-      </div>
-
-      {terms.length > 0 && (
-        <div className="mt-3">
-          <p className="mb-2 text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Terms explained</p>
-          <div className="grid gap-2 md:grid-cols-2">
-            {terms.map((term) => (
-              <div key={term.term} className="rounded-xl bg-white/85 px-3 py-2 text-[12px] leading-5 text-charcoal/70">
-                <span className="font-black text-navy">{term.term}:</span> {term.definition}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
 function ArticleCard({ article, selected, onClick }) {
-  const [explainerOpen, setExplainerOpen] = useState(false);
   if (article.id?.startsWith('ai-daily-')) {
     return <DailyAiBriefCard article={article} selected={selected} onClick={onClick} />;
-  }
-
-  function toggleExplainer(event) {
-    event.preventDefault();
-    event.stopPropagation();
-    setExplainerOpen((value) => !value);
-    onClick?.();
   }
 
   return (
@@ -252,24 +191,22 @@ function ArticleCard({ article, selected, onClick }) {
         <p className="mt-1 whitespace-pre-line text-[13px] leading-5 text-charcoal/68">{article.summary}</p>
         <p className="mt-2 text-[11px] font-bold text-slate/80">Click title/card text to open source</p>
       </a>
-      <div className="mt-2 flex flex-wrap items-center gap-1.5">
+      <div className="mt-3 flex flex-wrap items-center gap-1.5">
         {(article.dataSignals ?? []).slice(0, 3).map((signal) => (
           <span key={signal} className="rounded-full bg-offwhite px-2 py-1 text-[10px] font-bold text-charcoal/60">
             {signal}
           </span>
         ))}
-        {article.explainer && (
-          <button
-            type="button"
-            onClick={toggleExplainer}
-            aria-expanded={explainerOpen}
+        {article.learningPage && (
+          <a
+            href={`${import.meta.env.BASE_URL}#/learn/${article.id}`}
+            onClick={onClick}
             className="ml-auto inline-flex items-center gap-1.5 rounded-full border border-slate/30 bg-white px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.1em] text-slate transition hover:border-slate hover:bg-offwhite focus:outline-none focus:ring-2 focus:ring-slate"
           >
-            <BookOpen className="h-3.5 w-3.5" /> {explainerOpen ? 'Hide help' : 'Explain this'}
-          </button>
+            <BookOpen className="h-3.5 w-3.5" /> Teach me
+          </a>
         )}
       </div>
-      <ArticleExplainer article={article} open={explainerOpen} onClose={() => setExplainerOpen(false)} />
     </article>
   );
 }
@@ -312,11 +249,96 @@ function BriefCard({ brief, selectedArticleId, onSelectArticle }) {
   );
 }
 
+function LearningPage({ article, feedStatus }) {
+  const page = article?.learningPage;
+
+  if (feedStatus === 'loading') {
+    return <div className="min-h-screen bg-offwhite p-6 text-charcoal">Loading lesson…</div>;
+  }
+
+  if (!article || !page) {
+    return (
+      <div className="min-h-screen bg-offwhite px-4 py-6 text-charcoal md:px-8">
+        <div className="mx-auto max-w-4xl rounded-[1.35rem] border border-border bg-white p-5 shadow-sm">
+          <a href={import.meta.env.BASE_URL} className="text-sm font-black text-slate">← Back to the morning brief</a>
+          <h1 className="mt-5 font-heading text-3xl font-black text-navy">Lesson not found</h1>
+          <p className="mt-2 text-charcoal/70">This article may have rotated out of the current morning brief.</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-offwhite px-4 py-5 text-charcoal md:px-8 md:py-8">
+      <main className="mx-auto max-w-5xl">
+        <a href={import.meta.env.BASE_URL} className="inline-flex items-center rounded-full border border-slate/30 bg-white px-3 py-1.5 text-xs font-black uppercase tracking-[0.12em] text-slate shadow-sm">
+          ← Back to the morning brief
+        </a>
+
+        <section className="mt-4 rounded-[1.6rem] border border-border bg-white p-5 shadow-sm md:p-8">
+          <p className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.16em] text-slate">
+            <BookOpen className="h-4 w-4" /> Article lesson
+          </p>
+          <h1 className="mt-3 font-heading text-3xl font-black leading-tight text-navy md:text-5xl">{page.title}</h1>
+          <p className="mt-3 max-w-3xl text-sm font-semibold text-charcoal/55">{page.sourceLabel}</p>
+          <div className="mt-5 rounded-2xl border border-slate/25 bg-offwhite/70 p-4">
+            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Story snapshot</p>
+            <p className="mt-2 text-base leading-7 text-charcoal/78">{page.storySnapshot}</p>
+          </div>
+        </section>
+
+        <section className="mt-4 grid gap-3">
+          {(page.lessonSections ?? []).map((section, index) => (
+            <article key={section.title} className="rounded-[1.35rem] border border-border bg-white p-5 shadow-sm">
+              <div className="mb-3 flex items-start gap-3">
+                <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-navy text-sm font-black text-white">{index + 1}</span>
+                <h2 className="pt-1 font-heading text-2xl font-black text-navy">{section.title}</h2>
+              </div>
+              <p className="text-base leading-7 text-charcoal/76">{section.body}</p>
+            </article>
+          ))}
+        </section>
+
+        {(page.concepts ?? []).length > 0 && (
+          <section className="mt-4 rounded-[1.35rem] border border-border bg-white p-5 shadow-sm">
+            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Concepts and terms</p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {page.concepts.map((concept) => (
+                <article key={concept.term} className="rounded-2xl border border-slate/20 bg-offwhite/70 p-4">
+                  <h3 className="text-lg font-black text-navy">{concept.term}</h3>
+                  <p className="mt-2 text-sm leading-6 text-charcoal/75">{concept.definition}</p>
+                  <p className="mt-3 rounded-xl bg-white/80 p-3 text-sm leading-6 text-charcoal/68"><span className="font-black text-charcoal">Why it matters: </span>{concept.whyItMatters}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section className="mt-4 rounded-[1.35rem] border border-border bg-white p-5 shadow-sm">
+          <p className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Now read the source</p>
+          <h2 className="mt-2 text-xl font-black text-navy">{article.title}</h2>
+          <p className="mt-2 text-sm leading-6 text-charcoal/70">{article.summary}</p>
+          <a href={article.sourceUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-full bg-navy px-4 py-2 text-sm font-black text-white">
+            Open source article <ExternalLink className="h-4 w-4" />
+          </a>
+        </section>
+      </main>
+    </div>
+  );
+}
+
 export default function Newsroom() {
   const [active, setActive] = useState('all');
   const [newsData, setNewsData] = useState(emptyNewsData);
   const [feedStatus, setFeedStatus] = useState('loading');
   const [selectedArticleId, setSelectedArticleId] = useState(null);
+  const [routeHash, setRouteHash] = useState(() => window.location.hash);
+
+  useEffect(() => {
+    const syncHash = () => setRouteHash(window.location.hash);
+    window.addEventListener('hashchange', syncHash);
+    return () => window.removeEventListener('hashchange', syncHash);
+  }, []);
 
   useEffect(() => {
     let isActive = true;
@@ -353,7 +375,17 @@ export default function Newsroom() {
     return allVisibleArticles.find((article) => article.id === selectedArticleId) ?? allVisibleArticles[0] ?? null;
   }, [selectedArticleId, visibleBriefs]);
 
+  const learningArticleId = routeHash.startsWith('#/learn/') ? decodeURIComponent(routeHash.replace('#/learn/', '')) : null;
+  const learningArticle = useMemo(() => {
+    if (!learningArticleId) return null;
+    return briefs.flatMap((brief) => brief.articles).find((article) => article.id === learningArticleId) ?? null;
+  }, [briefs, learningArticleId]);
+
   const generatedLabel = formatLocalTimestamp(newsData.generatedAt) ?? newsData.generatedLabel;
+
+  if (learningArticleId) {
+    return <LearningPage article={learningArticle} feedStatus={feedStatus} />;
+  }
 
   function selectBrief(briefId) {
     const nextBriefs = briefId === 'all' ? briefs : briefs.filter((brief) => brief.id === briefId);

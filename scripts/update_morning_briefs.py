@@ -521,51 +521,120 @@ def glossary_terms(item: dict) -> list[dict]:
     return terms[:4]
 
 
+CONCEPT_LIBRARY = [
+    ("export-control directive", ["export-control", "export control", "government directive"], "A government rule that can restrict who gets access to certain technology, often because officials think it could affect national security or foreign-policy goals.", "If an AI company removes access because of export controls, the story is not just a product update — it is policy directly changing who can use a model."),
+    ("model access", ["access suspension", "suspended", "customers", "models are unaffected"], "Whether a customer is allowed to use a specific AI model or feature.", "Access changes can break workflows, force teams to switch models, and reveal how dependent products are on one vendor."),
+    ("agentic workflow", ["agentic", "agent workflow", "agent automation"], "A workflow where AI is expected to plan steps, use tools, and move work forward instead of only answering a single question.", "This is where AI starts touching real operations, so permissions, logs, and safety controls matter as much as the model output."),
+    ("GitHub Actions", ["github actions"], "GitHub's automation system for running jobs like tests, deployments, or scripted tasks when code changes.", "If AI can generate or run Actions, it can affect the same pipelines that ship software."),
+    ("Markdown workflow", ["markdown workflows", "natural-language markdown", "markdown"], "A text-file workflow written in a simple document format instead of a traditional programming language.", "This lowers the barrier to creating automation, but also means non-programmers may create powerful workflows that need guardrails."),
+    ("sandboxed container", ["sandboxed container", "sandbox"], "An isolated environment that limits what code can touch while it runs.", "Sandboxes reduce the blast radius if an AI-generated workflow does something wrong."),
+    ("read-only permissions", ["read-only"], "Access that lets software view information but not change or delete it.", "Read-only defaults are a safety move: the AI can inspect before anyone grants it power to modify systems."),
+    ("threat detection", ["threat detection"], "Monitoring that looks for suspicious or dangerous behavior.", "AI workflows need detection because mistakes and attacks can look like normal automation until damage is done."),
+    ("Developer Mode", ["developer mode"], "A mode that gives developers deeper debugging or control features than normal users see.", "For coding agents, developer features can make it easier to inspect web apps, reproduce bugs, and build internal tools."),
+    ("CDP debugging", ["cdp", "browser debugging"], "Chrome DevTools Protocol: a way for software to inspect and control a browser for testing or debugging.", "CDP access can make an AI coding agent much better at fixing front-end problems because it can see the page like a developer tool does."),
+    ("MCP", ["mcp"], GLOSSARY["MCP"], "MCP matters because it is becoming a common plug shape for connecting AI agents to real tools, files, and services."),
+    ("CLI", [" cli", "cli "], "Command-line interface: a text-based tool run from a terminal.", "CLI support matters when AI tools need to fit into developer and automation workflows instead of only a web chat."),
+    ("data center", ["data center", "data centers"], GLOSSARY["data center"], "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."),
+    ("grid upgrades", ["grid upgrades", "grid", "transmission", "capacity"], "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.", "The key question is who benefits from the upgrade and who pays for it."),
+    ("ratepayer", ["ratepayer", "customer bills", "bills", "rates"], GLOSSARY["ratepayer"], "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."),
+    ("rate case", ["rate case", "rate hike", "rate increase"], GLOSSARY["rate case"], "Rate cases translate utility spending into bills, so they are where technical grid plans become household costs."),
+]
+
+
 def explainer_terms(item: dict) -> list[dict]:
-    """Return glossary cards for the article explainer panel."""
+    """Return glossary cards for the article learning page."""
     return glossary_terms(item)
 
 
-def article_explainer(brief_id: str, item: dict, source_label: str = "") -> dict:
-    """Build plain-language article help for non-technical readers."""
-    text = f"{item.get('title', '')} {item.get('summary', '')}".lower()
+def article_concepts(item: dict) -> list[dict]:
+    text = f" {item.get('title', '')} {item.get('summary', '')} ".lower()
+    concepts: list[dict] = []
+    for term, needles, definition, why_it_matters_text in CONCEPT_LIBRARY:
+        if any(needle in text for needle in needles):
+            concepts.append({
+                "term": term,
+                "definition": definition,
+                "whyItMatters": why_it_matters_text,
+            })
+    for term in glossary_terms(item):
+        if all(term["term"].lower() != concept["term"].lower() for concept in concepts):
+            concepts.append({
+                "term": term["term"],
+                "definition": term["definition"],
+                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon.",
+            })
+    return concepts[:8]
+
+
+def article_learning_page(brief_id: str, item: dict, source_label: str = "") -> dict:
+    """Build an article-specific teaching page, not a generic tooltip."""
     title = item.get("title", "this story").strip().rstrip(".")
+    summary = clean_text(item.get("summary", ""))
+    text = f"{title} {summary}".lower()
+    concepts = article_concepts(item)
 
     if brief_id == "energy" and ("data center" in text or "large load" in text):
-        plain = "This is about whether big electricity users like data centers are creating new power demand, what grid upgrades may be needed, and who pays for those costs."
-        why = "It can affect utility planning, customer bills, reliability, and how regulators protect regular ratepayers."
-        watch = "Look for the size of the project, how much power it needs, whether upgrades are required, and whether costs fall on the company or ordinary customers."
-    elif brief_id == "energy" and any(term in text for term in ["rate", "bill", "ratepayer", "rate case"]):
-        plain = "This is about utility prices: what the company wants to charge, what regulators allow, and how customer bills could change."
-        why = "Rate stories matter because small regulatory decisions can turn into real monthly bill changes and political pressure."
-        watch = "Look for the requested increase, the approved increase, the reason given, and any customer protections."
-    elif brief_id == "energy":
-        plain = "This is a utility or grid story. In normal terms, it is about keeping power reliable, affordable, and planned well enough for future demand."
-        why = "These stories can signal cost pressure, reliability risk, regulatory scrutiny, or new analytics needs for utility operators."
-        watch = "Look for who is affected, what changed, whether customers pay, and whether regulators or lawmakers get involved."
-    elif brief_id == "ai" and ("agent" in text or "agentic" in text):
-        plain = "This is about AI moving from chat answers toward software that can take steps, use tools, and help complete a workflow."
-        why = "Agent stories matter when they save real work, but they also raise questions about approvals, permissions, accuracy, and oversight."
-        watch = "Look for what the agent can actually do, what systems it touches, what guardrails exist, and whether normal users can trust it."
+        frame = "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators."
+        stakes = "The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill."
+        reading = "Read the article by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure."
+        questions = ["How much electricity is being requested?", "Does the article say who pays for upgrades?", "Are regulators, lawmakers, or local residents pushing back?", "Is this confirmed demand or speculative project talk?"]
+    elif brief_id == "energy" and any(term in text for term in ["rate", "bill", "ratepayer", "rate case", "rate hike"]):
+        frame = "This is a utility-pricing story: a company, regulator, or market signal is pointing to costs that may eventually show up in customer bills."
+        stakes = "The teaching angle is the bridge between utility spending and public impact. Technical investments become controversial when customers are asked to pay for them."
+        reading = "Read for the requested amount, the approved amount, the reason for the cost, and whether the article describes customer protections or opposition."
+        questions = ["Is this a request, an approval, or market commentary?", "What costs are being justified?", "Which customers are affected?", "What did regulators or advocates say?"]
+    elif brief_id == "ai" and ("agentic" in text or "agent" in text or "workflow" in text):
+        frame = "This is an AI-agent workflow story: AI is being used to help define, run, or supervise a sequence of work instead of only chatting."
+        stakes = "The teaching angle is control. Once AI can trigger workflows, the key concepts are permissions, sandboxing, auditability, and whether humans can understand what it changed."
+        reading = "Read for the exact job the agent can do, what tools it touches, what permissions it starts with, and what safety controls are named in the article."
+        questions = ["What action can the agent actually take?", "Is it read-only or can it modify systems?", "Where does human review happen?", "What guardrail would fail first in real use?"]
+    elif brief_id == "ai" and ("codex" in text or "developer" in text or "mcp" in text or "cli" in text):
+        frame = "This is a developer-tooling AI story: the update affects how coding agents inspect apps, connect tools, or run inside a developer workflow."
+        stakes = "The teaching angle is integration. The more an AI coding tool connects to browsers, terminals, and external services, the more useful — and riskier — it becomes."
+        reading = "Read for what is newly available, whether it is preview or production-ready, what systems it connects to, and any limits around pricing, permissions, or rate limits."
+        questions = ["What new capability did the tool gain?", "Does it connect to browsers, terminals, or outside services?", "Is this broadly available or limited preview?", "What would you test with it first?"]
+    elif brief_id == "ai" and ("suspended" in text or "export" in text or "directive" in text):
+        frame = "This is an AI-access and policy story: model availability changed because a government or company rule limited who can use it."
+        stakes = "The teaching angle is dependency risk. If a product or workflow relies on one model, policy decisions can suddenly change what users are allowed to run."
+        reading = "Read for which model changed, who lost access, what authority caused the change, and whether alternative models or customers are unaffected."
+        questions = ["Which exact model or feature changed?", "Who lost access?", "Was the change caused by company policy or government order?", "What alternatives remain available?"]
     elif brief_id == "ai":
-        plain = "This is a practical AI update. The key question is what changed, who can use it, and whether it helps people do real work or just sounds impressive."
-        why = "For Dustin, useful AI news points to tools, workflows, governance risks, or business ideas worth testing."
-        watch = "Look for availability, price or limits, business use cases, risk controls, and whether it connects to data or everyday work."
+        frame = "This is an AI product or policy update. The useful read is not that AI is changing; it is exactly what capability, access, cost, or risk changed in this article."
+        stakes = "The teaching angle is practical impact: who can use it, what it changes in work, and what risk or limit would matter in a real business setting."
+        reading = "Read for the concrete new fact, the affected users, whether this is a launch or restriction, and whether the source gives enough evidence to trust it."
+        questions = ["What changed today?", "Who can use it?", "What workflow does it affect?", "What limitation or risk is mentioned?"]
     else:
-        plain = f"This story is about {sentence_case_fragment(title)}."
-        why = why_matters(brief_id, item)
-        watch = "Look for what changed today, who is affected, why it matters now, and what happens next."
+        frame = f"This article is about {sentence_case_fragment(title)}."
+        stakes = why_matters(brief_id, item)
+        reading = "Read for what changed, who is affected, why it matters now, and what happens next."
+        questions = ["What is the new fact?", "Who is affected?", "What happens next?", "What would change your interpretation?"]
 
-    source_note = f"Source context: {source_label}." if source_label else "Source context: source-linked item from the morning scan."
+    if not concepts:
+        if brief_id == "energy":
+            concepts = [
+                {"term": "utility rates", "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.", "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."},
+                {"term": "ratepayer", "definition": GLOSSARY["ratepayer"], "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up paying for a utility decision."},
+            ]
+        elif brief_id == "ai":
+            concepts = [
+                {"term": "AI capability", "definition": "A specific thing an AI tool can now do, such as use a browser, run code, connect tools, or access a model.", "whyItMatters": "Reading AI news gets easier when you focus on the exact new capability instead of the hype around the product."},
+                {"term": "guardrail", "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.", "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."},
+            ]
+
+    concept_body = "The most important terms in this story are " + ", ".join(concept["term"] for concept in concepts[:4]) + "." if concepts else "This story has fewer obvious jargon terms, so focus on the actors, the action, and what changes next."
     return {
-        "headline": "What this means in normal terms",
-        "plainEnglish": plain,
-        "sections": {
-            "Why it matters": why,
-            "What to watch": watch,
-            "Source note": source_note,
-        },
-        "terms": explainer_terms(item),
+        "title": f"Learn this story: {truncate(title, 78)}",
+        "sourceLabel": source_label or "Morning brief source",
+        "storySnapshot": f"{title}. {truncate(summary, 260) if summary else ''}".strip(),
+        "lessonSections": [
+            {"title": "First, what happened?", "body": frame},
+            {"title": "Why this matters", "body": stakes},
+            {"title": "Concepts you need", "body": concept_body},
+            {"title": "How to read this article", "body": reading},
+            {"title": "Questions to ask next", "body": " ".join(f"{idx}. {question}" for idx, question in enumerate(questions, start=1))},
+        ],
+        "concepts": concepts,
+        "questions": questions,
     }
 
 
@@ -633,7 +702,7 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
             "googleNewsUrl": item["url"] if source_url != item["url"] else None,
             "publishedAt": item["publishedAt"],
             "glossary": glossary_terms(item),
-            "explainer": article_explainer(brief["id"], summary_item, source_label),
+            "learningPage": article_learning_page(brief["id"], summary_item, source_label),
         })
     return output, used_fallback, errors
 
@@ -746,7 +815,7 @@ def build_ai_signal_articles(response: str, source_file: Path) -> list[dict]:
             "googleNewsUrl": None,
             "publishedAt": published.isoformat(),
             "glossary": glossary_terms({"title": title, "summary": summary}),
-            "explainer": article_explainer("ai", {"title": title, "summary": summary}, "Hermes Daily AI Brief"),
+            "learningPage": article_learning_page("ai", {"title": title, "summary": summary}, "Hermes Daily AI Brief"),
         })
     return articles
 

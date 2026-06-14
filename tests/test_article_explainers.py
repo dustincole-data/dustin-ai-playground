@@ -9,19 +9,26 @@ briefs = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(briefs)
 
 
-def test_builds_plain_language_explainer_for_energy_article():
+def test_builds_article_specific_learning_page_for_energy_article():
     item = {
         "title": "Kentucky data center raises power demand and rate questions",
         "summary": "A proposed data center could increase electricity demand and require grid upgrades paid through future utility rates.",
     }
 
-    explainer = briefs.article_explainer("energy", item, "Utility Dive")
+    page = briefs.article_learning_page("energy", item, "Utility Dive")
 
-    assert explainer["headline"] == "What this means in normal terms"
-    assert "data center" in explainer["plainEnglish"].lower()
-    assert "who pays" in explainer["plainEnglish"].lower()
-    assert "Why it matters" in explainer["sections"]
-    assert "What to watch" in explainer["sections"]
+    assert page["title"].startswith("Learn this story")
+    assert "Kentucky data center" in page["storySnapshot"]
+    assert len(page["lessonSections"]) >= 4
+    section_titles = [section["title"] for section in page["lessonSections"]]
+    assert "First, what happened?" in section_titles
+    assert "Concepts you need" in section_titles
+    assert "How to read this article" in section_titles
+    assert "Questions to ask next" in section_titles
+    concept_terms = [concept["term"] for concept in page["concepts"]]
+    assert "data center" in concept_terms
+    assert "ratepayer" in concept_terms
+    assert all(section["body"] != "This is a practical AI update." for section in page["lessonSections"])
 
 
 def test_builds_term_cards_from_article_text():
