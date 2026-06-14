@@ -1,12 +1,14 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
   AlertCircle,
+  BookOpen,
   BrainCircuit,
   Cpu,
   ExternalLink,
   RefreshCcw,
   Search,
   Sparkles,
+  X,
   Zap,
 } from 'lucide-react';
 import { briefRails, briefTemplates, emptyNewsData } from '../data/morningBriefs';
@@ -166,40 +168,109 @@ function DailyAiBriefCard({ article, selected, onClick }) {
   );
 }
 
+function ArticleExplainer({ article, open, onClose }) {
+  const explainer = article.explainer;
+  const terms = explainer?.terms?.length ? explainer.terms : article.glossary ?? [];
+
+  if (!open || !explainer) return null;
+
+  return (
+    <div className="mt-3 rounded-2xl border border-slate/25 bg-navy/[0.03] p-3 text-left shadow-inner">
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.14em] text-slate">
+            <BookOpen className="h-3.5 w-3.5" /> Explain this article
+          </p>
+          <h4 className="mt-1 text-sm font-black text-navy">{explainer.headline}</h4>
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close article explanation"
+          className="rounded-full border border-border bg-white p-1 text-charcoal/55 transition hover:text-charcoal focus:outline-none focus:ring-2 focus:ring-slate"
+        >
+          <X className="h-3.5 w-3.5" />
+        </button>
+      </div>
+
+      <p className="mt-2 text-[13px] leading-5 text-charcoal/72">{explainer.plainEnglish}</p>
+
+      <div className="mt-3 grid gap-2 md:grid-cols-3">
+        {Object.entries(explainer.sections ?? {}).map(([label, body]) => (
+          <div key={label} className="rounded-xl border border-border bg-white/75 p-2.5">
+            <p className="text-[10px] font-black uppercase tracking-[0.12em] text-charcoal/50">{label}</p>
+            <p className="mt-1 text-[12px] leading-5 text-charcoal/70">{body}</p>
+          </div>
+        ))}
+      </div>
+
+      {terms.length > 0 && (
+        <div className="mt-3">
+          <p className="mb-2 text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">Terms explained</p>
+          <div className="grid gap-2 md:grid-cols-2">
+            {terms.map((term) => (
+              <div key={term.term} className="rounded-xl bg-white/85 px-3 py-2 text-[12px] leading-5 text-charcoal/70">
+                <span className="font-black text-navy">{term.term}:</span> {term.definition}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ArticleCard({ article, selected, onClick }) {
+  const [explainerOpen, setExplainerOpen] = useState(false);
   if (article.id?.startsWith('ai-daily-')) {
     return <DailyAiBriefCard article={article} selected={selected} onClick={onClick} />;
   }
 
+  function toggleExplainer(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    setExplainerOpen((value) => !value);
+    onClick?.();
+  }
+
   return (
-    <a
-      href={article.sourceUrl}
-      target="_blank"
-      rel="noreferrer"
-      onClick={onClick}
-      aria-pressed={selected}
+    <article
+      aria-current={selected ? 'true' : undefined}
       className={classNames(
-        'block rounded-2xl border p-3 text-left transition focus:outline-none focus:ring-2 focus:ring-slate focus:ring-offset-2',
+        'block rounded-2xl border p-3 text-left transition focus-within:ring-2 focus-within:ring-slate focus-within:ring-offset-2',
         selected
           ? 'border-slate bg-white shadow-[0_0_0_2px_rgba(74,127,165,0.18)]'
           : 'border-border bg-white/80 hover:border-slate/45 hover:bg-white'
       )}
     >
-      <div className="mb-1 flex items-center justify-between gap-2">
-        <span className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">{article.kicker}</span>
-        <ExternalLink className="h-3.5 w-3.5 shrink-0 text-slate/70" />
-      </div>
-      <h3 className="text-sm font-black leading-5 text-charcoal">{article.title}</h3>
-      <p className="mt-1 whitespace-pre-line text-[13px] leading-5 text-charcoal/68">{article.summary}</p>
-      <p className="mt-2 text-[11px] font-bold text-slate/80">Click to open source</p>
-      <div className="mt-2 flex flex-wrap gap-1.5">
+      <a href={article.sourceUrl} target="_blank" rel="noreferrer" onClick={onClick} className="block focus:outline-none">
+        <div className="mb-1 flex items-center justify-between gap-2">
+          <span className="text-[10px] font-black uppercase tracking-[0.14em] text-charcoal/50">{article.kicker}</span>
+          <ExternalLink className="h-3.5 w-3.5 shrink-0 text-slate/70" />
+        </div>
+        <h3 className="text-sm font-black leading-5 text-charcoal">{article.title}</h3>
+        <p className="mt-1 whitespace-pre-line text-[13px] leading-5 text-charcoal/68">{article.summary}</p>
+        <p className="mt-2 text-[11px] font-bold text-slate/80">Click title/card text to open source</p>
+      </a>
+      <div className="mt-2 flex flex-wrap items-center gap-1.5">
         {(article.dataSignals ?? []).slice(0, 3).map((signal) => (
           <span key={signal} className="rounded-full bg-offwhite px-2 py-1 text-[10px] font-bold text-charcoal/60">
             {signal}
           </span>
         ))}
+        {article.explainer && (
+          <button
+            type="button"
+            onClick={toggleExplainer}
+            aria-expanded={explainerOpen}
+            className="ml-auto inline-flex items-center gap-1.5 rounded-full border border-slate/30 bg-white px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.1em] text-slate transition hover:border-slate hover:bg-offwhite focus:outline-none focus:ring-2 focus:ring-slate"
+          >
+            <BookOpen className="h-3.5 w-3.5" /> {explainerOpen ? 'Hide help' : 'Explain this'}
+          </button>
+        )}
       </div>
-    </a>
+      <ArticleExplainer article={article} open={explainerOpen} onClose={() => setExplainerOpen(false)} />
+    </article>
   );
 }
 

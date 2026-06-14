@@ -72,10 +72,19 @@ GLOSSARY = {
     "MW": "Megawatt: a unit of electric demand or generation capacity.",
     "GW": "Gigawatt: 1,000 megawatts of electric demand or generation capacity.",
     "interconnection": "The process for connecting a generator, data center, or other large load to the electric grid.",
+    "data center": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
+    "large load": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
+    "rate case": "A formal utility-regulator process that decides how much a utility can charge customers and what costs it can recover.",
+    "ratepayer": "A utility customer who pays electric, gas, or water bills.",
     "NIL": "Name, image, and likeness compensation for college athletes.",
     "transfer portal": "The NCAA system where athletes signal intent to transfer and can be recruited by other schools.",
     "NL-to-SQL": "Natural-language-to-SQL: asking a data question in plain English and having software generate a SQL query.",
     "agentic": "AI software that can plan and take steps toward a task instead of only answering one prompt.",
+    "agent": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer.",
+    "MCP": "Model Context Protocol: a standard way for AI tools to connect to outside apps, files, and services.",
+    "model": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
+    "governance": "Rules, approvals, monitoring, and controls that keep AI or data use safe and reliable.",
+    "workflow": "A repeatable sequence of steps people or software use to get work done.",
 }
 
 STOPWORDS = {"the", "a", "an", "and", "or", "to", "of", "in", "for", "on", "with", "as", "at", "by", "from"}
@@ -506,10 +515,58 @@ def glossary_terms(item: dict) -> list[dict]:
     text = f"{item['title']} {item.get('summary', '')}"
     terms = []
     for term, definition in GLOSSARY.items():
-        flags = re.IGNORECASE if term.islower() or "-" in term else 0
+        flags = re.IGNORECASE if term.islower() or "-" in term or " " in term else 0
         if re.search(rf"\b{re.escape(term)}\b", text, flags):
             terms.append({"term": term, "definition": definition})
     return terms[:4]
+
+
+def explainer_terms(item: dict) -> list[dict]:
+    """Return glossary cards for the article explainer panel."""
+    return glossary_terms(item)
+
+
+def article_explainer(brief_id: str, item: dict, source_label: str = "") -> dict:
+    """Build plain-language article help for non-technical readers."""
+    text = f"{item.get('title', '')} {item.get('summary', '')}".lower()
+    title = item.get("title", "this story").strip().rstrip(".")
+
+    if brief_id == "energy" and ("data center" in text or "large load" in text):
+        plain = "This is about whether big electricity users like data centers are creating new power demand, what grid upgrades may be needed, and who pays for those costs."
+        why = "It can affect utility planning, customer bills, reliability, and how regulators protect regular ratepayers."
+        watch = "Look for the size of the project, how much power it needs, whether upgrades are required, and whether costs fall on the company or ordinary customers."
+    elif brief_id == "energy" and any(term in text for term in ["rate", "bill", "ratepayer", "rate case"]):
+        plain = "This is about utility prices: what the company wants to charge, what regulators allow, and how customer bills could change."
+        why = "Rate stories matter because small regulatory decisions can turn into real monthly bill changes and political pressure."
+        watch = "Look for the requested increase, the approved increase, the reason given, and any customer protections."
+    elif brief_id == "energy":
+        plain = "This is a utility or grid story. In normal terms, it is about keeping power reliable, affordable, and planned well enough for future demand."
+        why = "These stories can signal cost pressure, reliability risk, regulatory scrutiny, or new analytics needs for utility operators."
+        watch = "Look for who is affected, what changed, whether customers pay, and whether regulators or lawmakers get involved."
+    elif brief_id == "ai" and ("agent" in text or "agentic" in text):
+        plain = "This is about AI moving from chat answers toward software that can take steps, use tools, and help complete a workflow."
+        why = "Agent stories matter when they save real work, but they also raise questions about approvals, permissions, accuracy, and oversight."
+        watch = "Look for what the agent can actually do, what systems it touches, what guardrails exist, and whether normal users can trust it."
+    elif brief_id == "ai":
+        plain = "This is a practical AI update. The key question is what changed, who can use it, and whether it helps people do real work or just sounds impressive."
+        why = "For Dustin, useful AI news points to tools, workflows, governance risks, or business ideas worth testing."
+        watch = "Look for availability, price or limits, business use cases, risk controls, and whether it connects to data or everyday work."
+    else:
+        plain = f"This story is about {sentence_case_fragment(title)}."
+        why = why_matters(brief_id, item)
+        watch = "Look for what changed today, who is affected, why it matters now, and what happens next."
+
+    source_note = f"Source context: {source_label}." if source_label else "Source context: source-linked item from the morning scan."
+    return {
+        "headline": "What this means in normal terms",
+        "plainEnglish": plain,
+        "sections": {
+            "Why it matters": why,
+            "What to watch": watch,
+            "Source note": source_note,
+        },
+        "terms": explainer_terms(item),
+    }
 
 
 def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
@@ -576,6 +633,7 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
             "googleNewsUrl": item["url"] if source_url != item["url"] else None,
             "publishedAt": item["publishedAt"],
             "glossary": glossary_terms(item),
+            "explainer": article_explainer(brief["id"], summary_item, source_label),
         })
     return output, used_fallback, errors
 
@@ -688,6 +746,7 @@ def build_ai_signal_articles(response: str, source_file: Path) -> list[dict]:
             "googleNewsUrl": None,
             "publishedAt": published.isoformat(),
             "glossary": glossary_terms({"title": title, "summary": summary}),
+            "explainer": article_explainer("ai", {"title": title, "summary": summary}, "Hermes Daily AI Brief"),
         })
     return articles
 
