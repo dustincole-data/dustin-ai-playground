@@ -600,8 +600,100 @@ def extract_ai_brief_response(text: str) -> str:
     return response
 
 
+def extract_numbered_section(response: str, section_number: int) -> list[str]:
+    """Return non-empty lines from a numbered section of the Daily AI Briefing."""
+    lines = response.splitlines()
+    start_pattern = re.compile(rf"^{section_number}\.\s+")
+    next_pattern = re.compile(r"^\d+\.\s+")
+    inside = False
+    section_lines: list[str] = []
+    for raw_line in lines:
+        line = raw_line.strip()
+        if start_pattern.match(line):
+            inside = True
+            continue
+        if inside and next_pattern.match(line):
+            break
+        if inside and line:
+            section_lines.append(line)
+    return section_lines
+
+
+def bullet_lines(lines: list[str]) -> list[str]:
+    return [line.removeprefix("- ").strip() for line in lines if line.startswith("- ")]
+
+
+def ai_signal_title(signal: str) -> str:
+    text = re.sub(r"\s+Source:\s+https?://\S+.*$", "", signal)
+    text = re.split(r"\s+—\s+credible because\s+|\s+Source:\s+", text, maxsplit=1)[0]
+    text = re.sub(r"https?://\S+", "", text)
+    text = re.sub(r"\s+", " ", text).strip(" -—.;")
+    return truncate(text, 105)
+
+
+def ai_source_label(signal: str, published: datetime) -> str:
+    url_match = re.search(r"https?://([^/\s]+)", signal)
+    if not url_match:
+        return f"Hermes AI scan · {local_label(published)}"
+    host = url_match.group(1).removeprefix("www.")
+    return f"{host} · {local_label(published)}"
+
+
+def ai_data_signals(signal: str) -> list[str]:
+    text = signal.lower()
+    signals: list[str] = []
+    for needle, label in [
+        ("agent", "agent workflow"),
+        ("codex", "Codex / coding agents"),
+        ("github", "developer workflow"),
+        ("openai", "OpenAI signal"),
+        ("anthropic", "Anthropic signal"),
+        ("google", "Google AI signal"),
+        ("model", "model/tool release"),
+        ("safety", "safety / governance"),
+        ("workflow", "workflow controls"),
+        ("open source", "open-source tooling"),
+        ("mcp", "MCP / integration"),
+    ]:
+        if needle in text and label not in signals:
+            signals.append(label)
+    return signals[:4] or ["AI operating signal", "source checked"]
+
+
+def build_ai_signal_articles(response: str, source_file: Path) -> list[dict]:
+    """Split the vetted Daily AI Briefing into multiple site cards.
+
+    The old site consumed the whole AI brief as one article, which made the
+    morning page look like it had only one repeated AI story. The cron brief
+    already has 2–3 vetted signals; expose those as separate articles/cards.
+    """
+    published = datetime.fromtimestamp(source_file.stat().st_mtime, timezone.utc)
+    signals = bullet_lines(extract_numbered_section(response, 1))
+    articles: list[dict] = []
+    for idx, signal in enumerate(signals[:MAX_ITEMS_PER_BRIEF], start=1):
+        source_url_match = re.search(r"https?://\S+", signal)
+        source_url = source_url_match.group(0).rstrip(").,;") if source_url_match else "https://dustincole-data.github.io/dustin-ai-playground/"
+        title = ai_signal_title(signal) or f"AI signal {idx}"
+        summary = re.sub(r"\s+", " ", signal).strip()
+        articles.append({
+            "id": f"ai-signal-{source_file.stem}-{idx}",
+            "title": title,
+            "kicker": "Hermes Daily AI Brief",
+            "summary": summary,
+            "emailSummary": truncate(summary, 145),
+            "whyItMatters": "This is one of the vetted AI signals from Dustin’s Daily AI Briefing, split into its own card so the morning scan covers multiple AI developments instead of one giant article.",
+            "dataSignals": ai_data_signals(signal),
+            "sourceLabel": ai_source_label(signal, published),
+            "sourceUrl": source_url,
+            "googleNewsUrl": None,
+            "publishedAt": published.isoformat(),
+            "glossary": glossary_terms({"title": title, "summary": summary}),
+        })
+    return articles
+
+
 def latest_ai_daily_brief() -> tuple[list[dict], bool, list[str]]:
-    """Use the vetted Daily AI Briefing output, not the old AI RSS section."""
+    """Use the vetted Daily AI Briefing output and expose each signal as a card."""
     if not AI_BRIEF_OUTPUT_DIR.exists():
         return [], False, [f"AI daily brief output directory missing: {AI_BRIEF_OUTPUT_DIR}"]
 
@@ -617,25 +709,13 @@ def latest_ai_daily_brief() -> tuple[list[dict], bool, list[str]]:
             skipped_status_files.append(source_file.name)
             continue
 
-        title_line = next((line.strip() for line in response.splitlines() if line.strip()), "Daily AI Briefing")
-        published = datetime.fromtimestamp(source_file.stat().st_mtime, timezone.utc)
-        article = {
-            "id": f"ai-daily-{source_file.stem}",
-            "title": title_line,
-            "kicker": "Hermes Daily AI Brief",
-            "summary": response,
-            "whyItMatters": "This is the vetted Daily AI Briefing output created for Dustin, replacing the old generic AI RSS/news-card section.",
-            "dataSignals": [],
-            "sourceLabel": f"Hermes Daily AI Brief · {local_label(published)}",
-            "sourceUrl": "https://dustincole-data.github.io/dustin-ai-playground/",
-            "googleNewsUrl": None,
-            "publishedAt": published.isoformat(),
-            "glossary": [],
-        }
-        return [article], False, []
+        articles = build_ai_signal_articles(response, source_file)
+        if articles:
+            return articles, False, []
+        skipped_status_files.append(source_file.name)
 
     skipped = ", ".join(skipped_status_files[:5])
-    return [], False, [f"No usable AI daily briefing body found in {AI_BRIEF_OUTPUT_DIR}; skipped status-only files: {skipped}"]
+    return [], False, [f"No usable AI daily briefing signals found in {AI_BRIEF_OUTPUT_DIR}; skipped files: {skipped}"]
 
 
 def main() -> int:
