@@ -46,3 +46,43 @@ def test_builds_term_cards_from_article_text():
     assert "agentic" in labels
     assert "MCP" in labels
     assert all(term["definition"] for term in terms)
+
+
+def test_teach_me_page_includes_deep_article_terms_and_why_they_matter():
+    item = {
+        "title": "GitHub Agentic Workflows adds natural-language Markdown workflows for GitHub Actions",
+        "summary": "The public preview includes read-only default permissions, sandboxed containers, firewall controls, safe outputs, threat detection, and audit logs for agent automation.",
+    }
+
+    page = briefs.article_learning_page("ai", item, "GitHub Blog")
+
+    labels = [term["term"] for term in page["glossary"]]
+    assert len(labels) >= 8
+    assert "agentic workflow" in labels
+    assert "GitHub Actions" in labels
+    assert "Markdown workflow" in labels
+    assert "read-only permissions" in labels
+    assert "sandboxed container" in labels
+    assert "threat detection" in labels
+    assert "audit logs" in labels
+    assert all(term["definition"] for term in page["glossary"])
+    assert all(term["whyItMatters"] for term in page["glossary"])
+
+
+def test_teach_me_page_tops_up_sparse_articles_with_foundational_terms():
+    item = {
+        "title": "Kentucky data center project moves forward",
+        "summary": "Officials say the site could affect power demand and local infrastructure planning.",
+    }
+
+    page = briefs.article_learning_page("energy", item, "Local News")
+
+    labels = [term["term"] for term in page["glossary"]]
+    assert len(labels) >= 6
+    assert "data center" in labels
+    assert "large load" in labels
+    assert "grid upgrades" in labels
+    assert "ratepayer" in labels
+    assert "utility rates" in labels
+    assert all(term["definition"] for term in page["glossary"])
+    assert all(term["whyItMatters"] for term in page["glossary"])

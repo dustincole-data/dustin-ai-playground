@@ -529,11 +529,19 @@ CONCEPT_LIBRARY = [
     ("Markdown workflow", ["markdown workflows", "natural-language markdown", "markdown"], "A text-file workflow written in a simple document format instead of a traditional programming language.", "This lowers the barrier to creating automation, but also means non-programmers may create powerful workflows that need guardrails."),
     ("sandboxed container", ["sandboxed container", "sandbox"], "An isolated environment that limits what code can touch while it runs.", "Sandboxes reduce the blast radius if an AI-generated workflow does something wrong."),
     ("read-only permissions", ["read-only"], "Access that lets software view information but not change or delete it.", "Read-only defaults are a safety move: the AI can inspect before anyone grants it power to modify systems."),
+    ("firewall controls", ["firewall", "network controls"], "Rules that limit what a running workflow or container can reach over the network.", "Network limits matter because an agent that can freely call outside services can leak data or trigger actions outside the intended system."),
+    ("safe outputs", ["safe outputs", "output controls"], "Checks or formats that constrain what an automated workflow is allowed to produce or pass to the next step.", "Output controls reduce the chance that a bad agent result quietly becomes an instruction for another system."),
     ("threat detection", ["threat detection"], "Monitoring that looks for suspicious or dangerous behavior.", "AI workflows need detection because mistakes and attacks can look like normal automation until damage is done."),
+    ("audit logs", ["audit log", "audit logs", "auditability"], "Records of what happened, who or what triggered it, and when it occurred.", "Audit logs are how operators reconstruct whether an agent followed the rules after something surprising happens."),
+    ("public preview", ["public preview", "preview"], "A release stage where a feature is available for broader testing but may still change before general availability.", "Preview status tells you not to treat the feature as fully stable or production-proven yet."),
+    ("natural-language workflow", ["natural-language", "natural language"], "Automation defined in ordinary written language rather than only code or configuration files.", "Natural-language automation can make tools easier to use, but it also makes precision and review more important."),
     ("Developer Mode", ["developer mode"], "A mode that gives developers deeper debugging or control features than normal users see.", "For coding agents, developer features can make it easier to inspect web apps, reproduce bugs, and build internal tools."),
     ("CDP debugging", ["cdp", "browser debugging"], "Chrome DevTools Protocol: a way for software to inspect and control a browser for testing or debugging.", "CDP access can make an AI coding agent much better at fixing front-end problems because it can see the page like a developer tool does."),
     ("MCP", ["mcp"], GLOSSARY["MCP"], "MCP matters because it is becoming a common plug shape for connecting AI agents to real tools, files, and services."),
     ("CLI", [" cli", "cli "], "Command-line interface: a text-based tool run from a terminal.", "CLI support matters when AI tools need to fit into developer and automation workflows instead of only a web chat."),
+    ("model", [" model ", " models "], GLOSSARY["model"], "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."),
+    ("governance", ["governance", "governed", "controls", "guardrail", "guardrails"], GLOSSARY["governance"], "Governance is the difference between a cool demo and something a business can safely let touch real work."),
+    ("business automation", ["business automation", "automation"], "Using software to complete repeatable business steps with less manual work.", "Automation is where AI value becomes measurable, but it also creates new failure modes if no one owns review and rollback."),
     ("data center", ["data center", "data centers"], GLOSSARY["data center"], "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."),
     ("grid upgrades", ["grid upgrades", "grid", "transmission", "capacity"], "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.", "The key question is who benefits from the upgrade and who pays for it."),
     ("ratepayer", ["ratepayer", "customer bills", "bills", "rates"], GLOSSARY["ratepayer"], "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."),
@@ -543,7 +551,7 @@ CONCEPT_LIBRARY = [
 
 def explainer_terms(item: dict) -> list[dict]:
     """Return glossary cards for the article learning page."""
-    return glossary_terms(item)
+    return article_concepts(item)
 
 
 def article_concepts(item: dict) -> list[dict]:
@@ -563,7 +571,40 @@ def article_concepts(item: dict) -> list[dict]:
                 "definition": term["definition"],
                 "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon.",
             })
-    return concepts[:8]
+    return concepts[:12]
+
+
+FOUNDATIONAL_CONCEPTS = {
+    "ai": [
+        {"term": "AI capability", "definition": "The specific new thing an AI system can do, such as use a browser, run code, connect tools, or access a model.", "whyItMatters": "AI news is easier to judge when you identify the exact capability instead of treating every update as general hype."},
+        {"term": "model", "definition": GLOSSARY["model"], "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."},
+        {"term": "guardrail", "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.", "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."},
+        {"term": "vendor dependency", "definition": "Reliance on one company, model, or platform for an important workflow.", "whyItMatters": "If access, pricing, or policy changes, dependency can suddenly become an operational risk."},
+        {"term": "workflow", "definition": GLOSSARY["workflow"], "whyItMatters": "Workflow impact is where AI changes become practical: what step gets faster, safer, cheaper, or more automated?"},
+        {"term": "governance", "definition": GLOSSARY["governance"], "whyItMatters": "Governance is the difference between a cool demo and something a business can safely let touch real work."},
+    ],
+    "energy": [
+        {"term": "data center", "definition": GLOSSARY["data center"], "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."},
+        {"term": "large load", "definition": GLOSSARY["large load"], "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."},
+        {"term": "grid upgrades", "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.", "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."},
+        {"term": "ratepayer", "definition": GLOSSARY["ratepayer"], "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."},
+        {"term": "utility rates", "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.", "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."},
+        {"term": "regulatory review", "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.", "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."},
+    ],
+}
+
+
+def top_up_concepts(brief_id: str, concepts: list[dict], minimum: int = 6) -> list[dict]:
+    topped_up = list(concepts)
+    existing = {concept["term"].lower() for concept in topped_up}
+    for concept in FOUNDATIONAL_CONCEPTS.get(brief_id, []):
+        if len(topped_up) >= minimum:
+            break
+        if concept["term"].lower() in existing:
+            continue
+        topped_up.append(concept)
+        existing.add(concept["term"].lower())
+    return topped_up
 
 
 def article_learning_page(brief_id: str, item: dict, source_label: str = "") -> dict:
@@ -624,8 +665,9 @@ def article_learning_page(brief_id: str, item: dict, source_label: str = "") -> 
                 {"term": "guardrail", "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.", "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."},
             ]
 
-    glossary = concepts[:8]
-    core_terms = ", ".join(concept["term"] for concept in glossary[:4])
+    concepts = top_up_concepts(brief_id, concepts)
+    glossary = concepts[:12]
+    core_terms = ", ".join(concept["term"] for concept in glossary[:6])
     cleaned_frame = frame.replace("This article is about", "This is about").replace("This article", "This").replace("the article", "the story")
     cleaned_stakes = stakes.replace("article", "story").replace("source", "details")
     cleaned_reading = reading.replace("the article", "the story").replace("Read the article", "Read it").replace("source", "details")

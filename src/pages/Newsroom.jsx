@@ -285,12 +285,21 @@ function LearningPage({ article, feedStatus }) {
 
         {(page.glossary ?? []).length > 0 && (
           <section className="mt-4 rounded-[1.35rem] border border-border bg-white p-5 shadow-sm md:p-8">
-            <h2 className="font-heading text-2xl font-black text-navy">Glossary</h2>
-            <dl className="mt-4 grid gap-4 md:grid-cols-2">
+            <h2 className="font-heading text-2xl font-black text-navy">Terms to know</h2>
+            <p className="mt-2 max-w-3xl text-sm leading-6 text-charcoal/65">
+              These are the concepts from the story that make the details easier to understand.
+            </p>
+            <dl className="mt-5 grid gap-4 md:grid-cols-2">
               {page.glossary.map((entry) => (
-                <div key={entry.term} className="border-t border-border pt-3">
+                <div key={entry.term} className="rounded-2xl border border-border bg-offwhite/55 p-4">
                   <dt className="text-base font-black text-charcoal">{entry.term}</dt>
-                  <dd className="mt-1 text-sm leading-6 text-charcoal/72">{entry.definition}</dd>
+                  <dd className="mt-2 text-sm leading-6 text-charcoal/72">{entry.definition}</dd>
+                  {entry.whyItMatters && (
+                    <dd className="mt-3 rounded-xl bg-white/80 p-3 text-sm leading-6 text-charcoal/72">
+                      <span className="font-black text-navy">Why it matters: </span>
+                      {entry.whyItMatters}
+                    </dd>
+                  )}
                 </div>
               ))}
             </dl>
