@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-01T09:00:46.860539+00:00",
-  "generatedLabel": "Jul 1, 5:00 AM ET",
+  "generatedAt": "2026-07-02T09:00:27.332419+00:00",
+  "generatedLabel": "Jul 2, 5:00 AM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -9,74 +9,20 @@
       "emptyMessage": "No qualified AI / Analytics stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "ai-signal-2026-07-01_08-53-45-1",
-          "title": "OpenAI shipped Codex CLI `0.142.5` with a privacy/security fix: full Responses WebSocket request payload…",
+          "id": "ai-signal-2026-07-01_09-55-34-1",
+          "title": "Materially new vs this morning: Anthropic launched **Claude Sonnet 5**, available in Claude apps/API/Cla…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "OpenAI shipped Codex CLI `0.142.5` with a privacy/security fix: full Responses WebSocket request payloads are no longer written to trace logs. Source: https://developers.openai.com/codex/changelog/ and GitHub release https://github.com/openai/codex/releases/tag/rust-v0.142.5 — credible official changelog + release; materially new because yesterday’s brief talked about logs/checkpoints, not log-data leakage.",
-          "emailSummary": "OpenAI shipped Codex CLI `0.142.5` with a privacy/security fix: full Responses WebSocket request payloads are no longer written to trace logs. S…",
-          "whyItMatters": "This is one of the vetted AI signals from Dustin’s Daily AI Briefing, split into its own card so the morning scan covers multiple AI developments instead of one giant article.",
-          "dataSignals": [
-            "Codex / coding agents",
-            "developer workflow",
-            "OpenAI signal"
-          ],
-          "sourceLabel": "developers.openai.com · Jul 1, 4:53 AM ET",
-          "sourceUrl": "https://developers.openai.com/codex/changelog/",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-01T08:53:45.499961+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a developer-tooling AI story: the update affects how coding agents inspect apps, connect tools, or run inside a developer workflow. The teaching angle is integration. The more an AI coding tool connects to browsers, terminals, and external services, the more useful — and riskier — it becomes. The main terms to understand are CLI, AI capability, model, guardrail, vendor dependency, workflow. Read for what is newly available, whether it is preview or production-ready, what systems it connects to, and any limits around pricing, permissions, or rate limits.",
-            "glossary": [
-              {
-                "term": "CLI",
-                "definition": "Command-line interface: a text-based tool run from a terminal.",
-                "whyItMatters": "CLI support matters when AI tools need to fit into developer and automation workflows instead of only a web chat."
-              },
-              {
-                "term": "AI capability",
-                "definition": "The specific new thing an AI system can do, such as use a browser, run code, connect tools, or access a model.",
-                "whyItMatters": "AI news is easier to judge when you identify the exact capability instead of treating every update as general hype."
-              },
-              {
-                "term": "model",
-                "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
-                "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
-              },
-              {
-                "term": "guardrail",
-                "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.",
-                "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."
-              },
-              {
-                "term": "vendor dependency",
-                "definition": "Reliance on one company, model, or platform for an important workflow.",
-                "whyItMatters": "If access, pricing, or policy changes, dependency can suddenly become an operational risk."
-              },
-              {
-                "term": "workflow",
-                "definition": "A repeatable sequence of steps people or software use to get work done.",
-                "whyItMatters": "Workflow impact is where AI changes become practical: what step gets faster, safer, cheaper, or more automated?"
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-signal-2026-07-01_08-53-45-2",
-          "title": "Anthropic launched Claude Science: a paid-beta AI workbench for macOS/Linux that produces auditable arti…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "Anthropic launched Claude Science: a paid-beta AI workbench for macOS/Linux that produces auditable artifacts, includes 60+ scientific skills/connectors, uses reviewer agents, and asks before reaching new resources. Source: https://www.anthropic.com/news/claude-science-ai-workbench — credible official announcement; useful as a pattern for “agent outputs need provenance,” not just science.",
-          "emailSummary": "Anthropic launched Claude Science: a paid-beta AI workbench for macOS/Linux that produces auditable artifacts, includes 60+ scientific skills/co…",
+          "summary": "Materially new vs this morning: Anthropic launched **Claude Sonnet 5**, available in Claude apps/API/Claude Code, with intro API pricing of **$2/M input + $10/M output until Aug. 31**, then **$3/M + $15/M**. Source: https://www.anthropic.com/news/claude-sonnet-5 — credible official launch; useful because it is a cheaper “agent default” candidate, not just a flagship flex.",
+          "emailSummary": "Materially new vs this morning: Anthropic launched **Claude Sonnet 5**, available in Claude apps/API/Claude Code, with intro API pricing of **$2…",
           "whyItMatters": "This is one of the vetted AI signals from Dustin’s Daily AI Briefing, split into its own card so the morning scan covers multiple AI developments instead of one giant article.",
           "dataSignals": [
             "agent workflow",
             "Anthropic signal"
           ],
-          "sourceLabel": "anthropic.com · Jul 1, 4:53 AM ET",
-          "sourceUrl": "https://www.anthropic.com/news/claude-science-ai-workbench",
+          "sourceLabel": "anthropic.com · Jul 1, 5:55 AM ET",
+          "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-01T08:53:45.499961+00:00",
+          "publishedAt": "2026-07-01T09:55:34.536177+00:00",
           "glossary": [
             {
               "term": "agent",
@@ -121,51 +67,30 @@
           }
         },
         {
-          "id": "ai-signal-2026-07-01_08-53-45-3",
-          "title": "Cheap/open tool watch: Google’s Gemini CLI is Apache-2.0, terminal-first, MCP-capable, and advertises a…",
+          "id": "ai-signal-2026-07-01_09-55-34-2",
+          "title": "GitHub made **Claude Sonnet 5 generally available in Copilot** across IDE/CLI/cloud-agent surfaces, bill…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "Cheap/open tool watch: Google’s Gemini CLI is Apache-2.0, terminal-first, MCP-capable, and advertises a free tier of 60 requests/minute and 1,000 requests/day with a personal Google account. Source: https://github.com/google-gemini/gemini-cli — credible official GitHub repo; pricing/limits can change, but it is worth benchmarking before paying for more agent capacity.",
-          "emailSummary": "Cheap/open tool watch: Google’s Gemini CLI is Apache-2.0, terminal-first, MCP-capable, and advertises a free tier of 60 requests/minute and 1,00…",
+          "summary": "GitHub made **Claude Sonnet 5 generally available in Copilot** across IDE/CLI/cloud-agent surfaces, billed under usage-based provider pricing and available on paid Copilot plans. Source: https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-generally-available-for-github-copilot — credible official changelog; pricing risk noted.",
+          "emailSummary": "GitHub made **Claude Sonnet 5 generally available in Copilot** across IDE/CLI/cloud-agent surfaces, billed under usage-based provider pricing an…",
           "whyItMatters": "This is one of the vetted AI signals from Dustin’s Daily AI Briefing, split into its own card so the morning scan covers multiple AI developments instead of one giant article.",
           "dataSignals": [
             "agent workflow",
-            "developer workflow",
-            "Google AI signal",
-            "MCP / integration"
+            "developer workflow"
           ],
-          "sourceLabel": "github.com · Jul 1, 4:53 AM ET",
-          "sourceUrl": "https://github.com/google-gemini/gemini-cli",
+          "sourceLabel": "github.blog · Jul 1, 5:55 AM ET",
+          "sourceUrl": "https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-generally-available-for-github-copilot",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-01T08:53:45.499961+00:00",
+          "publishedAt": "2026-07-01T09:55:34.536177+00:00",
           "glossary": [
             {
               "term": "agent",
               "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer."
-            },
-            {
-              "term": "MCP",
-              "definition": "Model Context Protocol: a standard way for AI tools to connect to outside apps, files, and services."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is an AI-agent workflow story: AI is being used to help define, run, or supervise a sequence of work instead of only chatting. The teaching angle is control. Once AI can trigger workflows, the key concepts are permissions, sandboxing, auditability, and whether humans can understand what it changed. The main terms to understand are MCP, CLI, grid upgrades, agent, AI capability, model. Read for the exact job the agent can do, what tools it touches, what permissions it starts with, and what safety controls are named in the story.",
+            "explanationText": "This is an AI-agent workflow story: AI is being used to help define, run, or supervise a sequence of work instead of only chatting. The teaching angle is control. Once AI can trigger workflows, the key concepts are permissions, sandboxing, auditability, and whether humans can understand what it changed. The main terms to understand are agent, AI capability, model, guardrail, vendor dependency, workflow. Read for the exact job the agent can do, what tools it touches, what permissions it starts with, and what safety controls are named in the story.",
             "glossary": [
-              {
-                "term": "MCP",
-                "definition": "Model Context Protocol: a standard way for AI tools to connect to outside apps, files, and services.",
-                "whyItMatters": "MCP matters because it is becoming a common plug shape for connecting AI agents to real tools, files, and services."
-              },
-              {
-                "term": "CLI",
-                "definition": "Command-line interface: a text-based tool run from a terminal.",
-                "whyItMatters": "CLI support matters when AI tools need to fit into developer and automation workflows instead of only a web chat."
-              },
-              {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
-              },
               {
                 "term": "agent",
                 "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer.",
@@ -180,6 +105,74 @@
                 "term": "model",
                 "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
                 "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
+              },
+              {
+                "term": "guardrail",
+                "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.",
+                "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."
+              },
+              {
+                "term": "vendor dependency",
+                "definition": "Reliance on one company, model, or platform for an important workflow.",
+                "whyItMatters": "If access, pricing, or policy changes, dependency can suddenly become an operational risk."
+              },
+              {
+                "term": "workflow",
+                "definition": "A repeatable sequence of steps people or software use to get work done.",
+                "whyItMatters": "Workflow impact is where AI changes become practical: what step gets faster, safer, cheaper, or more automated?"
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-signal-2026-07-01_09-55-34-3",
+          "title": "xAI’s **Grok Build `/goal`** mode supports long-running autonomous tasks with live status plus pause/res…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "xAI’s **Grok Build `/goal`** mode supports long-running autonomous tasks with live status plus pause/resume/clear controls. Source: https://x.ai/news/introducing-goal — credible official product note; useful as UX pattern, not a reason to buy.",
+          "emailSummary": "xAI’s **Grok Build `/goal`** mode supports long-running autonomous tasks with live status plus pause/resume/clear controls. Source: https://x.ai…",
+          "whyItMatters": "This is one of the vetted AI signals from Dustin’s Daily AI Briefing, split into its own card so the morning scan covers multiple AI developments instead of one giant article.",
+          "dataSignals": [
+            "AI operating signal",
+            "source checked"
+          ],
+          "sourceLabel": "x.ai · Jul 1, 5:55 AM ET",
+          "sourceUrl": "https://x.ai/news/introducing-goal",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-01T09:55:34.536177+00:00",
+          "glossary": [],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is an AI product or policy update. The useful read is not that AI is changing; it is exactly what capability, access, cost, or risk changed in this article. The teaching angle is practical impact: who can use it, what it changes in work, and what risk or limit would matter in a real business setting. The main terms to understand are governance, AI capability, model, guardrail, vendor dependency, workflow. Read for the concrete new fact, the affected users, whether this is a launch or restriction, and whether the details gives enough evidence to trust it.",
+            "glossary": [
+              {
+                "term": "governance",
+                "definition": "Rules, approvals, monitoring, and controls that keep AI or data use safe and reliable.",
+                "whyItMatters": "Governance is the difference between a cool demo and something a business can safely let touch real work."
+              },
+              {
+                "term": "AI capability",
+                "definition": "The specific new thing an AI system can do, such as use a browser, run code, connect tools, or access a model.",
+                "whyItMatters": "AI news is easier to judge when you identify the exact capability instead of treating every update as general hype."
+              },
+              {
+                "term": "model",
+                "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
+                "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
+              },
+              {
+                "term": "guardrail",
+                "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.",
+                "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."
+              },
+              {
+                "term": "vendor dependency",
+                "definition": "Reliance on one company, model, or platform for an important workflow.",
+                "whyItMatters": "If access, pricing, or policy changes, dependency can suddenly become an operational risk."
+              },
+              {
+                "term": "workflow",
+                "definition": "A repeatable sequence of steps people or software use to get work done.",
+                "whyItMatters": "Workflow impact is where AI changes become practical: what step gets faster, safer, cheaper, or more automated?"
               }
             ]
           }
@@ -192,73 +185,20 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-44606",
-          "title": "PPL explains Ramu Grid Power Outage and Restoration Delay and update",
-          "kicker": "Post Courier",
-          "summary": "Post Courier is reporting on PPL explains Ramu Grid Power Outage and Restoration Delay and update. In plain English, this is a grid-capacity story: the important details are how much new power or infrastructure is being planned, what demand it is supposed to serve, and whether reliability or cost pressure could change for customers. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
-          "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
-          "dataSignals": [
-            "PPL mention",
-            "grid reliability"
-          ],
-          "sourceLabel": "Post Courier · Jun 30, 11:52 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPckNxSEs2TmhlTTdGNzV4eUxMNEltNExpV0JvbDE1dkNnNG03dUliRmh3enVMaFBBaTFnNnM3VkRQSEV5emVBZHdhM1JiX3BGZVdhajZrMV8wOTRFc3JGT21FYmdvQjByZlBXNmw2QzlWSXlNc3VNdXhOTU1OQ0w5Y0loc1Zza1NSUl9zcEJGOVdlUWEyTXN0ang5dDF4c0NkNHc?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-06-30T15:52:18+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about PPL explains Ramu Grid Power Outage and Restoration Delay and update. This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust. The main terms to understand are grid upgrades, data center, large load, ratepayer, utility rates, regulatory review. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": [
-              {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
-              },
-              {
-                "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
-              },
-              {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
-              },
-              {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
-              },
-              {
-                "term": "utility rates",
-                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
-                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
-              },
-              {
-                "term": "regulatory review",
-                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
-                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-2-93598",
-          "title": "Will Economic Development Accelerate PPL's Long-Term Earnings Growth?",
-          "kicker": "The Globe and Mail",
-          "summary": "The Globe and Mail is reporting on Will Economic Development Accelerate PPL's Long-Term Earnings Growth?. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "id": "energy-1-52607",
+          "title": "PPL Corporation outlines its steady utility strategy as investors watch regulated returns",
+          "kicker": "AD HOC NEWS",
+          "summary": "AD HOC NEWS is reporting on PPL Corporation outlines its steady utility strategy as investors watch regulated returns. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
           "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
           "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
           "dataSignals": [
             "PPL mention",
             "rate / bill impact"
           ],
-          "sourceLabel": "The Globe and Mail · Jun 30, 2:08 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQV29fWi1adXFoeEhXUUVZdC1OVVEyeW1tQzczdVpDdi1nMkNZZURkeW0xQXlLQUMxblBURVRKU2I5RUZoa3dRX1lkN2d0dmtXRzN1cUFhZG9mNzlydXNldGsyNFBpS0VUbEhVQ21ORE5oTDRLRjRjVlVXT3FROXB3MUgxUEoxd1F5cUhXeEZxYjZ0eTBqV2NOdjMySHpacldWTngzVXBSUEp2MnBqNDRXaFpjVnFQRkxKTTJ0VHJQdzdWaUNMalpvSGpHeFRwaDE5YUZYUmFkT3VYYU9SWjBReDlWTldmUQ?oc=5",
+          "sourceLabel": "AD HOC NEWS · Jul 1, 11:11 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOVi1WNlNGZUVzcE1nX1BPTEVPQnJQNFB3NDQyUU1GOGNSZ0ZsQ0kyWjdESGxISTNLc1I0WDNJY0hzMnZuVkVRZEZTWjFZV0M1TXdJcnhkdnNEaFV2WFZtU1Y0TlVzdUJ1UEwzcm1tLVRoRUZSMFgybnV0MHdOZ0Z6NXRldFdYZDdDbXphQ01VVVc2OWpvRTVtV0RDSjUtU2JUWnhybjktQmJoTHNiOGRCajhlT0NsTk5IYlNXSXlvaUdrRS1lQ3NQbWN3?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-30T18:08:00+00:00",
+          "publishedAt": "2026-07-01T15:11:32+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
@@ -298,38 +238,43 @@
           }
         },
         {
-          "id": "energy-3-64986",
-          "title": "PPL vs. CMS: Which Regulated Utility Stock is the Smarter Investment?",
-          "kicker": "Yahoo Finance",
-          "summary": "Yahoo Finance is reporting on PPL vs. CMS: Which Regulated Utility Stock is the Smarter Investment?. In plain English, this is a utility-operations story: the important details are what changed, which customers or systems are affected, and whether it creates a reliability, regulatory, cost, or data-quality issue. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
-          "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
+          "id": "energy-2-17051",
+          "title": "Billings council member intervenes in NorthWestern data center rate case",
+          "kicker": "Montana Standard",
+          "summary": "Montana Standard is reporting on Billings council member intervenes in NorthWestern data center rate case. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
           "dataSignals": [
-            "PPL mention"
+            "data-center load",
+            "rate / bill impact"
           ],
-          "sourceLabel": "Yahoo Finance · Jun 30, 11:28 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONWtVb0hMbmdndEF5WGFPSlFiUjVja0xPcVoxcWYxM2swUzdxcmdpUm5jYUJya2thWnF6WERGTmViSDhRckFreXFtLUFqWkZZLUM3WmMtVng5ZmFIQ1oyQWh5WVYtbEdJM2llSmUwUGExdVhvT1FfQkpzSEp2VUNOcHlsbHNVb19FTlJZZ1UtSVNmSHBlb24wZw?oc=5",
+          "sourceLabel": "Montana Standard · Jul 1, 11:03 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPamRqVFprNjJrZm1EaXFNQlJManFBeV9TczlyWTU4V1p2WW1Qd2FxT0FUSnA3dGxPSUdlTXh2YmZWdXoyUTBwc3UxS3lvaUN0Y3E0XzRxV2tqQU9mRURmLWRHYzJ1Nkd3V2o1MWxuN2lJMkQxZDBWOUwybUdUQnZXdG5nUy1FNlVxRGYxeE9STzJuQThPT1Y0dS1pZXk?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-30T15:28:00+00:00",
-          "glossary": [],
+          "publishedAt": "2026-07-02T03:03:43+00:00",
+          "glossary": [
+            {
+              "term": "data center",
+              "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades."
+            },
+            {
+              "term": "rate case",
+              "definition": "A formal utility-regulator process that decides how much a utility can charge customers and what costs it can recover."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about PPL vs. CMS: Which Regulated Utility Stock is the Smarter Investment?. This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust. The main terms to understand are utility rates, ratepayer, data center, large load, grid upgrades, regulatory review. Read for what changed, who is affected, why it matters now, and what happens next.",
+            "explanationText": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators. The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill. The main terms to understand are data center, rate case, large load, grid upgrades, ratepayer, utility rates. Read the story by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure.",
             "glossary": [
-              {
-                "term": "utility rates",
-                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
-                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
-              },
-              {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up paying for a utility decision."
-              },
               {
                 "term": "data center",
                 "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
                 "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
+              },
+              {
+                "term": "rate case",
+                "definition": "A formal utility-regulator process that decides how much a utility can charge customers and what costs it can recover.",
+                "whyItMatters": "Rate cases translate utility spending into bills, so they are where technical grid plans become household costs."
               },
               {
                 "term": "large load",
@@ -342,84 +287,89 @@
                 "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
               },
               {
-                "term": "regulatory review",
-                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
-                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-4-72438",
-          "title": "Residents voice opposition to PPL’s power line plan",
-          "kicker": "Hazleton Standard Speaker",
-          "summary": "Hazleton Standard Speaker is reporting on Residents voice opposition to PPL’s power line plan. In plain English, this is a utility-operations story: the important details are what changed, which customers or systems are affected, and whether it creates a reliability, regulatory, cost, or data-quality issue. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
-          "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
-          "dataSignals": [
-            "PPL mention"
-          ],
-          "sourceLabel": "Hazleton Standard Speaker · Jun 30, 5:33 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQaHJieTc0ZTFnZXlDRTkwUjBPUDdmVmdPcTJEdHZRWHFaVE9tTXVBQ2NVZlUwbkNIT3NrbkdUNWxFc3haeHo4VEhVQVhvOHZCZTNhM1M5ZWNEUVdVZkFnUTkwLW52TElXLUZpZlpWVjNfcDZpbjA3NGcybTFJc3N0TlFzemlFTk9ad2RLRGhtSDdhSFhablZraVhR?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-06-30T21:33:40+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about Residents voice opposition to PPL’s power line plan. This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust. The main terms to understand are utility rates, ratepayer, data center, large load, grid upgrades, regulatory review. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": [
+                "term": "ratepayer",
+                "definition": "A utility customer who pays electric, gas, or water bills.",
+                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
+              },
               {
                 "term": "utility rates",
                 "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
                 "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
-              },
-              {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up paying for a utility decision."
-              },
-              {
-                "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
-              },
-              {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
-              },
-              {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
-              },
-              {
-                "term": "regulatory review",
-                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
-                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
               }
             ]
           }
         },
         {
-          "id": "energy-5-45982",
-          "title": "PPL Appoints Former Ontario Power Generation CEO Ken Hartwick to Board",
-          "kicker": "citybiz",
-          "summary": "citybiz is reporting on PPL Appoints Former Ontario Power Generation CEO Ken Hartwick to Board. In plain English, this is a grid-capacity story: the important details are how much new power or infrastructure is being planned, what demand it is supposed to serve, and whether reliability or cost pressure could change for customers. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "id": "energy-3-99529",
+          "title": "PPL (PPL) Appoints Kenneth Hartwick To Its Board As Grid Investment Focus Grows",
+          "kicker": "simplywall.st",
+          "summary": "simplywall.st is reporting on PPL (PPL) Appoints Kenneth Hartwick To Its Board As Grid Investment Focus Grows. In plain English, this is a grid-capacity story: the important details are how much new power or infrastructure is being planned, what demand it is supposed to serve, and whether reliability or cost pressure could change for customers. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
           "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
           "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
           "dataSignals": [
             "PPL mention",
-            "generation planning"
+            "grid reliability"
           ],
-          "sourceLabel": "citybiz · Jun 30, 12:15 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZEdWSkszYlFnLVhvWmV6a25QQTc4SkxYRFQweEVNS3JDRkFRb1RuclMtN1BlYzdsd2I3MzFFd1hmd19YNjNFTmlTTzFqeUF2c3dTY0UtdjBUcnJCSW82cW5Uc0VpaXlpMmhlendCd3kyaml5aWlObXhkbUROcVlsX1lPMm5aRTlpSG4xZUZZOUROcGlsSTctRDR0dGtGdjhfdFFDWWdkS25WUFRZN0E?oc=5",
+          "sourceLabel": "simplywall.st · Jul 1, 3:49 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcDdnN1l5UVVFcGpNUGo3WVA4bkc5WG1ZaFE1c3pmTEpCUGp5VE9nazRfbExoRmRJaHF5bVVpbTdNQUhuZUttMEF0aXhUQ1hkeFo0ejdSb29oMVRDRWN6eG9MbUZoZlhXWjdNZTZsNmpISFNGMnVNbFRybnduRDdhNmJTaEpZQUNfSTFubkJXTFdkbVdnSzNPM2Fya09XNG0yTlNmZktzQ043LWphWVc1Q2dKSFlfU2V4SndHQks0N2ZNd9IBwgFBVV95cUxOcDdnN1l5UVVFcGpNUGo3WVA4bkc5WG1ZaFE1c3pmTEpCUGp5VE9nazRfbExoRmRJaHF5bVVpbTdNQUhuZUttMEF0aXhUQ1hkeFo0ejdSb29oMVRDRWN6eG9MbUZoZlhXWjdNZTZsNmpISFNGMnVNbFRybnduRDdhNmJTaEpZQUNfSTFubkJXTFdkbVdnSzNPM2Fya09XNG0yTlNmZktzQ043LWphWVc1Q2dKSFlfU2V4SndHQks0N2ZNdw?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-06-30T16:15:48+00:00",
+          "publishedAt": "2026-07-01T19:49:11+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about PPL Appoints Former Ontario Power Generation CEO Ken Hartwick to Board. This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust. The main terms to understand are utility rates, ratepayer, data center, large load, grid upgrades, regulatory review. Read for what changed, who is affected, why it matters now, and what happens next.",
+            "explanationText": "This is about PPL (PPL) Appoints Kenneth Hartwick To Its Board As Grid Investment Focus Grows. This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust. The main terms to understand are grid upgrades, data center, large load, ratepayer, utility rates, regulatory review. Read for what changed, who is affected, why it matters now, and what happens next.",
+            "glossary": [
+              {
+                "term": "grid upgrades",
+                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
+                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
+              },
+              {
+                "term": "data center",
+                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
+                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
+              },
+              {
+                "term": "large load",
+                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
+                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
+              },
+              {
+                "term": "ratepayer",
+                "definition": "A utility customer who pays electric, gas, or water bills.",
+                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
+              },
+              {
+                "term": "utility rates",
+                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
+                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
+              },
+              {
+                "term": "regulatory review",
+                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
+                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-4-17551",
+          "title": "The PPL Electric smart thermostat rebate - PPL Corporation bets on home energy control",
+          "kicker": "AD HOC NEWS",
+          "summary": "AD HOC NEWS is reporting on The PPL Electric smart thermostat rebate - PPL Corporation bets on home energy control. In plain English, this is a utility-operations story: the important details are what changed, which customers or systems are affected, and whether it creates a reliability, regulatory, cost, or data-quality issue. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
+          "whyItMatters": "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust.",
+          "dataSignals": [
+            "PPL mention"
+          ],
+          "sourceLabel": "AD HOC NEWS · Jul 1, 9:31 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVG9iLXRwSXdqWFlLb3ZrMVZobVdNOTdBUFdmd3BWaDY1YUpPWG1xX2VVUUlmRTEwZmVKUWVBWm9TWnlRV2Vkb0dpeVlKV3JybFdfd3lOZVBiZi1scWNXdDVIRU9GSW1rQ2JTVEg2YnI5SUVkUGRXZi1rdFBoR3ZKd2ZhVElZcTRWbEdUOFgxNGVlcFI3NW9vSWZpS1I2SjFVcWRIcEJ4SWNCZ0hUcUpxeEJjYUEyZ1I0d1FHbGlVbnhPX0RlXzFr?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-01T13:31:09+00:00",
+          "glossary": [],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is about The PPL Electric smart thermostat rebate - PPL Corporation bets on home energy control. This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust. The main terms to understand are utility rates, ratepayer, data center, large load, grid upgrades, regulatory review. Read for what changed, who is affected, why it matters now, and what happens next.",
             "glossary": [
               {
                 "term": "utility rates",
@@ -445,6 +395,58 @@
                 "term": "grid upgrades",
                 "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
                 "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
+              },
+              {
+                "term": "regulatory review",
+                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
+                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-5-9219",
+          "title": "Meeting the (Planned) Moment: TVA, Data Centers and Power Demand in Southeast U.S.",
+          "kicker": "Industrial Info Resources",
+          "summary": "Industrial Info Resources is reporting on Meeting the (Planned) Moment: TVA, Data Centers and Power Demand in Southeast U.S. In plain English, this is a large-load planning story: the important details are whether data centers are driving new power demand, who pays for the grid upgrades, and how regulators or lawmakers protect ordinary ratepayers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "Industrial Info Resources · Jul 1, 7:20 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPZ3VqYmlIVTNSSzA2OXk5TzVidzdvNVRWSXdEM0o4X0NOZmFJMlRYeHh4ZHJaN2taM1ZZVldQYVlieFhmODBXdmxzd0xDcnBodWJqS0lQSlhrbHRRV3h6VnhpV0xfQmxjQmlUU1pUSjRKd0EtalI3blVrbWIyOWJQY0liOGw5b09RSHBzRzByUVR6eTkwOWxYVDh1VTY4MTFodEpCZ0ZWNDFwb29fdVRubmVmcGNTV2RFMkdEdkp6c0w3VjlZM2MzVnNOWWh6clBNbTBwUTh6ZGRrNEYwSkZXMg?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-01T11:20:56+00:00",
+          "glossary": [],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators. The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill. The main terms to understand are data center, large load, grid upgrades, ratepayer, utility rates, regulatory review. Read the story by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure.",
+            "glossary": [
+              {
+                "term": "data center",
+                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
+                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
+              },
+              {
+                "term": "large load",
+                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
+                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
+              },
+              {
+                "term": "grid upgrades",
+                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
+                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
+              },
+              {
+                "term": "ratepayer",
+                "definition": "A utility customer who pays electric, gas, or water bills.",
+                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
+              },
+              {
+                "term": "utility rates",
+                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
+                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
               },
               {
                 "term": "regulatory review",
