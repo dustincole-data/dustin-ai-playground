@@ -1,10 +1,14 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
   AlertCircle,
+  BarChart3,
   BookOpen,
   BrainCircuit,
+  Building2,
   Cpu,
   ExternalLink,
+  HeartPulse,
+  MapPin,
   RefreshCcw,
   Search,
   Sparkles,
@@ -15,6 +19,10 @@ import { briefRails, briefTemplates, emptyNewsData } from '../data/morningBriefs
 const sectionIcons = {
   energy: Zap,
   ai: BrainCircuit,
+  humana: HeartPulse,
+  kentucky_healthcare: Building2,
+  analytics: BarChart3,
+  louisville: MapPin,
 };
 
 const sectionStyles = {
@@ -23,6 +31,22 @@ const sectionStyles = {
     active: 'border-slate bg-white text-navy shadow-[0_0_0_2px_rgba(74,127,165,0.22)]',
   },
   ai: {
+    accent: 'bg-navy',
+    active: 'border-navy bg-white text-navy shadow-[0_0_0_2px_rgba(15,30,53,0.18)]',
+  },
+  humana: {
+    accent: 'bg-slate',
+    active: 'border-slate bg-white text-navy shadow-[0_0_0_2px_rgba(74,127,165,0.22)]',
+  },
+  kentucky_healthcare: {
+    accent: 'bg-navy',
+    active: 'border-navy bg-white text-navy shadow-[0_0_0_2px_rgba(15,30,53,0.18)]',
+  },
+  analytics: {
+    accent: 'bg-slate',
+    active: 'border-slate bg-white text-navy shadow-[0_0_0_2px_rgba(74,127,165,0.22)]',
+  },
+  louisville: {
     accent: 'bg-navy',
     active: 'border-navy bg-white text-navy shadow-[0_0_0_2px_rgba(15,30,53,0.18)]',
   },

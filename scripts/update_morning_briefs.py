@@ -63,6 +63,68 @@ BRIEFS = [
             '("LG&E" OR "Kentucky Utilities" OR "PPL") ("data center" OR "power demand") when:7d',
         ],
     },
+    {
+        "id": "humana",
+        "name": "Humana / Health Insurance",
+        "headline": "Humana / Health Insurance",
+        "queries": [
+            '(Humana OR "Humana Inc") (health insurance OR Medicare Advantage OR Medicaid OR insurer OR CMS OR claims OR pharmacy) when:1d',
+            '(Humana OR "Humana Inc") (earnings OR guidance OR enrollment OR prior authorization OR value-based care) when:1d',
+        ],
+        "fallbackQueries": [
+            '(Humana OR "Humana Inc") (health insurance OR Medicare Advantage OR Medicaid OR insurer OR CMS OR claims OR pharmacy) when:7d',
+            '(Humana OR "Humana Inc") (earnings OR guidance OR enrollment OR prior authorization OR value-based care) when:7d',
+        ],
+        "broadFallbackQueries": [
+            '("US health insurance" OR "health insurers" OR "Medicare Advantage" OR Medicaid OR CMS) (prior authorization OR rates OR enrollment OR claims OR pharmacy) when:1d',
+            '("US health insurance" OR "health insurers" OR "Medicare Advantage" OR Medicaid OR CMS) (prior authorization OR rates OR enrollment OR claims OR pharmacy) when:7d',
+        ],
+        "primaryTerms": ["humana", "humana inc"],
+    },
+    {
+        "id": "kentucky_healthcare",
+        "name": "Kentucky Healthcare / US Healthcare",
+        "headline": "Kentucky Healthcare",
+        "queries": [
+            '(Kentucky healthcare OR "Kentucky health care" OR "Kentucky hospitals" OR "Kentucky Medicaid" OR "Louisville healthcare") when:1d',
+            '(Kentucky hospital OR "University of Kentucky healthcare" OR "UofL Health" OR Baptist Health Kentucky OR Norton Healthcare) when:1d',
+        ],
+        "fallbackQueries": [
+            '(Kentucky healthcare OR "Kentucky health care" OR "Kentucky hospitals" OR "Kentucky Medicaid" OR "Louisville healthcare") when:7d',
+            '(Kentucky hospital OR "University of Kentucky healthcare" OR "UofL Health" OR Baptist Health Kentucky OR Norton Healthcare) when:7d',
+        ],
+        "broadFallbackQueries": [
+            '("US healthcare" OR "US health care" OR hospitals OR Medicaid OR Medicare) (policy OR funding OR workforce OR access OR costs) when:1d',
+            '("US healthcare" OR "US health care" OR hospitals OR Medicaid OR Medicare) (policy OR funding OR workforce OR access OR costs) when:7d',
+        ],
+        "primaryTerms": ["kentucky", "louisville", "uofl", "norton healthcare", "baptist health", "uk healthcare", "university of kentucky"],
+    },
+    {
+        "id": "analytics",
+        "name": "Analytics",
+        "headline": "Analytics Brief",
+        "queries": [
+            '(business analytics OR data analytics OR "Power BI" OR Tableau OR Snowflake OR Databricks OR "data governance" OR "data platform") when:1d',
+            '(analytics dashboard OR BI reporting OR "data quality" OR "data warehouse" OR "lakehouse") when:1d',
+        ],
+        "fallbackQueries": [
+            '(business analytics OR data analytics OR "Power BI" OR Tableau OR Snowflake OR Databricks OR "data governance" OR "data platform") when:7d',
+            '(analytics dashboard OR BI reporting OR "data quality" OR "data warehouse" OR "lakehouse") when:7d',
+        ],
+    },
+    {
+        "id": "louisville",
+        "name": "Louisville, Kentucky",
+        "headline": "Louisville Brief",
+        "queries": [
+            '(Louisville Kentucky OR "Louisville Metro" OR "Jefferson County Kentucky") (business OR development OR health OR data center OR utility OR politics OR economy) when:1d',
+            '(site:wdrb.com OR site:wfpl.org OR site:courier-journal.com OR site:louisvillepublicmedia.org) Louisville Kentucky when:1d',
+        ],
+        "fallbackQueries": [
+            '(Louisville Kentucky OR "Louisville Metro" OR "Jefferson County Kentucky") (business OR development OR health OR data center OR utility OR politics OR economy) when:7d',
+            '(site:wdrb.com OR site:wfpl.org OR site:courier-journal.com OR site:louisvillepublicmedia.org) Louisville Kentucky when:7d',
+        ],
+    },
 ]
 
 GLOSSARY = {
@@ -120,6 +182,52 @@ AI_SOURCE_ALLOW_HINTS = [
     "Wired", "Microsoft", "Google", "OpenAI", "Anthropic", "Snowflake", "Databricks",
     "InfoWorld", "CIO", "SiliconANGLE", "Analytics India Magazine", "The Decoder", "ZAWYA",
 ]
+
+SECTION_TERMS = {
+    "humana": [
+        ("humana", 8), ("humana inc", 8), ("medicare advantage", 5), ("health insurance", 4),
+        ("insurer", 3), ("claims", 3), ("cms", 3), ("prior authorization", 4), ("medicaid", 3),
+        ("pharmacy", 2), ("enrollment", 3),
+    ],
+    "kentucky_healthcare": [
+        ("kentucky", 5), ("louisville", 4), ("healthcare", 4), ("health care", 4),
+        ("hospital", 4), ("medicaid", 4), ("uofl health", 6), ("norton healthcare", 6),
+        ("baptist health", 5), ("uk healthcare", 6), ("university of kentucky", 5),
+    ],
+    "analytics": [
+        ("analytics", 6), ("business intelligence", 5), ("power bi", 5), ("tableau", 4),
+        ("snowflake", 4), ("databricks", 4), ("data governance", 5), ("data quality", 4),
+        ("dashboard", 3), ("reporting", 3), ("data platform", 4), ("lakehouse", 4),
+    ],
+    "louisville": [
+        ("louisville", 7), ("jefferson county", 5), ("louisville metro", 6), ("kentucky", 3),
+        ("wdrb", 3), ("wfpl", 3), ("courier journal", 3), ("development", 3),
+        ("business", 2), ("health", 2), ("utility", 2),
+    ],
+}
+
+SECTION_SIGNALS = {
+    "humana": [
+        ("humana", "Humana mention"), ("medicare advantage", "Medicare Advantage"),
+        ("cms", "CMS / policy signal"), ("prior authorization", "prior authorization"),
+        ("claims", "claims / operations"), ("enrollment", "enrollment signal"),
+    ],
+    "kentucky_healthcare": [
+        ("kentucky", "Kentucky healthcare"), ("louisville", "Louisville healthcare"),
+        ("hospital", "hospital operations"), ("medicaid", "Medicaid signal"),
+        ("workforce", "workforce pressure"), ("access", "access / care delivery"),
+    ],
+    "analytics": [
+        ("analytics", "analytics workflow"), ("power bi", "BI tooling"),
+        ("dashboard", "dashboard / reporting"), ("data governance", "governance controls"),
+        ("data quality", "data quality"), ("snowflake", "data-platform signal"),
+    ],
+    "louisville": [
+        ("louisville", "Louisville local"), ("jefferson county", "Jefferson County"),
+        ("development", "development / economy"), ("health", "healthcare angle"),
+        ("utility", "utility / infrastructure"), ("business", "business signal"),
+    ],
+}
 
 
 def local_label(value: str | datetime) -> str:
@@ -342,22 +450,131 @@ def story_fit(brief_id: str, item: dict) -> int:
         # Penalize evergreen database/tracker pages; they can inform searches but are not themselves news.
         if "tracker" in text and "reported" not in text and "says" not in text:
             score -= 3
+    elif brief_id in SECTION_TERMS:
+        for term, points in SECTION_TERMS[brief_id]:
+            if term in text:
+                score += points
     return score
+
+
+def candidate_text(item: dict) -> str:
+    return f"{item.get('title', '')} {item.get('summary', '')} {item.get('source', '')}".lower()
+
+
+def is_primary_candidate(brief_id: str, item: dict) -> bool:
+    """Return whether an item belongs in a section's primary/local result set.
+
+    Google News can return broad topical stories for narrow queries. Score alone is
+    not enough for sections that have both primary and broad fallback tracks.
+    """
+    text = candidate_text(item)
+    if brief_id == "humana":
+        return "humana" in text
+    if brief_id == "kentucky_healthcare":
+        named_kentucky_provider = any(term in text for term in [
+            "uofl health",
+            "norton healthcare",
+            "norton health care",
+            "baptist health kentucky",
+            "baptist health louisville",
+            "uk healthcare",
+            "uk health care",
+            "university of kentucky healthcare",
+            "university of kentucky health care",
+            "kentucky children's hospital",
+        ])
+        if named_kentucky_provider:
+            return True
+        locality = any(term in text for term in ["kentucky", "louisville", "lexington", "jefferson county"])
+        healthcare_signal = any(term in text for term in [
+            "healthcare",
+            "health care",
+            "hospital",
+            "hospitals",
+            "medicaid",
+            "medicare",
+            "clinic",
+            "clinics",
+            "medical",
+            "patient",
+            "patients",
+            "care access",
+            "care delivery",
+            "provider",
+            "providers",
+            "nurse",
+            "nurses",
+            "physician",
+            "workforce",
+        ])
+        return locality and healthcare_signal
+    return True
+
+
+def candidate_classification(brief_id: str, item: dict, *, broad: bool) -> str | None:
+    if broad:
+        return "broad"
+    return "primary" if is_primary_candidate(brief_id, item) else None
 
 
 def why_matters(brief_id: str, item: dict) -> str:
     title = item["title"]
     text = f"{title} {item.get('summary', '')}".lower()
+
     if brief_id == "energy":
-        if any(term in text for term in ["lg&e", "kentucky utilities", "louisville gas", "ppl"]):
-            return "This is close to Dustin’s utility analytics world: it may affect metering, reliability, customer impact, rate context, regulatory reporting, or the data products leaders need to trust."
-        if "data center" in text or "power demand" in text:
-            return "Data-center load can reshape utility forecasts, infrastructure plans, rate design, reliability risk, and the analytics needed to separate real demand from speculation."
-        return "Energy and utility stories can point to operational pressure, customer bill impacts, reliability risks, and governance needs around utility data."
+        if "data center" in text and "rate case" in text:
+            return "This matters because the article could set a precedent for who pays to serve a huge new load — the utility, the customer base, or the project sponsor."
+        if "backstop procurement" in text or "procurement plan" in text:
+            return "This matters because procurement rules can decide how fast the grid can prepare for new demand and how much flexibility utilities keep."
+        if "resident" in text or "testify" in text or "upgrade" in text:
+            return "This matters because local opposition can slow or reshape transmission buildouts that utilities say they need for future load."
+        if "power project" in text and "data center" in text:
+            return "This matters because power-supply deals for data centers can lock in infrastructure spending and clarify who is on the hook for it."
+        if "data center" in text:
+            return "This matters because large-load demand can change grid forecasts, trigger upgrade spending, and reopen the question of who pays for capacity."
+        if any(term in text for term in ["thermostat", "rebate", "load control", "demand response"]):
+            return "This matters because load-shaping programs can be cheaper than new generation, so even a small incentive can change planning and bill pressure."
+        if any(term in text for term in ["board", "appoint", "director", "investor", "valuation", "fair value"]):
+            return "This matters because board and investor moves often signal how a utility wants capital spending, regulation, and growth plans to be read."
+        if any(term in text for term in ["rate", "bill", "ratepayer", "regulatory", "psc"]):
+            return "This matters because utility decisions only become real when they show up in customer bills, regulatory scrutiny, or rate-case precedent."
+        if any(term in text for term in ["grid", "capacity", "generation"]):
+            return "This matters because grid-capacity stories usually translate into infrastructure timing, reliability risk, and the cost of adding new power."
+        return "This matters because utility stories often hide a concrete tradeoff: reliability, customer cost, regulatory pressure, or planning risk."
+
     if brief_id == "ai":
-        return "This matters because it could affect practical analytics automation, governed self-service, agentic workflows, or ideas Dustin can test and write about."
+        if "copilot" in text or "github" in text:
+            return "This matters because bringing a model into Copilot changes where developers encounter it and whether it becomes part of an existing workflow."
+        if "anthropic" in text or "sonnet 5" in text:
+            return "This matters because a cheaper flagship model can shift which tasks get automated, which model becomes the default, and how quickly teams adopt it."
+        if "goal" in text or "autonomous" in text:
+            return "This matters because long-running autonomous work only helps if the agent can pause, report progress, and hand off cleanly when something breaks."
+        if "agent" in text or "agentic" in text:
+            return "This matters because agent stories are about real workflow power, so the key question is what the system can touch and how it is controlled."
+        if any(term in text for term in ["mcp", "cli", "developer", "browser", "terminal"]):
+            return "This matters because tighter tool integration makes AI more useful for operators, but it also raises the blast radius if permissions are too broad."
+        if any(term in text for term in ["pricing", "cost", "price"]):
+            return "This matters because model pricing changes which tasks are economical enough to automate at scale."
+        return "This matters because the practical question is what capability, access, or workflow changed enough to affect real use."
+
+    if brief_id == "humana":
+        return "This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions."
+
+    if brief_id == "kentucky_healthcare":
+        return "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs."
+
+    if brief_id == "analytics":
+        return "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner."
+
+    if brief_id == "louisville":
+        return "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home."
+
     if "transfer" in text or "nil" in text:
         return "Portal and NIL churn can create fast fanbase mood swings and source-backed Fanbase Weather angles without inventing reactions."
+
+    if "coach" in text or "fired" in text:
+        return "This matters because coaching pressure changes fan confidence fast and can reshape the next few weeks of fanbase mood."
+
     return "This may be useful raw material for Fanbase Weather-style chaos scoring if the article has a real trigger, affected teams, and shareable stakes."
 
 
@@ -391,7 +608,7 @@ def data_signals(brief_id: str, item: dict) -> list[str]:
             ("controvers", "controversy / backlash"),
             ("upset", "upset / fanbase swing"),
         ],
-    }[brief_id]
+    }.get(brief_id, SECTION_SIGNALS.get(brief_id, []))
     for needle, label in candidates:
         if needle in text and label not in signals:
             signals.append(label)
@@ -431,6 +648,14 @@ def story_explainer_sentence(brief_id: str, item: dict) -> str:
         if "agent" in text or "agentic" in text:
             return "In plain English, this is an AI-agent workflow story: the important details are what the agent can do, what guardrails exist, and whether it helps real operators complete work instead of just demoing well."
         return "In plain English, this is a practical AI story: the important details are what changed, who can use it, what risk or governance issue comes with it, and whether it creates a useful operator-facing workflow."
+    if brief_id == "humana":
+        return "In plain English, this is a health-insurance story: the important details are what changed for Humana, members, providers, claims, costs, or Medicare Advantage strategy."
+    if brief_id == "kentucky_healthcare":
+        return "In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved."
+    if brief_id == "analytics":
+        return "In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process."
+    if brief_id == "louisville":
+        return "In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy."
     if "coach" in text or "fired" in text:
         return "In plain English, this is a coaching-pressure story: the important details are whose job security is being questioned, why the timing matters, and which fanbases are likely to react."
     if "nil" in text or "transfer" in text:
@@ -448,6 +673,14 @@ def brief_context_sentence(brief_id: str, item: dict) -> str:
         return "For Dustin, the useful read is whether the story points to customer bill impact, reliability risk, regulatory pressure, or new analytics questions for utility operators."
     if brief_id == "ai":
         return "For Dustin, the useful read is whether this creates a practical analytics workflow, a governance issue, a tool worth testing, or a clear idea to write about for business operators."
+    if brief_id == "humana":
+        return "For Dustin, the useful read is whether this changes health-insurance economics, Humana operating signals, member experience, or analytics questions around claims and care management."
+    if brief_id == "kentucky_healthcare":
+        return "For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky."
+    if brief_id == "analytics":
+        return "For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing."
+    if brief_id == "louisville":
+        return "For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity."
     if "nil" in text or "transfer" in text:
         return "For Dustin, the useful read is the fanbase chaos angle: which teams or players are affected, what changed in the last day, and whether the story creates a source-backed Fanbase Weather signal."
     return "For Dustin, the useful read is whether this has a real trigger, clear stakes, and enough fanbase emotion to become a source-backed college sports chaos item."
@@ -691,7 +924,7 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
     errors: list[str] = []
     used_fallback = False
 
-    def collect(queries: list[str], fallback: bool = False) -> None:
+    def collect(queries: list[str], fallback: bool = False, broad: bool = False) -> None:
         nonlocal used_fallback
         if fallback:
             used_fallback = True
@@ -704,7 +937,7 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
                     key = normalized_key(item["title"])
                     if not key or key in seen:
                         continue
-                    text_for_filter = f"{item['title']} {item.get('summary', '')} {item.get('source', '')}".lower()
+                    text_for_filter = candidate_text(item)
                     if not source_allowed(brief["id"], item):
                         continue
                     score = story_fit(brief["id"], item)
@@ -716,17 +949,24 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
                         score += 4
                     if score < (4 if brief["id"] != "sports" else 5):
                         continue
+                    classification = candidate_classification(brief["id"], item, broad=broad)
+                    if classification is None:
+                        continue
                     seen.add(key)
                     item["score"] = score
+                    item["candidateClass"] = classification
+                    item["primaryTopicRank"] = 2 if classification == "primary" else 1
                     articles.append(item)
             except Exception as exc:
                 errors.append(f"{brief['id']} query failed: {exc}")
 
-    collect(brief["queries"], fallback=False)
+    collect(brief["queries"], fallback=False, broad=False)
     if not articles:
-        collect(brief.get("fallbackQueries", []), fallback=True)
+        collect(brief.get("fallbackQueries", []), fallback=True, broad=False)
+    if not articles:
+        collect(brief.get("broadFallbackQueries", []), fallback=True, broad=True)
 
-    articles.sort(key=lambda x: (x.get("score", 0), x.get("publishedAt", "")), reverse=True)
+    articles.sort(key=lambda x: (x.get("primaryTopicRank", 1), x.get("score", 0), x.get("publishedAt", "")), reverse=True)
     output = []
     for i, item in enumerate(articles[:MAX_ITEMS_PER_BRIEF], start=1):
         source_label = item["source"] if item["source"] != "Source" else "Open source"
@@ -855,7 +1095,7 @@ def build_ai_signal_articles(response: str, source_file: Path) -> list[dict]:
             "kicker": "Hermes Daily AI Brief",
             "summary": summary,
             "emailSummary": truncate(summary, 145),
-            "whyItMatters": "This is one of the vetted AI signals from Dustin’s Daily AI Briefing, split into its own card so the morning scan covers multiple AI developments instead of one giant article.",
+            "whyItMatters": why_matters("ai", {"title": title, "summary": summary}),
             "dataSignals": ai_data_signals(signal),
             "sourceLabel": ai_source_label(signal, published),
             "sourceUrl": source_url,
