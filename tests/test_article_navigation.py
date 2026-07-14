@@ -26,3 +26,12 @@ def test_newsroom_has_learning_page_renderer():
     assert "lessonText" not in source
     assert "lessonSections" not in source
     assert "concepts.map" not in source
+
+
+def test_ai_stories_use_the_same_article_cards_and_columns_as_every_other_section():
+    source = NEWSROOM.read_text()
+
+    assert "function DailyAiBriefCard" not in source
+    assert "article.id?.startsWith('ai-daily-')" not in source
+    assert "brief.id === 'ai' ? 'md:grid-cols-1' : 'md:grid-cols-2 xl:grid-cols-3'" not in source
+    assert 'className="grid gap-2 md:grid-cols-2 xl:grid-cols-3"' in source

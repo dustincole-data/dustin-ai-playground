@@ -40,8 +40,8 @@ GOOGLE_NEWS = "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=
 BRIEFS = [
     {
         "id": "ai",
-        "name": "AI / Analytics",
-        "headline": "AI & Analytics Brief",
+        "name": "AI",
+        "headline": "AI Brief",
         # The AI section is populated from the vetted Daily AI Briefing output,
         # not the old generic AI RSS/news-card pipeline.
         "queries": [],
@@ -1038,11 +1038,26 @@ def bullet_lines(lines: list[str]) -> list[str]:
 
 
 def ai_signal_title(signal: str) -> str:
-    text = re.sub(r"\s+Source:\s+https?://\S+.*$", "", signal)
+    text = markdown_to_plain_text(signal)
+    text = re.sub(r"\s+Source:\s+.*$", "", text)
     text = re.split(r"\s+—\s+credible because\s+|\s+Source:\s+", text, maxsplit=1)[0]
     text = re.sub(r"https?://\S+", "", text)
     text = re.sub(r"\s+", " ", text).strip(" -—.;")
     return truncate(text, 105)
+
+
+def markdown_to_plain_text(value: str) -> str:
+    """Flatten cron-output markdown so site cards match RSS story cards."""
+    value = re.sub(r"\[([^\]]+)\]\(https?://[^)\s]+\)", r"\1", value)
+    value = re.sub(r"(?:\*\*|__|`)", "", value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def ai_signal_source_url(signal: str) -> str:
+    source_match = re.search(r"\[Source:[^\]]*\]\((https?://[^)\s]+)\)", signal, re.IGNORECASE)
+    fallback_match = re.search(r"https?://\S+", signal)
+    match = source_match or fallback_match
+    return match.group(1 if source_match else 0).rstrip(").,;") if match else "https://dustincole-data.github.io/dustin-ai-playground/"
 
 
 def ai_source_label(signal: str, published: datetime) -> str:
@@ -1085,10 +1100,9 @@ def build_ai_signal_articles(response: str, source_file: Path) -> list[dict]:
     signals = bullet_lines(extract_numbered_section(response, 1))
     articles: list[dict] = []
     for idx, signal in enumerate(signals[:MAX_ITEMS_PER_BRIEF], start=1):
-        source_url_match = re.search(r"https?://\S+", signal)
-        source_url = source_url_match.group(0).rstrip(").,;") if source_url_match else "https://dustincole-data.github.io/dustin-ai-playground/"
+        source_url = ai_signal_source_url(signal)
         title = ai_signal_title(signal) or f"AI signal {idx}"
-        summary = re.sub(r"\s+", " ", signal).strip()
+        summary = markdown_to_plain_text(signal)
         articles.append({
             "id": f"ai-signal-{source_file.stem}-{idx}",
             "title": title,

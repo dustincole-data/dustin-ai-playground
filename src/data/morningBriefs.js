@@ -1,11 +1,11 @@
 export const briefTemplates = [
   {
     id: 'ai',
-    name: 'AI / Analytics',
+    name: 'AI',
     eyebrow: 'AI scan',
-    label: 'AI / Analytics',
-    headline: 'AI & Analytics Brief',
-    deck: 'Useful AI, analytics, data-platform, and automation updates without hype or long summaries.',
+    label: 'AI',
+    headline: 'AI Brief',
+    deck: 'Useful AI and automation updates without hype or long summaries.',
   },
   {
     id: 'energy',

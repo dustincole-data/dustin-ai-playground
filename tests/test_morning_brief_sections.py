@@ -37,6 +37,25 @@ def test_frontend_renders_all_six_morning_brief_sections():
         assert f"id: '{section_id}'" in source
 
 
+def test_ai_signal_cards_strip_markdown_from_daily_brief_bullets(tmp_path):
+    source_file = tmp_path / "daily-ai.md"
+    source_file.write_text("placeholder")
+    response = """Daily AI Briefing — Tuesday, July 14, 2026 ET
+
+1. Today's actual signal
+- **OfficeCLI Gains Traction**: A tool removes the [middleman](https://example.com/middleman) for reports. [Source: GitHub](https://github.com/example/officecli)
+
+2. Dustin relevance
+- Useful.
+"""
+
+    articles = briefs.build_ai_signal_articles(response, source_file)
+
+    assert articles[0]["title"] == "OfficeCLI Gains Traction: A tool removes the middleman for reports"
+    assert articles[0]["summary"] == "OfficeCLI Gains Traction: A tool removes the middleman for reports. Source: GitHub"
+    assert articles[0]["sourceUrl"] == "https://github.com/example/officecli"
+
+
 def test_broad_health_insurance_fallback_runs_only_when_no_humana_items(monkeypatch):
     brief = {
         "id": "humana",
