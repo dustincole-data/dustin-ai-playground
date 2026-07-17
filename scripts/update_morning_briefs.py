@@ -4,7 +4,7 @@
 Outputs public/data/morning-briefs.json. Only dated, source-linked items from
 the last LOOKBACK_HOURS are treated as news. If an OpenAI key is available
 (OPENAI_API_KEY env or ~/.openai/api_key), summaries, why-it-matters lines,
-glossaries, and learning pages are written by an LLM (gpt-5-mini by default);
+glossaries, and learning pages are written by an LLM (gpt-5.4-mini by default);
 without a key the script falls back to the original template text.
 """
 
@@ -40,7 +40,7 @@ USER_AGENT = "Mozilla/5.0 (compatible; DustinColeDataMorningBrief/1.0; +https://
 # Optional LLM enrichment (summaries, why-it-matters, glossary, learning page).
 # Key discovery: env var first, then the local key file. If neither exists the
 # script degrades to the original template-based text, so the cron never breaks.
-OPENAI_MODEL = os.environ.get("MORNING_BRIEF_LLM_MODEL", "gpt-5-mini")
+OPENAI_MODEL = os.environ.get("MORNING_BRIEF_LLM_MODEL", "gpt-5.4-mini")
 
 
 def load_openai_key() -> str:
