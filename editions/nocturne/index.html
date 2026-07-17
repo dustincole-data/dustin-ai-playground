@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Nocturne Dispatch — Dustin Cole's AI Newsroom</title>
+  <meta name="description" content="A newspaper printed for the hours when everyone is asleep. Six agent-compiled briefs from sourced signals — energy, AI, healthcare, analytics, Louisville." />
+  <meta property="og:title" content="The Nocturne Dispatch" />
+  <meta property="og:description" content="Dustin Cole's AI newsroom as a midnight supplement — set in gold on indigo, compiled while the city dreams." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dustincole-data.github.io/dustin-ai-playground/editions/nocturne/assets/moon-emblem.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127769;</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Cinzel:wght@400;500;600&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#briefs">Skip to the briefs</a>
+
+  <!-- aurora sky -->
+  <canvas id="skyCanvas" aria-hidden="true"></canvas>
+
+  <!-- ═══ Masthead ═══ -->
+  <header class="masthead-zone">
+    <p class="mast-date"><span id="mastDate">The Small Hours</span></p>
+    <div class="mast-ornament" aria-hidden="true">✦ &nbsp;❋&nbsp; ✦</div>
+    <h1 class="masthead">The Nocturne Dispatch</h1>
+    <p class="mast-sub">Printed while the city dreams &mdash; six briefs gathered from the signal sky</p>
+    <p class="mast-line">Dustin Cole &nbsp;·&nbsp; AI side project &nbsp;·&nbsp; Built from sourced signals</p>
+    <div class="mast-rule" aria-hidden="true"><span class="rule-line"></span><span class="rule-gem">◆</span><span class="rule-line"></span></div>
+  </header>
+
+  <!-- ═══ Emblem + invocation ═══ -->
+  <section class="invocation">
+    <figure class="emblem-wrap">
+      <img id="emblem" src="./assets/moon-emblem.png" alt="Gold engraving of a crescent moon with a serene face, surrounded by stars and a comet" width="1024" height="1024" />
+    </figure>
+    <div class="invocation-copy">
+      <h2 class="inv-title">While you slept, <em>the agents read everything</em></h2>
+      <p>A small side project where I use AI agents to keep a cleaner read on the things I already pay attention to: energy, practical AI, analytics, and work automation.</p>
+      <p>If you're interested in that same mix, follow along here. I'll keep adding the useful pieces, the weird experiments, and the parts that actually save time.</p>
+      <p class="inv-feed" id="feedLine">The night's collection is being fetched&hellip;</p>
+    </div>
+  </section>
+
+  <!-- ═══ The rite of reading ═══ -->
+  <section class="rite" aria-label="How to read it">
+    <h2 class="rite-title">The Rite of Reading</h2>
+    <ol class="rite-list">
+      <li><span class="rite-word">Today</span><span class="rite-body">Last-24-hour items first.</span></li>
+      <li><span class="rite-word">Sources</span><span class="rite-body">Original links kept close.</span></li>
+      <li><span class="rite-word">Glossary</span><span class="rite-body">Plain-language terms when needed.</span></li>
+    </ol>
+  </section>
+
+  <!-- ═══ Constellation nav (filters) ═══ -->
+  <nav class="constellations" id="constNav" aria-label="Sections of the dispatch">
+    <!-- injected -->
+  </nav>
+
+  <!-- ═══ Briefs ═══ -->
+  <main id="briefs" class="night-paper">
+    <div id="briefsRoot"></div>
+  </main>
+
+  <footer class="midnight-colophon">
+    <div class="mast-ornament" aria-hidden="true">✦ &nbsp;❋&nbsp; ✦</div>
+    <p>Empty sections stay empty &mdash; no generic trackers, no stale placeholder copy.</p>
+    <p>Every story keeps its original source within reach.</p>
+    <p class="colophon-fine">The Nocturne Dispatch is an edition of the <a href="../../">Dustin Cole AI Playground</a>.</p>
+  </footer>
+
+  <!-- ═══ Star chart overlay ═══ -->
+  <div class="starchart" id="starchart" role="dialog" aria-modal="true" aria-labelledby="scTitle" hidden>
+    <div class="starchart-backdrop" data-close></div>
+    <article class="starchart-panel">
+      <header class="starchart-head">
+        <p class="starchart-slug">Star Chart &mdash; plain language</p>
+        <button class="starchart-close" data-close aria-label="Close the star chart">Close ✕</button>
+      </header>
+      <h2 class="starchart-title" id="scTitle"></h2>
+      <div class="starchart-body" id="scBody"></div>
+    </article>
+  </div>
+
+  <script src="./vendor/gsap.min.js"></script>
+  <script src="./vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
