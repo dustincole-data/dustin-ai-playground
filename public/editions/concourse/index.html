@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Concourse — morning departures · Dustin Cole's AI newsroom</title>
+  <meta name="description" content="Today's news as a departure hall: six gates of signals — AI, energy, Humana, Kentucky healthcare, analytics, and Louisville — boarding nightly, compiled by agents for Dustin Cole." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='8' y='20' width='84' height='60' rx='8' fill='%23222633'/><rect x='18' y='34' width='40' height='10' fill='%23f2c744'/><rect x='18' y='52' width='56' height='10' fill='%23f2c744'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,800;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#gates">Skip to the briefs</a>
+
+  <!-- ═══ Hall header ═══ -->
+  <header class="hall">
+    <div class="hall-inner">
+      <p class="hall-name">Concourse<span class="hall-tick" aria-hidden="true"></span></p>
+      <p class="hall-line">Morning departures from the news — six gates, boarding nightly.</p>
+      <p class="hall-dim">An AI side project by Dustin Cole · Louisville, Ky. · <span id="hallDate">—</span> · compiled <span id="hallStamp">—</span></p>
+    </div>
+    <div class="hall-clock" aria-label="Local time">
+      <span id="clockTime">--:--</span>
+      <span class="clock-tz">Louisville / ET</span>
+    </div>
+  </header>
+
+  <!-- ═══ Departure board ═══ -->
+  <section class="board-wrap" aria-label="Departure board listing this morning's six briefs">
+    <div class="board" id="board" role="table" aria-label="This morning's departures">
+      <div class="board-head" role="row">
+        <span role="columnheader">Gate</span>
+        <span role="columnheader">Destination</span>
+        <span role="columnheader" class="bh-lead">Now boarding — lead story</span>
+        <span role="columnheader">Status</span>
+      </div>
+      <!-- rows injected -->
+    </div>
+    <p class="board-note" id="boardNote"><span class="note-swipe">Swipe the board sideways for the full lines. </span>Tap a row to walk to its gate. The board reshuffles every morning at 5 a.m.</p>
+  </section>
+
+  <!-- ═══ Pylon + intro ═══ -->
+  <section class="atrium">
+    <div class="atrium-copy">
+      <h1 class="atrium-head">Six gates.<br />No layovers.</h1>
+      <p class="atrium-sub">Every night, agents sweep the wire and stage <span id="atriumCount">—</span> sourced stories for the morning: full summaries you can finish right here, plain-language glossaries at every gate, and the original source one click away.</p>
+      <p class="atrium-note">The pylon rotates through what's boarding now.</p>
+    </div>
+    <div class="atrium-stage">
+      <canvas id="pylon" aria-label="A rotating three-sided departure pylon cycling through this morning's lead stories"></canvas>
+    </div>
+  </section>
+
+  <!-- ═══ Gates (injected) ═══ -->
+  <main id="gates"></main>
+
+  <div class="wire-error" id="wireError" hidden>
+    <p><strong>All departures delayed.</strong> The live briefs could not be loaded. The newsroom itself is at <a href="../../">dustin-ai-playground</a>.</p>
+  </div>
+
+  <!-- ═══ Foot ═══ -->
+  <footer class="foot">
+    <p class="foot-name">Concourse</p>
+    <p>A departures edition of <a href="../../">Dustin Cole's AI newsroom</a> · Other editions at <a href="../">the newsstand</a></p>
+    <p class="foot-dim">All gates board on time. The reader provides the destination.</p>
+  </footer>
+
+  <script src="./vendor/gsap.min.js"></script>
+  <script src="./vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

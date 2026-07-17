@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Generate DustinColeData Morning Briefs from free RSS/Google News feeds.
 
-No paid API keys. Outputs public/data/morning-briefs.json.
-Only dated, source-linked items from the last LOOKBACK_HOURS are treated as news.
+Outputs public/data/morning-briefs.json. Only dated, source-linked items from
+the last LOOKBACK_HOURS are treated as news. If an OpenAI key is available
+(OPENAI_API_KEY env or ~/.openai/api_key), summaries, why-it-matters lines,
+glossaries, and learning pages are written by an LLM (gpt-5-mini by default);
+without a key the script falls back to the original template text.
 """
 
 from __future__ import annotations
@@ -29,7 +32,32 @@ MAX_ITEMS_PER_BRIEF = int(os.environ.get("MORNING_BRIEF_MAX_ITEMS", "5"))
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "public" / "data" / "morning-briefs.json"
 AI_BRIEF_OUTPUT_DIR = Path("/home/hermes/.hermes/cron/output/70407e2b6f3b")
+# A vetted Daily AI Briefing older than this is treated as stale and the AI
+# section falls back to the trusted-source RSS track instead of re-serving it.
+AI_BRIEF_MAX_AGE_HOURS = int(os.environ.get("MORNING_BRIEF_AI_MAX_AGE_HOURS", "36"))
 USER_AGENT = "Mozilla/5.0 (compatible; DustinColeDataMorningBrief/1.0; +https://dustincoledata.com)"
+
+# Optional LLM enrichment (summaries, why-it-matters, glossary, learning page).
+# Key discovery: env var first, then the local key file. If neither exists the
+# script degrades to the original template-based text, so the cron never breaks.
+OPENAI_MODEL = os.environ.get("MORNING_BRIEF_LLM_MODEL", "gpt-5-mini")
+
+
+def load_openai_key() -> str:
+    key = os.environ.get("OPENAI_API_KEY", "").strip()
+    if key:
+        return key
+    key_file = Path.home() / ".openai" / "api_key"
+    try:
+        if key_file.exists():
+            return key_file.read_text(encoding="utf-8").strip()
+    except Exception:
+        pass
+    return ""
+
+
+OPENAI_KEY = load_openai_key()
+LLM_STATS = {"ok": 0, "fail": 0}
 
 NOW = datetime.now(timezone.utc)
 CUTOFF = NOW - timedelta(hours=LOOKBACK_HOURS)
@@ -42,10 +70,18 @@ BRIEFS = [
         "id": "ai",
         "name": "AI",
         "headline": "AI Brief",
-        # The AI section is populated from the vetted Daily AI Briefing output,
-        # not the old generic AI RSS/news-card pipeline.
-        "queries": [],
-        "fallbackQueries": [],
+        # The AI section leads with the vetted Daily AI Briefing output when it
+        # is fresh, then tops up from this trusted-source RSS track so the
+        # section never goes stale if the briefing cron misses a day.
+        "queries": [
+            '(OpenAI OR Anthropic OR "Google DeepMind" OR Claude OR Gemini OR ChatGPT) (model OR launch OR release OR agent OR update OR pricing) when:1d',
+            '("AI agent" OR "AI agents" OR agentic OR "enterprise AI" OR "AI coding") (workflow OR tool OR platform OR enterprise OR developer) when:1d',
+            '("artificial intelligence" OR "generative AI") (regulation OR policy OR analytics OR governance OR adoption) when:1d',
+        ],
+        "fallbackQueries": [
+            '(OpenAI OR Anthropic OR "Google DeepMind" OR Claude OR Gemini OR ChatGPT) (model OR launch OR release OR agent) when:7d',
+            '("AI agent" OR agentic OR "enterprise AI") when:7d',
+        ],
     },
     {
         "id": "energy",
@@ -181,6 +217,9 @@ AI_SOURCE_ALLOW_HINTS = [
     "The Verge", "TechCrunch", "VentureBeat", "MIT Technology Review", "ZDNET", "Ars Technica",
     "Wired", "Microsoft", "Google", "OpenAI", "Anthropic", "Snowflake", "Databricks",
     "InfoWorld", "CIO", "SiliconANGLE", "Analytics India Magazine", "The Decoder", "ZAWYA",
+    "Reuters", "Bloomberg", "CNBC", "Axios", "The Register", "Fortune", "Semafor",
+    "Business Insider", "The Information", "Engadget", "Fast Company", "IEEE Spectrum",
+    "Tom's Hardware", "Nieman Lab", "AP News", "Associated Press",
 ]
 
 SECTION_TERMS = {
@@ -436,6 +475,8 @@ def story_fit(brief_id: str, item: dict) -> int:
             ("ai", 2), ("agent", 4), ("analytics", 5), ("data", 2),
             ("snowflake", 4), ("power bi", 4), ("governance", 4),
             ("automation", 3), ("openai", 3), ("microsoft", 2),
+            ("anthropic", 3), ("claude", 3), ("gemini", 3), ("chatgpt", 3),
+            ("model", 2), ("launch", 2), ("release", 2),
         ]:
             if term in text:
                 score += points
@@ -918,6 +959,112 @@ def article_learning_page(brief_id: str, item: dict, source_label: str = "") -> 
     }
 
 
+LLM_SYSTEM_PROMPT = """You write morning-brief cards for a personal news digest. The reader is a data/analytics professional in Louisville, Kentucky who wants to understand each story fully from the card alone, clicking through only for fine detail.
+
+For the article provided, return strict JSON with exactly these keys:
+
+"summary": 3-5 sentences, 60-110 words, plain English. State concretely what happened or what is being reported (names, numbers, decisions), then what it means for this section's area when that adds real understanding. Never start with "The article" or "This article". No hype, no filler.
+
+"why_it_matters": one sentence beginning "This matters because", stating the practical impact for this area. Make it a distinct point, not a repeat of a summary sentence.
+
+"glossary": array of 0-4 objects {"term", "definition", "why_it_matters"} for terms in THIS story's field that an ordinary person off the street would likely not know (jargon, acronyms, regulatory or technical terms). One-sentence plain definitions. Skip terms everyone knows; return [] if the story has no such terms.
+
+"explanation": 2-3 sentences of teaching: what kind of story this is, what to pay attention to when reading the source, and what would change the interpretation.
+
+Base everything ONLY on the provided title, description, and source. If the description is thin, summarize cautiously without inventing specifics — say what is known rather than padding."""
+
+
+def llm_enrich(section_name: str, item: dict, source_label: str) -> dict | None:
+    """One structured LLM call per article. Returns None on any failure."""
+    if not OPENAI_KEY:
+        return None
+    article_payload = json.dumps({
+        "section": section_name,
+        "title": item.get("title", ""),
+        "source": source_label,
+        "published": item.get("publishedLabel", ""),
+        "description": clean_text(item.get("summary", ""))[:2200],
+    }, ensure_ascii=False)
+    body = json.dumps({
+        "model": OPENAI_MODEL,
+        "reasoning_effort": "low",
+        "response_format": {"type": "json_object"},
+        "max_completion_tokens": 1600,
+        "messages": [
+            {"role": "system", "content": LLM_SYSTEM_PROMPT},
+            {"role": "user", "content": article_payload},
+        ],
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        "https://api.openai.com/v1/chat/completions",
+        data=body,
+        headers={
+            "Authorization": f"Bearer {OPENAI_KEY}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    for attempt in range(2):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            content = data["choices"][0]["message"]["content"]
+            parsed = json.loads(content)
+            summary = clean_text(parsed.get("summary", ""))
+            if len(summary.split()) < 25:
+                raise ValueError("summary too short")
+            glossary = []
+            for entry in parsed.get("glossary", [])[:4]:
+                term = clean_text(entry.get("term", ""))
+                definition = clean_text(entry.get("definition", ""))
+                if term and definition:
+                    glossary.append({
+                        "term": term,
+                        "definition": definition,
+                        "whyItMatters": clean_text(entry.get("why_it_matters", "")) or
+                            "This term appears in the story, so knowing it helps you read the source without getting lost in jargon.",
+                    })
+            LLM_STATS["ok"] += 1
+            return {
+                "summary": summary,
+                "whyItMatters": clean_text(parsed.get("why_it_matters", "")),
+                "glossary": glossary,
+                "explanation": clean_text(parsed.get("explanation", "")),
+            }
+        except Exception:
+            if attempt == 0:
+                time.sleep(3)
+                continue
+            LLM_STATS["fail"] += 1
+            return None
+    return None
+
+
+def enriched_fields(brief_id: str, brief_name: str, item: dict, source_label: str) -> dict:
+    """Summary/why/glossary/learning for one card: LLM first, templates as fallback."""
+    enrich = llm_enrich(brief_name, item, source_label)
+    if enrich:
+        learning_glossary = enrich["glossary"] or [
+            {**concept} for concept in top_up_concepts(brief_id, [], minimum=2)
+        ]
+        return {
+            "summary": enrich["summary"],
+            "whyItMatters": enrich["whyItMatters"] or why_matters(brief_id, item),
+            "glossary": [{"term": g["term"], "definition": g["definition"]} for g in enrich["glossary"]],
+            "learningPage": {
+                "title": "What this means",
+                "explanationText": enrich["explanation"] or article_learning_page(brief_id, item, source_label)["explanationText"],
+                "glossary": learning_glossary,
+            },
+        }
+    return {
+        "summary": morning_brief_summary(brief_id, item, source_label),
+        "whyItMatters": why_matters(brief_id, item),
+        "glossary": glossary_terms(item),
+        "learningPage": article_learning_page(brief_id, item, source_label),
+    }
+
+
 def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
     seen: set[str] = set()
     articles: list[dict] = []
@@ -975,21 +1122,21 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
         summary_item = item
         if page_description and len(page_description.split()) > len(clean_text(item.get("summary", "")).split()):
             summary_item = {**item, "summary": page_description}
-        summary = morning_brief_summary(brief["id"], summary_item, source_label)
+        fields = enriched_fields(brief["id"], brief["name"], summary_item, source_label)
         output.append({
             "id": f"{brief['id']}-{i}-{abs(hash(item['url'])) % 100000}",
             "title": item["title"],
             "kicker": source_label,
-            "summary": summary,
+            "summary": fields["summary"],
             "emailSummary": email_brief_summary(brief["id"], summary_item, source_label),
-            "whyItMatters": why_matters(brief["id"], item),
+            "whyItMatters": fields["whyItMatters"],
             "dataSignals": data_signals(brief["id"], item),
             "sourceLabel": f"{source_label} · {item['publishedLabel']}",
             "sourceUrl": source_url,
             "googleNewsUrl": item["url"] if source_url != item["url"] else None,
             "publishedAt": item["publishedAt"],
-            "glossary": glossary_terms(item),
-            "learningPage": article_learning_page(brief["id"], summary_item, source_label),
+            "glossary": fields["glossary"],
+            "learningPage": fields["learningPage"],
         })
     return output, used_fallback, errors
 
@@ -1103,26 +1250,37 @@ def build_ai_signal_articles(response: str, source_file: Path) -> list[dict]:
         source_url = ai_signal_source_url(signal)
         title = ai_signal_title(signal) or f"AI signal {idx}"
         summary = markdown_to_plain_text(signal)
+        signal_item = {
+            "title": title,
+            "summary": summary,
+            "publishedLabel": local_label(published),
+        }
+        fields = enriched_fields("ai", "AI", signal_item, "Hermes Daily AI Brief")
         articles.append({
             "id": f"ai-signal-{source_file.stem}-{idx}",
             "title": title,
             "kicker": "Hermes Daily AI Brief",
-            "summary": summary,
+            "summary": fields["summary"],
             "emailSummary": truncate(summary, 145),
-            "whyItMatters": why_matters("ai", {"title": title, "summary": summary}),
+            "whyItMatters": fields["whyItMatters"],
             "dataSignals": ai_data_signals(signal),
             "sourceLabel": ai_source_label(signal, published),
             "sourceUrl": source_url,
             "googleNewsUrl": None,
             "publishedAt": published.isoformat(),
-            "glossary": glossary_terms({"title": title, "summary": summary}),
-            "learningPage": article_learning_page("ai", {"title": title, "summary": summary}, "Hermes Daily AI Brief"),
+            "glossary": fields["glossary"],
+            "learningPage": fields["learningPage"],
         })
     return articles
 
 
 def latest_ai_daily_brief() -> tuple[list[dict], bool, list[str]]:
-    """Use the vetted Daily AI Briefing output and expose each signal as a card."""
+    """Use the vetted Daily AI Briefing output and expose each signal as a card.
+
+    Only briefings younger than AI_BRIEF_MAX_AGE_HOURS qualify; a stale briefing
+    is reported as a warning so the RSS track takes over instead of the site
+    silently re-serving week-old AI cards.
+    """
     if not AI_BRIEF_OUTPUT_DIR.exists():
         return [], False, [f"AI daily brief output directory missing: {AI_BRIEF_OUTPUT_DIR}"]
 
@@ -1130,8 +1288,17 @@ def latest_ai_daily_brief() -> tuple[list[dict], bool, list[str]]:
     if not files:
         return [], False, [f"No AI daily brief outputs found in {AI_BRIEF_OUTPUT_DIR}"]
 
+    age_cutoff = NOW - timedelta(hours=AI_BRIEF_MAX_AGE_HOURS)
     skipped_status_files: list[str] = []
+    stale_notes: list[str] = []
     for source_file in files:
+        modified = datetime.fromtimestamp(source_file.stat().st_mtime, timezone.utc)
+        if modified < age_cutoff:
+            stale_notes.append(
+                f"AI daily briefing is stale (newest usable candidate {source_file.name} from "
+                f"{modified.date()}); using the RSS track instead."
+            )
+            break
         text = source_file.read_text(encoding="utf-8")
         response = extract_ai_brief_response(text)
         if not response:
@@ -1143,8 +1310,11 @@ def latest_ai_daily_brief() -> tuple[list[dict], bool, list[str]]:
             return articles, False, []
         skipped_status_files.append(source_file.name)
 
-    skipped = ", ".join(skipped_status_files[:5])
-    return [], False, [f"No usable AI daily briefing signals found in {AI_BRIEF_OUTPUT_DIR}; skipped files: {skipped}"]
+    notes = stale_notes or [
+        f"No usable fresh AI daily briefing signals found in {AI_BRIEF_OUTPUT_DIR}; "
+        f"skipped files: {', '.join(skipped_status_files[:5])}"
+    ]
+    return [], False, notes
 
 
 def main() -> int:
@@ -1158,7 +1328,20 @@ def main() -> int:
     }
     for brief in BRIEFS:
         if brief["id"] == "ai":
-            articles, used_fallback, errors = latest_ai_daily_brief()
+            vetted, used_fallback, errors = latest_ai_daily_brief()
+            articles = list(vetted)
+            if len(articles) < MAX_ITEMS_PER_BRIEF:
+                rss_articles, rss_fallback, rss_errors = build_articles(brief)
+                errors.extend(rss_errors)
+                used_fallback = used_fallback or (not vetted and rss_fallback)
+                seen_titles = {normalized_key(a["title"]) for a in articles}
+                for article in rss_articles:
+                    if len(articles) >= MAX_ITEMS_PER_BRIEF:
+                        break
+                    if normalized_key(article["title"]) in seen_titles:
+                        continue
+                    seen_titles.add(normalized_key(article["title"]))
+                    articles.append(article)
         else:
             articles, used_fallback, errors = build_articles(brief)
         generated["errors"].extend(errors)
@@ -1171,6 +1354,10 @@ def main() -> int:
 
     OUT.write_text(json.dumps(generated, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {OUT}")
+    if OPENAI_KEY:
+        print(f"LLM enrichment ({OPENAI_MODEL}): {LLM_STATS['ok']} ok, {LLM_STATS['fail']} fell back to templates")
+    else:
+        print("LLM enrichment: no API key found, template text used")
     for brief in generated["briefs"]:
         print(f"{brief['id']}: {len(brief['articles'])} articles — {brief['updatedLabel']}")
     if generated["errors"]:

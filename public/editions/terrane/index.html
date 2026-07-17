@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terrane — the morning, surveyed · Dustin Cole's AI newsroom</title>
+  <meta name="description" content="Today's news mapped as terrain: six quadrangles of signals — AI, energy, Humana, Kentucky healthcare, analytics, and Louisville — surveyed nightly by agents for Dustin Cole." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M14 78 L40 26 L58 60 L70 44 L86 78 Z' fill='none' stroke='%232e4d3f' stroke-width='7'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300..900;1,400..700&family=Chivo+Mono:wght@400;500&family=STIX+Two+Text:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#quads">Skip to the briefs</a>
+
+  <div class="sheet">
+    <!-- ═══ Map-sheet header ═══ -->
+    <header class="plate">
+      <div class="plate-row">
+        <h1 class="plate-name">Terrane</h1>
+        <div class="plate-block">
+          <p class="plate-title">Daily signal survey · Louisville quadrangle</p>
+          <p class="plate-sub">Six fields of attention mapped nightly by agents — an AI side project by Dustin Cole.</p>
+        </div>
+        <dl class="plate-facts">
+          <div><dt>Sheet</dt><dd id="sheetNo">—</dd></div>
+          <div><dt>Surveyed</dt><dd id="sheetDate">—</dd></div>
+          <div><dt>Compiled</dt><dd id="sheetStamp">—</dd></div>
+          <div><dt>Datum</dt><dd>Louisville, Ky. · 38.25° N, 85.76° W</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- ═══ Relief hero ═══ -->
+    <section class="relief" aria-label="A three-dimensional terrain model where each ridge is one of this morning's six briefs; taller ridges carry more stories">
+      <canvas id="terrain"></canvas>
+      <div class="relief-panel">
+        <h2 class="relief-head">Today's news,<br />read as elevation.</h2>
+        <p class="relief-sub">Each ridge is one brief; height follows this morning's story count — <span id="reliefTotal">—</span> sourced signals in all. Touch a summit marker to travel to its quadrangle.</p>
+        <p class="relief-note" id="terrainCaption">Relief exaggerated for legibility. The terrain regenerates every morning.</p>
+      </div>
+      <div class="relief-labels" id="reliefLabels" aria-hidden="true"></div>
+    </section>
+
+    <!-- ═══ Survey index strip ═══ -->
+    <nav class="index-strip" id="indexStrip" aria-label="Sections"></nav>
+
+    <!-- ═══ Quadrangles (injected) ═══ -->
+    <main id="quads"></main>
+
+    <div class="wire-error" id="wireError" hidden>
+      <p><strong>Blank sheet.</strong> The live briefs could not be loaded. The newsroom itself is at <a href="../../">dustin-ai-playground</a>.</p>
+    </div>
+
+    <!-- ═══ Foot ═══ -->
+    <footer class="foot">
+      <p class="foot-name">Terrane</p>
+      <p>A surveyed edition of <a href="../../">Dustin Cole's AI newsroom</a> · Other editions at <a href="../">the newsstand</a></p>
+      <p class="foot-dim">Every map is an argument about what deserves attention.</p>
+    </footer>
+  </div>
+
+  <script src="./vendor/gsap.min.js"></script>
+  <script src="./vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
