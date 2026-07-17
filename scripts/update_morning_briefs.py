@@ -1162,26 +1162,42 @@ def extract_ai_brief_response(text: str) -> str:
 
 
 def extract_numbered_section(response: str, section_number: int) -> list[str]:
-    """Return non-empty lines from a numbered section of the Daily AI Briefing."""
+    """Return non-empty lines from a numbered section despite harmless Markdown variants."""
     lines = response.splitlines()
-    start_pattern = re.compile(rf"^{section_number}\.\s+")
-    next_pattern = re.compile(r"^\d+\.\s+")
+    section_pattern = re.compile(r"^#{0,6}\s*(?:\*\*)?(\d+)\.\s+")
     inside = False
     section_lines: list[str] = []
     for raw_line in lines:
         line = raw_line.strip()
-        if start_pattern.match(line):
-            inside = True
-            continue
-        if inside and next_pattern.match(line):
-            break
+        match = section_pattern.match(line)
+        if match:
+            if inside and int(match.group(1)) != section_number:
+                break
+            if int(match.group(1)) == section_number:
+                inside = True
+                continue
         if inside and line:
             section_lines.append(line)
     return section_lines
 
 
-def bullet_lines(lines: list[str]) -> list[str]:
-    return [line.removeprefix("- ").strip() for line in lines if line.startswith("- ")]
+def ai_signal_blocks(lines: list[str]) -> list[str]:
+    """Extract 2–3 signal blocks from old bullet or newer bold-heading brief formats."""
+    blocks: list[str] = []
+    current: list[str] = []
+    for line in lines:
+        is_heading = line.startswith("**") and line.endswith("**")
+        if is_heading:
+            if current:
+                blocks.append("\n".join(current))
+            current = [line]
+        elif current:
+            current.append(line)
+        elif line.startswith("- "):
+            blocks.append(line.removeprefix("- ").strip())
+    if current:
+        blocks.append("\n".join(current))
+    return blocks
 
 
 def ai_signal_title(signal: str) -> str:
@@ -1244,7 +1260,7 @@ def build_ai_signal_articles(response: str, source_file: Path) -> list[dict]:
     already has 2–3 vetted signals; expose those as separate articles/cards.
     """
     published = datetime.fromtimestamp(source_file.stat().st_mtime, timezone.utc)
-    signals = bullet_lines(extract_numbered_section(response, 1))
+    signals = ai_signal_blocks(extract_numbered_section(response, 1))
     articles: list[dict] = []
     for idx, signal in enumerate(signals[:MAX_ITEMS_PER_BRIEF], start=1):
         source_url = ai_signal_source_url(signal)
