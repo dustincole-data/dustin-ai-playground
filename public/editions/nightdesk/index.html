@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Night Desk — Dustin Cole's AI Newsroom</title>
+  <meta name="description" content="The overnight wire room. Six agent-compiled briefs from sourced signals — energy, AI, healthcare, analytics, Louisville — collected while the city sleeps." />
+  <meta property="og:title" content="The Night Desk" />
+  <meta property="og:description" content="Dustin Cole's AI newsroom as an overnight wire room. Agents read the world's feeds; the desk prints what qualified." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128225;</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spline+Sans+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#wirelog">Skip to the wire log</a>
+
+  <!-- ═══ Desk status bar ═══ -->
+  <header class="statusbar" role="banner">
+    <span class="lamp" id="feedLamp" aria-hidden="true"></span>
+    <span class="status-name">NIGHT DESK</span>
+    <span class="status-item status-owner">DUSTIN COLE · AI SIDE PROJECT · BUILT FROM SOURCED SIGNALS</span>
+    <span class="status-item status-clock"><span id="clockET">--:--:--</span> ET&ensp;/&ensp;<span id="clockUTC">--:--:--</span> UTC</span>
+  </header>
+
+  <!-- ═══ Hero: globe + title ═══ -->
+  <section class="hero">
+    <canvas id="globeCanvas" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <p class="hero-slug" id="heroSlug">URGENT // OVERNIGHT COLLECTION // LOUISVILLE DESK</p>
+      <h1 class="hero-title">THE<br/>NIGHT<br/>DESK</h1>
+      <p class="hero-standfirst">
+        Agents read the wires all night — energy, practical AI, analytics, and work automation —
+        so the morning brief is already sorted when the city wakes up.
+      </p>
+      <p class="hero-typed"><span class="typed-label">INCOMING&nbsp;</span><span id="typedWire"></span><span class="caret" aria-hidden="true"></span></p>
+      <div class="hero-meta">
+        <span id="compiledLine" class="mono">FEED: CONNECTING…</span>
+        <span class="mono">LOOKBACK: <span id="lookbackLine">24H</span></span>
+      </div>
+    </div>
+    <div class="hero-fade" aria-hidden="true"></div>
+  </section>
+
+  <!-- ═══ Standing orders (what this is + how to read it) ═══ -->
+  <section class="orders">
+    <div class="orders-grid">
+      <article class="orders-memo">
+        <h2 class="orders-title">Standing orders</h2>
+        <p>A small side project where I use AI agents to keep a cleaner read on the things I already pay attention to: energy, practical AI, analytics, and work automation.</p>
+        <p>If you're interested in that same mix, follow along here. I'll keep adding the useful pieces, the weird experiments, and the parts that actually save time.</p>
+      </article>
+      <dl class="orders-protocol" aria-label="How to read it">
+        <div class="protocol-row"><dt>TODAY</dt><dd>Last-24-hour items first.</dd></div>
+        <div class="protocol-row"><dt>SOURCES</dt><dd>Original links kept close.</dd></div>
+        <div class="protocol-row"><dt>GLOSSARY</dt><dd>Plain-language terms when needed.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ═══ Wire log ═══ -->
+  <main class="deck" id="wirelog">
+    <nav class="channels" id="channelNav" aria-label="Wire channels">
+      <p class="channels-label mono">// CHANNELS</p>
+      <!-- injected -->
+    </nav>
+    <div class="stream" id="streamRoot" aria-live="polite">
+      <!-- injected -->
+    </div>
+  </main>
+
+  <footer class="deskfoot">
+    <p class="mono">EMPTY CHANNELS STAY EMPTY — NO GENERIC TRACKERS, NO STALE PLACEHOLDER COPY.</p>
+    <p class="mono dim">EVERY DISPATCH LINKS TO ITS ORIGINAL SOURCE. THE NIGHT DESK IS AN EDITION OF THE <a href="../../">DUSTIN COLE AI PLAYGROUND</a>.</p>
+  </footer>
+
+  <!-- ═══ Desk briefing overlay ═══ -->
+  <div class="briefing" id="briefing" role="dialog" aria-modal="true" aria-labelledby="brTitle" hidden>
+    <div class="briefing-backdrop" data-close></div>
+    <article class="briefing-panel">
+      <header class="briefing-head">
+        <p class="mono briefing-slug">DESK BRIEFING // PLAIN LANGUAGE</p>
+        <button class="briefing-close mono" data-close aria-label="Close the briefing">ESC ✕</button>
+      </header>
+      <h2 class="briefing-title" id="brTitle"></h2>
+      <div class="briefing-body" id="brBody"></div>
+    </article>
+  </div>
+
+  <script src="./vendor/gsap.min.js"></script>
+  <script src="./vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

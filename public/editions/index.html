@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Newsstand — three editions of Dustin Cole's AI newsroom</title>
+  <meta name="description" content="One newsroom, three papers. The Morning Ledger, The Night Desk, and The Nocturne Dispatch — three redesigns of Dustin Cole's agent-compiled morning briefs." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128478;</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,500&family=Anton&family=Spline+Sans+Mono:wght@400;600&family=Italiana&family=Cinzel:wght@500&family=Archivo:wght@400;600&display=swap" />
+  <style>
+    :root {
+      --ink: oklch(20% 0.01 270);
+      --paper: oklch(96% 0.002 106);
+      --seal: oklch(45% 0.155 24);
+      --night: oklch(15.5% 0.02 262);
+      --amber: oklch(78% 0.15 70);
+      --violet: oklch(18% 0.045 305);
+      --gold: oklch(80% 0.11 85);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100dvh;
+      display: flex; flex-direction: column;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: "Archivo", system-ui, sans-serif;
+    }
+    .stand-head {
+      text-align: center;
+      padding: clamp(1.6rem, 4vw, 3rem) 1rem 1.4rem;
+    }
+    .stand-head h1 {
+      font-family: "Bodoni Moda", serif;
+      font-weight: 800;
+      font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+      letter-spacing: -0.01em;
+    }
+    .stand-head p {
+      margin-top: 0.55rem;
+      font-size: clamp(0.82rem, 1.6vw, 0.95rem);
+      color: oklch(78% 0.005 270);
+    }
+    .stand-head .ident {
+      margin-top: 0.7rem;
+      font-family: "Spline Sans Mono", monospace;
+      font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: oklch(62% 0.008 270);
+    }
+    .rack {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      min-height: 62dvh;
+    }
+    .paper-door {
+      position: relative;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      padding: clamp(1.6rem, 4vw, 3rem) clamp(1rem, 2.5vw, 2rem);
+      overflow: hidden;
+      transition: flex-grow 0.4s cubic-bezier(0.22, 1, 0.36, 1), filter 0.3s ease-out;
+      filter: brightness(0.96);
+      text-align: center;
+    }
+    .paper-door:hover, .paper-door:focus-visible { filter: brightness(1.05); }
+    .paper-door:focus-visible { outline: 3px solid var(--amber); outline-offset: -3px; }
+    .door-eyebrow {
+      font-family: "Spline Sans Mono", monospace;
+      font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase;
+      opacity: 0.75;
+    }
+    .door-title { line-height: 1.02; text-wrap: balance; }
+    .door-desc {
+      max-width: 30ch;
+      font-size: 0.86rem; line-height: 1.55;
+      opacity: 0.8;
+    }
+    .door-cta {
+      margin-top: 0.4rem;
+      font-family: "Spline Sans Mono", monospace;
+      font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase;
+      border: 1px solid currentColor;
+      padding: 0.5rem 1rem;
+      opacity: 0.9;
+      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    }
+    .paper-door:hover .door-cta { opacity: 1; transform: translateY(-2px); }
+
+    .door-ledger {
+      background:
+        repeating-linear-gradient(0deg, transparent 0 26px, oklch(20% 0.01 270 / 0.05) 26px 27px),
+        var(--paper);
+      color: var(--ink);
+    }
+    .door-ledger .door-eyebrow { color: var(--seal); }
+    .door-ledger .door-title {
+      font-family: "UnifrakturMaguntia", serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 3.6vw, 3.1rem);
+    }
+    .door-nightdesk {
+      background:
+        radial-gradient(120% 90% at 50% 0%, oklch(22% 0.03 258) 0%, var(--night) 60%),
+        var(--night);
+      color: oklch(93% 0.008 250);
+    }
+    .door-nightdesk .door-eyebrow { color: var(--amber); }
+    .door-nightdesk .door-title {
+      font-family: "Anton", sans-serif;
+      font-size: clamp(2rem, 3.6vw, 3.1rem);
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+    .door-nocturne {
+      background:
+        radial-gradient(100% 80% at 50% 100%, oklch(24% 0.06 310) 0%, var(--violet) 65%),
+        var(--violet);
+      color: oklch(93% 0.012 85);
+    }
+    .door-nocturne .door-eyebrow { font-family: "Cinzel", serif; color: var(--gold); letter-spacing: 0.3em; }
+    .door-nocturne .door-title {
+      font-family: "Italiana", serif;
+      font-weight: 400;
+      font-size: clamp(2.1rem, 3.8vw, 3.3rem);
+    }
+    .stand-foot {
+      text-align: center;
+      padding: 1.1rem 1rem 1.5rem;
+      font-family: "Spline Sans Mono", monospace;
+      font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: oklch(60% 0.008 270);
+    }
+    .stand-foot a { color: oklch(78% 0.005 270); }
+    @media (max-width: 820px) {
+      .rack { grid-template-columns: 1fr; }
+      .paper-door { min-height: 30dvh; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0.001s !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="stand-head">
+    <h1>The Newsstand</h1>
+    <p>One newsroom, three papers. Same live briefs, compiled nightly by agents — dressed for three different hours of the day.</p>
+    <p class="ident">Dustin Cole · AI side project · Built from sourced signals</p>
+  </header>
+
+  <main class="rack">
+    <a class="paper-door door-ledger" href="./ledger/">
+      <span class="door-eyebrow">6:00 AM — Hot metal</span>
+      <span class="door-title">The Morning Ledger</span>
+      <span class="door-desc">A 1905 broadsheet set in lead: blackletter masthead, column rules, and a 3D press printing today's actual headlines.</span>
+      <span class="door-cta">Read the edition</span>
+    </a>
+    <a class="paper-door door-nightdesk" href="./nightdesk/">
+      <span class="door-eyebrow">4:51 AM — On the wire</span>
+      <span class="door-title">The Night Desk</span>
+      <span class="door-desc">The overnight wire room: signal amber on blue-black, live clocks, and dispatches arcing across a particle globe into Louisville.</span>
+      <span class="door-cta">Open the desk</span>
+    </a>
+    <a class="paper-door door-nocturne" href="./nocturne/">
+      <span class="door-eyebrow">Midnight — The supplement</span>
+      <span class="door-title">The Nocturne Dispatch</span>
+      <span class="door-desc">A gold-engraved midnight paper beneath a living aurora — the same briefs, printed while the city dreams.</span>
+      <span class="door-cta">Enter the night</span>
+    </a>
+  </main>
+
+  <footer class="stand-foot">
+    Three redesigns of the <a href="../">Dustin Cole AI Playground newsroom</a> · every story keeps its original source
+  </footer>
+</body>
+</html>

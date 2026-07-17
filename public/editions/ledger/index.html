@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Morning Ledger — Dustin Cole's AI Newsroom</title>
+  <meta name="description" content="Dustin Cole's AI newsroom, set in hot metal. Six morning briefs compiled by agents from sourced signals — energy, AI, healthcare, analytics, Louisville." />
+  <meta property="og:title" content="The Morning Ledger" />
+  <meta property="og:description" content="Dustin Cole's AI newsroom, set in hot metal. Six agent-compiled morning briefs from sourced signals." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dustincole-data.github.io/dustin-ai-playground/editions/ledger/assets/press-engraving.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128240;</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#briefs">Skip to the briefs</a>
+
+  <!-- ═══ Telegraph ticker ═══ -->
+  <div class="wire" aria-hidden="true">
+    <span class="wire-label">The Wire</span>
+    <div class="wire-window"><div class="wire-track" id="wireTrack"><span class="wire-run">RECEIVING TODAY'S DISPATCHES&nbsp;&nbsp;·&nbsp;&nbsp;STAND BY&nbsp;&nbsp;·&nbsp;&nbsp;</span></div></div>
+  </div>
+
+  <!-- ═══ Folio + ears + masthead ═══ -->
+  <header class="masthead-zone">
+    <div class="ears">
+      <div class="ear ear-left">
+        <p class="ear-title">The Weather</p>
+        <p>Louisville, Ky. — signals<br/>clear; feeds running.</p>
+      </div>
+      <h1 class="masthead">
+        <span class="masthead-the">The</span> Morning Ledger
+      </h1>
+      <div class="ear ear-right">
+        <p class="ear-title">Price</p>
+        <p>Free forever.<br/>Set by machines nightly.</p>
+      </div>
+    </div>
+    <p class="masthead-sub">Dustin Cole's AI newsroom &mdash; six briefs compiled by agents from sourced signals</p>
+    <div class="folio">
+      <span>Vol. I &mdash; <span id="folioNo">No. 197</span></span>
+      <span class="folio-city" id="folioDate">Louisville, Ky.</span>
+      <span>Dustin Cole &middot; AI side project</span>
+    </div>
+  </header>
+
+  <!-- ═══ The Press (3D) ═══ -->
+  <section class="press-band" aria-label="A three-dimensional printing press setting today's edition">
+    <div class="press-canvas-wrap">
+      <canvas id="pressCanvas" aria-hidden="true"></canvas>
+      <p class="press-caption"><em>Fig. 1.</em> — The plate cylinder, set in lead with this morning's actual headlines. It has been printing since <span id="pressSince">5:00 a.m.</span></p>
+    </div>
+  </section>
+
+  <!-- ═══ Lead story: what this is ═══ -->
+  <section class="lead-zone">
+    <div class="lead-grid">
+      <article class="lead-story">
+        <p class="kicker kicker-red">Personal AI Lab &mdash; Special Notice</p>
+        <h2 class="lead-head">Newsroom Experiments</h2>
+        <p class="lead-deck">Machines read the wires all night so one analyst may drink his coffee in peace.</p>
+        <div class="lead-body">
+          <p><span class="dropcap">A</span> small side project where I use AI agents to keep a cleaner read on the things I already pay attention to: energy, practical AI, analytics, and work automation.</p>
+          <p>If you're interested in that same mix, follow along here. I'll keep adding the useful pieces, the weird experiments, and the parts that actually save time.</p>
+        </div>
+      </article>
+      <aside class="readers-key" aria-label="How to read it">
+        <h3 class="key-title">Reader's Key</h3>
+        <p class="key-sub">How to read this edition</p>
+        <dl class="key-list">
+          <div><dt>Today</dt><dd>Last-24-hour items first.</dd></div>
+          <div><dt>Sources</dt><dd>Original links kept close.</dd></div>
+          <div><dt>Glossary</dt><dd>Plain-language terms when needed.</dd></div>
+        </dl>
+        <p class="key-updated" id="updatedLine">Loading the live feed&hellip;</p>
+        <figure class="key-figure">
+          <img src="./assets/press-engraving.png" alt="Antique engraving of a rotary newspaper press, sheets flying off the cylinder" loading="lazy" width="1536" height="1024" />
+          <figcaption><em>Fig. 2.</em> — How it used to be done. The machines have changed; the morning deadline has not.</figcaption>
+        </figure>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ═══ Contents / filter index ═══ -->
+  <nav class="contents" id="contentsNav" aria-label="Sections of the edition">
+    <span class="contents-label">Index</span>
+    <!-- buttons injected -->
+  </nav>
+
+  <!-- ═══ Briefs ═══ -->
+  <main id="briefs" class="paper">
+    <div id="briefsRoot"></div>
+  </main>
+
+  <footer class="colophon">
+    <p class="colophon-rule" aria-hidden="true">&#10045;&ensp;&#10045;&ensp;&#10045;</p>
+    <p>Printed continuously by unsupervised machines. Every story links to its original source.</p>
+    <p>Empty sections stay empty &mdash; no generic trackers, no stale placeholder copy.</p>
+    <p class="colophon-fine">The Morning Ledger is an edition of the <a href="../../">Dustin Cole AI Playground</a>.</p>
+  </footer>
+
+  <!-- ═══ Explainer overlay ═══ -->
+  <div class="explainer" id="explainer" role="dialog" aria-modal="true" aria-labelledby="exTitle" hidden>
+    <div class="explainer-backdrop" data-close></div>
+    <article class="explainer-sheet">
+      <header class="explainer-head">
+        <p class="kicker kicker-red">The Explainer &mdash; Extra Edition</p>
+        <button class="explainer-close" data-close aria-label="Close the explainer">Close &#10005;</button>
+      </header>
+      <h2 class="explainer-title" id="exTitle"></h2>
+      <div class="explainer-body" id="exBody"></div>
+    </article>
+  </div>
+
+  <script src="./vendor/gsap.min.js"></script>
+  <script src="./vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
