@@ -26,7 +26,7 @@ const BEAM_RGB = {
   kyh: 0x3fa8bf, analytics: 0x5487d8, louisville: 0xd8574a,
 };
 
-const LEARN_BASE = 'https://dustincole-data.github.io/dustin-ai-playground/#/learn/';
+const LEARN_BASE = './learn/?id=';
 const DATA_PATHS = [
   `../../data/morning-briefs.json?ts=${Date.now()}`,
   `https://dustincole-data.github.io/dustin-ai-playground/data/morning-briefs.json?ts=${Date.now()}`,

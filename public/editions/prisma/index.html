@@ -3,9 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prisma — the morning, refracted · Dustin Cole's AI newsroom</title>
-  <meta name="description" content="One beam of morning news split into six wavelengths: AI, energy, Humana, Kentucky healthcare, analytics, and Louisville. Compiled nightly by agents for Dustin Cole." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,12 90,84 10,84' fill='%23575093'/></svg>" />
+  <title>Prisma — Dustin Cole's personal newsroom</title>
+  <meta name="description" content="Dustin Cole's personal newsroom — not the news, his news. The slice he actually tracks (Louisville, energy, healthcare, analytics, AI) split into six wavelengths and compiled nightly by his own agents." />
+  <link rel="canonical" href="https://dustincole-data.github.io/dustin-ai-playground/editions/prisma/" />
+  <meta name="theme-color" content="#575093" />
+
+  <!-- Favicons & app icons -->
+  <link rel="icon" type="image/svg+xml" href="./brand/mark.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./brand/icon-32.png" />
+  <link rel="apple-touch-icon" href="./brand/apple-touch-icon.png" />
+  <link rel="manifest" href="./brand/site.webmanifest" />
+
+  <!-- Social share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Prisma — Dustin Cole's personal newsroom" />
+  <meta property="og:url" content="https://dustincole-data.github.io/dustin-ai-playground/editions/prisma/" />
+  <meta property="og:title" content="Prisma — Dustin Cole's personal newsroom" />
+  <meta property="og:description" content="Not the news — my news. The slice I actually track, split into six wavelengths and compiled every night by my own agents." />
+  <meta property="og:image" content="https://dustincole-data.github.io/dustin-ai-playground/editions/prisma/brand/og.png" />
+  <meta property="og:image:secure_url" content="https://dustincole-data.github.io/dustin-ai-playground/editions/prisma/brand/og.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Prisma — Dustin Cole's personal newsroom: one beam of news refracted into six colored wavelengths." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prisma — Dustin Cole's personal newsroom" />
+  <meta name="twitter:description" content="Not the news — my news. The slice I actually track, split into six wavelengths and compiled nightly by my own agents." />
+  <meta name="twitter:image" content="https://dustincole-data.github.io/dustin-ai-playground/editions/prisma/brand/og.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap" rel="stylesheet" />
@@ -18,8 +43,11 @@
   <header class="mast">
     <div class="mast-inner">
       <p class="mast-name">Prisma</p>
-      <p class="mast-line">The morning, refracted — six wavelengths of news, compiled nightly by agents.<br />
-      <span class="mast-dim">An AI side project by Dustin Cole · Louisville, Ky. · <span id="mastDate">—</span> · <span id="mastStamp">updated —</span></span></p>
+      <div class="mast-block">
+        <p class="mast-desc">Dustin Cole&rsquo;s personal newsroom</p>
+        <p class="mast-line">Not the news — <em>my</em> news. The slice I actually track, refracted into six wavelengths and compiled nightly by my own agents.<br />
+        <span class="mast-dim">A newsroom experiment · Louisville, Ky. · <span id="mastDate">—</span> · <span id="mastStamp">updated —</span></span></p>
+      </div>
     </div>
   </header>
 
@@ -28,7 +56,7 @@
     <canvas id="prism"></canvas>
     <div class="hero-copy">
       <h1 class="hero-head">One beam in.<br />Six signals out.</h1>
-      <p class="hero-sub">Every night, agents read the wire so the morning arrives already sorted: <span id="heroCount">—</span> stories across six bands of attention. Touch a wavelength to jump to its band.</p>
+      <p class="hero-sub">This is my personal read, not a public front page. Every night my agents sweep the wire so I wake up to it already sorted — <span id="heroCount">—</span> stories across the six things I follow closely: Louisville, energy, healthcare, analytics, and useful AI. Touch a wavelength to jump to its band.</p>
       <p class="hero-note" id="prismCaption">The spectrum is live — beam widths follow this morning's story counts.</p>
     </div>
   </section>
@@ -46,7 +74,7 @@
   <!-- ═══ Foot ═══ -->
   <footer class="foot">
     <p class="foot-name">Prisma</p>
-    <p>A dispersive edition of <a href="../../">Dustin Cole's AI newsroom</a> · Other editions at <a href="../">the newsstand</a></p>
+    <p>A personal newsroom experiment by <strong>Dustin Cole</strong> · the same briefs in <a href="../">other designs</a></p>
     <p class="foot-dim">White light is just the news before anyone has read it.</p>
   </footer>
 
