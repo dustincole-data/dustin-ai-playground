@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400..500&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(120% 130% at 88% 12%, #f3f0fb 0%, #fbfbfd 46%, #f7f8fb 100%);
+    font-family: "Literata", Georgia, serif;
+    color: #1a1420;
+  }
+  .edge { position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(30,20,45,.06); }
+  .spectrum-bar { position: absolute; left: 0; right: 0; top: 0; height: 9px; display: flex; }
+  .spectrum-bar i { flex: 1; }
+  .content { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 486px; }
+  .left { padding: 74px 0 66px 84px; display: flex; flex-direction: column; }
+  .brandrow { display: flex; align-items: center; gap: 20px; }
+  .tri { width: 62px; height: 62px; }
+  .wordmark { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 74px; letter-spacing: -0.03em; line-height: 1; color: #1a1420; }
+  .descriptor {
+    margin-top: 26px;
+    font-family: "Bricolage Grotesque", sans-serif; font-weight: 600;
+    font-size: 25px; letter-spacing: 0.01em; color: #575093;
+  }
+  .lede { margin-top: 16px; max-width: 30ch; font-size: 27px; line-height: 1.42; color: #3a3348; }
+  .lede b { font-weight: 600; color: #1a1420; }
+  .chips { margin-top: auto; display: flex; flex-wrap: wrap; gap: 11px 12px; max-width: 40ch; }
+  .chip {
+    font-family: "Bricolage Grotesque", sans-serif; font-weight: 600; font-size: 19px;
+    padding: 7px 15px; border-radius: 999px; color: #fff;
+  }
+  .foot { margin-top: 26px; font-family: "Bricolage Grotesque", sans-serif; font-weight: 600; font-size: 18px; color: #8b849c; letter-spacing: 0.02em; }
+  /* prism scene */
+  .scene { position: relative; }
+  svg.prism { position: absolute; inset: 0; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+  <div class="spectrum-bar" aria-hidden="true">
+    <i style="background:#d8574a"></i><i style="background:#d9a13c"></i><i style="background:#4caf7d"></i><i style="background:#3fa8bf"></i><i style="background:#5487d8"></i><i style="background:#8b5fd6"></i>
+  </div>
+  <div class="content">
+    <div class="left">
+      <div class="brandrow">
+        <svg class="tri" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 12 L54 50 L10 50 Z" fill="#ffffff" fill-opacity="0.5" stroke="#575093" stroke-width="3" stroke-linejoin="round"/>
+        </svg>
+        <span class="wordmark">Prisma</span>
+      </div>
+      <p class="descriptor">Dustin Cole&rsquo;s personal newsroom</p>
+      <p class="lede"><b>Not the news &mdash; my news.</b> The slice I actually track, split into six wavelengths and compiled every night by my own agents.</p>
+      <div class="chips">
+        <span class="chip" style="background:#575093">AI</span>
+        <span class="chip" style="background:#a8792a">Energy</span>
+        <span class="chip" style="background:#2f7a55">Humana</span>
+        <span class="chip" style="background:#2d7d90">Ky. Healthcare</span>
+        <span class="chip" style="background:#3a5fa8">Analytics</span>
+        <span class="chip" style="background:#b23f34">Louisville</span>
+      </div>
+      <p class="foot">Compiled nightly by agents &middot; a newsroom experiment</p>
+    </div>
+    <div class="scene">
+      <svg class="prism" viewBox="0 0 486 630" aria-hidden="true">
+        <defs>
+          <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+            <stop offset="1" stop-color="#ffffff" stop-opacity="0.95"/>
+          </linearGradient>
+          <radialGradient id="halo" cx="0.42" cy="0.46" r="0.5">
+            <stop offset="0" stop-color="#8b7fd6" stop-opacity="0.22"/>
+            <stop offset="1" stop-color="#8b7fd6" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="486" height="630" fill="url(#halo)"/>
+        <!-- incoming beam -->
+        <path d="M-10 214 L150 268" stroke="url(#beam)" stroke-width="12" stroke-linecap="round"/>
+        <!-- refracted spectrum -->
+        <g stroke-width="11" stroke-linecap="round" fill="none" opacity="0.92">
+          <path d="M212 300 L500 236" stroke="#d8574a"/>
+          <path d="M212 304 L500 270" stroke="#d9a13c"/>
+          <path d="M212 308 L500 306" stroke="#4caf7d"/>
+          <path d="M212 312 L500 344" stroke="#3fa8bf"/>
+          <path d="M212 316 L500 384" stroke="#5487d8"/>
+          <path d="M212 320 L500 426" stroke="#8b5fd6"/>
+        </g>
+        <!-- glass prism -->
+        <path d="M150 150 L246 348 L54 348 Z" fill="#ffffff" fill-opacity="0.14" stroke="#b9b1e6" stroke-width="3.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+  <div class="edge"></div>
+</body>
+</html>

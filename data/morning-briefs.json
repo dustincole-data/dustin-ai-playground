@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-17T09:02:32.031093+00:00",
-  "generatedLabel": "Jul 17, 5:02 AM ET",
+  "generatedAt": "2026-07-18T09:00:22.553555+00:00",
+  "generatedLabel": "Jul 18, 5:00 AM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -9,175 +9,266 @@
       "emptyMessage": "No qualified AI stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "ai-signal-2026-07-11_08-45-28-1",
-          "title": "OfficeCLI Gains Traction for Headless Automations: A single-binary tool for agents to manipulate PPTX, X…",
+          "id": "ai-signal-2026-07-18_08-49-19-1",
+          "title": "Anthropic CISO publishes a practical agentic AI risk framework — four questions, not a white paper - Jas…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "OfficeCLI Gains Traction for Headless Automations: A single-binary tool for agents to manipulate PPTX, XLSX, and DOCX without Office installed is trending. It solves the \"middleman\" problem for agent-led reporting. Source: Trendshift/GitHub",
-          "emailSummary": "OfficeCLI Gains Traction for Headless Automations: A single-binary tool for agents to manipulate PPTX, XLSX, and DOCX without Office installed i…",
-          "whyItMatters": "This matters because bringing a model into Copilot changes where developers encounter it and whether it becomes part of an existing workflow.",
+          "summary": "Anthropic Deputy CISO Jason Clinton published a practical guide on claude.com/blog for assessing risk in agentic AI deployments. The framework centers on four questions: what the worst case is, whether the agent is properly bounded, whether its actions can be audited, and whether it can be stopped. The post also points to concrete controls such as bounded deployments, audit trails, and kill switches. For organizations using AI agents, it frames safety as an operations problem rather than a theoretical one.",
+          "emailSummary": "Anthropic CISO publishes a practical agentic AI risk framework — four questions, not a white paper - Jason Clinton (Deputy CISO) published a gui…",
+          "whyItMatters": "This matters because teams adopting AI agents need a simple way to decide whether a system is safe enough to run in real workflows and what controls are required before it can touch real data or actions.",
           "dataSignals": [
             "agent workflow",
-            "developer workflow"
+            "Anthropic signal"
           ],
-          "sourceLabel": "trendshift.io · Jul 11, 4:45 AM ET",
-          "sourceUrl": "https://trendshift.io/monthly",
+          "sourceLabel": "claude.com · Jul 18, 4:49 AM ET",
+          "sourceUrl": "https://claude.com/blog/ciso-guide-to-agentic-ai",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-11T08:45:28.139580+00:00",
+          "publishedAt": "2026-07-18T08:49:19.568405+00:00",
           "glossary": [
             {
-              "term": "agent",
-              "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is an AI-agent workflow story: AI is being used to help define, run, or supervise a sequence of work instead of only chatting. The teaching angle is control. Once AI can trigger workflows, the key concepts are permissions, sandboxing, auditability, and whether humans can understand what it changed. The main terms to understand are CLI, business automation, agent, AI capability, model, guardrail. Read for the exact job the agent can do, what tools it touches, what permissions it starts with, and what safety controls are named in the story.",
-            "glossary": [
-              {
-                "term": "CLI",
-                "definition": "Command-line interface: a text-based tool run from a terminal.",
-                "whyItMatters": "CLI support matters when AI tools need to fit into developer and automation workflows instead of only a web chat."
-              },
-              {
-                "term": "business automation",
-                "definition": "Using software to complete repeatable business steps with less manual work.",
-                "whyItMatters": "Automation is where AI value becomes measurable, but it also creates new failure modes if no one owns review and rollback."
-              },
-              {
-                "term": "agent",
-                "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer.",
-                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon."
-              },
-              {
-                "term": "AI capability",
-                "definition": "The specific new thing an AI system can do, such as use a browser, run code, connect tools, or access a model.",
-                "whyItMatters": "AI news is easier to judge when you identify the exact capability instead of treating every update as general hype."
-              },
-              {
-                "term": "model",
-                "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
-                "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
-              },
-              {
-                "term": "guardrail",
-                "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.",
-                "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-signal-2026-07-11_08-45-28-2",
-          "title": "OpenAI Agents SDK Focuses on Open Frameworks: The \"openai-agents-python\" repo is seeing active developme…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "OpenAI Agents SDK Focuses on Open Frameworks: The \"openai-agents-python\" repo is seeing active development as an open-source framework rather than a locked service, signaling a shift toward lightweight, portable autonomous logic. Source: GitHub/OpenAI",
-          "emailSummary": "OpenAI Agents SDK Focuses on Open Frameworks: The \"openai-agents-python\" repo is seeing active development as an open-source framework rather th…",
-          "whyItMatters": "This matters because bringing a model into Copilot changes where developers encounter it and whether it becomes part of an existing workflow.",
-          "dataSignals": [
-            "agent workflow",
-            "developer workflow",
-            "OpenAI signal"
-          ],
-          "sourceLabel": "github.com · Jul 11, 4:45 AM ET",
-          "sourceUrl": "https://github.com/openai/openai-agents-python",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-11T08:45:28.139580+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is an AI-agent workflow story: AI is being used to help define, run, or supervise a sequence of work instead of only chatting. The teaching angle is control. Once AI can trigger workflows, the key concepts are permissions, sandboxing, auditability, and whether humans can understand what it changed. The main terms to understand are AI capability, guardrail, model, vendor dependency, workflow, governance. Read for the exact job the agent can do, what tools it touches, what permissions it starts with, and what safety controls are named in the story.",
-            "glossary": [
-              {
-                "term": "AI capability",
-                "definition": "A specific thing an AI tool can now do, such as use a browser, run code, connect tools, or access a model.",
-                "whyItMatters": "Reading AI news gets easier when you focus on the exact new capability instead of the hype around the product."
-              },
-              {
-                "term": "guardrail",
-                "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.",
-                "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."
-              },
-              {
-                "term": "model",
-                "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
-                "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
-              },
-              {
-                "term": "vendor dependency",
-                "definition": "Reliance on one company, model, or platform for an important workflow.",
-                "whyItMatters": "If access, pricing, or policy changes, dependency can suddenly become an operational risk."
-              },
-              {
-                "term": "workflow",
-                "definition": "A repeatable sequence of steps people or software use to get work done.",
-                "whyItMatters": "Workflow impact is where AI changes become practical: what step gets faster, safer, cheaper, or more automated?"
-              },
-              {
-                "term": "governance",
-                "definition": "Rules, approvals, monitoring, and controls that keep AI or data use safe and reliable.",
-                "whyItMatters": "Governance is the difference between a cool demo and something a business can safely let touch real work."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-signal-2026-07-11_08-45-28-3",
-          "title": "Market Sentiment Agents Go Mainstream: SpaceXAI (Grok) is increasingly being embedded into retail tradin…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "Market Sentiment Agents Go Mainstream: SpaceXAI (Grok) is increasingly being embedded into retail trading (eToro) for real-time sentiment analysis, proving the \"analyst agent\" model is now production-ready for financial apps. Source: x.ai",
-          "emailSummary": "Market Sentiment Agents Go Mainstream: SpaceXAI (Grok) is increasingly being embedded into retail trading (eToro) for real-time sentiment analys…",
-          "whyItMatters": "This matters because agent stories are about real workflow power, so the key question is what the system can touch and how it is controlled.",
-          "dataSignals": [
-            "agent workflow",
-            "model/tool release"
-          ],
-          "sourceLabel": "x.ai · Jul 11, 4:45 AM ET",
-          "sourceUrl": "https://x.ai/news",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-11T08:45:28.139580+00:00",
-          "glossary": [
-            {
-              "term": "agent",
-              "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer."
+              "term": "agentic AI",
+              "definition": "AI systems that can take actions on their own toward a goal, rather than only generating text in response to prompts."
             },
             {
-              "term": "model",
-              "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini."
+              "term": "CISO",
+              "definition": "Chief Information Security Officer, the executive responsible for an organization's security strategy and risk controls."
+            },
+            {
+              "term": "audit trail",
+              "definition": "A record of what the system did, when it did it, and sometimes why, so actions can be reviewed later."
+            },
+            {
+              "term": "kill switch",
+              "definition": "A fast way to shut down a system or stop it from taking further actions."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is an AI-agent workflow story: AI is being used to help define, run, or supervise a sequence of work instead of only chatting. The teaching angle is control. Once AI can trigger workflows, the key concepts are permissions, sandboxing, auditability, and whether humans can understand what it changed. The main terms to understand are model, agent, AI capability, guardrail, vendor dependency, workflow. Read for the exact job the agent can do, what tools it touches, what permissions it starts with, and what safety controls are named in the story.",
+            "explanationText": "This is a practical governance and security story, not a product announcement or research paper. When reading the source, pay attention to whether the guidance is framed as checklist-level controls that teams can actually implement, versus broad principles that sound useful but are hard to enforce. The interpretation would change if the post includes specific deployment limits, logging requirements, or shutdown mechanisms, because those details show how serious the framework is about real-world risk control.",
             "glossary": [
               {
-                "term": "model",
-                "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
-                "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
+                "term": "agentic AI",
+                "definition": "AI systems that can take actions on their own toward a goal, rather than only generating text in response to prompts.",
+                "whyItMatters": "The whole framework is about managing the risks of AI that can act, not just chat."
               },
               {
-                "term": "agent",
-                "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer.",
-                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon."
+                "term": "CISO",
+                "definition": "Chief Information Security Officer, the executive responsible for an organization's security strategy and risk controls.",
+                "whyItMatters": "The author is a security leader, which signals the framework is meant for operational decision-making."
               },
               {
-                "term": "AI capability",
-                "definition": "The specific new thing an AI system can do, such as use a browser, run code, connect tools, or access a model.",
-                "whyItMatters": "AI news is easier to judge when you identify the exact capability instead of treating every update as general hype."
+                "term": "audit trail",
+                "definition": "A record of what the system did, when it did it, and sometimes why, so actions can be reviewed later.",
+                "whyItMatters": "If an AI agent makes a bad decision, audit trails help teams investigate and prove what happened."
               },
               {
-                "term": "guardrail",
-                "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.",
-                "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."
+                "term": "kill switch",
+                "definition": "A fast way to shut down a system or stop it from taking further actions.",
+                "whyItMatters": "A kill switch is a key control when an AI agent starts behaving unexpectedly or dangerously."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-signal-2026-07-18_08-49-19-2",
+          "title": "Agent Data Injection (ADI) — new attack vector that targets agent tool calls, not prompts - Researchers…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "Researchers have described a new attack called Agent Data Injection (ADI) that targets AI agents through tool-call payloads instead of through normal prompt text. In demonstrations, the attack fooled six models, including GPT-5.2, Claude Opus 4.5, Sonnet 4.5, and Gemini 3 Pro/Flash, into taking harmful actions such as clicking a \"Buy Now\" button or running attacker code. The key trick is forging trusted-looking data fields inside the structured data an agent sends to tools, which can bypass defenses built for prompt injection. OpenAI, Google, and Anthropic have all acknowledged the reports.",
+          "emailSummary": "Agent Data Injection (ADI) — new attack vector that targets agent tool calls, not prompts - Researchers demonstrated ADI against six models (GPT…",
+          "whyItMatters": "This matters because AI agents that can act on behalf of users may be tricked into unsafe real-world actions even when their chat prompts are protected, which raises the security bar for any business deploying agent workflows.",
+          "dataSignals": [
+            "agent workflow",
+            "OpenAI signal",
+            "Anthropic signal",
+            "Google AI signal"
+          ],
+          "sourceLabel": "thehackernews.com · Jul 18, 4:49 AM ET",
+          "sourceUrl": "https://thehackernews.com/2026/07/new-agent-data-injection-attack-can.html",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-18T08:49:19.568405+00:00",
+          "glossary": [
+            {
+              "term": "Agent Data Injection (ADI)",
+              "definition": "A technique that manipulates the structured data sent between an AI agent and its tools so the agent performs unintended actions."
+            },
+            {
+              "term": "tool-call payload",
+              "definition": "The structured message an AI agent sends to another system or tool when it wants to take an action."
+            },
+            {
+              "term": "prompt injection",
+              "definition": "An attack that hides malicious instructions inside text to make an AI ignore its original instructions."
+            },
+            {
+              "term": "multi-turn jailbreak",
+              "definition": "A series of interactions designed to slowly persuade or trick an AI into breaking its safety rules."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a security story about AI agents, not a product launch or a general AI capability update. When reading the source, pay attention to what was actually demonstrated versus what was only inferred, especially which models were tested and whether the attack hit prompt text or structured tool data. If later reporting shows the weakness is limited to certain agent frameworks or fixed by vendor patches, that would significantly change how broadly this risk applies.",
+            "glossary": [
+              {
+                "term": "Agent Data Injection (ADI)",
+                "definition": "A technique that manipulates the structured data sent between an AI agent and its tools so the agent performs unintended actions.",
+                "whyItMatters": "It shows a new way attackers can target AI systems beyond ordinary prompt attacks."
               },
               {
-                "term": "vendor dependency",
-                "definition": "Reliance on one company, model, or platform for an important workflow.",
-                "whyItMatters": "If access, pricing, or policy changes, dependency can suddenly become an operational risk."
+                "term": "tool-call payload",
+                "definition": "The structured message an AI agent sends to another system or tool when it wants to take an action.",
+                "whyItMatters": "If attackers can alter this payload, they can influence what the agent does in the real world."
               },
               {
-                "term": "workflow",
-                "definition": "A repeatable sequence of steps people or software use to get work done.",
-                "whyItMatters": "Workflow impact is where AI changes become practical: what step gets faster, safer, cheaper, or more automated?"
+                "term": "prompt injection",
+                "definition": "An attack that hides malicious instructions inside text to make an AI ignore its original instructions.",
+                "whyItMatters": "The story says ADI can bypass defenses that were built mainly to stop this older attack type."
+              },
+              {
+                "term": "multi-turn jailbreak",
+                "definition": "A series of interactions designed to slowly persuade or trick an AI into breaking its safety rules.",
+                "whyItMatters": "It suggests cloud-hosted AI services may still be vulnerable even when they do not fail on the first attempt."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-1-15970",
+          "title": "Latest Chinese AI model reaffirms OpenAI and Anthropic need to continue to invest: Creative Strategies CEO",
+          "kicker": "CNBC",
+          "summary": "A CNBC segment quotes Creative Strategies CEO Ben Bajarin saying a latest Chinese AI model is another reminder that OpenAI and Anthropic cannot slow their spending on development. The claim is not that the Chinese model has overtaken U.S. leaders, but that competition from China is still intense enough to pressure top U.S. AI firms to keep investing. For the AI sector, that suggests model leadership remains a race shaped by ongoing capital, compute, and research spending rather than a one-time breakthrough.",
+          "emailSummary": "A practical AI story to scan for tool changes, risks, and useful business workflows.",
+          "whyItMatters": "This matters because continued Chinese progress can force U.S. AI companies to spend more to defend their technical lead, which affects pricing, product velocity, and the scale of infrastructure investment in the market.",
+          "dataSignals": [
+            "model/tool release"
+          ],
+          "sourceLabel": "CNBC · Jul 17, 4:40 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOeWRQbzR5alRxUnFCS1FqTXlILVRjdFVuNURMb0ticWgwY24ta24wVVBEMWNySUFyNkJDZkVoR3Z6Qnl6S2tsVUNWNzV1UlVVbWRrM1VDNkZRTTc5NXFDRGotNktjSmJUbmZKcndoMGE3ZTQyM3hLNjctcEJEa3F6cXZhUGhjR2NVbGk4ZkVBWEFxeUJocVdTM3BxMnY1M0JBS3FqSExESVJRd3AzTVN1QjlMb2hqN19ObEtIV1BXcjBBNUh3UjMtcHFweE5pRHVGdk12OWVERzZhbWEwNGgzZVdn?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-17T20:40:23+00:00",
+          "glossary": [
+            {
+              "term": "AI model",
+              "definition": "A trained computer system that can perform tasks like generating text or answering questions."
+            },
+            {
+              "term": "compute",
+              "definition": "The processing power and specialized hardware needed to train and run large AI systems."
+            },
+            {
+              "term": "OpenAI",
+              "definition": "A U.S. AI company known for ChatGPT and other large language models."
+            },
+            {
+              "term": "Anthropic",
+              "definition": "A U.S. AI company that builds large language models and AI assistants, including Claude."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a market-and-competition story, not a product review: the key issue is how one new AI release changes the strategic pressure on major U.S. labs. When reading the source, look for whether the speaker is making a technical comparison, a business prediction, or a general industry point. The interpretation changes most if the Chinese model is shown to match or surpass leading U.S. models on important benchmarks rather than simply narrowing the gap.",
+            "glossary": [
+              {
+                "term": "AI model",
+                "definition": "A trained computer system that can perform tasks like generating text or answering questions.",
+                "whyItMatters": "Understanding that the story is about a model helps explain why one new release can affect competitive strategy across the industry."
+              },
+              {
+                "term": "compute",
+                "definition": "The processing power and specialized hardware needed to train and run large AI systems.",
+                "whyItMatters": "High compute costs are a major reason companies must keep investing even when they already have leading products."
+              },
+              {
+                "term": "OpenAI",
+                "definition": "A U.S. AI company known for ChatGPT and other large language models.",
+                "whyItMatters": "It is one of the main firms the quote says must keep investing to stay competitive."
+              },
+              {
+                "term": "Anthropic",
+                "definition": "A U.S. AI company that builds large language models and AI assistants, including Claude.",
+                "whyItMatters": "It is another key competitor whose spending choices help signal where the AI market is headed."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-2-95396",
+          "title": "Boris Cherny says he now runs thousands of Claude Code agents at once",
+          "kicker": "Startup Fortune",
+          "summary": "Boris Cherny says he is now running thousands of Claude Code agents at the same time, according to Startup Fortune. Claude Code is Anthropic's coding tool, so the claim points to very large-scale use of AI agents for software work. The report suggests a shift from individual developer assistance to mass automated task execution, which could matter for how teams build, test, and maintain software. Because the provided description is minimal, the exact setting, performance results, and business impact are not clear from the source line alone.",
+          "emailSummary": "An AI-agent workflow story to scan for practical automation, controls, and operator impact.",
+          "whyItMatters": "This matters because large-scale use of coding agents could change software productivity, labor needs, and the reliability and cost of AI-assisted development.",
+          "dataSignals": [
+            "agent workflow"
+          ],
+          "sourceLabel": "Startup Fortune · Jul 17, 3:51 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeEZlYzhQcGFQX3V2N3U1T1doZmVIdkhvQ3plX3ZVRFdwQU5faGtWZzVEeVhmMVdGU2F3c1BLcFFLVnZHd0RnNE5vQkVYSFg5V2lQTm5hSEY3a25ZM3AweWJ5VHhFeHdfRUt0RTVSNXdXa0NEZTBJYjVoRjJlWml1aC1PZUhOLUxQS09nUWF3R0kzX2FCRkdsQ1AzOW1XQQ?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-17T19:51:40+00:00",
+          "glossary": [
+            {
+              "term": "Claude Code",
+              "definition": "Anthropic's AI coding tool that helps generate, edit, and work with software code."
+            },
+            {
+              "term": "AI agents",
+              "definition": "Software systems that can take actions on their own to complete tasks rather than only answering questions."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a claims-based tech story about AI software being used at unusually large scale, not a detailed product review or earnings report. When reading the source, pay attention to whether \"runs thousands of agents\" means parallel simulations, real customer workloads, or internal testing, because those are very different interpretations. If the full story shows measurable outcomes like speed, cost savings, or failure rates, that would make the claim far more meaningful than the headline alone.",
+            "glossary": [
+              {
+                "term": "Claude Code",
+                "definition": "Anthropic's AI coding tool that helps generate, edit, and work with software code.",
+                "whyItMatters": "It is the specific product being used at scale in the reported claim."
+              },
+              {
+                "term": "AI agents",
+                "definition": "Software systems that can take actions on their own to complete tasks rather than only answering questions.",
+                "whyItMatters": "The story is about running many of these systems at once, which changes the scale of automation."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-3-27970",
+          "title": "Anthropic Limits Claude Fable 5 Access as It Runs Out of Compute",
+          "kicker": "Startup Fortune",
+          "summary": "Anthropic is limiting access to its Claude Fable 5 model because it is running short of compute capacity. The report suggests the company is prioritizing available resources rather than opening the model more broadly at full scale. For buyers and users, that can mean slower access, tighter usage limits, or delayed rollouts until more infrastructure comes online. It also shows how AI model availability can be constrained by the cost and supply of computing power, not just software demand.",
+          "emailSummary": "A practical AI story to scan for tool changes, risks, and useful business workflows.",
+          "whyItMatters": "This matters because limited compute can directly affect when AI tools are available, how much they cost to use, and whether businesses can rely on them at scale.",
+          "dataSignals": [
+            "article trigger",
+            "source credibility",
+            "practical impact"
+          ],
+          "sourceLabel": "Startup Fortune · Jul 18, 3:21 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUXQwTXRDbG04V2lsc3NQLU8tX2RpRTFkZ2VqR0w4UF9qXzJnd3hWTnU4aUZwdC1lQUNPYmZLc1k2M2VvZUNjNC1LRjloUVZDSnJPR2QwN1pWNjRxcFNMNlFQV2psdW1wLVJNUFRyNHRrRjFwajNEVE1DZVkydEpaY09JUmJlY0NPYkd1T0I0cEphbndYMjhV?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-18T07:21:40+00:00",
+          "glossary": [
+            {
+              "term": "compute",
+              "definition": "The computing power, usually from specialized chips and servers, needed to train or run AI models."
+            },
+            {
+              "term": "access limits",
+              "definition": "Restrictions on who can use a product and how much they can use it."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a capacity-and-product-availability story, not a research breakthrough story. When reading the source, watch for specifics on whether Anthropic is limiting new signups, API usage, or only certain customer tiers, since that changes the business impact. If the company adds more compute or changes pricing and quotas, the meaning shifts from a shortage problem to a routine scaling decision.",
+            "glossary": [
+              {
+                "term": "compute",
+                "definition": "The computing power, usually from specialized chips and servers, needed to train or run AI models.",
+                "whyItMatters": "A shortage of compute can force companies to cap usage or delay product access."
+              },
+              {
+                "term": "access limits",
+                "definition": "Restrictions on who can use a product and how much they can use it.",
+                "whyItMatters": "These limits determine whether a service is broadly available or only usable in small amounts."
               }
             ]
           }
@@ -190,276 +281,215 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-38486",
-          "title": "PPL Corporation stock trades steadily as regulated utility earnings and grid investments support val",
-          "kicker": "ad-hoc-news.de",
-          "summary": "ad-hoc-news.de is reporting on PPL Corporation stock trades steadily as regulated utility earnings and grid investments support val. In plain English, this is a grid-capacity story: the important details are how much new power or infrastructure is being planned, what demand it is supposed to serve, and whether reliability or cost pressure could change for customers. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "id": "energy-1-18112",
+          "title": "LG&E warns customers of utility company scams",
+          "kicker": "whas11.com",
+          "summary": "LG&E is warning customers about scams that pretend to be utility company communications. Based on the headline and source description, the company is alerting people to watch for fraud attempts aimed at utility customers. No specific scam method, dollar amount, or affected customer group is provided in the description. For Louisville-area households, the practical takeaway is to verify any payment request or service threat directly with LG&E before acting.",
           "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
-          "whyItMatters": "This matters because grid-capacity stories usually translate into infrastructure timing, reliability risk, and the cost of adding new power.",
+          "whyItMatters": "This matters because utility scams can lead to stolen money, account access, or unnecessary service disruption if customers respond to fake demands.",
           "dataSignals": [
-            "PPL mention",
-            "grid reliability"
+            "LG&E / KU / PPL mention"
           ],
-          "sourceLabel": "ad-hoc-news.de · Jul 16, 9:37 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMFRtYlZpMzRmM2QzSHVLa0pxRGxtM0gxa2xkZlFfbGM5a0pycEx5UXJXVjlqdVhYd1Z0NC1CQkV3QzA2UFRST2JrbHZMbGxWQzIyWUttRzhJMElLR0pXdGVCNWs1N1dNUFFXWFRWWHl0cmZsc0VXeE56LTZER2Z0Ry1WTE96X1ZxQjVVRGU1R1hPcVZzTmlQV1pXVXlRSmdjd2dDdXhUaTByQ0JITnJLT2NyV19MSWhZVzRacWNIQ25oNGdMRGpEQzR3?oc=5",
+          "sourceLabel": "whas11.com · Jul 17, 1:57 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdE1qUG1VamRkVFRSMXZnaVczVUhTZng2Sm5LQWxSYVpTZTZZdHlwTDJidmljd2RWRmM3SGdMdERPNUgzQ2N2Y21sdjJrUmg5eW1WRmJGejFNN3FwZzhsRkNJRUp2T3gxZnV0eFMtNllTRk54dUdubnBwNGljZE51ZjN3QkJsWEJ5cWh4UTVxbmd3ZWwyLTJNd05XVVZCUFd4SDVVRXlkMzZ2OFB0MENqNXpkX3R3NXc3ODBtYU02QUt1Zw?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-17T01:37:46+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about PPL Corporation stock trades steadily as regulated utility earnings and grid investments support val. This matters because grid-capacity stories usually translate into infrastructure timing, reliability risk, and the cost of adding new power. The main terms to understand are grid upgrades, data center, large load, ratepayer, utility rates, regulatory review. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": [
-              {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
-              },
-              {
-                "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
-              },
-              {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
-              },
-              {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
-              },
-              {
-                "term": "utility rates",
-                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
-                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
-              },
-              {
-                "term": "regulatory review",
-                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
-                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-2-78063",
-          "title": "Pennsylvania heat wave arrives just as PPL hikes rates, sending power bills higher",
-          "kicker": "MSN",
-          "summary": "MSN is reporting on Pennsylvania heat wave arrives just as PPL hikes rates, sending power bills higher. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether this changes the local utility story around capacity, reliability, rates, regulation, metering, or the data products leaders need to explain those tradeoffs clearly. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
-          "whyItMatters": "This matters because utility decisions only become real when they show up in customer bills, regulatory scrutiny, or rate-case precedent.",
-          "dataSignals": [
-            "PPL mention",
-            "rate / bill impact"
-          ],
-          "sourceLabel": "MSN · Jul 16, 4:13 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOM2o3SjAwTzhBaGJucE5nbEJLUlZBenFxTFd1Ql9vS0pfYzdOOWZLd2djcWtWOXlQUEFJcDlrNnYzTl9fazJUeEJVMkxXTTdRdWxBdl83bDh1YTJnQTBzV1NscUFxYU9wWDJKYTE5ZEwtRnpvcXZYdWMzWDN4RWlETks1ZWxxRFNjSG5CalFISjBRbnptYnNQcm84OW5GbnhNVzZvYUlXdEtUSEh6aUNmYm9aWk4tc0xTNU9WVUg3OUVfSjJ4elZKQ0VQVUZYaTFl?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T20:13:17+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a utility-pricing story: a company, regulator, or market signal is pointing to costs that may eventually show up in customer bills. The teaching angle is the bridge between utility spending and public impact. Technical investments become controversial when customers are asked to pay for them. The main terms to understand are utility rates, ratepayer, data center, large load, grid upgrades, regulatory review. Read for the requested amount, the approved amount, the reason for the cost, and whether the story describes customer protections or opposition.",
-            "glossary": [
-              {
-                "term": "utility rates",
-                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
-                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
-              },
-              {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
-              },
-              {
-                "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
-              },
-              {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
-              },
-              {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
-              },
-              {
-                "term": "regulatory review",
-                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
-                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-3-19120",
-          "title": "Energy Secretary Wright Says Data Centers Will Bring Power Prices Down. The Grid Says Otherwise.",
-          "kicker": "thenewamerican.com",
-          "summary": "thenewamerican.com is reporting on Energy Secretary Wright Says Data Centers Will Bring Power Prices Down. The Grid Says Otherwise. In plain English, this is a grid-capacity story: the important details are how much new power or infrastructure is being planned, what demand it is supposed to serve, and whether reliability or cost pressure could change for customers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
-          "whyItMatters": "This matters because large-load demand can change grid forecasts, trigger upgrade spending, and reopen the question of who pays for capacity.",
-          "dataSignals": [
-            "data-center load",
-            "grid reliability"
-          ],
-          "sourceLabel": "thenewamerican.com · Jul 16, 2:38 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMk15Nm1QUTVOeDJGTC1FRkh0SDIyTUEyeWE3bjBDUHNDbGpfNThmV0ZqMWpUMjdmZzBsdkphYmlpRFA1UzU3ZThJYUs0cWI1VFViWndFU0gwWEd3MTlLTjFpN1lsX3hiUDFXRVN5M3V1WWVyQTltWWlibVFqRExTbHU3cGdnaEpVbHNUOGN0cHZzM3Q1S3U2N1VocHo0RTkwRjJubnVwSVp0Smh4dFRrc3ZXUEh4Yk5MMkVGX0tnbWtSaTI0NFM1ZTZR?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T18:38:00+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators. The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill. The main terms to understand are data center, grid upgrades, large load, ratepayer, utility rates, regulatory review. Read the story by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure.",
-            "glossary": [
-              {
-                "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
-              },
-              {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
-              },
-              {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
-              },
-              {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
-              },
-              {
-                "term": "utility rates",
-                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
-                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
-              },
-              {
-                "term": "regulatory review",
-                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
-                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-4-3803",
-          "title": "Eastern KY officials sign secretive deal with data center venture to explore off-grid power",
-          "kicker": "Lexington Herald Leader",
-          "summary": "Lexington Herald Leader is reporting on Eastern KY officials sign secretive deal with data center venture to explore off-grid power. In plain English, this is a grid-capacity story: the important details are how much new power or infrastructure is being planned, what demand it is supposed to serve, and whether reliability or cost pressure could change for customers. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
-          "whyItMatters": "This matters because large-load demand can change grid forecasts, trigger upgrade spending, and reopen the question of who pays for capacity.",
-          "dataSignals": [
-            "data-center load",
-            "grid reliability"
-          ],
-          "sourceLabel": "Lexington Herald Leader · Jul 16, 1:13 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5Kc3ZmQWxUTlh3WnlsR1FMdk41UThLVEtxQTQ3LWo1NDNQRGdQdElnRktpQ3IzMUlOUjhpQ29FQl9QWEJCZU5samFYTGdMMXlCSVkzcXd5UEtCb2I3XzVSUFlLYXRjdTZSclBGbGNWdUMwTlJT0gF0QVVfeXFMTmJSRGRtZGphdkFuYnNwdUNVTTBWdVJSakNOend2OUl2b3I2VGZ4a3Y1cV9hMS1YbG93dk1VbzVVaTU4MTBLY3FIUmJQMkhIaU85aG5pejBOZHZSek5ONFhMb0NaTjliRmRzYmtTNzR3ajhHSHQ?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T17:13:00+00:00",
+          "publishedAt": "2026-07-17T17:57:00+00:00",
           "glossary": [
             {
-              "term": "data center",
-              "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades."
+              "term": "utility company scam",
+              "definition": "A fraud attempt that impersonates a utility provider to trick people into paying money, giving personal information, or taking urgent action."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators. The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill. The main terms to understand are data center, grid upgrades, large load, ratepayer, utility rates, regulatory review. Read the story by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure.",
+            "explanationText": "This is a consumer warning story, not a policy or market-moving energy report. When reading the source, look for the specific scam tactic, how LG&E says customers should verify contact, and whether the warning applies to phone calls, emails, texts, or in-person visits. The interpretation would change if the story includes a confirmed spike in fraud reports, a specific threat pattern, or official steps customers should take immediately.",
             "glossary": [
               {
-                "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
-              },
-              {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
-              },
-              {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
-              },
-              {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
-              },
-              {
-                "term": "utility rates",
-                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
-                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
-              },
-              {
-                "term": "regulatory review",
-                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
-                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
+                "term": "utility company scam",
+                "definition": "A fraud attempt that impersonates a utility provider to trick people into paying money, giving personal information, or taking urgent action.",
+                "whyItMatters": "Knowing this term helps customers recognize that a caller or message may be fake even if it sounds official."
               }
             ]
           }
         },
         {
-          "id": "energy-5-43581",
-          "title": "TeraWulf’s $19B Anthropic Lease Puts Its Brownfield AI Strategy to the Test",
+          "id": "energy-2-38313",
+          "title": "Report: Data Centers Create About US$6.3 Billion in Electric Costs for PJM Customers",
+          "kicker": "Industrial Info Resources",
+          "summary": "A report from Industrial Info Resources says data centers are creating about US$6.3 billion in electric costs for customers in the PJM power market. PJM is the regional grid and electricity market serving parts of the Mid-Atlantic and Midwest, so the finding points to a large cost burden tied to fast-growing data center demand. The report does not give more detail here on how the estimate was built or how the costs are being allocated. Even so, it suggests data center growth is becoming a material issue for power bills and grid planning in the PJM region.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "This matters because higher data center demand can raise electricity costs for households and businesses across the PJM region, including places like Kentucky that participate in or are affected by regional power-market trends.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "Industrial Info Resources · Jul 17, 9:22 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOV1BDSVhVRFo2SmJPWmRtN056SEZqOFFEaUV5R040ajBhR1lxMTlyWUV5SDdRUnZxZ0xzNmhNcGdJNjFQVUpEb3JBU0Q2MVU3RTdhdkh0R0xRUVhrTGI1NjBNQ3otSHN3c0VLTXFOXzQtVnpudTdqYVRhV3JkQjlFXzhKcXVCSWpNZk1sNE5rdHlGMC11NjFNVWVzNWRFNVlvWTluTVA5NjVCTEhDZUV3dm1jbWM4SlhBS0NzanJkanNLcV9PcTZheDNmZnpPQQ?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-17T13:22:55+00:00",
+          "glossary": [
+            {
+              "term": "PJM",
+              "definition": "A regional transmission organization that manages the electric grid and wholesale power market for a large multi-state area."
+            },
+            {
+              "term": "data center",
+              "definition": "A facility full of servers and cooling systems that stores, processes, and serves digital data."
+            },
+            {
+              "term": "electric costs",
+              "definition": "The money spent to generate and deliver electricity to customers."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a cost-impact story about electricity demand, not a project announcement or a policy decision. When reading the source, pay attention to whether the report is estimating total system costs, costs passed to specific customer classes, or costs tied to new load growth. The interpretation would change if the report is about one-time infrastructure spending versus ongoing higher power prices, or if the costs are concentrated in a few states rather than spread across all PJM customers.",
+            "glossary": [
+              {
+                "term": "PJM",
+                "definition": "A regional transmission organization that manages the electric grid and wholesale power market for a large multi-state area.",
+                "whyItMatters": "PJM rules and demand trends help determine how much customers pay for electricity in the region."
+              },
+              {
+                "term": "data center",
+                "definition": "A facility full of servers and cooling systems that stores, processes, and serves digital data.",
+                "whyItMatters": "Data centers use very large amounts of electricity, so rapid growth can affect local and regional power costs."
+              },
+              {
+                "term": "electric costs",
+                "definition": "The money spent to generate and deliver electricity to customers.",
+                "whyItMatters": "If those costs rise, utility bills can go up for homes, factories, and other businesses."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-3-88949",
+          "title": "Narrow Kentucky vote advances data center plan near Shaker Village despite outcry",
+          "kicker": "The Cool Down",
+          "summary": "A Kentucky vote narrowly moved forward a plan for a data center near Shaker Village, even though people opposed to the project objected loudly. The report does not give the final project details, but it makes clear the proposal is moving ahead after a close vote. For the Energy / Utilities beat, data centers matter because they can bring major new electricity demand, grid planning needs, and local concerns about land use and infrastructure. The location near Shaker Village also suggests the debate includes community and site-impact questions, not just power use.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "This matters because large data centers can reshape local power demand, utility planning, and community acceptance around a proposed site.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "The Cool Down · Jul 18, 4:16 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQM3lGQUxGb21ERXVxMDRjemowQ1hidGhSd2RlMnpPd0swb3ZCZ0VoTVNuTTV5QThrdDhMczJ0NDB3X0NLMVV4U1NiY2N0cEpPSHV5Y1NkdDV0cEFaS1ZsTGw4V1BSWVRiM2NneFp1UElmbnlSd1MycFFzNVloSmxaU0pxMGp6UlNYQWthcw?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-18T08:16:00+00:00",
+          "glossary": [
+            {
+              "term": "data center",
+              "definition": "A facility full of computers and networking equipment that stores, processes, and serves digital data."
+            },
+            {
+              "term": "vote advances",
+              "definition": "A decision that allows a proposal to move to the next stage instead of stopping it."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a local policy and infrastructure story, not a technology product story. When reading the source, pay attention to who voted, how close the vote was, and what approvals are still required, because those details determine whether the project is truly moving forward or just cleared one procedural step. If later reporting shows utility upgrades, environmental conditions, or zoning changes, that would change how big and how risky the project is for the area.",
+            "glossary": [
+              {
+                "term": "data center",
+                "definition": "A facility full of computers and networking equipment that stores, processes, and serves digital data.",
+                "whyItMatters": "Data centers often need large amounts of electricity and cooling, so they can affect local utilities and infrastructure."
+              },
+              {
+                "term": "vote advances",
+                "definition": "A decision that allows a proposal to move to the next stage instead of stopping it.",
+                "whyItMatters": "Knowing a project has advanced tells you it is still alive and may continue through approvals or construction."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-4-91411",
+          "title": "The AI Infrastructure Split Screen: Capital Rush Meets Community Resistance",
           "kicker": "Data Center Frontier",
-          "summary": "Data Center Frontier is reporting on TeraWulf’s $19B Anthropic Lease Puts Its Brownfield AI Strategy to the Test. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
+          "summary": "Data Center Frontier is describing a split in the AI infrastructure boom: big money is still flowing into data centers and related power systems, but communities are also pushing back against how and where those facilities are built. The title suggests the story focuses on both the capital rush around AI infrastructure and the local resistance it is creating. For the Energy / Utilities sector, that means demand for electricity, land, and grid connections is rising fast, even as permitting and public acceptance may become harder to secure. The piece likely frames this as a tension that could shape where new projects get approved and how quickly they come online.",
           "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
-          "whyItMatters": "This matters because large-load demand can change grid forecasts, trigger upgrade spending, and reopen the question of who pays for capacity.",
+          "whyItMatters": "This matters because AI-driven data center growth can increase utility load forecasts and infrastructure investment needs, while local resistance can delay projects and complicate grid planning.",
           "dataSignals": [
-            "data-center load",
-            "rate / bill impact"
+            "data-center load"
           ],
-          "sourceLabel": "Data Center Frontier · Jul 16, 10:55 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNOEZIWXkzamVzeW85SXBMUHVSZEJhci04VUZObG01c2ZCczZaaFVLZ1owc0o2VjFHYlFNTzdpVFp5YkJoYVNwdlpOV0VYMHFseF9ZYXRxazhwOTYwbC0yRGU2MFhLblpxSE9CZHJkYzNybnM3emk0QlFCem9oRUE1bW9IZHdGNV9NeUxEckktWGZwUlJnRmpkaUxEMVZ0akpZZm5HOUdhUTlzSGZsMDB5VHptcEhscHVMQWpPT0tGczNkTUd3UjMxRWlhQnQtczJmU3c?oc=5",
+          "sourceLabel": "Data Center Frontier · Jul 17, 4:48 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOc0t6MVRyUU9tRmdqRzhSbmU2RFRBMzZ0SDZLSVNIc1JUXzFmZEtQM2lQV1NzSXY4TzdaT0hVdl9mSGVrT1QwSUF3N0xlNW9SU29SdDVSTTJTWGlzQUZxTFNuTmJ3RTFSaU9vY0pFLXFDUjdpczlzZ1VJSjZUUlV0a1ZNVWkyOHdYUzNJQnBteDZZTXBSQTVvOXNkVUNHMmk4c1E?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T14:55:58+00:00",
+          "publishedAt": "2026-07-17T20:48:03+00:00",
           "glossary": [
             {
-              "term": "data center",
-              "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades."
+              "term": "AI infrastructure",
+              "definition": "The physical systems needed to run artificial intelligence, including data centers, servers, networking gear, and power supply."
+            },
+            {
+              "term": "Data center",
+              "definition": "A facility that houses computer equipment used to store, process, and move digital information."
+            },
+            {
+              "term": "Capital rush",
+              "definition": "A rapid increase in investment money flowing into a sector or project type."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators. The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill. The main terms to understand are data center, large load, grid upgrades, ratepayer, utility rates, regulatory review. Read the story by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure.",
+            "explanationText": "This is a broad industry-news story about a fast-growing market colliding with local concerns, not a narrow utility filing or rate case. When reading the source, look for who is investing, where projects are being proposed, and what kind of community resistance is mentioned, because those details determine whether the risk is financial, regulatory, or political. If the full story names specific regions, utilities, or approvals, that would change how directly it affects local load growth and project timelines.",
+            "glossary": [
+              {
+                "term": "AI infrastructure",
+                "definition": "The physical systems needed to run artificial intelligence, including data centers, servers, networking gear, and power supply.",
+                "whyItMatters": "Understanding this helps explain why AI growth affects electricity demand and utility planning."
+              },
+              {
+                "term": "Data center",
+                "definition": "A facility that houses computer equipment used to store, process, and move digital information.",
+                "whyItMatters": "Data centers are major electric customers, so their growth can affect local grids and utility investments."
+              },
+              {
+                "term": "Capital rush",
+                "definition": "A rapid increase in investment money flowing into a sector or project type.",
+                "whyItMatters": "It signals how quickly developers and financiers are trying to build more AI-related infrastructure."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-5-54493",
+          "title": "As data centers spring up in Kentucky, local organizers rally citizens for national day of protest",
+          "kicker": "Louisville Public Media",
+          "summary": "Local organizers in Kentucky are using a national day of protest to push back as more data centers are being built in the state. The report links the protests to concerns about the pace of data center growth, but the description does not specify which projects, companies, or local governments are involved. In energy and utilities terms, the story points to rising public scrutiny of facilities that can require large amounts of power, water, and infrastructure support. For Kentucky communities, that can affect utility planning, land use, and how quickly new industrial demand gets approved.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "This matters because large data centers can change electricity demand, water use, and local infrastructure costs, which can affect utility rates and community planning in Kentucky.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "Louisville Public Media · Jul 17, 4:45 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQS1EOWFfcllnSU54VGRuUWhLWExQSFk0bFk3RWt1MnRjMmtWbFI0ek1rRXE1LTNONzkxX0c4b0t5SDB3dmdtRGxCV215M2ZvNjAwUk1RQWNjUG5FRjcwd2dBS0dUaEpqWnBlSndoR0I5aG5XR3hZYVNxWktjSDZZNDFVcGY2bjdqNVdvU2V3WHZlMzUtcWpJcGt5ZFAwOHlzdzliOUhwdERXTW5nMVRkUzlURi13OUFWVTEtYTl6S3VJdGhJWGtuaFYwSzhwZw?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-17T20:45:00+00:00",
+          "glossary": [
+            {
+              "term": "data center",
+              "definition": "A facility full of computers and networking equipment that stores, processes, and moves digital information."
+            },
+            {
+              "term": "national day of protest",
+              "definition": "A coordinated day when people in different places hold demonstrations about the same issue."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a civic and policy story about public response to infrastructure growth, not a technical story about data centers themselves. When reading the source, pay attention to who is organizing, what specific concerns they raise, and whether officials or companies respond with details about power, water, or permits. If the full article names particular projects, utility agreements, or zoning decisions, that would change how serious and immediate the local impact appears.",
             "glossary": [
               {
                 "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
+                "definition": "A facility full of computers and networking equipment that stores, processes, and moves digital information.",
+                "whyItMatters": "Data centers often need major electric power and cooling, so their growth can affect local utilities and neighborhoods."
               },
               {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
-              },
-              {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
-              },
-              {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
-              },
-              {
-                "term": "utility rates",
-                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
-                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
-              },
-              {
-                "term": "regulatory review",
-                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
-                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
+                "term": "national day of protest",
+                "definition": "A coordinated day when people in different places hold demonstrations about the same issue.",
+                "whyItMatters": "It suggests the local action is part of a broader campaign, not just one isolated local complaint."
               }
             ]
           }
@@ -472,87 +502,94 @@
       "emptyMessage": "No qualified Humana / Health Insurance stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "humana-1-25182",
-          "title": "Can Humana's margin recovery drive long-term earnings growth?",
-          "kicker": "MSN",
-          "summary": "MSN is reporting on Can Humana's margin recovery drive long-term earnings growth?. In plain English, this is a health-insurance story: the important details are what changed for Humana, members, providers, claims, costs, or Medicare Advantage strategy. For Dustin, the useful read is whether this changes health-insurance economics, Humana operating signals, member experience, or analytics questions around claims and care management. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Can Humana's margin recovery drive long-term earnings growth?.",
-          "whyItMatters": "This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions.",
+          "id": "humana-1-84803",
+          "title": "Humana Inc.’s Stock Price Soars to $400, Witnessing a Robust 3.50% Increase",
+          "kicker": "Smartkarma",
+          "summary": "Humana Inc.’s stock is reported at $400 after rising 3.50%. The source does not say what caused the move, so the only concrete takeaway is that investors pushed the share price sharply higher in a single trading update. For a health insurer like Humana, a move this size can signal changing market expectations about earnings, Medicare Advantage results, regulation, or broader sector sentiment, but none of those drivers are confirmed here.",
+          "emailSummary": "Humana Inc.’s Stock Price Soars to $400, Witnessing a Robust 3.50% Increase.",
+          "whyItMatters": "This matters because Humana is a major player in health insurance, so a large stock move can affect investor sentiment, coverage of the managed-care sector, and expectations for how the company’s business is performing.",
           "dataSignals": [
             "Humana mention"
           ],
-          "sourceLabel": "MSN · Jul 16, 12:50 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNajc5dFJreXVkTG93ZXZuV2xTZG9POUd1NzVQMmtsUWZoeXJ1QXZNck80MnZwSGpYcFlLU1dYY2U1ZTZUZlJyeDRIYlVVOF8zOG13SDM4WVhQNEVwNjNkWmhxbFVURXpnSU9ERUZaYmhidE1fNkJ6NGFvTXZxWWFEYkkyeTA5UWFfRVlHeWhWWmtvLW5sZGVLNmlyek9VXzNNaGRLdjlTNTBqa1hXa2t1em96Z3JtOGNzLTFBWGlVQUNFUU9ZTFdR?oc=5",
+          "sourceLabel": "Smartkarma · Jul 17, 5:34 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPMmNoT1I1emotV295UnY1OVJHRjBtaFJQNS1WZk9RbnNMcG9fdE9rMWxvVFNyWkNPMUlBSmRzSVJZX0MtRFFRRF9qR0dYT0dUSGRnRjdnR3c0LW14YXZSQUJrbUplZ245aHczVy1IYzdUZThDSzliMUJ1R0k5SzI4eU5CN3dnNzFXZ216YUNzdWNQYkVRekprMUY4Umx3R09HdDdCeUlSSXBPSTVmQndLMTVaRHgtbEVMR1E?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T16:50:24+00:00",
-          "glossary": [],
+          "publishedAt": "2026-07-17T21:34:39+00:00",
+          "glossary": [
+            {
+              "term": "Stock price",
+              "definition": "The current price one share of a company costs in the market."
+            },
+            {
+              "term": "3.50% increase",
+              "definition": "A rise equal to 3.5% of the stock’s prior price."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Can Humana's margin recovery drive long-term earnings growth?. This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a market-move story, not an operating-results story, so the key thing to watch is whether the price change is tied to earnings, guidance, regulation, or analyst commentary. Because the description gives no driver, interpretation should stay limited unless the full source explains what news triggered the jump and whether the move held through the close.",
+            "glossary": [
+              {
+                "term": "Stock price",
+                "definition": "The current price one share of a company costs in the market.",
+                "whyItMatters": "It shows how investors are valuing Humana at a given moment."
+              },
+              {
+                "term": "3.50% increase",
+                "definition": "A rise equal to 3.5% of the stock’s prior price.",
+                "whyItMatters": "It indicates the size of the market move and whether it is routine or unusually large."
+              }
+            ]
           }
         },
         {
-          "id": "humana-2-15209",
-          "title": "Humana (NYSE:HUM) Hits New 52-Week High - Here's What Happened",
-          "kicker": "MarketBeat",
-          "summary": "MarketBeat is reporting on Humana (NYSE:HUM) Hits New 52-Week High - Here's What Happened. In plain English, this is a health-insurance story: the important details are what changed for Humana, members, providers, claims, costs, or Medicare Advantage strategy. For Dustin, the useful read is whether this changes health-insurance economics, Humana operating signals, member experience, or analytics questions around claims and care management. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Humana (NYSE:HUM) Hits New 52-Week High - Here's What Happened.",
-          "whyItMatters": "This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions.",
+          "id": "humana-3-40209",
+          "title": "How Investors May Respond To Humana (HUM) Analyst Upgrades In Earnings Expectations",
+          "kicker": "simplywall.st",
+          "summary": "A Simply Wall St item says analysts have upgraded earnings expectations for Humana (ticker HUM), and it asks how investors may respond. No specific analyst firm, earnings numbers, or target price changes are given in the provided description. Based on the title alone, this is a market-reaction piece about how updated profit forecasts could affect sentiment toward the health insurer. For a company like Humana, upgraded expectations can matter because they may influence valuation, trading behavior, and how investors judge the outlook for future Medicare and managed-care results.",
+          "emailSummary": "How Investors May Respond To Humana (HUM) Analyst Upgrades In Earnings Expectations.",
+          "whyItMatters": "This matters because changes in earnings expectations can move a health insurer’s stock price and shape how investors assess its future profitability and risk.",
           "dataSignals": [
             "Humana mention"
           ],
-          "sourceLabel": "MarketBeat · Jul 16, 11:11 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYnZXTUN6X0FMY2JxdGdXS1E5dGdJS0w0MTVRMEdrN1Awa25sbmtzMnVVbURURDRNRF9rRGhOWDBybUo3YjF0R01yUG03ZTJaWUNSRWVEcXdwemxlcWZkTHJBQnVVZHRGYUhDWkJ3NUMzSGYySldabkdxRGJVbWRfWWR6dU1wNEFNSmFiZFRXa2tNZDNWOV9VSHBTdE5abFNhLS1oajF6TW5PSk5wd3hv?oc=5",
+          "sourceLabel": "simplywall.st · Jul 17, 6:28 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1E1ellLY0dhTVJDbjEyVGlBTGVzTjV2XzVjWGlsUXQyMm1DWFRSS3J3TjZfUmFPTUFhTE5KSzZ3dEs0Wm45WS03VXJ4RVE3Mk5zMmJDQWd1WloxV2pxek1hZm14aGVKNFJJVGhNLWZZUlZJUU5PQkprUzZCVGlfNzhNMU5zLVAxeFVESUdWYkpmSW9scmJPMWlzZkppNEJCTFh4YURKVV83R2F6WlNJNlk0eXRvdWh1dnp6dmZ0Xy3SAcYBQVVfeXFMUGJ3OU9UTl9hc0hRcW1aMEpESVM3ZFpFTzhwRWhLeEpKNlFjNS1FUnNSNVB3UFFFTXVxUnh4S2FTbWdrZ1A4clF6LU1TRVJJaTVnbWxsS1pxM2dvXzJLazV0ZVNnY25nNGRSSkh6ZmFJZTltTFF3WndfQUluV2ROdUNiUUdNb2ZmeTFiMTQ5OHR4aWQ5allMZjdQQzRtNXZUNWM3QVZZVVQ0andIbjZpeFZkTWlHNGZLb3FxRWsxYmFJUzlOd2VR?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T15:11:26+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about Humana (NYSE:HUM) Hits New 52-Week High - Here's What Happened. This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "humana-3-16084",
-          "title": "Humana (HUM) Could Be 91% Overvalued As Medicare Scrutiny Reframes Valuation",
-          "kicker": "Sahm",
-          "summary": "Sahm is reporting on Humana (HUM) Could Be 91% Overvalued As Medicare Scrutiny Reframes Valuation. In plain English, this is a health-insurance story: the important details are what changed for Humana, members, providers, claims, costs, or Medicare Advantage strategy. For Dustin, the useful read is whether this changes health-insurance economics, Humana operating signals, member experience, or analytics questions around claims and care management. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Humana (HUM) Could Be 91% Overvalued As Medicare Scrutiny Reframes Valuation.",
-          "whyItMatters": "This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions.",
-          "dataSignals": [
-            "Humana mention"
+          "publishedAt": "2026-07-17T22:28:22+00:00",
+          "glossary": [
+            {
+              "term": "Ticker",
+              "definition": "A short stock symbol used to identify a publicly traded company, such as HUM for Humana."
+            },
+            {
+              "term": "Analyst upgrade",
+              "definition": "A positive revision by a securities analyst, often meaning they now expect better financial results or view the stock more favorably."
+            },
+            {
+              "term": "Earnings expectations",
+              "definition": "Forecasts for how much profit a company is expected to make in a future period."
+            }
           ],
-          "sourceLabel": "Sahm · Jul 16, 7:09 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOd2NmaTRDMEl5d1BvR3BOVkRIbUhMWGEwSzV6RDdnUzlEMC1LWlRJczdTNUFkanoyTFVTa0pGZkk4SmZ2aUk4Qm1UTUhCdW9IcUdJWjhDeExodFQ3Nm10ZGNRZDF4cDhHd0pKM1d4X2Zud0RfUVMyaU9QVlVkcjFhb3dpM3gxcGNhc2ZNZWp3M0lLRElMTmxBZ21jWnJ0d0xVeEpYR1N4b0pYXzc0eUhGRFVSWlNILXhVNjUtdlRHTzhXZ2c?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T11:09:48+00:00",
-          "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Humana (HUM) Could Be 91% Overvalued As Medicare Scrutiny Reframes Valuation. This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "humana-4-47435",
-          "title": "Brokers Set Expectations for Humana's Q4 Earnings (NYSE:HUM)",
-          "kicker": "MarketBeat",
-          "summary": "MarketBeat is reporting on Brokers Set Expectations for Humana's Q4 Earnings (NYSE:HUM). In plain English, this is a health-insurance story: the important details are what changed for Humana, members, providers, claims, costs, or Medicare Advantage strategy. For Dustin, the useful read is whether this changes health-insurance economics, Humana operating signals, member experience, or analytics questions around claims and care management. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Brokers Set Expectations for Humana's Q4 Earnings (NYSE:HUM).",
-          "whyItMatters": "This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions.",
-          "dataSignals": [
-            "Humana mention"
-          ],
-          "sourceLabel": "MarketBeat · Jul 16, 6:58 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUERqY2pPaGNOdXlua1dRaDlwMWdBcUxfY0RZemExUGxaM2ZXSGhlRjBvWllId2I2RVRPb21wbW94U0RHVC1kUkQtcU9vQzk5WkxMemJTR1B3RW1RNE40c29ESmhaaE5pNkRhc0dHRXhiX3BkcXV1Z2pBS19jeVRvb1FPTFVBbE5FNE1OeFc2dEczR3Vsa3NHVkRrZGlaM2x3SmRxNmQ4UWtDUEdHSmJr?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T10:58:27+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about Brokers Set Expectations for Humana's Q4 Earnings (NYSE:HUM). This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a market commentary story, not an operating update, so the key thing to watch is whether the analyst revisions are broad and meaningful or just a small forecast tweak. When reading the full piece, look for the size of the earnings changes, the reason analysts gave, and whether the market already priced in the better outlook; those details determine whether the upgrade is truly new information.",
+            "glossary": [
+              {
+                "term": "Ticker",
+                "definition": "A short stock symbol used to identify a publicly traded company, such as HUM for Humana.",
+                "whyItMatters": "It is the standard way investors and analysts refer to the company in market reports."
+              },
+              {
+                "term": "Analyst upgrade",
+                "definition": "A positive revision by a securities analyst, often meaning they now expect better financial results or view the stock more favorably.",
+                "whyItMatters": "Upgrades can change investor sentiment and sometimes trigger trading in the stock."
+              },
+              {
+                "term": "Earnings expectations",
+                "definition": "Forecasts for how much profit a company is expected to make in a future period.",
+                "whyItMatters": "Stocks often react when these forecasts rise or fall, even before actual results are reported."
+              }
+            ]
           }
         }
       ]
@@ -563,115 +600,158 @@
       "emptyMessage": "No qualified Kentucky Healthcare / US Healthcare stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "kentucky_healthcare-1-21378",
-          "title": "University of Kentucky's $450 million building boom reshaping campus from healthcare to housing",
-          "kicker": "LEX 18 News",
-          "summary": "LEX 18 News is reporting on University of Kentucky's $450 million building boom reshaping campus from healthcare to housing. In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved. For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "University of Kentucky's $450 million building boom reshaping campus from healthcare to housing.",
-          "whyItMatters": "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs.",
-          "dataSignals": [
-            "Kentucky healthcare"
-          ],
-          "sourceLabel": "LEX 18 News · Jul 16, 6:10 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOX181UGVybmRzVnpqaWdEZ3puYVQtOC1OdzBwa0c2YkVhQThnWVBjejB0SDRWdW9JUU1WNW1LZEVFQWE2d0Y2RklVX0MxcVFRYXZOWHd5TVdQaGlTTHZlSVN1QnQxQzlLOFJJWGQ5aERiSXFVdTRTM2pHSUxvVWpXMWFydDFPcmhoQTdMMGZtYmVmZjlpSTNrT3RVY19hc244cVBxbWJydnUzSENtbmQ5NE42NUFrQ1NTMEVHeTljb3F6TXMtN2VQa2t0V0RGVHVxTndTUA?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T22:10:23+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about University of Kentucky's $450 million building boom reshaping campus from healthcare to housing. This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "kentucky_healthcare-2-82704",
-          "title": "Kentucky hospitals face scrutiny over medical bills",
-          "kicker": "The Courier-Journal",
-          "summary": "The Courier-Journal is reporting on Kentucky hospitals face scrutiny over medical bills. In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved. For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Kentucky hospitals face scrutiny over medical bills.",
-          "whyItMatters": "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs.",
+          "id": "kentucky_healthcare-1-86728",
+          "title": "Kentucky families rally against proposed Medicaid waiver reimbursement cuts",
+          "kicker": "WDRB",
+          "summary": "Kentucky families rallied against proposed cuts to reimbursement rates in Medicaid waiver programs, according to WDRB. The story indicates that the concern is not about Medicaid itself broadly, but about payments tied to waiver services that help people receive care outside of institutions. Families are pushing back because lower reimbursement can make it harder to keep providers in the program and maintain access to care. For Kentucky, this could affect how easily people with disabilities or other long-term care needs can get services in the community.",
+          "emailSummary": "Kentucky families rally against proposed Medicaid waiver reimbursement cuts.",
+          "whyItMatters": "This matters because reimbursement changes can directly affect whether home- and community-based Medicaid services are available, which can ripple into provider participation, family caregiving burdens, and access to care across Kentucky.",
           "dataSignals": [
             "Kentucky healthcare",
-            "hospital operations"
+            "Medicaid signal"
           ],
-          "sourceLabel": "The Courier-Journal · Jul 16, 10:07 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPZ05kZkg3Y0RfaUlveFlFeEswb203Y0drWWdlQWpocGxHbmhPWUtxUmNKX3FnZDZoOUZDQ2laeXQ5b3NaWGdJaHZXck0zOWp4a3MwMUJFejBhUUlWSlJHNGY1U005RktIRXdRYm1Bc1VZSzZSSVExbE9DTk0tZXZGb0xtc3Fzd1lYd0I5SXBhOEFEUzlZTFFxUzZ4SC1keVpObXI4SDEzR1VBcE5jNGdxcHF5N19ubXdCYXRHRUhWZU9pb0Jra0xLWC15b09DeGt5emhDNg?oc=5",
+          "sourceLabel": "WDRB · Jul 17, 9:22 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPdEZtaTk5d3oxVFJJeGpQU3paM2hNbGZwNXEwM0ZmNjFwZDEtQkNra1VnRXNFOU50LUs3R3ZmUWdobVc2RzVsVjFoSHVFelVOWTM0Z3YyV1R3SElLWGNPb2QxR1UwamZOSEhTaHRQQllVNnUtVmpNSWh6Qk5FSzV5MzZCVkVSYm9FNEVCSWRwdXdkOG9Ga1FveFRpeEdvenEtOE55RGhkZVR0aFZNMHpCcmljYUxIY2VGSW41VzUwd3dYYjRCX3NQajNZbkpOaXVuNmtVamdDNll6VmcyNUlRbnhTOG5vZw?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T14:07:00+00:00",
-          "glossary": [],
+          "publishedAt": "2026-07-18T01:22:00+00:00",
+          "glossary": [
+            {
+              "term": "Medicaid waiver",
+              "definition": "A Medicaid program that lets states get federal approval to provide certain services outside the usual rules, often to help people receive care at home or in the community."
+            },
+            {
+              "term": "Reimbursement",
+              "definition": "The amount a government program or insurer pays a provider for delivering a service."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Kentucky hospitals face scrutiny over medical bills. This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs. The main terms to understand are ratepayer. Read for what changed, who is affected, why it matters now, and what happens next.",
+            "explanationText": "This is a policy and advocacy story about public funding for healthcare services, not a clinical or hospital operations story. When reading the source, pay attention to which waiver services are being discussed, who would see the rate change, and whether the proposal is final or still under review. If the cut applies only to certain services or is delayed, the real-world impact could be much smaller than the headline suggests.",
             "glossary": [
               {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
+                "term": "Medicaid waiver",
+                "definition": "A Medicaid program that lets states get federal approval to provide certain services outside the usual rules, often to help people receive care at home or in the community.",
+                "whyItMatters": "Waiver programs are often how long-term support services are delivered, so changes to them can affect who gets care and where."
+              },
+              {
+                "term": "Reimbursement",
+                "definition": "The amount a government program or insurer pays a provider for delivering a service.",
+                "whyItMatters": "If reimbursement drops, providers may cut back or leave the program, which can reduce access for patients."
               }
             ]
           }
         },
         {
-          "id": "kentucky_healthcare-3-21136",
-          "title": "West Virginia National Guard Airmen deliver free healthcare during Kentucky readiness mission",
-          "kicker": "WV News",
-          "summary": "WV News is reporting on West Virginia National Guard Airmen deliver free healthcare during Kentucky readiness mission. In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved. For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "West Virginia National Guard Airmen deliver free healthcare during Kentucky readiness mission.",
-          "whyItMatters": "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs.",
-          "dataSignals": [
-            "Kentucky healthcare"
-          ],
-          "sourceLabel": "WV News · Jul 16, 8:11 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNdjE4bG9oMjQzdXZZZjVkR0x1TVVYRi1XaHJoR1ZXR1l3ZldGV2xIVllWU202SnZMSFc4VHZCOFE5dFh1UmRfUDY1TUw4ejZ4b0RuNXlKRTZOazVJLWZQMl9KMDU2QzFSTWMyRzZ1ZDZVWTJrMlB2OG81S2JLZm9YajV5dTIyRVhpbjNJMTBTQnV4cjhNZTNIMGs2Z3k0dFVZcHFZb0tZREh1eXJXU3JHSUxGQWNGM1dwQ015TkNvWno2a0NlbDBwTEFiVUFMTmFIRTI0a1M5aHAxWGZUUmZIMC1YeVdMdzVlMjdpTkJQSXVUSEJuVDJnT2FvSHFoYzFCNngtaElDQnF3QQ?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T12:11:00+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about West Virginia National Guard Airmen deliver free healthcare during Kentucky readiness mission. This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "kentucky_healthcare-4-4172",
-          "title": "Over 500 hospitals received a federal warning, 8 are in Kentucky",
+          "id": "kentucky_healthcare-2-7518",
+          "title": "8 Kentucky hospitals were warned by the federal government",
           "kicker": "The Courier-Journal",
-          "summary": "The Courier-Journal is reporting on Over 500 hospitals received a federal warning, 8 are in Kentucky. In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved. For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Over 500 hospitals received a federal warning, 8 are in Kentucky.",
-          "whyItMatters": "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs.",
+          "summary": "The Courier-Journal reports that the federal government warned eight Kentucky hospitals. The headline does not say what the warning was about, which agencies were involved, or whether any penalties followed. Even so, it points to a possible compliance, safety, or quality issue affecting multiple hospitals in the state. For Kentucky healthcare, the key question is whether this is an isolated administrative notice or a sign of broader operational problems.",
+          "emailSummary": "8 Kentucky hospitals were warned by the federal government.",
+          "whyItMatters": "This matters because federal warnings can signal risks to patient care, hospital funding, or regulatory standing that may affect access and service quality across Kentucky.",
           "dataSignals": [
             "Kentucky healthcare",
             "hospital operations"
           ],
-          "sourceLabel": "The Courier-Journal · Jul 16, 5:07 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNQkdyMEJ2cU5nNm1Qak9CZXgwdlViN285ZXQxTWpub2t3c0huY0VLdWRhS2hPa3N1S2RmZEtTU0lONzJ5RXZueXJvcnlmYzZfeVlzX0pDM2lRZFExQjdIRkU5aDZRVDFnTUI1N3laQ0U5bjRhNFc2bktFN1JwaFhFR0l1LVBWQ3U5VXVQWVBKMnc1dnd2cUYzZEtLREsySnFnNVltYzBBZGwyMVNBNWJuRWlXak9KMkZXbG14QVJGOG9nNmRQWFVYMlozNWs?oc=5",
+          "sourceLabel": "The Courier-Journal · Jul 17, 7:10 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1nYVdjUkFDMTE5LW51Z25kY1I2TnhQa19CbUo2SU9LV2hiMXpBbXdGVUp4ZEwtcVk2VFo0b1p2d1RaOXdxaldmOG9US2hXdU42Y2VoTk93cklZbk85am5jZkZLdG5pMVk?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T09:07:51+00:00",
-          "glossary": [],
+          "publishedAt": "2026-07-17T11:10:41+00:00",
+          "glossary": [
+            {
+              "term": "federal government warning",
+              "definition": "An official notice from a U.S. agency saying a hospital may be out of compliance or facing a problem that needs attention."
+            },
+            {
+              "term": "compliance",
+              "definition": "Following the rules and standards set by regulators."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Over 500 hospitals received a federal warning, 8 are in Kentucky. This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a short regulatory news item, so the main thing to look for in the full story is the exact reason for the federal warning and which hospitals were named. If the warning involved patient safety, billing, staffing, or accreditation, the impact would be very different, so those details change how serious the story is.",
+            "glossary": [
+              {
+                "term": "federal government warning",
+                "definition": "An official notice from a U.S. agency saying a hospital may be out of compliance or facing a problem that needs attention.",
+                "whyItMatters": "The type of warning often determines whether a hospital must make changes, face monitoring, or risk penalties."
+              },
+              {
+                "term": "compliance",
+                "definition": "Following the rules and standards set by regulators.",
+                "whyItMatters": "Hospitals that fall out of compliance can face inspections, fines, or other consequences that affect operations."
+              }
+            ]
           }
         },
         {
-          "id": "kentucky_healthcare-5-89823",
-          "title": "New Kentucky law aims to address ongoing physician shortage statewide",
-          "kicker": "LEX 18 News",
-          "summary": "LEX 18 News is reporting on New Kentucky law aims to address ongoing physician shortage statewide. In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved. For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "New Kentucky law aims to address ongoing physician shortage statewide.",
-          "whyItMatters": "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs.",
+          "id": "kentucky_healthcare-3-96566",
+          "title": "Kentucky lawmakers show support for end-of-life medical cannabis access",
+          "kicker": "The Lexington Times",
+          "summary": "Kentucky lawmakers are being reported as supportive of allowing medical cannabis for end-of-life care. The available information does not say which lawmakers, what bill or policy is involved, or how far the effort has advanced. Even so, the story points to a possible change in how patients facing terminal illness could manage pain or other symptoms in Kentucky. That would matter most for people near the end of life, their families, and the clinicians who treat them.",
+          "emailSummary": "Kentucky lawmakers show support for end-of-life medical cannabis access.",
+          "whyItMatters": "This matters because it could expand symptom-management options for terminal patients in Kentucky and change how hospice and palliative care teams think about treatment choices.",
           "dataSignals": [
-            "Kentucky healthcare"
+            "Kentucky healthcare",
+            "access / care delivery"
           ],
-          "sourceLabel": "LEX 18 News · Jul 16, 5:09 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUGhZM1FDUTVSbjY5NGE1SmlQVVgtMkZuOEJyTkRsZHZreTh3NlpSOGNIU21yc3FmSVBMSHhXaXJkSmsxVGFacjkxWU1lMXYwM0RHU3U5Ui1FU2I3c0J2Ymd0a0dYbHlxTzdBTF92OWZYUjhqcFZDY0RsRGN6SnVDXzJOUm1vd29FVWJGTGxTRW9NbkRuTzRZUEtxN09aR1pxNGg0cmk4ZmhhRVY4VVAyUFJQRlg?oc=5",
+          "sourceLabel": "The Lexington Times · Jul 17, 8:51 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbjlOWllHbzlhUmZ3Z2JVa19CT1RXLXZSb2h5OTdxNEotcS1FZ0dYN3Vha3ZhQy1hVXE0amt0OGxQWFAyeHQ3NVpRRWctNThHSUdKejl5ejQyNVU0cVpFRWhud1pTLWpRUzBMLWtjTGZzeGRyOTluVEI3M01SMGJUeFNEY0JadmNMSnhnR3JXdTJ0NEpzUkt6V2Q3U19xN3ZsdG9sbTREelBGbGRE?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T21:09:45+00:00",
+          "publishedAt": "2026-07-18T00:51:00+00:00",
+          "glossary": [
+            {
+              "term": "medical cannabis",
+              "definition": "Cannabis products used under medical guidance to treat symptoms rather than for recreation."
+            },
+            {
+              "term": "end-of-life care",
+              "definition": "Medical care focused on comfort, symptom relief, and quality of life for a person who is nearing death."
+            },
+            {
+              "term": "hospice",
+              "definition": "Specialized care for people who are expected to have limited time to live, usually focused on comfort instead of cure."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a policy and healthcare access story, so the key question is not just whether lawmakers “support” the idea, but whether that support turns into a bill, a vote, or a rule change. When reading the source, look for specifics on eligibility, allowed products, and whether the change would apply only in hospice or more broadly; those details would determine how meaningful the proposal really is.",
+            "glossary": [
+              {
+                "term": "medical cannabis",
+                "definition": "Cannabis products used under medical guidance to treat symptoms rather than for recreation.",
+                "whyItMatters": "It is the specific therapy being discussed, and the rules around it determine who can legally use it and for what purpose."
+              },
+              {
+                "term": "end-of-life care",
+                "definition": "Medical care focused on comfort, symptom relief, and quality of life for a person who is nearing death.",
+                "whyItMatters": "The policy appears aimed at this stage of care, so the impact would be limited to patients with terminal or severe illness."
+              },
+              {
+                "term": "hospice",
+                "definition": "Specialized care for people who are expected to have limited time to live, usually focused on comfort instead of cure.",
+                "whyItMatters": "Hospice providers would be among the groups affected if cannabis becomes an allowed option for symptom relief."
+              }
+            ]
+          }
+        },
+        {
+          "id": "kentucky_healthcare-4-58491",
+          "title": "Louisville clinic for adults with disabilities faces staffing crisis despite temporary funding",
+          "kicker": "WDRB",
+          "summary": "A Louisville clinic that serves adults with disabilities is dealing with a staffing crisis even though it has received temporary funding. The report says the money has not solved the underlying problem of finding and keeping enough workers. That suggests the clinic's services may still be strained or limited if staffing levels do not improve. For local disability care, the story points to a broader labor shortage that can affect access even when short-term financial support is available.",
+          "emailSummary": "Louisville clinic for adults with disabilities faces staffing crisis despite temporary funding.",
+          "whyItMatters": "This matters because people with disabilities may lose reliable access to day-to-day care and support if clinics cannot staff up, even when outside funding arrives.",
+          "dataSignals": [
+            "Louisville healthcare"
+          ],
+          "sourceLabel": "WDRB · Jul 17, 4:06 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNMm9xRWxnZjlqUlBCZFVCZDBtdzJfVmhGZm1odmVOdUV5ZnBsUnpJbjRCQTBHejhaRzZNdDJ3T1ZUSzVnVGlvOEJrU2RYWDkxQ1BLZG5mTWROUm5Odmg3dEJVeXBuNHRmYkVJWHVpYW9GOHdWN21tRzl2WGJLcWlsSkQ1aTZTZG5JM1hBLVhGQ28zNTdYYWNSVFVyVHlFTmZZUUJvd2RoaVFvVmc1Q0xBeXJ3azhzWXZYZVp5WWQ2LU9YSEVIY3VjZUYyR2l2ZHc5UENKemp3QmVaNVVlN3pDV0pzRklCQm1fcHFzdkxRbVNCVjU4NVlpdFpxM0ZIVDZvS2gwUGJRNTVTTkk?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-17T20:06:00+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about New Kentucky law aims to address ongoing physician shortage statewide. This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
+            "explanationText": "This is a local health-care operations story, not a medical research story. When reading the source, pay close attention to whether the temporary funding is meant to cover wages, recruitment, or emergency operations, because that changes whether it is likely to fix the staffing problem. The key interpretation question is whether the crisis is mainly about money, labor supply, or the clinic's ability to retain workers; the answer determines whether the situation is a short-term disruption or a longer-term service risk.",
             "glossary": []
           }
         }
@@ -683,109 +763,246 @@
       "emptyMessage": "No qualified Analytics stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "analytics-1-25524",
-          "title": "10 Microsoft Copilot Features in Power BI You Should Use",
+          "id": "analytics-1-13130",
+          "title": "\"Snowflake Rival\" Databricks Completes $3 Billion Strategic Financing: Valuation Surges to $188 Billion as AI Data Platform Value Continues to be Reassessed",
+          "kicker": "Bitget",
+          "summary": "Databricks says it has completed a $3 billion strategic financing round, and the company’s valuation is reported to have risen to $188 billion. The headline frames Databricks as a rival to Snowflake and says the deal reflects a broader reassessment of the value of AI data platforms. Based on the provided text, no additional details are given about who led the financing, how the money will be used, or any change in business terms. For the analytics sector, the main takeaway is that investor appetite for large data and AI infrastructure companies appears to remain strong.",
+          "emailSummary": "\"Snowflake Rival\" Databricks Completes $3 Billion Strategic Financing: Valuation Surges to $188 Billion as AI Data Platform Value Continues to b…",
+          "whyItMatters": "This matters because a higher valuation for a major data-platform vendor can influence spending, competitive positioning, and how enterprises and investors judge the market for AI and analytics infrastructure.",
+          "dataSignals": [
+            "data-platform signal"
+          ],
+          "sourceLabel": "Bitget · Jul 17, 6:11 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBtcTN2cW82bm56NDVObUhxUklCc1JiQW5tSS1YMHZOa25aOHVyNTNxVmNWdzRFOGlPWFF0M0p6V2lHVzlfcDVxTzRPR3lUNEJ1Q2lLd3ZjLXQxV0xfRXdBM3hnb9IBY0FVX3lxTFBtcTN2cW82bm56NDVObUhxUklCc1JiQW5tSS1YMHZOa25aOHVyNTNxVmNWdzRFOGlPWFF0M0p6V2lHVzlfcDVxTzRPR3lUNEJ1Q2lLd3ZjLXQxV0xfRXdBM3hnbw?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-17T10:11:41+00:00",
+          "glossary": [
+            {
+              "term": "strategic financing",
+              "definition": "A funding round in which the investors are chosen partly for the business value they can bring beyond cash."
+            },
+            {
+              "term": "valuation",
+              "definition": "The estimated total market value of a company as implied by a financing deal or other transaction."
+            },
+            {
+              "term": "AI data platform",
+              "definition": "A software platform that stores, organizes, and processes data so it can be used for analytics and artificial intelligence."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a market-and-funding story, not a product or earnings story, so the key thing to watch is the financing size and the implied valuation. When reading the source, pay attention to whether it provides named investors, deal structure, or new business metrics, because those details would change how meaningful the headline is. If the financing was driven by strong revenue growth or customer demand, the valuation signal is more substantive; if not, it may mainly reflect investor enthusiasm for AI infrastructure.",
+            "glossary": [
+              {
+                "term": "strategic financing",
+                "definition": "A funding round in which the investors are chosen partly for the business value they can bring beyond cash.",
+                "whyItMatters": "It can signal partnership value, market access, or strategic alignment, not just capital raised."
+              },
+              {
+                "term": "valuation",
+                "definition": "The estimated total market value of a company as implied by a financing deal or other transaction.",
+                "whyItMatters": "It shows how investors are pricing the company and can affect expectations across the sector."
+              },
+              {
+                "term": "AI data platform",
+                "definition": "A software platform that stores, organizes, and processes data so it can be used for analytics and artificial intelligence.",
+                "whyItMatters": "These platforms are central to how organizations build AI products and data-driven decision-making."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-2-19485",
+          "title": "Analytics and Data Science News for the Week of July 17; Updates from Anaconda, Databricks, LatentView & More",
+          "kicker": "Solutions Review",
+          "summary": "This weekly roundup says it covers analytics and data science updates for the week of July 17, with mentions of Anaconda, Databricks, LatentView, and other vendors. From the title alone, it appears to be a curated industry-news digest rather than a single breaking event, so the key point is that multiple companies in the data stack likely made announcements or product updates. The description does not give the specifics of those updates, so only the broad scope is clear. For readers in analytics, this is a signal to track vendor changes that could affect tools, workflows, or platform choices.",
+          "emailSummary": "Analytics and Data Science News for the Week of July 17; Updates from Anaconda, Databricks, LatentView & More.",
+          "whyItMatters": "This matters because vendor announcements from major data-platform and analytics companies can change how teams build, deploy, and govern data workflows.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "Solutions Review · Jul 17, 2:05 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxONmJKb2FaSVhFdTlTTEFPWDZpRDdaZmdSNEZNd3BEWmRHVXFzQ0RFY3VQNkVYRmctd2FJS2tmaDhubWRFNGJZRzd3WUJCdjlUbmIwbng4ZTF2cnc4aFhVTjM1cXBSN3AtR3l4N3BhaGF3cnBnNXRrdEViUlhvOE1OMEtTSk5UdkRRQXRzZzA4TUs4MzRaNk1GU01LZTV3dmkxbzhXak8tMWhQMUdMd1NDTnBBY1BNb3E5OFFGV0xfNkJBdEpzOHhwOEYzclhKRXpsM2NEMXhDYzRTMVp3MGVlVE90cDhjWEtFRlA4?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-17T18:05:15+00:00",
+          "glossary": [
+            {
+              "term": "Analytics",
+              "definition": "The process of examining data to find patterns, measure performance, and support decisions."
+            },
+            {
+              "term": "Data science",
+              "definition": "A discipline that uses statistics, programming, and machine learning to extract insights from data."
+            },
+            {
+              "term": "Vendor",
+              "definition": "A company that sells software or services to customers."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is an industry roundup, not a single-company or single-product story, so the main thing to watch is which announcements are actually included and whether they are product launches, partnerships, earnings-related updates, or acquisitions. If the source article lists concrete releases, pricing changes, or platform features, those details would materially change how important the roundup is for working analysts and data teams.",
+            "glossary": [
+              {
+                "term": "Analytics",
+                "definition": "The process of examining data to find patterns, measure performance, and support decisions.",
+                "whyItMatters": "It is the broad field this roundup is about, so it frames the kinds of products and updates being discussed."
+              },
+              {
+                "term": "Data science",
+                "definition": "A discipline that uses statistics, programming, and machine learning to extract insights from data.",
+                "whyItMatters": "It indicates that the roundup may include tools or releases aimed at building models and data-driven applications."
+              },
+              {
+                "term": "Vendor",
+                "definition": "A company that sells software or services to customers.",
+                "whyItMatters": "The story is about updates from vendors, which can affect what products teams evaluate or adopt."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-3-42725",
+          "title": "Equifax stock trades steady as credit reporting group leans on data and analytics growth",
+          "kicker": "ad-hoc-news.de",
+          "summary": "Equifax shares were reported as trading steadily while the credit reporting company continues to emphasize growth in its data and analytics business. The brief does not give earnings, guidance, or a new strategic announcement, so the main takeaway is that investors are seeing the company as stable for now. For analytics-focused readers, the story points to Equifax trying to increase the share of revenue tied to data products and analytical services rather than only traditional credit reporting.",
+          "emailSummary": "Equifax stock trades steady as credit reporting group leans on data and analytics growth.",
+          "whyItMatters": "This matters because Equifax is a major data company, and its growth in analytics can signal demand trends for credit, identity, and risk-data services that many lenders and financial products depend on.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "ad-hoc-news.de · Jul 18, 12:29 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTFZsVDcteFBlZFdWVmpib2VnUFNRWnJSTnVBRDRweC1pdnJBUzVac05jcl8teVh4SzMxSEJtMi1pTTRTS2JZbGhxOERLMm1EQjcyWW54N3Y5b0ZuSmlCY1MyZktXQ0xxbGtvZGIwQzZ4T01UUGhydnBlYjh1Q0JpVk9aRm1FbkhTbUw3cHNDanNRcXNSRm1KdldYVkdWYWhzR2JQcGdQX2N0bnBtakdpcnd3M09vV1lNQTV0eU10SFFoUnI5Tm1Ibml3?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-18T04:29:38+00:00",
+          "glossary": [
+            {
+              "term": "credit reporting group",
+              "definition": "A company that collects and sells consumer credit information to lenders and other businesses."
+            },
+            {
+              "term": "data and analytics",
+              "definition": "Products and services that use collected data to generate insights, scores, or predictions."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a short market-moving business note, not a full earnings report, so the main thing to watch is what the company is said to be emphasizing versus any actual numbers. If the full story includes revenue, margins, or updated guidance, that would matter more than the steady stock price; without those details, the signal is mostly about investor sentiment and strategy.",
+            "glossary": [
+              {
+                "term": "credit reporting group",
+                "definition": "A company that collects and sells consumer credit information to lenders and other businesses.",
+                "whyItMatters": "It helps explain the core business Equifax is built around."
+              },
+              {
+                "term": "data and analytics",
+                "definition": "Products and services that use collected data to generate insights, scores, or predictions.",
+                "whyItMatters": "This is the growth area the company is leaning on, so it may drive future revenue."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-4-4983",
+          "title": "DX Foundation Announces Official Databricks Partnership Expanding Enterprise AI and Lakehouse Data Capabilities",
+          "kicker": "ipsnews.net",
+          "summary": "DX Foundation says it has formed an official partnership with Databricks. The announcement says the deal is meant to expand enterprise AI and lakehouse data capabilities, but it does not give details on products, customers, timing, or financial terms. Based on the title, this appears to be a collaboration around Databricks’ data and AI platform rather than a completed acquisition or merger. For organizations using modern analytics stacks, the main implication is that DX Foundation may be positioning itself to offer stronger support or services around data engineering and AI workloads.",
+          "emailSummary": "DX Foundation Announces Official Databricks Partnership Expanding Enterprise AI and Lakehouse Data Capabilities.",
+          "whyItMatters": "This matters because partnerships with a major analytics vendor can affect which tools, services, and implementation options are available to companies building data and AI systems.",
+          "dataSignals": [
+            "article trigger",
+            "source credibility",
+            "practical impact"
+          ],
+          "sourceLabel": "ipsnews.net · Jul 17, 8:15 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOVGkwMElRQ04xbHNiNWdnWld6WnlMWTFFekd1MXhHaWNYRk5YRjFJQ2dhZmc1Nm80YS1lbGlKTW1PRVZWV0RLMDg5WTRWeUFudEFGU1dIRUE4RG5YTXlDclBsWmpSNHF4LW1xYVpNRnpyOG1SbF9iZmdWSm5SZUZSalZJNkdLamJSbC1oRTlRTHJQOTdNdUR6VThCUlBjaUwzTU1HakZ4M3U5QXdhYW41czN2cTE4b0txeHRfdWR3ajJFaFh2VTYwSElMX3BBNlR6cG10YTZ3N0JjRWNLeDg2U29OVTl4OVk?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-18T00:15:42+00:00",
+          "glossary": [
+            {
+              "term": "Databricks",
+              "definition": "A software company known for a cloud platform used to store, process, and analyze large data sets and build AI applications."
+            },
+            {
+              "term": "Enterprise AI",
+              "definition": "Artificial intelligence systems built for business use, such as automating tasks, improving decisions, or analyzing large amounts of data."
+            },
+            {
+              "term": "Lakehouse",
+              "definition": "A data architecture that combines features of data lakes and data warehouses in one system."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a partnership announcement, not a results story or a policy change, so the key thing to watch is what capabilities are actually being added and whether any products or services are named. If later coverage mentions new integrations, customer wins, or revenue commitments, that would make the announcement more concrete; without those details, it should be read as positioning and relationship-building.",
+            "glossary": [
+              {
+                "term": "Databricks",
+                "definition": "A software company known for a cloud platform used to store, process, and analyze large data sets and build AI applications.",
+                "whyItMatters": "Knowing the platform helps readers understand what technology the partnership is centered on."
+              },
+              {
+                "term": "Enterprise AI",
+                "definition": "Artificial intelligence systems built for business use, such as automating tasks, improving decisions, or analyzing large amounts of data.",
+                "whyItMatters": "It signals that the partnership is aimed at business customers, not just consumer apps."
+              },
+              {
+                "term": "Lakehouse",
+                "definition": "A data architecture that combines features of data lakes and data warehouses in one system.",
+                "whyItMatters": "It explains the kind of data infrastructure the partnership is meant to support."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-5-32867",
+          "title": "Top AR and VR Technology Trends You Need to Know in 2026",
           "kicker": "Analytics Insight",
-          "summary": "Analytics Insight is reporting on 10 Microsoft Copilot Features in Power BI You Should Use. In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process. For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "10 Microsoft Copilot Features in Power BI You Should Use.",
-          "whyItMatters": "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner.",
-          "dataSignals": [
-            "analytics workflow",
-            "BI tooling"
-          ],
-          "sourceLabel": "Analytics Insight · Jul 16, 11:26 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxObk1SQ2I3VVB6eEp1N2VsT1RxUVhHdmdVakRGR08zWXB6ZGU1NjI0Mk5IMnVJRjhTM0ZBendQMjJnWmlQYjViTk1KNFFjX3BZckt0NzUybHY2bUhXSTFnZl9BZTh6TEN4UmVudUdLaUVQLXNZRzdzdUVpMWhPN3BwaFlZMkZnQmpkRERudXlubW1RcnlJcXpRTWQ5cUNOSGpoYk1GbnIwU3hkSkVsejQ4VzNMY9IBswFBVV95cUxObk1SQ2I3VVB6eEp1N2VsT1RxUVhHdmdVakRGR08zWXB6ZGU1NjI0Mk5IMnVJRjhTM0ZBendQMjJnWmlQYjViTk1KNFFjX3BZckt0NzUybHY2bUhXSTFnZl9BZTh6TEN4UmVudUdLaUVQLXNZRzdzdUVpMWhPN3BwaFlZMkZnQmpkRERudXlubW1RcnlJcXpRTWQ5cUNOSGpoYk1GbnIwU3hkSkVsejQ4VzNMYw?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-17T03:26:12+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about 10 Microsoft Copilot Features in Power BI You Should Use. This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "analytics-2-27412",
-          "title": "Databricks Secures Fresh Funding at $188 Bn Valuation",
-          "kicker": "analyticsindiamag.com",
-          "summary": "analyticsindiamag.com is reporting on Databricks Secures Fresh Funding at $188 Bn Valuation. In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process. For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Databricks Secures Fresh Funding at $188 Bn Valuation.",
-          "whyItMatters": "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner.",
+          "summary": "Analytics Insight is presenting a roundup of major augmented reality and virtual reality trends expected in 2026, rather than reporting a single event or decision. From the title alone, the piece appears to focus on where AR and VR are heading, likely covering changes in devices, software, and business use cases. That kind of trend piece is meant to help readers see which immersive technologies are gaining momentum and which may be most relevant for planning, investment, or product strategy. No specific trend names or numbers are provided in the source text shown here.",
+          "emailSummary": "Top AR and VR Technology Trends You Need to Know in 2026.",
+          "whyItMatters": "This matters because AR and VR trends can influence where businesses, developers, and investors direct time and money in the next planning cycle.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "analyticsindiamag.com · Jul 17, 2:00 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHB6MnhrMjJTTWR1VTJrWVdsbU44ZG15bDE0aFVmQVpDWHpYSmlDQ3pvSDJ0dm5iWGc3YTZjaHdaOU9ySDY4UnZXN2FfVFA4UHlJNUZ1d3AzRk9kZkRVenhRXzhNTFpnWHNEVHpIM1V3TFUtUUl5TkxuSzB1cXpERFItUUFxZ1JaalRINFc4RnktZHFr?oc=5",
+          "sourceLabel": "Analytics Insight · Jul 18, 1:34 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQanRpbHY0MTBBaDF5T2VDX0JSSUVwU0MtSkFrcTlaT2wtaFU4ZFZlTEt0UkR5em5KallJc2xBUWdEOWlSXzA5S29kUU1maEZUUnFVLXJZNEI0YWJJek42TkhuZ2Q5LUo3VHVWZ1NQRkNmYkpoT185SUZfWEVpcllueHJVc2pKNVg0VXBwLWRzcWNOYXpLenRrM1ZBTmgwZ0d3T21BSDRMdTJHWmpWcVE1RTlVVGpLZDB6d20yM21WN0PSAcABQVVfeXFMUGp0aWx2NDEwQWgxeU9lQ19CUklFcFNDLUpBa3E5Wk9sLWhVOGRWZUxLdFJEeXpuSmpZSXNsQVFnRDlpUl8wOUtvZFFNZmhGVFJxVS1yWTRCNGFiSXpONk5IbmdkOS1KN1R1VmdTUEZDZmJKaE9fOUlGX1hFaXJZbnhyVXNqSjVYNFVwcC1kc3FjTmF6S3p0azNWQU5oMGdHd09tQUg0THUyR1pqVnFRNUU5VVRqS2QwendtMjNtVjdD?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-17T06:00:59+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about Databricks Secures Fresh Funding at $188 Bn Valuation. This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "analytics-3-61070",
-          "title": "LatentView Analytics appoints Sonal Ramrakhiani as its new CEO",
-          "kicker": "BizzBuzz",
-          "summary": "BizzBuzz is reporting on LatentView Analytics appoints Sonal Ramrakhiani as its new CEO. In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process. For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "LatentView Analytics appoints Sonal Ramrakhiani as its new CEO.",
-          "whyItMatters": "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner.",
-          "dataSignals": [
-            "analytics workflow"
+          "publishedAt": "2026-07-18T05:34:36+00:00",
+          "glossary": [
+            {
+              "term": "AR",
+              "definition": "Augmented reality overlays digital information onto the real world through a phone, headset, or other device."
+            },
+            {
+              "term": "VR",
+              "definition": "Virtual reality creates a fully computer-generated environment that a user experiences as if they were inside it."
+            },
+            {
+              "term": "immersive technology",
+              "definition": "Technology designed to make users feel physically or mentally present in a digital environment."
+            }
           ],
-          "sourceLabel": "BizzBuzz · Jul 17, 3:55 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDEwam8xcjF0aExPVkE1aExRTzdHcTRxd2hjSkh0VnhiT2xjVGRXSjJzc2ZRMzVETElyRTNiQzY4UlJqTDR3TEV6TkRvZG1SWGJ4QXRuV2E4eUMzVjVMc3lSQ0dTaDRSMjI4cndGaC1pb1BpX0JBZHFwMUMxdHBUQzdmVUYzeVk5RlVCa1JzcW5ldUVjdWdzeDVYWENBX3NyNVZWRzFYWDBCUQ?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-17T07:55:19+00:00",
-          "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about LatentView Analytics appoints Sonal Ramrakhiani as its new CEO. This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "analytics-4-33376",
-          "title": "India's Growth Pace May Dip as Global Economy Slows, Warns Moody's Analytics",
-          "kicker": "Rediff",
-          "summary": "Rediff is reporting on India's Growth Pace May Dip as Global Economy Slows, Warns Moody's Analytics. In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process. For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "India's Growth Pace May Dip as Global Economy Slows, Warns Moody's Analytics.",
-          "whyItMatters": "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner.",
-          "dataSignals": [
-            "analytics workflow"
-          ],
-          "sourceLabel": "Rediff · Jul 17, 3:35 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOb3Q1SXNyTXE1R3dqQTMxVDEyMENWMkJIMks1MGU2LWJ2NVJiQ1ltOU9qVnRXeVA3Yk9nOU5kTzhZMGlPWERiQ0lCVGxGdkxqMWt3ejZoNnp3VWlpYi1xT2o5d3JiZWcweDdPS2RkZXJXMDVtZF9ub2RJY2YzN0N6bHFqMUpLTGR5SUZhZGg4ZHYwQjltbDlsY3d4ZjI4UGdIUUxnUkFZaXBmRF85RGtRVVphbXQyanQ4bk5JcW54UldZc2NTaFlCM3Jud2Z4U1ZSU1HSAdIBQVVfeXFMTm90NUlzck1xNUd3akEzMVQxMjBDVjJCSDJLNTBlNi1idjVSYkNZbTlPalZ0V3lQN2JPZzlOZE84WTBpT1hEYkNJQlRsRnZMajFrd3o2aDZ6d1VpaWItcU9qOXdyYmVnMHg3T0tkZGVyVzA1bWRfbm9kSWNmMzdDemxxajFKS0xkeUlGYWRoOGR2MEI5bWw5bGN3eGYyOFBnSFFMZ1JBWWlwZkRfOURrUVVaYW10Mmp0OG5OSXFueFJXWXNjU2hZQjNybndmeFNWUlNR?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-17T07:35:46+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about India's Growth Pace May Dip as Global Economy Slows, Warns Moody's Analytics. This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "analytics-5-38619",
-          "title": "Programming Will Never Go Out of Scope: TCS Data & Analytics Head's Advice to Future Engineers",
-          "kicker": "businessnewsthisweek.com",
-          "summary": "businessnewsthisweek.com is reporting on Programming Will Never Go Out of Scope: TCS Data & Analytics Head's Advice to Future Engineers. In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process. For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Programming Will Never Go Out of Scope: TCS Data & Analytics Head's Advice to Future Engineers.",
-          "whyItMatters": "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner.",
-          "dataSignals": [
-            "analytics workflow"
-          ],
-          "sourceLabel": "businessnewsthisweek.com · Jul 17, 1:27 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPVjBxNjJHZ1ZoTVdDbEVyRVlOTU9EbmNxX3BzZWQ1bUNjbm93WEU2NFo0V3dqMmZSellnZXpKMzRablhEWXRxa0FtOE5JLWtfQ0NMZmE1dnhQVVVDdElIMXM3YU1acGxWYklzd0p1ZlpCem5DaWlVV3FXMmhhMEYzZVRWMzdPdW9IVm1CMDJuOTBVVUFhLS15WFM2QzJlV3ZDb3czZm9qcnNUZUpBN1RERkxnV0pMUWZUVDZvSzE2SFpwQzZBSmhLZ2ZfcElTM1E?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-17T05:27:41+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about Programming Will Never Go Out of Scope: TCS Data & Analytics Head's Advice to Future Engineers. This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a forecast or trend-summary story, not a news event, so the key is whether the source identifies real adoption signals, product launches, or market data versus just making broad predictions. When reading the full piece, pay attention to whether the trends are based on evidence, named companies, or analyst estimates, because that changes how seriously to treat the outlook.",
+            "glossary": [
+              {
+                "term": "AR",
+                "definition": "Augmented reality overlays digital information onto the real world through a phone, headset, or other device.",
+                "whyItMatters": "It helps explain the technology category that blends digital content with everyday physical settings."
+              },
+              {
+                "term": "VR",
+                "definition": "Virtual reality creates a fully computer-generated environment that a user experiences as if they were inside it.",
+                "whyItMatters": "It is the other main immersive technology category likely being discussed in the trend roundup."
+              },
+              {
+                "term": "immersive technology",
+                "definition": "Technology designed to make users feel physically or mentally present in a digital environment.",
+                "whyItMatters": "This is the broader field that includes both AR and VR."
+              }
+            ]
           }
         }
       ]
@@ -796,108 +1013,198 @@
       "emptyMessage": "No qualified Louisville, Kentucky stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "louisville-1-24284",
-          "title": "Kentucky jury awards $104M in lawsuit over online ghost gun seller used in Louisville teen's death by suicide",
+          "id": "louisville-1-62996",
+          "title": "Kentucky Health officials confirm more than 100 cases of Cyclosporiasis, including 30 in Louisville",
+          "kicker": "whas11.com",
+          "summary": "Kentucky health officials have confirmed more than 100 cases of cyclosporiasis statewide, with 30 cases reported in Louisville. Cyclosporiasis is an intestinal illness caused by a parasite, so the case count suggests an ongoing public health issue rather than isolated illness reports. The report does not give a source, a common exposure, or whether the cases are linked, so the main takeaway is that local health authorities are tracking a notable outbreak pattern in Louisville and across Kentucky.",
+          "emailSummary": "Kentucky Health officials confirm more than 100 cases of Cyclosporiasis, including 30 in Louisville.",
+          "whyItMatters": "This matters because a growing food- or water-borne illness count can prompt local health alerts, illness investigations, and prevention steps for residents, businesses, and healthcare providers in Louisville.",
+          "dataSignals": [
+            "Louisville local",
+            "healthcare angle"
+          ],
+          "sourceLabel": "whas11.com · Jul 17, 6:10 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNMER1cW1WLUlHQkYwd1dZeHFtWkpRMi1ScU5ZdHQyNlJqYTVkMlROVjJGdmt5QzBmX2xZM3Z6cDYwbF9ESG9ScFpJQXdGRFlmYjJTMGFkenZmRHQ3dXIybHNNM1ozUTFyWTcxWEpjMjNjRHRma2p1d05VSFZqd1B1dV9ILXEtTWxpUlVnTjVWNjJ4QkxoS0lmQ3R3TmRSZUxoTHdaV0tmMk12eC02UWx1ZUpLUmhXc1VURFV2MDV2RXFoTVVJcU4xa1NOV1RJc2RUWmtKLWxEcDBsaDBydFJFYVNqMG1JN21ER3pz?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-17T22:10:00+00:00",
+          "glossary": [
+            {
+              "term": "Cyclosporiasis",
+              "definition": "An intestinal illness caused by a microscopic parasite called Cyclospora."
+            },
+            {
+              "term": "cases",
+              "definition": "Confirmed instances of people who have been diagnosed with the illness."
+            },
+            {
+              "term": "public health officials",
+              "definition": "Government health workers who monitor disease trends and respond to outbreaks."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a public health outbreak report, so the key thing to watch is whether officials identify a source, a common exposure, or a specific cluster that explains the cases. If later reporting shows the infections are linked to one food item, restaurant, or water source, that would change the interpretation from a general increase in illness to a more targeted outbreak investigation.",
+            "glossary": [
+              {
+                "term": "Cyclosporiasis",
+                "definition": "An intestinal illness caused by a microscopic parasite called Cyclospora.",
+                "whyItMatters": "It tells readers what kind of infection is being counted and why public health officials are concerned."
+              },
+              {
+                "term": "cases",
+                "definition": "Confirmed instances of people who have been diagnosed with the illness.",
+                "whyItMatters": "The case count is the main measure of how widespread the outbreak may be."
+              },
+              {
+                "term": "public health officials",
+                "definition": "Government health workers who monitor disease trends and respond to outbreaks.",
+                "whyItMatters": "They are the source of the confirmation and the people likely directing any response."
+              }
+            ]
+          }
+        },
+        {
+          "id": "louisville-2-73021",
+          "title": "Meet Lori, the Louisville ATF dog with a nose for hidden guns",
           "kicker": "WDRB",
-          "summary": "WDRB is reporting on Kentucky jury awards $104M in lawsuit over online ghost gun seller used in Louisville teen's death by suicide. In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy. For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Kentucky jury awards $104M in lawsuit over online ghost gun seller used in Louisville teen's death by suicide.",
-          "whyItMatters": "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home.",
+          "summary": "Lori is a Louisville ATF dog trained to find hidden guns, according to WDRB. The report appears to be a profile of the dog and her role with the Bureau of Alcohol, Tobacco, Firearms and Explosives rather than a breaking enforcement action. Based on the title alone, the story highlights how law enforcement in Louisville uses a trained dog to help locate firearms that are concealed. It suggests a local public-safety tool that could support searches, investigations, or gun recovery efforts.",
+          "emailSummary": "Meet Lori, the Louisville ATF dog with a nose for hidden guns.",
+          "whyItMatters": "This matters because a trained detection dog can help Louisville law enforcement find hidden firearms faster and potentially remove weapons from situations where they could pose a risk.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Jul 16, 12:28 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQTmx2eHdXeFlGSER0WEdFSWNzSjd5eElqU0ZoeHJPLTNVaW5td3poYXFWd3FzZmJZcU8yYTl1NjgxZlBUV2NMcXVwSWgtTXF5RlZ1LUpKM0dYMjVGaVV5MW95bmRkWEpsVy1BdWRUWUdycld3UXNWMGlST1VpSm81Y1kyeFA5U1lRV2JESlU5VjBEMTItX2ZGZzBUT0NtNXh4d2xhUTBKZnZjZXk4RWhiR2NuOUZRdjFpRFcya0NhUUlMSVBsd202QXA5VDBqQWFzdjdKRlozbTNDNlBGOG5MYk1ibUNPXzJ4Z2k3eVpaX0NvUk95X1A0RDhfT29leU1OcFg2LXpR?oc=5",
+          "sourceLabel": "WDRB · Jul 17, 11:03 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUFNwNnNyMWJzeDZjMzRLS1NnMXkwdXVNMGRfTE5VbjMySWo1aWZ4NW5BMzZ2bGZhdGhZSFFHczVySklkWEplTG5GSVJKRlhRQkgtSHJaQ3RTZm94REIxYmZkLXdwQnl6UFdUc19Ld1QzR1liXzRMb18xM3dWQlBrY1JFeTAwYXBJdlJxcjZtVkVBdV9OSjQzMVowSVBMa01rak51ak9nejFfRG5wQ3lscWx6bDRqVHh1MHc0R0QxalZMdjB6aVhqRGZLZVF2U2tmZnc?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-16T16:28:00+00:00",
+          "publishedAt": "2026-07-18T03:03:00+00:00",
+          "glossary": [
+            {
+              "term": "ATF",
+              "definition": "The Bureau of Alcohol, Tobacco, Firearms and Explosives, a federal law enforcement agency."
+            },
+            {
+              "term": "detecting dog",
+              "definition": "A dog trained to smell and signal the presence of specific items."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a feature-style public safety story, not a policy or crime report. When reading the full piece, watch for specifics about what Lori can detect, how often she is deployed, and whether she has been used in real cases. If the story mentions results, such as seizures or searches assisted by the dog, that would show whether this is mainly a public-relations profile or a tool with measurable enforcement impact.",
+            "glossary": [
+              {
+                "term": "ATF",
+                "definition": "The Bureau of Alcohol, Tobacco, Firearms and Explosives, a federal law enforcement agency.",
+                "whyItMatters": "It identifies the agency that owns or uses the dog and sets the law-enforcement context for the story."
+              },
+              {
+                "term": "detecting dog",
+                "definition": "A dog trained to smell and signal the presence of specific items.",
+                "whyItMatters": "It explains the basic job Lori is reported to do and how the dog helps investigators."
+              }
+            ]
+          }
+        },
+        {
+          "id": "louisville-3-32851",
+          "title": "UP for Women and Children celebrates 8 years of service to Louisville",
+          "kicker": "WDRB",
+          "summary": "UP for Women and Children is being reported as celebrating eight years of service in Louisville. Based on the available source information, the story appears to mark the nonprofit’s anniversary rather than announce a new program or policy change. The main takeaway is that the organization has had a sustained presence in the city supporting women and children for nearly a decade. No additional details are provided here about services, funding, or leadership changes.",
+          "emailSummary": "UP for Women and Children celebrates 8 years of service to Louisville.",
+          "whyItMatters": "This matters because long-running local nonprofits can be important parts of Louisville’s social support network, especially for families facing housing, health, or caregiving challenges.",
+          "dataSignals": [
+            "Louisville local"
+          ],
+          "sourceLabel": "WDRB · Jul 17, 9:58 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeWx4ZXF4MEYtaC10ci1RY2JkMmU4akpfV01iR2FjbHJ3Y1U0bE1QZXhrN3J2V1BtSjhSRXpBbWY2WGxUZ2lycHpjSEZJRDFROVVqVVpxYXducC05N1ZsT1dqS1N6Xy1hNmR5NmVYXzhWcW96aVZPNXlJemVuanZ6bmw2bFVHVTZmdDQ2Q0d1WTlmYjFsYmZ4NzNxQzNxcGdDTHg5V3F5V3RFNDhJQ1g0a2M2MzREWnE4ZWM4QWtaN2dFXzNkWmE0NzBpcFJxdFRCY3pHMm5tSzVsYkd5S0E?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-18T01:58:00+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Kentucky jury awards $104M in lawsuit over online ghost gun seller used in Louisville teen's death by suicide. This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
+            "explanationText": "This is a short local community milestone story, so the key thing to watch for in the full report is what services UP for Women and Children actually provides and who benefits from them. If the article includes numbers about clients served, funding, or program growth, that would tell you whether the organization is expanding its reach or simply marking an anniversary.",
             "glossary": []
           }
         },
         {
-          "id": "louisville-2-24847",
-          "title": "One-on-one with Louisville QB Lincoln Kienholz",
+          "id": "louisville-4-47263",
+          "title": "Louisville clinic for adults with disabilities finds temporary funding, loses specialty care providers",
           "kicker": "WDRB",
-          "summary": "WDRB is reporting on One-on-one with Louisville QB Lincoln Kienholz. In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy. For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "One-on-one with Louisville QB Lincoln Kienholz.",
-          "whyItMatters": "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home.",
+          "summary": "A Louisville clinic that serves adults with disabilities has secured temporary funding, but it has also lost specialty care providers. That suggests the clinic can keep operating for now, while some higher-level medical services may be harder to access. The report points to instability in care for a vulnerable patient population, but the description does not say how many providers left or how long the funding will last. For Louisville, the immediate question is whether this is a short-term bridge or a sign of ongoing service gaps.",
+          "emailSummary": "Louisville clinic for adults with disabilities finds temporary funding, loses specialty care providers.",
+          "whyItMatters": "This matters because adults with disabilities often depend on coordinated specialty care, and even a temporary funding fix may not prevent delays, reduced services, or travel to other providers in the Louisville area.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Jul 16, 11:56 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNU1JCaXg1eURET1g3YmJvR2xRSjJCODZfUktSX3hxVVhlQmk5MnlqMDFjbnNSZF9LbklwaGVoOU5TZlk4TXRKTTZZeVdTYnduUXh4aW1NcFdNZzR5UWh1ZnM4NEpWNkRpa2VRbG92d1oyQ0trSUlWdXRMRjc5UFJsMWtSVzI0TURETVJQVHAyREU2MTVScDlDZHVFd3phNUtJbFdFamdYM3dIS1diUUpEY0VtYS0zdw?oc=5",
+          "sourceLabel": "WDRB · Jul 17, 5:05 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPc1p0UzFyVUoweFFmRmU2cmxwd0FIaWplZExnOVJXQnpPLS1QQ01lT0dTbkVtTTc0SktoRkhuNVZiTDh3akJUT0Fpa2d4VnBMRE9seVluaGhuM3FVam1QS0JTTjNBMFR4T21iS0tCcXMzc09qQ0l0OHFwcG9zVDN2b29laUlQUUpGNkdlUWNzaDRQZndkc19ZQXVnUWpTd1oySlFzc3Q4MG1iN21fSGw3ZmxkaDk1WDNUMF9xb2tEWnljSmVPdUxBVkk4b2Q5OEJ2ZjZTektFbU13LWFkN2dlQVJoQklzQlVJclgtU3hqbFV6SEI1Qm9OQ19Md1UtQzRJdGd4VEZLSGN3WWJFQ05JYXBLQWU?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-17T03:56:00+00:00",
-          "glossary": [],
+          "publishedAt": "2026-07-17T21:05:00+00:00",
+          "glossary": [
+            {
+              "term": "specialty care providers",
+              "definition": "Clinicians who focus on a specific type of medical care rather than general primary care."
+            },
+            {
+              "term": "temporary funding",
+              "definition": "Money that is available only for a limited time, not as a permanent solution."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about One-on-one with Louisville QB Lincoln Kienholz. This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a local health-care staffing and funding story, not a policy or clinical research report. When reading the source, pay attention to who is funding the clinic, which specialties were lost, and whether the funding covers operations or only a stopgap period. If the article shows a longer-term funding commitment or replacement providers, the outlook changes; if not, it points to continued service disruption.",
+            "glossary": [
+              {
+                "term": "specialty care providers",
+                "definition": "Clinicians who focus on a specific type of medical care rather than general primary care.",
+                "whyItMatters": "Losing these providers can reduce access to services that patients with complex needs may rely on."
+              },
+              {
+                "term": "temporary funding",
+                "definition": "Money that is available only for a limited time, not as a permanent solution.",
+                "whyItMatters": "Temporary support can keep a clinic open short term but does not guarantee long-term stability."
+              }
+            ]
           }
         },
         {
-          "id": "louisville-3-98349",
-          "title": "CRAWFORD | Ohio State prepared Lincoln Kienholz. Louisville hopes to finish the job.",
-          "kicker": "WDRB",
-          "summary": "WDRB is reporting on CRAWFORD | Ohio State prepared Lincoln Kienholz. Louisville hopes to finish the job. In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy. For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "CRAWFORD | Ohio State prepared Lincoln Kienholz. Louisville hopes to finish the job.",
-          "whyItMatters": "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home.",
+          "id": "louisville-5-54493",
+          "title": "As data centers spring up in Kentucky, local organizers rally citizens for national day of protest",
+          "kicker": "Louisville Public Media",
+          "summary": "Local organizers in Kentucky are joining a national day of protest tied to the rapid spread of data centers in the state. The report indicates these facilities are “springing up” in Kentucky, but the description does not give a count, specific locations, or the organizers’ exact demands. For Louisville and the surrounding area, the story points to rising public attention around how data-center growth may affect land use, energy demand, and local communities. It is framed as a civic response to an expanding tech-related development trend, not as a new policy decision.",
+          "emailSummary": "As data centers spring up in Kentucky, local organizers rally citizens for national day of protest.",
+          "whyItMatters": "This matters because data-center expansion can affect electricity use, zoning, jobs, and neighborhood impacts in Kentucky communities, including around Louisville.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Jul 16, 11:22 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQRnhQUzZfTWpDWkNzZk95T3NwMmd2V3g1NnJTYUlsV0RGc2p0em45LVo4QXZkdm9WTWwwTXEtc0x5U29WYlNWSjNJN3RiSUZJNDdJYWdvWjhIZGtxYjRLUHlEYUx1dFptUmw0aktfSTJfb2c3UmpHZ2k2NWpzWDJBVjFHbTJjNHYzZHdLcVE0STJPZW8tLU1qQzJ0bkY5VndtNzJocTY5SGRwZG5fajg5SXB4NG9Dc3haRFMyT01zX1c0WmdTVXlTSzdpT3JyTTM5S1BVbDBEMElTVHE5OHA4QzJHSWdEQmN6TkdJNVJmWQ?oc=5",
+          "sourceLabel": "Louisville Public Media · Jul 17, 4:45 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQS1EOWFfcllnSU54VGRuUWhLWExQSFk0bFk3RWt1MnRjMmtWbFI0ek1rRXE1LTNONzkxX0c4b0t5SDB3dmdtRGxCV215M2ZvNjAwUk1RQWNjUG5FRjcwd2dBS0dUaEpqWnBlSndoR0I5aG5XR3hZYVNxWktjSDZZNDFVcGY2bjdqNVdvU2V3WHZlMzUtcWpJcGt5ZFAwOHlzdzliOUhwdERXTW5nMVRkUzlURi13OUFWVTEtYTl6S3VJdGhJWGtuaFYwSzhwZw?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-17T03:22:00+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about CRAWFORD | Ohio State prepared Lincoln Kienholz. Louisville hopes to finish the job. This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "louisville-4-58318",
-          "title": "One-on-one with Louisville OL Lance Robinson",
-          "kicker": "WDRB",
-          "summary": "WDRB is reporting on One-on-one with Louisville OL Lance Robinson. In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy. For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "One-on-one with Louisville OL Lance Robinson.",
-          "whyItMatters": "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home.",
-          "dataSignals": [
-            "Louisville local"
+          "publishedAt": "2026-07-17T20:45:00+00:00",
+          "glossary": [
+            {
+              "term": "data center",
+              "definition": "A facility that houses computers and networking equipment used to store, process, and move digital data."
+            },
+            {
+              "term": "national day of protest",
+              "definition": "A coordinated set of public demonstrations held on the same day in multiple places."
+            }
           ],
-          "sourceLabel": "WDRB · Jul 16, 9:07 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUlhPaHBpZXBoQ1VIcEJKWm1KM2NMaFJ6aHF2TmhlTldJa01GcTh5WTNwLTN2bzBKdENLX21WSEhYWmluZjRacHBVWWt2c19SN0taeUtRNTZJLVZDWXg1eE53bmVoM0JOQ2VmUkFhSGFWS1hGdUdzR1BoV1BsTFczcVN2UWxtNmkxUUt2djhPSkVlUDRPZ2hxRTF6R2hlTVJITW9MTEc0VlJmTHpoVmd1b0pacE94Y2U5cURkNjE2WQ?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-17T01:07:00+00:00",
-          "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about One-on-one with Louisville OL Lance Robinson. This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "louisville-5-6580",
-          "title": "Louisville Burger Week returns with $7 and $8 specialty burgers across the city",
-          "kicker": "WDRB",
-          "summary": "WDRB is reporting on Louisville Burger Week returns with $7 and $8 specialty burgers across the city. In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy. For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Louisville Burger Week returns with $7 and $8 specialty burgers across the city.",
-          "whyItMatters": "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home.",
-          "dataSignals": [
-            "Louisville local"
-          ],
-          "sourceLabel": "WDRB · Jul 16, 8:48 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPTXpFcWthZ0pwbmQzREM4UlZLUjIyR3hoSDQ2aENJVXdsVU5FXzFPYU5OaUZWeUhDckRhcmZoT1FWYzg4Wk45WlJuQnFLS0tfeGU0T0NlYThjR3BzdU1oR1FSeV94TUxNZWtQNjRpTW9MZGc5R2NMSVliWEk1OHdvQlhtX3VkSDV4bGVTZFFVclQwdlo5RjNrX21LNzhGYm5odG1wYzJWYlNlOUp2VnFNcm95dEY4NVhsVnhJblN6cF9lT01SS3B4dEZFUVVXVUV3UW1haVZfWW9PanB4MFVhazN5eHgxejZM?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-17T00:48:00+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about Louisville Burger Week returns with $7 and $8 specialty burgers across the city. This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a local civic-and-development story about public reaction to infrastructure growth, not a technical explainer or a policy vote. When reading the full report, pay attention to who is organizing, what objections they raise, and whether the protest is about energy use, environmental impact, or zoning. The interpretation changes a lot depending on whether the story shows a widespread organizing effort, a single site dispute, or early concern before any concrete project details are announced.",
+            "glossary": [
+              {
+                "term": "data center",
+                "definition": "A facility that houses computers and networking equipment used to store, process, and move digital data.",
+                "whyItMatters": "Data centers can bring jobs and tax revenue, but they also can drive large demands for power, water, and land."
+              },
+              {
+                "term": "national day of protest",
+                "definition": "A coordinated set of public demonstrations held on the same day in multiple places.",
+                "whyItMatters": "It signals that local concern is part of a broader movement and may influence public officials or company plans."
+              }
+            ]
           }
         }
       ]

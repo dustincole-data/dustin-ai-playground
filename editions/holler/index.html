@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Daily Holler — Dustin Cole's AI Newsroom</title>
+  <meta name="description" content="The tabloid edition of Dustin Cole's AI newsroom. Six live morning briefs, hollered at full volume, compiled nightly by agents from sourced signals." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128227;</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#pages">Skip to the stories</a>
+
+  <!-- ═══ Ears + masthead ═══ -->
+  <div class="ears" role="banner">
+    <span class="ear">Kentucky's loudest quiet paper</span>
+    <span class="ear ear-mid" id="earDate">Louisville, Ky.</span>
+    <span class="ear ear-right">Price: still free · <span id="earNo">No. —</span></span>
+  </div>
+
+  <header class="masthead">
+    <div class="mast-row">
+      <h1 class="mast-logo">The Daily <span class="mast-shout">Holler</span></h1>
+      <div class="burst" id="burst" aria-hidden="true">
+        <svg viewBox="0 0 200 200" class="burst-star"><path id="burstPath" fill="currentColor"/></svg>
+        <span class="burst-text">Extra!<br/>Extra!</span>
+      </div>
+    </div>
+    <p class="mast-strap">An AI side project by <strong>Dustin Cole</strong> — six live briefs, compiled nightly by agents, hollered every morning</p>
+  </header>
+
+  <!-- ═══ Splash ═══ -->
+  <section class="splash" aria-labelledby="splashHead">
+    <figure class="splash-photo" id="splashPhoto">
+      <img src="./assets/holler-press.jpg" alt="A chrome robot in a PRESS fedora sprints out of the printing works clutching a bundle of fresh newspapers, loose pages flying." />
+      <div class="halftone" aria-hidden="true"></div>
+      <figcaption class="splash-credit">Staff photo · The Holler's own press robot, moments after deadline</figcaption>
+    </figure>
+    <div class="splash-plate">
+      <p class="splash-kicker" id="splashKicker">This just in</p>
+      <h2 class="splash-head" id="splashHead">HOLD THE FRONT PAGE…</h2>
+      <p class="splash-deck" id="splashDeck">The wire is warming up. Give it a second, pal.</p>
+      <p class="splash-src" id="splashSrc"></p>
+      <nav class="inside-strip" id="insideStrip" aria-label="Inside this issue"></nav>
+    </div>
+  </section>
+
+  <!-- ═══ Late wire ticker ═══ -->
+  <div class="latewire" aria-label="Late wire headlines">
+    <span class="latewire-flag">Late wire</span>
+    <div class="latewire-window"><div class="latewire-track" id="tickerTrack"></div></div>
+  </div>
+
+  <!-- ═══ Why we holler + promises ═══ -->
+  <section class="soapbox">
+    <div class="soapbox-col soapbox-why">
+      <h3 class="soapbox-head">Why we holler</h3>
+      <p>A small side project where I use AI agents to keep a cleaner read on the things I already pay attention to: energy, practical AI, analytics, and work automation.</p>
+      <p>If you're interested in that same mix, follow along here. I'll keep adding the useful pieces, the weird experiments, and the parts that actually save time.</p>
+    </div>
+    <div class="soapbox-col soapbox-promise">
+      <h3 class="soapbox-head">The promises</h3>
+      <ul class="promise-stamps">
+        <li><strong>Today!</strong> Last-24-hour items first.</li>
+        <li><strong>Sources!</strong> Original links kept close.</li>
+        <li><strong>Glossary!</strong> Plain-language terms when needed.</li>
+      </ul>
+    </div>
+    <nav class="soapbox-col soapbox-index" aria-label="Jump to a page">
+      <h3 class="soapbox-head">In this issue</h3>
+      <ol class="issue-index" id="issueIndex"></ol>
+    </nav>
+  </section>
+
+  <!-- ═══ Pages (injected) ═══ -->
+  <main id="pages"></main>
+
+  <div class="wire-error" id="wireError" hidden>
+    <p><strong>STOP THE PRESSES — THE WIRE'S DOWN!</strong> The live briefs wouldn't load. The quiet broadsheet version still lives at <a href="../../">the newsroom</a>. Try again in a minute.</p>
+  </div>
+
+  <footer class="boot">
+    <p class="boot-logo">The Daily Holler</p>
+    <p>A tabloid edition of <a href="../../">Dustin Cole's AI newsroom</a> · <span id="stampLine">Updated —</span></p>
+    <p class="boot-dim">All hollering by robots. Complaints dept.: <a href="../">The Newsstand</a></p>
+  </footer>
+
+  <script src="./vendor/gsap.min.js"></script>
+  <script src="./vendor/ScrollTrigger.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

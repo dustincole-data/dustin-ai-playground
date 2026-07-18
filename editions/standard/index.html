@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Signal-Standard — Dustin Cole's AI Newsroom</title>
+  <meta name="description" content="A modern digital broadsheet edition of Dustin Cole's AI newsroom. Six live morning briefs compiled nightly by agents from sourced signals." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128225;</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400..900;1,8..30,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#frontpage">Skip to the front page</a>
+
+  <!-- ═══ Folio bar ═══ -->
+  <div class="folio" role="banner">
+    <span class="folio-place" id="folioDate">Louisville, Ky.</span>
+    <span class="folio-center">An AI side project by Dustin Cole · Built from sourced signals</span>
+    <span class="folio-right"><span id="folioNo">No. —</span> · Free edition</span>
+  </div>
+
+  <!-- ═══ Masthead ═══ -->
+  <header class="masthead">
+    <canvas id="globe" class="masthead-globe" aria-hidden="true"></canvas>
+    <div class="masthead-inner">
+      <p class="masthead-over">Dustin Cole's AI Newsroom · Six live briefs, compiled nightly by agents</p>
+      <h1 class="masthead-title"><span class="mast-the">The</span> Signal-Standard</h1>
+      <p class="masthead-motto">“Every source kept close, every term made plain.”</p>
+    </div>
+    <nav class="section-bar" aria-label="Sections">
+      <div class="section-bar-inner" id="sectionNav">
+        <a href="#frontpage" class="section-link is-active" data-target="frontpage">Front Page</a>
+        <!-- brief links injected -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══ Wire ticker ═══ -->
+  <div class="ticker" aria-label="Latest headlines ticker">
+    <span class="ticker-flag"><span class="live-dot" aria-hidden="true"></span>The Wire</span>
+    <div class="ticker-window"><div class="ticker-track" id="tickerTrack"></div></div>
+  </div>
+
+  <main id="frontpage" class="page">
+
+    <!-- ═══ Above the fold: lede + rail ═══ -->
+    <section class="fold" aria-labelledby="ledeHead">
+      <div class="lede" id="lede">
+        <p class="lede-slug"><span id="ledeKicker">This morning's splash</span></p>
+        <h2 class="lede-head" id="ledeHead">The wire is warming up…</h2>
+        <p class="lede-deck" id="ledeDeck"></p>
+        <p class="lede-why" id="ledeWhy"></p>
+        <p class="lede-src" id="ledeSrc"></p>
+        <div class="fold-more" id="foldMore" aria-label="Also on the front page"></div>
+      </div>
+      <aside class="rail" aria-label="About this newsroom">
+        <div class="rail-block rail-about">
+          <h3 class="rail-title">Newsroom experiments</h3>
+          <p>A small side project where I use AI agents to keep a cleaner read on the things I already pay attention to: energy, practical AI, analytics, and work automation.</p>
+          <p>If you're interested in that same mix, follow along here. I'll keep adding the useful pieces, the weird experiments, and the parts that actually save time.</p>
+        </div>
+        <div class="rail-block rail-promises">
+          <h3 class="rail-title">What this paper promises</h3>
+          <dl class="promise-list">
+            <div><dt>Today</dt><dd>Last-24-hour items first.</dd></div>
+            <div><dt>Sources</dt><dd>Original links kept close.</dd></div>
+            <div><dt>Glossary</dt><dd>Plain-language terms when needed.</dd></div>
+          </dl>
+        </div>
+        <div class="rail-block rail-index" id="railIndex">
+          <h3 class="rail-title">Index of briefs</h3>
+          <ol class="index-list" id="indexList"></ol>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ═══ Sections (injected) ═══ -->
+    <div id="sections"></div>
+
+    <div class="wire-error" id="wireError" hidden>
+      <p><strong>The wire is down.</strong> The live briefs could not be loaded just now — the presses will try again on your next visit. The original newsroom is at
+      <a href="../../">dustin-ai-playground</a>.</p>
+    </div>
+  </main>
+
+  <footer class="colophon">
+    <div class="colophon-inner">
+      <p class="colophon-mast">The Signal-Standard</p>
+      <p class="colophon-line">A broadsheet edition of <a href="../../">Dustin Cole's AI newsroom</a> · Briefs compiled nightly by agents from sourced signals · <span id="stampLine">Updated —</span></p>
+      <p class="colophon-line dim">Other editions from the same newsroom: <a href="../">The Newsstand</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

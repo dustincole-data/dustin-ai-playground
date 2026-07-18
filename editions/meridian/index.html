@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meridian — The Sunday Magazine of Dustin Cole's AI Newsroom</title>
+  <meta name="description" content="The Sunday magazine edition of Dustin Cole's AI newsroom. Six live briefs, art-directed and unhurried, compiled nightly by agents from sourced signals." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127765;</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Petrona:ital,wght@0,300..700;1,300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#toc">Skip to the table of contents</a>
+
+  <!-- ═══ Cover ═══ -->
+  <section class="cover" id="cover" aria-label="Cover">
+    <div class="cover-art" id="coverArt">
+      <img id="coverImg" src="./assets/meridian-cover.jpg" alt="Oil painting: three radio masts rise over a Kentucky river valley at dusk, broadcasting concentric ripples of signal into a plum and persimmon sky." />
+      <canvas id="coverCanvas" aria-hidden="true"></canvas>
+    </div>
+    <div class="cover-chrome">
+      <header class="cover-top">
+        <p class="cover-issue" id="coverIssue">The Sunday magazine of Dustin Cole's AI newsroom</p>
+        <h1 class="cover-logo">Meridian</h1>
+        <p class="cover-sub">Signals worth sitting with, compiled nightly by agents · <span id="coverDate">Sunday</span></p>
+      </header>
+      <div class="coverlines" id="coverlines" aria-label="In this issue">
+        <!-- coverlines injected -->
+      </div>
+      <p class="cover-hint" aria-hidden="true"><span>Open the issue</span><span class="hint-rule"></span></p>
+    </div>
+  </section>
+
+  <!-- ═══ Contents ═══ -->
+  <section class="toc" id="toc" aria-labelledby="tocHead">
+    <div class="toc-inner">
+      <p class="folio-line"><span id="folioDate">—</span> · <span id="folioNo">Issue —</span></p>
+      <h2 class="toc-head" id="tocHead">In this issue</h2>
+      <ol class="toc-list" id="tocList"></ol>
+    </div>
+  </section>
+
+  <!-- ═══ Editor's letter ═══ -->
+  <section class="letter" aria-labelledby="letterHead">
+    <div class="letter-text">
+      <h2 class="letter-head" id="letterHead">A letter from the editor</h2>
+      <p class="has-dropcap">A small side project where I use AI agents to keep a cleaner read on the things I already pay attention to: energy, practical AI, analytics, and work automation.</p>
+      <p>If you're interested in that same mix, follow along here. I'll keep adding the useful pieces, the weird experiments, and the parts that actually save time.</p>
+      <ul class="letter-promises">
+        <li><em>Today</em> — last-24-hour items first.</li>
+        <li><em>Sources</em> — original links kept close.</li>
+        <li><em>Glossary</em> — plain-language terms when needed.</li>
+      </ul>
+      <p class="letter-sign">— Dustin Cole, with the robots</p>
+    </div>
+    <figure class="letter-art">
+      <img src="./assets/meridian-still.jpg" alt="Still life on aubergine linen: a folded newspaper, steaming coffee, and a small brass radio whose antenna traces gold arcs of signal." />
+      <figcaption>Sunday morning, as the agents file their briefs.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ═══ Features (injected) ═══ -->
+  <main id="features"></main>
+
+  <div class="wire-error" id="wireError" hidden>
+    <p><strong>The presses paused.</strong> This morning's briefs could not be loaded. The daily newsroom remains at <a href="../../">dustin-ai-playground</a>.</p>
+  </div>
+
+  <!-- ═══ Back page ═══ -->
+  <footer class="backpage">
+    <p class="back-tease">Next Sunday: whatever the agents drag in. They never call ahead.</p>
+    <p class="back-logo">Meridian</p>
+    <p class="back-line">A Sunday magazine edition of <a href="../../">Dustin Cole's AI newsroom</a> · <span id="stampLine">—</span></p>
+    <p class="back-line dim">Also on the newsstand: <a href="../">every other edition</a></p>
+  </footer>
+
+  <script src="./vendor/gsap.min.js"></script>
+  <script src="./vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

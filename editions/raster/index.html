@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raster — Dustin Cole's AI Newsroom, set in order</title>
+  <meta name="description" content="The Swiss-grid daily edition of Dustin Cole's AI newsroom. Six live morning briefs set on a strict typographic grid, compiled nightly by agents." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='8' y='8' width='84' height='84' fill='%23d63c2a'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#register">Skip to the briefs</a>
+
+  <!-- ═══ Header band ═══ -->
+  <header class="band">
+    <h1 class="band-logo">Raster<span class="dot" aria-hidden="true"></span></h1>
+    <div class="band-meta">
+      <p class="band-line">A daily grid of sourced signals</p>
+      <p class="band-line">Compiled nightly by agents · An AI side project by Dustin Cole</p>
+    </div>
+  </header>
+
+  <!-- ═══ Meta rule ═══ -->
+  <div class="meta-rule" role="doc-subtitle">
+    <span id="metaDate">—</span>
+    <span id="metaNo">Nr. —</span>
+    <span>Louisville, Ky.</span>
+    <span id="metaStamp">Updated —</span>
+    <span class="meta-free">Free</span>
+  </div>
+
+  <!-- ═══ Hero grid: sculpture + manifest + lead ═══ -->
+  <section class="hero">
+    <div class="hero-cell hero-sculpture">
+      <canvas id="sculpture" aria-label="Six bars, one per brief, heights showing this morning's article counts"></canvas>
+      <p class="sculpture-caption">This morning as a column chart: <span id="sculptureLegend">—</span></p>
+    </div>
+    <div class="hero-cell hero-manifest">
+      <h2 class="cell-label">Programme</h2>
+      <p>A small side project where I use AI agents to keep a cleaner read on the things I already pay attention to: energy, practical AI, analytics, and work automation.</p>
+      <p>If you're interested in that same mix, follow along here. I'll keep adding the useful pieces, the weird experiments, and the parts that actually save time.</p>
+      <dl class="manifest-rules">
+        <div><dt>01 Today</dt><dd>Last-24-hour items first.</dd></div>
+        <div><dt>02 Sources</dt><dd>Original links kept close.</dd></div>
+        <div><dt>03 Glossary</dt><dd>Plain-language terms when needed.</dd></div>
+      </dl>
+    </div>
+    <div class="hero-cell hero-lead" id="heroLead">
+      <h2 class="cell-label">Leading signal</h2>
+      <p class="lead-kick" id="leadKick">—</p>
+      <h3 class="lead-head" id="leadHead">Waiting for the grid to fill…</h3>
+      <p class="lead-sum" id="leadSum"></p>
+      <p class="lead-meta" id="leadMeta"></p>
+    </div>
+  </section>
+
+  <!-- ═══ Register (brief modules, injected) ═══ -->
+  <main class="register" id="register"></main>
+
+  <div class="wire-error" id="wireError" hidden>
+    <p><strong>Grid empty.</strong> The live briefs could not be loaded. The newsroom itself is at <a href="../../">dustin-ai-playground</a>.</p>
+  </div>
+
+  <!-- ═══ Foot ═══ -->
+  <footer class="foot">
+    <p class="foot-logo">Raster<span class="dot" aria-hidden="true"></span></p>
+    <p>A Swiss-grid edition of <a href="../../">Dustin Cole's AI newsroom</a></p>
+    <p class="foot-dim">Other editions: <a href="../">The Newsstand</a></p>
+  </footer>
+
+  <script src="./vendor/gsap.min.js"></script>
+  <script src="./vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

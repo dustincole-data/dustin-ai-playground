@@ -1,0 +1,273 @@
+/* ═══════════════════════════════════════════════════════════════
+   TERRANE — the morning, surveyed
+   A topographic quadrangle sheet: hypsometric tints, contour
+   rules, benchmark stamps. Chivo display · STIX Two Text body.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --sheet: oklch(97.6% 0.006 140);
+  --paperline: oklch(88% 0.012 140);
+  --ink: oklch(24% 0.03 165);
+  --ink-70: oklch(37% 0.025 165);
+  --ink-50: oklch(50% 0.02 165);
+  --survey: oklch(51% 0.17 32);         /* benchmark red */
+  --water: oklch(44% 0.09 235);         /* hydrographic blue, link color */
+  --moss: oklch(55% 0.09 145);
+  --contour: oklch(74% 0.05 80);        /* tan contour lines */
+
+  --display: "Chivo", "Franklin Gothic Medium", Arial, sans-serif;
+  --mono: "Chivo Mono", Consolas, monospace;
+  --text: "STIX Two Text", Georgia, serif;
+
+  --measure: 66ch;
+  --gutter: clamp(1rem, 3.5vw, 2.6rem);
+  --z-skip: 100;
+  --z-strip: 40;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: oklch(30% 0.03 165); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--sheet);
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: 1.06rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* the map sheet sits on a dark chart table */
+.sheet {
+  max-width: 90rem;
+  margin-inline: auto;
+  background: var(--sheet);
+  outline: 1px solid var(--paperline);
+  box-shadow: 0 0 0 6px oklch(30% 0.03 165), 0 30px 80px -20px oklch(12% 0.02 165 / 0.7);
+}
+
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; }
+p { text-wrap: pretty; }
+a { color: var(--water); text-underline-offset: 2px; }
+::selection { background: oklch(88% 0.06 145); }
+
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem;
+  background: var(--survey); color: oklch(98% 0 0);
+  padding: 0.6rem 1.1rem; font-family: var(--display); font-weight: 700;
+  z-index: var(--z-skip); text-decoration: none; transition: top 0.2s ease-out;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ═══ Plate (header) ═══ */
+.plate { border-bottom: 2px solid var(--ink); }
+.plate-row {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 1rem 2.4rem;
+  padding: clamp(1.2rem, 3vw, 2rem) var(--gutter) clamp(0.9rem, 2vw, 1.3rem);
+}
+.plate-name {
+  margin: 0;
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  line-height: 0.95;
+  color: var(--ink);
+}
+.plate-block { flex: 1 1 16rem; }
+.plate-title { margin: 0 0 0.2rem; font-family: var(--display); font-weight: 700; font-size: 1.02rem; }
+.plate-sub { margin: 0; font-size: 0.95rem; color: var(--ink-70); font-style: italic; }
+.plate-facts {
+  margin: 0; display: grid; grid-template-columns: auto auto; gap: 0.15rem 1.6rem;
+  font-family: var(--mono); font-size: 0.78rem;
+}
+.plate-facts div { display: flex; gap: 0.5rem; }
+.plate-facts dt { color: var(--ink-50); text-transform: uppercase; letter-spacing: 0.04em; }
+.plate-facts dd { margin: 0; color: var(--ink); }
+
+/* ═══ Relief hero ═══ */
+.relief {
+  position: relative;
+  border-bottom: 2px solid var(--ink);
+  overflow: hidden;
+}
+#terrain { display: block; width: 100%; height: clamp(340px, 46vw, 540px); touch-action: manipulation; }
+.relief-panel {
+  position: absolute; top: clamp(1rem, 3.5vw, 2.6rem); left: var(--gutter);
+  max-width: min(23.5rem, 58vw);
+  background: color-mix(in oklab, var(--sheet) 88%, transparent);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--paperline);
+  padding: clamp(0.9rem, 2vw, 1.4rem) clamp(1rem, 2.2vw, 1.5rem);
+  box-shadow: 0 10px 30px -14px oklch(20% 0.02 165 / 0.5);
+}
+.relief-head {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+.relief-sub { margin: 0 0 0.55rem; font-size: 1rem; color: var(--ink-70); }
+.relief-note { margin: 0; font-family: var(--mono); font-size: 0.74rem; color: var(--ink-50); min-height: 2.2em; }
+.relief-labels { position: absolute; inset: 0; pointer-events: none; }
+.relief-label {
+  position: absolute; transform: translate(-50%, -100%);
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 500;
+  color: var(--ink); background: color-mix(in oklab, var(--sheet) 82%, transparent);
+  border: 1px solid var(--paperline);
+  padding: 0.1rem 0.4rem; white-space: nowrap;
+  transition: opacity 0.3s ease-out;
+}
+.relief-label::after {
+  content: ""; position: absolute; left: 50%; top: 100%;
+  width: 1px; height: 0.7rem; background: var(--ink-50);
+}
+
+/* ═══ Index strip ═══ */
+.index-strip {
+  position: sticky; top: 0; z-index: var(--z-strip);
+  display: flex;
+  background: color-mix(in oklab, var(--sheet) 94%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ink);
+}
+.idx {
+  flex: 1 1 0; min-width: 0;
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 0.6rem 0.4rem;
+  font-family: var(--display); font-weight: 600; font-size: 0.86rem;
+  color: var(--ink-70); text-decoration: none;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  transition: color 0.2s ease-out, border-color 0.2s ease-out, background 0.2s ease-out;
+}
+.idx .idx-el { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-50); }
+.idx:hover { color: var(--ink); background: oklch(94% 0.015 140); }
+.idx[aria-current="true"] { border-bottom-color: var(--survey); color: var(--ink); }
+
+/* ═══ Quadrangles ═══ */
+.quad { border-bottom: 1px solid var(--paperline); scroll-margin-top: 3.4rem; }
+.quad-inner {
+  display: grid;
+  grid-template-columns: minmax(11rem, 16rem) minmax(0, 1fr);
+  gap: clamp(1.2rem, 3.5vw, 3.4rem);
+  padding: clamp(1.8rem, 4.5vw, 3.2rem) var(--gutter);
+}
+.quad-side { position: relative; }
+.quad-rail { position: sticky; top: 3.6rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.quad-glyph { width: 100%; max-width: 9rem; height: auto; }
+.quad-glyph path { fill: none; stroke-width: 1.6; }
+.quad-title {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+  font-weight: 900; letter-spacing: -0.015em; line-height: 1.05;
+}
+.quad-elev { margin: 0; font-family: var(--mono); font-size: 0.76rem; color: var(--survey); }
+.quad-deck { margin: 0; font-size: 0.92rem; line-height: 1.5; color: var(--ink-70); font-style: italic; }
+.quad-updated { margin: 0; font-family: var(--mono); font-size: 0.72rem; color: var(--ink-50); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.quad-flow { display: flex; flex-direction: column; gap: clamp(1.6rem, 3vw, 2.4rem); max-width: var(--measure); }
+
+/* Station (story) */
+.station { position: relative; padding-left: clamp(1.4rem, 2.4vw, 2rem); }
+.station::before {
+  content: "▲";
+  position: absolute; left: 0; top: 0.42em;
+  font-size: 0.62rem; color: var(--survey);
+}
+.station + .station { padding-top: clamp(1.5rem, 2.8vw, 2.2rem); }
+.station + .station::before { top: calc(clamp(1.5rem, 2.8vw, 2.2rem) + 0.42em); }
+.station + .station::after {
+  content: ""; position: absolute; left: 0.26rem; top: 0;
+  width: 0; height: clamp(1.1rem, 2.2vw, 1.8rem);
+  border-left: 1px dashed var(--contour);
+}
+.station-kick {
+  margin: 0 0 0.25rem;
+  font-family: var(--mono); font-size: 0.76rem;
+  color: var(--ink-50); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.station-head {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.24rem, 2.3vw, 1.56rem);
+  font-weight: 800; line-height: 1.14; letter-spacing: -0.012em;
+}
+.station-head a { color: inherit; text-decoration: none; }
+.station-head a:hover { color: var(--water); text-decoration: underline; text-decoration-thickness: 2px; }
+.station-sum { margin: 0 0 0.7rem; }
+.station-note {
+  margin: 0 0 0.75rem;
+  font-size: 0.98rem; line-height: 1.55; color: var(--ink-70);
+  padding: 0.5rem 0.85rem;
+  background: oklch(94% 0.02 140);
+  border: 1px solid var(--paperline);
+}
+.station-note strong { font-family: var(--display); font-size: 0.84rem; color: var(--survey); font-weight: 700; }
+
+/* Legend (glossary) */
+.legend {
+  margin: 0 0 0.75rem;
+  border: 1px solid var(--paperline);
+  background: color-mix(in oklab, var(--sheet) 60%, oklch(98% 0 0));
+}
+.legend summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.42rem 0.8rem;
+  font-family: var(--display); font-weight: 700; font-size: 0.84rem;
+  color: var(--ink-70);
+}
+.legend summary::-webkit-details-marker { display: none; }
+.legend summary::before { content: "⊞"; color: var(--moss); font-size: 1rem; }
+.legend[open] summary::before { content: "⊟"; }
+.legend summary:hover { color: var(--ink); background: oklch(94% 0.015 140); }
+.legend-body { padding: 0.2rem 0.9rem 0.75rem; display: grid; gap: 0.55rem; }
+.legend-term { margin: 0; font-size: 0.94rem; line-height: 1.5; }
+.legend-term strong { font-family: var(--display); font-size: 0.88rem; }
+.legend-term .legend-why { color: var(--ink-70); font-size: 0.88rem; }
+
+.station-meta {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 1.2rem;
+  font-family: var(--mono); font-size: 0.76rem; color: var(--ink-50);
+}
+.station-meta .learn { color: var(--water); font-weight: 500; }
+
+.quad-empty { margin: 0; color: var(--ink-50); font-style: italic; }
+
+/* ═══ Error + foot ═══ */
+.wire-error { padding: 2.5rem var(--gutter); }
+.foot {
+  padding: clamp(1.8rem, 4vw, 2.8rem) var(--gutter) clamp(2.2rem, 4.5vw, 3rem);
+  color: var(--ink-70); font-size: 0.95rem;
+  border-top: 2px solid var(--ink);
+}
+.foot p { margin: 0.25rem 0; }
+.foot-name { font-family: var(--display); font-weight: 900; font-size: 1.3rem; color: var(--ink); }
+.foot-dim { color: var(--ink-50); font-style: italic; }
+
+/* ═══ Responsive ═══ */
+@media (max-width: 880px) {
+  .sheet { box-shadow: none; outline: none; }
+  html { background: var(--sheet); }
+  .plate-facts { grid-template-columns: 1fr; }
+  .relief-panel {
+    position: static; max-width: none;
+    border-inline: none; border-top: none;
+    box-shadow: none; backdrop-filter: none; background: var(--sheet);
+    border-bottom: 1px solid var(--paperline);
+  }
+  .relief { display: flex; flex-direction: column-reverse; }
+  #terrain { height: clamp(260px, 64vw, 380px); }
+  .relief-labels { display: none; }
+  .quad-inner { grid-template-columns: 1fr; gap: 1rem; }
+  .quad-rail { position: static; }
+  .quad-glyph { max-width: 7rem; }
+  .idx { font-size: 0.74rem; }
+  .idx .idx-el { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .idx, .legend summary, .relief-label { transition: none; }
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teach me — Prisma · Dustin Cole's personal newsroom</title>
+  <meta name="description" content="A plain-language explainer for one story in Prisma, Dustin Cole's personal newsroom: what it means, why it matters, and the terms worth knowing." />
+  <meta name="theme-color" content="#575093" />
+  <link rel="icon" type="image/svg+xml" href="../brand/mark.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../brand/icon-32.png" />
+  <link rel="apple-touch-icon" href="../brand/apple-touch-icon.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Teach me — Prisma · Dustin Cole's personal newsroom" />
+  <meta property="og:description" content="A plain-language explainer: what this story means, why it matters, and the terms worth knowing." />
+  <meta property="og:image" content="https://dustincole-data.github.io/dustin-ai-playground/editions/prisma/brand/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#lead">Skip to the explainer</a>
+
+  <div class="spectrum-strip" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="back" href="../">
+      <span class="back-tri" aria-hidden="true"></span>
+      Prisma
+    </a>
+    <span class="topbar-tag" id="topbarTag">Teach me</span>
+  </header>
+
+  <main class="sheet" id="sheet" hidden>
+    <!-- lead -->
+    <section class="lead" id="lead">
+      <p class="lead-kick" id="leadKick">Teach me</p>
+      <h1 class="lead-title" id="leadTitle">—</h1>
+      <p class="lead-meta" id="leadMeta"></p>
+    </section>
+
+    <!-- what this means -->
+    <section class="means">
+      <h2 class="sec-label" id="meansLabel">What this means</h2>
+      <p class="means-text" id="meansText"></p>
+    </section>
+
+    <!-- the story itself -->
+    <section class="recap" id="recap">
+      <h2 class="sec-label">The story, in brief</h2>
+      <p class="recap-sum" id="recapSum"></p>
+      <p class="recap-why" id="recapWhy" hidden><span class="why-tag">Why it matters</span> <span id="recapWhyText"></span></p>
+    </section>
+
+    <!-- glossary -->
+    <section class="terms" id="terms" hidden>
+      <h2 class="sec-label">Terms worth knowing</h2>
+      <p class="terms-note">The words in this field a normal person off the street might not know — defined plainly.</p>
+      <div class="terms-grid" id="termsGrid"></div>
+    </section>
+
+    <!-- source + nav -->
+    <section class="actions">
+      <a class="btn btn-primary" id="sourceBtn" href="#" target="_blank" rel="noopener">Read the full source</a>
+      <a class="btn btn-ghost" href="../">Back to Prisma</a>
+    </section>
+  </main>
+
+  <div class="fallback" id="fallback" hidden>
+    <h1>That story isn't on today's spectrum.</h1>
+    <p>Prisma refreshes every morning, so older explainers roll off. Head back and pick a story that's boarding now.</p>
+    <a class="btn btn-primary" href="../">Back to Prisma</a>
+  </div>
+
+  <footer class="foot">
+    <p class="foot-name">Prisma</p>
+    <p>A personal newsroom experiment by <strong>Dustin Cole</strong></p>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

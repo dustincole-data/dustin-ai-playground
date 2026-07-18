@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Newsstand — three editions of Dustin Cole's AI newsroom</title>
-  <meta name="description" content="One newsroom, three papers. The Morning Ledger, The Night Desk, and The Nocturne Dispatch — three redesigns of Dustin Cole's agent-compiled morning briefs." />
+  <title>The Newsstand — ten editions of Dustin Cole's AI newsroom</title>
+  <meta name="description" content="One newsroom, ten papers. The Morning Ledger, The Night Desk, The Nocturne Dispatch, The Signal-Standard, The Daily Holler, Meridian, Raster, Prisma, Terrane, and Concourse — redesigns of Dustin Cole's agent-compiled morning briefs." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128478;</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,500&family=Anton&family=Spline+Sans+Mono:wght@400;600&family=Italiana&family=Cinzel:wght@500&family=Archivo:wght@400;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,500&family=Anton&family=Spline+Sans+Mono:wght@400;600&family=Italiana&family=Cinzel:wght@500&family=Archivo:wght@400;600&family=Piazzolla:opsz,wght@8..30,500..800&family=Alfa+Slab+One&family=Gloock&family=Hanken+Grotesk:wght@400..900&family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Chivo:wght@900&family=Barlow+Semi+Condensed:wght@700&display=swap" />
   <style>
     :root {
       --ink: oklch(20% 0.01 270);
@@ -51,7 +51,7 @@
     .rack {
       flex: 1;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
       gap: 0;
       min-height: 62dvh;
     }
@@ -127,6 +127,110 @@
       font-weight: 400;
       font-size: clamp(2.1rem, 3.8vw, 3.3rem);
     }
+    .door-standard {
+      background:
+        linear-gradient(180deg, oklch(36% 0.095 255) 0 26%, oklch(99.2% 0.002 250) 26%),
+        oklch(99.2% 0.002 250);
+      color: oklch(19% 0.02 262);
+    }
+    .door-standard .door-eyebrow { color: oklch(96% 0.01 250); }
+    .door-standard .door-title {
+      font-family: "Piazzolla", serif;
+      font-weight: 700;
+      font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+      letter-spacing: -0.01em;
+    }
+    .door-holler {
+      background:
+        repeating-radial-gradient(circle at 30% 20%, transparent 0 7px, oklch(15% 0.01 60 / 0.06) 7px 8px),
+        oklch(53% 0.21 29);
+      color: #fff;
+    }
+    .door-holler .door-eyebrow { color: oklch(88% 0.165 96); }
+    .door-holler .door-title {
+      font-family: "Alfa Slab One", serif;
+      font-weight: 400;
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      text-transform: uppercase;
+      text-shadow: 0.05em 0.05em 0 oklch(15% 0.01 60);
+    }
+    .door-meridian {
+      background:
+        radial-gradient(120% 100% at 50% 0%, oklch(30% 0.06 350) 0%, oklch(23% 0.05 330) 60%),
+        oklch(23% 0.05 330);
+      color: oklch(93% 0.02 85);
+    }
+    .door-meridian .door-eyebrow { color: oklch(74% 0.07 200); }
+    .door-meridian .door-title {
+      font-family: "Gloock", serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 3.6vw, 3.1rem);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .door-raster {
+      background:
+        linear-gradient(0deg, oklch(84% 0 0 / 0.5) 0 1px, transparent 1px) 0 0 / 100% 28px,
+        oklch(98.4% 0 0);
+      color: oklch(17% 0 0);
+    }
+    .door-raster .door-eyebrow { color: oklch(54% 0.2 28); }
+    .door-raster .door-title {
+      font-family: "Hanken Grotesk", sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 3.6vw, 3.1rem);
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+    .door-prisma {
+      background:
+        conic-gradient(from 210deg at 82% 18%,
+          oklch(96% 0.02 295) 0 40deg, oklch(96% 0.025 250) 40deg 80deg,
+          oklch(96% 0.025 200) 80deg 120deg, oklch(96% 0.025 155) 120deg 160deg,
+          oklch(96.5% 0.03 80) 160deg 200deg, oklch(96.5% 0.025 25) 200deg 240deg,
+          oklch(99% 0 0) 240deg 360deg),
+        oklch(99% 0 0);
+      color: oklch(18% 0.01 300);
+    }
+    .door-prisma .door-eyebrow { color: oklch(41% 0.17 295); }
+    .door-prisma .door-title {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 3.6vw, 3.1rem);
+      letter-spacing: -0.02em;
+    }
+    .door-terrane {
+      background:
+        repeating-radial-gradient(ellipse 120% 90% at 30% 110%, transparent 0 22px, oklch(55% 0.06 120 / 0.16) 22px 23px),
+        oklch(97.6% 0.006 140);
+      color: oklch(24% 0.03 165);
+    }
+    .door-terrane .door-eyebrow { color: oklch(51% 0.17 32); }
+    .door-terrane .door-title {
+      font-family: "Chivo", sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 3.6vw, 3.1rem);
+      letter-spacing: -0.015em;
+    }
+    .door-concourse {
+      background:
+        linear-gradient(180deg, oklch(24% 0.015 265) 0 34%, oklch(98.6% 0.002 250) 34%),
+        oklch(98.6% 0.002 250);
+      color: oklch(21% 0.015 260);
+    }
+    .door-concourse .door-eyebrow { color: oklch(85% 0.15 92); }
+    .door-concourse .door-title {
+      font-family: "Barlow Semi Condensed", sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      background: oklch(24% 0.015 265);
+      color: oklch(85% 0.15 92);
+      padding: 0.14em 0.5em 0.18em;
+      border-radius: 0.14em;
+      box-shadow: 0 6px 18px -8px oklch(20% 0.02 265 / 0.6);
+    }
     .stand-foot {
       text-align: center;
       padding: 1.1rem 1rem 1.5rem;
@@ -147,7 +251,7 @@
 <body>
   <header class="stand-head">
     <h1>The Newsstand</h1>
-    <p>One newsroom, three papers. Same live briefs, compiled nightly by agents — dressed for three different hours of the day.</p>
+    <p>One newsroom, ten papers. Same live briefs, compiled nightly by agents — dressed in ten newspaper traditions.</p>
     <p class="ident">Dustin Cole · AI side project · Built from sourced signals</p>
   </header>
 
@@ -170,10 +274,52 @@
       <span class="door-desc">A gold-engraved midnight paper beneath a living aurora — the same briefs, printed while the city dreams.</span>
       <span class="door-cta">Enter the night</span>
     </a>
+    <a class="paper-door door-standard" href="./standard/">
+      <span class="door-eyebrow">7:00 AM — The broadsheet</span>
+      <span class="door-title">The Signal-Standard</span>
+      <span class="door-desc">A modern civic broadsheet: press-blue chrome, column rules, a live wire ticker, and a signal globe turning behind the masthead.</span>
+      <span class="door-cta">Read the edition</span>
+    </a>
+    <a class="paper-door door-holler" href="./holler/">
+      <span class="door-eyebrow">8:00 AM — The tabloid</span>
+      <span class="door-title">The Daily Holler</span>
+      <span class="door-desc">Kentucky's loudest quiet paper: wood-type headlines, halftone press photos, and a robot in a fedora on the front page.</span>
+      <span class="door-cta">Extra! Extra!</span>
+    </a>
+    <a class="paper-door door-meridian" href="./meridian/">
+      <span class="door-eyebrow">Sunday — The magazine</span>
+      <span class="door-title">Meridian</span>
+      <span class="door-desc">The Sunday magazine: an oil-painted cover that ripples with signal under your cursor, and features worth sitting with.</span>
+      <span class="door-cta">Open the issue</span>
+    </a>
+    <a class="paper-door door-raster" href="./raster/">
+      <span class="door-eyebrow">On the hour — The grid</span>
+      <span class="door-title">Raster</span>
+      <span class="door-desc">A Swiss-grid daily: one typeface, functional red, and this morning's briefs standing as a rotating 3D column chart.</span>
+      <span class="door-cta">Read in order</span>
+    </a>
+    <a class="paper-door door-prisma" href="./prisma/">
+      <span class="door-eyebrow">First light — The spectrum</span>
+      <span class="door-title">Prisma</span>
+      <span class="door-desc">One beam of morning news through a glass prism: six wavelengths, six briefs, full summaries in every band.</span>
+      <span class="door-cta">Refract the day</span>
+    </a>
+    <a class="paper-door door-terrane" href="./terrane/">
+      <span class="door-eyebrow">Dawn survey — The map</span>
+      <span class="door-title">Terrane</span>
+      <span class="door-desc">Today's news as shaded relief: six ridges rise with the story count, contour lines and all, on a proper quad sheet.</span>
+      <span class="door-cta">Read the terrain</span>
+    </a>
+    <a class="paper-door door-concourse" href="./concourse/">
+      <span class="door-eyebrow">All morning — Departures</span>
+      <span class="door-title">Concourse</span>
+      <span class="door-desc">A bright terminal hall: a working split-flap departure board, six gates of stories, and a rotating boarding pylon.</span>
+      <span class="door-cta">Walk the hall</span>
+    </a>
   </main>
 
   <footer class="stand-foot">
-    Three redesigns of the <a href="../">Dustin Cole AI Playground newsroom</a> · every story keeps its original source
+    Ten redesigns of the <a href="../">Dustin Cole AI Playground newsroom</a> · every story keeps its original source
   </footer>
 </body>
 </html>
