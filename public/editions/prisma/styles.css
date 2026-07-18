@@ -125,6 +125,25 @@ a { color: inherit; }
   min-height: 2.6em;
 }
 
+/* ═══ Daily spoken edition ═══ */
+.podcast { border-bottom: 1px solid var(--line); }
+.podcast-inner {
+  max-width: 76rem; margin-inline: auto;
+  padding: 1.1rem var(--gutter) 1.35rem;
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 0.55rem 1rem; align-items: center;
+  background: linear-gradient(120deg, var(--ai-wash), var(--white) 62%);
+}
+.podcast-mark {
+  width: 2.7rem; height: 2.7rem; display: grid; place-items: center; border-radius: 50%;
+  background: var(--ai-deep); color: var(--white); font-family: var(--display); font-weight: 800; letter-spacing: -0.18em;
+}
+.podcast-copy { min-width: 0; }
+.podcast-kicker { margin: 0 0 0.08rem; font-family: var(--display); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ai-deep); }
+.podcast-copy h2 { margin: 0; font-size: 1.25rem; line-height: 1.12; font-weight: 730; }
+.podcast-copy p:last-child { margin: 0.15rem 0 0; font-size: 0.84rem; line-height: 1.4; color: var(--ink-50); }
+.podcast-transcript { font-family: var(--display); font-size: 0.82rem; font-weight: 650; color: var(--ai-deep); text-underline-offset: 3px; white-space: nowrap; }
+.podcast-audio { grid-column: 2 / 4; width: 100%; height: 2.25rem; accent-color: var(--ai-deep); }
+
 /* ═══ Spectrum index ═══ */
 .spectrum {
   position: sticky; top: 0; z-index: var(--z-spectrum);
@@ -264,6 +283,9 @@ a { color: inherit; }
   .hero { grid-template-columns: 1fr; padding-top: 0.4rem; }
   #prism { height: clamp(240px, 58vw, 340px); }
   .hero-copy { order: -1; padding-bottom: 0; padding-top: 0.6rem; }
+  .podcast-inner { grid-template-columns: auto minmax(0, 1fr); }
+  .podcast-transcript { grid-column: 2; }
+  .podcast-audio { grid-column: 1 / -1; }
   .band-inner { grid-template-columns: 1fr; gap: 1.1rem; }
   .band-rail { position: static; flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1rem; }
   .band-swatch { width: 3.2rem; height: 0.5rem; }
