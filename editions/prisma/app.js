@@ -4,6 +4,7 @@
    wavelengths — beam widths follow this morning's story counts. */
 
 import * as THREE from './vendor/three.module.min.js';
+import { formatPodcastDuration, podcastAssetPath } from './podcast.js';
 
 const SECTIONS = [
   { id: 'ai', name: 'AI', label: 'AI', headline: 'AI', hue: 'ai',
@@ -31,6 +32,10 @@ const DATA_PATHS = [
   `../../data/morning-briefs.json?ts=${Date.now()}`,
   `https://dustincole-data.github.io/dustin-ai-playground/data/morning-briefs.json?ts=${Date.now()}`,
 ];
+const PODCAST_PATHS = [
+  `../../data/daily-podcast.json?ts=${Date.now()}`,
+  `https://dustincole-data.github.io/dustin-ai-playground/data/daily-podcast.json?ts=${Date.now()}`,
+];
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -52,6 +57,34 @@ async function loadData() {
     } catch { /* try next */ }
   }
   return null;
+}
+
+async function loadPodcast() {
+  for (const url of PODCAST_PATHS) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) continue;
+      return await res.json();
+    } catch { /* try next */ }
+  }
+  return null;
+}
+
+function renderPodcast(podcast) {
+  if (!podcast?.audioUrl) return;
+  const section = document.getElementById('dailyPodcast');
+  const audio = document.getElementById('dailyPodcastAudio');
+  const transcript = document.getElementById('dailyPodcastTranscript');
+  const meta = document.getElementById('dailyPodcastMeta');
+  if (!section || !audio || !transcript || !meta) return;
+
+  const audioPath = podcastAssetPath(podcast.audioUrl);
+  const transcriptPath = podcastAssetPath(podcast.transcriptUrl);
+  audio.src = audioPath;
+  meta.textContent = `${podcast.articleCount || 0} stories · ${formatPodcastDuration(podcast.durationSeconds)} · a fresh spoken rundown, not a page readout`;
+  if (transcriptPath) transcript.href = transcriptPath;
+  else transcript.hidden = true;
+  section.hidden = false;
 }
 
 function cleanSummary(a) {
@@ -444,7 +477,8 @@ function initPrism() {
 /* ---------- boot ---------- */
 
 (async function boot() {
-  const data = await loadData();
+  const [data, podcast] = await Promise.all([loadData(), loadPodcast()]);
+  renderPodcast(podcast);
   if (!data) {
     document.getElementById('wireError').hidden = false;
     render({ briefs: [] });
