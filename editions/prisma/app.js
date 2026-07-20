@@ -14,7 +14,7 @@ import {
   podcastShareUrl,
   podcastTopicArtwork,
   requestedPodcastChapter,
-} from './podcast.js?v=20260720-podcast-art';
+} from './podcast.js?v=20260720-podcast-art-2';
 
 const SECTIONS = [
   { id: 'ai', name: 'AI', label: 'AI', headline: 'AI', hue: 'ai',
