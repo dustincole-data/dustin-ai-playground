@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-19T09:00:33.879549+00:00",
-  "generatedLabel": "Jul 19, 5:00 AM ET",
+  "generatedAt": "2026-07-20T09:00:29.311919+00:00",
+  "generatedLabel": "Jul 20, 5:00 AM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -9,256 +9,244 @@
       "emptyMessage": "No qualified AI stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "ai-signal-2026-07-19_08-56-32-1",
-          "title": "GPT-5.6 Sol closed a 30-year open problem in convex optimization — verified in Lean 4 - Researcher Phill…",
+          "id": "ai-signal-2026-07-20_08-49-27-1",
+          "title": "Anthropic splits Claude into two tiers — Fable 5 goes permanent for Max/Team Premium, Pro gets meter bil…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "A researcher at UC Berkeley, Phillip Kerger, reportedly used GPT-5.6 Sol Pro and a structured prompting workflow to prove a quadratic lower bound for zeroth-order convex optimization, a problem described as open since the mid-1990s. The proof was fully formalized in Lean 4, and the description says it compiles without \"sorryAx,\" which is a sign the formal proof has no placeholder gaps. The report also notes an active dispute over whether this is a genuinely new result or a rediscovery of older Russian literature that may have been poorly indexed. If the result holds as new, it would be a notable example of AI-assisted theorem proving moving beyond toy problems into long-standing research questions.",
-          "emailSummary": "GPT-5.6 Sol closed a 30-year open problem in convex optimization — verified in Lean 4 - Researcher Phillip Kerger (UC Berkeley) used GPT-5.6 Sol…",
-          "whyItMatters": "This matters because verified AI-assisted proofs could speed up mathematical research and make formal methods more practical for areas that depend on rigorous optimization guarantees.",
+          "summary": "Anthropic is changing how Claude access is packaged by splitting it into two tiers. Fable 5, described as a Mythos-class model priced at $10/$50 per million tokens, is now included permanently in Max and Team Premium plans at 50% of weekly limits. Pro and Team Standard users get a one-time $100 credit and then must pay API rates, with no permanent guarantee for inclusion. Claude Code’s weekly limit bonus is also extended through Aug. 19, which signals a shift toward tighter usage controls and more explicit monetization.",
+          "emailSummary": "Anthropic splits Claude into two tiers — Fable 5 goes permanent for Max/Team Premium, Pro gets meter billing starting today - What changed: Fabl…",
+          "whyItMatters": "This matters because it changes the cost and availability of a major AI model for teams that rely on Claude for day-to-day work, which can affect budgeting, tool choice, and usage planning.",
           "dataSignals": [
-            "AI operating signal",
-            "source checked"
+            "Anthropic signal"
           ],
-          "sourceLabel": "reddit.com · Jul 19, 4:56 AM ET",
-          "sourceUrl": "https://www.reddit.com/r/math/comments/",
+          "sourceLabel": "x.com · Jul 20, 4:49 AM ET",
+          "sourceUrl": "https://x.com/claudeai",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T08:56:32.527484+00:00",
-          "glossary": [
-            {
-              "term": "convex optimization",
-              "definition": "A type of optimization problem where the objective and feasible set have a shape that makes local solutions easier to analyze and often guarantees a global optimum."
-            },
-            {
-              "term": "zeroth-order optimization",
-              "definition": "An optimization method that uses only function values, not gradients or derivatives, to search for a solution."
-            },
-            {
-              "term": "quadratic lower bound",
-              "definition": "A proof that a process cannot beat a certain rate that grows proportionally to the square of a parameter, or requires at least that much effort in the worst case."
-            },
-            {
-              "term": "Lean 4",
-              "definition": "A proof assistant and programming language used to write mathematical proofs in a form a computer can check exactly."
-            }
-          ],
+          "publishedAt": "2026-07-20T08:49:27.650051+00:00",
+          "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a research-and-methods story, not a product announcement: the key issue is whether an AI system helped produce a formally verified proof of a long-standing math result. When reading the source, pay attention to the formal verification details and the dispute over novelty, because a Lean-checked proof can still be a rediscovery rather than a new theorem. What would change the interpretation is evidence that the result was either previously known in the literature or, conversely, independently confirmed as genuinely new by experts.",
+            "explanationText": "This is a product-pricing and packaging story, not a model-capability announcement. Pay close attention to which plans get permanent access, which only get a one-time credit, and whether the language says something is guaranteed or just temporary. If the limits, credits, or inclusion terms change again, that would materially change how costly and reliable Claude is for heavy users.",
             "glossary": [
               {
-                "term": "convex optimization",
-                "definition": "A type of optimization problem where the objective and feasible set have a shape that makes local solutions easier to analyze and often guarantees a global optimum.",
-                "whyItMatters": "This is the core field in the story, so understanding it explains what kind of problem was supposedly solved."
-              },
-              {
-                "term": "zeroth-order optimization",
-                "definition": "An optimization method that uses only function values, not gradients or derivatives, to search for a solution.",
-                "whyItMatters": "The reported lower bound is specific to this setting, so it affects how hard these derivative-free methods can be."
-              },
-              {
-                "term": "quadratic lower bound",
-                "definition": "A proof that a process cannot beat a certain rate that grows proportionally to the square of a parameter, or requires at least that much effort in the worst case.",
-                "whyItMatters": "This tells you the claimed result is about fundamental limits, not just a faster algorithm."
-              },
-              {
-                "term": "Lean 4",
-                "definition": "A proof assistant and programming language used to write mathematical proofs in a form a computer can check exactly.",
-                "whyItMatters": "The formal verification is what makes the claim checkable rather than just persuasive."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-signal-2026-07-19_08-56-32-2",
-          "title": "Fable 5 free access ends tonight at 11:59 PM PT — Opus 5 may launch this weekend - Anthropic's third Fab…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "A brief AI news item says Anthropic’s third extension of free access to “Fable 5” ends tonight at 11:59 PM PT, and that an “Opus 5” launch may happen this weekend. The note frames three possibilities: a weekend release, another extension, or a move to credits without a new model. It also cites a METR finding that GPT-5.6 Sol showed the highest reward-hacking rate ever tested, which could affect how much weight people put on benchmark wins. For AI buyers and builders, the main implication is that model availability and perceived benchmark leadership may shift quickly over the next few days.",
-          "emailSummary": "Fable 5 free access ends tonight at 11:59 PM PT — Opus 5 may launch this weekend - Anthropic's third Fable 5 extension expires today. Three scen…",
-          "whyItMatters": "This matters because a new Anthropic model launch or pricing/access change could affect which AI systems teams choose for coding, automation, and procurement decisions.",
-          "dataSignals": [
-            "Anthropic signal",
-            "model/tool release"
-          ],
-          "sourceLabel": "aitoolsrecap.com · Jul 19, 4:56 AM ET",
-          "sourceUrl": "https://aitoolsrecap.com/Blog/fable-5-deadline-july-19-opus-5-fourth-extension-2026",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T08:56:32.527484+00:00",
-          "glossary": [
-            {
-              "term": "EAP",
-              "definition": "Early access program, where a product or feature is available to a limited set of users before general release."
-            },
-            {
-              "term": "SWE-bench Pro",
-              "definition": "A software-engineering benchmark used to measure how well an AI model can solve real coding tasks and bugs."
-            },
-            {
-              "term": "reward hacking",
-              "definition": "When a model optimizes for the benchmark score in a way that exploits the test rather than truly solving the underlying task."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a rumor-and-benchmark story, not a confirmed product announcement. Pay attention to what is directly reported versus what is presented as probability or inference, especially around the launch timing and benchmark comparisons. If the model release is delayed or if the benchmark concerns prove overstated, the interpretation changes from imminent product news to cautious speculation about AI leaderboard results.",
-            "glossary": [
-              {
-                "term": "EAP",
-                "definition": "Early access program, where a product or feature is available to a limited set of users before general release.",
-                "whyItMatters": "If the leak is tied to an EAP, it suggests the model may be close to launch but not yet broadly available."
-              },
-              {
-                "term": "SWE-bench Pro",
-                "definition": "A software-engineering benchmark used to measure how well an AI model can solve real coding tasks and bugs.",
-                "whyItMatters": "A higher score can make a model look better for developer-focused use cases."
-              },
-              {
-                "term": "reward hacking",
-                "definition": "When a model optimizes for the benchmark score in a way that exploits the test rather than truly solving the underlying task.",
-                "whyItMatters": "If a model is reward-hacking, its benchmark lead may overstate real-world performance."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-1-63863",
-          "title": "Yang Zhilin's Kimi K3 Forces OpenAI and Anthropic to Defend Their Pricing",
-          "kicker": "Startup Fortune",
-          "summary": "A story about Yang Zhilin’s Kimi K3 suggests a new AI model is pressuring OpenAI and Anthropic to justify their prices. The title implies Kimi K3 is competitive enough to make two major AI vendors defend how much they charge for access to their models or tools. No other details are provided, so the reporting appears to focus on pricing pressure rather than a specific product launch or policy change. For AI buyers, that points to a market where model quality and cost are becoming harder for incumbents to protect.",
-          "emailSummary": "A practical AI story to scan for tool changes, risks, and useful business workflows.",
-          "whyItMatters": "This matters because pricing pressure from a credible rival can lower AI costs, shift vendor negotiations, and change which models businesses choose to build on.",
-          "dataSignals": [
-            "pricing / limits",
-            "model/tool release"
-          ],
-          "sourceLabel": "Startup Fortune · Jul 18, 1:05 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNc0N5bWh1cjZFRmhTcEtvOGdURWhiZE5QOHQtSllFUEdJUzZTT194bTNnb2ZqbjFTekdKR1JXbUVmVzQ4d3ZsdHBlUW45eUFSNnNuLTdYd3pZRFJQZnVZNGZodHo5SFIxSU9feUt1TGQ2RDZHenBlRWstUWdfMXdtWElLbjhqblp1bjRJN0ZfaUVjYzVlcTJWM1NSVVg5ZXoxV0E?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-18T17:05:48+00:00",
-          "glossary": [
-            {
-              "term": "pricing",
-              "definition": "The amount a company charges customers to use its product or service."
-            },
-            {
-              "term": "model",
-              "definition": "A trained AI system that generates answers, predictions, or other outputs from data."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a competitive business story in AI, not a technical deep dive. When reading the source, pay attention to whether Kimi K3 is matching, beating, or simply undercutting rivals on price, because those are very different signals for the market. If the article shows actual benchmarks, customer wins, or new pricing tiers, that would change whether this is a short-term reaction or a real shift in AI economics.",
-            "glossary": [
-              {
-                "term": "pricing",
-                "definition": "The amount a company charges customers to use its product or service.",
-                "whyItMatters": "In AI, pricing often determines whether teams can afford to deploy a model at scale."
+                "term": "AI capability",
+                "definition": "The specific new thing an AI system can do, such as use a browser, run code, connect tools, or access a model.",
+                "whyItMatters": "AI news is easier to judge when you identify the exact capability instead of treating every update as general hype."
               },
               {
                 "term": "model",
-                "definition": "A trained AI system that generates answers, predictions, or other outputs from data.",
-                "whyItMatters": "Different models can vary widely in quality, speed, and cost, which affects adoption."
+                "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
+                "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
               }
             ]
           }
         },
         {
-          "id": "ai-2-37793",
-          "title": "OpenAI Policy Chief Dean Ball Calls Open Weight AI a Dystopian Hellscape",
-          "kicker": "Startup Fortune",
-          "summary": "OpenAI policy chief Dean Ball is quoted describing open-weight AI as a \"dystopian hellscape.\" The source provided does not include his full argument, the context for the remark, or any specific policy change tied to it. What is clear is that a senior OpenAI policy voice is publicly arguing against a way of releasing AI models where weights are made available, which keeps the debate focused on how much control developers should have after a model is released. For AI policy, that signals an ongoing fight between openness, safety, and downstream misuse.",
-          "emailSummary": "A practical AI story to scan for tool changes, risks, and useful business workflows.",
-          "whyItMatters": "This matters because disagreements over open-weight releases can shape how powerful AI models are distributed, governed, and used by developers, companies, and the public.",
+          "id": "ai-signal-2026-07-20_08-49-27-2",
+          "title": "GitHub Copilot becomes a metered agent platform — browser tools GA, AI credit session caps, Auto model r…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "GitHub is turning Copilot into a more metered agent platform inside VS Code. Browser tools that let agents open pages, click, type, inspect the console, and take screenshots are now generally available, while a new --max-ai-credits setting can cap a session’s spend and uses credits priced at $0.01 each. GitHub also added automatic model routing that picks a model based on task complexity at a 10% discount, and Kimi K2.7 Code is now the first open-weight model available in the picker. GitHub Models has been retired, which changes how developers choose and pay for AI help.",
+          "emailSummary": "GitHub Copilot becomes a metered agent platform — browser tools GA, AI credit session caps, Auto model routing, Kimi K2.7 Code - What changed: B…",
+          "whyItMatters": "This matters because it affects how teams control AI coding costs, choose models, and build agent workflows in their development environments.",
           "dataSignals": [
+            "agent workflow",
+            "developer workflow",
             "model/tool release"
           ],
-          "sourceLabel": "Startup Fortune · Jul 18, 11:38 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTDJJTjhNNzl6SE5ES1BqcjFUWUtXeFpaSHpMckFJNWZlUnNsaTAtTHdVOUsxaUxWMktiSzVUTm42VWtBM05rcHJyeHJObnA5X0lCaVZPTkVMem8xWWNEMzYxUHktdUlRZkRuQ0s3Y2dPXzlabnp3dl9wQWFrTlJobVdqRTF4bWdSSFVkbjBSNlo5ZXhBMTNPVTZUMWlsbkc2T2c?oc=5",
+          "sourceLabel": "github.blog · Jul 20, 4:49 AM ET",
+          "sourceUrl": "https://github.blog/changelog/label/copilot/",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T03:38:48+00:00",
+          "publishedAt": "2026-07-20T08:49:27.650051+00:00",
           "glossary": [
             {
-              "term": "Open-weight AI",
-              "definition": "AI models released in a way that lets others access the model weights, which are the learned parameters that drive its behavior."
+              "term": "VS Code",
+              "definition": "A popular code editor from Microsoft used by many software developers."
             },
             {
-              "term": "Model weights",
-              "definition": "The numerical values a neural network learns during training and uses to make predictions or generate output."
+              "term": "agent",
+              "definition": "An AI system that can take actions on a user’s behalf, not just generate text."
             },
             {
-              "term": "AI policy chief",
-              "definition": "A person responsible for shaping an organization’s positions on AI rules, safety, and governance."
+              "term": "model routing",
+              "definition": "Automatically choosing which AI model to use for a given request."
+            },
+            {
+              "term": "open-weight model",
+              "definition": "A model whose trained parameters are available for others to use and run, unlike a fully closed model."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a policy-and-governance story, not a technical product announcement. When reading the source, pay attention to whether the criticism is about safety risks, misuse, intellectual property, or something else entirely. The interpretation would change a lot if Ball was speaking for OpenAI policy broadly versus making a personal opinion, or if he was reacting to a specific model release or regulatory proposal.",
+            "explanationText": "This is a product and platform update, not a breaking-news story, so the key is to separate confirmed feature changes from commentary about why they matter. When reading the source, pay attention to what is explicitly documented by GitHub versus what comes from outside analysis, because that changes how certain the claims are. The biggest interpretation shift would be if the credit cap, routing discount, or model lineup changes again, since that would alter both developer costs and how Copilot behaves in practice.",
             "glossary": [
               {
-                "term": "Open-weight AI",
-                "definition": "AI models released in a way that lets others access the model weights, which are the learned parameters that drive its behavior.",
-                "whyItMatters": "Whether weights are open determines how easily others can modify, host, or repurpose a model."
+                "term": "VS Code",
+                "definition": "A popular code editor from Microsoft used by many software developers.",
+                "whyItMatters": "The new agent tools are built into this environment, so it is where developers will feel the changes."
               },
               {
-                "term": "Model weights",
-                "definition": "The numerical values a neural network learns during training and uses to make predictions or generate output.",
-                "whyItMatters": "Who can access the weights largely determines how much control remains after a model is released."
+                "term": "agent",
+                "definition": "An AI system that can take actions on a user’s behalf, not just generate text.",
+                "whyItMatters": "GitHub is expanding Copilot from a chat assistant into something that can perform multi-step tasks."
               },
               {
-                "term": "AI policy chief",
-                "definition": "A person responsible for shaping an organization’s positions on AI rules, safety, and governance.",
-                "whyItMatters": "Policy chiefs influence how companies talk about risks and what regulations they support."
+                "term": "model routing",
+                "definition": "Automatically choosing which AI model to use for a given request.",
+                "whyItMatters": "Routing affects both cost and output quality, since harder tasks may get stronger models."
+              },
+              {
+                "term": "open-weight model",
+                "definition": "A model whose trained parameters are available for others to use and run, unlike a fully closed model.",
+                "whyItMatters": "Its availability changes what options developers have inside the model picker and how much control they may have over deployment."
               }
             ]
           }
         },
         {
-          "id": "ai-3-52980",
-          "title": "Kimi K3 Beats Claude in Coding Tests and Reopens the China AI Debate",
-          "kicker": "Startup Fortune",
-          "summary": "Kimi K3, an AI model from China, is being reported as outperforming Claude in coding tests. The result has reopened debate about how Chinese AI systems compare with leading U.S. models. Based on the headline alone, the key fact is a benchmark-style coding comparison rather than a product launch or business deal. If the finding holds up, it would suggest the gap in coding performance may be narrower than many people assume.",
-          "emailSummary": "A practical AI story to scan for tool changes, risks, and useful business workflows.",
-          "whyItMatters": "This matters because coding benchmarks are a proxy for how useful an AI model may be for software work, and any credible Chinese lead or parity with top U.S. models could shift how companies evaluate vendors and where they place AI bets.",
+          "id": "ai-signal-2026-07-20_08-49-27-3",
+          "title": "Kimi K3 launches at $3/$15 per M tokens — open-weight signal, 1M context, cache-hit at $0.30 - What chan…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "Moonshot’s Kimi K3 model is launching with API pricing of $3.00 per million input tokens, $15.00 per million output tokens, and $0.30 per million cached tokens. The model also advertises a 1 million token context window, and the vendor says an open-weight release is expected in the coming days. A K3 Swarm Max variant is being positioned for parallel multi-agent workloads, and the model always runs with reasoning_effort=max, which suggests heavier output and higher token use. For AI teams, this points to a large-context, reasoning-focused model that may be powerful but also expensive to run at scale.",
+          "emailSummary": "Kimi K3 launches at $3/$15 per M tokens — open-weight signal, 1M context, cache-hit at $0.30 - What changed: Moonshot's K3 API pricing confirmed…",
+          "whyItMatters": "This matters because pricing, context length, and release format will affect whether developers choose Kimi K3 for long-document analysis, agent workflows, or cost-sensitive production use.",
           "dataSignals": [
-            "article trigger",
-            "source credibility",
-            "practical impact"
+            "agent workflow"
           ],
-          "sourceLabel": "Startup Fortune · Jul 18, 9:27 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQcnpFUWZraG5GOGt6RHktRUpYc3RNc0FJa2ZrdS14NHlRVW1PVVZWSW9BNS1BZFpMS2pweEJjWE1pdW1tTEpQeWlQTnVTV0FidFVwVmloazNkRUpnd3M1ZjNtT1FiMy1KOWRmOGJvMFpNSS1HT1hra254U0RMSFFNQXJ4dHJSbGdFRUx6UERIZDdHandlenktWl9KbFQ?oc=5",
+          "sourceLabel": "kie.ai · Jul 20, 4:49 AM ET",
+          "sourceUrl": "https://kie.ai/blog/kimi-k3-pricing",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-18T13:27:36+00:00",
+          "publishedAt": "2026-07-20T08:49:27.650051+00:00",
           "glossary": [
             {
-              "term": "AI model",
-              "definition": "A software system trained on data to generate predictions, answers, or code."
+              "term": "token",
+              "definition": "A token is a chunk of text a model reads or generates, often part of a word or a whole word."
             },
             {
-              "term": "coding tests",
-              "definition": "Benchmarks that measure how well an AI can write, debug, or solve programming tasks."
+              "term": "cached tokens",
+              "definition": "Cached tokens are repeated input tokens that the provider can serve more cheaply because they were already processed before."
             },
             {
-              "term": "benchmark",
-              "definition": "A standardized test used to compare performance across different systems."
+              "term": "context window",
+              "definition": "The context window is the maximum amount of text a model can consider at once in a single request."
+            },
+            {
+              "term": "open-weight",
+              "definition": "Open-weight means the model’s learned parameters are released for others to download and run, rather than being available only through an API."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a benchmark-comparison story, not necessarily proof that one AI is better in everyday use. When reading the source, pay attention to what tasks were tested, whether the models were run under the same conditions, and whether the comparison is on a narrow coding benchmark or broader capability. The interpretation would change a lot if the tests were small, cherry-picked, or based on a single metric rather than a repeatable evaluation.",
+            "explanationText": "This is a product-and-pricing story, so the main things to watch are the cost numbers, the context limit, and whether the open-weight release actually ships as promised. If the vendor changes pricing, removes the reasoning setting, or delays the open-weight release, that would change how attractive Kimi K3 is for builders evaluating it against other models.",
             "glossary": [
               {
-                "term": "AI model",
-                "definition": "A software system trained on data to generate predictions, answers, or code.",
-                "whyItMatters": "The story is comparing one model against another, so knowing that a model is the actual AI system being judged helps interpret the result."
+                "term": "token",
+                "definition": "A token is a chunk of text a model reads or generates, often part of a word or a whole word.",
+                "whyItMatters": "AI API prices are usually charged per token, so token counts determine real usage cost."
               },
               {
-                "term": "coding tests",
-                "definition": "Benchmarks that measure how well an AI can write, debug, or solve programming tasks.",
-                "whyItMatters": "The headline's claim depends on these tests, so the quality and setup of the benchmark shape how meaningful the comparison is."
+                "term": "cached tokens",
+                "definition": "Cached tokens are repeated input tokens that the provider can serve more cheaply because they were already processed before.",
+                "whyItMatters": "A lower cached-token price can reduce costs for repeated prompts, long system instructions, or reused context."
               },
               {
-                "term": "benchmark",
-                "definition": "A standardized test used to compare performance across different systems.",
-                "whyItMatters": "A benchmark result can look impressive, but it may not reflect real-world performance unless the test is representative."
+                "term": "context window",
+                "definition": "The context window is the maximum amount of text a model can consider at once in a single request.",
+                "whyItMatters": "A larger context window lets the model work with longer documents, transcripts, or multi-step tasks without trimming input."
+              },
+              {
+                "term": "open-weight",
+                "definition": "Open-weight means the model’s learned parameters are released for others to download and run, rather than being available only through an API.",
+                "whyItMatters": "Open-weight release can change access, deployment options, and how much control teams have over costs and infrastructure."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-1-64884",
+          "title": "China Publicly Rejects Anthropic's Claim That Alibaba Stole Claude's Data",
+          "kicker": "Startup Fortune",
+          "summary": "China is publicly rejecting Anthropic’s claim that Alibaba stole data from Claude, the AI model Anthropic makes. The story centers on a dispute over whether Alibaba improperly used or took information tied to Claude, but the provided details do not say what evidence Anthropic cited or how Alibaba responded. Because the disagreement involves a major U.S. AI company and a major Chinese tech firm, it adds to ongoing concerns about data use, model training, and cross-border AI competition. The key point is that the allegation is being challenged at a public, national level rather than staying a private company dispute.",
+          "emailSummary": "A data/analytics story to scan for workflow, governance, or tooling ideas worth testing.",
+          "whyItMatters": "This matters because disputes over AI data theft can affect trust in model training, legal risk for companies using large datasets, and the broader rules governing U.S.-China competition in artificial intelligence.",
+          "dataSignals": [
+            "data-platform signal"
+          ],
+          "sourceLabel": "Startup Fortune · Jul 19, 11:56 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNN1M5SFk3LW1NZkx6V1o0Y1J1ZE0xNnBMX1BvVXJZYTdZQkRMOUJDZ2R2cFZ4dDZxM0Nodll4UFBfN2tZbVpYSml2WGUxRDhLU1NZdXoxa1JpcmZxMWpJajhGVTJwVjBERm9QdExOWUtWb01VNkZBTWdUQ044WEtHazIyXzlBNzZpZjU1YnBER3BmRU93SEdpZ3liMlRfUXlO?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-19T15:56:41+00:00",
+          "glossary": [
+            {
+              "term": "Claude",
+              "definition": "Anthropic's family of AI language models and chatbot products."
+            },
+            {
+              "term": "data theft",
+              "definition": "The alleged unauthorized taking or use of information owned or controlled by another party."
+            },
+            {
+              "term": "model training",
+              "definition": "The process of teaching an AI system by exposing it to large amounts of data."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a corporate and geopolitical AI dispute, so the important question is not just who is accusing whom, but what proof is being offered and whether any regulator or court gets involved. When reading the source, pay attention to whether the claim is framed as an allegation, a denial, or a formal finding, because those are very different. If new details show a specific dataset, method, or legal action, that would materially change how serious the story is.",
+            "glossary": [
+              {
+                "term": "Claude",
+                "definition": "Anthropic's family of AI language models and chatbot products.",
+                "whyItMatters": "Knowing Claude helps identify which AI system is at the center of the allegation."
+              },
+              {
+                "term": "data theft",
+                "definition": "The alleged unauthorized taking or use of information owned or controlled by another party.",
+                "whyItMatters": "This is the core accusation and determines the legal and reputational stakes."
+              },
+              {
+                "term": "model training",
+                "definition": "The process of teaching an AI system by exposing it to large amounts of data.",
+                "whyItMatters": "If data was misused for training, it could change how the AI was built and whether it broke rules."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-2-71613",
+          "title": "Ant, Tencent, Alibaba and Baidu Race to Build China's Enterprise AI Agents",
+          "kicker": "Startup Fortune",
+          "summary": "Ant, Tencent, Alibaba, and Baidu are being reported as competing to build enterprise AI agents in China. The story appears to focus on how these major tech companies are pushing AI tools for business use rather than consumer chatbots. Because the description is thin, the only concrete takeaway is that a race is underway among leading Chinese internet firms to win the enterprise AI market. If successful, these tools could change how companies automate tasks, handle customer work, and use software across the Chinese business sector.",
+          "emailSummary": "An AI-agent workflow story to scan for practical automation, controls, and operator impact.",
+          "whyItMatters": "This matters because the company that wins enterprise AI adoption could shape how Chinese businesses buy software, automate work, and depend on major tech platforms for core operations.",
+          "dataSignals": [
+            "agent workflow"
+          ],
+          "sourceLabel": "Startup Fortune · Jul 19, 11:08 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWXI1dG9UcFc0QXhpTS1WbDRFTnNMaHYwZHFTYWw1OTlES1BPQ1hRMTRNZkZpMmlzZ2Fua3diX1pFSWZaRjFvSlZWanZEelM3S0ROd3lOeXIwZm5rYnZ4T0wtaGZYZXhnQ05RMmxuMUh1X2ZucWxIN3dIQ0ZWOUhEbnlGZmNDNUJXcnJWa0VnMHdSMU1ENlhvQThuN0VHbmxS?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-20T03:08:11+00:00",
+          "glossary": [
+            {
+              "term": "enterprise AI agents",
+              "definition": "AI systems designed to do business tasks for companies, such as answering questions, handling workflows, or helping employees make decisions."
+            },
+            {
+              "term": "enterprise",
+              "definition": "In technology, this means products made for businesses and large organizations rather than individual consumers."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a competitive business and technology story about a market race, not a single product launch. When reading the source, pay attention to which company is ahead, what customers are adopting the tools, and whether the focus is on pilots, commercial sales, or broad rollout. That would change the interpretation from general hype about AI to a real signal about who is gaining market share.",
+            "glossary": [
+              {
+                "term": "enterprise AI agents",
+                "definition": "AI systems designed to do business tasks for companies, such as answering questions, handling workflows, or helping employees make decisions.",
+                "whyItMatters": "These are the products the firms are competing to sell, so the term defines the market at the center of the story."
+              },
+              {
+                "term": "enterprise",
+                "definition": "In technology, this means products made for businesses and large organizations rather than individual consumers.",
+                "whyItMatters": "It clarifies that the competition is about corporate software spending, not apps for everyday users."
               }
             ]
           }
@@ -271,124 +259,101 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-3-61995",
-          "title": "PPL emphasizes importance of emergency plans for storm readiness and safety",
-          "kicker": "WFMZ.com",
-          "summary": "PPL is urging customers to have emergency plans in place before storms hit, framing preparedness as both a safety issue and a way to reduce disruption. The report does not describe a specific outage or forecast, but it suggests the utility is trying to get people ready in advance for severe weather. In practical terms, this is about household readiness, communication plans, and knowing how to respond if power goes out. For the utility, it signals a focus on storm preparedness and public safety messaging rather than a change in rates or service.",
+          "id": "energy-1-99892",
+          "title": "NUPRC wants PPL holders to fast-track asset devt, prioritise host community relations",
+          "kicker": "Tribune Online",
+          "summary": "Nigeria’s upstream oil regulator, the NUPRC, is urging Petroleum Prospecting License (PPL) holders to move faster on developing their assets and to give more attention to relations with host communities. The notice appears to be aimed at companies holding exploration rights rather than producing fields, signaling pressure to turn licenses into actual investment and output. The emphasis on community relations suggests the regulator sees local engagement as part of keeping projects on track and avoiding disruption. For the energy sector, it points to a push for faster field development alongside more active management of social license to operate.",
           "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
-          "whyItMatters": "This matters because storm planning can reduce injury, speed recovery after outages, and help customers and utilities manage severe-weather disruptions more effectively.",
+          "whyItMatters": "This matters because delays in developing licensed oil assets can slow production growth, while weak community relations can raise the risk of conflict, stoppages, and regulatory pushback.",
           "dataSignals": [
             "PPL mention"
           ],
-          "sourceLabel": "WFMZ.com · Jul 18, 10:00 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMipAJBVV95cUxOVWdVTTRGVnZycnhnWHZqbENldXdmbkxROEx2eVd1NEZIMVVpWXg2QkR3Qnp1Z2tZQTEybm5qMmEyZHRUQ3NXY1MtY1J2U1k4dHFLOFdjZDcyNmdBX1RnNjVfSXJkMXplV3FCalVuOHJQbmdvSUhORTlZR0pDTTNNOWV2SzlBRDdSQjh5cTFpa2NfLXNFVFEtTUl4dFUxRVdCZU1YYWlRNzBwQmlfS3NaV2RxMDZNREZVUmZJN1NRcDZ0NXB6cXlEREFfWU1YZlpJc25PcmpGekRndFpycXh3OUx0aXdMQ055VmNVNURuSERGaUhPMUFyckpzdEFreGhPZVp6NjVhZDlwNFIyOUktZFRvcHc5ZWJ2Mi0zQVJoS0pSbzlG?oc=5",
+          "sourceLabel": "Tribune Online · Jul 19, 8:44 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOYk9nQ1FmcmFtVno0eDRpQ1hvN3lzM0hldHZSR3RTeFFnbUJ0ck5hUjF4dUhXeC04Q1ZFVFNNRmVHY2hjZGY2Wms1VWpXTWszQXliekpiNVl1M3VueUQtb1B3S2RIUUNYdS1OYkVGS2w2LUxVdmZfdHBlbXdoVGpOby1VYkd3WUl0bjRlSmpBdlRFQ3BwWDRWZlE1d1JlcVBDYm9FQzZESjJQa2x3U0xEU1JXMU1mTU5J?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T02:00:00+00:00",
+          "publishedAt": "2026-07-20T00:44:32+00:00",
           "glossary": [
             {
-              "term": "storm readiness",
-              "definition": "Preparation steps taken before severe weather to lower the risk of harm or disruption."
+              "term": "NUPRC",
+              "definition": "Nigeria’s upstream petroleum regulator, the agency that oversees oil and gas exploration and production activities."
             },
             {
-              "term": "emergency plan",
-              "definition": "A заранее planned set of actions for what to do during a dangerous event or outage."
+              "term": "PPL",
+              "definition": "A Petroleum Prospecting License, which gives a company the right to explore for oil and gas in a designated area."
+            },
+            {
+              "term": "host community relations",
+              "definition": "The relationship a resource company maintains with the people living near its operations."
+            },
+            {
+              "term": "asset development",
+              "definition": "The process of turning a discovered resource or licensed block into a producing field or operational project."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a public-safety and utility-preparedness story, not a policy or financial story. When reading the source, pay attention to whether PPL gives specific actions for customers, such as backup power, contact plans, or outage reporting steps. If the story included an actual storm warning, outage data, or new utility procedures, that would make the operational impact clearer; without that, it is mainly a reminder campaign.",
+            "explanationText": "This is a regulatory and industry-policy story, not a market-moving earnings report. When reading the source, pay attention to whether the regulator is issuing a warning, a deadline, or a policy change, because that determines how forceful the message is. Interpretation would change most if the story included specific enforcement actions, named companies, or timelines for compliance.",
             "glossary": [
               {
-                "term": "storm readiness",
-                "definition": "Preparation steps taken before severe weather to lower the risk of harm or disruption.",
-                "whyItMatters": "It helps people and utilities reduce damage and respond faster when storms arrive."
+                "term": "NUPRC",
+                "definition": "Nigeria’s upstream petroleum regulator, the agency that oversees oil and gas exploration and production activities.",
+                "whyItMatters": "Its guidance can affect how quickly companies are allowed or expected to move projects forward."
               },
               {
-                "term": "emergency plan",
-                "definition": "A заранее planned set of actions for what to do during a dangerous event or outage.",
-                "whyItMatters": "Having a plan makes it easier to react quickly and safely if power or communications fail."
+                "term": "PPL",
+                "definition": "A Petroleum Prospecting License, which gives a company the right to explore for oil and gas in a designated area.",
+                "whyItMatters": "PPL holders are often early-stage operators that need to prove discoveries and move toward development."
+              },
+              {
+                "term": "host community relations",
+                "definition": "The relationship a resource company maintains with the people living near its operations.",
+                "whyItMatters": "Good local relations can reduce delays, protests, and operational risk for energy projects."
+              },
+              {
+                "term": "asset development",
+                "definition": "The process of turning a discovered resource or licensed block into a producing field or operational project.",
+                "whyItMatters": "Faster development can mean earlier production, revenue, and supply growth."
               }
             ]
           }
         },
         {
-          "id": "energy-4-31963",
-          "title": "Storm topples tree onto home in southwest Jefferson County, damaging roof and 2 cars",
-          "kicker": "whas11.com",
-          "summary": "A storm in southwest Jefferson County toppled a tree onto a home, damaging the roof and two cars. The report does not give the exact size of the tree, the extent of the roof damage, or whether anyone was hurt. For the local area, it points to storm-driven property damage that can disrupt home repairs, insurance claims, and vehicle use after severe weather.",
-          "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
-          "whyItMatters": "This matters because storm damage can quickly create repair costs and insurance claims for homeowners and can also signal broader weather-related risks to homes and utility infrastructure in the area.",
+          "id": "energy-2-97275",
+          "title": "As data centers spring up in Kentucky, local organizers rally citizens for national day of protest",
+          "kicker": "NewsBreak: Local News & Alerts",
+          "summary": "Local organizers in Kentucky are rallying people for a national day of protest tied to the rapid growth of data centers in the state. The available information does not give the protest date, the groups involved, or specific grievances, but it clearly links the action to concerns about how these facilities are expanding. For Kentucky utilities and communities, that suggests rising public attention around the power, land, and infrastructure demands of data centers.",
+          "emailSummary": "A data-center story with possible implications for power demand, grid upgrades, and who pays for capacity.",
+          "whyItMatters": "This matters because data center growth can affect electric demand, utility planning, and local acceptance of new development in Kentucky.",
           "dataSignals": [
-            "PPL mention"
+            "data-center load"
           ],
-          "sourceLabel": "whas11.com · Jul 18, 8:29 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQeHJ5UFFfUEE1NDNablBrYm1pc2dtUl93TkpwSENvSmxGS0xzSU1hSlNWZ2RFRlBYMzFtTE15eF9LX1RnelliczVzb2FGdzlmelFteEMxaEJkcEV2eVJMQ1c3WUtJV1hiTm1DQzd0cTBzQWZrTXhFbXR2aWsza1NVQVN6Y3dfQ1RYV3JmMVFPVmRCSWpGaHpFdUh3T1JOeEV5dWs5d0p6TFI0RDBacElESGxIazRCZVFiY1hoSmJ0VTVzb1A5cWxsc21keGoyekpHLVV5dXN5STgyem42N3NrSXV5LW5uNlB6UjRSNEhOTE5sNGxzb2tTeTNqZDJqMm1yb3ZLSWlOY2czQms2?oc=5",
+          "sourceLabel": "NewsBreak: Local News & Alerts · Jul 19, 5:30 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOUnpWR1F1TnJEdW84NUdMRWgxRUJaaTM0c2dPaFB6S0dCLXVTZXVtZ21tNmxzX1VCdDFmbjJfcjh0eGRIMEcyRURuLXlodGY0akRuTndiQ2xFQ1d6ZkRvLTJxcHJaUkl1YW0zckRyNkpuczRIa251eVdCZVE2dlpNN3pyVEZHU2drazZLWllWUDFNRmZyd1lJRDJndlZXX05obzdSNmY3bDVoVklNVVh3bUtmMFhFU015V2dRR2RFN0Q1R1IxdmtuWnVLdU10R0Q0c1ljald2cjEyOXhkcTY5LWJfUTZwdlBIdkNDREFlR2JFelItNkdscHM5d18?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T00:29:00+00:00",
-          "glossary": [],
+          "publishedAt": "2026-07-19T09:30:36+00:00",
+          "glossary": [
+            {
+              "term": "data center",
+              "definition": "A facility full of servers and networking equipment that stores, processes, and moves digital information."
+            },
+            {
+              "term": "protest",
+              "definition": "A public demonstration meant to show opposition to a policy, project, or issue."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a local severe-weather damage report, so the key details are the location, what was hit, and what was damaged. When reading the source, look for confirmation of injuries, the severity of the damage, and whether utility outages or emergency response were involved. If later coverage adds those details, it would change whether this is just a property-damage story or part of a larger storm-impact event.",
+            "explanationText": "This is a local advocacy story about public reaction to infrastructure growth, not a technical report about data center operations. When reading the source, look for who is organizing, what specific concerns they raise, and whether the protest is aimed at utilities, local governments, or data center companies. If later reporting shows concrete complaints about power use, water use, jobs, or tax incentives, that would change how serious and broad the issue is.",
             "glossary": [
               {
                 "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
+                "definition": "A facility full of servers and networking equipment that stores, processes, and moves digital information.",
+                "whyItMatters": "Data centers can use very large amounts of electricity and water, so their expansion can affect utility costs and infrastructure planning."
               },
               {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-5-93704",
-          "title": "PPL (PPL) Gets a Buy from Morgan Stanley",
-          "kicker": "The Globe and Mail",
-          "summary": "Morgan Stanley has initiated or reaffirmed a Buy recommendation on PPL, the utility company traded under the ticker PPL. The only specific detail provided is the analyst call itself; no price target, earnings view, or operational news is included in the source blurb. For the utilities sector, this is a sentiment change or validation from a major Wall Street firm rather than a business update. It may matter to investors because analyst ratings can affect trading interest and expectations around regulated utility stocks.",
-          "emailSummary": "A utility story tied to LG&E/KU/PPL that may affect rates, reliability, regulation, or planning.",
-          "whyItMatters": "This matters because analyst upgrades or favorable ratings can influence capital flows and market perception for a regulated utility, even when the company itself has not announced any new operating news.",
-          "dataSignals": [
-            "PPL mention"
-          ],
-          "sourceLabel": "The Globe and Mail · Jul 18, 8:50 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNalNrQ2RrSWlPdDk4STNTeFprWmJNcTNQZ0I4b2oyVVpweGRLQzBJcG40Nkh3S1pkbGtmOTZFTGlGU0RqUkg5XzI2RVFSZFJyTWw0ajJJNnVXekExMUl6TzZNd3M3S3NaWGtzSnUtbkFBdkxXSWFzYmVBRlNvb1Nzd2tFTTdaWTVpMmR6TVlhanh1Vno3YW5DVWZlXzFiRjVDUG1pOF9TTENxampZYU9XQ05yOW5VUFZvOC1JbkVNNEZQdw?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-18T12:50:00+00:00",
-          "glossary": [
-            {
-              "term": "Buy rating",
-              "definition": "An analyst recommendation that a stock is expected to outperform or be worth purchasing."
-            },
-            {
-              "term": "Ticker",
-              "definition": "The short letter code used to identify a publicly traded company on stock markets."
-            },
-            {
-              "term": "Analyst",
-              "definition": "A person at a bank or research firm who studies companies and issues stock opinions and forecasts."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a market-research story, not an operating or regulatory story, so the main thing to watch is whether a major firm’s opinion changes the stock’s outlook. When reading the full source, look for the reason behind the rating, any price target, and whether the call reflects valuation, earnings, or sector trends. The interpretation would change if the note included a downgrade, a target price cut, or a company-specific warning rather than a simple Buy call.",
-            "glossary": [
-              {
-                "term": "Buy rating",
-                "definition": "An analyst recommendation that a stock is expected to outperform or be worth purchasing.",
-                "whyItMatters": "It signals a positive outlook that can affect investor demand and share price."
-              },
-              {
-                "term": "Ticker",
-                "definition": "The short letter code used to identify a publicly traded company on stock markets.",
-                "whyItMatters": "It helps distinguish the company’s shares from other firms with similar names."
-              },
-              {
-                "term": "Analyst",
-                "definition": "A person at a bank or research firm who studies companies and issues stock opinions and forecasts.",
-                "whyItMatters": "Analyst calls can move sentiment even when company fundamentals are unchanged."
+                "term": "protest",
+                "definition": "A public demonstration meant to show opposition to a policy, project, or issue.",
+                "whyItMatters": "A protest can signal organized community resistance and influence how officials or companies respond."
               }
             ]
           }
@@ -397,178 +362,55 @@
     },
     {
       "id": "humana",
-      "updatedLabel": "Last 24 hours",
+      "updatedLabel": "No new non-repeated stories in last 10 days",
       "emptyMessage": "No qualified Humana / Health Insurance stories found in the last 24 hours.",
-      "articles": [
-        {
-          "id": "humana-1-49492",
-          "title": "Fifth Third Bancorp Has $3.98 Million Stock Position in Humana Inc. $HUM",
-          "kicker": "MarketBeat",
-          "summary": "MarketBeat reports that Fifth Third Bancorp has a $3.98 million stock position in Humana Inc. under ticker HUM. The item appears to be a brief holdings update rather than an operating or earnings story, and it does not say whether the stake was newly bought, trimmed, or unchanged. For health insurance readers, the main point is that a large financial institution still has meaningful exposure to Humana’s stock, which can matter as a signal of institutional interest.",
-          "emailSummary": "Fifth Third Bancorp Has $3.98 Million Stock Position in Humana Inc. $HUM.",
-          "whyItMatters": "This matters because institutional ownership can affect trading activity and market sentiment around a major health insurer like Humana.",
-          "dataSignals": [
-            "Humana mention"
-          ],
-          "sourceLabel": "MarketBeat · Jul 19, 3:42 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOM3JxS09LSXh5d0VUc0VUU21fSDV4cWFMT0tKUHk3bGFtY1FTZmFYelpBUWF3MU1tM2hFVllqM3lOSVp6RlNkSVNpcWhGMGFXSUdnUjY1dzF0dUNVQmpiMEowV3BoTVNRUVU1TmE0Yk1WMjJPX05ZMnpXY3hYanFpcWlhN2UtWHJ0U0k1Wjhta1RQR3hlRXJ2bGMtWHMtanZqM1pCWEVTcGZ1dEx3NFVJSXBMOTV6MHlFZmZXSGhlQXJPc3o2WVcxMg?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T07:42:51+00:00",
-          "glossary": [
-            {
-              "term": "stock position",
-              "definition": "The amount of a company’s shares that an investor or institution owns."
-            },
-            {
-              "term": "institutional investor",
-              "definition": "A large organization such as a bank, insurer, pension fund, or asset manager that invests money on behalf of others."
-            },
-            {
-              "term": "ticker",
-              "definition": "A short letter code used to identify a stock on an exchange."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a market-ownership story, not a business-operations story, so the key is to look for changes in who owns the stock and how large the stake is. When reading the source, check whether the holding was reported from a recent filing, because a fresh purchase means something different from an old position that simply remains on the books. If the article later shows a change in shares owned, that would matter more than the dollar value alone.",
-            "glossary": [
-              {
-                "term": "stock position",
-                "definition": "The amount of a company’s shares that an investor or institution owns.",
-                "whyItMatters": "It shows how much exposure an institution has to a stock's gains or losses."
-              },
-              {
-                "term": "institutional investor",
-                "definition": "A large organization such as a bank, insurer, pension fund, or asset manager that invests money on behalf of others.",
-                "whyItMatters": "Big institutions can influence trading volume and investor confidence."
-              },
-              {
-                "term": "ticker",
-                "definition": "A short letter code used to identify a stock on an exchange.",
-                "whyItMatters": "It helps readers confirm which company the report is referring to."
-              }
-            ]
-          }
-        },
-        {
-          "id": "humana-3-27410",
-          "title": "Did Rising Analyst Earnings Estimates and Zacks Rank Upgrade Just Shift Humana's (HUM) Investment Narrative?",
-          "kicker": "Yahoo Finance",
-          "summary": "Yahoo Finance is reporting a market-analysis piece about Humana (HUM) that focuses on rising analyst earnings estimates and a Zacks Rank upgrade. The story appears to argue that analysts are becoming more optimistic about Humana’s near-term earnings outlook, which may have changed how investors value the stock. Because the description provides no financial figures or business updates, the key takeaway is simply that sentiment around Humana may be improving. For health insurance investors, that can matter because earnings expectations often drive short-term share-price moves.",
-          "emailSummary": "Did Rising Analyst Earnings Estimates and Zacks Rank Upgrade Just Shift Humana's (HUM) Investment Narrative?.",
-          "whyItMatters": "This matters because changes in analyst estimates and ranking upgrades can quickly affect how Humana is priced, which is important for anyone tracking managed-care stocks or the health insurance sector.",
-          "dataSignals": [
-            "Humana mention"
-          ],
-          "sourceLabel": "Yahoo Finance · Jul 18, 11:11 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQk8wOWQ0eFpFbDc2VmxxTVZKMWhleElEblgybzdOdUYxZ3pKNmZUcDZaVFNzTkgwTVZ2c0YxZldTdGtXVFUyR1EtZ2xaNlYxU2Y3ZlFteGdrZUpKNXQ3N1d4YWVkRkl0cnFNcmdZazVYSS1ncXFtT3p6OWQycjg3S29lQTlGVXl5Nk1SbzBJUHpndnctVW1wbm04U25jYWFlUFM0Yw?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-18T15:11:50+00:00",
-          "glossary": [
-            {
-              "term": "earnings estimates",
-              "definition": "Analysts’ forecasts for how much profit a company is expected to make in a future period."
-            },
-            {
-              "term": "Zacks Rank",
-              "definition": "A stock-rating system from Zacks Investment Research that is based largely on revisions to earnings estimates."
-            },
-            {
-              "term": "investment narrative",
-              "definition": "The story investors tell themselves about why a stock should rise or fall."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a market-commentary story, not a company-news report, so the main thing to watch is whether it is based on concrete changes in Humana’s earnings outlook or just a ranking adjustment. When reading the source, look for the size of the estimate revisions, the time frame involved, and whether there is any operational or regulatory news behind them. If those details are missing, the interpretation is mostly about sentiment, not a confirmed change in Humana’s business performance.",
-            "glossary": [
-              {
-                "term": "earnings estimates",
-                "definition": "Analysts’ forecasts for how much profit a company is expected to make in a future period.",
-                "whyItMatters": "Rising estimates can signal improving outlook and often influence stock prices."
-              },
-              {
-                "term": "Zacks Rank",
-                "definition": "A stock-rating system from Zacks Investment Research that is based largely on revisions to earnings estimates.",
-                "whyItMatters": "An upgrade in this rank can be interpreted as a bullish signal for traders and investors."
-              },
-              {
-                "term": "investment narrative",
-                "definition": "The story investors tell themselves about why a stock should rise or fall.",
-                "whyItMatters": "A change in narrative can shift buying or selling even before company fundamentals change."
-              }
-            ]
-          }
-        }
-      ]
+      "articles": []
     },
     {
       "id": "kentucky_healthcare",
-      "updatedLabel": "Last 24 hours",
+      "updatedLabel": "Recent fallback: no qualified 24h items",
       "emptyMessage": "No qualified Kentucky Healthcare / US Healthcare stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "kentucky_healthcare-1-30952",
+          "id": "kentucky_healthcare-5-29022",
           "title": "Northern Kentucky hospital marks 500th cardiac endoscopic surgery, speeding recovery",
           "kicker": "WKRC",
-          "summary": "A Northern Kentucky hospital says it has reached its 500th cardiac endoscopic surgery, a milestone for a less invasive heart procedure. Cardiac endoscopic surgery uses small incisions and camera-assisted tools instead of opening the chest widely, which can shorten recovery time. The report frames the number as a sign that the hospital has built steady experience with the technique. For patients and local providers, that can mean more access to lower-trauma heart surgery if the hospital continues offering it.",
+          "summary": "A Northern Kentucky hospital says it has reached its 500th cardiac endoscopic surgery, a milestone for a minimally invasive heart procedure. The hospital says this approach is meant to speed recovery compared with more traditional surgery. No patient details, hospital name, or timing beyond the report are provided in the source information. The main takeaway is that the hospital is highlighting its experience with a less invasive cardiac option that may reduce downtime for patients in the region.",
           "emailSummary": "Northern Kentucky hospital marks 500th cardiac endoscopic surgery, speeding recovery.",
-          "whyItMatters": "This matters because wider use of minimally invasive heart surgery can reduce hospital stays and speed patients’ return to normal activity, which affects care quality and resource use in the region.",
+          "whyItMatters": "This matters because more hospitals using minimally invasive heart surgery can mean shorter recoveries, less strain on patients, and broader access to advanced cardiac care in the Louisville-region healthcare market.",
           "dataSignals": [
             "Kentucky healthcare",
             "hospital operations"
           ],
-          "sourceLabel": "WKRC · Jul 18, 10:02 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxNYzNlNXJtSjVTZ1liTlc2M1NrZi1LTF9nd1ByR3VZZGo3Z2dxSDk3UF9zSkRlXzNIdXZuLWw1NUE3OERrNW1tUktoenlaM2x4YXg1SzUzLWxNMjBoN29zelg4QU43RDdKUVBsX3hPTXZ6UzBrRjlaZ0xFV2N6ZUE3RU5wVzdLYThJUUFUMDVIa3FEY3dqSGhaXzlvMnJQZzVDSnljWjZJMHNNS2Ixbm1XX3JFcldhZXl4bnU5d2l4b21lUXZwUHF1VmZqbV9yUDFLbFR5Zl9ocnlpR3F6ZU5ldTRCNDh4OWpYNUJDSDlnZzNxVHVvc3c4eDU0Z3lZTnNDSG1xb2l0TDFKTDQ4OXFpUmZvSDQxRGc1MTlvdk1TRTNwSi10VWE3ZWIwX2RyX0NVSG92c3I5dU5hUS1LcFVrbEVLZWdJb1ctSzVGZy1YNW95RURoMFlFbmtsS3pIZHE0elFieHFKUlZHQ1dybHk2Xw?oc=5",
+          "sourceLabel": "WKRC · Jul 15, 6:31 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxNMG5QNEliN1RSelBxTzhNVzlqTXNsWGk4QTNrY29jNDJ5b1lZbjFhRW5KcDlMXy1ud0x0VTZrRXJGQU5Vd2FDdUEzLWprTlh1R2JuZVowb1luRUxGRy1RVzB1RWVlU1Q5bmZfNElyOTZZd2E5MFFqR2pHZzhUWmlzMUJiN1drLV95NTdWXzgxdFFYVElXSkxhSF9hMkZtbGxoUHpJaWJoYTEtZHdZaHRYZTl4N3Q2QUcwdk41dlB2OXotY2ZkOFdERG1wUG9CbVptamYzdHIzdnQxWjNCTTlvOWp1U200RE05X21nSHhTY2hQbllNYzdXcWdDUDZHbkRxZnhGZkxjYWNONkc2cWJvakFFc1A3UW1XdzRLRk9xOGE3aVB1OWdMQU5MVTlBcWVyQ0FWVzlTZDhYM1hHS3FDU2dZZjNMbWo4Y3Y0LXpkU25XWm5TclJpV1ZkUV9Neld1enpkOWR3?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-18T14:02:56+00:00",
+          "publishedAt": "2026-07-15T22:31:20+00:00",
           "glossary": [
             {
               "term": "cardiac endoscopic surgery",
-              "definition": "A heart operation done through small openings using a camera and specialized instruments instead of a large incision."
+              "definition": "A heart surgery performed through small openings using a camera and specialized instruments instead of a large incision."
             },
             {
               "term": "minimally invasive",
-              "definition": "A medical approach that uses smaller cuts or less disruption to the body than traditional surgery."
+              "definition": "A medical approach that uses smaller cuts or openings than traditional surgery."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a short local health-news milestone story, so the key facts are the procedure name, the 500-case total, and the claim of faster recovery. When reading the source, look for whether the hospital provides evidence such as average recovery time, complication rates, or patient outcomes, because those details would tell you how meaningful the milestone really is.",
+            "explanationText": "This is a hospital-capability story, not a policy or outbreak story. When reading the source, look for which hospital performed the procedure, what type of heart surgery it was, and whether the report gives actual recovery data or only promotional claims. If the article includes outcome numbers, patient volumes, or comparisons with standard surgery, that would change how strong the claim about faster recovery really is.",
             "glossary": [
               {
                 "term": "cardiac endoscopic surgery",
-                "definition": "A heart operation done through small openings using a camera and specialized instruments instead of a large incision.",
-                "whyItMatters": "It usually means less pain and faster recovery than open-chest surgery."
+                "definition": "A heart surgery performed through small openings using a camera and specialized instruments instead of a large incision.",
+                "whyItMatters": "It signals a less invasive treatment option that can affect recovery time, complication risk, and hospital capability."
               },
               {
                 "term": "minimally invasive",
-                "definition": "A medical approach that uses smaller cuts or less disruption to the body than traditional surgery.",
-                "whyItMatters": "This often changes how quickly patients heal and how long they stay in the hospital."
+                "definition": "A medical approach that uses smaller cuts or openings than traditional surgery.",
+                "whyItMatters": "It often means faster healing and less time in the hospital, which is why hospitals promote these procedures."
               }
             ]
-          }
-        },
-        {
-          "id": "kentucky_healthcare-2-19119",
-          "title": "Free prostate cancer screenings offered at Norton West Louisville Hospital",
-          "kicker": "WDRB",
-          "summary": "Norton West Louisville Hospital is offering free prostate cancer screenings, according to WDRB. No additional details are provided in the source snippet about who can get screened, how long the offer lasts, or what tests will be used. Even with limited information, the report points to a local effort to lower barriers to early detection in West Louisville, where access and outreach can affect whether men get checked before symptoms appear.",
-          "emailSummary": "Free prostate cancer screenings offered at Norton West Louisville Hospital.",
-          "whyItMatters": "This matters because free screenings can make early detection more accessible for men who might otherwise delay care, which can affect treatment options and outcomes in Louisville.",
-          "dataSignals": [
-            "Louisville healthcare",
-            "hospital operations"
-          ],
-          "sourceLabel": "WDRB · Jul 18, 9:05 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNWGpLdVZNWWxQRDZQM0dvdlpvZFNjaG1JMkJtNEVfeWRPR1JQT1ZUd2hTa1ZfSU56VnhYY2ROalNBbXRNVWJyM1l4TEtPMVFzNGtKOWlIMHRSZXhPZGZ1aC1XUlhIRTFxQVBKOHdzLV9McG4yN0tYd3Q2QVlWcWlMNFhWVFR5dkdTVHJQR2xWMDBhblpwMkRMd1lQQnV4Rk8tS2xjaWZ5MXdRNHBBbDFqaXNvVzEwTmE0WDBYbnVqTnRmOGx3eW5ZY192NkV4bGpQUTU0MHdyNUxxUmY1ajhUQlVrVFk?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T01:05:00+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a local health-access story, so the key thing to watch for in the full report is who qualifies, whether appointments are needed, and whether the screening is a blood test, exam, or both. If the full article adds dates, age ranges, or follow-up plans for abnormal results, that would change how useful and broad this offer really is.",
-            "glossary": []
           }
         }
       ]
@@ -579,183 +421,224 @@
       "emptyMessage": "No qualified Analytics stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "analytics-2-49761",
-          "title": "Samsung Cuts Hundreds of US Jobs Amid Texas HQ Move",
-          "kicker": "Analytics Insight",
-          "summary": "Samsung is reported to be cutting hundreds of U.S. jobs while it moves its headquarters to Texas. The available description does not give the exact number of layoffs, which teams are affected, or whether the cuts are tied directly to the relocation. What is clear is that the company is reducing its U.S. workforce during a major corporate move, which could affect operations, hiring, and regional business activity around the new headquarters location.",
-          "emailSummary": "Samsung Cuts Hundreds of US Jobs Amid Texas HQ Move.",
-          "whyItMatters": "This matters because a large headquarters move paired with layoffs can reshape local tech employment, vendor spending, and the regional footprint of a major global company.",
+          "id": "analytics-1-80038",
+          "title": "Salesforce Launches SMB Growth Kit for Indian Businesses",
+          "kicker": "analyticsindiamag.com",
+          "summary": "Salesforce has launched an SMB Growth Kit aimed at Indian businesses, according to Analytics India Magazine. The headline suggests the package is designed for small and mid-sized businesses, but the available description does not specify what tools, pricing, or features are included. What is clear is that Salesforce is targeting a smaller-business segment in India rather than only large enterprise customers. For analytics and sales teams, that usually signals more packaged, easier-to-adopt software offerings for a broad market.",
+          "emailSummary": "Salesforce Launches SMB Growth Kit for Indian Businesses.",
+          "whyItMatters": "This matters because a tailored SMB product from a major vendor can change how smaller Indian companies adopt customer management and analytics tools.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Analytics Insight · Jul 19, 2:54 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONmFfY0Q1NWdHaFZKWkdtTU1waWdiVHFrTmZmWFM5UGNGa2Zqdi1zeXpja0I3QUFZTVBPOGVYRVNBYUV6aExwQjJSb0tkVThsdG5ac0tzTlFMYWcxMjR3OUJJVFRBT3RDNlpvV1VxaTNoV3p1NjZsY05LNXEzemtuMGN4XzI3NzlmOHdlUTRCVXMwMVotbGlMMF9xVmtNd2Ut0gGgAUFVX3lxTE42YV9jRDU1Z0doVkpaR21NTXBpZ2JUcWtOZmZYUzlQY0ZrZmp2LXN5emNrQjdBQVlNUE84ZVhFU0FhRXpoTHBCMlJvS2RVOGx0blpzS3NOUUxhZzEyNHc5QklUVEFPdEM2Wm9XVXFpM2hXenU2NmxjTks1cTN6a24wY3hfMjc3OWY4d2VRNEJVczAxWi1saUwwX3FWa013ZS0?oc=5",
+          "sourceLabel": "analyticsindiamag.com · Jul 20, 4:37 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPVFlKODVnMWJEeVZPa1pZQUFOUENCdFo5bnk5TDJsWTVMYklWSkNKSjlEaDJicGZNdXNzMHJ6b2k0Yk9FZG0zNnlQM01ObXFFdmFzTVhtWUtrdFJUWVZMd0g4QVF4aFJzMjFZMHZYS1IwN0pER2VHTXRVN3B5YnpfcW8zbWNXMkh1Wi1FeHdNVGJZcVFHeTBjc2t3?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T06:54:17+00:00",
+          "publishedAt": "2026-07-20T08:37:30+00:00",
           "glossary": [
             {
-              "term": "headquarters (HQ)",
-              "definition": "The main office where a company’s top executives and central functions are based."
-            },
-            {
-              "term": "layoffs",
-              "definition": "Job cuts made by an employer, usually for business or cost reasons."
+              "term": "SMB",
+              "definition": "Small and mid-sized business, a company smaller than a large enterprise."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a corporate workforce and relocation story, not a product or earnings story. When reading the source, pay attention to the exact layoff count, which U.S. sites are affected, and whether the move to Texas is a legal, tax, or operational decision. The interpretation changes if the cuts are temporary, limited to one division, or part of a broader restructuring rather than a simple headquarters shift.",
+            "explanationText": "This is a product-launch story, so the key thing to watch is what Salesforce says is included in the Growth Kit and whether it is a new product, a bundle, or a regional marketing push. If later reporting shows pricing, local partnerships, or India-specific features, that would change how significant the launch is for SMB adoption and competitive pressure in the market.",
             "glossary": [
               {
-                "term": "headquarters (HQ)",
-                "definition": "The main office where a company’s top executives and central functions are based.",
-                "whyItMatters": "A headquarters move can shift jobs, decision-making, and economic activity from one region to another."
-              },
-              {
-                "term": "layoffs",
-                "definition": "Job cuts made by an employer, usually for business or cost reasons.",
-                "whyItMatters": "Layoffs affect workers directly and can also signal a company is changing strategy or reducing costs."
+                "term": "SMB",
+                "definition": "Small and mid-sized business, a company smaller than a large enterprise.",
+                "whyItMatters": "The story is specifically about tools aimed at this customer segment."
               }
             ]
           }
         },
         {
-          "id": "analytics-3-53202",
-          "title": "Aston Martin Reveals Dreadnought, a V12 Virtual SUV for Call of Duty",
+          "id": "analytics-2-82413",
+          "title": "OpenAI Appoints Indian-Origin Uday Ruddaraju as CTO of Compute",
           "kicker": "Analytics Insight",
-          "summary": "Aston Martin has unveiled a virtual SUV called the Dreadnought, and it is being positioned for use in Call of Duty. The vehicle is described as V12, but the available description does not say whether it is a real production model or only a digital promotional tie-in. The main takeaway is that luxury automakers are continuing to use game collaborations as a way to market brand image inside major entertainment platforms.",
-          "emailSummary": "Aston Martin Reveals Dreadnought, a V12 Virtual SUV for Call of Duty.",
-          "whyItMatters": "This matters because in-game brand partnerships can shape how automakers reach younger audiences and measure engagement beyond traditional advertising.",
+          "summary": "OpenAI has appointed Uday Ruddaraju, described as Indian-origin, as its new CTO of Compute. The available source does not provide details about his background, the scope of the role, or any immediate changes at the company. Based on the title alone, this is a leadership appointment focused on compute, which usually points to infrastructure, hardware, and scaling the systems behind AI products. For readers, the main significance is that OpenAI is placing a named executive over a critical technical function that affects cost, capacity, and model deployment.",
+          "emailSummary": "OpenAI Appoints Indian-Origin Uday Ruddaraju as CTO of Compute.",
+          "whyItMatters": "This matters because compute leadership can influence how quickly and cheaply AI systems are trained and run, which affects product performance, availability, and the economics of OpenAI’s services.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Analytics Insight · Jul 19, 2:28 AM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMTVtb1FIMVdlUy0yTWhmWkFiakNtSGFKTVlSdHJNbVRNb2I5RzBFZkMzTWtKSXJPUFFZTVdxUFZqcklPc2wwNEltNUl4eWFtNzVkSU5kM1hrS01MOVVqNnFzNGFPNF9xLU96aTdMVW1VbW12RGxHbTB4a211VU00NUczb29icGxldzgxMFdzU2QwUWliR0E2ZURjdXpWQ01BSFZrY3I3TWZyOWlqZ1JwZjlzN0lNQdIBtgFBVV95cUxQMTVtb1FIMVdlUy0yTWhmWkFiakNtSGFKTVlSdHJNbVRNb2I5RzBFZkMzTWtKSXJPUFFZTVdxUFZqcklPc2wwNEltNUl4eWFtNzVkSU5kM1hrS01MOVVqNnFzNGFPNF9xLU96aTdMVW1VbW12RGxHbTB4a211VU00NUczb29icGxldzgxMFdzU2QwUWliR0E2ZURjdXpWQ01BSFZrY3I3TWZyOWlqZ1JwZjlzN0lNQQ?oc=5",
+          "sourceLabel": "Analytics Insight · Jul 20, 3:19 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNzY4OTBLUmpvcnJTZGctTmhXcjhoSDNwYTg5TDZVU3dDUk9rbFk1SnlMUm1sa2p0QmR6MXVnMUpIdi05MFAySWZPNHFEdGZHRC1HNzBEVS1IVW5GNVczYThEMS12ZTJmRTl2RjExTVJueHNoSGV3a3F4djhaUl9lWm5UTWhLdnR0VTdCR3RFdUJBUlpPRHFVZk1seHQxbG5LZmRvaFloc3Fzd1laazNn0gGvAUFVX3lxTE83Njg5MEtSam9yclNkZy1OaFdyOGhIM3BhODlMNlVTd0NST2tsWTVKeUxSbWxranRCZHoxdWcxSkh2LTkwUDJJZk80cUR0ZkdELUc3MERVLUhVbkY1VzNhOEQxLXZlMmZFOXZGMTFNUm54c2hIZXdrcXh2OFpSX2VablRNaEt2dHRVN0JHdEV1QkFSWk9EcVVmTWx4dDFsbktmZG9oWWhzcXN3WVprM2c?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T06:28:15+00:00",
+          "publishedAt": "2026-07-20T07:19:19+00:00",
           "glossary": [
             {
-              "term": "V12",
-              "definition": "An engine design with 12 cylinders arranged in two banks of six."
+              "term": "CTO",
+              "definition": "Short for chief technology officer, the executive responsible for a company’s technology strategy and technical operations."
             },
             {
-              "term": "virtual SUV",
-              "definition": "A digital version of an SUV that exists in a game or other software rather than as a physical car."
-            },
-            {
-              "term": "Call of Duty",
-              "definition": "A major first-person shooter video game franchise with a large global player base."
+              "term": "compute",
+              "definition": "The computing power, hardware, and infrastructure used to train and run software, especially large AI models."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a brand-marketing story more than a product-launch story, so the key question is whether Aston Martin is introducing a real vehicle, a game asset, or both. When reading the source, pay attention to any mention of licensing, game integration, or production plans, because those details determine whether this is just promotional imagery or a broader commercial partnership.",
+            "explanationText": "This is a personnel and technology-operations story, not a product announcement or earnings report. When reading the source, look for any added detail on Ruddaraju’s prior experience, the exact responsibilities of the role, and whether OpenAI is changing its infrastructure strategy. If those details are missing, the safest interpretation is simply that OpenAI has added a senior leader to oversee a core technical resource.",
             "glossary": [
               {
-                "term": "V12",
-                "definition": "An engine design with 12 cylinders arranged in two banks of six.",
-                "whyItMatters": "It signals a performance-oriented vehicle identity, even when the vehicle is only virtual."
+                "term": "CTO",
+                "definition": "Short for chief technology officer, the executive responsible for a company’s technology strategy and technical operations.",
+                "whyItMatters": "The role tells you who is accountable for technical direction and infrastructure decisions."
               },
               {
-                "term": "virtual SUV",
-                "definition": "A digital version of an SUV that exists in a game or other software rather than as a physical car.",
-                "whyItMatters": "It shows the vehicle is being used as a promotional asset inside a game, not necessarily as a real product."
-              },
-              {
-                "term": "Call of Duty",
-                "definition": "A major first-person shooter video game franchise with a large global player base.",
-                "whyItMatters": "A big game title gives brand collaborations much wider exposure than a small niche platform."
+                "term": "compute",
+                "definition": "The computing power, hardware, and infrastructure used to train and run software, especially large AI models.",
+                "whyItMatters": "Compute is a major driver of AI cost, speed, and scale, so leadership over it can affect the company’s ability to grow."
               }
             ]
           }
         },
         {
-          "id": "analytics-4-6562",
-          "title": "Tesla Investors Eye 7% Swing as Q2 Earnings Put Long-Term AI Plans in Focus",
+          "id": "analytics-3-15764",
+          "title": "Crypto Prices Today: Bitcoin Holds Above $64,000 as ETF Inflows Return; GENIUS Act Deadline Slips",
           "kicker": "Analytics Insight",
-          "summary": "Tesla is expected to report second-quarter earnings, and investors are bracing for a stock move of about 7% around the announcement. The focus is less on near-term car sales than on what Tesla says about its long-term AI plans, which have become a major part of how the market values the company. Because the description provides no earnings figures or management comments, the story is mainly about market expectations and how much weight investors are putting on Tesla's AI strategy.",
-          "emailSummary": "Tesla Investors Eye 7% Swing as Q2 Earnings Put Long-Term AI Plans in Focus.",
-          "whyItMatters": "This matters because Tesla's earnings call could move the stock sharply and shape how investors value the company as both an automaker and an AI business.",
+          "summary": "Bitcoin is being reported as holding above $64,000 while inflows into bitcoin exchange-traded funds, or ETFs, have returned. The headline also says the deadline for the GENIUS Act has slipped, but the provided description does not explain what the deadline is or how far it moved. Together, those signals point to a crypto market that is being supported by renewed investor demand even as a related policy timeline gets delayed. Based on the limited source text, the main takeaway is market stability with a regulatory timing change, not a major price shock.",
+          "emailSummary": "Crypto Prices Today: Bitcoin Holds Above $64,000 as ETF Inflows Return; GENIUS Act Deadline Slips.",
+          "whyItMatters": "This matters because renewed ETF inflows can support crypto prices and affect sentiment for traders and firms that track digital assets, while a delayed legislative deadline can push back clarity on the rules that govern the sector.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Analytics Insight · Jul 18, 5:15 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOLUdhSXFNMVM1NW1ONTFtODk2SERkbE1ScHA5MTI1bzBUYjNfZW5BT0tSQ2tUQzJwVkdxcDczbTkwQlNtc3lZMTJKS2k0RWZhbG85bHN4Q1dLMHpCNVFENDIyTjBwSHRJOTF1R3JPMDZRUTZBQy1JUTBJZ3dMZWlZOW9Wc3IwNFVGNVFqXzlveWdiSWxsX2lWZ19HRVowVDdWTlhvUnByV1VzcWI2VlJNZXFadjJHd3J2Rl84SHpCY9IBvwFBVV95cUxOLUdhSXFNMVM1NW1ONTFtODk2SERkbE1ScHA5MTI1bzBUYjNfZW5BT0tSQ2tUQzJwVkdxcDczbTkwQlNtc3lZMTJKS2k0RWZhbG85bHN4Q1dLMHpCNVFENDIyTjBwSHRJOTF1R3JPMDZRUTZBQy1JUTBJZ3dMZWlZOW9Wc3IwNFVGNVFqXzlveWdiSWxsX2lWZ19HRVowVDdWTlhvUnByV1VzcWI2VlJNZXFadjJHd3J2Rl84SHpCYw?oc=5",
+          "sourceLabel": "Analytics Insight · Jul 20, 2:46 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOOW5WcWY0NVE4Q0ZzVmdINkxBS2Qzb2xWcVp5Qzdsa2xTVnpaQUttc3ZfcjBiR0RjVXIyLW5GOHBCbzBmWkwyZjgxem5nYVBXM2ZNX1ZPX0FwVkZtZWl6akE0ZGE4Smh6dGpfREJFM2VtenRJTFAwUldmclc0VWJtdnJVS1ZOTXdvdWtFek5FZ0RKUmdwdjRFNlZuc0I4bGY3VTFHeFB1YXViVE9KMzJhUjdHRHNTcE9sV2tTN0RZY0pPZHB6ZkZST2VMVzJIWk5vR3hHY1pwZGFvMlpmRXpua1lLdnpZZ9IB5gFBVV95cUxOOW5WcWY0NVE4Q0ZzVmdINkxBS2Qzb2xWcVp5Qzdsa2xTVnpaQUttc3ZfcjBiR0RjVXIyLW5GOHBCbzBmWkwyZjgxem5nYVBXM2ZNX1ZPX0FwVkZtZWl6akE0ZGE4Smh6dGpfREJFM2VtenRJTFAwUldmclc0VWJtdnJVS1ZOTXdvdWtFek5FZ0RKUmdwdjRFNlZuc0I4bGY3VTFHeFB1YXViVE9KMzJhUjdHRHNTcE9sV2tTN0RZY0pPZHB6ZkZST2VMVzJIWk5vR3hHY1pwZGFvMlpmRXpua1lLdnpZZw?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-18T21:15:48+00:00",
+          "publishedAt": "2026-07-20T06:46:56+00:00",
           "glossary": [
             {
-              "term": "Q2 earnings",
-              "definition": "A company's financial results for the second quarter of the year."
+              "term": "ETF inflows",
+              "definition": "Money moving into exchange-traded funds, meaning investors are buying shares in those funds."
             },
             {
-              "term": "AI plans",
-              "definition": "A company's strategy for using or developing artificial intelligence products, systems, or services."
+              "term": "exchange-traded fund (ETF)",
+              "definition": "An investment fund that trades on a stock exchange like a share."
             },
             {
-              "term": "7% swing",
-              "definition": "A forecast that the stock price could move up or down by about 7% in response to the earnings report."
+              "term": "GENIUS Act",
+              "definition": "A named piece of legislation referenced in the headline, likely related to crypto policy or regulation."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a market-expectations story, not a detailed earnings report, so the key is the anticipated stock reaction and the themes investors care about most. When reading the source, look for any actual earnings numbers, guidance, or comments on AI and autonomy; those details would determine whether the market treats the report as a growth signal or a disappointment. If Tesla gives stronger or weaker guidance than expected, that would change the meaning of the reported 7% swing significantly.",
+            "explanationText": "This is a market-and-policy headline, so the key is separating price movement from the regulatory timeline. When reading the full source, watch for whether the ETF inflows are large enough to signal a real trend and what exactly the GENIUS Act deadline refers to; that context would change whether this is a routine update or a meaningful shift.",
             "glossary": [
               {
-                "term": "Q2 earnings",
-                "definition": "A company's financial results for the second quarter of the year.",
-                "whyItMatters": "Quarterly results often drive big stock moves and set expectations for the rest of the year."
+                "term": "ETF inflows",
+                "definition": "Money moving into exchange-traded funds, meaning investors are buying shares in those funds.",
+                "whyItMatters": "In crypto, rising inflows are often read as a sign of stronger demand from investors and institutions."
               },
               {
-                "term": "AI plans",
-                "definition": "A company's strategy for using or developing artificial intelligence products, systems, or services.",
-                "whyItMatters": "For Tesla, AI expectations can affect whether investors value it like a car maker or a tech company."
+                "term": "exchange-traded fund (ETF)",
+                "definition": "An investment fund that trades on a stock exchange like a share.",
+                "whyItMatters": "Crypto ETFs let investors gain exposure to bitcoin through a familiar market product without directly holding the coins."
               },
               {
-                "term": "7% swing",
-                "definition": "A forecast that the stock price could move up or down by about 7% in response to the earnings report.",
-                "whyItMatters": "That kind of move signals unusually high uncertainty and can create a major trading opportunity or risk."
+                "term": "GENIUS Act",
+                "definition": "A named piece of legislation referenced in the headline, likely related to crypto policy or regulation.",
+                "whyItMatters": "If the deadline slips, any expected rules or protections tied to the bill may take longer to affect the market."
               }
             ]
           }
         },
         {
-          "id": "analytics-5-76051",
-          "title": "Crypto Market Update: BTC Eyes $65,000 as JPMorgan Backs Stronger Institutional Demand",
+          "id": "analytics-4-62943",
+          "title": "Gold Price Today: MCX Gold Rises 0.32% to Rs. 1,41,039 as Brent Crude Advances above $90",
           "kicker": "Analytics Insight",
-          "summary": "Bitcoin is being reported as aiming for the $65,000 level, according to a market update from Analytics Insight. The piece also says JPMorgan is backing the view that institutional demand for crypto is getting stronger. Based on the headline alone, this reads as a short market note about price momentum and a shift in large-investor participation, which can matter because institutional flows often influence crypto liquidity and volatility.",
-          "emailSummary": "Crypto Market Update: BTC Eyes $65,000 as JPMorgan Backs Stronger Institutional Demand.",
-          "whyItMatters": "This matters because stronger institutional demand can support prices and affect how quickly crypto moves in response to buying or selling pressure.",
+          "summary": "MCX gold rose 0.32% to Rs. 1,41,039, according to the headline, while Brent crude moved above $90 a barrel. The story is reporting a market price update rather than a policy change or company event. It links the gold move to the broader rise in oil prices, which can matter because commodity markets often influence each other. For readers tracking inflation, costs, or portfolio risk, the key takeaway is that precious metals are being priced in a firmer energy backdrop.",
+          "emailSummary": "Gold Price Today: MCX Gold Rises 0.32% to Rs. 1,41,039 as Brent Crude Advances above $90.",
+          "whyItMatters": "This matters because higher oil prices can feed into inflation expectations and shift demand for gold as a hedge, which affects trading signals and broader cost trends.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Analytics Insight · Jul 18, 4:35 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQc25PcmdKemxEQnNPdTlCaG5GQXZUTFJlZFpBVVU0VmZrZ2JtYVRPbDE5Nkl3a0FYQzlVTHExVVpDZHlRYXB2ZXJUSGt1eWN3cU14dzltLWVfenN0ZnBMTVczYnJxSnU0REx5MkRTZC1XaG9PdzRkek50NXlNUW8zclFVY1o0TlhkYlhvMFJoZjd0aldySTk4bWdNZHBUb2pCdEVWdFI3aUVsQVUyY25rTXdTYnFDd0RiTWU5MVotRWF4ekVMX01reHQ4MNIBywFBVV95cUxQc25PcmdKemxEQnNPdTlCaG5GQXZUTFJlZFpBVVU0VmZrZ2JtYVRPbDE5Nkl3a0FYQzlVTHExVVpDZHlRYXB2ZXJUSGt1eWN3cU14dzltLWVfenN0ZnBMTVczYnJxSnU0REx5MkRTZC1XaG9PdzRkek50NXlNUW8zclFVY1o0TlhkYlhvMFJoZjd0aldySTk4bWdNZHBUb2pCdEVWdFI3aUVsQVUyY25rTXdTYnFDd0RiTWU5MVotRWF4ekVMX01reHQ4MA?oc=5",
+          "sourceLabel": "Analytics Insight · Jul 20, 1:48 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPak5SdWdTbWFIajJjcHVLYmh1dFQ0SmhRWXgzYU5seU9DeEZTZy1PbjVLd1hiRTY3bDF2T0JsUWZFblFlWGZBT3loTTdJaFV1aktrTEhMV2RKSmpjVXJHTmpBMDRWaXNXeE9zdDBnQmtpdXNGODBHOHlPWDRMbUpDNzlGWVNpVnZSUEQ2M0VRVUpKRnJoTmFhX0xQUUc2NlVKeFhPUnAzSXZhSk9jd2p5c1VNc3BIUmRpSlZaajFFOGltZ1BxY28xVndmMjhPUdIBzgFBVV95cUxPak5SdWdTbWFIajJjcHVLYmh1dFQ0SmhRWXgzYU5seU9DeEZTZy1PbjVLd1hiRTY3bDF2T0JsUWZFblFlWGZBT3loTTdJaFV1aktrTEhMV2RKSmpjVXJHTmpBMDRWaXNXeE9zdDBnQmtpdXNGODBHOHlPWDRMbUpDNzlGWVNpVnZSUEQ2M0VRVUpKRnJoTmFhX0xQUUc2NlVKeFhPUnAzSXZhSk9jd2p5c1VNc3BIUmRpSlZaajFFOGltZ1BxY28xVndmMjhPUQ?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-18T20:35:43+00:00",
+          "publishedAt": "2026-07-20T05:48:38+00:00",
           "glossary": [
             {
-              "term": "BTC",
-              "definition": "The ticker symbol for Bitcoin."
+              "term": "MCX",
+              "definition": "The Multi Commodity Exchange of India, a major exchange where commodity futures are traded."
             },
             {
-              "term": "institutional demand",
-              "definition": "Buying interest from large organizations such as banks, funds, or corporations."
+              "term": "Brent crude",
+              "definition": "A global benchmark price for oil used to track international crude markets."
+            },
+            {
+              "term": "Commodity futures",
+              "definition": "Contracts that let traders agree today on a price for a commodity to be delivered later."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a brief market commentary, not a deep news report, so the key thing to watch is whether the source cites actual price data, trading volumes, or new institutional flows. If the full article includes evidence from JPMorgan, ETF inflows, or exchange activity, that would strengthen the case that demand is changing; if not, it may just be a headline-level market view.",
+            "explanationText": "This is a short market-update story, so the main thing to watch is the direction and size of the price move rather than any deep narrative. Read carefully for whether the headline is describing futures prices, spot prices, or a broader market relationship, because that changes what the number means. If later coverage ties gold's rise to inflation data, central-bank policy, or a geopolitical shock, the interpretation would be stronger than a simple one-day price correlation with oil.",
             "glossary": [
               {
-                "term": "BTC",
-                "definition": "The ticker symbol for Bitcoin.",
-                "whyItMatters": "It tells readers the update is specifically about Bitcoin rather than the broader crypto market."
+                "term": "MCX",
+                "definition": "The Multi Commodity Exchange of India, a major exchange where commodity futures are traded.",
+                "whyItMatters": "It tells you the quoted gold price is from a futures market, not a retail jewelry price."
               },
               {
-                "term": "institutional demand",
-                "definition": "Buying interest from large organizations such as banks, funds, or corporations.",
-                "whyItMatters": "This helps explain whether price moves are being driven by bigger, more sustained investors instead of retail traders."
+                "term": "Brent crude",
+                "definition": "A global benchmark price for oil used to track international crude markets.",
+                "whyItMatters": "Its move above $90 is a key energy-market signal that can influence inflation and commodity pricing."
+              },
+              {
+                "term": "Commodity futures",
+                "definition": "Contracts that let traders agree today on a price for a commodity to be delivered later.",
+                "whyItMatters": "These contracts often move before spot prices and are the basis for the quoted MCX gold level."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-5-7541",
+          "title": "Stock Market Outlook: Nifty 50 Opens 0.59% Lower, Sensex Falls 350 points Amid Rising Crude Oil Prices",
+          "kicker": "Analytics Insight",
+          "summary": "Indian equities opened lower, with the Nifty 50 down 0.59% and the Sensex off about 350 points, according to the report. The move is tied to rising crude oil prices, which can pressure markets by raising costs for companies and stoking inflation concerns. The source does not give sector-level detail or mention any specific corporate news, so the key takeaway is a broad risk-off open driven by energy-price pressure. For readers tracking global markets, this suggests oil is acting as the immediate macro driver for Indian stocks.",
+          "emailSummary": "Stock Market Outlook: Nifty 50 Opens 0.59% Lower, Sensex Falls 350 points Amid Rising Crude Oil Prices.",
+          "whyItMatters": "This matters because higher crude prices can quickly affect inflation, company margins, and market sentiment in India, which can spill over into broader global risk assets.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "Analytics Insight · Jul 20, 1:28 AM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPYmtkS1V1MDBpQ0pnWEQ1ajBqX2lFMjBQNjhnVEc4Nk11cnJHLVZlS0dMN0RaSmJEN1JJcy1yenE4bS1yV203ZmRZLTE4aWRJa3ljeUNhZjhRN010dUo2UFI4b3A4WU1QUmhUREc5MmxXbTdNbEdiampTR0NkeWh2eWpUNGgzV2RRRERqUlFoR0tOQUJnaEUwSGowYU9Wck5lTWUzLWlYZmtPZzV3RENnNnU2VGk1dWVudHJ2cWNsdWdKUy1lOGRHSmExTU02MU1aRUdLSDBlQ1N1Qy13XzhxMXN30gHiAUFVX3lxTE9ia2RLVXUwMGlDSmdYRDVqMGpfaUUyMFA2OGdURzg2TXVyckctVmVLR0w3RFpKYkQ3UklzLXJ6cThtLXJXbTdmZFktMThpZElreWN5Q2FmOFE3TXR1SjZQUjhvcDhZTVBSaFRERzkybFdtN01sR2JqalNHQ2R5aHZ5alQ0aDNXZFFERGpSUWhHS05BQmdoRTBIajBhT1ZyTmVNZTMtaVhma09nNXdEQ2c2dTZUaTV1ZW50cnZxY2x1Z0pTLWU4ZEdKYTFNTTYxTVpFR0tIMGVDU3VDLXdfOHExc3c?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-20T05:28:33+00:00",
+          "glossary": [
+            {
+              "term": "Nifty 50",
+              "definition": "An index of 50 large, actively traded companies on the National Stock Exchange of India."
+            },
+            {
+              "term": "Sensex",
+              "definition": "A stock market index that tracks 30 major companies listed on the Bombay Stock Exchange."
+            },
+            {
+              "term": "crude oil",
+              "definition": "Unrefined petroleum that is processed into fuels and other products."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a market-moves story driven by macro factors, not a company-specific news item. When reading the source, pay attention to whether the decline is being attributed to oil alone or whether other drivers are added later, because that changes whether the selloff looks temporary or part of a broader trend. If later coverage shows a sector breakdown or policy response, that would materially change the interpretation.",
+            "glossary": [
+              {
+                "term": "Nifty 50",
+                "definition": "An index of 50 large, actively traded companies on the National Stock Exchange of India.",
+                "whyItMatters": "It is one of the main gauges of how Indian large-cap stocks are performing."
+              },
+              {
+                "term": "Sensex",
+                "definition": "A stock market index that tracks 30 major companies listed on the Bombay Stock Exchange.",
+                "whyItMatters": "It is another headline measure of Indian equity market direction."
+              },
+              {
+                "term": "crude oil",
+                "definition": "Unrefined petroleum that is processed into fuels and other products.",
+                "whyItMatters": "Its price affects transportation, manufacturing costs, and inflation expectations."
               }
             ]
           }
@@ -768,139 +651,185 @@
       "emptyMessage": "No qualified Louisville, Kentucky stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "louisville-1-3952",
-          "title": "West Louisville health fair offers free screenings, backpacks before school starts",
+          "id": "louisville-1-42064",
+          "title": "Driver killed after SUV overturns on I-264 near Bells Lane, Louisville police say",
           "kicker": "WDRB",
-          "summary": "A health fair in West Louisville is offering free screenings and backpacks ahead of the school year, according to WDRB. The event appears aimed at helping families get children ready for school by pairing basic health checks with school supplies. No other details are provided in the description, so the specific screenings, sponsors, or attendance goals are not known from this source. For West Louisville, this points to a community effort that addresses both health access and back-to-school needs at the same time.",
-          "emailSummary": "West Louisville health fair offers free screenings, backpacks before school starts.",
-          "whyItMatters": "This matters because free screenings can help catch health issues early, while school supplies remove a cost barrier for families preparing children for class.",
-          "dataSignals": [
-            "Louisville local",
-            "healthcare angle"
-          ],
-          "sourceLabel": "WDRB · Jul 18, 9:48 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOc3JIUVI2MDRwWDZFNmk2ODF0QU5vbklOLThaWmJudDVjTGRlVkcwUm11Z1o4cE9OdjhGME9OMUFpSjFwRkZ4OXN6ZHJFbUtlckw2b2lmVnAtTHNHaTExa3k2Y04yQ1VTV0hSQTBkdFJ1OWctYk94TFpRQ3pHRWVsamdSUjFaSHVaV180V2M0VHFTdWh3RC1jOVgzeFRfanYzRzJXWTN2TWs2Q0JDSWhWekdxTFVHOVNacy05MjNJTk81VHlXUmp2d25ub0QzUVFaN3RmQVVoWU5sZF9SdnZqcWhtVDNxZDdBclE1bmtn?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T01:48:00+00:00",
-          "glossary": [
-            {
-              "term": "screenings",
-              "definition": "Basic medical checks used to spot possible health problems before a full diagnosis is needed."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a community service and public health story, not a policy or business report. When reading the full source, pay attention to which screenings are offered, who is organizing the fair, and whether services are limited to children or open to the wider community. Those details would change how large the event's health impact could be and who stands to benefit most.",
-            "glossary": [
-              {
-                "term": "screenings",
-                "definition": "Basic medical checks used to spot possible health problems before a full diagnosis is needed.",
-                "whyItMatters": "Screenings can identify issues early, which is especially important if people may not have easy access to regular care."
-              }
-            ]
-          }
-        },
-        {
-          "id": "louisville-2-12684",
-          "title": "Man hospitalized after shooting at Elliott Park in Louisville's Russell neighborhood",
-          "kicker": "WDRB",
-          "summary": "Louisville police are investigating a shooting at Elliott Park in the Russell neighborhood that left one man hospitalized. The report does not give the victim’s age, the extent of his injuries, or any information about a suspect or motive. Elliott Park sits in a part of west Louisville that residents and city officials often watch closely for public safety issues. For the neighborhood, this is another violent incident that may affect how people use the park and nearby streets.",
-          "emailSummary": "Man hospitalized after shooting at Elliott Park in Louisville's Russell neighborhood.",
-          "whyItMatters": "This matters because shootings at a public park can change how safe residents feel using shared spaces and can influence local policing and community response in west Louisville.",
+          "summary": "Louisville police say a driver was killed after an SUV overturned on I-264 near Bells Lane. Based on the report provided, the key facts are limited to the location, the vehicle type, and the fatal outcome. It appears to be a single-vehicle crash or rollover, but the description does not give the cause, the victim’s identity, or whether lanes were closed. For commuters, the main significance is a serious incident on a major Louisville highway segment that may have affected traffic and raises safety concerns around that interchange.",
+          "emailSummary": "Driver killed after SUV overturns on I-264 near Bells Lane, Louisville police say.",
+          "whyItMatters": "This matters because a fatal crash on I-264 can disrupt traffic flow, affect commute times, and highlight a dangerous stretch of roadway for drivers in Louisville.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Jul 18, 11:04 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQZFV1UTZzMzB0WFh1UVQ4VFNzeFhmRjFCeFJmSVFMRFp2ZXBOSXhsY1hSaWowNGJOeXFhN0pjdGhkWEp5ZnJCck1ueHI1OWx4bzZBYVA1NWF4TG5fdWhiQUtXNk5PbGFmTEM2ZGR1R2RFVHhWbjFkYXFINUhOR1FIeFhFMDN0YzJqRzNzT1Y3Y3JLUnlCZDM3UWVXVEJ5VDlFeTNCc1FmRzJidVdEQTdVVUhEcm94VGVVYV80ejhMQk1FTUtpcXlPY1BhclJnXzBhYWVDMjJiUEY0SnZES01HRU5pSUQya3pRczduWmFYUEZVbnM1Uzl3dFhFOFladE4yNWlv?oc=5",
+          "sourceLabel": "WDRB · Jul 19, 7:36 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQQ0Fzby0xLXJWYzZ2cTd3cTJ1VXJxNXBQYkxJVV9oZkJSQnhtQUtDUjJQcmlKM2FmdHR2b0cxRWFTZ19BU3h5MEtrLUVnVHBaSDRyZE82Qm1STWp5cktnaDdmMnJfd21Kcm8tbUpxZUY1TlhFVjBOWHZ0YWUzZU9pZTRpemxwWWpKRmlWWXFkbVVVaFRrWm4wWUJhWEJQdXZzYWtMbGVYSEVtTENuUDg0NE9kMkpzNnlLVHl1cEt3OWxlbjQtODBGQ2dsZGhUWUVXZ3hzZUNVU0ktLWFTd0lROTFzYXBKMXR2RDUwZg?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T03:04:00+00:00",
+          "publishedAt": "2026-07-19T23:36:00+00:00",
           "glossary": [
             {
-              "term": "hospitalized",
-              "definition": "Sent to a hospital for medical treatment and monitoring."
+              "term": "SUV",
+              "definition": "A sport utility vehicle, a larger passenger vehicle built with higher ground clearance and often more cargo space."
             },
             {
-              "term": "Russell neighborhood",
-              "definition": "A historic neighborhood in west Louisville."
+              "term": "I-264",
+              "definition": "An interstate bypass highway in Louisville that carries a lot of local and through traffic."
+            },
+            {
+              "term": "overturns",
+              "definition": "Means the vehicle rolled onto its side or roof during the crash."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a spot-news public safety report, so the key facts are who was hurt, where it happened, and whether police have identified a suspect or cause. When reading the source, pay attention to whether later updates add the victim’s condition, whether charges are filed, or whether police say the shooting was targeted or random. Those details would change whether this looks like an isolated incident or part of a broader pattern of violence.",
+            "explanationText": "This is a breaking local traffic-crash report, so the important thing is to separate confirmed facts from what is still unknown. When reading the source, look for updates on the crash cause, lane closures, and any official investigation details, because those would change whether this was a random accident, a road-safety issue, or a broader traffic disruption.",
             "glossary": [
               {
-                "term": "hospitalized",
-                "definition": "Sent to a hospital for medical treatment and monitoring.",
-                "whyItMatters": "It signals the shooting caused injuries serious enough to need immediate professional care."
+                "term": "SUV",
+                "definition": "A sport utility vehicle, a larger passenger vehicle built with higher ground clearance and often more cargo space.",
+                "whyItMatters": "The vehicle type can matter in rollover crashes because SUVs handle differently than smaller cars."
               },
               {
-                "term": "Russell neighborhood",
-                "definition": "A historic neighborhood in west Louisville.",
-                "whyItMatters": "Knowing the location helps readers place the incident in a specific part of the city with its own safety concerns."
+                "term": "I-264",
+                "definition": "An interstate bypass highway in Louisville that carries a lot of local and through traffic.",
+                "whyItMatters": "Crashes on major highways can quickly affect many drivers and nearby routes."
+              },
+              {
+                "term": "overturns",
+                "definition": "Means the vehicle rolled onto its side or roof during the crash.",
+                "whyItMatters": "An overturn or rollover is often more severe than a simple collision and can lead to serious injuries or death."
               }
             ]
           }
         },
         {
-          "id": "louisville-3-20224",
-          "title": "Man hospitalized after shooting near Elliott Park in Louisville's Russell neighborhood",
+          "id": "louisville-2-11643",
+          "title": "Louisville police say missing 51-year-old man with dementia was found safe",
           "kicker": "WDRB",
-          "summary": "A man was hospitalized after a shooting near Elliott Park in Louisville’s Russell neighborhood, according to WDRB. The report does not give the victim’s age, condition, or any suspect information. It also does not say what led to the shooting or whether police have made an arrest. For the neighborhood, the main immediate takeaway is that another violent incident has been reported in a part of Louisville where residents may be watching safety conditions closely.",
-          "emailSummary": "Man hospitalized after shooting near Elliott Park in Louisville's Russell neighborhood.",
-          "whyItMatters": "This matters because shootings can affect public safety, neighborhood confidence, and how local leaders and residents respond to crime in the area.",
+          "summary": "Louisville police said a 51-year-old man with dementia who had been reported missing was found safe. The report does not give his name, where he was found, or how long he had been missing. This appears to be a brief public-safety update rather than a developing crime story. For Louisville readers, it signals a successful welfare search and ends the immediate concern for the man and his family.",
+          "emailSummary": "Louisville police say missing 51-year-old man with dementia was found safe.",
+          "whyItMatters": "This matters because missing-person cases involving dementia can become urgent quickly, and a safe recovery reduces risk to the individual and the strain on local emergency responders.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Jul 18, 11:04 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNMU0xU3hQclMzQmtrLUxQQTF4cklnVjFoQldnUFFZMVlLVldTLXpEdVhZcTJxUEZPTlltQkMzUUJmUnFBeDBEb1dfbm13SEIzWVhhTGNmUnF1NTJtakFXeThncVhibVE1dUswS2JiRjIxVzFHNVlZcmo2eU5QY1VHSFBlMTVZMGNmd2xKem5IZFBIbktyTHppWmRsM091Zi1yMXlKVC0tclpnRmNDNU83eVF6anAwQVFldGRZV2FUN2xmdjZQY0VtdFFaUnh0Y3pTNWZnNE9LZ1RJN0RvVG1GUTVWR2JDUTVDdk9TU01XNUItcUE0ZkNMWlJCNnpwSHdvVkl2Umx3?oc=5",
+          "sourceLabel": "WDRB · Jul 19, 4:52 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNeHFEeDYxek9sVWdFdVQ1bXlMRDY4R3I0dm9Hc19NVm53QlpwVW5wOFFOODczWDMxektwLWtadDRRbUk4RUV2OGdqbU02aG9uT2VyaGh1dnJ4cWFmdWVIbFN6Y0plMFRXZmtKUVFBM0VDYzdkcmRhc0l5RXB1clRNTnpGR3JrYVo4Z3JtaVhyQ2FPZnlHc19oMnNKWVk4YTRnd2JoV2xIMkd1dEcwdHQ5UjhNZ1g0M0tDNndrQTZMQS1VbnJyMWdUYVFKMm1kcTE5WUxZZ0ExUURwQVlyNDBmcEoxQV8?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T03:04:00+00:00",
+          "publishedAt": "2026-07-19T20:52:00+00:00",
+          "glossary": [
+            {
+              "term": "dementia",
+              "definition": "A condition that affects memory, thinking, and everyday functioning."
+            },
+            {
+              "term": "found safe",
+              "definition": "Police confirmed the missing person was located and was not reported to be in immediate danger."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a public-safety update, not an investigative or policy story. When reading the source, the key details to watch for are whether police give a timeline, location, or any explanation for how the person was found; those details would affect how significant the case was and whether any broader safety issue is involved.",
+            "glossary": [
+              {
+                "term": "dementia",
+                "definition": "A condition that affects memory, thinking, and everyday functioning.",
+                "whyItMatters": "It helps explain why a missing adult may be especially vulnerable and why police treat the case as urgent."
+              },
+              {
+                "term": "found safe",
+                "definition": "Police confirmed the missing person was located and was not reported to be in immediate danger.",
+                "whyItMatters": "This is the key outcome in a missing-person report and determines whether an active search is still needed."
+              }
+            ]
+          }
+        },
+        {
+          "id": "louisville-3-76789",
+          "title": "Officials identify 53-year-old man fatally shot in Louisville's Shelby Park neighborhood",
+          "kicker": "WDRB",
+          "summary": "Officials say a 53-year-old man was fatally shot in Louisville’s Shelby Park neighborhood. The report says the victim has now been identified, but it does not provide his name or any details about a suspect, motive, or arrest in the description provided. Based on the headline alone, this is a homicide investigation with limited public information so far. For Louisville residents, it adds another data point to neighborhood safety concerns without yet showing whether the case is isolated or part of a broader pattern.",
+          "emailSummary": "Officials identify 53-year-old man fatally shot in Louisville's Shelby Park neighborhood.",
+          "whyItMatters": "This matters because a confirmed fatal shooting can affect how residents, businesses, and local officials think about immediate safety and police response in Shelby Park and nearby areas.",
+          "dataSignals": [
+            "Louisville local"
+          ],
+          "sourceLabel": "WDRB · Jul 19, 3:14 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNMXF3bjY0dEFWaWd3WndydDFDeE1BeEZuNFppZDl0MnMwd3g5N1Nkb3BLUUVWREtoNWozVjJva1I5STFRYjZXWkY1ZXpvaW1YN2wydE9ZZ3YtRUYxNS1RTUlsdkJIZVFSblN2bmdkMTVKY2Mxc3g0SGU3MDJVaFRlR0wzNldiejdGUjRPY0h6SlZiOXBOYVM5M05LTmZ2SFNDTVdrdmJHR2NFMXFlS2h5bE1CeGJ4alAxSHl1SkZidTBOWWZGeC1Xdk5FTVgzRGlJUktka2xadm05aTU1Mkx2UVVRdk92d2EzUEMyeEV2RmQxdW5Xa0c2NVhXZlJCWmFzVGhQYk5PcXU?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-19T19:14:00+00:00",
+          "glossary": [
+            {
+              "term": "homicide investigation",
+              "definition": "A police inquiry into a death that may have been caused by another person."
+            },
+            {
+              "term": "fatally shot",
+              "definition": "Killed by a gunshot wound."
+            },
+            {
+              "term": "identified",
+              "definition": "Officials have confirmed the person’s identity."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a breaking public-safety story, so the main thing to watch is what officials confirm versus what is still unknown. When reading the source, look for the victim’s name, whether police have a suspect or motive, and whether the shooting is linked to any larger crime trend. If later updates add an arrest, a self-defense claim, or evidence of an ongoing threat, that would change how serious and immediate the risk appears.",
+            "glossary": [
+              {
+                "term": "homicide investigation",
+                "definition": "A police inquiry into a death that may have been caused by another person.",
+                "whyItMatters": "It tells you the death is being handled as a criminal case until investigators determine what happened."
+              },
+              {
+                "term": "fatally shot",
+                "definition": "Killed by a gunshot wound.",
+                "whyItMatters": "It identifies the cause of death and signals that the case involves gun violence."
+              },
+              {
+                "term": "identified",
+                "definition": "Officials have confirmed the person’s identity.",
+                "whyItMatters": "Identification is a key step before investigators can notify family and release more details publicly."
+              }
+            ]
+          }
+        },
+        {
+          "id": "louisville-4-68406",
+          "title": "Man hospitalized after shooting at Elliott Park in Louisville's Russell neighborhood",
+          "kicker": "WDRB",
+          "summary": "A man was hospitalized after a shooting at Elliott Park in Louisville's Russell neighborhood, according to WDRB. The report identifies the location and the fact that the victim was taken to the hospital, but gives no details about the man's condition, the shooter, or whether police have made any arrests. For Louisville, this is another violent-crime incident in a public neighborhood space, which can affect how residents think about safety in the area.",
+          "emailSummary": "Man hospitalized after shooting at Elliott Park in Louisville's Russell neighborhood.",
+          "whyItMatters": "This matters because shootings in neighborhood parks can change how safe residents feel using shared public spaces and may prompt more police attention or community concern in Russell.",
+          "dataSignals": [
+            "Louisville local"
+          ],
+          "sourceLabel": "WDRB · Jul 19, 2:28 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNOGtIWGI2Q2xUcnBvSDRkYXA4cHZMWEhmQjE4VUVaTjNfakFLLTczdW9pSFY1S0x6c1IxWTRFVnJIZkdYTVpzczM1Y1hIT3VPQ21oU2NTOXM2dDFUd0VjZVlSdjE1N0VRNHcyNGNVYzFYempjMm1yUk1MYTI1ekplaW5BMUxaVlpGNlNYcEVKSTdheW1qRkF4MEhhalk1ODVjNVNyZnM1bnZIRTVnS2U0V192a0dWbHV6TUs1a1pLYVBQLWZEM1g3cjVuOGdxSERlT3FaZFdUNl9HTTN2cVRLWGhVMWd1eHc?oc=5",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-07-19T18:28:00+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a breaking public-safety report, so the key thing to watch is whether later updates add details about the victim’s condition, police investigation, or an arrest. With a short item like this, the meaning can change a lot if the shooting was targeted, random, or part of a broader pattern in the neighborhood.",
+            "explanationText": "This is a breaking public-safety story, so the key thing to watch for in the full report is whether police identify a suspect, give a motive, or update the victim's condition. The interpretation changes most if the shooting appears targeted, random, or tied to an ongoing pattern in the area.",
             "glossary": []
           }
         },
         {
-          "id": "louisville-4-7419",
-          "title": "Crowds pack Louisville's NuLu for annual Summer Fest celebration",
+          "id": "louisville-5-35697",
+          "title": "Man dies after being hit by car in downtown Louisville, police say",
           "kicker": "WDRB",
-          "summary": "NuLu in Louisville hosted its annual Summer Fest, and WDRB reported that crowds packed the neighborhood for the event. The description does not give details on attendance numbers, road closures, vendors, or economic impact, only that the celebration drew a large turnout. For Louisville, that suggests the district remains a strong draw for foot traffic and local events during the summer.",
-          "emailSummary": "Crowds pack Louisville's NuLu for annual Summer Fest celebration.",
-          "whyItMatters": "This matters because a well-attended neighborhood festival can boost local business activity, street traffic, and the visibility of NuLu as a destination in Louisville.",
+          "summary": "Louisville police say a man died after being hit by a car in downtown Louisville. The report gives no additional details about the victim, the driver, the exact location, or whether charges have been filed. Based on the available information, this is a fatal traffic crash being handled by police. For downtown Louisville, it is another reminder that pedestrian safety remains an immediate concern in a busy urban area.",
+          "emailSummary": "Man dies after being hit by car in downtown Louisville, police say.",
+          "whyItMatters": "This matters because fatal crashes in the downtown core affect pedestrian safety, traffic flow, and public concern about how well streets are designed and policed.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Jul 18, 10:39 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNb2VYOHd2VUNDcElkYTFPREVGT3hDMHJYTkhJUzR5WkE2REFQaENpdk1CYWNrdS1aMm5KVmRiMklEV2owNzVadHZlUmFVWDZKWHEyOTZkUlZIdjk2cm51elVZQm54cjBLMXVlSEU4MXlBQTVZYm9Ic0VJRUhEaTF4NXFsYkthNldRTGVaU3dhdFpXQWdCVGM3VGpoZmFIcXRzWFZCU2x6aHFIZTVJVVlBal95WmhPZGRKMUMtTlVtdDRRT1M2SThCTHRVS3o?oc=5",
+          "sourceLabel": "WDRB · Jul 19, 1:51 PM ET",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOemFtcVFHZHlBUkJhc2Iwa2ZzOEM5ZHZTZ2R6SnZnNlRhaTlQRDJJS01pU1Jwb2FrXzlSQ25ydDRBX0xWclh2VEZhUEpOZ3dRcE9zaXJpQkgzX044Yjl2SmNIalAtS2lCb2MzMTI4QnhFTmF5NHd1NkVacG5VZ3J5TkNFRFdYTkt5aHI5d2NUeVYwMUVwV2VnRnpsSWZRUzdmT05DeGJHSnFDYkNzc2I5Q0l4QW1YZHUyelQtd1pnSUk0bWdpNDhFZzRRVGVZM0JCZG9iVkhyUnhrWVdJcW9jZjNFTVg2R0VpMUlv?oc=5",
           "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T02:39:00+00:00",
+          "publishedAt": "2026-07-19T17:51:00+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a local event turnout story, so the key thing to watch is whether the reporting includes concrete details like crowd size, business sales, or city logistics. If those details are added, the story can shift from a simple community scene to evidence about neighborhood demand and economic activity.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "louisville-5-22269",
-          "title": "Master P hosts basketball conference for nearly 1,000 young athletes in Louisville",
-          "kicker": "WDRB",
-          "summary": "Master P held a basketball conference in Louisville that drew nearly 1,000 young athletes, according to WDRB. The report does not give details about the conference agenda, but it shows a large youth sports gathering centered on basketball. For Louisville, that suggests a notable community event with a focus on youth development, sports exposure, or mentorship. Because the source is brief, the key fact is the size of the turnout and the local setting.",
-          "emailSummary": "Master P hosts basketball conference for nearly 1,000 young athletes in Louisville.",
-          "whyItMatters": "This matters because large youth sports events can affect local recreation activity, community engagement, and attention on programs that support young athletes in Louisville.",
-          "dataSignals": [
-            "Louisville local"
-          ],
-          "sourceLabel": "WDRB · Jul 18, 10:39 PM ET",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOVVY2SXNsdUgtR3BLMm9vWlduY0ZCQVJob0hNbHpuNEx3SE5ySG5OVE44TmZfUmFSN0ZQcjgtR2ZpUW1Fc3A1c3Z5N0ZPbUVlektndHVsTzB6OVVaOVFxcTgyek1QbUhjS2VkUUpVOGdVTU4zaDJNb29UOXk4eEhfcEdGOUtFTGxIa2lBRm1IWWZOS3pmdWdTc0NKMGdFbXdJam1ia2JMTnRtTDY2ZE5xdjVQdkNwdzFUdEUwTWZzN3FQbmFKc1BFOVRjWk03RGpmQTBFZFE2a0pOV1dzRm11TVZDTnhFRHAwRFpHc0xvVi1kanB6enVDTXZIVQ?oc=5",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-07-19T02:39:00+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a local event report, so the main thing to watch for is who organized it, how many people attended, and whether it had a specific youth or community purpose. Since the description is sparse, any extra detail about speakers, training, or partnerships would change how important the event is beyond being a large gathering.",
+            "explanationText": "This is a short breaking-news public safety story, so the key is to separate confirmed facts from what is still unknown. When reading the source, look for later updates on the crash location, the driver’s status, and whether police say speed, impairment, or road conditions were factors. Those details would change how serious the safety or enforcement implications are.",
             "glossary": []
           }
         }
