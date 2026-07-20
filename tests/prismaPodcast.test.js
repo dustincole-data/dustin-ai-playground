@@ -9,6 +9,7 @@ import {
   formatPlayerTime,
   formatPodcastDuration,
   podcastAssetPath,
+  podcastChapterLabel,
   podcastProgress,
   podcastShareUrl,
   podcastTopicArtwork,
@@ -57,6 +58,13 @@ test('maps podcast topics to their generated artwork', () => {
   assert.equal(podcastTopicArtwork('unknown'), null);
 });
 
+test('uses concise category labels that fit compact playback buttons', () => {
+  assert.equal(podcastChapterLabel('all', 'Complete briefing'), 'All');
+  assert.equal(podcastChapterLabel('energy', 'Energy & Utilities'), 'Energy');
+  assert.equal(podcastChapterLabel('kentucky_healthcare', 'Kentucky Healthcare'), 'Ky. Health');
+  assert.equal(podcastChapterLabel('louisville', 'Louisville'), 'Louisville');
+});
+
 test('builds shareable category URLs from the current Prisma edition', () => {
   const url = podcastShareUrl('energy', 'https://example.com/dustin-ai-playground/editions/prisma/?listen=ai');
   assert.equal(url, 'https://example.com/dustin-ai-playground/editions/prisma/share/energy/');
@@ -69,14 +77,18 @@ test('reads a requested category from a shared listening link', () => {
 
 test('ships accessible custom podcast navigation controls', async () => {
   const html = await readFile(new URL('../public/editions/prisma/index.html', import.meta.url), 'utf8');
+  const css = await readFile(new URL('../public/editions/prisma/styles.css', import.meta.url), 'utf8');
   assert.match(html, /id="podcastPlay"[^>]*aria-label="Play briefing"/);
   assert.match(html, /id="podcastBack"[^>]*aria-label="Go back 10 seconds"/);
   assert.match(html, /id="podcastForward"[^>]*aria-label="Go forward 10 seconds"/);
   assert.match(html, /id="podcastTimeline"[^>]*aria-label="Briefing progress"/);
   assert.match(html, /id="podcastChapterButtons"[^>]*aria-label="Play a briefing topic"/);
+  assert.match(html, /id="podcastAll"[^>]*aria-label="Play the complete briefing from the beginning"/);
   assert.match(html, /id="podcastArtwork"[^>]*alt=""/);
   assert.match(html, /id="podcastShare"[^>]*aria-label="Share this topic"/);
   assert.doesNotMatch(html, /id="podcastChapter"/);
+  assert.doesNotMatch(css, /\.podcast-chapter-label[^}]*text-overflow:\s*ellipsis/s);
+  assert.match(css, /\.podcast-chapter-button\s*\{[^}]*min-height:\s*2\.75rem/s);
   assert.match(html, /id="podcastSpeed"[^>]*aria-label="Playback speed"/);
 });
 

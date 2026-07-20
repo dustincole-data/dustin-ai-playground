@@ -25,6 +25,9 @@ DEFAULT_INPUT = ROOT / "public" / "data" / "morning-briefs.json"
 DEFAULT_AUDIO_DIR = ROOT / "public" / "audio"
 DEFAULT_DATA_DIR = ROOT / "public" / "data"
 VOICE = "en-US-AvaMultilingualNeural"
+DEFAULT_LISTENER_NAME = "Dustin"
+SPEECH_RATE = "+3%"
+SPEECH_PITCH = "-2Hz"
 LOCAL_TZ = ZoneInfo("America/New_York")
 SECTION_NAMES = {
     "ai": "AI",
@@ -34,6 +37,21 @@ SECTION_NAMES = {
     "analytics": "Analytics",
     "louisville": "Louisville",
 }
+SECTION_TRANSITIONS = {
+    "ai": "{listener}, let's start with {section}.",
+    "energy": "All right, {listener}, let's move to {section}.",
+    "humana": "Next up, {listener}: {section}.",
+    "kentucky_healthcare": "Now for {section}, {listener}.",
+    "analytics": "A quick turn to {section}, {listener}.",
+    "louisville": "And finally, {listener}, here's what is happening around {section}.",
+}
+STORY_LEADS = ("First up", "Also worth knowing", "One more thing here", "Next")
+TAKEAWAY_LEADS = (
+    "The part I would keep an eye on is this:",
+    "What that means in practice:",
+    "The useful takeaway:",
+)
+SOURCE_LEADS = ("This one comes from", "Reporting comes from", "The source here is")
 
 
 def clean_spoken_text(value: str) -> str:
@@ -55,13 +73,27 @@ def spoken_date(feed: dict) -> str:
     return datetime.now(LOCAL_TZ).date().isoformat()
 
 
-def build_spoken_segments(feed: dict) -> list[dict]:
-    """Build the episode as chapter-aware segments without changing its spoken copy."""
+def trim_explanatory_lead(value: str) -> str:
+    """Remove feed boilerplate that sounds stiff after a spoken transition."""
+    value = clean_spoken_text(value)
+    value = re.sub(r"^(?:This matters because|The practical question is)\s+", "", value, flags=re.IGNORECASE)
+    if not value:
+        return ""
+    return value[0].upper() + value[1:]
+
+
+def category_transition(section_id: str, section_name: str, listener_name: str) -> str:
+    template = SECTION_TRANSITIONS.get(section_id, "Next up, {listener}: {section}.")
+    return template.format(listener=listener_name, section=section_name)
+
+
+def build_spoken_segments(feed: dict, *, listener_name: str = DEFAULT_LISTENER_NAME) -> list[dict]:
+    """Build a personalized, chapter-aware episode from grounded feed context."""
     label = clean_spoken_text(feed.get("generatedLabel") or "today")
     segments = [{
         "text": "\n\n".join([
-            f"Here is your complete morning briefing for {label}.",
-            "I will move through every story on the site, explain what happened, and keep the useful part close.",
+            f"{listener_name}, here's everything you need to know this morning.",
+            f"This briefing was prepared for {label}. I'll walk you through what happened and why it matters, with a little extra context where it helps.",
         ])
     }]
     story_number = 0
@@ -70,22 +102,26 @@ def build_spoken_segments(feed: dict) -> list[dict]:
         articles = brief.get("articles") or []
         if not articles:
             continue
-        section_name = SECTION_NAMES.get(brief.get("id"), clean_spoken_text(brief.get("id", "News")) or "News")
-        parts = [f"Now, {section_name}."]
-        for article in articles:
+        section_id = brief.get("id", "")
+        section_name = SECTION_NAMES.get(section_id, clean_spoken_text(section_id or "News") or "News")
+        parts = [category_transition(section_id, section_name, listener_name)]
+        for article_index, article in enumerate(articles):
             story_number += 1
             title = clean_spoken_text(article.get("title", "This story"))
             summary = clean_spoken_text(article.get("summary", ""))
-            why = clean_spoken_text(article.get("whyItMatters", ""))
+            why = trim_explanatory_lead(article.get("whyItMatters", ""))
+            context = clean_spoken_text((article.get("learningPage") or {}).get("explanationText", ""))
             source = clean_spoken_text(article.get("sourceLabel", ""))
-            lead = "First" if story_number == 1 else "Next"
+            lead = STORY_LEADS[article_index % len(STORY_LEADS)]
             item = f"{lead}, {title}."
             if summary:
-                item += f" Here is the rundown. {summary}"
+                item += f" {summary}"
+            if context:
+                item += f" A little context here: {context}"
             if why:
-                item += f" The practical takeaway: {why}"
+                item += f" {TAKEAWAY_LEADS[article_index % len(TAKEAWAY_LEADS)]} {why}"
             if source:
-                item += f" This was reported by {source}."
+                item += f" {SOURCE_LEADS[article_index % len(SOURCE_LEADS)]} {source}."
             parts.append(item)
         segments.append({
             "chapterId": brief.get("id"),
@@ -102,9 +138,11 @@ def build_spoken_segments(feed: dict) -> list[dict]:
     return segments
 
 
-def build_spoken_script(feed: dict) -> str:
+def build_spoken_script(feed: dict, *, listener_name: str = DEFAULT_LISTENER_NAME) -> str:
     """Turn every current story into a single-host natural-language rundown."""
-    return "\n\n".join(segment["text"] for segment in build_spoken_segments(feed))
+    return "\n\n".join(
+        segment["text"] for segment in build_spoken_segments(feed, listener_name=listener_name)
+    )
 
 
 def build_manifest(
@@ -114,6 +152,7 @@ def build_manifest(
     transcript_url: str,
     duration_seconds: int,
     chapters: list[dict] | None = None,
+    listener_name: str = DEFAULT_LISTENER_NAME,
 ) -> dict:
     article_count = sum(len(brief.get("articles") or []) for brief in feed.get("briefs") or [])
     manifest = {
@@ -125,6 +164,8 @@ def build_manifest(
         "durationSeconds": duration_seconds,
         "articleCount": article_count,
         "voice": VOICE,
+        "listenerName": listener_name,
+        "narrationStyle": "personalized-conversational",
     }
     if chapters:
         manifest["chapters"] = chapters
@@ -175,6 +216,57 @@ def plan_synthesis_chunks(segments: list[dict], *, max_characters: int = 2_500) 
     return plan
 
 
+def is_complete_audio_part(path: Path) -> bool:
+    """Return true when Edge wrote a playable chunk before its socket stalled."""
+    if not path.exists() or path.stat().st_size <= 0:
+        return False
+    try:
+        return audio_duration(path) > 0
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return False
+
+
+async def save_tts_parts(
+    plan: list[dict],
+    parts: list[Path],
+    communicate_factory,
+    *,
+    max_concurrency: int = 1,
+    max_attempts: int = 3,
+    request_timeout: float = 45,
+    inter_request_delay: float = 2.5,
+    completed_part=None,
+) -> None:
+    """Save TTS chunks serially by default so Edge does not stall the batch."""
+    semaphore = asyncio.Semaphore(max(1, max_concurrency))
+    completed_part = completed_part or is_complete_audio_part
+
+    async def save_one(item: dict, part: Path) -> None:
+        for attempt in range(1, max_attempts + 1):
+            try:
+                async with semaphore:
+                    try:
+                        request = communicate_factory(
+                            item["text"],
+                            voice=VOICE,
+                            rate=SPEECH_RATE,
+                            pitch=SPEECH_PITCH,
+                        ).save(str(part))
+                        await asyncio.wait_for(request, timeout=request_timeout)
+                    finally:
+                        if inter_request_delay > 0:
+                            await asyncio.sleep(inter_request_delay)
+                return
+            except Exception:
+                if completed_part(part):
+                    return
+                if attempt >= max_attempts:
+                    raise
+                await asyncio.sleep(attempt * 1.25)
+
+    await asyncio.gather(*(save_one(item, part) for item, part in zip(plan, parts)))
+
+
 async def synthesize_segments(segments: list[dict], destination: Path) -> list[dict]:
     """Synthesize chapter-aware chunks and return measured topic offsets."""
     try:
@@ -192,10 +284,7 @@ async def synthesize_segments(segments: list[dict], destination: Path) -> list[d
     temp_dir = Path(tempfile.mkdtemp(prefix="morning-brief-tts-"))
     try:
         parts = [temp_dir / f"part-{index:03d}.mp3" for index in range(len(plan))]
-        await asyncio.wait_for(
-            asyncio.gather(*(edge_tts.Communicate(item["text"], voice=VOICE).save(str(part)) for item, part in zip(plan, parts))),
-            timeout=150,
-        )
+        await save_tts_parts(plan, parts, edge_tts.Communicate)
 
         chapters: list[dict] = []
         elapsed = 0.0
@@ -240,9 +329,15 @@ def audio_duration_seconds(audio_path: Path) -> int:
     return max(1, round(audio_duration(audio_path)))
 
 
-def generate(feed: dict, *, audio_dir: Path, data_dir: Path) -> dict:
+def generate(
+    feed: dict,
+    *,
+    audio_dir: Path,
+    data_dir: Path,
+    listener_name: str = DEFAULT_LISTENER_NAME,
+) -> dict:
     date = spoken_date(feed)
-    segments = build_spoken_segments(feed)
+    segments = build_spoken_segments(feed, listener_name=listener_name)
     script = "\n\n".join(segment["text"] for segment in segments)
     audio_path = audio_dir / f"daily-brief-{date}.mp3"
     transcript_path = data_dir / f"daily-brief-{date}.txt"
@@ -255,6 +350,7 @@ def generate(feed: dict, *, audio_dir: Path, data_dir: Path) -> dict:
         transcript_url=f"data/{transcript_path.name}",
         duration_seconds=audio_duration_seconds(audio_path),
         chapters=chapters,
+        listener_name=listener_name,
     )
     (data_dir / "daily-podcast.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     return manifest
@@ -265,10 +361,16 @@ def main() -> int:
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--audio-dir", type=Path, default=DEFAULT_AUDIO_DIR)
     parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA_DIR)
+    parser.add_argument("--listener-name", default=DEFAULT_LISTENER_NAME)
     args = parser.parse_args()
 
     feed = json.loads(args.input.read_text(encoding="utf-8"))
-    manifest = generate(feed, audio_dir=args.audio_dir, data_dir=args.data_dir)
+    manifest = generate(
+        feed,
+        audio_dir=args.audio_dir,
+        data_dir=args.data_dir,
+        listener_name=args.listener_name.strip() or DEFAULT_LISTENER_NAME,
+    )
     print(json.dumps(manifest, indent=2))
     return 0
 

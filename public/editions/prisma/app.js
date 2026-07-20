@@ -10,11 +10,12 @@ import {
   formatPlayerTime,
   formatPodcastDuration,
   podcastAssetPath,
+  podcastChapterLabel,
   podcastProgress,
   podcastShareUrl,
   podcastTopicArtwork,
   requestedPodcastChapter,
-} from './podcast.js?v=20260720-podcast-art-2';
+} from './podcast.js?v=20260720-podcast-premium';
 
 const SECTIONS = [
   { id: 'ai', name: 'AI', label: 'AI', headline: 'AI', hue: 'ai',
@@ -89,6 +90,7 @@ function initPodcastPlayer(audio, podcast) {
   const share = document.getElementById('podcastShare');
   const chapterWrap = document.getElementById('podcastChapters');
   const chapterButtons = document.getElementById('podcastChapterButtons');
+  const allButton = document.getElementById('podcastAll');
   const play = document.getElementById('podcastPlay');
   const back = document.getElementById('podcastBack');
   const forward = document.getElementById('podcastForward');
@@ -99,13 +101,14 @@ function initPodcastPlayer(audio, podcast) {
   const mute = document.getElementById('podcastMute');
   const volume = document.getElementById('podcastVolume');
   const status = document.getElementById('podcastStatus');
-  if (![player, nowPlaying, artwork, topicTitle, topicMeta, share, chapterWrap, chapterButtons, play, back, forward, timeline, elapsed, duration, speed, mute, volume, status].every(Boolean)) return;
+  if (![player, nowPlaying, artwork, topicTitle, topicMeta, share, chapterWrap, chapterButtons, allButton, play, back, forward, timeline, elapsed, duration, speed, mute, volume, status].every(Boolean)) return;
 
   const chapters = [...(podcast.chapters || [])]
     .filter((chapter) => chapter?.id && chapter?.title && Number.isFinite(Number(chapter.startSeconds)))
     .sort((a, b) => Number(a.startSeconds) - Number(b.startSeconds));
   const requestedId = requestedPodcastChapter(window.location.search);
   const requestedChapter = chapters.find((chapter) => chapter.id === requestedId) || null;
+  let preferredChapter = requestedChapter;
   let displayedChapter = null;
   const positionKey = `prisma-podcast-position:${audio.currentSrc || audio.src}`;
   const speedKey = 'prisma-podcast-speed';
@@ -142,6 +145,12 @@ function initPodcastPlayer(audio, podcast) {
     } catch { /* optional browser integration */ }
   }
 
+  function selectChapterButton(topicId) {
+    chapterButtons.querySelectorAll('button').forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.topic === topicId));
+    });
+  }
+
   function displayChapter(chapter) {
     if (!chapter || displayedChapter?.id === chapter.id) return;
     const section = sectionFor(chapter);
@@ -161,9 +170,6 @@ function initPodcastPlayer(audio, podcast) {
     share.setAttribute('aria-label', `Share ${chapter.title}`);
     const topicSeconds = Math.max(1, chapterEnd(chapter) - Number(chapter.startSeconds));
     topicMeta.textContent = `${formatPlayerTime(chapter.startSeconds)} · ${formatPodcastDuration(topicSeconds)}`;
-    chapterButtons.querySelectorAll('button').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.dataset.topic === chapter.id));
-    });
     updateMediaMetadata(chapter);
   }
 
@@ -173,7 +179,6 @@ function initPodcastPlayer(audio, podcast) {
       const button = document.createElement('button');
       const swatch = document.createElement('span');
       const label = document.createElement('span');
-      const time = document.createElement('span');
       button.type = 'button';
       button.className = `podcast-chapter-button chapter-${section?.hue || 'ai'}`;
       button.dataset.topic = chapter.id;
@@ -182,21 +187,22 @@ function initPodcastPlayer(audio, podcast) {
       swatch.className = 'podcast-chapter-swatch';
       swatch.setAttribute('aria-hidden', 'true');
       label.className = 'podcast-chapter-label';
-      label.textContent = chapter.title;
-      time.className = 'podcast-chapter-time';
-      time.textContent = formatPlayerTime(chapter.startSeconds);
-      button.append(swatch, label, time);
+      label.textContent = podcastChapterLabel(chapter.id, chapter.title);
+      button.append(swatch, label);
       button.addEventListener('click', () => playChapter(chapter));
       chapterButtons.append(button);
     });
     chapterWrap.hidden = false;
     nowPlaying.hidden = false;
     displayChapter(requestedChapter || chapters[0]);
+    selectChapterButton(requestedChapter?.id || 'all');
   }
 
   function syncChapter() {
     if (!chapters.length) return;
-    displayChapter(activePodcastChapter(chapters, audio.currentTime) || requestedChapter || chapters[0]);
+    const active = activePodcastChapter(chapters, audio.currentTime);
+    displayChapter(active || preferredChapter || chapters[0]);
+    selectChapterButton(active?.id || (preferredChapter && audio.currentTime >= preferredChapter.startSeconds ? preferredChapter.id : 'all'));
   }
 
   function syncTimeline() {
@@ -243,11 +249,23 @@ function initPodcastPlayer(audio, podcast) {
   }
 
   async function playChapter(chapter) {
+    preferredChapter = chapter;
     audio.currentTime = clampPodcastSeek(0, Number(chapter.startSeconds), playableDuration());
     displayChapter(chapter);
+    selectChapterButton(chapter.id);
     syncTimeline();
     announce(`Playing ${chapter.title}`);
     try { await audio.play(); } catch { announce(`${chapter.title} is ready. Press play to listen.`); }
+  }
+
+  async function playAll() {
+    preferredChapter = null;
+    audio.currentTime = 0;
+    displayChapter(chapters[0]);
+    selectChapterButton('all');
+    syncTimeline();
+    announce('Playing the complete briefing from the beginning');
+    try { await audio.play(); } catch { announce('The complete briefing is ready. Press play to listen.'); }
   }
 
   async function shareChapter() {
@@ -284,6 +302,7 @@ function initPodcastPlayer(audio, podcast) {
     }
   }
 
+  allButton.addEventListener('click', playAll);
   share.addEventListener('click', shareChapter);
   play.addEventListener('click', togglePlayback);
   back.addEventListener('click', () => seekBy(-10));
