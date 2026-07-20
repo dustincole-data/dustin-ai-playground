@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260720-chapters" />
+  <link rel="stylesheet" href="./styles.css?v=20260720-podcast-art" />
 </head>
 <body>
   <a class="skip-link" href="#bands">Skip to the briefs</a>
@@ -75,12 +75,26 @@
         Your browser does not support the daily briefing audio player.
       </audio>
       <div class="podcast-player" id="podcastPlayer" hidden>
+        <div class="podcast-now" id="podcastNow" hidden>
+          <div class="podcast-artwork-shell">
+            <img class="podcast-artwork" id="podcastArtwork" alt="" width="640" height="640" />
+          </div>
+          <div class="podcast-now-copy">
+            <p>Now playing</p>
+            <h3 id="podcastTopicTitle">Daily spoken edition</h3>
+            <span id="podcastTopicMeta"></span>
+          </div>
+          <button class="podcast-share" id="podcastShare" aria-label="Share this topic" type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.5-4.4M8.2 13.2l7.5 4.4"/></svg>
+            <span>Share topic</span>
+          </button>
+        </div>
         <div class="podcast-chapters" id="podcastChapters" hidden>
-          <span class="podcast-chapter-mark" aria-hidden="true"></span>
-          <label for="podcastChapter">Jump to topic</label>
-          <select id="podcastChapter" aria-label="Choose a briefing topic">
-            <option value="">Choose a topic…</option>
-          </select>
+          <div class="podcast-chapter-heading">
+            <span class="podcast-chapter-mark" aria-hidden="true"></span>
+            <p>Play a topic</p>
+          </div>
+          <div class="podcast-chapter-buttons" id="podcastChapterButtons" aria-label="Play a briefing topic"></div>
         </div>
         <div class="podcast-transport" role="group" aria-label="Playback controls">
           <button class="podcast-skip" id="podcastBack" aria-label="Go back 10 seconds" type="button">
@@ -141,6 +155,6 @@
 
   <script src="./vendor/gsap.min.js"></script>
   <script src="./vendor/ScrollTrigger.min.js"></script>
-  <script type="module" src="./app.js?v=20260720-chapters"></script>
+  <script type="module" src="./app.js?v=20260720-podcast-art"></script>
 </body>
 </html>

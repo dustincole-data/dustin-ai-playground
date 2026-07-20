@@ -11,6 +11,9 @@ import {
   formatPodcastDuration,
   podcastAssetPath,
   podcastProgress,
+  podcastShareUrl,
+  podcastTopicArtwork,
+  requestedPodcastChapter,
 } from './podcast.js';
 
 const SECTIONS = [
@@ -79,8 +82,13 @@ async function loadPodcast() {
 
 function initPodcastPlayer(audio, podcast) {
   const player = document.getElementById('podcastPlayer');
+  const nowPlaying = document.getElementById('podcastNow');
+  const artwork = document.getElementById('podcastArtwork');
+  const topicTitle = document.getElementById('podcastTopicTitle');
+  const topicMeta = document.getElementById('podcastTopicMeta');
+  const share = document.getElementById('podcastShare');
   const chapterWrap = document.getElementById('podcastChapters');
-  const chapterSelect = document.getElementById('podcastChapter');
+  const chapterButtons = document.getElementById('podcastChapterButtons');
   const play = document.getElementById('podcastPlay');
   const back = document.getElementById('podcastBack');
   const forward = document.getElementById('podcastForward');
@@ -91,11 +99,14 @@ function initPodcastPlayer(audio, podcast) {
   const mute = document.getElementById('podcastMute');
   const volume = document.getElementById('podcastVolume');
   const status = document.getElementById('podcastStatus');
-  if (![player, chapterWrap, chapterSelect, play, back, forward, timeline, elapsed, duration, speed, mute, volume, status].every(Boolean)) return;
+  if (![player, nowPlaying, artwork, topicTitle, topicMeta, share, chapterWrap, chapterButtons, play, back, forward, timeline, elapsed, duration, speed, mute, volume, status].every(Boolean)) return;
 
   const chapters = [...(podcast.chapters || [])]
     .filter((chapter) => chapter?.id && chapter?.title && Number.isFinite(Number(chapter.startSeconds)))
     .sort((a, b) => Number(a.startSeconds) - Number(b.startSeconds));
+  const requestedId = requestedPodcastChapter(window.location.search);
+  const requestedChapter = chapters.find((chapter) => chapter.id === requestedId) || null;
+  let displayedChapter = null;
   const positionKey = `prisma-podcast-position:${audio.currentSrc || audio.src}`;
   const speedKey = 'prisma-podcast-speed';
   let lastSavedSecond = -1;
@@ -112,20 +123,80 @@ function initPodcastPlayer(audio, podcast) {
   const playableDuration = () => Number.isFinite(audio.duration) ? audio.duration : Number(podcast.durationSeconds) || 0;
   const announce = (message) => { status.textContent = message; };
 
+  const sectionFor = (chapter) => SECTIONS.find((section) => section.id === chapter?.id) || null;
+  const chapterEnd = (chapter) => {
+    const index = chapters.findIndex((item) => item.id === chapter.id);
+    return Number(chapters[index + 1]?.startSeconds) || playableDuration();
+  };
+
+  function updateMediaMetadata(chapter) {
+    if (!chapter || !('mediaSession' in navigator) || !('MediaMetadata' in window)) return;
+    const artPath = podcastTopicArtwork(chapter.id);
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: chapter.title,
+        artist: 'Prisma · Dustin Cole’s personal newsroom',
+        album: 'Daily spoken edition',
+        artwork: artPath ? [{ src: new URL(artPath, window.location.href).href, sizes: '640x640', type: 'image/webp' }] : [],
+      });
+    } catch { /* optional browser integration */ }
+  }
+
+  function displayChapter(chapter) {
+    if (!chapter || displayedChapter?.id === chapter.id) return;
+    const section = sectionFor(chapter);
+    const artPath = podcastTopicArtwork(chapter.id);
+    displayedChapter = chapter;
+    player.dataset.topic = chapter.id;
+    if (section) {
+      player.style.setProperty('--podcast-accent', `var(--${section.hue}-deep)`);
+      player.style.setProperty('--podcast-mid', `var(--${section.hue}-mid)`);
+      player.style.setProperty('--podcast-wash', `var(--${section.hue}-wash)`);
+    }
+    if (artPath) {
+      artwork.src = artPath;
+      artwork.alt = `${chapter.title} podcast artwork`;
+    }
+    topicTitle.textContent = chapter.title;
+    share.setAttribute('aria-label', `Share ${chapter.title}`);
+    const topicSeconds = Math.max(1, chapterEnd(chapter) - Number(chapter.startSeconds));
+    topicMeta.textContent = `${formatPlayerTime(chapter.startSeconds)} · ${formatPodcastDuration(topicSeconds)}`;
+    chapterButtons.querySelectorAll('button').forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.topic === chapter.id));
+    });
+    updateMediaMetadata(chapter);
+  }
+
   if (chapters.length) {
     chapters.forEach((chapter) => {
-      const option = document.createElement('option');
-      option.value = chapter.id;
-      option.textContent = `${chapter.title} · ${formatPlayerTime(chapter.startSeconds)}`;
-      chapterSelect.append(option);
+      const section = sectionFor(chapter);
+      const button = document.createElement('button');
+      const swatch = document.createElement('span');
+      const label = document.createElement('span');
+      const time = document.createElement('span');
+      button.type = 'button';
+      button.className = `podcast-chapter-button chapter-${section?.hue || 'ai'}`;
+      button.dataset.topic = chapter.id;
+      button.setAttribute('aria-label', `Play ${chapter.title} from ${formatPlayerTime(chapter.startSeconds)}`);
+      button.setAttribute('aria-pressed', 'false');
+      swatch.className = 'podcast-chapter-swatch';
+      swatch.setAttribute('aria-hidden', 'true');
+      label.className = 'podcast-chapter-label';
+      label.textContent = chapter.title;
+      time.className = 'podcast-chapter-time';
+      time.textContent = formatPlayerTime(chapter.startSeconds);
+      button.append(swatch, label, time);
+      button.addEventListener('click', () => playChapter(chapter));
+      chapterButtons.append(button);
     });
     chapterWrap.hidden = false;
+    nowPlaying.hidden = false;
+    displayChapter(requestedChapter || chapters[0]);
   }
 
   function syncChapter() {
     if (!chapters.length) return;
-    const active = activePodcastChapter(chapters, audio.currentTime);
-    chapterSelect.value = active?.id || '';
+    displayChapter(activePodcastChapter(chapters, audio.currentTime) || requestedChapter || chapters[0]);
   }
 
   function syncTimeline() {
@@ -171,13 +242,49 @@ function initPodcastPlayer(audio, podcast) {
     }
   }
 
-  chapterSelect.addEventListener('change', () => {
-    const chapter = chapters.find((item) => item.id === chapterSelect.value);
-    if (!chapter) return;
+  async function playChapter(chapter) {
     audio.currentTime = clampPodcastSeek(0, Number(chapter.startSeconds), playableDuration());
+    displayChapter(chapter);
     syncTimeline();
-    announce(`Jumped to ${chapter.title}`);
-  });
+    announce(`Playing ${chapter.title}`);
+    try { await audio.play(); } catch { announce(`${chapter.title} is ready. Press play to listen.`); }
+  }
+
+  async function shareChapter() {
+    const chapter = displayedChapter || chapters[0];
+    if (!chapter) return;
+    const url = podcastShareUrl(chapter.id, window.location.href);
+    const data = {
+      title: `${chapter.title} · Prisma spoken briefing`,
+      text: `Listen to the ${chapter.title} section in today’s Prisma briefing.`,
+      url,
+    };
+    try {
+      if (navigator.share) {
+        await navigator.share(data);
+        announce(`Shared ${chapter.title}`);
+        return;
+      }
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(url);
+      } else {
+        const field = document.createElement('textarea');
+        field.value = url;
+        field.setAttribute('readonly', '');
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.append(field);
+        field.select();
+        document.execCommand('copy');
+        field.remove();
+      }
+      announce(`${chapter.title} link copied`);
+    } catch (error) {
+      if (error?.name !== 'AbortError') announce('Could not share this topic');
+    }
+  }
+
+  share.addEventListener('click', shareChapter);
   play.addEventListener('click', togglePlayback);
   back.addEventListener('click', () => seekBy(-10));
   forward.addEventListener('click', () => seekBy(10));
@@ -200,8 +307,13 @@ function initPodcastPlayer(audio, podcast) {
   audio.addEventListener('pause', syncPlayState);
   audio.addEventListener('volumechange', syncVolumeState);
   audio.addEventListener('loadedmetadata', () => {
-    const savedPosition = Number(readStorage(positionKey));
-    if (savedPosition > 0 && savedPosition < audio.duration - 15) audio.currentTime = savedPosition;
+    if (requestedChapter) {
+      audio.currentTime = clampPodcastSeek(0, Number(requestedChapter.startSeconds), audio.duration);
+      displayChapter(requestedChapter);
+    } else {
+      const savedPosition = Number(readStorage(positionKey));
+      if (savedPosition > 0 && savedPosition < audio.duration - 15) audio.currentTime = savedPosition;
+    }
     syncTimeline();
   });
   audio.addEventListener('timeupdate', () => {
@@ -228,15 +340,6 @@ function initPodcastPlayer(audio, podcast) {
 
   if ('mediaSession' in navigator && 'MediaMetadata' in window) {
     try {
-      navigator.mediaSession.metadata = new MediaMetadata({
-        title: 'Daily spoken edition',
-        artist: 'Prisma · Dustin Cole’s personal newsroom',
-        album: `${podcast.articleCount || 0} stories`,
-        artwork: [
-          { src: './brand/icon-192.png', sizes: '192x192', type: 'image/png' },
-          { src: './brand/icon-512.png', sizes: '512x512', type: 'image/png' },
-        ],
-      });
       const handlers = {
         play: () => audio.play(),
         pause: () => audio.pause(),
@@ -247,6 +350,7 @@ function initPodcastPlayer(audio, podcast) {
       Object.entries(handlers).forEach(([action, handler]) => {
         try { navigator.mediaSession.setActionHandler(action, handler); } catch { /* unsupported action */ }
       });
+      updateMediaMetadata(displayedChapter || chapters[0]);
     } catch { /* optional browser integration */ }
   }
 
@@ -274,6 +378,9 @@ function renderPodcast(podcast) {
   else transcript.hidden = true;
   initPodcastPlayer(audio, podcast);
   section.hidden = false;
+  if (requestedPodcastChapter(window.location.search)) {
+    requestAnimationFrame(() => section.scrollIntoView({ block: 'start', behavior: reducedMotion ? 'auto' : 'smooth' }));
+  }
 }
 
 function cleanSummary(a) {

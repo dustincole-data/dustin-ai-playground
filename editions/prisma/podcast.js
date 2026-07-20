@@ -37,3 +37,27 @@ export function activePodcastChapter(chapters, currentTime) {
     .filter((chapter) => Number(chapter?.startSeconds) <= time)
     .sort((a, b) => Number(b.startSeconds) - Number(a.startSeconds))[0] || null;
 }
+
+const TOPIC_ARTWORK = Object.freeze({
+  ai: 'ai',
+  energy: 'energy',
+  humana: 'humana',
+  kentucky_healthcare: 'kentucky-healthcare',
+  analytics: 'analytics',
+  louisville: 'louisville',
+});
+
+export function podcastTopicArtwork(topicId) {
+  const slug = TOPIC_ARTWORK[topicId];
+  return slug ? `media/topics/${slug}.webp` : null;
+}
+
+export function podcastShareUrl(topicId, baseHref) {
+  const base = new URL('./', baseHref);
+  const slug = TOPIC_ARTWORK[topicId];
+  return slug ? new URL(`share/${slug}/`, base).href : base.href;
+}
+
+export function requestedPodcastChapter(search = '') {
+  return new URLSearchParams(search).get('listen');
+}
