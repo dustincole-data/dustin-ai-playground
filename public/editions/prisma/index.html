@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=20260720-player" />
 </head>
 <body>
   <a class="skip-link" href="#bands">Skip to the briefs</a>
@@ -74,6 +74,44 @@
       <audio class="podcast-audio" id="dailyPodcastAudio" controls preload="metadata">
         Your browser does not support the daily briefing audio player.
       </audio>
+      <div class="podcast-player" id="podcastPlayer" hidden>
+        <div class="podcast-transport" role="group" aria-label="Playback controls">
+          <button class="podcast-skip" id="podcastBack" aria-label="Go back 10 seconds" type="button">
+            <svg aria-hidden="true" viewBox="0 0 32 32"><path d="M10.2 8.1H4.8v-5"/><path d="M5.2 8.2A12 12 0 1 1 4.5 22"/><text x="16" y="20.3">10</text></svg>
+          </button>
+          <button class="podcast-play" id="podcastPlay" aria-label="Play briefing" type="button">
+            <svg class="podcast-play-icon" aria-hidden="true" viewBox="0 0 32 32"><path d="m12 8 12 8-12 8Z"/></svg>
+            <svg class="podcast-pause-icon" aria-hidden="true" viewBox="0 0 32 32"><path d="M11 8h4v16h-4zM18 8h4v16h-4z"/></svg>
+          </button>
+          <button class="podcast-skip" id="podcastForward" aria-label="Go forward 10 seconds" type="button">
+            <svg aria-hidden="true" viewBox="0 0 32 32"><path d="M21.8 8.1h5.4v-5"/><path d="M26.8 8.2A12 12 0 1 0 27.5 22"/><text x="16" y="20.3">10</text></svg>
+          </button>
+        </div>
+        <div class="podcast-timeline-wrap">
+          <input class="podcast-timeline" id="podcastTimeline" aria-label="Briefing progress" type="range" min="0" max="100" value="0" step="0.1" />
+          <div class="podcast-time" aria-live="off">
+            <span id="podcastElapsed">0:00</span>
+            <span aria-hidden="true">/</span>
+            <span id="podcastDuration">0:00</span>
+          </div>
+        </div>
+        <div class="podcast-options">
+          <label class="podcast-speed-label" for="podcastSpeed">Speed</label>
+          <select class="podcast-speed" id="podcastSpeed" aria-label="Playback speed">
+            <option value="0.75">0.75×</option>
+            <option value="1" selected>1×</option>
+            <option value="1.25">1.25×</option>
+            <option value="1.5">1.5×</option>
+            <option value="2">2×</option>
+          </select>
+          <button class="podcast-mute" id="podcastMute" aria-label="Mute briefing" type="button">
+            <svg class="podcast-volume-icon" aria-hidden="true" viewBox="0 0 32 32"><path d="M6 13h6l6-5v16l-6-5H6zM22 12a6 6 0 0 1 0 8M24.5 8.5a10.5 10.5 0 0 1 0 15"/></svg>
+            <svg class="podcast-muted-icon" aria-hidden="true" viewBox="0 0 32 32"><path d="M6 13h6l6-5v16l-6-5H6zM22 13l6 6M28 13l-6 6"/></svg>
+          </button>
+          <input class="podcast-volume" id="podcastVolume" aria-label="Volume" type="range" min="0" max="1" value="1" step="0.05" />
+        </div>
+        <p class="sr-only" id="podcastStatus" aria-live="polite"></p>
+      </div>
     </div>
   </section>
 
@@ -96,6 +134,6 @@
 
   <script src="./vendor/gsap.min.js"></script>
   <script src="./vendor/ScrollTrigger.min.js"></script>
-  <script type="module" src="./app.js?v=20260718-podcast"></script>
+  <script type="module" src="./app.js?v=20260720-player"></script>
 </body>
 </html>
