@@ -10,6 +10,9 @@ import {
   formatPodcastDuration,
   podcastAssetPath,
   podcastProgress,
+  podcastShareUrl,
+  podcastTopicArtwork,
+  requestedPodcastChapter,
 } from '../public/editions/prisma/podcast.js';
 
 test('formats the Prisma audio duration for listeners', () => {
@@ -48,12 +51,43 @@ test('finds the active topic chapter at the current playback time', () => {
   assert.equal(activePodcastChapter(chapters, 500)?.id, 'energy');
 });
 
+test('maps podcast topics to their generated artwork', () => {
+  assert.equal(podcastTopicArtwork('ai'), 'media/topics/ai.webp');
+  assert.equal(podcastTopicArtwork('kentucky_healthcare'), 'media/topics/kentucky-healthcare.webp');
+  assert.equal(podcastTopicArtwork('unknown'), null);
+});
+
+test('builds shareable category URLs from the current Prisma edition', () => {
+  const url = podcastShareUrl('energy', 'https://example.com/dustin-ai-playground/editions/prisma/?listen=ai');
+  assert.equal(url, 'https://example.com/dustin-ai-playground/editions/prisma/share/energy/');
+});
+
+test('reads a requested category from a shared listening link', () => {
+  assert.equal(requestedPodcastChapter('?listen=louisville'), 'louisville');
+  assert.equal(requestedPodcastChapter('?other=value'), null);
+});
+
 test('ships accessible custom podcast navigation controls', async () => {
   const html = await readFile(new URL('../public/editions/prisma/index.html', import.meta.url), 'utf8');
   assert.match(html, /id="podcastPlay"[^>]*aria-label="Play briefing"/);
   assert.match(html, /id="podcastBack"[^>]*aria-label="Go back 10 seconds"/);
   assert.match(html, /id="podcastForward"[^>]*aria-label="Go forward 10 seconds"/);
   assert.match(html, /id="podcastTimeline"[^>]*aria-label="Briefing progress"/);
-  assert.match(html, /id="podcastChapter"[^>]*aria-label="Choose a briefing topic"/);
+  assert.match(html, /id="podcastChapterButtons"[^>]*aria-label="Play a briefing topic"/);
+  assert.match(html, /id="podcastArtwork"[^>]*alt=""/);
+  assert.match(html, /id="podcastShare"[^>]*aria-label="Share this topic"/);
+  assert.doesNotMatch(html, /id="podcastChapter"/);
   assert.match(html, /id="podcastSpeed"[^>]*aria-label="Playback speed"/);
+});
+
+test('provides a social preview page for every podcast category', async () => {
+  const topics = ['ai', 'energy', 'humana', 'kentucky_healthcare', 'analytics', 'louisville'];
+  const slugs = { kentucky_healthcare: 'kentucky-healthcare' };
+  for (const topic of topics) {
+    const slug = slugs[topic] || topic;
+    const html = await readFile(new URL(`../public/editions/prisma/share/${slug}/index.html`, import.meta.url), 'utf8');
+    assert.match(html, new RegExp(`property="og:image"[^>]+${slug}-share\\.jpg`));
+    assert.match(html, new RegExp(`\\?listen=${topic}`));
+    assert.match(html, /name="twitter:card" content="summary_large_image"/);
+  }
 });
