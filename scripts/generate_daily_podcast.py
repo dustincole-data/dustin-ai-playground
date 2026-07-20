@@ -55,13 +55,15 @@ def spoken_date(feed: dict) -> str:
     return datetime.now(LOCAL_TZ).date().isoformat()
 
 
-def build_spoken_script(feed: dict) -> str:
-    """Turn every current story into a single-host natural-language rundown."""
+def build_spoken_segments(feed: dict) -> list[dict]:
+    """Build the episode as chapter-aware segments without changing its spoken copy."""
     label = clean_spoken_text(feed.get("generatedLabel") or "today")
-    parts = [
-        f"Here is your complete morning briefing for {label}.",
-        "I will move through every story on the site, explain what happened, and keep the useful part close.",
-    ]
+    segments = [{
+        "text": "\n\n".join([
+            f"Here is your complete morning briefing for {label}.",
+            "I will move through every story on the site, explain what happened, and keep the useful part close.",
+        ])
+    }]
     story_number = 0
 
     for brief in feed.get("briefs") or []:
@@ -69,7 +71,7 @@ def build_spoken_script(feed: dict) -> str:
         if not articles:
             continue
         section_name = SECTION_NAMES.get(brief.get("id"), clean_spoken_text(brief.get("id", "News")) or "News")
-        parts.append(f"Now, {section_name}.")
+        parts = [f"Now, {section_name}."]
         for article in articles:
             story_number += 1
             title = clean_spoken_text(article.get("title", "This story"))
@@ -85,19 +87,36 @@ def build_spoken_script(feed: dict) -> str:
             if source:
                 item += f" This was reported by {source}."
             parts.append(item)
+        segments.append({
+            "chapterId": brief.get("id"),
+            "chapterTitle": section_name,
+            "text": "\n\n".join(parts),
+        })
 
     if story_number == 0:
-        return f"There are no qualifying stories in the morning briefing for {label}."
+        return [{"text": f"There are no qualifying stories in the morning briefing for {label}."}]
 
-    parts.append(
-        "That is the full briefing for today. The written page has the source links and the deeper article cards if you want to dig into anything."
-    )
-    return "\n\n".join(parts)
+    segments.append({
+        "text": "That is the full briefing for today. The written page has the source links and the deeper article cards if you want to dig into anything."
+    })
+    return segments
 
 
-def build_manifest(feed: dict, *, audio_url: str, transcript_url: str, duration_seconds: int) -> dict:
+def build_spoken_script(feed: dict) -> str:
+    """Turn every current story into a single-host natural-language rundown."""
+    return "\n\n".join(segment["text"] for segment in build_spoken_segments(feed))
+
+
+def build_manifest(
+    feed: dict,
+    *,
+    audio_url: str,
+    transcript_url: str,
+    duration_seconds: int,
+    chapters: list[dict] | None = None,
+) -> dict:
     article_count = sum(len(brief.get("articles") or []) for brief in feed.get("briefs") or [])
-    return {
+    manifest = {
         "date": spoken_date(feed),
         "generatedAt": feed.get("generatedAt"),
         "generatedLabel": feed.get("generatedLabel") or spoken_date(feed),
@@ -107,6 +126,9 @@ def build_manifest(feed: dict, *, audio_url: str, transcript_url: str, duration_
         "articleCount": article_count,
         "voice": VOICE,
     }
+    if chapters:
+        manifest["chapters"] = chapters
+    return manifest
 
 
 def split_for_synthesis(text: str, *, max_characters: int = 2_500) -> list[str]:
@@ -138,7 +160,23 @@ def split_for_synthesis(text: str, *, max_characters: int = 2_500) -> list[str]:
     return chunks
 
 
-async def synthesize(script: str, destination: Path) -> None:
+def plan_synthesis_chunks(segments: list[dict], *, max_characters: int = 2_500) -> list[dict]:
+    """Split segments for TTS while retaining the first chunk of every topic."""
+    plan: list[dict] = []
+    for segment in segments:
+        chunks = split_for_synthesis(segment.get("text", ""), max_characters=max_characters)
+        for index, chunk in enumerate(chunks):
+            plan.append({
+                "text": chunk,
+                "chapterId": segment.get("chapterId"),
+                "chapterTitle": segment.get("chapterTitle"),
+                "chapterStart": bool(segment.get("chapterId")) and index == 0,
+            })
+    return plan
+
+
+async def synthesize_segments(segments: list[dict], destination: Path) -> list[dict]:
+    """Synthesize chapter-aware chunks and return measured topic offsets."""
     try:
         import edge_tts
     except ImportError as exc:
@@ -146,18 +184,30 @@ async def synthesize(script: str, destination: Path) -> None:
             "edge-tts is not installed. Install it in the morning-brief TTS virtual environment before running this generator."
         ) from exc
 
-    chunks = split_for_synthesis(script)
-    if not chunks:
+    plan = plan_synthesis_chunks(segments)
+    if not plan:
         raise RuntimeError("The spoken briefing was empty.")
 
     destination.parent.mkdir(parents=True, exist_ok=True)
     temp_dir = Path(tempfile.mkdtemp(prefix="morning-brief-tts-"))
     try:
-        parts = [temp_dir / f"part-{index:03d}.mp3" for index in range(len(chunks))]
+        parts = [temp_dir / f"part-{index:03d}.mp3" for index in range(len(plan))]
         await asyncio.wait_for(
-            asyncio.gather(*(edge_tts.Communicate(chunk, voice=VOICE).save(str(part)) for chunk, part in zip(chunks, parts))),
+            asyncio.gather(*(edge_tts.Communicate(item["text"], voice=VOICE).save(str(part)) for item, part in zip(plan, parts))),
             timeout=150,
         )
+
+        chapters: list[dict] = []
+        elapsed = 0.0
+        for item, part in zip(plan, parts):
+            if item["chapterStart"]:
+                chapters.append({
+                    "id": item["chapterId"],
+                    "title": item["chapterTitle"],
+                    "startSeconds": round(elapsed, 1),
+                })
+            elapsed += audio_duration(part)
+
         concat_list = temp_dir / "concat.txt"
         concat_list.write_text("".join(f"file '{part}'\n" for part in parts), encoding="utf-8")
         subprocess.run(
@@ -166,26 +216,37 @@ async def synthesize(script: str, destination: Path) -> None:
             text=True,
             capture_output=True,
         )
+        return chapters
     finally:
         shutil.rmtree(temp_dir, ignore_errors=True)
 
 
-def audio_duration_seconds(audio_path: Path) -> int:
+async def synthesize(script: str, destination: Path) -> None:
+    """Backward-compatible synthesis entry point for callers without chapters."""
+    await synthesize_segments([{"text": script}], destination)
+
+
+def audio_duration(audio_path: Path) -> float:
     result = subprocess.run(
         ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(audio_path)],
         check=True,
         text=True,
         capture_output=True,
     )
-    return max(1, round(float(result.stdout.strip())))
+    return max(0.0, float(result.stdout.strip()))
+
+
+def audio_duration_seconds(audio_path: Path) -> int:
+    return max(1, round(audio_duration(audio_path)))
 
 
 def generate(feed: dict, *, audio_dir: Path, data_dir: Path) -> dict:
     date = spoken_date(feed)
-    script = build_spoken_script(feed)
+    segments = build_spoken_segments(feed)
+    script = "\n\n".join(segment["text"] for segment in segments)
     audio_path = audio_dir / f"daily-brief-{date}.mp3"
     transcript_path = data_dir / f"daily-brief-{date}.txt"
-    asyncio.run(synthesize(script, audio_path))
+    chapters = asyncio.run(synthesize_segments(segments, audio_path))
     transcript_path.parent.mkdir(parents=True, exist_ok=True)
     transcript_path.write_text(script + "\n", encoding="utf-8")
     manifest = build_manifest(
@@ -193,6 +254,7 @@ def generate(feed: dict, *, audio_dir: Path, data_dir: Path) -> dict:
         audio_url=f"audio/{audio_path.name}",
         transcript_url=f"data/{transcript_path.name}",
         duration_seconds=audio_duration_seconds(audio_path),
+        chapters=chapters,
     )
     (data_dir / "daily-podcast.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     return manifest

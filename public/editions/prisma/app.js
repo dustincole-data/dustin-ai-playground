@@ -5,6 +5,7 @@
 
 import * as THREE from './vendor/three.module.min.js';
 import {
+  activePodcastChapter,
   clampPodcastSeek,
   formatPlayerTime,
   formatPodcastDuration,
@@ -78,6 +79,8 @@ async function loadPodcast() {
 
 function initPodcastPlayer(audio, podcast) {
   const player = document.getElementById('podcastPlayer');
+  const chapterWrap = document.getElementById('podcastChapters');
+  const chapterSelect = document.getElementById('podcastChapter');
   const play = document.getElementById('podcastPlay');
   const back = document.getElementById('podcastBack');
   const forward = document.getElementById('podcastForward');
@@ -88,8 +91,11 @@ function initPodcastPlayer(audio, podcast) {
   const mute = document.getElementById('podcastMute');
   const volume = document.getElementById('podcastVolume');
   const status = document.getElementById('podcastStatus');
-  if (![player, play, back, forward, timeline, elapsed, duration, speed, mute, volume, status].every(Boolean)) return;
+  if (![player, chapterWrap, chapterSelect, play, back, forward, timeline, elapsed, duration, speed, mute, volume, status].every(Boolean)) return;
 
+  const chapters = [...(podcast.chapters || [])]
+    .filter((chapter) => chapter?.id && chapter?.title && Number.isFinite(Number(chapter.startSeconds)))
+    .sort((a, b) => Number(a.startSeconds) - Number(b.startSeconds));
   const positionKey = `prisma-podcast-position:${audio.currentSrc || audio.src}`;
   const speedKey = 'prisma-podcast-speed';
   let lastSavedSecond = -1;
@@ -106,6 +112,22 @@ function initPodcastPlayer(audio, podcast) {
   const playableDuration = () => Number.isFinite(audio.duration) ? audio.duration : Number(podcast.durationSeconds) || 0;
   const announce = (message) => { status.textContent = message; };
 
+  if (chapters.length) {
+    chapters.forEach((chapter) => {
+      const option = document.createElement('option');
+      option.value = chapter.id;
+      option.textContent = `${chapter.title} · ${formatPlayerTime(chapter.startSeconds)}`;
+      chapterSelect.append(option);
+    });
+    chapterWrap.hidden = false;
+  }
+
+  function syncChapter() {
+    if (!chapters.length) return;
+    const active = activePodcastChapter(chapters, audio.currentTime);
+    chapterSelect.value = active?.id || '';
+  }
+
   function syncTimeline() {
     const end = playableDuration();
     const progress = podcastProgress(audio.currentTime, end);
@@ -114,6 +136,7 @@ function initPodcastPlayer(audio, podcast) {
     elapsed.textContent = formatPlayerTime(audio.currentTime);
     duration.textContent = formatPlayerTime(end);
     timeline.setAttribute('aria-valuetext', `${formatPlayerTime(audio.currentTime)} of ${formatPlayerTime(end)}`);
+    syncChapter();
   }
 
   function syncPlayState() {
@@ -148,6 +171,13 @@ function initPodcastPlayer(audio, podcast) {
     }
   }
 
+  chapterSelect.addEventListener('change', () => {
+    const chapter = chapters.find((item) => item.id === chapterSelect.value);
+    if (!chapter) return;
+    audio.currentTime = clampPodcastSeek(0, Number(chapter.startSeconds), playableDuration());
+    syncTimeline();
+    announce(`Jumped to ${chapter.title}`);
+  });
   play.addEventListener('click', togglePlayback);
   back.addEventListener('click', () => seekBy(-10));
   forward.addEventListener('click', () => seekBy(10));
