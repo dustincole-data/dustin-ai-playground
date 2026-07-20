@@ -47,6 +47,20 @@ const TOPIC_ARTWORK = Object.freeze({
   louisville: 'louisville',
 });
 
+const CHAPTER_LABELS = Object.freeze({
+  all: 'All',
+  ai: 'AI',
+  energy: 'Energy',
+  humana: 'Humana',
+  kentucky_healthcare: 'Ky. Health',
+  analytics: 'Analytics',
+  louisville: 'Louisville',
+});
+
+export function podcastChapterLabel(topicId, fallback = '') {
+  return CHAPTER_LABELS[topicId] || fallback;
+}
+
 export function podcastTopicArtwork(topicId) {
   const slug = TOPIC_ARTWORK[topicId];
   return slug ? `media/topics/${slug}.webp` : null;
