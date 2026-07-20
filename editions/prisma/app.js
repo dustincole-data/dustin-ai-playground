@@ -4,7 +4,13 @@
    wavelengths — beam widths follow this morning's story counts. */
 
 import * as THREE from './vendor/three.module.min.js';
-import { formatPodcastDuration, podcastAssetPath } from './podcast.js';
+import {
+  clampPodcastSeek,
+  formatPlayerTime,
+  formatPodcastDuration,
+  podcastAssetPath,
+  podcastProgress,
+} from './podcast.js';
 
 const SECTIONS = [
   { id: 'ai', name: 'AI', label: 'AI', headline: 'AI', hue: 'ai',
@@ -70,6 +76,158 @@ async function loadPodcast() {
   return null;
 }
 
+function initPodcastPlayer(audio, podcast) {
+  const player = document.getElementById('podcastPlayer');
+  const play = document.getElementById('podcastPlay');
+  const back = document.getElementById('podcastBack');
+  const forward = document.getElementById('podcastForward');
+  const timeline = document.getElementById('podcastTimeline');
+  const elapsed = document.getElementById('podcastElapsed');
+  const duration = document.getElementById('podcastDuration');
+  const speed = document.getElementById('podcastSpeed');
+  const mute = document.getElementById('podcastMute');
+  const volume = document.getElementById('podcastVolume');
+  const status = document.getElementById('podcastStatus');
+  if (![player, play, back, forward, timeline, elapsed, duration, speed, mute, volume, status].every(Boolean)) return;
+
+  const positionKey = `prisma-podcast-position:${audio.currentSrc || audio.src}`;
+  const speedKey = 'prisma-podcast-speed';
+  let lastSavedSecond = -1;
+
+  const readStorage = (key) => {
+    try { return localStorage.getItem(key); } catch { return null; }
+  };
+  const writeStorage = (key, value) => {
+    try { localStorage.setItem(key, value); } catch { /* storage is optional */ }
+  };
+  const removeStorage = (key) => {
+    try { localStorage.removeItem(key); } catch { /* storage is optional */ }
+  };
+  const playableDuration = () => Number.isFinite(audio.duration) ? audio.duration : Number(podcast.durationSeconds) || 0;
+  const announce = (message) => { status.textContent = message; };
+
+  function syncTimeline() {
+    const end = playableDuration();
+    const progress = podcastProgress(audio.currentTime, end);
+    timeline.value = String(progress);
+    timeline.style.setProperty('--progress', `${progress}%`);
+    elapsed.textContent = formatPlayerTime(audio.currentTime);
+    duration.textContent = formatPlayerTime(end);
+    timeline.setAttribute('aria-valuetext', `${formatPlayerTime(audio.currentTime)} of ${formatPlayerTime(end)}`);
+  }
+
+  function syncPlayState() {
+    const isPlaying = !audio.paused && !audio.ended;
+    player.classList.toggle('is-playing', isPlaying);
+    play.setAttribute('aria-label', isPlaying ? 'Pause briefing' : 'Play briefing');
+    play.setAttribute('aria-pressed', String(isPlaying));
+    try {
+      if ('mediaSession' in navigator) navigator.mediaSession.playbackState = isPlaying ? 'playing' : 'paused';
+    } catch { /* optional browser integration */ }
+  }
+
+  function syncVolumeState() {
+    const isMuted = audio.muted || audio.volume === 0;
+    player.classList.toggle('is-muted', isMuted);
+    mute.setAttribute('aria-label', isMuted ? 'Unmute briefing' : 'Mute briefing');
+    mute.setAttribute('aria-pressed', String(isMuted));
+    volume.value = String(audio.muted ? 0 : audio.volume);
+  }
+
+  function seekBy(seconds) {
+    audio.currentTime = clampPodcastSeek(audio.currentTime, seconds, playableDuration());
+    syncTimeline();
+    announce(seconds < 0 ? 'Went back 10 seconds' : 'Went forward 10 seconds');
+  }
+
+  async function togglePlayback() {
+    if (audio.paused || audio.ended) {
+      try { await audio.play(); } catch { announce('Playback could not start'); }
+    } else {
+      audio.pause();
+    }
+  }
+
+  play.addEventListener('click', togglePlayback);
+  back.addEventListener('click', () => seekBy(-10));
+  forward.addEventListener('click', () => seekBy(10));
+  timeline.addEventListener('input', () => {
+    audio.currentTime = (Number(timeline.value) / 100) * playableDuration();
+    syncTimeline();
+  });
+  speed.addEventListener('change', () => {
+    audio.playbackRate = Number(speed.value);
+    writeStorage(speedKey, speed.value);
+    announce(`Playback speed ${speed.options[speed.selectedIndex].text}`);
+  });
+  mute.addEventListener('click', () => { audio.muted = !audio.muted; syncVolumeState(); });
+  volume.addEventListener('input', () => {
+    audio.volume = Number(volume.value);
+    audio.muted = audio.volume === 0;
+    syncVolumeState();
+  });
+  audio.addEventListener('play', syncPlayState);
+  audio.addEventListener('pause', syncPlayState);
+  audio.addEventListener('volumechange', syncVolumeState);
+  audio.addEventListener('loadedmetadata', () => {
+    const savedPosition = Number(readStorage(positionKey));
+    if (savedPosition > 0 && savedPosition < audio.duration - 15) audio.currentTime = savedPosition;
+    syncTimeline();
+  });
+  audio.addEventListener('timeupdate', () => {
+    syncTimeline();
+    const currentSecond = Math.floor(audio.currentTime);
+    if (currentSecond !== lastSavedSecond && currentSecond % 5 === 0) {
+      lastSavedSecond = currentSecond;
+      writeStorage(positionKey, String(audio.currentTime));
+    }
+    if ('mediaSession' in navigator && Number.isFinite(audio.duration) && audio.duration > 0) {
+      try { navigator.mediaSession.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate, position: Math.min(audio.currentTime, audio.duration) }); } catch { /* optional browser integration */ }
+    }
+  });
+  audio.addEventListener('ended', () => { removeStorage(positionKey); syncPlayState(); syncTimeline(); });
+  addEventListener('pagehide', () => {
+    if (audio.currentTime > 0 && !audio.ended) writeStorage(positionKey, String(audio.currentTime));
+  });
+
+  const savedSpeed = Number(readStorage(speedKey));
+  if ([0.75, 1, 1.25, 1.5, 2].includes(savedSpeed)) {
+    speed.value = String(savedSpeed);
+    audio.playbackRate = savedSpeed;
+  }
+
+  if ('mediaSession' in navigator && 'MediaMetadata' in window) {
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: 'Daily spoken edition',
+        artist: 'Prisma · Dustin Cole’s personal newsroom',
+        album: `${podcast.articleCount || 0} stories`,
+        artwork: [
+          { src: './brand/icon-192.png', sizes: '192x192', type: 'image/png' },
+          { src: './brand/icon-512.png', sizes: '512x512', type: 'image/png' },
+        ],
+      });
+      const handlers = {
+        play: () => audio.play(),
+        pause: () => audio.pause(),
+        seekbackward: () => seekBy(-10),
+        seekforward: () => seekBy(10),
+        seekto: (details) => { if (Number.isFinite(details.seekTime)) audio.currentTime = details.seekTime; },
+      };
+      Object.entries(handlers).forEach(([action, handler]) => {
+        try { navigator.mediaSession.setActionHandler(action, handler); } catch { /* unsupported action */ }
+      });
+    } catch { /* optional browser integration */ }
+  }
+
+  audio.removeAttribute('controls');
+  audio.hidden = true;
+  player.hidden = false;
+  syncTimeline();
+  syncPlayState();
+  syncVolumeState();
+}
+
 function renderPodcast(podcast) {
   if (!podcast?.audioUrl) return;
   const section = document.getElementById('dailyPodcast');
@@ -84,6 +242,7 @@ function renderPodcast(podcast) {
   meta.textContent = `${podcast.articleCount || 0} stories · ${formatPodcastDuration(podcast.durationSeconds)} · a fresh spoken rundown, not a page readout`;
   if (transcriptPath) transcript.href = transcriptPath;
   else transcript.hidden = true;
+  initPodcastPlayer(audio, podcast);
   section.hidden = false;
 }
 
