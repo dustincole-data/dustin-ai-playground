@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import hashlib
 import json
 import re
 import shutil
@@ -38,12 +39,12 @@ SECTION_NAMES = {
     "louisville": "Louisville",
 }
 SECTION_TRANSITIONS = {
-    "ai": "{listener}, let's start with {section}.",
-    "energy": "All right, {listener}, let's move to {section}.",
-    "humana": "Next up, {listener}: {section}.",
-    "kentucky_healthcare": "Now for {section}, {listener}.",
-    "analytics": "A quick turn to {section}, {listener}.",
-    "louisville": "And finally, {listener}, here's what is happening around {section}.",
+    "ai": "Let's start with {section}.",
+    "energy": "All right, let's move to {section}.",
+    "humana": "Next up: {section}.",
+    "kentucky_healthcare": "Now for {section}.",
+    "analytics": "A quick turn to {section}.",
+    "louisville": "And finally, here's what is happening around {section}.",
 }
 STORY_LEADS = ("First up", "Also worth knowing", "One more thing here", "Next")
 TAKEAWAY_LEADS = (
@@ -83,7 +84,7 @@ def trim_explanatory_lead(value: str) -> str:
 
 
 def category_transition(section_id: str, section_name: str, listener_name: str) -> str:
-    template = SECTION_TRANSITIONS.get(section_id, "Next up, {listener}: {section}.")
+    template = SECTION_TRANSITIONS.get(section_id, "Next up: {section}.")
     return template.format(listener=listener_name, section=section_name)
 
 
@@ -216,12 +217,14 @@ def plan_synthesis_chunks(segments: list[dict], *, max_characters: int = 2_500) 
     return plan
 
 
-def is_complete_audio_part(path: Path) -> bool:
-    """Return true when Edge wrote a playable chunk before its socket stalled."""
+def is_complete_audio_part(path: Path, expected_text: str = "") -> bool:
+    """Return true when Edge wrote a plausibly complete playable chunk."""
     if not path.exists() or path.stat().st_size <= 0:
         return False
     try:
-        return audio_duration(path) > 0
+        duration = audio_duration(path)
+        minimum_duration = max(0.5, len(expected_text) / 26)
+        return duration >= minimum_duration
     except (OSError, ValueError, subprocess.SubprocessError):
         return False
 
@@ -233,7 +236,7 @@ async def save_tts_parts(
     *,
     max_concurrency: int = 1,
     max_attempts: int = 3,
-    request_timeout: float = 45,
+    request_timeout: float = 150,
     inter_request_delay: float = 2.5,
     completed_part=None,
 ) -> None:
@@ -258,7 +261,7 @@ async def save_tts_parts(
                             await asyncio.sleep(inter_request_delay)
                 return
             except Exception:
-                if completed_part(part):
+                if completed_part(part, item["text"]):
                     return
                 if attempt >= max_attempts:
                     raise
@@ -329,6 +332,13 @@ def audio_duration_seconds(audio_path: Path) -> int:
     return max(1, round(audio_duration(audio_path)))
 
 
+def versioned_audio_url(audio_path: Path) -> str:
+    """Cache-bust same-day audio revisions using the generated file content."""
+    with audio_path.open("rb") as audio_file:
+        revision = hashlib.file_digest(audio_file, "sha256").hexdigest()[:12]
+    return f"audio/{audio_path.name}?v={revision}"
+
+
 def generate(
     feed: dict,
     *,
@@ -346,7 +356,7 @@ def generate(
     transcript_path.write_text(script + "\n", encoding="utf-8")
     manifest = build_manifest(
         feed,
-        audio_url=f"audio/{audio_path.name}",
+        audio_url=versioned_audio_url(audio_path),
         transcript_url=f"data/{transcript_path.name}",
         duration_seconds=audio_duration_seconds(audio_path),
         chapters=chapters,

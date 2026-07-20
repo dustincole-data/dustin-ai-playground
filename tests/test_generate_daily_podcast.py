@@ -1,5 +1,6 @@
 import asyncio
 import importlib.util
+import inspect
 import sys
 import unittest
 from pathlib import Path
@@ -70,12 +71,14 @@ class DailyPodcastFeatureTests(unittest.TestCase):
         self.assertTrue(script.startswith("Dustin, here's everything you need to know this morning."))
         self.assertIn("I'll walk you through what happened and why it matters", script)
 
-    def test_spoken_category_transitions_use_dustins_name_without_rigid_page_copy(self):
+    def test_spoken_category_transitions_keep_dustins_name_only_in_the_opening(self):
         segments = self.module.build_spoken_segments(self.feed)
         topic_segments = [segment for segment in segments if segment.get("chapterId")]
         spoken_topics = "\n".join(segment["text"] for segment in topic_segments)
 
-        self.assertTrue(all("Dustin" in segment["text"].split("\n\n", 1)[0] for segment in topic_segments))
+        self.assertTrue(segments[0]["text"].startswith("Dustin, here's everything you need to know this morning."))
+        self.assertTrue(all("Dustin" not in segment["text"].split("\n\n", 1)[0] for segment in topic_segments))
+        self.assertNotIn("Dustin", self.module.category_transition("new_topic", "New Topic", "Dustin"))
         self.assertNotIn("Now, AI.", topic_segments[0]["text"])
         self.assertNotIn("Here is the rundown", spoken_topics)
         self.assertNotIn("The practical takeaway", spoken_topics)
@@ -110,7 +113,7 @@ class DailyPodcastFeatureTests(unittest.TestCase):
         topic_segments = [segment for segment in segments if segment.get("chapterId")]
         self.assertEqual([segment["chapterId"] for segment in topic_segments], ["ai", "energy"])
         self.assertEqual([segment["chapterTitle"] for segment in topic_segments], ["AI", "Energy and Utilities"])
-        self.assertTrue(topic_segments[0]["text"].startswith("Dustin, let's start with AI."))
+        self.assertTrue(topic_segments[0]["text"].startswith("Let's start with AI."))
 
     def test_plan_synthesis_chunks_preserves_topic_boundaries(self):
         segments = self.module.build_spoken_segments(self.feed)
@@ -123,6 +126,10 @@ class DailyPodcastFeatureTests(unittest.TestCase):
         self.assertTrue(ai_chunks[0]["chapterStart"])
         self.assertFalse(any(chunk["chapterStart"] for chunk in ai_chunks[1:]))
         self.assertTrue(energy_chunks[0]["chapterStart"])
+
+    def test_synthesis_default_timeout_allows_long_chunks_to_finish(self):
+        timeout = inspect.signature(self.module.save_tts_parts).parameters["request_timeout"].default
+        self.assertGreaterEqual(timeout, 120)
 
     def test_synthesis_serializes_edge_requests_to_avoid_provider_stalls(self):
         active = 0
@@ -172,6 +179,21 @@ class DailyPodcastFeatureTests(unittest.TestCase):
         self.assertGreaterEqual(starts[1] - starts[0], 0.009)
         self.assertGreaterEqual(starts[2] - starts[1], 0.009)
 
+    def test_complete_audio_part_rejects_a_playable_but_truncated_chunk(self):
+        part = Path("/tmp/truncated-edge-part.mp3")
+        part.write_bytes(b"partial mp3")
+        original_audio_duration = self.module.audio_duration
+        try:
+            setattr(self.module, "audio_duration", lambda path: 10)
+            self.assertFalse(self.module.is_complete_audio_part(part, "x" * 1_000))
+            setattr(self.module, "audio_duration", lambda path: 41)
+            self.assertTrue(self.module.is_complete_audio_part(part, "x" * 1_040))
+            setattr(self.module, "audio_duration", lambda path: 50)
+            self.assertTrue(self.module.is_complete_audio_part(part, "x" * 1_000))
+        finally:
+            setattr(self.module, "audio_duration", original_audio_duration)
+            part.unlink(missing_ok=True)
+
     def test_synthesis_accepts_a_complete_audio_file_when_edge_hangs_after_writing(self):
         attempts = 0
         destination = Path("/tmp/complete-after-timeout.mp3")
@@ -194,7 +216,7 @@ class DailyPodcastFeatureTests(unittest.TestCase):
             request_timeout=0.01,
             max_attempts=3,
             inter_request_delay=0,
-            completed_part=lambda path: path.stat().st_size > 0,
+            completed_part=lambda path, text: path.stat().st_size > 0,
         ))
 
         self.assertEqual(attempts, 1)
@@ -223,6 +245,17 @@ class DailyPodcastFeatureTests(unittest.TestCase):
         ))
 
         self.assertEqual(attempts, 2)
+
+    def test_versioned_audio_url_changes_when_audio_content_changes(self):
+        audio = Path("/tmp/daily-brief-cache-test.mp3")
+        audio.write_bytes(b"first audio")
+        first = self.module.versioned_audio_url(audio)
+        audio.write_bytes(b"second audio")
+        second = self.module.versioned_audio_url(audio)
+        audio.unlink(missing_ok=True)
+
+        self.assertRegex(first, r"^audio/daily-brief-cache-test\.mp3\?v=[0-9a-f]{12}$")
+        self.assertNotEqual(first, second)
 
     def test_build_manifest_points_to_current_audio_and_transcript(self):
         manifest = self.module.build_manifest(
