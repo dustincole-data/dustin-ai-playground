@@ -30,3 +30,10 @@ export function podcastProgress(currentTime, duration) {
   if (end <= 0) return 0;
   return Math.min(100, Math.max(0, Math.round(((Number(currentTime) || 0) / end) * 100)));
 }
+
+export function activePodcastChapter(chapters, currentTime) {
+  const time = Math.max(0, Number(currentTime) || 0);
+  return [...(chapters || [])]
+    .filter((chapter) => Number(chapter?.startSeconds) <= time)
+    .sort((a, b) => Number(b.startSeconds) - Number(a.startSeconds))[0] || null;
+}
