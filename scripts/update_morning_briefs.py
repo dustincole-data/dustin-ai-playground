@@ -306,7 +306,33 @@ def decode_google_news_url(source_url: str) -> str:
     return url if url.startswith("http") else source_url
 
 
+def google_news_decode_params(article_id: str) -> tuple[str, str] | None:
+    """Fetch the per-article signature + timestamp Google now requires to decode
+    an rss/articles/CBMi… link. Returns None if the page can't be read or the
+    tokens are absent."""
+    url = "https://news.google.com/rss/articles/" + article_id
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            page = resp.read().decode("utf-8", "ignore")
+    except Exception:
+        return None
+    signature = re.search(r'data-n-a-sg="([^"]+)"', page)
+    timestamp = re.search(r'data-n-a-ts="([^"]+)"', page)
+    if not (signature and timestamp):
+        return None
+    return signature.group(1), timestamp.group(1)
+
+
 def resolve_google_news_url(source_url: str) -> str:
+    """Resolve a Google News RSS link to its real publisher URL.
+
+    Google migrated rss/articles links to a CBMi… protobuf that the old base64
+    trick and a static batchexecute signature can no longer decode. The current
+    path reads the article page for its per-article signature + timestamp, then
+    asks batchexecute to return the real URL. Falls back to the original link on
+    any failure so one bad decode never breaks the scan.
+    """
     decoded = decode_google_news_url(source_url)
     if decoded != source_url:
         return decoded
@@ -315,18 +341,24 @@ def resolve_google_news_url(source_url: str) -> str:
     path_parts = [part for part in parsed.path.split("/") if part]
     if parsed.netloc != "news.google.com" or "articles" not in path_parts:
         return source_url
+    article_id = path_parts[-1]
 
-    encoded = path_parts[-1]
-    payload = (
-        '[[["Fbv4je","[\\"garturlreq\\",[[\\"en-US\\",\\"US\\",[\\"FINANCE_TOP_INDICES\\",\\"WEB_TEST_1_0_0\\"],'
-        'null,null,1,1,\\"US:en\\",null,180,null,null,null,null,null,0,null,null,[1608992183,723341000]],'
-        '\\"en-US\\",\\"US\\",1,[2,3,4,8],1,0,\\"655000234\\",0,0,null,0],\\"'
-        + encoded
-        + '\\"]",null,"generic"]]]'
-    )
+    params = google_news_decode_params(article_id)
+    if not params:
+        return source_url
+    signature, timestamp = params
+
+    inner = json.dumps([
+        "garturlreq",
+        [["X", "X", ["X", "X"], None, None, 1, 1, "US:en", None, 1,
+          None, None, None, None, None, 0, 1],
+         "X", "X", 1, [1, 1, 1], 1, 1, None, 0, 0, None, 0],
+        article_id, int(timestamp), signature,
+    ])
+    f_req = json.dumps([[["Fbv4je", inner, None, "generic"]]])
     req = urllib.request.Request(
         "https://news.google.com/_/DotsSplashUi/data/batchexecute?rpcids=Fbv4je",
-        data=("f.req=" + urllib.parse.quote(payload)).encode("utf-8"),
+        data=urllib.parse.urlencode({"f.req": f_req}).encode("utf-8"),
         headers={
             "User-Agent": USER_AGENT,
             "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
@@ -335,16 +367,19 @@ def resolve_google_news_url(source_url: str) -> str:
         method="POST",
     )
     try:
-        body = urllib.request.urlopen(req, timeout=15).read().decode("utf-8", "ignore")
+        body = urllib.request.urlopen(req, timeout=20).read().decode("utf-8", "ignore")
     except Exception:
         return source_url
-    marker = '[\\"garturlres\\",\\"'
-    if marker not in body:
-        return source_url
-    tail = body.split(marker, 1)[1]
-    url = tail.split('\\",', 1)[0]
-    url = bytes(url, "utf-8").decode("unicode_escape")
-    return url if url.startswith("http") else source_url
+    for line in body.splitlines():
+        if "garturlres" not in line:
+            continue
+        try:
+            resolved = json.loads(json.loads(line)[0][2])[1]
+        except Exception:
+            continue
+        if isinstance(resolved, str) and resolved.startswith("http"):
+            return resolved
+    return source_url
 
 
 def source_allowed(brief_id: str, item: dict) -> bool:
