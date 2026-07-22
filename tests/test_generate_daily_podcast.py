@@ -83,14 +83,57 @@ class DailyPodcastFeatureTests(unittest.TestCase):
         self.assertNotIn("Here is the rundown", spoken_topics)
         self.assertNotIn("The practical takeaway", spoken_topics)
 
-    def test_spoken_story_uses_grounded_explanatory_context(self):
+    def test_spoken_story_omits_reading_advice_boilerplate(self):
         script = self.module.build_spoken_script(self.feed)
 
-        self.assertIn(
+        # The "keep in mind about each article" learning-page advice is web-only;
+        # it must never be narrated.
+        self.assertNotIn("A little context here", script)
+        self.assertNotIn("When reading the source", script)
+        self.assertNotIn(
             "Approval gates require a person to authorize sensitive actions before the agent continues.",
             script,
         )
+        # A terse, factual summary still keeps its story-specific why-it-matters.
         self.assertIn("That turns a demo into something an operator can review and trust.", script)
+
+    def test_spoken_script_drops_generic_why_repeated_across_stories(self):
+        generic = "This matters because Humana and health-insurance stories can move Medicare Advantage and claims operations."
+        feed = {
+            "generatedLabel": "Jul 18",
+            "briefs": [{
+                "id": "humana",
+                "articles": [
+                    {"title": "Heartland trims its Humana stake", "summary": "An investment firm sold a few thousand shares.", "whyItMatters": generic, "sourceLabel": "MarketBeat"},
+                    {"title": "BofA lifts Humana target", "summary": "The bank raised its price target.", "whyItMatters": generic, "sourceLabel": "Investing.com"},
+                ],
+            }],
+        }
+        script = self.module.build_spoken_script(feed)
+
+        self.assertNotIn("Medicare Advantage and claims operations", script)
+
+    def test_spoken_script_omits_why_when_summary_already_self_explains(self):
+        feed = {
+            "generatedLabel": "Jul 18",
+            "briefs": [{
+                "id": "energy",
+                "articles": [{
+                    "title": "Utility files a rate case",
+                    "summary": (
+                        "The utility asked regulators to approve higher electric rates to recover grid-upgrade costs "
+                        "over the next three years, and consumer advocates plan to challenge the size of the request. "
+                        "For customers, the useful read is how much monthly bills could rise if it is approved."
+                    ),
+                    "whyItMatters": "This matters because rate cases decide who pays for infrastructure.",
+                    "sourceLabel": "Utility Dive",
+                }],
+            }],
+        }
+        script = self.module.build_spoken_script(feed)
+
+        self.assertNotIn("This matters because rate cases", script)
+        self.assertNotIn("Who pays for infrastructure", script)
 
     def test_listener_name_can_be_changed_without_rewriting_the_episode(self):
         script = self.module.build_spoken_script(self.feed, listener_name="Alex")

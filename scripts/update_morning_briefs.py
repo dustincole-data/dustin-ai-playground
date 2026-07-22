@@ -380,6 +380,35 @@ def truncate(value: str, limit: int = 150) -> str:
     return value[: limit - 1].rstrip(" ,;:-") + "…"
 
 
+# Descriptions that signal a bot-wall, paywall, consent gate, or error page
+# rather than real article text. When the only text a page yields matches one of
+# these, the fetch is treated as blocked and nothing is summarized from it.
+BLOCKED_DESCRIPTION_MARKERS = (
+    "enable javascript",
+    "javascript is disabled",
+    "please enable cookies",
+    "are you a robot",
+    "verify you are human",
+    "prove you are human",
+    "unusual traffic",
+    "access denied",
+    "access to this page has been denied",
+    "403 forbidden",
+    "subscribe to read",
+    "subscribe to continue",
+    "sign in to read",
+    "sign in to continue",
+    "create a free account",
+    "this content is not available",
+    "checking your browser",
+)
+
+
+def looks_blocked(description: str) -> bool:
+    text = description.lower()
+    return any(marker in text for marker in BLOCKED_DESCRIPTION_MARKERS)
+
+
 def extract_article_description(page_html: str) -> str:
     patterns = [
         r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']+)["\']',
@@ -391,7 +420,7 @@ def extract_article_description(page_html: str) -> str:
         match = re.search(pattern, page_html, flags=re.IGNORECASE | re.DOTALL)
         if match:
             description = clean_text(match.group(1))
-            if len(description.split()) >= 10:
+            if len(description.split()) >= 10 and not looks_blocked(description):
                 return description
     return ""
 
@@ -666,6 +695,29 @@ def summary_is_duplicate_or_thin(title: str, summary: str) -> bool:
     if summary_norm == title_norm or summary_norm.startswith(title_norm[:80]):
         return True
     return len(summary.split()) < 14
+
+
+def content_is_headline_only(title: str, content: str) -> bool:
+    """True when the only text we have is the headline (or near-empty).
+
+    Distinct from summary_is_duplicate_or_thin: this gates whether a story has ANY
+    real body text worth summarizing, so it drops the softer word-count floor and
+    only rejects empty or headline-echo content.
+    """
+    if not content:
+        return True
+    title_norm = re.sub(r"\W+", " ", title.lower()).strip()
+    content_norm = re.sub(r"\W+", " ", content.lower()).strip()
+    if not content_norm:
+        return True
+    if content_norm == title_norm or content_norm.startswith(title_norm[:80]):
+        return True
+    return len(content.split()) < 6
+
+
+def has_summarizable_content(item: dict) -> bool:
+    """Only summarize a story when real article text was fetched for it."""
+    return not content_is_headline_only(item.get("title", ""), clean_text(item.get("summary", "")))
 
 
 def sentence_case_fragment(value: str) -> str:
@@ -963,7 +1015,7 @@ LLM_SYSTEM_PROMPT = """You write morning-brief cards for a personal news digest.
 
 For the article provided, return strict JSON with exactly these keys:
 
-"summary": 3-5 sentences, 60-110 words, plain English. State concretely what happened or what is being reported (names, numbers, decisions), then what it means for this section's area when that adds real understanding. Never start with "The article" or "This article". No hype, no filler.
+"summary": 2-5 sentences, plain English, up to ~110 words but only as long as the source supports. Summarize ONLY what the provided title and description actually state (names, numbers, decisions), then what it means for this section's area when that adds real understanding. If the description is brief, keep the summary brief — never pad, speculate, invent specifics, or write that details are missing/unavailable. Never start with "The article" or "This article". No hype, no filler.
 
 "why_it_matters": one sentence beginning "This matters because", stating the practical impact for this area. Make it a distinct point, not a repeat of a summary sentence.
 
@@ -1011,7 +1063,7 @@ def llm_enrich(section_name: str, item: dict, source_label: str) -> dict | None:
             content = data["choices"][0]["message"]["content"]
             parsed = json.loads(content)
             summary = clean_text(parsed.get("summary", ""))
-            if len(summary.split()) < 25:
+            if len(summary.split()) < 12:
                 raise ValueError("summary too short")
             glossary = []
             for entry in parsed.get("glossary", [])[:4]:
@@ -1115,16 +1167,27 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
 
     articles.sort(key=lambda x: (x.get("primaryTopicRank", 1), x.get("score", 0), x.get("publishedAt", "")), reverse=True)
     output = []
-    for i, item in enumerate(articles[:MAX_ITEMS_PER_BRIEF], start=1):
+    skipped = 0
+    # Walk the full ranked list, not just the top slice, so skipping a story with
+    # no fetchable content backfills from the next-best candidate.
+    for item in articles:
+        if len(output) >= MAX_ITEMS_PER_BRIEF:
+            break
         source_label = item["source"] if item["source"] != "Source" else "Open source"
         source_url = resolve_google_news_url(item["url"])
         page_description = fetch_article_description(source_url)
         summary_item = item
         if page_description and len(page_description.split()) > len(clean_text(item.get("summary", "")).split()):
             summary_item = {**item, "summary": page_description}
+        # Never summarize a story we could only see the headline of (or whose page
+        # blocked us); an invented summary is worse than dropping the item.
+        if not has_summarizable_content(summary_item):
+            skipped += 1
+            continue
+        position = len(output) + 1
         fields = enriched_fields(brief["id"], brief["name"], summary_item, source_label)
         output.append({
-            "id": f"{brief['id']}-{i}-{abs(hash(item['url'])) % 100000}",
+            "id": f"{brief['id']}-{position}-{abs(hash(item['url'])) % 100000}",
             "title": item["title"],
             "kicker": source_label,
             "summary": fields["summary"],
@@ -1138,6 +1201,8 @@ def build_articles(brief: dict) -> tuple[list[dict], bool, list[str]]:
             "glossary": fields["glossary"],
             "learningPage": fields["learningPage"],
         })
+    if skipped:
+        errors.append(f"{brief['id']}: skipped {skipped} stor{'y' if skipped == 1 else 'ies'} with no fetchable content")
     return output, used_fallback, errors
 
 

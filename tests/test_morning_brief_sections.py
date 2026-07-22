@@ -221,3 +221,46 @@ def test_kentucky_healthcare_accepts_local_healthcare_and_named_provider(monkeyp
         "Kentucky hospitals face workforce pressure",
         "Norton Healthcare expands outpatient clinic",
     ]
+
+
+def test_build_articles_skips_stories_with_only_a_headline(monkeypatch):
+    brief = {
+        "id": "louisville",
+        "name": "Louisville, Kentucky",
+        "queries": ["louisville-1d"],
+        "fallbackQueries": [],
+    }
+
+    def fake_parse_rss(url):
+        return [
+            rss_item("Louisville council debates budget", summary="Louisville council debates budget"),
+            rss_item(
+                "Louisville hospital opens new wing",
+                summary="A detailed report on the new Louisville hospital wing, its bed count, funding sources, and opening timeline for the city.",
+            ),
+        ]
+
+    monkeypatch.setattr(briefs, "parse_rss", fake_parse_rss)
+    monkeypatch.setattr(briefs, "resolve_google_news_url", lambda url: url)
+    monkeypatch.setattr(briefs, "fetch_article_description", lambda url: "")
+
+    articles, used_fallback, errors = briefs.build_articles(brief)
+
+    # The headline-only story has no real text to summarize, so it is dropped and
+    # the next real story is used instead.
+    assert [article["title"] for article in articles] == ["Louisville hospital opens new wing"]
+    assert any("skipped 1 story" in error for error in errors)
+
+
+def test_extract_article_description_rejects_bot_wall_text():
+    paywall = (
+        '<meta property="og:description" content="Please subscribe to read the full '
+        'article and get unlimited digital access to our journalism today.">'
+    )
+    assert briefs.extract_article_description(paywall) == ""
+
+    real = (
+        '<meta property="og:description" content="City council approved a new transit '
+        'plan that adds three bus routes and extends weekend service across downtown.">'
+    )
+    assert "transit plan" in briefs.extract_article_description(real)

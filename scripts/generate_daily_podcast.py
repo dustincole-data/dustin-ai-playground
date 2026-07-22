@@ -16,6 +16,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -46,12 +47,8 @@ SECTION_TRANSITIONS = {
     "analytics": "A quick turn to {section}.",
     "louisville": "And finally, here's what is happening around {section}.",
 }
-STORY_LEADS = ("First up", "Also worth knowing", "One more thing here", "Next")
-TAKEAWAY_LEADS = (
-    "The part I would keep an eye on is this:",
-    "What that means in practice:",
-    "The useful takeaway:",
-)
+STORY_LEADS = ("Next", "Also", "Then", "Elsewhere")
+WHY_LEADS = ("Why it matters:", "The takeaway here:", "What that means:")
 SOURCE_LEADS = ("This one comes from", "Reporting comes from", "The source here is")
 
 
@@ -88,16 +85,72 @@ def category_transition(section_id: str, section_name: str, listener_name: str) 
     return template.format(listener=listener_name, section=section_name)
 
 
+_WORD_RE = re.compile(r"[a-z0-9]+")
+
+
+def _content_words(value: str) -> set[str]:
+    return {word for word in _WORD_RE.findall(value.lower()) if len(word) > 3}
+
+
+def why_matters_counts(feed: dict) -> Counter:
+    """Count how often each why-it-matters line repeats across the whole feed.
+
+    Generic section templates repeat verbatim across a section's stories; unique
+    lines are the story-specific ones worth speaking aloud.
+    """
+    counts: Counter = Counter()
+    for brief in feed.get("briefs") or []:
+        for article in brief.get("articles") or []:
+            why = trim_explanatory_lead(article.get("whyItMatters", ""))
+            if why:
+                counts[why.lower()] += 1
+    return counts
+
+
+def summary_is_self_explaining(summary: str) -> bool:
+    """A summary that already delivers its own 'so what' needs no separate why line.
+
+    The enriched summaries typically close with an audience-framed takeaway ("For
+    investors, ...") and run long; a terse, purely factual summary is the case
+    where a why-it-matters line genuinely adds something.
+    """
+    text = summary.strip()
+    if not text:
+        return True
+    if len(text.split()) >= 40:
+        return True
+    last_sentence = re.split(r"(?<=[.!?])\s+", text)[-1]
+    return last_sentence.startswith("For ")
+
+
+def why_adds_value(why: str, summary: str, counts: Counter) -> bool:
+    """Keep a why-it-matters line only when it genuinely adds to the summary."""
+    if not why:
+        return False
+    if counts.get(why.lower(), 0) > 1:
+        return False  # repeated across stories => generic section filler
+    if summary_is_self_explaining(summary):
+        return False  # the summary already carries its own takeaway
+    why_words = _content_words(why)
+    if not why_words:
+        return False
+    overlap = len(why_words & _content_words(summary)) / len(why_words)
+    return overlap < 0.8  # near-total overlap => it just restates the summary
+
+
 def build_spoken_segments(feed: dict, *, listener_name: str = DEFAULT_LISTENER_NAME) -> list[dict]:
     """Build a personalized, chapter-aware episode from grounded feed context."""
     label = clean_spoken_text(feed.get("generatedLabel") or "today")
     segments = [{
         "text": "\n\n".join([
             f"{listener_name}, here's everything you need to know this morning.",
-            f"This briefing was prepared for {label}. I'll walk you through what happened and why it matters, with a little extra context where it helps.",
+            f"This briefing was prepared for {label}. I'll walk you through what happened and why it matters.",
         ])
     }]
     story_number = 0
+    why_number = 0
+    source_number = 0
+    why_counts = why_matters_counts(feed)
 
     for brief in feed.get("briefs") or []:
         articles = brief.get("articles") or []
@@ -111,18 +164,22 @@ def build_spoken_segments(feed: dict, *, listener_name: str = DEFAULT_LISTENER_N
             title = clean_spoken_text(article.get("title", "This story"))
             summary = clean_spoken_text(article.get("summary", ""))
             why = trim_explanatory_lead(article.get("whyItMatters", ""))
-            context = clean_spoken_text((article.get("learningPage") or {}).get("explanationText", ""))
             source = clean_spoken_text(article.get("sourceLabel", ""))
-            lead = STORY_LEADS[article_index % len(STORY_LEADS)]
-            item = f"{lead}, {title}."
+            # The section transition already introduces the first story; later
+            # stories get a light connector rotated across the whole episode so
+            # no lead ("First up") repeats at the top of every section.
+            if article_index == 0:
+                item = f"{title}."
+            else:
+                item = f"{STORY_LEADS[(story_number - 1) % len(STORY_LEADS)]}, {title}."
             if summary:
                 item += f" {summary}"
-            if context:
-                item += f" A little context here: {context}"
-            if why:
-                item += f" {TAKEAWAY_LEADS[article_index % len(TAKEAWAY_LEADS)]} {why}"
+            if why_adds_value(why, summary, why_counts):
+                item += f" {WHY_LEADS[why_number % len(WHY_LEADS)]} {why}"
+                why_number += 1
             if source:
-                item += f" {SOURCE_LEADS[article_index % len(SOURCE_LEADS)]} {source}."
+                item += f" {SOURCE_LEADS[source_number % len(SOURCE_LEADS)]} {source}."
+                source_number += 1
             parts.append(item)
         segments.append({
             "chapterId": brief.get("id"),
