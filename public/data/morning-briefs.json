@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-05T09:00:46.443530+00:00",
-  "generatedLabel": "Aug 5, 5:00 AM ET",
+  "generatedAt": "2026-08-06T09:00:43.940618+00:00",
+  "generatedLabel": "Aug 6, 5:00 AM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -9,263 +9,273 @@
       "emptyMessage": "No qualified AI stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "ai-signal-2026-08-05_08-54-44-1",
-          "title": "GPT-5.6 price cuts + new \"Fast mode\" in the API (Jul 30) Luna dropped 80%, Terra 20%. Sol gets a Fast mo…",
+          "id": "ai-signal-2026-08-06_08-50-42-1",
+          "title": "Stateless MCP (MCP 2.0) is live — Simon Willison built mcp-explorer, datasette-mcp, llm-mcp-client aroun…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "OpenAI’s GPT-5.6 API pricing changed on July 30: Luna dropped 80%, Terra dropped 20%, and Sol now has a new Fast mode. Fast mode is reportedly up to 2.5 times faster than standard but costs 2 times as much, and older priority requests will automatically map to Fast mode. For API users, this means cheaper access on some tiers and a clearer speed-versus-cost option for latency-sensitive workloads.",
-          "emailSummary": "GPT-5.6 price cuts + new \"Fast mode\" in the API (Jul 30) Luna dropped 80%, Terra 20%. Sol gets a Fast mode — up to 2.5× faster than standard at…",
-          "whyItMatters": "This matters because API pricing and latency changes can directly affect model selection, product costs, and how quickly AI applications respond.",
+          "summary": "The Jul 28 MCP spec removed the stateful handshake and now uses a single HTTP request with no session ID or two-step initialization. Simon Willison then built three tools around the new design in one week: uvx mcp-explorer, a Datasette plugin that exposes databases as MCP tools, and an LLM CLI plugin. The source says this is the biggest MCP improvement since launch because stateless MCP can connect to any web endpoint without session management.",
+          "emailSummary": "Stateless MCP (MCP 2.0) is live — Simon Willison built mcp-explorer, datasette-mcp, llm-mcp-client around it (Jul 31) The Jul 28 MCP spec droppe…",
+          "whyItMatters": "This matters because a stateless protocol is easier to deploy and integrate, which could speed up adoption of MCP across web services and developer tools.",
           "dataSignals": [
-            "OpenAI signal"
+            "developer workflow",
+            "MCP / integration"
           ],
-          "sourceLabel": "openai.com · Aug 5, 4:54 AM ET",
-          "sourceUrl": "https://openai.com/products/release-notes/",
+          "sourceLabel": "simonwillison.net · Aug 6, 4:50 AM ET",
+          "sourceUrl": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
           "googleNewsUrl": null,
-          "publishedAt": "2026-08-05T08:54:44.988977+00:00",
+          "publishedAt": "2026-08-06T08:50:42.515698+00:00",
           "glossary": [
             {
-              "term": "API",
-              "definition": "An application programming interface, or API, is a way for software programs to request services or data from another system."
+              "term": "MCP",
+              "definition": "A protocol for connecting AI systems to external tools and services."
             },
             {
-              "term": "Fast mode",
-              "definition": "A higher-speed operating mode that prioritizes quicker responses, usually at a higher price."
+              "term": "stateless",
+              "definition": "A design where each request contains all the information needed, so the server does not need to remember prior requests."
             },
             {
-              "term": "Backward compatible",
-              "definition": "A change that still works with older requests or settings without requiring users to rewrite them."
+              "term": "session ID",
+              "definition": "An identifier used to link multiple requests to the same ongoing conversation or connection."
+            },
+            {
+              "term": "handshake",
+              "definition": "An initial setup exchange between a client and server before normal communication starts."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a product-and-pricing update, not a research or policy story. When reading it, focus on the exact changes: which tiers got cheaper, how much faster Fast mode is, and how much extra it costs. The interpretation would change if later notes alter those percentages, redefine the model tiers, or show that the automatic mapping from priority requests does not behave as described.",
+            "explanationText": "This is a product-and-protocol update story, focused on how a spec change affects developer workflow rather than on end-user features. When reading the source, pay attention to what changed in the MCP request flow and to the concrete examples of tools built on top of it. If the protocol still needs hidden setup or state management elsewhere, the practical benefit would be smaller than the description suggests.",
             "glossary": [
               {
-                "term": "API",
-                "definition": "An application programming interface, or API, is a way for software programs to request services or data from another system.",
-                "whyItMatters": "AI products often rely on APIs to send prompts and receive model outputs, so pricing or speed changes here affect real application costs and performance."
+                "term": "MCP",
+                "definition": "A protocol for connecting AI systems to external tools and services.",
+                "whyItMatters": "Understanding MCP helps explain how AI apps can call databases, utilities, or web endpoints."
               },
               {
-                "term": "Fast mode",
-                "definition": "A higher-speed operating mode that prioritizes quicker responses, usually at a higher price.",
-                "whyItMatters": "Teams building user-facing tools may choose this mode when response time matters more than cost."
+                "term": "stateless",
+                "definition": "A design where each request contains all the information needed, so the server does not need to remember prior requests.",
+                "whyItMatters": "Stateless systems are usually simpler to scale and integrate because they avoid session tracking."
               },
               {
-                "term": "Backward compatible",
-                "definition": "A change that still works with older requests or settings without requiring users to rewrite them.",
-                "whyItMatters": "This reduces migration work because existing integrations can keep functioning after the update."
+                "term": "session ID",
+                "definition": "An identifier used to link multiple requests to the same ongoing conversation or connection.",
+                "whyItMatters": "Removing session IDs changes how clients and servers coordinate multi-step interactions."
+              },
+              {
+                "term": "handshake",
+                "definition": "An initial setup exchange between a client and server before normal communication starts.",
+                "whyItMatters": "Dropping the handshake reduces setup complexity and can make integrations faster to implement."
               }
             ]
           }
         },
         {
-          "id": "ai-signal-2026-08-05_08-54-44-2",
-          "title": "Swiftlet: run 80B Qwen in ~4.3 GB RAM on a Mac, 35B on an iPhone (Apache 2.0) Swift + Metal runtime that…",
+          "id": "ai-signal-2026-08-06_08-50-42-2",
+          "title": "Google DeepMind leadership reset — Hassabis to Chair, Jeff Dean exits after 27 years (Aug 5) Demis Hassa…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "Swiftlet is a Swift and Metal runtime that claims it can run an 80B Qwen model in about 4.3 GB of RAM on a Mac and a 35B model on an iPhone. It does this by keeping only a roughly 3B dense core in memory and streaming routed MoE experts from SSD when needed. The description says the 35B model runs at 7–11 tokens per second on an M5 Mac and about 1 token per second on an iPhone 17, and it also provides an OpenAI-compatible loopback server. For AI on-device, the key takeaway is that large-model behavior may be possible on consumer hardware, but with a clear speed and recall tradeoff.",
-          "emailSummary": "Swiftlet: run 80B Qwen in ~4.3 GB RAM on a Mac, 35B on an iPhone (Apache 2.0) Swift + Metal runtime that keeps only the ~3B dense core resident…",
-          "whyItMatters": "This matters because it points to a lower-memory path for local AI inference, which could make advanced models more practical on Macs and phones without relying on cloud APIs.",
+          "summary": "Demis Hassabis is becoming Chair and Chief Scientist of Alphabet, while Jeff Dean is leaving Google after 27 years to found Discovery Loop. The description says this signals a shift at Google from research-led AI toward enterprise deployment, with a new CEO expected to have product and enterprise experience. It also flags a practical risk for users: Google cut 14 Vertex AI endpoints with 90 days' notice in Q1 2026, suggesting possible API deprecation waves.",
+          "emailSummary": "Google DeepMind leadership reset — Hassabis to Chair, Jeff Dean exits after 27 years (Aug 5) Demis Hassabis becomes Chair/Chief Scientist of Alp…",
+          "whyItMatters": "This matters because changes in leadership and product strategy at Google DeepMind can affect which AI tools are prioritized, supported, or retired, which directly impacts teams building on Google’s AI platform.",
           "dataSignals": [
-            "developer workflow",
+            "Google AI signal"
+          ],
+          "sourceLabel": "bloomberg.com · Aug 6, 4:50 AM ET",
+          "sourceUrl": "https://www.bloomberg.com/news/articles/2026-08-05/google-deepmind-boss-hassabis-moves-to-chair-role-in-shakeup",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-08-06T08:50:42.515698+00:00",
+          "glossary": [
+            {
+              "term": "Vertex AI",
+              "definition": "Google Cloud's managed platform for building, deploying, and using machine learning and AI services."
+            },
+            {
+              "term": "API endpoint",
+              "definition": "A specific access point that software uses to send requests to a service and receive responses."
+            },
+            {
+              "term": "Chief Scientist",
+              "definition": "A senior role focused on guiding research and technical direction rather than day-to-day business operations."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a leadership-and-product-strategy story, not a technical model release. When reading the source, pay attention to who is moving roles, what Google is said to be optimizing for, and whether the API-deprecation example is presented as evidence or just a warning sign. The interpretation would change if Google later clarifies that the leadership changes are routine or that endpoint removals are isolated rather than part of a broader platform shift.",
+            "glossary": [
+              {
+                "term": "Vertex AI",
+                "definition": "Google Cloud's managed platform for building, deploying, and using machine learning and AI services.",
+                "whyItMatters": "If Vertex AI changes direction or removes endpoints, teams using it may need to update systems or switch services."
+              },
+              {
+                "term": "API endpoint",
+                "definition": "A specific access point that software uses to send requests to a service and receive responses.",
+                "whyItMatters": "Endpoint changes can break applications, require code updates, or force migrations."
+              },
+              {
+                "term": "Chief Scientist",
+                "definition": "A senior role focused on guiding research and technical direction rather than day-to-day business operations.",
+                "whyItMatters": "A shift in who holds this role can signal whether research or product rollout will get more emphasis."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-signal-2026-08-06_08-50-42-3",
+          "title": "OpenAI published GPT-Live architecture — turnless speech, Go rewrite, WARP protocol (Aug 3) GPT-Live use…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "OpenAI published details on GPT-Live, an architecture for turnless speech where the model can repeatedly decide whether to speak, listen, or interrupt. The system’s media stack was rewritten from Python asyncio to Go, and the team says its p95 latency matches the old p50. OpenAI also described WARP, a protocol that reduces WebRTC setup from 6 round trips to a single UDP packet, and said the design has already landed in libwebrtc and Pion. For AI voice systems, these changes point to faster, more natural real-time interaction and simpler connection setup.",
+          "emailSummary": "OpenAI published GPT-Live architecture — turnless speech, Go rewrite, WARP protocol (Aug 3) GPT-Live uses a full-duplex architecture where the m…",
+          "whyItMatters": "This matters because lower latency and faster connection setup can make voice AI feel more natural and reliable, which is critical for products that need real-time conversation.",
+          "dataSignals": [
             "OpenAI signal",
             "model/tool release"
           ],
-          "sourceLabel": "github.com · Aug 5, 4:54 AM ET",
-          "sourceUrl": "https://github.com/leonickson1/Swiftlet",
+          "sourceLabel": "openai.com · Aug 6, 4:50 AM ET",
+          "sourceUrl": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
           "googleNewsUrl": null,
-          "publishedAt": "2026-08-05T08:54:44.988977+00:00",
+          "publishedAt": "2026-08-06T08:50:42.515698+00:00",
           "glossary": [
             {
-              "term": "MoE (Mixture of Experts)",
-              "definition": "A model design that uses a shared core and selectively activates specialized submodels, or experts, for each request."
+              "term": "full-duplex",
+              "definition": "A communication method where both sides can send and receive at the same time."
             },
             {
-              "term": "dense core",
-              "definition": "The always-loaded portion of a model that handles general computation without expert routing."
+              "term": "p95 latency",
+              "definition": "The response time that 95% of requests are faster than."
             },
             {
-              "term": "tokens per second (tok/s)",
-              "definition": "A speed measure for language models showing how many text tokens the model can generate each second."
+              "term": "WebRTC",
+              "definition": "A web technology used for real-time audio, video, and data communication between devices."
             },
             {
-              "term": "OpenAI-compatible",
-              "definition": "Designed to work with the same style of API as OpenAI’s chat endpoints or client tools."
+              "term": "UDP",
+              "definition": "A lightweight network protocol that sends packets with less overhead than more reliable connection-based protocols."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a product/runtime announcement, not a research result, so the important thing is to separate the memory claim from the performance claim. When reading the source, pay attention to the exact model sizes, device targets, and tokens-per-second numbers, because those determine how practical the system really is. If the source details benchmark conditions, quantization, or model-specific tuning, those would materially change how impressive the result is.",
+            "explanationText": "This is a technical product-and-infrastructure story, not a user-facing feature announcement. When reading the source, pay attention to claims about latency, connection setup, and whether the changes are architectural ideas or already deployed in real systems. The interpretation would change most if the gains are measured in production at scale rather than in internal tests or demos.",
             "glossary": [
               {
-                "term": "MoE (Mixture of Experts)",
-                "definition": "A model design that uses a shared core and selectively activates specialized submodels, or experts, for each request.",
-                "whyItMatters": "It explains how Swiftlet can keep only part of the model in memory and load the rest on demand."
+                "term": "full-duplex",
+                "definition": "A communication method where both sides can send and receive at the same time.",
+                "whyItMatters": "It enables the model to listen and speak without waiting for strict back-and-forth turns."
               },
               {
-                "term": "dense core",
-                "definition": "The always-loaded portion of a model that handles general computation without expert routing.",
-                "whyItMatters": "The dense core is what stays resident in RAM, which is central to the low-memory claim."
+                "term": "p95 latency",
+                "definition": "The response time that 95% of requests are faster than.",
+                "whyItMatters": "It shows how slow the system gets in worse cases, which matters for user experience."
               },
               {
-                "term": "tokens per second (tok/s)",
-                "definition": "A speed measure for language models showing how many text tokens the model can generate each second.",
-                "whyItMatters": "It is the main indicator of whether the model is usable in practice on a given device."
+                "term": "WebRTC",
+                "definition": "A web technology used for real-time audio, video, and data communication between devices.",
+                "whyItMatters": "It is the connection layer being improved to make voice sessions start faster."
               },
               {
-                "term": "OpenAI-compatible",
-                "definition": "Designed to work with the same style of API as OpenAI’s chat endpoints or client tools.",
-                "whyItMatters": "It makes it easier to plug the runtime into existing apps and workflows."
+                "term": "UDP",
+                "definition": "A lightweight network protocol that sends packets with less overhead than more reliable connection-based protocols.",
+                "whyItMatters": "Using a single UDP packet can reduce setup time for real-time calls."
               }
             ]
           }
         },
         {
-          "id": "ai-signal-2026-08-05_08-54-44-3",
-          "title": "\"LLMs reward expertise\" — Sean Goedecke (HN #1, 1,090 pts) The strongest practical AI take on the front…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "Sean Goedecke argues that large language models reward domain expertise more than prompt craft. The claim is that people who know the subject well can steer the model much more effectively, while people without that knowledge tend to settle for outputs that are merely \"something.\" The description points to Terence Tao’s prompting style as evidence for the idea. For AI users, the takeaway is that knowing the field may matter more than learning tricks for wording prompts.",
-          "emailSummary": "\"LLMs reward expertise\" — Sean Goedecke (HN #1, 1,090 pts) The strongest practical AI take on the front page in days: *domain expertise* (not pr…",
-          "whyItMatters": "This matters because it suggests AI performance gains come more from subject-matter knowledge than from prompt engineering alone, which changes how teams should train people and assign AI-assisted work.",
-          "dataSignals": [
-            "model/tool release"
-          ],
-          "sourceLabel": "seangoedecke.com · Aug 5, 4:54 AM ET",
-          "sourceUrl": "https://seangoedecke.com/llms-reward-expertise/",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-08-05T08:54:44.988977+00:00",
-          "glossary": [
-            {
-              "term": "LLM",
-              "definition": "A large language model, which is an AI system trained on lots of text to generate and understand language."
-            },
-            {
-              "term": "prompt craft",
-              "definition": "The practice of writing prompts in a careful way to get better output from an AI model."
-            },
-            {
-              "term": "domain expertise",
-              "definition": "Deep knowledge of a specific subject area, such as math, law, medicine, or engineering."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a viewpoint or analysis piece about how to get better results from AI, not a product announcement or policy change. When reading the source, pay attention to whether the examples actually show experts getting better outputs, and whether the argument is about workflow, model quality, or both. The interpretation would change if the evidence showed prompt technique alone closing the gap, or if the results depended on a particular model or subject area.",
-            "glossary": [
-              {
-                "term": "LLM",
-                "definition": "A large language model, which is an AI system trained on lots of text to generate and understand language.",
-                "whyItMatters": "It is the kind of AI system being discussed in the story."
-              },
-              {
-                "term": "prompt craft",
-                "definition": "The practice of writing prompts in a careful way to get better output from an AI model.",
-                "whyItMatters": "The story argues this matters less than real expertise."
-              },
-              {
-                "term": "domain expertise",
-                "definition": "Deep knowledge of a specific subject area, such as math, law, medicine, or engineering.",
-                "whyItMatters": "The story says this is the main bottleneck for getting useful AI output."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-1-97665",
-          "title": "‘Baffling’: White House won’t publicly release AI model evaluation framework it reviewed today with OpenAI, Anthropic, Microsoft and others",
-          "kicker": "Fortune",
-          "summary": "The White House reviewed an AI model evaluation framework today with OpenAI, Anthropic, Microsoft and others, but it is not publicly releasing the framework. The reason for keeping it private is unclear. In practical terms, this leaves the public without visibility into how the administration plans to assess AI systems, even as recent hacks involving OpenAI and Anthropic have raised concern.",
-          "emailSummary": "It's unclear why the administration is keeping the framework under wraps, especially following a series of hacks from OpenAI and Anthropic that…",
-          "whyItMatters": "This matters because the rules and standards used to judge major AI models can shape safety expectations, company compliance efforts, and public trust in how powerful AI systems are evaluated.",
-          "dataSignals": [
-            "model/tool release"
-          ],
-          "sourceLabel": "Fortune · Aug 4, 6:53 PM ET",
-          "sourceUrl": "https://fortune.com/2026/08/04/baffling-white-house-wont-publicly-release-ai-model-evaluation-framework-it-reviewed-today-with-openai-anthropic-microsoft-and-others/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPWlcyMlRoSEdoMWV5QjZBeXRGenZEeHVSeV9NMzFRajlpX2xITkNiLS14TjJIcVhtYWExY2VaNzltV3F5TmgyRnFjdFBuTmozWWdsVm5mX3BIUG51eWNxQnBMenJCOUtYeUE3RlRhQV9DLVo4RU53U0lGNTdjTGw5NWVNeG11SDRQT2oxeWFMTmJIZ2I3RzBOSzRsWEctMFRKWFY5R21aS1YzcktXSjRubzVqM2NlTHVRcjBRYWV6WmlTbHBwblVfa0RIQUlLX0o3WE9Sa0NqV08yRGRDX2ZKdU1aV1JSeDNCRGVKd0NrV25TMDhNNGRPNQ?oc=5",
-          "publishedAt": "2026-08-04T22:53:00+00:00",
-          "glossary": [
-            {
-              "term": "AI model evaluation framework",
-              "definition": "A set of criteria or procedures used to test and judge how well an AI model performs, including safety and reliability checks."
-            },
-            {
-              "term": "OpenAI",
-              "definition": "An AI company that makes widely used generative AI systems."
-            },
-            {
-              "term": "Anthropic",
-              "definition": "An AI company that develops large language models and focuses heavily on AI safety."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a policy-and-industry story about how government may evaluate AI models, not a product launch or a technical breakthrough. When reading the source, focus on who was involved in the review and whether the framework is eventually released, because that would change how much transparency and accountability the public can expect. If the framework stays private, the main implication is that outside observers cannot judge the standards being considered.",
-            "glossary": [
-              {
-                "term": "AI model evaluation framework",
-                "definition": "A set of criteria or procedures used to test and judge how well an AI model performs, including safety and reliability checks.",
-                "whyItMatters": "It determines what standards AI companies may need to meet and what risks are considered acceptable."
-              },
-              {
-                "term": "OpenAI",
-                "definition": "An AI company that makes widely used generative AI systems.",
-                "whyItMatters": "Its involvement signals that major frontier-model developers are part of the policy discussion."
-              },
-              {
-                "term": "Anthropic",
-                "definition": "An AI company that develops large language models and focuses heavily on AI safety.",
-                "whyItMatters": "Its presence suggests the framework may affect leading AI safety practices and model testing norms."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-2-21545",
-          "title": "Meta, Anthropic, Google, OpenAI to meet with Trump White House amid rogue AI agent fallout",
-          "kicker": "BNN Bloomberg",
-          "summary": "Staff from Meta, Anthropic, Google, and OpenAI are set to meet with advisers to U.S. President Donald Trump on Tuesday about voluntary safety testing for advanced AI models. The meeting comes as concern grows about rogue AI agents. For AI, this points to continued pressure on major developers to show that powerful models can be tested and controlled before wider use.",
-          "emailSummary": "Meta, Anthropic, Google and OpenAI staff will meet with U.S. President Donald Trump’s advisers on Tuesday about voluntary safety testing for adv…",
-          "whyItMatters": "This matters because voluntary safety testing could shape how quickly advanced AI systems are deployed and how much oversight major model makers face.",
+          "id": "ai-1-19052",
+          "title": "Meta to take on Anthropic's Claude and OpenAI's Codex with new coding agent",
+          "kicker": "Business Insider",
+          "summary": "Meta launched Muse Code, a coding agent designed to compete with Anthropic’s Claude and OpenAI’s Codex. The key difference described is price: Meta says Muse Code is meant to be comparable while costing less than those competitors. For AI users and developers, that suggests another lower-cost option in a crowded coding-assistant market.",
+          "emailSummary": "Meta launched Muse Code, which aims to be a comparable coding agent that's priced lower than competitors like Anthropic's Claude or OpenAI's Cod…",
+          "whyItMatters": "This matters because lower pricing from a major platform could push coding-agent costs down and increase pressure on rival AI tools.",
           "dataSignals": [
             "agent workflow",
             "model/tool release"
           ],
-          "sourceLabel": "BNN Bloomberg · Aug 4, 10:46 AM ET",
-          "sourceUrl": "https://www.bnnbloomberg.ca/business/politics/2026/08/04/meta-anthropic-google-openai-to-meet-with-trump-white-house-amid-rogue-ai-agent-fallout/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPX0VUNno4THFiMFk1dVU2SlpRRENDY3RVVUVzdGROVlU4NFhDQWxVeVp3ZDJmUjVvLUc0SHRkNmFXZnMtOGMwME1ZT28zZm5RZy02RUZZSEhFV1JDdkxVRDMzWW95ZFNpdmlPN0ZwVHp3Q0RtOTk0V0k3bnFzZ3NyUGFYT25ZaTU1WURuWEVPcno5TURZTEZBaUQ1WUVKb0F0ZXEwTWVkTlRzNnlTWk4zZDc3MXREMERRODJwdmltT1Zyc0ZQa1VJMmNOdUZ3SEx0Q1A0a3pTR0VqbWV2LWc?oc=5",
-          "publishedAt": "2026-08-04T14:46:20+00:00",
+          "sourceLabel": "Business Insider · Aug 5, 5:31 PM ET",
+          "sourceUrl": "https://www.businessinsider.com/meta-muse-coding-agent-race-openai-codex-anthropic-claude-2026-8",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPcU90czRsTVlMbWQ0VHVpbnByUkZua0Vtb09qa0dmbjY3TVNHV2x3QW1nMFc3UEN5V0RFak5la2FDcUtCYkt4SHFMSmN0Si0tTk9qNkRVcm5lSlljM29rOTljaHhQdEc0dlRVcFlGOXlELTV5bEg2RzNVVzQ3SmhoVGR2YXprcDVUbDctX0o2OHB2c2ZRSDdPNm5aTDA?oc=5",
+          "publishedAt": "2026-08-05T21:31:00+00:00",
           "glossary": [
             {
-              "term": "AI agents",
-              "definition": "Software systems that can take actions on a user's behalf with limited direct supervision."
+              "term": "coding agent",
+              "definition": "An AI tool that can help write, edit, or automate code tasks."
             },
             {
-              "term": "advanced AI models",
-              "definition": "Large, highly capable machine learning systems that can generate text, code, images, or other outputs."
+              "term": "Claude",
+              "definition": "Anthropic’s AI assistant and model family."
             },
             {
-              "term": "voluntary safety testing",
-              "definition": "Non-mandatory checks done to look for risks, failures, or harmful behavior in a system."
+              "term": "Codex",
+              "definition": "OpenAI’s code-focused AI system."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a policy-and-safety story about big AI companies meeting with government advisers, not a product announcement. When reading the source, pay attention to who is involved, whether the testing remains voluntary, and whether any concrete commitments come out of the meeting. If the story later adds mandatory rules, enforcement, or specific test requirements, that would change the significance a lot.",
+            "explanationText": "This is a competitive product-launch story in AI, not a technical deep dive. When reading the source, pay attention to what is actually claimed about capability versus price, because the comparison may hinge more on positioning than on published benchmarks. If later reporting shows feature parity, adoption, or performance differences, that would change how meaningful the lower price really is.",
             "glossary": [
               {
-                "term": "AI agents",
-                "definition": "Software systems that can take actions on a user's behalf with limited direct supervision.",
-                "whyItMatters": "Rogue or poorly controlled agents can create safety and security risks, which is why they are central to the meeting."
+                "term": "coding agent",
+                "definition": "An AI tool that can help write, edit, or automate code tasks.",
+                "whyItMatters": "It is the product category Meta is entering, so understanding it helps frame the competitive move."
               },
               {
-                "term": "advanced AI models",
-                "definition": "Large, highly capable machine learning systems that can generate text, code, images, or other outputs.",
-                "whyItMatters": "These are the systems being discussed for extra safety testing before broader release or use."
+                "term": "Claude",
+                "definition": "Anthropic’s AI assistant and model family.",
+                "whyItMatters": "It is one of the products Muse Code is being positioned against."
               },
               {
-                "term": "voluntary safety testing",
-                "definition": "Non-mandatory checks done to look for risks, failures, or harmful behavior in a system.",
-                "whyItMatters": "If companies agree to this, it can influence industry standards even without a formal rule."
+                "term": "Codex",
+                "definition": "OpenAI’s code-focused AI system.",
+                "whyItMatters": "It is another named competitor in the coding-assistant market."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-2-63082",
+          "title": "Meta debuts first AI coding agent to take on Anthropic and OpenAI",
+          "kicker": "CNBC",
+          "summary": "Meta has released its first coding agent, called Muse Code. The move comes as Meta increases investment in AI models and services and tries to compete with Anthropic and OpenAI. For the AI sector, this signals another major platform entering coding tools, which could intensify competition around developer products and AI model capabilities.",
+          "emailSummary": "Meta released its first coding agent called Muse Code as the company ramps up its investments in AI models and services to try and take on Anthr…",
+          "whyItMatters": "This matters because a new coding agent from Meta could shift competition in AI-assisted software development and influence which companies developers choose to build with.",
+          "dataSignals": [
+            "agent workflow",
+            "model/tool release"
+          ],
+          "sourceLabel": "CNBC · Aug 5, 3:00 PM ET",
+          "sourceUrl": "https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-openai-.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPcXpCdFJVQk9lTzZ1WFk5cENzSWRNa3hkYVRfMy1vZXMxekkzQXRja2xKX0E5dzRFQXVRUDgwWDFOSWEwRWJnQU55UjVQUms0b2NuOGl1NlpUT2FqUVFPMm9WWkRqZkhWX3lyQnIxck5vZDU0RE5zdXBUalY0THd1dm5qLS1VSG1FVzh4dWNFYWQ5SFlXM2fSAZsBQVVfeXFMUDRqYXFzVEpSNHM5N24zTDBlYmd6bDRlM0FmUnB2dldBNGRIMlo2cHd3Zm5kZXVaS1k4NVFZb1hUOXhuRnh4cFlabUFmQ0NDdmE2U0F0ZHBfdnJSajBWcXowZnE1a1RhMmsydzZ2YmoyMUpyYTdlRVRBSnBxX3haUkRWOVEzOFY5aDhmVUhYNzZJdDJjdWtaRXpJNUk?oc=5",
+          "publishedAt": "2026-08-05T19:00:17+00:00",
+          "glossary": [
+            {
+              "term": "coding agent",
+              "definition": "An AI system that can help write, edit, or generate computer code with less direct human input."
+            },
+            {
+              "term": "AI models",
+              "definition": "The underlying machine-learning systems that generate predictions or content, such as text or code."
+            },
+            {
+              "term": "AI services",
+              "definition": "Cloud-based or software products that deliver AI features to users or businesses."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a short competitive product announcement, so the key thing to watch is what Meta launched and who it is trying to challenge. Since the description does not mention capabilities, pricing, or availability, you should not assume how powerful Muse Code is or whether it is ready for broad use.",
+            "glossary": [
+              {
+                "term": "coding agent",
+                "definition": "An AI system that can help write, edit, or generate computer code with less direct human input.",
+                "whyItMatters": "Coding agents are a major product category in AI because they can speed up software development and attract developers to a platform."
+              },
+              {
+                "term": "AI models",
+                "definition": "The underlying machine-learning systems that generate predictions or content, such as text or code.",
+                "whyItMatters": "Model quality often determines how useful an AI product is and how well it can compete with rivals."
+              },
+              {
+                "term": "AI services",
+                "definition": "Cloud-based or software products that deliver AI features to users or businesses.",
+                "whyItMatters": "Companies use AI services to package models into products people can actually adopt."
               }
             ]
           }
@@ -278,251 +288,215 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-5380",
-          "title": "Pembina Pipeline (TSX:PPL) Greenlights Alberta Power Project",
-          "kicker": "kalkinemedia.com",
-          "summary": "Pembina Pipeline has approved a gas-fired power project in Alberta aimed at meeting demand from data centres. The company is also moving forward with its Cedar LNG project and an expansion of the Alliance pipeline system. For energy and utilities, the key point is that Pembina is positioning itself to serve growing electricity and infrastructure needs while continuing to develop its broader midstream portfolio.",
-          "emailSummary": "Pembina Pipeline (TSX:PPL) sanctions a gas-fired power project for data centre demand while advancing Cedar LNG and an Alliance expansion.",
-          "whyItMatters": "This matters because data-centre growth is creating new demand for power and gas infrastructure, which can affect investment, capacity planning, and project pipelines in the energy sector.",
-          "dataSignals": [
-            "PPL mention"
-          ],
-          "sourceLabel": "kalkinemedia.com · Aug 4, 4:47 PM ET",
-          "sourceUrl": "https://kalkinemedia.com/ca/stocks/energy/pembina-pipeline-tsxppl-greenlights-alberta-power-project",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPdXZiN19BckdHQV9FaFFBMkdjX1Q2R2dDSlppNW1RcVRwc3J0NW1PaEQ3RWFUaWY5bW5OMGc2TktVY2dXRWpTNDEwQUxmUXFPUDZYcVozY2FYS0hsT0RIQllOYVNTbnR5ajFoanMwaERSMTJNX0hSa2VFU0ZCeGVNSmJjal8zUFBiN241X2VYeGg3dzlwVEpCZUt4d3dmdTQw?oc=5",
-          "publishedAt": "2026-08-04T20:47:00+00:00",
-          "glossary": [
-            {
-              "term": "gas-fired power project",
-              "definition": "A power generation project that burns natural gas to produce electricity."
-            },
-            {
-              "term": "sanctions",
-              "definition": "In project finance, to officially approve a project so it can move ahead."
-            },
-            {
-              "term": "Cedar LNG",
-              "definition": "A liquefied natural gas project associated with Pembina Pipeline."
-            },
-            {
-              "term": "Alliance expansion",
-              "definition": "An increase in the capacity or reach of the Alliance pipeline system."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a corporate infrastructure and energy-development story, not a policy or market-price story. When reading the source, pay attention to which projects are being approved versus merely advanced, because that distinction tells you what is immediate and what is still developing. If the source later adds capacity numbers, timelines, or customer contracts, that would materially change how significant the project is.",
-            "glossary": [
-              {
-                "term": "gas-fired power project",
-                "definition": "A power generation project that burns natural gas to produce electricity.",
-                "whyItMatters": "It signals how new electricity demand is being met and what kind of fuel mix utilities and developers are choosing."
-              },
-              {
-                "term": "sanctions",
-                "definition": "In project finance, to officially approve a project so it can move ahead.",
-                "whyItMatters": "Approval is a major milestone that usually means spending, construction, or execution can begin."
-              },
-              {
-                "term": "Cedar LNG",
-                "definition": "A liquefied natural gas project associated with Pembina Pipeline.",
-                "whyItMatters": "It is part of the company’s growth plan and can affect future earnings and infrastructure needs."
-              },
-              {
-                "term": "Alliance expansion",
-                "definition": "An increase in the capacity or reach of the Alliance pipeline system.",
-                "whyItMatters": "Pipeline expansions can change how much gas can be transported and support more industrial or power demand."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-2-59013",
-          "title": "People (PPL) Stock Jumps As Margin Gains Recast The Story",
-          "kicker": "simplywall.st",
-          "summary": "People (PPL) shares rose about 10% to US$46.43 after the market digested a Q2 update that looked cleaner and more profitable than recent quarters. The company reported basic earnings per share of US$6.87 on revenue of US$436.7 million, helped by digital EBITDA growth and wider margins in its core media business. For investors, the key takeaway is that the quarter made the underlying business look stronger, which can change how the stock is valued.",
-          "emailSummary": "The market finally snapped awake on People. After drifting for a month, the stock jumped about 10% to US$46.43 as investors absorbed a quarter t…",
-          "whyItMatters": "This matters because better margins and earnings can improve confidence in the company’s core operating performance and support a higher valuation.",
-          "dataSignals": [
-            "PPL mention"
-          ],
-          "sourceLabel": "simplywall.st · Aug 4, 10:38 PM ET",
-          "sourceUrl": "https://simplywall.st/stocks/us/media/nasdaq-ppli/people/news/people-ppl-stock-jumps-as-margin-gains-recast-the-story/amp",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQM3F5M2o5Rnl1QmJBSTU4VkhZckxVQ1kxNUNFbm9zMGZsMThQd244OWcwNEpqaXJpbWhTeFNRb2RHZERnX3pxOHBRMlZ6blpIblhwY2NyejZyTXUxdGotSUxyMnJfS1ZWNHlfNHJqZElXQ210N0g5TXZmVWkwQXN5S19yN013Q0F6RmU2Zm43d25xd0xHb3EwOG9BVmY1cThIMmZsbkttUUY3eXBic2dqMHJZVHc4SnFUeVVaaW930gG-AUFVX3lxTFAzcXkzajlGeXVCYkFJNThWSFlyTFVDWTE1Q0Vub3MwZmwxOFB3bjg5ZzA0SmppcmltaFN4U1FvZEdkRGdfenE4cFEyVnpuWkhuWHBjY3J6NnJNdTF0ai1JTHIycl9LVlY0eV80cmpkSVdDbXQ3SDlNdmZVaTBBc3lLX3I3TXdDQXpGZTZmbjd3bnF3TEdvcTA4b0FWZjVxOEgyZmxuS21RRjd5cGJzZ2owcllUdzhKcVR5VVppb3c?oc=5",
-          "publishedAt": "2026-08-05T02:38:08+00:00",
-          "glossary": [
-            {
-              "term": "basic earnings per share (EPS)",
-              "definition": "Net profit attributable to each common share, before some adjustments used in diluted EPS."
-            },
-            {
-              "term": "revenue",
-              "definition": "The total money a company brought in from its normal business activities before expenses."
-            },
-            {
-              "term": "EBITDA",
-              "definition": "Earnings before interest, taxes, depreciation, and amortization, a measure of operating profit before non-cash and financing costs."
-            },
-            {
-              "term": "margins",
-              "definition": "The share of revenue that remains as profit after costs are paid."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is an earnings-and-stock-reaction story, so the main thing to watch is whether the quarter shows real improvement in the company’s operating performance, not just a temporary market move. The wording suggests investors care about the business being seen less as a collection of assets and more as a stronger operating company; that interpretation would change if the profit jump came from one-time items rather than sustained margin gains.",
-            "glossary": [
-              {
-                "term": "basic earnings per share (EPS)",
-                "definition": "Net profit attributable to each common share, before some adjustments used in diluted EPS.",
-                "whyItMatters": "It is a common way investors gauge how much profit the company generated for shareholders."
-              },
-              {
-                "term": "revenue",
-                "definition": "The total money a company brought in from its normal business activities before expenses.",
-                "whyItMatters": "Revenue shows the size of the business and helps frame whether profits are coming from growth or cost-cutting."
-              },
-              {
-                "term": "EBITDA",
-                "definition": "Earnings before interest, taxes, depreciation, and amortization, a measure of operating profit before non-cash and financing costs.",
-                "whyItMatters": "It helps compare operating performance by stripping out some accounting and financing differences."
-              },
-              {
-                "term": "margins",
-                "definition": "The share of revenue that remains as profit after costs are paid.",
-                "whyItMatters": "Wider margins mean the business is keeping more of each dollar it earns."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-3-2858",
-          "title": "Idle industrial sites draw interest from data centers",
-          "kicker": "pmg-ky2.com",
-          "summary": "Paducah Mayor George Bray says the former Paducah Gaseous Diffusion Plant in McCracken County is the ideal site for a hyperscale data center. The story points to interest in repurposing an idle industrial property for large-scale digital infrastructure. For energy and utilities, that signals potential new demand for power, land, and related services tied to data center development.",
-          "emailSummary": "Paducah Mayor George Bray calls the former Paducah Gaseous Diffusion Plant in McCracken County the ideal site for a hyperscale data center.",
-          "whyItMatters": "This matters because a hyperscale data center can become a major new electricity and infrastructure customer, affecting local utility planning and economic redevelopment.",
+          "id": "energy-1-43787",
+          "title": "Pennsylvania farmers seek data center freeze as power line plan cuts through protected land",
+          "kicker": "Yahoo",
+          "summary": "Pennsylvania farmers are asking for a freeze on data center development while a proposed power line route would cut through protected land. The only direct quote provided shows a landowner rejecting compensation for transmission lines crossing their property. For the Energy/Utilities angle, this points to a clash between new electricity demand, grid expansion, and land conservation.",
+          "emailSummary": "\"I have no interest in any amount of money [for] allowing transmission lines to run across my land.\".",
+          "whyItMatters": "This matters because large load growth from data centers can drive new transmission projects, and opposition from landowners or conservation rules can delay or reshape where those lines get built.",
           "dataSignals": [
             "data-center load"
           ],
-          "sourceLabel": "pmg-ky2.com · Aug 4, 7:00 PM ET",
-          "sourceUrl": "https://www.pmg-ky2.com/kystandard/news/idle-industrial-sites-draw-interest-from-data-centers/article_add9ab40-25fb-5665-b933-ca03f9a4ee7b.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNTndGUHIxQ2Mxanc5cXJIUDFMdkl1b3hEUC1JbG1QRlRsQnUxc3o5ZEl5NXhJbHU1UFdwWUpVbUtkb1pzQUpZWlFlWUt6MER0TWhTcFF4WS1iekxRTmpFMlc5VktfOUU3MWpOdmN6ZUhHUVNwV1VDZ3BVWTI3M3Btakt6bENmcGpNbzBjYzZWVWlUZGlMcDRvaXVNQ3QzbDZCUXVTTGRTM0lKektrczBzM1EzSzRUOWR6XzNDYXNrNGZIaW5vRDJqSGViQTRRSWs5RjBqdXpJeDhfQ0U?oc=5",
-          "publishedAt": "2026-08-04T23:00:00+00:00",
+          "sourceLabel": "Yahoo · Aug 5, 9:17 AM ET",
+          "sourceUrl": "https://www.yahoo.com/news/us/articles/pennsylvania-farmers-seek-data-center-131700477.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUkdQam1YNE9wT1ZPd05DZ2NzbEFsLWdxU3dkaGFfMElnTWxndjNuek5PZEozekZoM0dhcXNlTWQ1NWxsUTdXazhTX3lBOGFvb3M4SE1Ha3dRV01aOG4tRGZGUkJzanFoNnMzeElFU1lkdlF5dGgxQURlcy1SbEUzUlQwRmtpbFJ0aW4tZXQ2azF1YnZNQUE?oc=5",
+          "publishedAt": "2026-08-05T13:17:00+00:00",
+          "glossary": [],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a land-use and infrastructure conflict story tied to power demand, not a technical grid story by itself. When reading the source, pay attention to who is asking for the freeze, what land protections apply, and whether the transmission project is meant to support data centers specifically. The interpretation changes if the line is essential for broader grid reliability versus mainly serving new private load from data centers.",
+            "glossary": [
+              {
+                "term": "data center",
+                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
+                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
+              },
+              {
+                "term": "large load",
+                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
+                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-2-38218",
+          "title": "How Investors May Respond To NextEra Energy (NEE) Mega Kentucky Data Center Power Deal And Earnings Jump",
+          "kicker": "simplywall.st",
+          "summary": "NextEra Energy’s board declared a regular quarterly dividend of US$0.6232 per share and said second-quarter sales rose to US$7,534 million, with net income of US$3,144 million, both higher than a year earlier. A separate announcement said Brookfield, NextEra Energy, Big Rivers Electric Power Corporation, Jackson Purchase Energy Cooperative and Paducah Power System plan a privately funded US$100,000 million data center campus in Kentucky, which points to a very large new electricity demand buildout tied to the project.",
+          "emailSummary": "In late July 2026, NextEra Energy’s board declared a regular quarterly dividend of US$0.6232 per share and reported higher second-quarter sales…",
+          "whyItMatters": "This matters because a project of this scale can reshape local power demand, utility investment needs, and investor expectations for companies tied to serving the campus.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "simplywall.st · Aug 5, 6:06 AM ET",
+          "sourceUrl": "https://simplywall.st/stocks/us/utilities/nyse-nee/nextera-energy/news/how-investors-may-respond-to-nextera-energy-nee-mega-kentuck",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQRWFIRXo0d2llY1lCcUZvdGR0bzdWbTNVSHJUX3dKdF9XS2hEWEVvTVpCY3lZQ3E4UEhBci00amxTOGhzRjdUNFlhekJZWml0TFVGNGZxZkEwaUlUQmhaTzNYMkN2c05HNE1xSDhVNTY0b296aXphZ1JJRU1LQ3UyV3BYRmZwV2pHc3FZZDg5d1ZfaFZmUWwwTDBDakpmenV3U3Rqd18tNmNxZEdkMlMzeHowWVBMZ0Q2UWUycUJKcnhfLTlKMEM5Z0lZUdIB0AFBVV95cUxOMjRxcWxoSVJHN3VIMXZPQ1M1Z2RyQXcxbnNmV0ltWHM0di1vS0VuYTdDeHVheVc1WnpXeFBFSVRKckhtTmR2MnVRVnpGMjdVcHBXMzRQOF93ajNWYjY1eWk5UnBJSy1NMzZ1T3RxMFhib284eVFfWXczUXNKdXhJV3dXelhkUE5iZUx1YldiakdhNnlQU3gycGllVENGWnZERFdMRnZFZ1c5aVA4REVGRTd3X0gwVmVNMkZnMmpXMXk5RHp6MUJqeHd6NV81TDZv?oc=5",
+          "publishedAt": "2026-08-05T10:06:48+00:00",
+          "glossary": [
+            {
+              "term": "quarterly dividend",
+              "definition": "A payment a company makes to shareholders every three months."
+            },
+            {
+              "term": "net income",
+              "definition": "Profit after all expenses, taxes, and costs are paid."
+            },
+            {
+              "term": "data center campus",
+              "definition": "A large site with multiple buildings or facilities that house computer servers and related infrastructure."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a market-and-utility story that mixes company results with a major power-demand announcement. When reading the source, pay attention to the size of the dividend, the year-over-year earnings comparison, and which companies are involved in the Kentucky project. If the final details of the campus, the power arrangement, or the spending scale differ from the announcement, that would materially change how big the utility impact really is.",
+            "glossary": [
+              {
+                "term": "quarterly dividend",
+                "definition": "A payment a company makes to shareholders every three months.",
+                "whyItMatters": "It signals how much cash the company is returning to investors."
+              },
+              {
+                "term": "net income",
+                "definition": "Profit after all expenses, taxes, and costs are paid.",
+                "whyItMatters": "It is a key measure of whether a utility or energy company is actually earning money."
+              },
+              {
+                "term": "data center campus",
+                "definition": "A large site with multiple buildings or facilities that house computer servers and related infrastructure.",
+                "whyItMatters": "These projects can require massive, steady electricity service and drive utility planning."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-3-16174",
+          "title": "Bell County passed a data center moratorium. Residents worry that work continues.",
+          "kicker": "the-messenger.com",
+          "summary": "Bell County passed a two-year temporary ban on the data center project, but a construction contractor says the hyperscale data center developer asked him to keep clearing land where the facility is planned. Residents are worried that work may be continuing despite the moratorium. In energy and utilities terms, the key issue is whether physical site preparation is still moving forward even though county officials have paused the project.",
+          "emailSummary": "A construction contractor says a hyperscale data center developer asked him to continue to clear Bell County land where a data center is planned…",
+          "whyItMatters": "This matters because a moratorium is meant to stop project momentum, and continued site work could shape land use, local trust, and how strongly the county can enforce its decision.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "the-messenger.com · Aug 6, 1:00 AM ET",
+          "sourceUrl": "https://www.the-messenger.com/journal_enterprise/news/article_618b3099-b29e-5e5e-8e34-3cc0df65f784.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSmcyemR1TWxKd3BtNFZyNmRQcWlyUVBDUXo3dGlLMHh0RjFDZnJSWUFEUmhaQThnb2pmNklxTFFEcGdDOVAxRHFHYXhyaWVkQUpLWkVUblkzRkNNdDBTWEhTWFg4X3FrZGdNV2RYeGwzU3pCYVk5cGgzRVVoVDR4bjU4d2swZHRQaHhZdzZXX3ljVWFWY2QwQVJ3WW4zcUhwRF84WWJn?oc=5",
+          "publishedAt": "2026-08-06T05:00:00+00:00",
+          "glossary": [
+            {
+              "term": "moratorium",
+              "definition": "A temporary ban or pause on an activity."
+            },
+            {
+              "term": "hyperscale data center",
+              "definition": "A very large data center built to support massive computing and storage demand."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a local land-use and project-enforcement story inside the broader energy and utilities space, because data centers often drive major electricity and infrastructure demands. When reading the source, focus on whether the reported clearing work happened after the ban took effect and whether it was authorized or merely requested. The interpretation would change if officials confirm the work was allowed, or if they say it violated the moratorium.",
+            "glossary": [
+              {
+                "term": "moratorium",
+                "definition": "A temporary ban or pause on an activity.",
+                "whyItMatters": "It sets the legal boundary for whether a project can keep moving forward."
+              },
+              {
+                "term": "hyperscale data center",
+                "definition": "A very large data center built to support massive computing and storage demand.",
+                "whyItMatters": "These facilities can have major local impacts on land, power, and infrastructure."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-4-33385",
+          "title": "Idle industrial sites draw interest from data centers",
+          "kicker": "Kentucky New Era",
+          "summary": "Paducah Mayor George Bray says the former Paducah Gaseous Diffusion Plant in McCracken County is the ideal site for a hyperscale data center. The story points to interest in repurposing idle industrial property for large-scale digital infrastructure. For the energy and utilities world, that suggests older utility-heavy sites may be seen as attractive locations for power-intensive projects like data centers.",
+          "emailSummary": "Paducah Mayor George Bray calls the former Paducah Gaseous Diffusion Plant in McCracken County the ideal site for a hyperscale data center.",
+          "whyItMatters": "This matters because data centers can drive major electricity demand and influence where utilities plan generation, transmission, and grid upgrades.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "Kentucky New Era · Aug 6, 1:00 AM ET",
+          "sourceUrl": "https://www.kentuckynewera.com/ep/news/article_57e61c92-8ea0-5229-bdc4-4bbda35ca525.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPdW11emNuWFpLa1ltLXY4dXVOck85T3JXS0RHOUxwTFdFU3pyVjdHckNvcm43YWxDa2dqOHB0MmtZTldpdExlaE5heEptT1ROOU9ORHMwX2hJUFo1dDBMekJRV3ZKX3ZKMGN2aE5MS0J0QmM1c1dZa2ZNM0pOaEpiR21kM01qX29uaUxpSEFoRG9PQQ?oc=5",
+          "publishedAt": "2026-08-06T05:00:00+00:00",
           "glossary": [
             {
               "term": "hyperscale data center",
               "definition": "A very large data center built to support massive computing and storage needs."
             },
             {
-              "term": "industrial site",
-              "definition": "A property previously used for large-scale manufacturing or industrial operations."
+              "term": "gaseous diffusion plant",
+              "definition": "An industrial facility once used for a uranium-enrichment process that separates gases through porous barriers."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a redevelopment-and-infrastructure story, not a detailed utility policy story. When reading the source, focus on who is identifying the site, what type of facility is being proposed, and whether the location already has the power, land, and permitting characteristics a data center would need. The interpretation changes most if the source later confirms site control, utility capacity, environmental constraints, or an actual project commitment rather than just interest.",
+            "explanationText": "This is a site-selection and infrastructure story, not a policy announcement. When reading the source, focus on who is describing the site, what kind of project is being considered, and whether the claim is just interest or a concrete development plan. The interpretation changes a lot if the site is merely being promoted versus actually moving through permitting, power-supply planning, or an announced deal.",
             "glossary": [
               {
                 "term": "hyperscale data center",
                 "definition": "A very large data center built to support massive computing and storage needs.",
-                "whyItMatters": "Hyperscale facilities can require substantial power, cooling, and grid capacity, which is central to utility planning."
+                "whyItMatters": "Hyperscale facilities typically use far more electricity and infrastructure than ordinary buildings, which affects local utility planning."
               },
               {
-                "term": "industrial site",
-                "definition": "A property previously used for large-scale manufacturing or industrial operations.",
-                "whyItMatters": "Old industrial sites are often considered for redevelopment because they may already have space and infrastructure suited to heavy users."
+                "term": "gaseous diffusion plant",
+                "definition": "An industrial facility once used for a uranium-enrichment process that separates gases through porous barriers.",
+                "whyItMatters": "Former nuclear-industrial sites often have large footprints and utility connections that can make them candidates for redevelopment."
               }
             ]
           }
         },
         {
-          "id": "energy-4-76888",
-          "title": "Louisville mayor calls for a data center moratorium as city considers regulations",
-          "kicker": "Kentucky Lantern",
-          "summary": "Louisville’s mayor is asking city council members to approve a temporary ban, or moratorium, on new data center construction. The move comes as the city considers regulations for data centers. For the Energy / Utilities space, this signals a pause while Louisville weighs how these large facilities should be managed locally.",
-          "emailSummary": "The mayor of Kentucky’s largest city is calling on city council members to pass a temporary ban or moratorium on data center construction.",
-          "whyItMatters": "This matters because a moratorium can slow or redirect new data center development, affecting electricity demand, utility planning, and local permitting decisions.",
+          "id": "energy-5-23686",
+          "title": "Land and sewage agreements for massive AI data center face township vote",
+          "kicker": "WGAL",
+          "summary": "Middlesex Township supervisors delayed action on PAX-1 data center items after the meeting drew more people than the room could hold. Some attendees had to stand or wait outside. The story signals local review of land and sewage-related agreements tied to a large AI data center, with public attention already high enough to affect the meeting itself.",
+          "emailSummary": "Middlesex Township supervisors delayed action on PAX-1 data center items after attendance surpassed room capacity, forcing attendees to stand or…",
+          "whyItMatters": "This matters because township decisions on land use and sewer arrangements can determine whether a large data center can move forward and how much strain it may place on local infrastructure.",
           "dataSignals": [
             "data-center load"
           ],
-          "sourceLabel": "Kentucky Lantern · Aug 4, 4:57 PM ET",
-          "sourceUrl": "https://kentuckylantern.com/2026/08/04/louisville-mayor-calls-for-a-data-center-moratorium-as-city-considers-regulations/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbXI1ODcybDJzdDU2MHBWRmFqRDZNRl9teDMzYnR0eEI5WlJPUG9ZOFRjMmlBREdoNjBsNlFqdEc4c2VCdmp3X0FxRVV3MnpRMkVaRER6ZXR1bnExT2o3TG9GeUxmcWNzdnZZak5tSWwxNGhXVENOZHlxWDl2SXQtSDFmeGZ2X3Q5SVl6OHJGRkZvVjF5NnNKbTJaTXJOTWx5MUtvMGNINHhienc2eHo2Ni11U3NvY3VMQllheEFB?oc=5",
-          "publishedAt": "2026-08-04T20:57:48+00:00",
+          "sourceLabel": "WGAL · Aug 5, 6:05 PM ET",
+          "sourceUrl": "https://www.wgal.com/article/middlesex-township-supervisors-vote-ai-data-center-project-pennsylvania/73358756",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVy0zNTJ6NzhvZDc2TGxKLUFQRFcxc2Vjek9BWUFVSklBZGQxWFVMclJNMzRIOHBmemJucURZWkhYYVE5bEcwd1A3RGwtM0JkSXlSc2xaN3dkd0hZdjR3akIyb1BFRmRuNFdlVzFoTXBqX1VNS1ptcWpIc3FlYnRYQVRXZUJzQjBoWFRTQURwRGFjRXItOHFVQkg1R2pmUW9idXlBcEROdF9MTjZDWkE?oc=5",
+          "publishedAt": "2026-08-05T22:05:03+00:00",
           "glossary": [
             {
               "term": "data center",
-              "definition": "A facility full of servers and related equipment used to store, process, and deliver digital services and data."
+              "definition": "A facility that houses computer systems and equipment used to store, process, and transmit digital data."
             },
             {
-              "term": "moratorium",
-              "definition": "A temporary halt on a type of activity while rules or policy are being reviewed."
+              "term": "township supervisors",
+              "definition": "Elected local officials who make decisions for the township, including land-use and infrastructure matters."
+            },
+            {
+              "term": "sewage agreement",
+              "definition": "A local arrangement that governs how wastewater from a site will be handled and connected to sewer services."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a local policy and permitting story, not a technical story about data center design. When reading the source, pay attention to whether the city is proposing a temporary pause only, or broader regulations that could still allow construction under new conditions. The interpretation changes a lot if the pause is short-term and procedural versus part of a longer effort to restrict data center growth.",
+            "explanationText": "This is a local government and infrastructure story centered on a proposed AI data center, not a technology-product story. When reading the source, focus on what the supervisors are being asked to approve and whether the issue is land use, sewer service, or both, because those details affect the project’s timeline and feasibility. If later reporting shows the agreements were approved, delayed again, or changed, that would materially change the outlook for the development.",
             "glossary": [
               {
                 "term": "data center",
-                "definition": "A facility full of servers and related equipment used to store, process, and deliver digital services and data.",
-                "whyItMatters": "Data centers can place heavy demands on electric infrastructure and local land-use planning."
+                "definition": "A facility that houses computer systems and equipment used to store, process, and transmit digital data.",
+                "whyItMatters": "Data centers often require major land, power, water, and sewer planning, so local approvals can shape whether they get built."
               },
               {
-                "term": "moratorium",
-                "definition": "A temporary halt on a type of activity while rules or policy are being reviewed.",
-                "whyItMatters": "A moratorium can immediately pause new projects before permanent regulations are set."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-5-70479",
-          "title": "The role of data centers in the Democratic primaries",
-          "kicker": "WUKY",
-          "summary": "Democratic candidates in some key Midwestern races are focusing on data centers, and opposition to new data centers is becoming politically important. The description says voter distrust of big tech is helping make resistance to data centers a salient issue. For the energy and utilities world, that signals data centers are not just a load-growth topic but also a local political one.",
-          "emailSummary": "Democratic candidates in some key Midwestern races are focusing on data centers. Resistance to data centers is proving to be politically salient…",
-          "whyItMatters": "This matters because political resistance can shape where data centers are built, how quickly they get permitted, and what new electricity demand utilities may ultimately serve.",
-          "dataSignals": [
-            "data-center load"
-          ],
-          "sourceLabel": "WUKY · Aug 4, 4:16 PM ET",
-          "sourceUrl": "https://www.wuky.org/2026-08-04/the-role-of-data-centers-in-the-democratic-primaries",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMUcxRXoyeGZjSWVhMXRrcnExU0ZZNDJuS25DeEV3TlR1Z0VRc2QyaXNkMWpYQjZBaUVqcXFZQ3QwanBPN21iQ0ZscUJKc0plWWZJT1NjakZNUXZpbm44ZkV4S0I2X2dnQXhLLW50anIyUV90VXY0RV9aaFBZZVVDLVNteWdmdzQ1LVJyMQ?oc=5",
-          "publishedAt": "2026-08-04T20:16:00+00:00",
-          "glossary": [
-            {
-              "term": "data centers",
-              "definition": "Facilities that house servers and networking equipment to store, process, and deliver digital services and data."
-            },
-            {
-              "term": "Midwestern races",
-              "definition": "Electoral contests in Midwestern states or districts."
-            },
-            {
-              "term": "big tech",
-              "definition": "A informal term for the largest technology companies."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a politics-and-utilities story about how a new kind of electricity load is becoming part of campaign messaging. When reading the source, pay attention to whether the issue is framed as local community pushback, broader distrust of tech companies, or concerns about energy demand. If candidates are responding to real voter backlash, that could slow approvals and change utility load forecasts; if it is mostly campaign rhetoric, the practical impact may be smaller.",
-            "glossary": [
-              {
-                "term": "data centers",
-                "definition": "Facilities that house servers and networking equipment to store, process, and deliver digital services and data.",
-                "whyItMatters": "They can require large amounts of electricity and infrastructure, making them a major utility-planning issue."
+                "term": "township supervisors",
+                "definition": "Elected local officials who make decisions for the township, including land-use and infrastructure matters.",
+                "whyItMatters": "Their vote can approve, delay, or block agreements tied to the project."
               },
               {
-                "term": "Midwestern races",
-                "definition": "Electoral contests in Midwestern states or districts.",
-                "whyItMatters": "Local election dynamics can influence how much support data center projects receive."
-              },
-              {
-                "term": "big tech",
-                "definition": "A informal term for the largest technology companies.",
-                "whyItMatters": "Public distrust of these firms can turn data center development into a political issue."
+                "term": "sewage agreement",
+                "definition": "A local arrangement that governs how wastewater from a site will be handled and connected to sewer services.",
+                "whyItMatters": "For large developments, sewer capacity and permits can be a key limit on whether the project can proceed."
               }
             ]
           }
@@ -535,203 +509,25 @@
       "emptyMessage": "No qualified Humana / Health Insurance stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "humana-1-96810",
-          "title": "The Manufacturers Life Insurance Company Reduces Stock Holdings in Humana Inc. $HUM",
-          "kicker": "MarketBeat",
-          "summary": "The Manufacturers Life Insurance Company cut its Humana stake by 16.0% in the first quarter, according to its latest SEC filing. After the sale, it still owned 63,495 shares. For Humana investors, this is a routine institutional ownership update that can signal a portfolio shift, but by itself it does not say anything about Humana’s operating performance or outlook.",
-          "emailSummary": "The Manufacturers Life Insurance Company reduced its holdings in shares of Humana Inc. (NYSE:HUM - Free Report) by 16.0% during the 1st quarter…",
-          "whyItMatters": "This matters because large institutional trades can affect how investors read sentiment around a health insurer’s stock and may hint at portfolio rebalancing or risk management.",
+          "id": "humana-1-43966",
+          "title": "Drug Cos. Can't Trim Humana's Price-Fix Claims In Bellwether",
+          "kicker": "Law360",
+          "summary": "A Pennsylvania federal judge refused to dismiss two antitrust claims that Humana brought against several generic drug manufacturers in a long-running multidistrict case. The judge found the claims were filed within the statute of limitations, so they can stay in an upcoming bellwether trial. For health insurance, that keeps Humana's price-fixing allegations alive in a case that could influence how similar claims are handled.",
+          "emailSummary": "A Pennsylvania federal judge on Tuesday denied a bid by a number of generic drug manufacturers to dismiss two antitrust claims brought by health…",
+          "whyItMatters": "This matters because the ruling keeps a major insurer’s antitrust claims in play, which could affect drug-cost litigation and the pricing pressure health plans face.",
           "dataSignals": [
-            "Humana mention"
+            "Humana mention",
+            "claims / operations"
           ],
-          "sourceLabel": "MarketBeat · Aug 4, 4:13 PM ET",
-          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-the-manufacturers-life-insurance-company-reduces-stock-holdings-in-humana-inc-hum-2026-08-04/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZjVIQ0RzaUlXeWdxcUZjazM0ZjVQZmZVX0ptcFpkVzJENDlkQk53U1lhZm40SDd5el8xUEhHNkdEVDlHTDY2UU5hNFlINlFYVktUSnczR3VkVDFSclJDNG9mRmZYUzJYdFpnVVJWeW0zSEo1aEpZaEVTQm5wMmtJVEdsM1dIZTJmZHJubzJCQ3pYb2JITVBOYUZPNm5ZNE1rdzVQVDdGZElfNEdGTG12M0NfNUUta0JISktSLTZSaDVtSlhxQzNKWk56VkxxRzhZR1VvRVZ2N1ZFZw?oc=5",
-          "publishedAt": "2026-08-04T20:13:57+00:00",
-          "glossary": [
-            {
-              "term": "Institutional investor",
-              "definition": "An organization such as a bank, insurer, or fund that invests money on behalf of clients or members."
-            },
-            {
-              "term": "SEC filing",
-              "definition": "A formal report submitted to the U.S. Securities and Exchange Commission that discloses financial or ownership information."
-            },
-            {
-              "term": "Holdings",
-              "definition": "The shares or assets an investor currently owns."
-            }
-          ],
+          "sourceLabel": "Law360 · Aug 5, 10:24 PM ET",
+          "sourceUrl": "https://www.law360.com/georgia/articles/2510105/drug-cos-can-t-trim-humana-s-price-fix-claims-in-bellwether",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZlBISU1kRTB2cVc4VDFpZmRraFM5Q2sycHctVXdZa3V5ZXo4UEZZc3hIdmw4TEJOUktZWUpON1ROeGhDQnVrRG9Ncm5KUHVMdmJZdU9uUWl6b0NKZ21jNDNxRkJjU2RMNXRVQWhVbW9jLWhCd1E0SkxLUDZiMlNLZW5sME1iVXNJRFg3QTVwTmN5a21aeER4WTN0cnVsaFJJTU9oRG1XcW9iYXPSAVZBVV95cUxOdkkwYjF5aEl4ek8wVlBKOGUxNmR5NjhGQ2dBRUxVQm54Q0hHMGJTS05JVFZYSGItQnhZVEhMeFFLVWdqcjkwVFZxX2lYLV9zUkxrUW40QQ?oc=5",
+          "publishedAt": "2026-08-06T02:24:00+00:00",
+          "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is an ownership-change story, not an earnings or business-performance story. When reading it, focus on who changed their position, by how much, and whether the filing shows a broader trend across multiple investors. Interpretation would change if the same filing were accompanied by large, repeated selling across institutions, or by company news that explains why investors might be adjusting exposure.",
-            "glossary": [
-              {
-                "term": "Institutional investor",
-                "definition": "An organization such as a bank, insurer, or fund that invests money on behalf of clients or members.",
-                "whyItMatters": "Institutional buying or selling can move stock ownership and influence market sentiment."
-              },
-              {
-                "term": "SEC filing",
-                "definition": "A formal report submitted to the U.S. Securities and Exchange Commission that discloses financial or ownership information.",
-                "whyItMatters": "These filings are the source for tracking changes in major shareholdings."
-              },
-              {
-                "term": "Holdings",
-                "definition": "The shares or assets an investor currently owns.",
-                "whyItMatters": "A change in holdings shows whether an investor is increasing or reducing exposure to a company."
-              }
-            ]
-          }
-        },
-        {
-          "id": "humana-2-87114",
-          "title": "What Humana (HUM)'s Q2 Beat, EPS Cut and Buybacks Mean For Shareholders",
-          "kicker": "simplywall.st",
-          "summary": "Humana reported second-quarter 2026 revenue of US$40,867 million and net income of US$694 million. At the same time, it cut full-year 2026 GAAP EPS guidance to at least US$6.52 from at least US$8.36. The company also completed a US$276.13 million share repurchase program and added Paul Smith and Frederick Crawford to its board, which may affect future governance and capital allocation decisions. For health insurance investors, the key takeaway is that the quarter was financially solid enough to report large revenue and profit figures, but management is now signaling lower expected earnings for the full year.",
-          "emailSummary": "Humana Inc. has already reported second-quarter 2026 results, with revenue of US$40,867 million and net income of US$694 million, while also low…",
-          "whyItMatters": "This matters because changes to earnings guidance and capital returns can alter how investors value a health insurer’s future growth, profitability, and shareholder payouts.",
-          "dataSignals": [
-            "Humana mention"
-          ],
-          "sourceLabel": "simplywall.st · Aug 4, 4:39 PM ET",
-          "sourceUrl": "https://simplywall.st/stocks/us/healthcare/nyse-hum/humana/news/what-humana-hums-q2-beat-eps-cut-and-buybacks-mean-for-share/amp",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPdDBDVDhNVnh5b3EydVFQSm1xMDdUZVFSN2dsNXlDQ001YWRScFdCU203X1dsYXBPczIzUzJWTkV4Nld1TDZUbDZGc184U0xWb0R3bXRRaVJOb09ZUkZyT3JYd195Z1g0cmFZQ0pGLVZ2QzRRLWtsSFN5NEJ6T0NoQ1JCN1FhRXcwWlF4RGV6MjhjUTlWQWhlcXFneXpySjZYaEdOdFM1VnNFMXVPTl9WYTQ4UFN3cTk4U0pFTTlUamY2eXNhbDd30gHHAUFVX3lxTE90MENUOE1WeHlvcTJ1UVBKbXEwN1RlUVI3Z2w1eUNDTTVhZFJwV0JTbTdfV2xhcE9zMjNTMlZORXg2V3VMNlRsNkZzXzhTTFZvRHdtdFFpUk5vT1lSRnJPclh3X3lnWDRyYVlDSkYtVnZDNFEta2xIU3k0QnpPQ2hDUkI3UWFFdzBaUXhEZXoyOGNROVZBaGVxcWd5enJKNlhoR050UzVWc0UxdU9OX1ZhNDhQU3dxOThTSkVNOVRqZjZ5c2FsN3c?oc=5",
-          "publishedAt": "2026-08-04T20:39:39+00:00",
-          "glossary": [
-            {
-              "term": "GAAP EPS",
-              "definition": "Earnings per share calculated using Generally Accepted Accounting Principles, the standard accounting rules used in U.S. financial reporting."
-            },
-            {
-              "term": "share repurchase program",
-              "definition": "A company’s plan to buy back its own shares from the market."
-            },
-            {
-              "term": "board",
-              "definition": "The group of directors responsible for overseeing a company’s management and major strategic decisions."
-            },
-            {
-              "term": "capital allocation",
-              "definition": "The way a company decides to use its cash, such as reinvesting in the business, paying dividends, or buying back shares."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a mixed earnings-and-corporate-governance story, so the main things to watch are the revenue and net income figures, the size of the EPS guidance cut, and whether buybacks or board changes point to a shift in strategy. The interpretation would change if later reporting shows the earnings cut was temporary, if margins improve, or if the new directors drive a different capital allocation approach.",
-            "glossary": [
-              {
-                "term": "GAAP EPS",
-                "definition": "Earnings per share calculated using Generally Accepted Accounting Principles, the standard accounting rules used in U.S. financial reporting.",
-                "whyItMatters": "A lower GAAP EPS outlook usually signals weaker expected profitability on a standard reporting basis."
-              },
-              {
-                "term": "share repurchase program",
-                "definition": "A company’s plan to buy back its own shares from the market.",
-                "whyItMatters": "Buybacks can reduce the number of shares outstanding and support per-share results."
-              },
-              {
-                "term": "board",
-                "definition": "The group of directors responsible for overseeing a company’s management and major strategic decisions.",
-                "whyItMatters": "Board changes can affect governance, strategy, and capital allocation."
-              },
-              {
-                "term": "capital allocation",
-                "definition": "The way a company decides to use its cash, such as reinvesting in the business, paying dividends, or buying back shares.",
-                "whyItMatters": "How cash is allocated can shape future growth and shareholder returns."
-              }
-            ]
-          }
-        },
-        {
-          "id": "humana-3-338",
-          "title": "Evercore ISI adds Humana, NRG Energy to best core ideas list",
-          "kicker": "Traders Union",
-          "summary": "Evercore ISI added Humana and NRG Energy to its Best Core Ideas list. The firm is highlighting both dividend-paying stocks as top picks for a one-year horizon. For the health insurance space, the key point is that Humana is now being singled out by a major analyst firm as a favored name over the next year.",
-          "emailSummary": "Evercore ISI adds Humana and NRG Energy to its Best Core Ideas list, highlighting these dividend-paying stocks as top picks for a one-year horiz…",
-          "whyItMatters": "This matters because analyst upgrades or inclusion on a top-picks list can influence investor attention and sentiment toward Humana, which can affect how the market views the company’s near-term prospects.",
-          "dataSignals": [
-            "Humana mention"
-          ],
-          "sourceLabel": "Traders Union · Aug 4, 3:58 PM ET",
-          "sourceUrl": "https://tradersunion.com/news/financial-news/show/2900398-evercore-isi-humana-nrg-core-ideas/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOYmNUVVJ1aTJ0RlNCTHBFZ0FDaERpQXRXSTN3TGFSQm5SOGlPUmJVXzVoaERLTk5kdTlKQVR5MnNkR3FoNVlEUTF2V1VMY3BQMVRKcGZuY0ZfYkxkMkN5OXhGU2hKZktSNUJoYTFDTVAydElMdzFSc3loOElucWJkbFVHSXNBZ0VYUmtYUkhtSk1SSnhEcU1aUQ?oc=5",
-          "publishedAt": "2026-08-04T19:58:33+00:00",
-          "glossary": [
-            {
-              "term": "Best Core Ideas list",
-              "definition": "A shortlist of a firm’s preferred investment ideas, usually based on its research and conviction."
-            },
-            {
-              "term": "dividend-paying stock",
-              "definition": "A stock from a company that returns part of its profits to shareholders as regular cash payments."
-            },
-            {
-              "term": "one-year horizon",
-              "definition": "The expected time frame for the investment call, here meaning about the next 12 months."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is an analyst-ratings and stock-selection story, not a business-operations update. When reading it, focus on which companies were chosen, the time frame, and whether the call is based on valuation, dividends, or other investment appeal. If later coverage explains why Humana was selected or changes the outlook, that would materially affect how strong or durable this recommendation is.",
-            "glossary": [
-              {
-                "term": "Best Core Ideas list",
-                "definition": "A shortlist of a firm’s preferred investment ideas, usually based on its research and conviction.",
-                "whyItMatters": "Being added can signal stronger analyst support and draw more investor interest."
-              },
-              {
-                "term": "dividend-paying stock",
-                "definition": "A stock from a company that returns part of its profits to shareholders as regular cash payments.",
-                "whyItMatters": "Dividend status can make a stock more attractive to income-focused investors."
-              },
-              {
-                "term": "one-year horizon",
-                "definition": "The expected time frame for the investment call, here meaning about the next 12 months.",
-                "whyItMatters": "It tells readers how long the analyst expects the thesis to play out."
-              }
-            ]
-          }
-        },
-        {
-          "id": "humana-4-6142",
-          "title": "Humana's Aug. 26 service day to include food banks, park cleanups",
-          "kicker": "Stock Titan",
-          "summary": "Humana says its annual service day on Aug. 26 will include food bank work, park cleanups and other volunteer activities. The company says more than 12,000 employees took part in 220 events across 27 states and Puerto Rico in 2025, and that 2026 efforts will focus on food insecurity, parks and social connection. For health insurance, that points to community engagement as part of the company’s public-facing mission, especially around social factors that affect health.",
-          "emailSummary": "More than 12,000 employees joined 220 events across 27 states and Puerto Rico in 2025; 2026 efforts target food insecurity, parks and social con…",
-          "whyItMatters": "This matters because community health efforts can shape Humana’s reputation and show where the company is directing employee volunteer energy toward local needs that can affect health outcomes.",
-          "dataSignals": [
-            "Humana mention"
-          ],
-          "sourceLabel": "Stock Titan · Aug 4, 8:00 AM ET",
-          "sourceUrl": "https://www.stocktitan.net/news/HUM/humana-community-day-2026-mobilizes-thousands-of-employees-sriegbjlxmws.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcU1ZNzlmdE83XzJMSFBpckk5Q1g1Y21ZTUsxNTNIZVdjcDM0R2lFQXd3SlRtczY2SlZ6eWcxM3BXR2IxaDl3TEtQa0F5QU9BMjdTVWlKdXJnc19ZS0M0bEU5UzQ0XzZTMUJxQ0Q0dFNKczBDXzR2Ti1LdE9QalYxeFBMZ2FKNUFOSlhvbVZDOFBYcU1fYlBYSDd0U1lGajZnMjF5cmNGSVlyUGpSc1dORHh3?oc=5",
-          "publishedAt": "2026-08-04T12:00:00+00:00",
-          "glossary": [
-            {
-              "term": "food insecurity",
-              "definition": "A lack of reliable access to enough affordable, nutritious food."
-            },
-            {
-              "term": "social connection",
-              "definition": "The degree to which people have relationships and interaction with others in their community."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a corporate community-relations story, not a product or earnings update. When reading the source, pay attention to the scale of participation, the kinds of volunteer activities named, and the specific social issues the company says it wants to address. If those priorities expand or shift in future years, that would change how meaningful this is as a health-focused initiative versus a one-day volunteer event.",
-            "glossary": [
-              {
-                "term": "food insecurity",
-                "definition": "A lack of reliable access to enough affordable, nutritious food.",
-                "whyItMatters": "It is a major social driver of health and a likely focus area for community programs."
-              },
-              {
-                "term": "social connection",
-                "definition": "The degree to which people have relationships and interaction with others in their community.",
-                "whyItMatters": "Social isolation can affect health, so programs that build connection may support broader well-being."
-              }
-            ]
+            "explanationText": "This is a procedural court-ops story, not a merits ruling on whether price-fixing actually happened. When reading the source, pay attention to whether the judge is deciding timing and case management versus deciding the underlying antitrust facts. If a later ruling finds the claims unsupported on the evidence, the interpretation changes; for now, the key point is simply that Humana's claims remain in the bellwether case.",
+            "glossary": []
           }
         }
       ]
@@ -742,169 +538,95 @@
       "emptyMessage": "No qualified Kentucky Healthcare / US Healthcare stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "kentucky_healthcare-1-19230",
-          "title": "St. Elizabeth Healthcare named Greater Cincinnati’s No. 1 hospital for first time and Kentucky’s No. 1 for second consecutive year",
-          "kicker": "Northern Kentucky Tribune",
-          "summary": "St. Elizabeth Edgewood was named the No. 1 hospital in Greater Cincinnati for the first time and the No. 1 hospital in Kentucky for the second year in a row, according to U.S. News & World Report. The recognition signals that the hospital is being ranked at the top of both its regional market and the state. Because the description is truncated, no additional ranking details are available here.",
-          "emailSummary": "In a landmark achievement, St. Elizabeth Edgewood has been named the No. 1 hospital in Greater Cincinnati and, for the second consecutive year…",
-          "whyItMatters": "This matters because top rankings can influence patient choice, hospital reputation, and competitive standing in Kentucky’s healthcare market.",
+          "id": "kentucky_healthcare-1-89299",
+          "title": "Can a blood pressure ring replace your doctor’s cuff?",
+          "kicker": "Norton Healthcare",
+          "summary": "A blood pressure ring may be useful for tracking trends over time, but the Food and Drug Administration warns against using cuffless devices for clinical decisions. The piece focuses on what wearables can and cannot tell you about heart health. For healthcare, that means consumer devices may support monitoring, but they do not replace validated medical measurements when treatment decisions are on the line.",
+          "emailSummary": "A blood pressure ring may track trends, but the Food and Drug Administration warns against using cuffless devices for clinical decisions. Here’s…",
+          "whyItMatters": "This matters because patients and clinicians need to know whether wearable readings are good enough for medical decisions or only for informal trend-spotting.",
           "dataSignals": [
-            "Kentucky healthcare",
-            "hospital operations"
+            "article trigger",
+            "source credibility",
+            "practical impact"
           ],
-          "sourceLabel": "Northern Kentucky Tribune · Aug 5, 12:45 AM ET",
-          "sourceUrl": "https://nkytribune.com/2026/08/st-elizabeth-healthcare-named-greater-cincinnatis-no-1-hospital-for-first-time-and-kentuckys-no-1-for-second-consecutive-year/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQSzlyTXZ2d1l1NV80X24zSmZYdHNiNHlueWs2M2xaclhvbjlCWWl6SWN0eThTRTlMaU83RmVGc0U5T0p4RHp5NWJRTlBkNUJRWERtSHoteEs2emt2a2R0ZnRLQ0JJUFp3OTJIekgwRmZwUWhjcUM3Nnk3MUliRlJjNXJWT2hHN2JvZHJaNlhPejNKeGNNUDlSdmtUN3hMTkJmc1p4UTdUMXdPUVNyY2d0TmVfc1liMzhKcmwyaE85UWJVZDIyNWZSZkdsZGR4Q1JtVnNLQ1pNTER5dm5HUElUUThYd0t1NzFwM1lUSDln?oc=5",
-          "publishedAt": "2026-08-05T04:45:21+00:00",
+          "sourceLabel": "Norton Healthcare · Aug 5, 12:45 PM ET",
+          "sourceUrl": "https://nortonhealthcare.com/news/blood-pressure-wearable-ring",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1mSl9uc2tCb0xoODlHVnFlWDJvVjZEaHFwcUVRcmNHdzd1WHBHVXpKVHdtZkEwVmROdThLYjdQeUFIV3ZHMXJXc0VMVU1wcFFmT0twSnFteXpiWm1jdTlvZWhIcWlEUjlSMDRmVzNySQ?oc=5",
+          "publishedAt": "2026-08-05T16:45:39+00:00",
           "glossary": [
             {
-              "term": "U.S. News & World Report",
-              "definition": "A media company that publishes widely watched rankings, including hospital rankings."
+              "term": "Food and Drug Administration (FDA)",
+              "definition": "The U.S. agency that regulates drugs, medical devices, and other health products."
             },
             {
-              "term": "Greater Cincinnati",
-              "definition": "The larger Cincinnati metropolitan region, which includes nearby communities in northern Kentucky and southern Ohio."
+              "term": "cuffless device",
+              "definition": "A blood pressure monitor that measures without the inflatable arm cuff used in standard devices."
+            },
+            {
+              "term": "clinical decisions",
+              "definition": "Medical choices made by a clinician, such as whether to diagnose, treat, or adjust medication."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a rankings story, so the key thing to watch is who is doing the ranking and what geography it covers. In the full source, the most important details would be the criteria behind the ranking and whether it refers to overall hospital performance or specific specialties. If those criteria changed, the meaning of the No. 1 placement could change a lot.",
+            "explanationText": "This is a consumer health-technology story about the limits of a wearable medical device. When reading it, pay attention to the difference between tracking trends and making clinical decisions, because that distinction determines how much trust to place in the device. The interpretation would change only if the device were shown to have FDA clearance or evidence strong enough to support medical use, which the description does not claim.",
             "glossary": [
               {
-                "term": "U.S. News & World Report",
-                "definition": "A media company that publishes widely watched rankings, including hospital rankings.",
-                "whyItMatters": "Its rankings are often used by patients and providers as a shorthand for quality and reputation."
+                "term": "Food and Drug Administration (FDA)",
+                "definition": "The U.S. agency that regulates drugs, medical devices, and other health products.",
+                "whyItMatters": "Its guidance affects whether a device can be relied on for diagnosis or treatment decisions."
               },
               {
-                "term": "Greater Cincinnati",
-                "definition": "The larger Cincinnati metropolitan region, which includes nearby communities in northern Kentucky and southern Ohio.",
-                "whyItMatters": "Being ranked No. 1 in this area suggests strong regional competitiveness, not just local performance."
+                "term": "cuffless device",
+                "definition": "A blood pressure monitor that measures without the inflatable arm cuff used in standard devices.",
+                "whyItMatters": "These devices may be convenient, but their readings may not be accurate enough for clinical use."
+              },
+              {
+                "term": "clinical decisions",
+                "definition": "Medical choices made by a clinician, such as whether to diagnose, treat, or adjust medication.",
+                "whyItMatters": "If a device cannot support clinical decisions, it should not be treated like a replacement for standard testing."
               }
             ]
           }
         },
         {
-          "id": "kentucky_healthcare-2-56135",
-          "title": "St. Elizabeth Edgewood ranked No. 1 hospital in Kentucky, Greater Cincinnati",
-          "kicker": "LINK nky",
-          "summary": "St. Elizabeth Edgewood was named the top hospital in Kentucky and Greater Cincinnati by U.S. News & World Report. The ranking highlights the hospital’s standing in a widely watched national comparison of hospital performance. For healthcare readers, it signals that St. Elizabeth Edgewood is being recognized as a leading provider in its region.",
-          "emailSummary": "St. Elizabeth Edgewood was named the top hospital in Kentucky and Greater Cincinnati in U.S. News & World Report.",
-          "whyItMatters": "This matters because hospital rankings can influence patient choice, insurer negotiations, and how healthcare systems are perceived in the local market.",
+          "id": "kentucky_healthcare-2-64146",
+          "title": "Eastern Kentucky program aims to boost regional healthcare workforce",
+          "kicker": "Morehead State Public Radio",
+          "summary": "Some community health centers in eastern Kentucky are training and educating potential employees to help fill medical workforce gaps. The program is aimed at strengthening the regional healthcare workforce by building a pipeline of workers locally. For eastern Kentucky, that could mean more staffing support for clinics and other care sites that struggle to hire enough people.",
+          "emailSummary": "Some community health centers in eastern Kentucky are training and educating potential employees to fill medical workforce gaps.",
+          "whyItMatters": "This matters because healthcare access in the region depends on having enough trained staff to keep clinics and community health centers open and functioning.",
           "dataSignals": [
             "Kentucky healthcare",
-            "hospital operations"
+            "workforce pressure"
           ],
-          "sourceLabel": "LINK nky · Aug 4, 4:56 PM ET",
-          "sourceUrl": "https://linknky.com/news/2026/08/04/st-elizabeth-edgewood-top-hospital-kentucky-greater-cincinnati-us-news-2026-2027/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdmEtMElfb3VRSjg5Zk1ydC1Xb1hFZktNZmk5ckI0Zm5UamtXeU5panBCaGwxQ2dGTVV4SzQ5RGRscmh5RzJvY0NORGVlalB3SjVHWl81R1pWZktPWUNvTnljQmZJcHdzdTdaX20tWlV4TlVnaTQ3UlRzdjdoSWhTQ19jZGZJSVN5eHlvNjhVc3A2YmFMWi0wd01ZemxMM0QtRGpxbHNFVFJjOWNGa0hnSXY4bklLTi04?oc=5",
-          "publishedAt": "2026-08-04T20:56:20+00:00",
+          "sourceLabel": "Morehead State Public Radio · Aug 5, 12:39 PM ET",
+          "sourceUrl": "https://www.wmky.org/news/2026-08-05/eastern-kentucky-program-aims-to-boost-regional-healthcare-workforce",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWG9MNF9PSXJ2RWtvaEFTRzRCZEhNcFgzLUl5RmkzNmJ6clcySl9EMmFvSGNRX1FIeHBRNnpSZFA0QzRPMDB3aXNnWmF3Smsyb0MzUkpfX2U4U1ljcGg2dl9RaEFjZnpPUzVaYkE3Tlk3c2VHbzYyMGpDWGo5RzJNekNZZnk3bGZfVWV0d1lFNFRJNHVFam1hbVZaT2N4X2ZIdzc2bWM0cEQ?oc=5",
+          "publishedAt": "2026-08-05T16:39:00+00:00",
           "glossary": [
             {
-              "term": "U.S. News & World Report",
-              "definition": "A media company that publishes widely cited rankings, including hospital rankings."
+              "term": "community health center",
+              "definition": "A local clinic that provides primary care and related services, often serving people who may have limited access to other healthcare options."
             },
             {
-              "term": "ranking",
-              "definition": "An ordered comparison that places one hospital above others based on chosen criteria."
+              "term": "healthcare workforce",
+              "definition": "The group of people who work in healthcare, including clinical and support staff."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a recognition/ranking story, so the main thing to watch is what organization did the ranking and exactly what geography it covers. The interpretation would change if the ranking were limited to a specific service line, metric, or patient group, but the provided description only says St. Elizabeth Edgewood was named No. 1 in Kentucky and Greater Cincinnati.",
+            "explanationText": "This is a workforce-development story in healthcare, not a clinical or policy debate. When reading more, pay attention to who is being trained, what jobs they are preparing for, and whether the program is meant to solve short-term vacancies or build long-term staffing capacity. The interpretation would change if the program is small and local versus part of a broader regional effort with measurable hiring outcomes.",
             "glossary": [
               {
-                "term": "U.S. News & World Report",
-                "definition": "A media company that publishes widely cited rankings, including hospital rankings.",
-                "whyItMatters": "Its rankings can affect reputation and public perception of hospitals."
+                "term": "community health center",
+                "definition": "A local clinic that provides primary care and related services, often serving people who may have limited access to other healthcare options.",
+                "whyItMatters": "These centers are the organizations doing the training in this story and are key access points for care in underserved areas."
               },
               {
-                "term": "ranking",
-                "definition": "An ordered comparison that places one hospital above others based on chosen criteria.",
-                "whyItMatters": "Rankings shape how people judge quality and competitiveness."
-              }
-            ]
-          }
-        },
-        {
-          "id": "kentucky_healthcare-3-63115",
-          "title": "St. Elizabeth Edgewood named No. 1 hospital in Greater Cincinnati, Kentucky",
-          "kicker": "WKRC",
-          "summary": "St. Elizabeth Edgewood was named the No. 1 hospital in Greater Cincinnati, Kentucky. The ranking gave greater weight to risk-adjusted patient outcomes, which measure how well hospitals perform after accounting for how complex their patients are. For healthcare readers, that means the result is meant to reflect performance more fairly across hospitals that treat different levels of illness severity.",
-          "emailSummary": "Rankings placed greater emphasis on risk-adjusted patient outcomes, measuring how well hospitals perform while accounting for complexity of pati…",
-          "whyItMatters": "This matters because hospital rankings can influence patient choice, provider reputation, and how healthcare quality is judged in the region.",
-          "dataSignals": [
-            "Kentucky healthcare",
-            "hospital operations"
-          ],
-          "sourceLabel": "WKRC · Aug 4, 10:16 AM ET",
-          "sourceUrl": "https://local12.com/news/local/st-elizabeth-edgewood-number-one-hospital-greater-cincinnati-kentucky-us-news-world-report",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQX191UExrbGg3SjdRcG4xaDdIODgtZDY4UGl5T0M3Y3pBd2xWdkVXTzhMYU5KRWRfWnZhamVyRy1VQXl6MHhfUFNJaFVkRFAzMExuVGczSEJGSVptNzRyelQyOFV5ODNQdWozaElMVjRpUUlHMUJ0X3RROTJWSU1nVGhmWHU5X0ZYYWxURUlpUWRDZnotOWtENmp3aTZXOEVEaWNZMlBNR1VrOU9VdjBrTHotSF92XzhtNXR4VkNB?oc=5",
-          "publishedAt": "2026-08-04T14:16:11+00:00",
-          "glossary": [
-            {
-              "term": "risk-adjusted patient outcomes",
-              "definition": "Outcome measures that are adjusted to account for differences in how sick or complex a hospital's patients are."
-            },
-            {
-              "term": "patient outcomes",
-              "definition": "The results of medical care, such as recovery, complications, or survival."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a hospital-ranking story, so the key question is what criteria the ranking used and how heavily they were weighted. Here, the important detail is the shift toward risk-adjusted outcomes, because that can change which hospitals rise or fall compared with rankings based more on raw results. If the methodology changes again, the ranking could tell a different story about hospital quality.",
-            "glossary": [
-              {
-                "term": "risk-adjusted patient outcomes",
-                "definition": "Outcome measures that are adjusted to account for differences in how sick or complex a hospital's patients are.",
-                "whyItMatters": "This helps compare hospitals more fairly when they do not treat the same kinds of patients."
-              },
-              {
-                "term": "patient outcomes",
-                "definition": "The results of medical care, such as recovery, complications, or survival.",
-                "whyItMatters": "Outcomes are a core way to judge whether hospital care is effective."
-              }
-            ]
-          }
-        },
-        {
-          "id": "kentucky_healthcare-4-81225",
-          "title": "For third year in a row, Meredith honored for his work in Frankfort by Kentucky Hospital Assoc.",
-          "kicker": "k105.com",
-          "summary": "State Sen. Steve Meredith was honored for the third year in a row by the Kentucky Hospital Association for his work in Frankfort. He was recognized as a Kentucky Hospital Association Legislative Champion at a ceremony. The story indicates continued support from the hospital industry for Meredith's legislative work, which can matter for how Kentucky healthcare priorities are represented in state policy.",
-          "emailSummary": "For the third consecutive year, State Sen. Steve Meredith has been honored for his work in Frankfort by the Kentucky Hospital Association (KHA).…",
-          "whyItMatters": "This matters because hospital-industry recognition can signal which lawmakers are helping shape policies that affect healthcare access, hospital finances, and regulation in Kentucky.",
-          "dataSignals": [
-            "Kentucky healthcare",
-            "hospital operations"
-          ],
-          "sourceLabel": "k105.com · Aug 4, 8:26 AM ET",
-          "sourceUrl": "https://www.k105.com/2026/08/04/for-third-year-in-a-row-meredith-honored-for-his-work-in-frankfort-by-kentucky-hospital-assoc/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPdUdhTzdtYi1MZDhBQlZRWEpYWG42Q29iZWhsZDc4Z2VYdmtQQnphcHI1TGdyeU1zcmFqc0tWVU9Wc0Y3bFZWcXY1TjNQVGJYdkxQUzJ5OVprMTNoT0UwT2JRbFdTRVRmckhyZmtoSkZreURlUzZsWHdMUXZSYVhOcEZfR0VaeXVhaUQ5UnU0UW1pX2xpbzR3eHByTDZkRlZoSWdfRkQ3SElVYkdrMHV1MGM5eG1jaVhwWGFYcWlZNFVUR3Ja?oc=5",
-          "publishedAt": "2026-08-04T12:26:15+00:00",
-          "glossary": [
-            {
-              "term": "Kentucky Hospital Association (KHA)",
-              "definition": "A trade group that represents hospitals and health systems in Kentucky."
-            },
-            {
-              "term": "Legislative Champion",
-              "definition": "An honor given to a lawmaker who is seen as especially supportive of a group's policy goals."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a recognition story, not a policy-change story: the key point is who is being honored and by whom. When reading the source, pay attention to whether it explains specific bills, votes, or healthcare issues behind the award; those details would show what Meredith actually did and how broad his impact was.",
-            "glossary": [
-              {
-                "term": "Kentucky Hospital Association (KHA)",
-                "definition": "A trade group that represents hospitals and health systems in Kentucky.",
-                "whyItMatters": "It often tracks and influences state policy affecting hospitals."
-              },
-              {
-                "term": "Legislative Champion",
-                "definition": "An honor given to a lawmaker who is seen as especially supportive of a group's policy goals.",
-                "whyItMatters": "It suggests the association views the senator as important to its legislative efforts."
+                "term": "healthcare workforce",
+                "definition": "The group of people who work in healthcare, including clinical and support staff.",
+                "whyItMatters": "The story is about increasing the number of people available to work in local healthcare jobs."
               }
             ]
           }
@@ -917,271 +639,279 @@
       "emptyMessage": "No qualified Analytics stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "analytics-1-11005",
-          "title": "Alteryx One Launches on Snowflake Marketplace with Governed, In-Place Analytics for Business Teams",
-          "kicker": "PR Newswire",
-          "summary": "Alteryx announced that Alteryx One is now available on Snowflake Marketplace. The release is positioned as \"governed, in-place analytics\" for business teams, which suggests users can work with data inside Snowflake rather than moving it elsewhere. For analytics teams, this points to tighter integration between data management and analysis, with more emphasis on controlled access and workflow inside the platform.",
-          "emailSummary": "/PRNewswire/ -- Alteryx, Inc., an AI-ready data and analytics company, today announced that Alteryx One is now available on Snowflake Marketplac…",
-          "whyItMatters": "This matters because it can make analytics easier to deploy for business users while keeping data governance and security controls closer to the data platform.",
+          "id": "analytics-1-74214",
+          "title": "What Role Does Data Quality Play in Data Governance?",
+          "kicker": "IT Brief Asia",
+          "summary": "Poor data is being blamed for derailing AI projects and for increasing delivery errors, customer service failures, and compliance risks across organizations. The title points to data quality as a core part of data governance, meaning how well an organization manages and controls its data can affect results across analytics, operations, and risk management.",
+          "emailSummary": "Poor data is derailing AI projects and inflating delivery errors, customer service failures and compliance risks across organisations.",
+          "whyItMatters": "This matters because weak data quality can undermine analytics and AI while also creating operational and compliance problems that are costly to fix.",
           "dataSignals": [
-            "analytics workflow",
-            "data-platform signal"
+            "governance controls",
+            "data quality"
           ],
-          "sourceLabel": "PR Newswire · Aug 4, 9:00 AM ET",
-          "sourceUrl": "https://www.prnewswire.com/news-releases/alteryx-one-launches-on-snowflake-marketplace-with-governed-in-place-analytics-for-business-teams-302839553.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQUXlhd3RZWEFMa3Q3a0l0aVhUY1Z2YjF3VEp0QW5CMjQ2bldQRnV6Z3FvNVVxdXB0ZVBBb2hma2pmTjFqeFJHdnZiZG5hM1Zfb1B1XzNxTndqelhZR2hMekNtdUZzQUpSTm94S3N4SkpDclRJVVNqU2JGTkYtS0FsR0pxQ1NZMFY2LUF2YXZUbDkwSkc1MlVIS1NCY1JrdmNGMjR6QUlEbXg5WVJRNTJIblZWaklTYVFMam1CZm5na2Q0MTF1TWtDV2FVN3M1YXgxYm0yeVlIOU5MMlphWjQtMDNEbC1hcl9r?oc=5",
-          "publishedAt": "2026-08-04T13:00:00+00:00",
+          "sourceLabel": "IT Brief Asia · Aug 5, 4:56 PM ET",
+          "sourceUrl": "https://itbrief.asia/story/what-role-does-data-quality-play-in-data-governance",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSGtaYllqblMyeU9wdTY1cXlFcC1oZWpId1lpOG51MmpWcThyNUNmZ2FuZjB2Z0gyTkVzMzlxTlhIcjlva0h4WXNPUUV1ZG5KTDd4bUNCN2lmd0JyUXdtUlk0M1ZLZnNZTHBEY3U1Y3JXMEJGYjNFcDJHT2VhT3NCVTdrbXc?oc=5",
+          "publishedAt": "2026-08-05T20:56:00+00:00",
           "glossary": [
             {
-              "term": "Snowflake Marketplace",
-              "definition": "A marketplace inside Snowflake where users can find and access third-party data and software offerings."
+              "term": "data governance",
+              "definition": "The policies and processes an organization uses to manage, protect, and control its data."
             },
             {
-              "term": "governed analytics",
-              "definition": "Analytics that are controlled by rules for access, compliance, and oversight."
+              "term": "data quality",
+              "definition": "How accurate, complete, consistent, and up-to-date data is."
             },
             {
-              "term": "in-place analytics",
-              "definition": "Analyzing data where it already lives instead of copying it to another system first."
+              "term": "AI projects",
+              "definition": "Initiatives that use artificial intelligence to automate tasks, find patterns, or support decisions."
+            },
+            {
+              "term": "compliance risks",
+              "definition": "The chance that an organization will fail to meet legal, regulatory, or policy requirements."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a product-announcement story, so the key thing to watch is the claimed capability and the platform integration rather than a financial result or policy change. Read closely for whether the source says the product is newly available, what platform it runs on, and what users can do differently; those details determine whether this is mainly a distribution expansion, a workflow improvement, or a broader strategic partnership.",
+            "explanationText": "This is a governance and risk story, not a technical deep dive, so the key point is the connection between data quality and business outcomes. When reading the source, pay attention to whether it treats data quality as a root cause of AI failure, operational errors, or regulatory exposure. The interpretation would change if the full piece shows the problem is limited to one system or department, rather than being an organization-wide issue.",
             "glossary": [
               {
-                "term": "Snowflake Marketplace",
-                "definition": "A marketplace inside Snowflake where users can find and access third-party data and software offerings.",
-                "whyItMatters": "It is the distribution channel Alteryx is using to reach Snowflake customers directly."
+                "term": "data governance",
+                "definition": "The policies and processes an organization uses to manage, protect, and control its data.",
+                "whyItMatters": "Good governance helps ensure data is reliable, usable, and compliant."
               },
               {
-                "term": "governed analytics",
-                "definition": "Analytics that are controlled by rules for access, compliance, and oversight.",
-                "whyItMatters": "Governance affects who can use data, what they can do with it, and how safely it is handled."
+                "term": "data quality",
+                "definition": "How accurate, complete, consistent, and up-to-date data is.",
+                "whyItMatters": "Low-quality data can lead to bad decisions and broken automation."
               },
               {
-                "term": "in-place analytics",
-                "definition": "Analyzing data where it already lives instead of copying it to another system first.",
-                "whyItMatters": "This can reduce data movement, lower risk, and speed up workflows."
+                "term": "AI projects",
+                "definition": "Initiatives that use artificial intelligence to automate tasks, find patterns, or support decisions.",
+                "whyItMatters": "AI systems depend heavily on good data, so poor inputs can produce poor outputs."
+              },
+              {
+                "term": "compliance risks",
+                "definition": "The chance that an organization will fail to meet legal, regulatory, or policy requirements.",
+                "whyItMatters": "Bad data can cause reporting mistakes or violations that lead to penalties."
               }
             ]
           }
         },
         {
-          "id": "analytics-2-50444",
-          "title": "Autonomous Analytics Is Already Here, We Just Stopped Calling It Dashboards",
-          "kicker": "Dataconomy",
-          "summary": "Autonomous analytics is being framed as less of a new invention and more of a shift in naming: the title says it is already here, and the description says executives have long been anticipating a higher level of analytics in boardroom meetings. The source appears to argue that what people now call autonomous analytics may be the next step beyond traditional dashboards. For analytics teams, that suggests expectations are moving from static reporting toward more automated, decision-oriented insight delivery.",
-          "emailSummary": "While autonomous analytics may seem like an evolutionary breakthrough, deep within boardroom meetings, executives have been anticipating a level…",
-          "whyItMatters": "This matters because it signals a change in how organizations may expect analytics products to work: less manual dashboard checking and more automated insight generation that can influence decisions faster.",
-          "dataSignals": [
-            "analytics workflow",
-            "dashboard / reporting"
-          ],
-          "sourceLabel": "Dataconomy · Aug 4, 9:21 AM ET",
-          "sourceUrl": "https://dataconomy.com/2026/08/04/autonomous-analytics-is-already-here-we-just-stopped-calling-it-dashboards/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQc2RVeUxzbmdtZHhDMUZvUTc3Uk9xWkE1X0lKSklNbkZ3QWpmWXhNT2pEd2UzTHZrcWF5cXZVTzdsMzREVTBxOUdoUzJpX2IwczRiUkEzSDlPSU1JRVlxc2dkeWtpNFFNRGdaTnJJRktRTUtxc0ZITTRERUtpdFhUUlZaTnVZdmhmNnI2S1hDVTgxRlloNnBjTVhDVzNMMm16NWVTUUQxWExwLU96X0E?oc=5",
-          "publishedAt": "2026-08-04T13:21:03+00:00",
-          "glossary": [
-            {
-              "term": "autonomous analytics",
-              "definition": "Analytics systems that automatically generate insights or recommendations with minimal manual intervention."
-            },
-            {
-              "term": "dashboard",
-              "definition": "A visual display of key metrics and charts used to monitor performance."
-            },
-            {
-              "term": "boardroom",
-              "definition": "The executive decision-making setting in a company."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a trend-and-positioning story about how analytics terminology and expectations are changing, not a report of a single product launch or policy change. When reading the source, pay attention to whether it defines autonomous analytics as a real technical shift or mainly as a rebranding of existing dashboard/reporting tools. The interpretation changes if the piece shows new automation capabilities, versus simply arguing that executives want analytics to do more than display metrics.",
-            "glossary": [
-              {
-                "term": "autonomous analytics",
-                "definition": "Analytics systems that automatically generate insights or recommendations with minimal manual intervention.",
-                "whyItMatters": "It describes the shift from people pulling reports to systems surfacing insights on their own."
-              },
-              {
-                "term": "dashboard",
-                "definition": "A visual display of key metrics and charts used to monitor performance.",
-                "whyItMatters": "Dashboards are the familiar baseline that autonomous analytics is being positioned beyond."
-              },
-              {
-                "term": "boardroom",
-                "definition": "The executive decision-making setting in a company.",
-                "whyItMatters": "The description points to executive-level demand, which can drive analytics priorities and investments."
-              }
-            ]
-          }
-        },
-        {
-          "id": "analytics-3-78450",
-          "title": "Introduction to Data Science with Python, Harvard University",
+          "id": "analytics-2-74765",
+          "title": "How Bangladesh Could Become Asia's Neutral Data Hub Through Summit Group",
           "kicker": "Analytics Insight",
-          "summary": "Introduction to Data Science Using Python is an online course from Harvard University offered through edX. The description says the course will help learners learn about data science using Python, but it does not provide further details about the syllabus or outcomes. For analytics readers, this is a straightforward education offering aimed at building Python-based data science skills.",
-          "emailSummary": "Introduction to Data Science Using Python is an online course provided by Harvard University via the edX platform. The course will help learners…",
-          "whyItMatters": "This matters because Python is a core tool in analytics, so a Harvard-branded online course can be a practical way for people to build or refresh skills relevant to data work.",
+          "summary": "The headline says Bangladesh could become Asia's neutral data hub through Summit Group. The description quotes Wu Yan Bin, Summit Group's chief financial officer and deputy chief executive officer, saying a shift he sees as \"quiet\" has not yet been priced in by the market. Based on the provided text, the story appears to be about a potential market and infrastructure change centered on Bangladesh and Summit Group's role in it.",
+          "emailSummary": "Wu Yan Bin used the word \"quiet\" to describe a shift he thinks the market has not priced in yet. As chief financial officer and deputy chief exe…",
+          "whyItMatters": "This matters because a neutral data hub could affect where regional data infrastructure is built, which can influence investment, connectivity, and digital services across Asia.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Analytics Insight · Aug 5, 1:38 AM ET",
-          "sourceUrl": "https://www.analyticsinsight.net/amp/story/professional-courses/introduction-to-data-science-with-python-harvard-university",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOMDRvVG5tOVF5aEZYNE1Oc2pqN19mQnBEV1FOUVhIRkRhSEgzLUF5S2xkdUNLU1dvVU5UdFRWc0FMU2RBLUpzLU5Qd3RGQjFRV2s3X09oMGFkX1BhWXdTQ0cyS2k2aVNCTFBMbkM5cl9sVm5pZzk1ZmhhdjdlQWtNeEVLVVdwMWZwUFB0TlZzdE9qNHotN0ZETEhhVEI2b1NvUjZraU1nalhKX08zc3plbWJ0VURRVW9qQUhRN3J5aGPSAcABQVVfeXFMTjA0b1RubTlReWhGWDRNTnNqajdfZkJwRFdRTlFYSEZEYUhIMy1BeUtsZHVDS1NXb1VOVHRUVnNBTFNkQS1Kcy1OUHd0RkIxUVdrN19PaDBhZF9QYVl3U0NHMktpNmlTQkxQTG5DOXJfbFZuaWc5NWZoYXY3ZUFrTXhFS1VXcDFmcFBQdE5Wc3RPajR6LTdGRExIYVRCNm9Tb1I2a2lNZ2pYSl9PM3N6ZW1idFVEUVVvakFIUTdyeWhj?oc=5",
-          "publishedAt": "2026-08-05T05:38:42+00:00",
+          "sourceLabel": "Analytics Insight · Aug 6, 2:27 AM ET",
+          "sourceUrl": "https://www.analyticsinsight.net/amp/story/tech-news/how-bangladesh-could-become-asias-neutral-data-hub-through-summit-group",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQN0FTa2psVEVCVG9ob2tUYkR4M3RhMmVIYV8zZ2luMUJZdTh6NEpKQ1BGVkNlMUM4Njd3SVpyYVJCQTU4SEd6RGFaRWpaWWM4dk1EZVpSUkFpdXQxN0NRRHdpSmFnY2hsWTN6ZHVndk5BYURWWFdPSmZYYlhrNHZ3QXUxUFIwYUdfSzN3cGVrRjcwM05PazlZYnJLZ1IwTHJxRVk2N0M2N1hCcnJ4VjV1TXh6dDgzR2RQaUtVRHhYazlaUdIBwgFBVV95cUxQN0FTa2psVEVCVG9ob2tUYkR4M3RhMmVIYV8zZ2luMUJZdTh6NEpKQ1BGVkNlMUM4Njd3SVpyYVJCQTU4SEd6RGFaRWpaWWM4dk1EZVpSUkFpdXQxN0NRRHdpSmFnY2hsWTN6ZHVndk5BYURWWFdPSmZYYlhrNHZ3QXUxUFIwYUdfSzN3cGVrRjcwM05PazlZYnJLZ1IwTHJxRVk2N0M2N1hCcnJ4VjV1TXh6dDgzR2RQaUtVRHhYazlaUQ?oc=5",
+          "publishedAt": "2026-08-06T06:27:55+00:00",
           "glossary": [
             {
-              "term": "Data science",
-              "definition": "A field that uses data, statistics, and computing to find patterns and answer questions."
+              "term": "data hub",
+              "definition": "A central place where data is stored, processed, or routed for multiple users or regions."
             },
             {
-              "term": "Python",
-              "definition": "A popular programming language often used for data analysis and automation."
+              "term": "neutral data hub",
+              "definition": "A data center or network location seen as politically or commercially neutral, so different parties are more willing to use it."
             },
             {
-              "term": "edX",
-              "definition": "An online learning platform that hosts courses from universities and other institutions."
+              "term": "chief financial officer (CFO)",
+              "definition": "The executive responsible for a company's financial planning, reporting, and strategy."
+            },
+            {
+              "term": "deputy chief executive officer",
+              "definition": "A senior executive who supports the CEO and may help run the company."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is an education-and-skills story, not a market or product announcement. When reading the source, pay attention to the institution, delivery platform, and the exact skill area being taught, because those determine how useful the course is for a learner. If more details were provided about topics, assignments, or prerequisites, that would change how advanced or practical the course appears.",
+            "explanationText": "This is a market/infrastructure story, not a technical one: it is about a possible strategic shift in where data services are centered. When reading the source, pay attention to whether the argument is based on actual deployments, policy advantages, geography, or just a forward-looking thesis. The interpretation would change a lot if the full story shows concrete projects, customer commitments, or government support versus only an opinion that the market has overlooked a trend.",
             "glossary": [
               {
-                "term": "Data science",
-                "definition": "A field that uses data, statistics, and computing to find patterns and answer questions.",
-                "whyItMatters": "It is the broad skill area the course is meant to teach."
+                "term": "data hub",
+                "definition": "A central place where data is stored, processed, or routed for multiple users or regions.",
+                "whyItMatters": "If Bangladesh becomes a data hub, it could draw infrastructure spending and traffic from across Asia."
               },
               {
-                "term": "Python",
-                "definition": "A popular programming language often used for data analysis and automation.",
-                "whyItMatters": "It is the main technical tool named in the course title."
+                "term": "neutral data hub",
+                "definition": "A data center or network location seen as politically or commercially neutral, so different parties are more willing to use it.",
+                "whyItMatters": "Neutrality can make a location more attractive for regional data operations and cross-border clients."
               },
               {
-                "term": "edX",
-                "definition": "An online learning platform that hosts courses from universities and other institutions.",
-                "whyItMatters": "It tells you where the course is delivered and how learners access it."
+                "term": "chief financial officer (CFO)",
+                "definition": "The executive responsible for a company's financial planning, reporting, and strategy.",
+                "whyItMatters": "A CFO's comments can signal how a company sees an emerging business opportunity or risk."
+              },
+              {
+                "term": "deputy chief executive officer",
+                "definition": "A senior executive who supports the CEO and may help run the company.",
+                "whyItMatters": "This role suggests the speaker is close to top-level decision-making and strategy."
               }
             ]
           }
         },
         {
-          "id": "analytics-4-2243",
-          "title": "7 Ways AI-Driven Analytics Are Redefining Commodity Price Forecasting",
-          "kicker": "techround.co.uk",
-          "summary": "AI-driven analytics is being presented as a major shift in commodity price forecasting. The key idea in the description is that, by 2026, the advantage goes to whoever can use the fastest AI to turn large amounts of messy data into a clear signal. For analytics teams, that points to faster, more data-rich forecasting as the main competitive edge.",
-          "emailSummary": "The person with the best information wins. In 2026, the person with the fastest AI that can synthesize the most \"messy\" data into a clean signal…",
-          "whyItMatters": "This matters because better forecasting can improve pricing, procurement, and risk decisions in businesses exposed to commodity swings.",
+          "id": "analytics-3-75467",
+          "title": "BLUE unveils AI-first video analytics infrastructure, targets 10X revenue growth by FY30",
+          "kicker": "The Tribune",
+          "summary": "Bengaluru startup BLUE (KGraph AI Solutions Pvt. Ltd.) has launched an AI-native enterprise video infrastructure platform built on what it calls the world’s first semantic codec for video. The company says the system turns conventional CCTV into a searchable, AI-ready data layer and can cut bandwidth by up to 90%, storage costs by up to 10x, and compute needs for video retrieval by 5-10x. BLUE says these efficiency gains can reduce operating expenses by 30-40% and help support its target of 10X revenue growth by FY30.",
+          "emailSummary": "New Delhi [India], August 6: Bengaluru-headquartered AI startup BLUE (KGraph AI Solutions Pvt. Ltd.) today unveiled its AI-native enterprise vid…",
+          "whyItMatters": "This matters because lower-cost, AI-ready video infrastructure could make large-scale camera analytics more practical for enterprises that need to store, search, and analyze huge amounts of footage.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "techround.co.uk · Aug 4, 2:48 PM ET",
-          "sourceUrl": "https://techround.co.uk/business/ways-ai-driven-analytics-are-redefining-commodity-price-forecasting/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObFZlOVlHSHNpUDdzZWp3d0pYSktkYnZnTXF5SmJEcEx4UUhJekFPWjJfVjduRndFeDVXSW9TRS1oTm1ocDFjNW9oeGNnVTN4MHRWR0dvbDRuWjRpSWNRZ2ZMamNmeko1NkU0WkRhZUF1Nl9vdXppNkVqNXJ4TTF5Nlg5SXJmYXNlckZtMlloZ19sajhRRXN3cENLZl9PT2x1T1U0?oc=5",
-          "publishedAt": "2026-08-04T18:48:27+00:00",
+          "sourceLabel": "The Tribune · Aug 6, 1:53 AM ET",
+          "sourceUrl": "https://www.tribuneindia.com/news/business/blue-unveils-ai-first-video-analytics-infrastructure-targets-10x-revenue-growth-by-fy30/amp",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOeE0wVmFBVXg4emNlVlJObklweUxUaWMxRmVEVVF0TVlWeW1acktaR3BjY29ENm9SOWZjSHJweGd1NEVPS2t5Q29fZDVUSXVpTnl6c2dFcG1FWnV3Nkg2VDlXMUxFZFJuU2w2aFUyNkR2NVNWSmpGQUEtWmhZTkNWS2xCUnk0UmdKLXpKbThQV3FIaDRhOUpjdXVUVEhqWm5zc25JUEVhMEdZM1ZkeTFoSlMtY3ExNEEyaUR4d2xIOUZtNUxhWWU1OWdTVmllNmPSAc8BQVVfeXFMTnhNMFZhQVV4OHpjZVZSTm5JcHlMVGljMUZlRFVRdE1ZVnltWnJLWkdwY2NvRDZvUjlmY0hycHhndTRFT0treUNvX2Q1VEl1aU55enNnRXBtRVp1dzZINlQ5VzFMRWRSblNsNmhVMjZEdjVTVkpqRkFBLVpoWU5DVktsQlJ5NFJnSi16Sm04UFdxSGg0YTlKY3V1VFRIalpuc3NuSVBFYTBHWTNWZHkxaEpTLWNxMTRBMmlEeHdsSDlGbTVMYVllNTlnU1ZpZTZj?oc=5",
+          "publishedAt": "2026-08-06T05:53:18+00:00",
           "glossary": [
             {
-              "term": "commodity price forecasting",
-              "definition": "The practice of predicting future prices for raw materials and traded goods like oil, metals, or agricultural products."
+              "term": "semantic codec",
+              "definition": "A compression system that encodes the meaning of video, not just the pixels, so software can search and analyze it more efficiently."
             },
             {
-              "term": "AI-driven analytics",
-              "definition": "Data analysis methods that use artificial intelligence to find patterns, clean data, and generate predictions."
+              "term": "CCTV",
+              "definition": "Closed-circuit television, or a network of security cameras used for monitoring and recording."
             },
             {
-              "term": "messy data",
-              "definition": "Data that is incomplete, inconsistent, unstructured, or coming from many different sources."
+              "term": "compute",
+              "definition": "The processing power a computer system uses to run analysis or search tasks."
             },
             {
-              "term": "signal",
-              "definition": "A meaningful pattern or piece of information that can guide a prediction or decision."
+              "term": "FY30",
+              "definition": "Fiscal year 2030, meaning the company’s target year based on its accounting calendar."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a trend/strategy story about how AI is changing forecasting rather than a report about a single company or market event. When reading the source, pay attention to what kinds of data the AI is said to use, how it turns that data into forecasts, and whether the claims are about speed, accuracy, or both. The interpretation would change if the article shows real performance gains, specific use cases, or limits to the approach rather than just describing the idea.",
+            "explanationText": "This is a product-launch and growth-target story, so the key thing to watch is whether the claimed efficiency gains are from real-world deployments or only vendor estimates. The numbers to pay attention to are the reduction claims for bandwidth, storage, and compute, because those determine whether the platform actually lowers total cost. If those claims hold up in customer use, the story suggests a potentially cheaper way for enterprises to turn camera footage into searchable data; if not, the revenue-growth target is much less meaningful.",
             "glossary": [
               {
-                "term": "commodity price forecasting",
-                "definition": "The practice of predicting future prices for raw materials and traded goods like oil, metals, or agricultural products.",
-                "whyItMatters": "Accurate forecasts help organizations plan purchases, budgets, and hedges."
+                "term": "semantic codec",
+                "definition": "A compression system that encodes the meaning of video, not just the pixels, so software can search and analyze it more efficiently.",
+                "whyItMatters": "It is the core technology BLUE says will reduce storage, bandwidth, and compute costs."
               },
               {
-                "term": "AI-driven analytics",
-                "definition": "Data analysis methods that use artificial intelligence to find patterns, clean data, and generate predictions.",
-                "whyItMatters": "It can process more information faster than manual analysis and may improve forecast quality."
+                "term": "CCTV",
+                "definition": "Closed-circuit television, or a network of security cameras used for monitoring and recording.",
+                "whyItMatters": "The platform is designed to upgrade existing CCTV systems into something AI can query more easily."
               },
               {
-                "term": "messy data",
-                "definition": "Data that is incomplete, inconsistent, unstructured, or coming from many different sources.",
-                "whyItMatters": "The ability to turn messy data into usable signals is often what separates a weak forecast from a strong one."
+                "term": "compute",
+                "definition": "The processing power a computer system uses to run analysis or search tasks.",
+                "whyItMatters": "Lower compute requirements can reduce the cost of running video analytics at scale."
               },
               {
-                "term": "signal",
-                "definition": "A meaningful pattern or piece of information that can guide a prediction or decision.",
-                "whyItMatters": "Forecasting depends on extracting signal from noise in order to make reliable calls."
+                "term": "FY30",
+                "definition": "Fiscal year 2030, meaning the company’s target year based on its accounting calendar.",
+                "whyItMatters": "It sets the timeline for BLUE’s stated growth goal."
               }
             ]
           }
         },
         {
-          "id": "analytics-5-61854",
-          "title": "Wall Street Hits Records, AI Stocks Rally, Oil Prices Drop",
-          "kicker": "Analytics Insight",
-          "summary": "The S&P 500 and Dow Jones Industrial Average reached record intraday levels on Tuesday. Strong forecasts from AI-linked companies helped support buying across the market, while oil prices dropped. For analytics and market watchers, this points to continued investor enthusiasm for AI-related growth stocks and a broader market lift even as energy prices move lower.",
-          "emailSummary": "The S&P 500 and Dow Jones Industrial Average reached record intraday levels on Tuesday. Strong forecasts from AI-linked companies supported buyi…",
-          "whyItMatters": "This matters because record highs and an AI-led rally can signal where investor capital is flowing, which affects market sentiment, sector performance, and the assumptions behind portfolio and business planning.",
+          "id": "analytics-4-36435",
+          "title": "Latent View Analytics Limited (NSE:LATENTVIEW) Just Released Its First-Quarter Results And Analysts Are Updating Their Estimates",
+          "kicker": "simplywall.st",
+          "summary": "Latent View Analytics Limited (NSE:LATENTVIEW) has just released its first-quarter results, and analysts are updating their estimates in response. The title suggests the focus is on how the new quarterly numbers may change expectations for the company going forward. For an analytics/business audience, the key takeaway is that fresh earnings data can quickly reset market forecasts and valuation assumptions.",
+          "emailSummary": "Last week, you might have seen that Latent View Analytics Limited ( NSE:LATENTVIEW ) released its quarterly result to.",
+          "whyItMatters": "This matters because updated analyst estimates can influence how investors, clients, and competitors gauge the company’s near-term performance and growth outlook.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Analytics Insight · Aug 4, 2:18 PM ET",
-          "sourceUrl": "https://www.analyticsinsight.net/amp/story/stocks/wall-street-hits-records-ai-stocks-rally-oil-prices-drop",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMWdFSUFQX2Yyd1BPVXN3cVVfRU55YnQyOHhvQjM4T2hMOFZaYU5DcmRUUGYwREotVlRndDRVZ1dwSFMtVDZBN3VRLVphOWg5M3JKQThjNW1XSW1BbnkxQmJqTFdpbXhuRE5DNnluaFBPLVljY2hiR2UwaVdDVXhORTYyb2R3dnV3aFdwYjhHa2poQ2hnU3dwQ1p4dF81T3FHaHhST1kwS1NJZ9IBqgFBVV95cUxOMWdFSUFQX2Yyd1BPVXN3cVVfRU55YnQyOHhvQjM4T2hMOFZaYU5DcmRUUGYwREotVlRndDRVZ1dwSFMtVDZBN3VRLVphOWg5M3JKQThjNW1XSW1BbnkxQmJqTFdpbXhuRE5DNnluaFBPLVljY2hiR2UwaVdDVXhORTYyb2R3dnV3aFdwYjhHa2poQ2hnU3dwQ1p4dF81T3FHaHhST1kwS1NJZw?oc=5",
-          "publishedAt": "2026-08-04T18:18:05+00:00",
+          "sourceLabel": "simplywall.st · Aug 6, 12:16 AM ET",
+          "sourceUrl": "https://simplywall.st/stocks/in/commercial-services/nse-latentview/latent-view-analytics-shares/news/latent-view-analytics-limited-nselatentview-just-released-it/amp",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQME1LT25lMmhLQUMyY2s3ZGMwNkp6SjRSWWc5Y2VPV2ZPbHRQQmZQWjBTSlNQTVRDVzRBRDNoeGExRmFyR1NaVHg1QXZSTXEwRGNxNFFHZXA4ZDRLRnJYeC1abUNXQW1ockljakRTN3FhdkZVdXc2SEF5dG9jNVB2YzdZeWZ4ekdVUkQ3dG84MnBKdjZEZzlJR2ZQZFpzMWU3YTNnLXo0UE5YMVdrTTJINjcxRDVVSlRSbUU2V0YyZDZSR2hXdGxwdTlzSVNHWEJSVnhSbHVtSDlYckdyeW5IS0k1X1BqZWk3ckFhOWdxb1d5cGlQOGVSU9IB-AFBVV95cUxQME1LT25lMmhLQUMyY2s3ZGMwNkp6SjRSWWc5Y2VPV2ZPbHRQQmZQWjBTSlNQTVRDVzRBRDNoeGExRmFyR1NaVHg1QXZSTXEwRGNxNFFHZXA4ZDRLRnJYeC1abUNXQW1ockljakRTN3FhdkZVdXc2SEF5dG9jNVB2YzdZeWZ4ekdVUkQ3dG84MnBKdjZEZzlJR2ZQZFpzMWU3YTNnLXo0UE5YMVdrTTJINjcxRDVVSlRSbUU2V0YyZDZSR2hXdGxwdTlzSVNHWEJSVnhSbHVtSDlYckdyeW5IS0k1X1BqZWk3ckFhOWdxb1d5cGlQOGVSUw?oc=5",
+          "publishedAt": "2026-08-06T04:16:46+00:00",
           "glossary": [
             {
-              "term": "S&P 500",
-              "definition": "A stock index that tracks 500 large U.S. companies."
+              "term": "first-quarter results",
+              "definition": "A company’s financial performance for the first three months of its fiscal year."
             },
             {
-              "term": "Dow Jones Industrial Average",
-              "definition": "A stock index made up of 30 major U.S. companies."
+              "term": "analyst estimates",
+              "definition": "Forecasts made by financial analysts about a company’s future revenue, earnings, or other metrics."
             },
             {
-              "term": "intraday",
-              "definition": "Happening during the trading day before the market closes."
-            },
-            {
-              "term": "AI-linked companies",
-              "definition": "Companies whose business is tied to artificial intelligence products, services, or demand."
+              "term": "NSE",
+              "definition": "The National Stock Exchange of India, where many Indian companies are listed and traded."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a market-moves story, not a company-specific earnings report, so the key thing to watch is which sectors are driving the index move and whether the gains hold through the close. The interpretation would change if the records were closing highs instead of intraday highs, or if the AI rally were driven by a few names rather than broad buying.",
+            "explanationText": "This is an earnings-and-forecast update story, not a deep operational report. When reading the source, pay attention to what changed in the quarter and whether analysts raised or lowered their expectations, because that is what usually drives the market reaction. The interpretation would change if the results beat or missed expectations, or if guidance changed materially, but those details are not provided here.",
             "glossary": [
               {
-                "term": "S&P 500",
-                "definition": "A stock index that tracks 500 large U.S. companies.",
-                "whyItMatters": "It is a common benchmark for the overall U.S. stock market."
+                "term": "first-quarter results",
+                "definition": "A company’s financial performance for the first three months of its fiscal year.",
+                "whyItMatters": "Quarterly results are a common checkpoint for judging whether a company is meeting expectations."
               },
               {
-                "term": "Dow Jones Industrial Average",
-                "definition": "A stock index made up of 30 major U.S. companies.",
-                "whyItMatters": "It is widely watched as a quick indicator of large-company market performance."
+                "term": "analyst estimates",
+                "definition": "Forecasts made by financial analysts about a company’s future revenue, earnings, or other metrics.",
+                "whyItMatters": "When estimates change, it can shift market sentiment and expected valuation."
               },
               {
-                "term": "intraday",
-                "definition": "Happening during the trading day before the market closes.",
-                "whyItMatters": "Intraday records can differ from closing records, so the distinction matters when judging market strength."
+                "term": "NSE",
+                "definition": "The National Stock Exchange of India, where many Indian companies are listed and traded.",
+                "whyItMatters": "It identifies the market where the stock is traded and how investors access it."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-5-65357",
+          "title": "KLH Hosts AICTE-ATAL FDP on AI and Advanced Analytics in Digital Marketing",
+          "kicker": "businessnewsthisweek.com",
+          "summary": "KLH is hosting an AICTE-ATAL Faculty Development Programme focused on AI and advanced analytics in digital marketing. Based on the title alone, the event appears to be aimed at training educators or professionals on how AI and analytics are used in marketing. For the analytics field, that points to continued demand for applied AI skills in marketing and training programs that connect analytics with business use cases.",
+          "emailSummary": "Stay updated with Business News This Week – your source for the latest business news weekly, market updates, and top business stories.",
+          "whyItMatters": "This matters because it shows analytics skills are being packaged into formal training for a high-demand business function, which can influence workforce readiness and adoption of AI tools.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "businessnewsthisweek.com · Aug 5, 11:34 PM ET",
+          "sourceUrl": "https://businessnewsthisweek.com/business/klh-hosts-aicte-atal-fdp-on-ai-and-advanced-analytics-in-digital-marketing/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNb3lFYnd5WVdpcEhRODVHZ25qNi1kRHRTY0xsNFcyTDZuQTRvbDJTeWNFUkRCTEZnU3c1bG5YSGZLb3YwVUYyemFMWldsMnJLSGZ5OUxrdUUxRFM0dmptN2RuNWFTQ290NVZ6bXhuU0RLN2Etd2hfR25fSkpxdzlxNm94WF9EaGJmOWIxVk9iRzNtbXNCekRyYmY1WkozZllseGg1ZkhpYkdERTZtMFNhWW4tT09oUDhT?oc=5",
+          "publishedAt": "2026-08-06T03:34:02+00:00",
+          "glossary": [
+            {
+              "term": "AICTE-ATAL",
+              "definition": "An Indian government-related training program or initiative focused on faculty development and advanced learning."
+            },
+            {
+              "term": "FDP",
+              "definition": "Short for Faculty Development Programme, a training program designed to improve instructors' knowledge and teaching skills."
+            },
+            {
+              "term": "Advanced analytics",
+              "definition": "More sophisticated data analysis methods used to find patterns, predict outcomes, or support decisions."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a training-and-education story, not a market-moving earnings or policy announcement. When reading the source, focus on who is hosting it, who the intended audience is, and whether the program covers practical applications of AI in digital marketing. The interpretation would change if the full source showed specific speakers, curriculum topics, or partnerships, because those details would reveal how substantive the training is.",
+            "glossary": [
+              {
+                "term": "AICTE-ATAL",
+                "definition": "An Indian government-related training program or initiative focused on faculty development and advanced learning.",
+                "whyItMatters": "It indicates the event is part of an official education and training framework, not just a private workshop."
               },
               {
-                "term": "AI-linked companies",
-                "definition": "Companies whose business is tied to artificial intelligence products, services, or demand.",
-                "whyItMatters": "Their earnings forecasts can move broader markets when investors view AI as a major growth theme."
+                "term": "FDP",
+                "definition": "Short for Faculty Development Programme, a training program designed to improve instructors' knowledge and teaching skills.",
+                "whyItMatters": "It suggests the audience is likely educators who will pass the knowledge on to students or trainees."
+              },
+              {
+                "term": "Advanced analytics",
+                "definition": "More sophisticated data analysis methods used to find patterns, predict outcomes, or support decisions.",
+                "whyItMatters": "It signals the event is about higher-level analytics rather than basic reporting."
               }
             ]
           }
@@ -1194,224 +924,257 @@
       "emptyMessage": "No qualified Louisville, Kentucky stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "louisville-1-33360",
-          "title": "Louisville Metro Council advances data center moratorium",
-          "kicker": "Louisville Public Media",
-          "summary": "Louisville Metro Council has advanced a proposed moratorium on data centers, with a final vote expected next week. Based on the title and description, the issue is not settled yet, but it is moving closer to a decision. For Louisville, that could affect whether new data center projects are paused while the council considers the policy.",
-          "emailSummary": "Louisville Metro Council advances data center moratorium.",
-          "whyItMatters": "This matters because a moratorium can temporarily slow or stop new data center development, which affects land use, infrastructure demand, and local economic planning.",
-          "dataSignals": [
-            "Louisville local"
-          ],
-          "sourceLabel": "Louisville Public Media · Aug 4, 4:30 PM ET",
-          "sourceUrl": "https://www.lpm.org/news/2026-08-04/louisville-metro-council-advances-data-center-moratorium",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQaHZDSGdNTW1LU2sxTmhXZ2lUaXpUU2pLSEY0X0JuSVVaUGljY2FaeHY3cHJKYmZ3ZkxXTnlZTFV6aGg0eFhrSUJJU3RHQ29qZlY4MVJCZFBQSEFWc2tMYkJXcVZrdUd2QkdzSEltOVdrSFg3S0xEREQ1ZVNKUzhncnpkaGNMWTZRX2x5cUxraEh3NEk2aVpj?oc=5",
-          "publishedAt": "2026-08-04T20:30:00+00:00",
-          "glossary": [
-            {
-              "term": "Metro Council",
-              "definition": "The local legislative body that makes laws and policy decisions for Louisville Metro."
-            },
-            {
-              "term": "Moratorium",
-              "definition": "A temporary pause or ban on a specific activity."
-            },
-            {
-              "term": "Data center",
-              "definition": "A facility that houses computer systems and equipment used to store, process, and move digital data."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a local government and land-use policy story, so the key thing to watch is the council’s next vote and whether the moratorium is temporary or becomes part of a broader long-term policy. The interpretation changes if the final vote passes, if it fails, or if the proposal is amended, because each outcome would mean a different pace for data center development in Louisville.",
-            "glossary": [
-              {
-                "term": "Metro Council",
-                "definition": "The local legislative body that makes laws and policy decisions for Louisville Metro.",
-                "whyItMatters": "Its vote determines whether the moratorium becomes policy."
-              },
-              {
-                "term": "Moratorium",
-                "definition": "A temporary pause or ban on a specific activity.",
-                "whyItMatters": "If approved, it would delay new data center projects while the city reviews the issue."
-              },
-              {
-                "term": "Data center",
-                "definition": "A facility that houses computer systems and equipment used to store, process, and move digital data.",
-                "whyItMatters": "Data centers can require major land, power, and infrastructure resources, so local rules can significantly affect their growth."
-              }
-            ]
-          }
-        },
-        {
-          "id": "louisville-2-46391",
-          "title": "Louisville community, law enforcement come together for National Night Out event",
+          "id": "louisville-1-57601",
+          "title": "Police still searching for suspect nearly one year after Louisville mother was killed near bus stop",
           "kicker": "WDRB",
-          "summary": "Louisville residents, local leaders, and law enforcement gathered for National Night Out. The event focused on building stronger community relationships. For Louisville, that points to a public-safety effort centered on trust, visibility, and neighborhood engagement rather than enforcement alone.",
-          "emailSummary": "Louisville residents, leaders and law enforcement gathered for National Night Out focused on building stronger community relationships.",
-          "whyItMatters": "This matters because stronger relationships between residents and police can affect trust, cooperation, and how safely neighborhoods respond to local problems.",
+          "summary": "Louisville police are still looking for a suspect nearly a year after a mother was killed near a bus stop. Police Chief Paul Humphrey brought up the case again at a news conference on Wednesday and asked anyone with information to come forward. For Louisville, it shows the case remains open and that investigators are still publicly seeking tips.",
+          "emailSummary": "During a news conference Wednesday, Louisville Metro Police Chief Paul Humphrey mentioned the case and again asked for anyone with information t…",
+          "whyItMatters": "This matters because an unsolved homicide affects public safety, community trust, and the ongoing allocation of police attention in Louisville.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Aug 4, 11:34 PM ET",
-          "sourceUrl": "https://www.wdrb.com/louisville-community-law-enforcement-come-together-for-national-night-out-event/video_f49359e4-5551-5248-9465-cbb198c4b769.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQTkp6WFg3VXdDMWJ6bC1PdHplSWJhTEsydUwtekE1R2t5cEtiNHo1X3pXWTByTkU3SnBMS1VCM1BSUEJDcWk2UGx5akxTWkZEdHo1RXNaaFlBblI1emstUm5BcXRaWE5hR09rNy1Ua2dfMjFaNlhHZ1lwZ2tENFZHQU00dXpPUnl5SjYxbk5kM3RPRF9kNjhwVGdRMEwxdEhNWjVmUkZuWkJLZWNqNk1OM1czYjZvamxFbDBGcFBYREt6bS1sVmhaZmN1YXFVOWEzSERDZTNKN3lLcFp1eW5IWU93?oc=5",
-          "publishedAt": "2026-08-05T03:34:00+00:00",
+          "sourceLabel": "WDRB · Aug 5, 8:53 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/crime-reports/police-still-searching-for-suspect-nearly-one-year-after-louisville-mother-was-killed-near-bus/article_d6846a0e-777f-48af-86e8-49af790df69a.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNaTJ2MnFtb243MjhyaXg3ZDUza1FwWFlZMEpzQ09VOTZzY0xjZnRuclI4c1VjcWNoZ2hDMHBiYnpPaFlGdUNISmdySHJGM3AyTVVXd0V4alk0LWRPbzMxaGFiYUgxdXJlNzdSSUItd3pKVFh4ZmRiWXh6LUVnTmplQThXQjNqbFJuMGtjYmJlQ21tNFRaWVpMZEVuYUtwd1FVc3lDOG1XMHM1ZjNqN1ZBZzB4dWpKWGNYLXp1VHAtSDVxdkIxa3Z5dFFWQ09JVUE2TFZQS211QkpMekoxWWZfYWhfVFBSZHVzWFg4c09yZVNlcDZBQ3hkOXNzNlF1UXFNYTEzSWthdU5zYlRycy0xcnpR?oc=5",
+          "publishedAt": "2026-08-06T00:53:00+00:00",
           "glossary": [
             {
-              "term": "National Night Out",
-              "definition": "An annual community event where residents and police meet to promote neighborhood safety and build trust."
+              "term": "Louisville Metro Police",
+              "definition": "The main police department serving Louisville and Jefferson County."
+            },
+            {
+              "term": "suspect",
+              "definition": "A person police believe may be responsible for a crime."
+            },
+            {
+              "term": "news conference",
+              "definition": "A planned public meeting where officials make announcements and answer questions from reporters."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a community-and-public-safety story, not a breaking-crime report. When reading the source, pay attention to who participated and what goals they emphasized, because that shows whether the focus is outreach, prevention, or a response to a specific problem. If later reporting adds a specific neighborhood, program, or police initiative, that would change how concrete the impact is.",
+            "explanationText": "This is a public-safety and criminal-justice update, not a breaking development about an arrest or new evidence. When reading the source, pay attention to whether police are only renewing a call for tips or whether they provide new investigative details, because that changes how much progress has been made. If later coverage adds an arrest, identified suspect, or motive, that would materially change the interpretation of the case's status.",
             "glossary": [
               {
-                "term": "National Night Out",
-                "definition": "An annual community event where residents and police meet to promote neighborhood safety and build trust.",
-                "whyItMatters": "It signals a public-safety strategy that relies on community connection, not just police response."
+                "term": "Louisville Metro Police",
+                "definition": "The main police department serving Louisville and Jefferson County.",
+                "whyItMatters": "It is the agency handling the investigation and asking the public for help."
+              },
+              {
+                "term": "suspect",
+                "definition": "A person police believe may be responsible for a crime.",
+                "whyItMatters": "Finding the suspect is the key step in moving the case toward an arrest or closure."
+              },
+              {
+                "term": "news conference",
+                "definition": "A planned public meeting where officials make announcements and answer questions from reporters.",
+                "whyItMatters": "It is how police used public attention to seek information in this case."
               }
             ]
           }
         },
         {
-          "id": "louisville-3-72233",
-          "title": "Louisville hemp company says looming federal ban could cost more than 100 jobs",
+          "id": "louisville-2-98059",
+          "title": "Body camera footage shows police shoot armed burglary suspect in downtown Louisville",
           "kicker": "WDRB",
-          "summary": "Louisville-based Cornbread Hemp says a looming federal ban could put more than 100 jobs at risk. The company wants Congress either to delay the ban or change the law before it takes effect on Nov. 12. For Louisville, this points to potential local job losses if the federal policy goes ahead as scheduled.",
-          "emailSummary": "Cornbread Hemp said Tuesday it hopes Congress either delays the ban or changes the law before it takes effect Nov. 12.",
-          "whyItMatters": "This matters because a federal rule change could directly affect employment and business activity in a Louisville hemp company that says it employs more than 100 people.",
+          "summary": "Body camera footage reportedly shows Louisville police shooting an armed burglary suspect downtown after responding to a reported break-in at 5th and York streets just after midnight on July 26. The available details indicate this is a police use-of-force incident tied to a burglary call in the downtown area. For Louisville, it points to another high-stakes police response in the city center and will likely draw attention to downtown safety and policing practices.",
+          "emailSummary": "The shooting happened just after midnight July 26 after police responded to a reported break-in at 5th and York streets.",
+          "whyItMatters": "This matters because police shootings during burglary calls can affect public safety, trust in law enforcement, and how downtown incidents are handled in Louisville.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Aug 4, 9:05 PM ET",
-          "sourceUrl": "https://www.wdrb.com/news/louisville-hemp-company-says-looming-federal-ban-could-cost-more-than-100-jobs/article_388482d2-21cc-4f41-9a82-f2362417da8c.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPZmRocHFXSjRNQlh0d1ptdHhObllhUnVGS3cxV0otNE04eExJc2hKbndhZVFfYTM2UDVnaTJydXprd0xvM0g2WXc0OFFiT1F2VjJzQVZGYU51d2diWl9JdTg2Q0V0QlItUndJWVVrVzFhaWlSd1FjbzlZN0tERkJLNm8wWHBtbVFWLVZYaHVGYzFCZXpmbTZtQWtIV1RrbXVMeEcteS10NllKdXhtbWZ4dkdHWnJ5ajFqc3R0NTN5OVZaU3huck0xRXZuSmlQUTRyTDExOHlRc194R0VXU2V5Q1B3dW41elFrYmc?oc=5",
-          "publishedAt": "2026-08-05T01:05:00+00:00",
+          "sourceLabel": "WDRB · Aug 5, 5:39 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/wdrb-video/body-camera-footage-shows-police-shoot-armed-burglary-suspect-in-downtown-louisville/video_0f265c73-16d1-5fdb-8221-3daaddc211df.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPTHdsVUxNUVdLOERTYzRHZjhzNF8waGlxTzdrQmVYSlc0NzA5QVRqQjdOeGJzTHNtYXNtN1BIWHY1YWZKUkFDQVR2TWFvenlqVG52T0ZBMVZyLUlvcF9vaFZZVVFmclJXdGxfVEMtMDVMTGRjQXRjM0t1b3c2cHR2bjdNQ1d3SUQzVXV1VVVYS1NudF9fTXcwZkF2NEFwQlpRcmc1R3VmUXBzWE1ESGtlTGliczJrMTV0d3JtbXNNdl9QTUNXUnpVaWRQRGpjNWJ2Y056V2R3b1BLNWg3MVlBNzFuMXE4a2VVaTlkOGJ0TVd5SzFINkt1Q25CSHl6QQ?oc=5",
+          "publishedAt": "2026-08-05T21:39:00+00:00",
           "glossary": [
             {
-              "term": "hemp",
-              "definition": "A variety of the cannabis plant that is legally distinct from marijuana under certain laws and is used in products like oils, foods, and supplements."
+              "term": "body camera footage",
+              "definition": "Video recorded by a police officer's worn camera during an incident."
             },
             {
-              "term": "federal ban",
-              "definition": "A nationwide prohibition set by the U.S. government."
+              "term": "armed suspect",
+              "definition": "A person believed to have a weapon during the incident."
+            },
+            {
+              "term": "burglary",
+              "definition": "Breaking into a building or other place to commit a crime."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a policy-and-business story: a company is warning that a federal legal change could affect jobs. When reading the source, pay attention to the effective date, what exactly the ban would cover, and whether Congress acts before Nov. 12. If lawmakers delay the ban or change the law, the job impact could be reduced or avoided; if not, the company says more than 100 jobs could be at risk.",
+            "explanationText": "This is a police accountability and public safety story, not just a crime brief. When reading the source, focus on what the video shows, how police describe the threat, and whether the reported break-in and the shooting line up in the timeline. If later reporting adds details about the suspect's actions, the weapon, or whether charges were filed, that would change how the incident is interpreted.",
             "glossary": [
               {
-                "term": "hemp",
-                "definition": "A variety of the cannabis plant that is legally distinct from marijuana under certain laws and is used in products like oils, foods, and supplements.",
-                "whyItMatters": "The story is about how federal policy affects a hemp business, so understanding what hemp is helps explain the stakes."
+                "term": "body camera footage",
+                "definition": "Video recorded by a police officer's worn camera during an incident.",
+                "whyItMatters": "It can provide the clearest record of what officers saw and did."
               },
               {
-                "term": "federal ban",
-                "definition": "A nationwide prohibition set by the U.S. government.",
-                "whyItMatters": "A federal ban would apply broadly and could override local business plans or state-level expectations."
+                "term": "armed suspect",
+                "definition": "A person believed to have a weapon during the incident.",
+                "whyItMatters": "Whether the person was armed can strongly affect how people judge the use of force."
+              },
+              {
+                "term": "burglary",
+                "definition": "Breaking into a building or other place to commit a crime.",
+                "whyItMatters": "It is the underlying offense police were responding to in this case."
               }
             ]
           }
         },
         {
-          "id": "louisville-4-44919",
-          "title": "Louisville's Sun Valley Park vandalized after four-wheelers rip through golf course overnight",
+          "id": "louisville-3-80826",
+          "title": "US moves to shut a Kentucky organ donation group, citing safety failures",
           "kicker": "WDRB",
-          "summary": "Sun Valley Park in Louisville was vandalized overnight after four-wheelers ripped through the golf course. A swastika symbol was also found in the parking lot. The report indicates both property damage and hate-symbol graffiti at the park.",
-          "emailSummary": "Sun Valley Park vandalized after four-wheelers damage golf course and swastika symbols are found in parking lot.",
-          "whyItMatters": "This matters because it affects a public recreational space, raises repair and cleanup costs, and may trigger a police response if the vandalism is tied to hate-motivated activity.",
+          "summary": "The federal government is moving to shut down a Kentucky organ donation group after accusing it of serious safety failures. According to the description, the group allegedly kept planning organ retrieval from some patients who unexpectedly showed signs of life. If confirmed, that raises major concerns about oversight and patient safety in the organ donation process.",
+          "emailSummary": "The federal government is taking steps to shut down a Kentucky organ donation group accused of continuing plans for organ retrieval from some pa…",
+          "whyItMatters": "This matters because organ donation depends on strict medical safeguards, and failures like these can erode trust and trigger tighter federal oversight of local transplant systems.",
           "dataSignals": [
-            "Louisville local"
+            "article trigger",
+            "source credibility",
+            "practical impact"
           ],
-          "sourceLabel": "WDRB · Aug 4, 5:50 PM ET",
-          "sourceUrl": "https://www.wdrb.com/louisvilles-sun-valley-park-vandalized-after-four-wheelers-rip-through-golf-course-overnight/video_f9f2082c-18ba-5419-9dc3-63adc85c071d.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNcUdJek8wLTV0TUdZNm56emdfZl83azN4QlJUZlFvX0xzeGNPMVFJdTZHTEJwdl9HNHl2aFhZbGY0aC1MSUlReTB5eXp3OW9yXzVSclFlM1B2ZzBwakFWVkY1b0QzRTVkTFlJY0hpZ1I2M3podFVaU29reS1tTDBJTDZUc0llQ1VzT2taYUdIVmx0RkRYQnVHMXhJaTkxc3poeU5EblV6bDFlUUFXTTRDWlFVRlM1WjFrMm1WYTlfaG93bHFXemZDRU9PVjBiRUZWMk84UG9taFhmS1JCMXFyb2RMY1c1SndwdE5lU3pQM2p0cEk?oc=5",
-          "publishedAt": "2026-08-04T21:50:00+00:00",
+          "sourceLabel": "WDRB · Aug 5, 8:15 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/national/us-moves-to-shut-a-kentucky-organ-donation-group-citing-safety-failures/article_72c69191-5ac0-5e29-ba69-203fdc2403ac.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQU0tDazEzU0NNbGtKSU1NeVpxaXNVbmgwNUNMSDFCQ3lZcDhwSWhaaXpWdDdiS1pUZlZMN2lWSFJIU2h4OUNZLWtUR1ExbU9LcERfOV80ckRVYXR1UUVZSV9lVGNOVWh3Nk44QzNndUlURlJJNXlScUlfTG95MENUNmVEUlo3OWpQa0tUaldDcjJtb0lpX05memJLOTZfcWFGNC1maDFyRTRhOE9ZMW9TcmJDM0tsNURUYTlRcFRYSndtbjhEV0pMSURxblJJOUd5M1QtYzJaNTg2NTBnLURIaTlqSWtUR3RFaEQwcQ?oc=5",
+          "publishedAt": "2026-08-06T00:15:15+00:00",
           "glossary": [
             {
-              "term": "vandalized",
-              "definition": "Deliberately damaged or defaced property."
+              "term": "organ retrieval",
+              "definition": "The medical process of removing organs from a donor for transplant."
             },
             {
-              "term": "four-wheelers",
-              "definition": "Small off-road vehicles, often called ATVs, used on rough terrain."
+              "term": "federal government",
+              "definition": "The national government and its agencies, which can investigate and regulate healthcare organizations."
             },
             {
-              "term": "swastika",
-              "definition": "A symbol associated today with Nazi ideology and antisemitism."
+              "term": "organ donation group",
+              "definition": "An organization that coordinates the donation and recovery of organs for transplant."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a local public-safety and property-damage story. When reading the full report, pay attention to who reported the damage, whether police or park officials identified suspects, and whether the symbol was treated as hate speech or as part of broader vandalism. Those details would change whether the incident is framed mainly as trespassing and damage, or as a possible hate crime investigation.",
+            "explanationText": "This is a regulatory and patient-safety story, not a clinical research story. Pay attention to the exact allegation: the key issue is that organ retrieval was allegedly still being planned after some patients showed signs of life, which would be a grave error if true. If later reporting shows the government’s case is narrower or the evidence is disputed, that would change how severe the situation appears.",
             "glossary": [
               {
-                "term": "vandalized",
-                "definition": "Deliberately damaged or defaced property.",
-                "whyItMatters": "It signals intentional harm, which can mean cleanup, repair, and possible criminal investigation."
+                "term": "organ retrieval",
+                "definition": "The medical process of removing organs from a donor for transplant.",
+                "whyItMatters": "It is the central procedure at issue, so mistakes here can directly affect patient safety and transplant trust."
               },
               {
-                "term": "four-wheelers",
-                "definition": "Small off-road vehicles, often called ATVs, used on rough terrain.",
-                "whyItMatters": "They can quickly cause serious turf and ground damage when driven where they are not allowed."
+                "term": "federal government",
+                "definition": "The national government and its agencies, which can investigate and regulate healthcare organizations.",
+                "whyItMatters": "Federal action signals the seriousness of the allegations and can determine whether the group is allowed to keep operating."
               },
               {
-                "term": "swastika",
-                "definition": "A symbol associated today with Nazi ideology and antisemitism.",
-                "whyItMatters": "Its presence can indicate hate-related vandalism, not just random property damage."
+                "term": "organ donation group",
+                "definition": "An organization that coordinates the donation and recovery of organs for transplant.",
+                "whyItMatters": "These groups sit between hospitals and transplant centers, so their procedures affect whether donations are handled safely and legally."
               }
             ]
           }
         },
         {
-          "id": "louisville-5-76888",
-          "title": "Louisville mayor calls for a data center moratorium as city considers regulations",
-          "kicker": "Kentucky Lantern",
-          "summary": "Louisville’s mayor is asking city council members to approve a temporary ban, or moratorium, on new data center construction. The move comes as the city considers whether to put regulations on data centers. For Louisville, this signals a pause in development while officials weigh how to manage the growth of a power- and land-intensive industry.",
-          "emailSummary": "The mayor of Kentucky’s largest city is calling on city council members to pass a temporary ban or moratorium on data center construction.",
-          "whyItMatters": "This matters because a moratorium can slow or stop near-term data center projects in Louisville while the city decides what rules should govern future construction.",
+          "id": "louisville-4-74315",
+          "title": "Preakness shifting back to three weeks and a day after the Kentucky Derby, to be run on a Sunday",
+          "kicker": "WDRB",
+          "summary": "The Preakness Stakes is being moved to three weeks and one day after the Kentucky Derby, and it will be run on a Sunday for the first time. That changes the traditional spacing between the first two Triple Crown races and shifts a major horse-racing event off its usual day. For Louisville, the main relevance is that the Derby’s place in the racing calendar is being adjusted around an important companion event.",
+          "emailSummary": "The Preakness Stakes is moving to three weeks and a day after the Kentucky Derby to be run on a Sunday for the first time.",
+          "whyItMatters": "This matters because changing the timing of the Preakness can affect the pacing, travel, and national attention around the Kentucky Derby and the broader horse-racing schedule.",
           "dataSignals": [
-            "Louisville local"
+            "article trigger",
+            "source credibility",
+            "practical impact"
           ],
-          "sourceLabel": "Kentucky Lantern · Aug 4, 4:57 PM ET",
-          "sourceUrl": "https://kentuckylantern.com/2026/08/04/louisville-mayor-calls-for-a-data-center-moratorium-as-city-considers-regulations/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbXI1ODcybDJzdDU2MHBWRmFqRDZNRl9teDMzYnR0eEI5WlJPUG9ZOFRjMmlBREdoNjBsNlFqdEc4c2VCdmp3X0FxRVV3MnpRMkVaRER6ZXR1bnExT2o3TG9GeUxmcWNzdnZZak5tSWwxNGhXVENOZHlxWDl2SXQtSDFmeGZ2X3Q5SVl6OHJGRkZvVjF5NnNKbTJaTXJOTWx5MUtvMGNINHhienc2eHo2Ni11U3NvY3VMQllheEFB?oc=5",
-          "publishedAt": "2026-08-04T20:57:48+00:00",
+          "sourceLabel": "WDRB · Aug 5, 6:01 PM ET",
+          "sourceUrl": "https://www.wdrb.com/preakness-shifting-back-to-three-weeks-and-a-day-after-the-kentucky-derby-to-be/video_518623a8-a46c-5a87-a627-ff132102256b.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdjJqUTNfZFM4a1M4bXpYUHFWRnl1VHBCQ3hVaWFIcEFmcDIxd0hwcEdNcG1ndFJKWVIxYzVLOWlvOHVpZ3dmVjZYNWw3aXh4UkZCWlN3RktDdDFfSnVCU2hZVGRxTlhhMmVwUnYwX1F1VnQyMVNLRlg5YWwxaTYtelRPNFF2d2dhUEZPejRkNWlqS1NoX2ZZbU0ycWJ3OWlmM1F3UUVZYVpKRDcyTXFxM05aSVBMZ0xVWHEtNklPWFJPMjRzX0liUHdJQVVyc2YyeVFvWjlsMElWX2lwdjdRU2tB?oc=5",
+          "publishedAt": "2026-08-05T22:01:00+00:00",
           "glossary": [
             {
-              "term": "data center",
-              "definition": "A facility filled with computers and networking equipment that stores, processes, and moves digital data."
+              "term": "Preakness Stakes",
+              "definition": "A major horse race and one of the three races that make up the Triple Crown."
             },
             {
-              "term": "moratorium",
-              "definition": "A temporary ban or pause on a specific activity."
+              "term": "Kentucky Derby",
+              "definition": "The famous horse race held in Louisville that is the first leg of the Triple Crown."
             },
             {
-              "term": "city council",
-              "definition": "The elected local governing body that passes ordinances and other city rules."
+              "term": "Triple Crown",
+              "definition": "The three-race series in U.S. horse racing made up of the Kentucky Derby, Preakness Stakes, and Belmont Stakes."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a local policy story about land use and technology development, not a business-results story. When reading the source, pay attention to whether officials are proposing a full pause, what regulations are under discussion, and whether the council is likely to act. The interpretation changes if the city is only studying rules versus actively preparing to block new projects.",
+            "explanationText": "This is a scheduling story about a major sports event rather than a race result. When reading the source, focus on the timing change itself: what moved, how far, and that the race will be on a Sunday for the first time. The interpretation would change if the full story explained why the schedule changed or whether other Triple Crown races are also affected.",
             "glossary": [
               {
-                "term": "data center",
-                "definition": "A facility filled with computers and networking equipment that stores, processes, and moves digital data.",
-                "whyItMatters": "Data centers are the buildings whose construction would be affected by the proposed moratorium."
+                "term": "Preakness Stakes",
+                "definition": "A major horse race and one of the three races that make up the Triple Crown.",
+                "whyItMatters": "Its date affects the timing of one of the biggest events in horse racing."
               },
               {
-                "term": "moratorium",
-                "definition": "A temporary ban or pause on a specific activity.",
-                "whyItMatters": "A moratorium would delay new data center construction while the city studies regulations."
+                "term": "Kentucky Derby",
+                "definition": "The famous horse race held in Louisville that is the first leg of the Triple Crown.",
+                "whyItMatters": "The Derby’s timing is the anchor point for the rest of the Triple Crown schedule."
               },
               {
-                "term": "city council",
-                "definition": "The elected local governing body that passes ordinances and other city rules.",
-                "whyItMatters": "City council members would have to approve the temporary ban and any related regulations."
+                "term": "Triple Crown",
+                "definition": "The three-race series in U.S. horse racing made up of the Kentucky Derby, Preakness Stakes, and Belmont Stakes.",
+                "whyItMatters": "Scheduling changes to one race can ripple through the whole series."
+              }
+            ]
+          }
+        },
+        {
+          "id": "louisville-5-22616",
+          "title": "Georgia to debut new all-white alternate uniform when they play Western Kentucky on September 12",
+          "kicker": "WDRB",
+          "summary": "Georgia has announced it will debut a new all-white alternate uniform when it plays Western Kentucky at home on September 12. The team’s traditional uniform style emphasizes its standard look, so this is a notable one-game change rather than a full uniform shift. For Louisville-area readers, the local relevance is that Western Kentucky is the opponent, making this a nearby college football matchup with an unusual uniform reveal.",
+          "emailSummary": "Georgia has announced the Bulldogs will debut a new all-white look as an alternate uniform when they play Western Kentucky at home on September…",
+          "whyItMatters": "This matters because it adds an attention-grabbing wrinkle to a Western Kentucky road game against a major SEC opponent, which can affect fan interest and media coverage in the region.",
+          "dataSignals": [
+            "article trigger",
+            "source credibility",
+            "practical impact"
+          ],
+          "sourceLabel": "WDRB · Aug 5, 2:18 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/national/georgia-to-debut-new-all-white-alternate-uniform-when-they-play-western-kentucky-on-september/article_e5638c91-1891-589f-ba2a-a28899948016.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOdlpMZUgtN1lTRmJoQWhkU1hLOWN0OU1rQ3E3dmVyVFh3bUt6bWROcnlIZDV6eDhFRy1TbzdwazVIRUU4MENaZHFwdXZ6MHVJSUlIR3BsMnFrVWhZbHZjSDlhSGlsVlpaZmFhUFlFVGtkWGZjWGc4S1hoek42UHFaM1BQZjdIc2Z0UXMzZEN0cjFuYTJuS1BkMHNJM20xRXNZUE9RS3BQQTJZNVljaExHQXotaXRRT1QyblgzZ0MxZ0E0NGJKNDgzR3N3aTRLYUNNLUQxMWZOQ21NcEpFX25RdWRFRUx0dm5GelAyd1pkNksweFBfWU5BSFp0UDdRMmdEQ2RRa3hkM0JpZw?oc=5",
+          "publishedAt": "2026-08-05T18:18:11+00:00",
+          "glossary": [
+            {
+              "term": "alternate uniform",
+              "definition": "A non-standard team uniform worn for special games or promotions instead of the usual home or away kit."
+            },
+            {
+              "term": "debut",
+              "definition": "The first public appearance or use of something new."
+            },
+            {
+              "term": "home game",
+              "definition": "A game played at the team’s own stadium rather than on the opponent’s field."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a sports-uniform announcement story, not a game result or roster report. When reading the source, pay attention to what is actually confirmed: the new all-white alternate look, the opponent, and the date. If later coverage adds details about why Georgia chose the uniform or how Western Kentucky responded, that would change the interpretation from a simple reveal to a broader team-marketing or rivalry story.",
+            "glossary": [
+              {
+                "term": "alternate uniform",
+                "definition": "A non-standard team uniform worn for special games or promotions instead of the usual home or away kit.",
+                "whyItMatters": "It signals a deliberate branding or marketing choice that can draw extra attention to a game."
+              },
+              {
+                "term": "debut",
+                "definition": "The first public appearance or use of something new.",
+                "whyItMatters": "It means this game is the first chance fans will see the uniform in action."
+              },
+              {
+                "term": "home game",
+                "definition": "A game played at the team’s own stadium rather than on the opponent’s field.",
+                "whyItMatters": "It identifies where the uniform reveal will happen and which fans are most likely to see it live."
               }
             ]
           }
@@ -1420,11 +1183,10 @@
     }
   ],
   "errors": [
-    "ai: skipped 3 stories with no fetchable content",
-    "energy: skipped 6 stories with no fetchable content",
-    "humana: skipped 2 stories with no fetchable content",
-    "kentucky_healthcare: skipped 1 story with no fetchable content",
-    "analytics: skipped 2 stories with no fetchable content",
-    "louisville: skipped 6 stories with no fetchable content"
+    "ai: skipped 5 stories with no fetchable content",
+    "energy: skipped 3 stories with no fetchable content",
+    "kentucky_healthcare: skipped 6 stories with no fetchable content",
+    "analytics: skipped 3 stories with no fetchable content",
+    "louisville: skipped 25 stories with no fetchable content"
   ]
 }
