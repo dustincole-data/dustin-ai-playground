@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-10T09:21:33.139607+00:00",
-  "generatedLabel": "Aug 10, 5:21 AM ET",
+  "generatedAt": "2026-08-11T09:00:31.066767+00:00",
+  "generatedLabel": "Aug 11, 5:00 AM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -9,290 +9,264 @@
       "emptyMessage": "No qualified AI stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "ai-signal-2026-08-10_09-20-15-1",
-          "title": "Agent Plugins 1.0 — the agent extension standard just landed (Aug 6). OpenAI, AWS, Cursor, GitHub, VS Co…",
+          "id": "ai-signal-2026-08-11_08-57-29-1",
+          "title": "Meta open-sourced Muse Glimmer 30B (Aug 10) — Apache 2.0, fits 24GB GPU, best-in-class agentic coding at…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "Hermes Daily AI Brief is reporting on Agent Plugins 1.0 — the agent extension standard just landed (Aug 6). OpenAI, AWS, Cursor, GitHub, VS Co…. In plain English, this is an AI-agent workflow story: the important details are what the agent can do, what guardrails exist, and whether it helps real operators complete work instead of just demoing well. For Dustin, the useful read is whether this creates a practical analytics workflow, a governance issue, a tool worth testing, or a clear idea to write about for business operators. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Agent Plugins 1.0 — the agent extension standard just landed (Aug 6). OpenAI, AWS, Cursor, GitHub, VS Code, and Vercel co-launched a vendor-neut…",
-          "whyItMatters": "This matters because bringing a model into Copilot changes where developers encounter it and whether it becomes part of an existing workflow.",
+          "summary": "Meta open-sourced Muse Glimmer 30B under Apache 2.0, and the model is small enough to run on a 24GB GPU, with about 20GB needed in 4-bit mode. The brief says it is distilled from Muse Spark and is positioned for agentic coding, with benchmark scores that beat Qwen3.6-27B on MCP Atlas and Gemma4-31B on SWE-Bench Pro. For AI users, that means a strong coding-focused model may be available for local, lower-cost hardware instead of only cloud deployment.",
+          "emailSummary": "Meta open-sourced Muse Glimmer 30B (Aug 10) — Apache 2.0, fits 24GB GPU, best-in-class agentic coding at local price. Distilled from Muse Spark.…",
+          "whyItMatters": "This matters because a capable open-weight coding model that runs on consumer GPUs can lower cost and privacy barriers for building and testing AI agents locally.",
           "dataSignals": [
             "agent workflow",
-            "Codex / coding agents",
-            "developer workflow",
-            "OpenAI signal"
-          ],
-          "sourceLabel": "agent-plugins.org) · Aug 10, 5:20 AM ET",
-          "sourceUrl": "https://agent-plugins.org",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-08-10T09:20:15.881554+00:00",
-          "glossary": [
-            {
-              "term": "agent",
-              "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer."
-            },
-            {
-              "term": "MCP",
-              "definition": "Model Context Protocol: a standard way for AI tools to connect to outside apps, files, and services."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is an AI-agent workflow story: AI is being used to help define, run, or supervise a sequence of work instead of only chatting. The teaching angle is control. Once AI can trigger workflows, the key concepts are permissions, sandboxing, auditability, and whether humans can understand what it changed. The main terms to understand are sandboxed container, MCP, CLI, agent, AI capability, model. Read for the exact job the agent can do, what tools it touches, what permissions it starts with, and what safety controls are named in the story.",
-            "glossary": [
-              {
-                "term": "sandboxed container",
-                "definition": "An isolated environment that limits what code can touch while it runs.",
-                "whyItMatters": "Sandboxes reduce the blast radius if an AI-generated workflow does something wrong."
-              },
-              {
-                "term": "MCP",
-                "definition": "Model Context Protocol: a standard way for AI tools to connect to outside apps, files, and services.",
-                "whyItMatters": "MCP matters because it is becoming a common plug shape for connecting AI agents to real tools, files, and services."
-              },
-              {
-                "term": "CLI",
-                "definition": "Command-line interface: a text-based tool run from a terminal.",
-                "whyItMatters": "CLI support matters when AI tools need to fit into developer and automation workflows instead of only a web chat."
-              },
-              {
-                "term": "agent",
-                "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer.",
-                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon."
-              },
-              {
-                "term": "AI capability",
-                "definition": "The specific new thing an AI system can do, such as use a browser, run code, connect tools, or access a model.",
-                "whyItMatters": "AI news is easier to judge when you identify the exact capability instead of treating every update as general hype."
-              },
-              {
-                "term": "model",
-                "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
-                "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-signal-2026-08-10_09-20-15-2",
-          "title": "Claude Code auto mode becomes default Aug 14 — Anthropic is flipping auto mode on for Pro, Max, and Team…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "Hermes Daily AI Brief is reporting on Claude Code auto mode becomes default Aug 14 — Anthropic is flipping auto mode on for Pro, Max, and Team…. In plain English, this is a practical AI story: the important details are what changed, who can use it, what risk or governance issue comes with it, and whether it creates a useful operator-facing workflow. For Dustin, the useful read is whether this creates a practical analytics workflow, a governance issue, a tool worth testing, or a clear idea to write about for business operators. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Claude Code auto mode becomes default Aug 14 — Anthropic is flipping auto mode on for Pro, Max, and Team accounts. Claude will proceed without h…",
-          "whyItMatters": "This matters because a cheaper flagship model can shift which tasks get automated, which model becomes the default, and how quickly teams adopt it.",
-          "dataSignals": [
-            "Anthropic signal",
-            "safety / governance"
-          ],
-          "sourceLabel": "techcrunch.com · Aug 10, 5:20 AM ET",
-          "sourceUrl": "https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-08-10T09:20:15.881554+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is an AI product or policy update. The useful read is not that AI is changing; it is exactly what capability, access, cost, or risk changed in this article. The teaching angle is practical impact: who can use it, what it changes in work, and what risk or limit would matter in a real business setting. The main terms to understand are AI capability, guardrail, model, vendor dependency, workflow, governance. Read for the concrete new fact, the affected users, whether this is a launch or restriction, and whether the details gives enough evidence to trust it.",
-            "glossary": [
-              {
-                "term": "AI capability",
-                "definition": "A specific thing an AI tool can now do, such as use a browser, run code, connect tools, or access a model.",
-                "whyItMatters": "Reading AI news gets easier when you focus on the exact new capability instead of the hype around the product."
-              },
-              {
-                "term": "guardrail",
-                "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.",
-                "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."
-              },
-              {
-                "term": "model",
-                "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
-                "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
-              },
-              {
-                "term": "vendor dependency",
-                "definition": "Reliance on one company, model, or platform for an important workflow.",
-                "whyItMatters": "If access, pricing, or policy changes, dependency can suddenly become an operational risk."
-              },
-              {
-                "term": "workflow",
-                "definition": "A repeatable sequence of steps people or software use to get work done.",
-                "whyItMatters": "Workflow impact is where AI changes become practical: what step gets faster, safer, cheaper, or more automated?"
-              },
-              {
-                "term": "governance",
-                "definition": "Rules, approvals, monitoring, and controls that keep AI or data use safe and reliable.",
-                "whyItMatters": "Governance is the difference between a cool demo and something a business can safely let touch real work."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-signal-2026-08-10_09-20-15-3",
-          "title": "Grok Build v1.0.0 ships on Grok 4.5 engine (Aug 7) — xAI's agentic coding CLI hit v1.0 with the Grok 4.5…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "Hermes Daily AI Brief is reporting on Grok Build v1.0.0 ships on Grok 4.5 engine (Aug 7) — xAI's agentic coding CLI hit v1.0 with the Grok 4.5…. In plain English, this is a data-and-analytics workflow story: the important details are what changed in the platform, how it could affect governed reporting or automation, and whether it is practical enough to test. For Dustin, the useful read is whether this creates a practical analytics workflow, a governance issue, a tool worth testing, or a clear idea to write about for business operators. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Grok Build v1.0.0 ships on Grok 4.5 engine (Aug 7) — xAI's agentic coding CLI hit v1.0 with the Grok 4.5 engine swap under the hood. Features: M…",
-          "whyItMatters": "This matters because agent stories are about real workflow power, so the key question is what the system can touch and how it is controlled.",
-          "dataSignals": [
-            "agent workflow",
+            "model/tool release",
             "MCP / integration"
           ],
-          "sourceLabel": "x.ai · Aug 10, 5:20 AM ET",
-          "sourceUrl": "https://x.ai/build/changelog",
+          "sourceLabel": "research.meta.ai · Aug 11, 4:57 AM ET",
+          "sourceUrl": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
           "googleNewsUrl": null,
-          "publishedAt": "2026-08-10T09:20:15.881554+00:00",
+          "publishedAt": "2026-08-11T08:57:29.726428+00:00",
           "glossary": [
             {
-              "term": "agentic",
-              "definition": "AI software that can plan and take steps toward a task instead of only answering one prompt."
+              "term": "open-sourced",
+              "definition": "Released so the model’s weights and related materials can be used by others under a public license."
             },
             {
-              "term": "agent",
-              "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer."
+              "term": "Apache 2.0",
+              "definition": "A permissive software license that allows broad use, modification, and distribution with few restrictions."
             },
             {
-              "term": "MCP",
-              "definition": "Model Context Protocol: a standard way for AI tools to connect to outside apps, files, and services."
+              "term": "distilled",
+              "definition": "A smaller model trained to imitate a larger one’s behavior and keep much of its performance."
+            },
+            {
+              "term": "4-bit",
+              "definition": "A low-precision way to store and run a model using less memory than standard formats."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is an AI-agent workflow story: AI is being used to help define, run, or supervise a sequence of work instead of only chatting. The teaching angle is control. Once AI can trigger workflows, the key concepts are permissions, sandboxing, auditability, and whether humans can understand what it changed. The main terms to understand are agentic workflow, MCP, CLI, agentic, agent, AI capability. Read for the exact job the agent can do, what tools it touches, what permissions it starts with, and what safety controls are named in the story.",
+            "explanationText": "This is a model-release and benchmark story, so the key things to watch are the license, hardware requirements, and which tests were used to support the performance claim. The interpretation changes if the benchmarks are widely accepted and independently reproduced; it is weaker if the gains only hold in narrow tests or specific hardware setups.",
             "glossary": [
               {
-                "term": "agentic workflow",
-                "definition": "A workflow where AI is expected to plan steps, use tools, and move work forward instead of only answering a single question.",
-                "whyItMatters": "This is where AI starts touching real operations, so permissions, logs, and safety controls matter as much as the model output."
+                "term": "open-sourced",
+                "definition": "Released so the model’s weights and related materials can be used by others under a public license.",
+                "whyItMatters": "Open-sourced models are easier to inspect, run locally, and integrate into products."
               },
               {
-                "term": "MCP",
-                "definition": "Model Context Protocol: a standard way for AI tools to connect to outside apps, files, and services.",
-                "whyItMatters": "MCP matters because it is becoming a common plug shape for connecting AI agents to real tools, files, and services."
+                "term": "Apache 2.0",
+                "definition": "A permissive software license that allows broad use, modification, and distribution with few restrictions.",
+                "whyItMatters": "This license can make a model much easier for businesses and developers to adopt."
               },
               {
-                "term": "CLI",
-                "definition": "Command-line interface: a text-based tool run from a terminal.",
-                "whyItMatters": "CLI support matters when AI tools need to fit into developer and automation workflows instead of only a web chat."
+                "term": "distilled",
+                "definition": "A smaller model trained to imitate a larger one’s behavior and keep much of its performance.",
+                "whyItMatters": "Distillation is how a powerful model can become practical for cheaper hardware."
               },
               {
-                "term": "agentic",
-                "definition": "AI software that can plan and take steps toward a task instead of only answering one prompt.",
-                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon."
-              },
-              {
-                "term": "agent",
-                "definition": "An AI helper that can take steps, use tools, or follow a workflow instead of only producing one answer.",
-                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon."
-              },
-              {
-                "term": "AI capability",
-                "definition": "The specific new thing an AI system can do, such as use a browser, run code, connect tools, or access a model.",
-                "whyItMatters": "AI news is easier to judge when you identify the exact capability instead of treating every update as general hype."
+                "term": "4-bit",
+                "definition": "A low-precision way to store and run a model using less memory than standard formats.",
+                "whyItMatters": "Lower precision is what helps large models fit on consumer GPUs."
               }
             ]
           }
         },
         {
-          "id": "ai-1-42384",
-          "title": "How a small Israeli startup was linked to rogue AI hacks at OpenAI, Anthropic and Meta",
+          "id": "ai-signal-2026-08-11_08-57-29-2",
+          "title": "Docker Sandboxes — microVM isolation for AI coding agents just shipped (Aug 10). Disposable, isolated mi…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "Docker says it shipped Docker Sandboxes on Aug. 10: disposable, isolated microVMs designed for AI coding agents such as Claude Code, Codex, Copilot CLI, Gemini CLI, OpenCode, and Kiro. The description says agents can run unattended, install packages, spin up containers, and modify configs without touching the host machine, and that there is a free tier. The practical meaning is that AI coding workflows can be made safer by containing mistakes inside the sandbox instead of affecting the developer’s system.",
+          "emailSummary": "Docker Sandboxes — microVM isolation for AI coding agents just shipped (Aug 10). Disposable, isolated microVMs purpose-built for Claude Code, Co…",
+          "whyItMatters": "This matters because safer isolation could make it more practical to let AI agents perform real coding and setup tasks without risking damage to the host environment.",
+          "dataSignals": [
+            "agent workflow",
+            "Codex / coding agents"
+          ],
+          "sourceLabel": "docker.com · Aug 11, 4:57 AM ET",
+          "sourceUrl": "https://www.docker.com/products/docker-sandboxes/",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-08-11T08:57:29.726428+00:00",
+          "glossary": [
+            {
+              "term": "microVM",
+              "definition": "A very small virtual machine that isolates software inside a lightweight, separate environment."
+            },
+            {
+              "term": "AI coding agent",
+              "definition": "An AI tool that can carry out coding tasks on its own, not just suggest text."
+            },
+            {
+              "term": "CLI",
+              "definition": "Command-line interface, a text-based way to control software by typing commands."
+            },
+            {
+              "term": "host",
+              "definition": "The main computer or operating system that runs the sandbox or virtual machine."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a product-launch story about infrastructure for AI development, not a research result. When reading the source, pay attention to whether the product is actually generally available, which tools it supports, and what kinds of actions it can safely contain. The meaning changes if the isolation is fully local and robust versus limited, experimental, or dependent on specific setup constraints.",
+            "glossary": [
+              {
+                "term": "microVM",
+                "definition": "A very small virtual machine that isolates software inside a lightweight, separate environment.",
+                "whyItMatters": "It is the core safety boundary Docker is using to keep an agent’s actions contained."
+              },
+              {
+                "term": "AI coding agent",
+                "definition": "An AI tool that can carry out coding tasks on its own, not just suggest text.",
+                "whyItMatters": "The product is built specifically for these tools, so the article’s impact depends on agent-based workflows."
+              },
+              {
+                "term": "CLI",
+                "definition": "Command-line interface, a text-based way to control software by typing commands.",
+                "whyItMatters": "Several of the named tools run from the command line, which is where these sandboxes are meant to be used."
+              },
+              {
+                "term": "host",
+                "definition": "The main computer or operating system that runs the sandbox or virtual machine.",
+                "whyItMatters": "Protecting the host is the main benefit claimed for this product."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-signal-2026-08-11_08-57-29-3",
+          "title": "Claude Code 2.1.225 — gateway spend limits + cross-session messaging (shipped Aug 8-10). Spend-limit war…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "Claude Code 2.1.225 adds gateway spend-limit warnings that show the cap, reset time, and operator, which makes budget controls more explicit. It also adds SendMessage so agents can message other sessions on any machine, plus ListAgents for discovery. The update supports a self-hosted runner for Team and Enterprise users, and cross-session messaging is designed to survive compaction and remote-control resume. For AI teams, this points to tighter cost visibility and more flexible agent coordination across sessions.",
+          "emailSummary": "Claude Code 2.1.225 — gateway spend limits + cross-session messaging (shipped Aug 8-10). Spend-limit warnings now name the cap, reset time, and…",
+          "whyItMatters": "This matters because clearer spend controls and session-to-session messaging can improve governance, reduce surprise costs, and make multi-agent workflows easier to run at scale.",
+          "dataSignals": [
+            "agent workflow",
+            "Anthropic signal"
+          ],
+          "sourceLabel": "releasebot.io · Aug 11, 4:57 AM ET",
+          "sourceUrl": "https://releasebot.io/updates/anthropic/claude-code",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-08-11T08:57:29.726428+00:00",
+          "glossary": [
+            {
+              "term": "gateway spend limits",
+              "definition": "Rules that cap how much usage or spend is allowed through a gateway or managed service."
+            },
+            {
+              "term": "cross-session messaging",
+              "definition": "The ability for one AI session or agent to send messages to another separate session."
+            },
+            {
+              "term": "self-hosted runner",
+              "definition": "A customer-managed environment that runs jobs or agents on the organization’s own infrastructure instead of a vendor’s."
+            },
+            {
+              "term": "compaction",
+              "definition": "A process that compresses or shortens session context to save space while keeping the important parts."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a product-update story, so the key is to separate new capabilities from the broader implication for AI operations. Pay attention to whether the change is about cost controls, agent coordination, or deployment options, because those affect different parts of an AI stack. Interpretation would change if the release were only a warning-label update, but the addition of cross-session messaging suggests a real workflow capability upgrade.",
+            "glossary": [
+              {
+                "term": "gateway spend limits",
+                "definition": "Rules that cap how much usage or spend is allowed through a gateway or managed service.",
+                "whyItMatters": "They help teams control AI costs and avoid overruns."
+              },
+              {
+                "term": "cross-session messaging",
+                "definition": "The ability for one AI session or agent to send messages to another separate session.",
+                "whyItMatters": "It enables coordination between agents running at different times or on different machines."
+              },
+              {
+                "term": "self-hosted runner",
+                "definition": "A customer-managed environment that runs jobs or agents on the organization’s own infrastructure instead of a vendor’s.",
+                "whyItMatters": "It can give teams more control over security, compliance, and deployment."
+              },
+              {
+                "term": "compaction",
+                "definition": "A process that compresses or shortens session context to save space while keeping the important parts.",
+                "whyItMatters": "If messaging survives compaction, the workflow is more reliable over long sessions."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-1-40399",
+          "title": "Meta to open source its most powerful AI model as it takes swipe at OpenAI, Anthropic",
           "kicker": "CNBC",
-          "summary": "The rogue AI attacks involving OpenAI, Anthropic and Meta all tied back to a small Israeli startup named Irregular. In plain English, this is a practical AI story: the important details are what changed, who can use it, what risk or governance issue comes with it, and whether it creates a useful operator-facing workflow. For Dustin, the useful read is whether this creates a practical analytics workflow, a governance issue, a tool worth testing, or a clear idea to write about for business operators. The source is CNBC; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "The rogue AI attacks involving OpenAI, Anthropic and Meta all tied back to a small Israeli startup named Irregular.",
-          "whyItMatters": "This matters because a cheaper flagship model can shift which tasks get automated, which model becomes the default, and how quickly teams adopt it.",
+          "summary": "Meta launched Muse Glimmer and says it plans to release Muse Spark 1.2 weights. The move comes as Mark Zuckerberg pushes for U.S. leadership in open AI and signals a more open approach to model sharing. For the AI sector, that suggests Meta is trying to shape the competition around open-source models rather than only closed systems.",
+          "emailSummary": "Meta launched Muse Glimmer and plans to release Muse Spark 1.2 weights as Zuckerberg pushes for U.S. leadership in open AI.",
+          "whyItMatters": "This matters because releasing model weights can make advanced AI easier for developers and companies to adopt, customize, and build on, which can shift competitive pressure across the AI market.",
           "dataSignals": [
             "model/tool release"
           ],
-          "sourceLabel": "CNBC · Aug 9, 7:31 AM ET",
-          "sourceUrl": "https://www.cnbc.com/2026/08/09/israeli-startup-irregular-linked-to-ai-hacks-openai-anthropic-meta.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMU95TFhjeUdscnZoOElsdnRhRmV5eTNEZ0dpa3VRTmFCdEVmSTRNOGIyWjJOcTl1aFo3OENPNC1DTFJoWGk5YTJjSVhEQjd1ZzhFQVFteEI1R3dwb0ctbkNuREx2MkpMbHVMVnBfczV5eG1NQlZ2anZ6MXlDdnplS2ljSWVoVlBQaWhZS0JfdUQxNGZEY3VqLUZBTWY5MENKRUpKTnpn0gGrAUFVX3lxTE1uTHVPT3VwRk16aWFGZFFmdEI2akJOaXhmVmpjNkhzVDRkdUpoRDcyZS1HQ2NzZzAyRTJzcjJGTDIyNG5CYTMxY2NxNC1NS2hZQ2VRdUNZUVgweWNPZnBoQjJpd3BudHN5WFJFU2RrcU1EbU5OMEprNGlHQVJzRk1UbndLeUNOSjd0S0FiNjhUbjBkVXdaN2lkdlBTRWt1MjZ3WVh1SmtyNVdXcw?oc=5",
-          "publishedAt": "2026-08-09T11:31:42+00:00",
-          "glossary": [],
+          "sourceLabel": "CNBC · Aug 10, 8:23 AM ET",
+          "sourceUrl": "https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMieEFVX3lxTE94cE0tMnZmYVlZOXdtN3BtNTJPZGRNR1pHckM1OThqLUtveFBRbWhFNzZycl9ZVjJsLXZoMGUxbmQ0VC1kSFVSNk1RdkQ5NkN0bkJIaTVFX0FyVllDS2hwWlhNZ0FVLW1teW00VkMxbWx1TWpyRWNmLdIBfkFVX3lxTE1yT2pVb3pXZnpWRnVFeTliT2paa3NzNkNJX2FiS2ZMZXcxS2FtZ2wxdXhHYUlETVpocWFJTHZkZWJ6dEtzMW1rVF9sTTRkNWtDMWhEeHhYNVF6QVk3X29SU2xPQ3VxT21HX2tWaXN5Yi10OFhIUTVfUWltZ2dxZw?oc=5",
+          "publishedAt": "2026-08-10T12:23:11+00:00",
+          "glossary": [
+            {
+              "term": "open source",
+              "definition": "A development approach where the model or software is shared so others can inspect, use, and sometimes modify it."
+            },
+            {
+              "term": "weights",
+              "definition": "The learned numerical settings inside an AI model that determine how it responds to inputs."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is an AI product or policy update. The useful read is not that AI is changing; it is exactly what capability, access, cost, or risk changed in this article. The teaching angle is practical impact: who can use it, what it changes in work, and what risk or limit would matter in a real business setting. The main terms to understand are AI capability, guardrail, model, vendor dependency, workflow, governance. Read for the concrete new fact, the affected users, whether this is a launch or restriction, and whether the details gives enough evidence to trust it.",
+            "explanationText": "This is a strategy and competition story about how major AI companies choose to share their models. When reading the source, pay attention to whether Meta is releasing full weights, how powerful the model is, and whether the move is framed as policy, branding, or a direct challenge to rivals. The interpretation changes a lot if the release is broad and usable versus limited or heavily constrained.",
             "glossary": [
               {
-                "term": "AI capability",
-                "definition": "A specific thing an AI tool can now do, such as use a browser, run code, connect tools, or access a model.",
-                "whyItMatters": "Reading AI news gets easier when you focus on the exact new capability instead of the hype around the product."
+                "term": "open source",
+                "definition": "A development approach where the model or software is shared so others can inspect, use, and sometimes modify it.",
+                "whyItMatters": "Open source can widen access and speed up adoption, which affects who can build with the technology."
               },
               {
-                "term": "guardrail",
-                "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.",
-                "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."
-              },
-              {
-                "term": "model",
-                "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
-                "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
-              },
-              {
-                "term": "vendor dependency",
-                "definition": "Reliance on one company, model, or platform for an important workflow.",
-                "whyItMatters": "If access, pricing, or policy changes, dependency can suddenly become an operational risk."
-              },
-              {
-                "term": "workflow",
-                "definition": "A repeatable sequence of steps people or software use to get work done.",
-                "whyItMatters": "Workflow impact is where AI changes become practical: what step gets faster, safer, cheaper, or more automated?"
-              },
-              {
-                "term": "governance",
-                "definition": "Rules, approvals, monitoring, and controls that keep AI or data use safe and reliable.",
-                "whyItMatters": "Governance is the difference between a cool demo and something a business can safely let touch real work."
+                "term": "weights",
+                "definition": "The learned numerical settings inside an AI model that determine how it responds to inputs.",
+                "whyItMatters": "Releasing weights gives others more than a demo; it can let them run, fine-tune, or adapt the model themselves."
               }
             ]
           }
         },
         {
-          "id": "ai-2-74831",
-          "title": "The world's leading AI companies are all struggling to contain their latest models",
-          "kicker": "Business Insider",
-          "summary": "There's been a recent string of cybersecurity incidents among the world's leading AI models. Here's a look at what's happened. In plain English, this is a practical AI story: the important details are what changed, who can use it, what risk or governance issue comes with it, and whether it creates a useful operator-facing workflow. For Dustin, the useful read is whether this creates a practical analytics workflow, a governance issue, a tool worth testing, or a clear idea to write about for business operators. The source is Business Insider; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "There's been a recent string of cybersecurity incidents among the world's leading AI models. Here's a look at what's happened.",
-          "whyItMatters": "This matters because the practical question is what capability, access, or workflow changed enough to affect real use.",
+          "id": "ai-2-62770",
+          "title": "As AI-led attacks multiply, OpenAI launches a new cyber model",
+          "kicker": "TechCrunch",
+          "summary": "OpenAI is expanding its AI cybersecurity defense program called Daybreak. It is also rolling out a new AI model trained for cyber work as part of that effort. The story points to continued investment in defensive cybersecurity tools as AI-led attacks increase.",
+          "emailSummary": "OpenAI is expanding its AI cybersecurity defense program Daybreak, and rolling out a new cyber-trained AI model with it.",
+          "whyItMatters": "This matters because better cyber-defense models could help organizations detect and respond to AI-driven attacks faster, while also signaling where major AI companies are focusing security resources.",
           "dataSignals": [
-            "article trigger",
-            "source credibility",
-            "practical impact"
+            "model/tool release"
           ],
-          "sourceLabel": "Business Insider · Aug 9, 11:24 AM ET",
-          "sourceUrl": "https://www.businessinsider.com/ai-cybersecurity-incidents-openai-astra-anthropic-kimi-meta-2026-8",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPN0Q1NjhDZUhMYTd6ZzZFMndvNkFaNFpjQlU5Q0lCU2RZZFdYcW1RUk91WkoxeWVsVXBBX2I1a1EzMThrdHBEUmpraEFWYnpUZHFKYWZqc09zVk5TU1h1cEk0NUFhaWhVNlp4WF83WVlIeXF3OURTWXI5STdwcWdTenhneGtIMG01QzRrODVSRDF6cVg1UTdjakVRbEtfWkU?oc=5",
-          "publishedAt": "2026-08-09T15:24:00+00:00",
-          "glossary": [],
+          "sourceLabel": "TechCrunch · Aug 10, 7:56 PM ET",
+          "sourceUrl": "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRUlDV19rQi1xNjJxVWFVeGVEV1NEdDNpNWRLa01uOWV3VUNJaEdVWUhsV0RRVXN2U2otbmlPNHd6TThJbjJRTEFVTlR6Y3VDcTlvRVJxd1AwQllaLUhGeV9KYWMyZEVIWkVEMFlRUUNTOXdKd19hV2k4dEVGeC1KdlVFcURvM2EtUU4yeDRRQlhtY282Mk5IN1REYw?oc=5",
+          "publishedAt": "2026-08-10T23:56:15+00:00",
+          "glossary": [
+            {
+              "term": "cybersecurity defense program",
+              "definition": "A set of tools and efforts designed to protect systems, networks, and data from digital attacks."
+            },
+            {
+              "term": "cyber-trained AI model",
+              "definition": "An AI model trained on security-related tasks so it can help with threat detection, analysis, or response."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is an AI product or policy update. The useful read is not that AI is changing; it is exactly what capability, access, cost, or risk changed in this article. The teaching angle is practical impact: who can use it, what it changes in work, and what risk or limit would matter in a real business setting. The main terms to understand are model, AI capability, guardrail, vendor dependency, workflow, governance. Read for the concrete new fact, the affected users, whether this is a launch or restriction, and whether the details gives enough evidence to trust it.",
+            "explanationText": "This is a short technology and security news item about a company expanding a defensive AI offering rather than a full product launch with detailed performance claims. When reading the source, pay attention to what exactly Daybreak includes and whether the new model is meant for detection, response, or broader security work. The interpretation would change if OpenAI provided evidence of measurable security gains, specific customers, or details about how the model handles attacks.",
             "glossary": [
               {
-                "term": "model",
-                "definition": "The AI system doing the predicting or writing, like Claude, GPT, or Gemini.",
-                "whyItMatters": "Model choice affects cost, quality, speed, policy limits, and whether a workflow can keep running when access changes."
+                "term": "cybersecurity defense program",
+                "definition": "A set of tools and efforts designed to protect systems, networks, and data from digital attacks.",
+                "whyItMatters": "It tells you this is about defensive security, not general AI product development."
               },
               {
-                "term": "AI capability",
-                "definition": "The specific new thing an AI system can do, such as use a browser, run code, connect tools, or access a model.",
-                "whyItMatters": "AI news is easier to judge when you identify the exact capability instead of treating every update as general hype."
-              },
-              {
-                "term": "guardrail",
-                "definition": "A rule, limit, approval step, or monitoring system meant to keep AI behavior safe and controlled.",
-                "whyItMatters": "Guardrails determine whether a tool is safe enough for real work, especially when it touches business systems."
-              },
-              {
-                "term": "vendor dependency",
-                "definition": "Reliance on one company, model, or platform for an important workflow.",
-                "whyItMatters": "If access, pricing, or policy changes, dependency can suddenly become an operational risk."
-              },
-              {
-                "term": "workflow",
-                "definition": "A repeatable sequence of steps people or software use to get work done.",
-                "whyItMatters": "Workflow impact is where AI changes become practical: what step gets faster, safer, cheaper, or more automated?"
-              },
-              {
-                "term": "governance",
-                "definition": "Rules, approvals, monitoring, and controls that keep AI or data use safe and reliable.",
-                "whyItMatters": "Governance is the difference between a cool demo and something a business can safely let touch real work."
+                "term": "cyber-trained AI model",
+                "definition": "An AI model trained on security-related tasks so it can help with threat detection, analysis, or response.",
+                "whyItMatters": "This is the specific technology OpenAI is adding to strengthen cyber defenses."
               }
             ]
           }
@@ -305,80 +279,114 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-10794",
-          "title": "Kentucky to make data centers prove they won't raise power bills or damage wetlands",
-          "kicker": "The Cool Down",
-          "summary": "Kentucky is tightening its rules for data center growth, with Gov. Andy Beshear issuing an executive order aiming to protect citizens and the environment. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. The source is The Cool Down; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Kentucky is tightening its rules for data center growth, with Gov. Andy Beshear issuing an executive order aiming to protect citizens and the en…",
-          "whyItMatters": "This matters because large-load demand can change grid forecasts, trigger upgrade spending, and reopen the question of who pays for capacity.",
+          "id": "energy-1-49595",
+          "title": "With More Data Centers On The Horizon, Communities Worry About Rising Electricity Bills",
+          "kicker": "West Virginia Public Broadcasting",
+          "summary": "Residents across Kentucky, Tennessee, and West Virginia have been turning out to public meetings in recent months to oppose new data centers. Their recurring concern is that more data centers could raise electricity costs for households and other customers. For the energy and utilities sector, the story points to growing local resistance to large power users and the possibility of added pressure on electric bills if new demand is passed through to ratepayers.",
+          "emailSummary": "Residents across Kentucky, Tennessee and West Virginia have packed public meetings in recent months to speak out against data centers, with a re…",
+          "whyItMatters": "This matters because major new data-center demand can reshape local power planning and may affect how much customers pay for electricity.",
           "dataSignals": [
             "data-center load"
           ],
-          "sourceLabel": "The Cool Down · Aug 9, 3:46 PM ET",
-          "sourceUrl": "https://www.thecooldown.com/green-tech/kentucky-data-centers-power-bills-wetlands/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdEtKUHBlX2lMSmlrdWVtVVpfS1F2Q1MtcEZLdHZoWVRaVlZCcXp1bHhtbFhFOHF3dXVkUlFha0o0Q1RWXzJqR19Iem9EOHJ2TGk0bjhJQ3NtWlEzbDBmVEt3NTVQdEk5TTFRR0tmSFEwSW1TMkc2R3ZJV09GbnBkUEtCUWlMdm5yeGc?oc=5",
-          "publishedAt": "2026-08-09T19:46:00+00:00",
+          "sourceLabel": "West Virginia Public Broadcasting · Aug 10, 11:05 AM ET",
+          "sourceUrl": "https://wvpublic.org/story/energy-environment/with-more-data-centers-on-the-horizon-communities-worry-about-rising-electricity-bills/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNZDRjNG9iaFJiNFV2WDFEY256Q3RVTDlIa2xScF9FWklGZFhpNGxoR0JhWGxtQTZZZkQ4TWMzYUtNaWFOM1czZ2xiNUtGMnloMktYcERYWExObnROdm83a2NuRUd6MmpGNEFESVlXQnRzYjZrVUxEblYzYjctSV8wbERfSS1sUUpCaXRUZWNLcDNWaVlkUXFZTzBSOUZ1VEUxVHR3TUNWcmo1TzlubXRLWEFsZ2ZKekpaSWJ0aEVfRXhBZnY3NGxfbGFHQVhKUQ?oc=5",
+          "publishedAt": "2026-08-10T15:05:01+00:00",
           "glossary": [
             {
               "term": "data center",
-              "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades."
+              "definition": "A facility filled with computers and equipment that store, process, and move digital information."
+            },
+            {
+              "term": "ratepayer",
+              "definition": "A customer who pays utility rates for services like electricity."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators. The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill. The main terms to understand are data center, ratepayer, large load, grid upgrades, utility rates, regulatory review. Read the story by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure.",
+            "explanationText": "This is a local utility-cost story centered on public reaction to a type of large electricity user. When reading the source, pay attention to who is objecting, what cost concern they raise, and whether the issue is about current bills or expected future demand. The interpretation would change if the reporting showed data centers would be separately metered and fully pay their own costs, or if utilities said the costs would be spread across all customers.",
             "glossary": [
               {
                 "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
+                "definition": "A facility filled with computers and equipment that store, process, and move digital information.",
+                "whyItMatters": "Data centers can use very large amounts of electricity, which is why communities worry about their impact on power costs."
               },
               {
                 "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
-              },
-              {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
-              },
-              {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
-              },
-              {
-                "term": "utility rates",
-                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
-                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
-              },
-              {
-                "term": "regulatory review",
-                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
-                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
+                "definition": "A customer who pays utility rates for services like electricity.",
+                "whyItMatters": "If utility costs rise, ratepayers are the people most directly affected by higher bills."
               }
             ]
           }
         },
         {
-          "id": "energy-2-10722",
-          "title": "With more data centers on the horizon, communities worry about rising electricity bills",
-          "kicker": "WEKU",
-          "summary": "Residents across Kentucky, Tennessee and West Virginia have packed public meetings in recent months to speak out against data centers, with a recurring concern being how they could affect the cost of electricity. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. The source is WEKU; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Residents across Kentucky, Tennessee and West Virginia have packed public meetings in recent months to speak out against data centers, with a re…",
-          "whyItMatters": "This matters because local opposition can slow or reshape transmission buildouts that utilities say they need for future load.",
+          "id": "energy-2-29665",
+          "title": "Why is Texas Gov. Greg Abbott pausing permits to build new data centers?",
+          "kicker": "WUKY",
+          "summary": "Texas is on track to become the country’s largest data center market, but Gov. Greg Abbott has effectively paused new data center permits. The pause will remain until the state can audit how much energy and water these facilities use. For utilities and energy planning, that signals tighter scrutiny of very large power and water loads before more projects can move forward.",
+          "emailSummary": "Texas is on track to become the country's largest data center market. But the governor has effectively issued a pause on new centers until the s…",
+          "whyItMatters": "This matters because data centers can drive major new demand for electricity and water, which affects utility planning, infrastructure costs, and resource availability.",
           "dataSignals": [
             "data-center load"
           ],
-          "sourceLabel": "WEKU · Aug 9, 8:00 AM ET",
-          "sourceUrl": "https://www.weku.org/amsn/2026-08-09/with-more-data-centers-on-the-horizon-communities-worry-about-rising-electricity-bills",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORVF6d3lieWxKekUzeXU0dUxqRDRYcGdPSjNkM1cyY0JKMjdfT2lpOENHMTFGbGJtRlNCMUdWc1Z1VVhoWDRIMno1X0NLS1pDblI5eHhWTVI2ODYxSEpoa3EzY05KOEZ0STI3SXBmcXJjZ2dZSENfSkh5NW1fUjgyZEV5Q09sT196dm1DeERRTk1RYVpNVWhiV0k4ZWJJQU8zZkxtcDB0SWhDTEpMbDJNZGdlVUprRU94NzB4MUNkaEI?oc=5",
-          "publishedAt": "2026-08-09T12:00:00+00:00",
+          "sourceLabel": "WUKY · Aug 10, 5:12 PM ET",
+          "sourceUrl": "https://www.wuky.org/2026-08-10/why-is-texas-gov-greg-abbott-pausing-permits-to-build-new-data-centers",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOeWdGbXo3T3NIaU16MHVfTTBQZlBscldaRkNXNTdyNGk2Mzg5RU1KbldhN1hPcHZ6eWNRNjlVbW5GTTZxVWRFUmMtYjRhOWdUWG1wR25rMmtCOHE2UUJPQ0wtbFc2NzZxV2pEeUl6emJHRVE5RXZ5a3NPaVpZWVZ4RVByZ0pVczkxWW01MG5hSjZJQk4yM2dIa0VnV0ZDd1lGc3d4UA?oc=5",
+          "publishedAt": "2026-08-10T21:12:00+00:00",
+          "glossary": [
+            {
+              "term": "data center",
+              "definition": "A facility full of computers and networking equipment that stores, processes, and sends digital information."
+            },
+            {
+              "term": "permit",
+              "definition": "Official approval from a government authority to begin a project or activity."
+            },
+            {
+              "term": "audit",
+              "definition": "A formal review or inspection of records, usage, or operations to check how something is being used."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a policy and infrastructure story, not a market earnings story: the key issue is whether a fast-growing industry can keep expanding without overwhelming local resources. When reading the source, pay close attention to the reason for the pause and the scope of the review, because those details determine whether this is a temporary check or the start of stricter limits on new development.",
+            "glossary": [
+              {
+                "term": "data center",
+                "definition": "A facility full of computers and networking equipment that stores, processes, and sends digital information.",
+                "whyItMatters": "These buildings can consume huge amounts of power and water, so their growth affects local utilities and resource planning."
+              },
+              {
+                "term": "permit",
+                "definition": "Official approval from a government authority to begin a project or activity.",
+                "whyItMatters": "If permits are paused, new projects cannot advance normally until the government’s review is complete."
+              },
+              {
+                "term": "audit",
+                "definition": "A formal review or inspection of records, usage, or operations to check how something is being used.",
+                "whyItMatters": "An audit can determine whether data centers are putting too much strain on energy and water systems."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-3-80387",
+          "title": "TeraWulf tells investors it could double the size of one of its KY data center projects",
+          "kicker": "Kentucky Lantern",
+          "summary": "TeraWulf told investors that one of its planned Kentucky data center projects could be doubled in size. The project is a campus in Eastern Kentucky, and the update suggests the developer may be considering a much larger buildout than originally planned. For Energy / Utilities readers, that points to potentially greater power demand and infrastructure needs if the expansion moves forward.",
+          "emailSummary": "A data center developer looking to build a campus in Eastern Kentucky told investors Wednesday it could double the size of the project.",
+          "whyItMatters": "This matters because a larger data center campus can significantly increase local electricity use and affect planning for generation, transmission, and utility capacity.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "Kentucky Lantern · Aug 10, 12:06 PM ET",
+          "sourceUrl": "https://kentuckylantern.com/briefs/terawulf-tells-investors-it-could-double-the-size-of-one-of-its-ky-data-center-projects/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQekFoRFl3RkpjNXBZN2tzeDZETHhLTVVSTlpMYmlNWWVZRjJmaXdQYXFZME1nZVotdjJ5eUlrSEpycTdQTnpzN2lsN2hDM3kyMUdNWE5uRWxpOEliYkVwRVRCdHprNTZvTTFIbHZpTzdSRW1CS0UwbnJkbzZlOTFvcGNjQXk3dHl3MDhmOEhsQi1FVjlfaS1XeTg3Zk1xTlVlTE1EVFNDWTFfZkNzMU1sQTF0MDlYMU9KWkRlZWx1S2k?oc=5",
+          "publishedAt": "2026-08-10T16:06:25+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators. The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill. The main terms to understand are data center, ratepayer, large load, grid upgrades, utility rates, regulatory review. Read the story by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure.",
+            "explanationText": "This is a development-and-capacity story, not a policy or pricing story. When reading the source, pay attention to whether “could double” means a firm expansion plan or just an option the company is presenting to investors. The practical meaning changes a lot if the project is approved, financed, and connected to the grid versus only being discussed as a possibility.",
             "glossary": [
               {
                 "term": "data center",
@@ -386,90 +394,118 @@
                 "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
               },
               {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
-              },
-              {
                 "term": "large load",
                 "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
                 "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
-              },
-              {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
-              },
-              {
-                "term": "utility rates",
-                "definition": "The prices customers pay for electric, gas, or water service, usually set or reviewed by regulators.",
-                "whyItMatters": "Rates are where utility planning, infrastructure costs, and company finances turn into customer impact."
-              },
-              {
-                "term": "regulatory review",
-                "definition": "The process where regulators examine utility plans, costs, reliability claims, and customer impacts.",
-                "whyItMatters": "Regulatory review is where private utility decisions become public questions about fairness, reliability, and bills."
               }
             ]
           }
         },
         {
-          "id": "energy-3-58923",
-          "title": "PJM’s big new data center plan: Make the states figure it out",
-          "kicker": "Ohio Capital Journal",
-          "summary": "PJM Interconnection, the biggest grid operator in the U.S., has finally settled on a plan to prevent data centers from causing other customers’ utility bills to soar further in its 13-state territory that includes Ohio. That plan relies heavily on states themselves. In plain English, this is a customer-bill and rate-case story: the important details are what regulators approved, how much bills may change, what the utility says the money funds, and what protections or affordability terms are included. For Dustin, the useful read is whether data-center demand is starting to pressure utility forecasts, grid planning, rate design, or public communication around who pays for new infrastructure. The source is Ohio Capital Journal; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "PJM Interconnection, the biggest grid operator in the U.S., has finally settled on a plan to prevent data centers from causing other customers’…",
-          "whyItMatters": "This matters because large-load demand can change grid forecasts, trigger upgrade spending, and reopen the question of who pays for capacity.",
+          "id": "energy-4-81909",
+          "title": "PPL (NYSE:PPL) Given New $38.00 Price Target at BMO Capital Markets",
+          "kicker": "MarketBeat",
+          "summary": "BMO Capital Markets lowered its price objective for PPL from $40.00 to $38.00 and kept an \"outperform\" rating on the stock. The move is a small downward revision in the firm’s valuation view, but it still signals a positive stance on PPL. For the utilities sector, this kind of update can influence how investors think about expected share upside and sentiment around the company.",
+          "emailSummary": "BMO Capital Markets decreased their price objective on PPL from $40.00 to $38.00 and set an \"outperform\" rating on the stock in a report on Mond…",
+          "whyItMatters": "This matters because analyst price targets can shape investor expectations for a regulated utility like PPL and affect how the market prices its future growth and returns.",
           "dataSignals": [
-            "data-center load"
+            "PPL mention"
           ],
-          "sourceLabel": "Ohio Capital Journal · Aug 10, 3:49 AM ET",
-          "sourceUrl": "https://ohiocapitaljournal.com/2026/08/10/pjms-big-new-data-center-plan-make-the-states-figure-it-out/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOMExKNlUzQ3ktQU9oQ1hTZThtd1o1THhjM19lLVNXYjNEVzZTeTZWdzJJRG9KUW5BZHg5eHBrdElwTlpmNzV5QWR3YUlQa3Bac0hCV3QtdVgyaUh1Q2lpaUI5bFFsRnVIUjBHNk10X185akdBcG0wMWZJQjRRNGI5U0ZXcmkyOE1HQ0NRaEowZk9kQ0dETV9pRUc5OFFBdEJJcS1BOA?oc=5",
-          "publishedAt": "2026-08-10T07:49:21+00:00",
+          "sourceLabel": "MarketBeat · Aug 10, 9:01 AM ET",
+          "sourceUrl": "https://www.marketbeat.com/instant-alerts/ppl-nyseppl-given-new-3800-price-target-at-bmo-capital-markets-2026-08-10/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOamFyNkh2RFlUV2FYZkZRNGI5dzh4VXNGTTc2cnN1S2Z2MjV3UF9oZ3hnYkZ4akNiZTJMZDJ5N0I2Q3VYNFlMRU5iZHB2Q2MxSFl2WUJZQnFFUFJuN2RZZWFnelpRdElSaG01alF6NmVLNzlCVFNyZWgzLURPQmd0bkJ6bWNWTkxxaFJVY1FUT20wUFVYekNXdlEtcUl2RFR4NzRiS2ZQZ29rMERzWkxGMGx2TDFtRTQ?oc=5",
+          "publishedAt": "2026-08-10T13:01:44+00:00",
           "glossary": [
             {
-              "term": "interconnection",
-              "definition": "The process for connecting a generator, data center, or other large load to the electric grid."
+              "term": "price objective",
+              "definition": "An analyst’s target price for a stock, usually over the next 12 months."
             },
             {
-              "term": "data center",
-              "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades."
+              "term": "outperform",
+              "definition": "A rating meaning the analyst expects the stock to do better than the broader market or a chosen benchmark."
+            },
+            {
+              "term": "NYSE",
+              "definition": "The New York Stock Exchange, one of the main U.S. stock markets where companies list their shares."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a power-demand story: a large electricity user may change what the utility has to build, forecast, and justify to regulators. The teaching angle is cost allocation. If a data center needs more power or grid upgrades, the important question is whether the company pays or ordinary ratepayers share the bill. The main terms to understand are model access, data center, grid upgrades, ratepayer, interconnection, large load. Read the story by separating three things: the proposed facility, the amount of electricity it may need, and the regulatory/political fight over who pays for infrastructure.",
+            "explanationText": "This is an analyst-rating update story, not an operating news story about PPL’s business performance. When reading it, focus on whether the rating changes direction or just the target price moves, because that tells you whether sentiment is actually weakening or merely being recalibrated. A bigger cut, a downgrade, or a change to a negative rating would matter more than the modest target reduction here.",
             "glossary": [
               {
-                "term": "model access",
-                "definition": "Whether a customer is allowed to use a specific AI model or feature.",
-                "whyItMatters": "Access changes can break workflows, force teams to switch models, and reveal how dependent products are on one vendor."
+                "term": "price objective",
+                "definition": "An analyst’s target price for a stock, usually over the next 12 months.",
+                "whyItMatters": "It shows the level the analyst thinks the shares could reach, which helps investors judge upside or downside."
+              },
+              {
+                "term": "outperform",
+                "definition": "A rating meaning the analyst expects the stock to do better than the broader market or a chosen benchmark.",
+                "whyItMatters": "It signals a positive recommendation even when the target price is adjusted lower."
+              },
+              {
+                "term": "NYSE",
+                "definition": "The New York Stock Exchange, one of the main U.S. stock markets where companies list their shares.",
+                "whyItMatters": "It identifies where PPL trades and confirms the stock is publicly listed."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-5-62785",
+          "title": "PJM’s big new data center plan: Make the states figure it ou...",
+          "kicker": "The Breeze Courier",
+          "summary": "PJM is proposing that states and utilities require data centers to secure their own power supply, rather than relying fully on the grid. If they do not, PJM wants those data centers to face curtailment during grid emergencies. The move is meant to keep rising costs from being shifted onto other customers, especially as data center demand grows.",
+          "emailSummary": "PJM wants states and utilities to make data centers secure their own power or face curtailment during grid emergencies, aiming to limit rising c…",
+          "whyItMatters": "This matters because it could change who pays for new electric demand and how much grid capacity is reserved for large data users versus everyone else.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "The Breeze Courier · Aug 10, 8:24 AM ET",
+          "sourceUrl": "https://www.breezecourier.com/state-news/pjms-big-new-data-center-plan-make-the-states-figure-it-out-ce00f544",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORVpseWhPRGpEbU9fVVpIN1BQZGFMaTBqcjgxZkdNX1J4b21Mcm1ZLS1yUGh4UTFPOU1mLXB1bDhYUmZWRnVYRG9OcThiN3VkYVRBc3JiX3VDSE9lMmtfdWpBdk1vS3FVN2RWWXlvSFpNcHhpczROMjg1dG5sWjUtWG9XX0s5SV9CZXhjay01Tk85Skp4cG1RZG5HOEJCdWw5RVBvY0UtVzU3SlJ3eVE?oc=5",
+          "publishedAt": "2026-08-10T12:24:02+00:00",
+          "glossary": [
+            {
+              "term": "PJM",
+              "definition": "A regional grid operator that manages electricity supply and reliability across parts of the eastern U.S."
+            },
+            {
+              "term": "data center",
+              "definition": "A facility full of computers and servers that uses large amounts of electricity."
+            },
+            {
+              "term": "curtailment",
+              "definition": "A planned reduction or cutback in electricity use during shortages or emergencies."
+            },
+            {
+              "term": "grid emergency",
+              "definition": "A situation when the electric system is under unusual stress and reliability is at risk."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a policy-and-grid-planning story, not a technical outage report. When reading the source, pay attention to who is being asked to carry the risk and cost of new electricity demand, and whether the proposal is a recommendation or a binding rule. The interpretation changes if states adopt the idea, if utilities resist it, or if the curtailment rules are narrower or broader than they sound here.",
+            "glossary": [
+              {
+                "term": "PJM",
+                "definition": "A regional grid operator that manages electricity supply and reliability across parts of the eastern U.S.",
+                "whyItMatters": "PJM’s rules can affect how much power is available and who bears the cost of serving new load."
               },
               {
                 "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
+                "definition": "A facility full of computers and servers that uses large amounts of electricity.",
+                "whyItMatters": "Data centers can significantly increase power demand and strain local grid planning."
               },
               {
-                "term": "grid upgrades",
-                "definition": "Physical or operational improvements to the electric system so it can carry and deliver enough power safely.",
-                "whyItMatters": "The key question is who benefits from the upgrade and who pays for it."
+                "term": "curtailment",
+                "definition": "A planned reduction or cutback in electricity use during shortages or emergencies.",
+                "whyItMatters": "Curtailment determines whether a large user keeps running when the grid is under stress."
               },
               {
-                "term": "ratepayer",
-                "definition": "A utility customer who pays electric, gas, or water bills.",
-                "whyItMatters": "Ratepayer impact is the consumer angle: whether ordinary customers end up funding infrastructure or company costs."
-              },
-              {
-                "term": "interconnection",
-                "definition": "The process for connecting a generator, data center, or other large load to the electric grid.",
-                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon."
-              },
-              {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
+                "term": "grid emergency",
+                "definition": "A situation when the electric system is under unusual stress and reliability is at risk.",
+                "whyItMatters": "Emergency rules often decide which customers are protected and which may be asked to reduce usage."
               }
             ]
           }
@@ -482,164 +518,227 @@
       "emptyMessage": "No qualified Humana / Health Insurance stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "humana-1-20624",
-          "title": "Humana Inc. $HUM Stock Position Decreased by Gradient Investments LLC",
-          "kicker": "MarketBeat",
-          "summary": "Gradient Investments LLC trimmed its position in shares of Humana Inc. (NYSE:HUM - Free Report) by 31.3% in the 2nd quarter, according to the company in its most recent filing with the Securities and Exchange Commission (SEC). The fund owned 13,408 shares of the insurance provider. In plain English, this is a health-insurance story: the important details are what changed for Humana, members, providers, claims, costs, or Medicare Advantage strategy. For Dustin, the useful read is whether this changes health-insurance economics, Humana operating signals, member experience, or analytics questions around claims and care management. The source is MarketBeat; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Gradient Investments LLC trimmed its position in shares of Humana Inc. (NYSE:HUM - Free Report) by 31.3% in the 2nd quarter, according to the co…",
-          "whyItMatters": "This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions.",
+          "id": "humana-1-45053",
+          "title": "Humana Names James P. Holland President of Medicaid",
+          "kicker": "citybiz.co",
+          "summary": "Humana Inc. said it has appointed James “J.P.” Holland as senior vice president and President of Medicaid, effective August 17. The announcement is a leadership change in Humana’s Medicaid business, which is the part of the company that serves people covered by state-federal Medicaid programs. For Humana, this points to a new executive overseeing a major government-health segment.",
+          "emailSummary": "Humana Inc. (NYSE: HUM) has appointed James “J.P.” Holland as senior vice president and President of Medicaid, effective August 17.... Read More.",
+          "whyItMatters": "This matters because leadership changes in Medicaid can affect how a major insurer manages government-backed coverage, operations, and growth in a large public-health market.",
           "dataSignals": [
             "Humana mention"
           ],
-          "sourceLabel": "MarketBeat · Aug 9, 5:40 AM ET",
-          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-humana-inc-hum-stock-position-decreased-by-gradient-investments-llc-2026-08-09/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZWsxQm15QWR6N0NQcEIzUTdZYkF2aXB4TWY0bFlobnlqSEd2VWZOb3JhTmVWOW9UREdEbmJZRjJ4Q2VNNjRyeEZtRTlsbzBWZnRFZzVlMUdCcmxCZGdjaHhDY29HeTBNbmQwSVRPZWJMTnp6cjluMExqZnBYb0tDQjkzWkFiRy1aQWs4UGc5aVpXMGROUWlndFczb0dObTFwdGROblhBZ0pzdmRsOTZabEZIMEYxSXpra3ZoSURLZENSd3VIR2JB?oc=5",
-          "publishedAt": "2026-08-09T09:40:47+00:00",
-          "glossary": [],
+          "sourceLabel": "citybiz.co · Aug 10, 3:31 PM ET",
+          "sourceUrl": "https://www.citybiz.co/article/886815/humana-names-james-p-holland-president-of-medicaid/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOM3hXMTVHSjNva0JGT0MyN3h2VzNzR293ekVHZmdCUTA2cndBY0o3NDJWWWM3dXBDbWJhX0M4QWlRYWxlOFdGU1ZXWV9aWnlhcTI2UEdGQnptTE5ha0pkQmhpRmc4NHd1LU1aLTVLUzB4bnZSR3FPNzk4Vk9DdXJmNjk1dTZleTVGWXpfS0R2TFp1QWM?oc=5",
+          "publishedAt": "2026-08-10T19:31:56+00:00",
+          "glossary": [
+            {
+              "term": "Medicaid",
+              "definition": "A joint federal and state health insurance program for eligible low-income people and some other qualifying groups."
+            },
+            {
+              "term": "Senior vice president",
+              "definition": "A high-level corporate executive role below the topmost leaders, often responsible for a major division or function."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Humana Inc. $HUM Stock Position Decreased by Gradient Investments LLC. This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a corporate leadership announcement, so the key detail is the role, the person named, and when the change takes effect. When reading the source, pay attention to whether it mentions strategy, performance, or responsibilities, because those details would show whether this is simply a staffing update or a sign of a business shift. Here, the interpretation stays limited to a Medicaid leadership appointment because that is all the provided text supports.",
+            "glossary": [
+              {
+                "term": "Medicaid",
+                "definition": "A joint federal and state health insurance program for eligible low-income people and some other qualifying groups.",
+                "whyItMatters": "It is the business line Holland will lead, so it defines the customer base and regulatory environment involved."
+              },
+              {
+                "term": "Senior vice president",
+                "definition": "A high-level corporate executive role below the topmost leaders, often responsible for a major division or function.",
+                "whyItMatters": "It signals the seniority and decision-making scope of the appointment."
+              }
+            ]
           }
         },
         {
-          "id": "humana-2-4246",
-          "title": "Humana (HUM) Could Be 25% Overvalued As Lower EPS Guidance Clouds Results",
-          "kicker": "simplywall.st",
-          "summary": "Humana (HUM) is in focus after reporting second quarter results, appointing two new directors and lowering full year 2026 GAAP EPS guidance to at least US$6.52 from at least US$8.36. See our latest analysis for Humana. The recent second quarter report and board additions have arrived during a strong run in Humana’s stock, with a 45.57% year to date share price return and a 46.45% 1 year total shareholder return, although the 3 year total shareholder return is down 19.17%. If Humana’s latest. In plain English, this is a health-insurance story: the important details are what changed for Humana, members, providers, claims, costs, or Medicare Advantage strategy. For Dustin, the useful read is whether this changes health-insurance economics, Humana operating signals, member experience, or analytics questions around claims and care management. The source is simplywall.st; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Humana (HUM) is in focus after reporting second quarter results, appointing two new directors and lowering full year 2026 GAAP EPS guidance to a…",
-          "whyItMatters": "This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions.",
+          "id": "humana-2-2828",
+          "title": "Humana names J.P. Holland Medicaid president effective Aug. 17",
+          "kicker": "Bitget",
+          "summary": "Humana named James “J.P.” Holland senior vice president and president of Medicaid, effective Aug. 17. The move puts him in charge of Humana’s Medicaid unit, which is the part of the company that manages coverage for Medicaid members. For a health insurer, this kind of leadership change can signal how the company plans to run and grow that business line.",
+          "emailSummary": "Humana named James “J.P.” Holland senior vice president, President of Medicaid, effective Aug. 17. He will lead the Medicaid unit serving mor |…",
+          "whyItMatters": "This matters because Medicaid is a major government-backed insurance segment, and who leads it can affect how efficiently Humana serves members and manages costs.",
           "dataSignals": [
             "Humana mention"
           ],
-          "sourceLabel": "simplywall.st · Aug 9, 11:31 AM ET",
-          "sourceUrl": "https://simplywall.st/stocks/us/healthcare/nyse-hum/humana/news/humana-hum-could-be-25-overvalued-as-lower-eps-guidance-clou",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQmdZbmIyaGpFUWpBcXc3anFyRWRNcWw4R0doemZyNDNyaGZMWktSYTV4Q3FVMDRjNmtEMHhvNFdtU1Mtb09hOTJMdktUZFVzTkJsQ3Y3MF84MmViWjhYbDJtSEJ0X0h5T0lzQ0xsU1hYcHJZUThyZFdILTRUNDBKWkhNZ1NTUm1QYWVoY2s1UHM0NWgwQVo2NE8yeFhvOXZXMDVYeWJWbTFLcUI3S0cyWTlFYXo2S04zeEVOMFI0Qy14QdIBxwFBVV95cUxQX0VRbm5nNWJwQS1lal9oLXphMGlXcjlocF85MUdRM1BwMjhCLWNoQnNIczVZeXc2dWVQWDljOVB2anhhczhZMENXVWdLT0F2NjY5dHhraGxjNWNKeUMwYU5MaHI3RjU0c0llWVZoLTZ6S1Q0Rk5mMTVBVXFRZUdkSE5XVTRRaUpHcTI0TjhlSWxoTTVLQTVEajQ2dExXU215d2dNcDVrcUdQYW0yY0RBTlFMMEljbm9QbDBCN0V1X0lpblZQUDlF?oc=5",
-          "publishedAt": "2026-08-09T15:31:03+00:00",
-          "glossary": [],
+          "sourceLabel": "Bitget · Aug 10, 3:08 PM ET",
+          "sourceUrl": "https://www.bitget.com/asia/amp/news/detail/12560605650319",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBMbHp3MklDSTdqMWxvZFk4U0F1UGdtSHhhcENPVmdOWDBMQW5OSEIxS0RZUmg0aFc1MmJtYi0xNG85dG1JVUo4UWJlY1lDS3RYb29ORVBhMDZ2R3lfVEE2M2M3TkF4RVE2a0HSAWpBVV95cUxQTGx6dzJJQ0k3ajFsb2RZOFNBdVBnbUh4YXBDT1ZnTlgwTEFuTkhCMUtEWVJoNGhXNTJibWItMTRvOXRtSVVKOFFiZWNZQ0t0WG9vTkVQYTA2dkd5X1RBNjNjN05BeEVRNmtB?oc=5",
+          "publishedAt": "2026-08-10T19:08:44+00:00",
+          "glossary": [
+            {
+              "term": "Medicaid",
+              "definition": "A U.S. public health coverage program for eligible low-income people and certain other groups."
+            },
+            {
+              "term": "senior vice president",
+              "definition": "A high-level executive role just below the top leadership team."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Humana (HUM) Could Be 25% Overvalued As Lower EPS Guidance Clouds Results. This matters because Humana and health-insurance stories can move Medicare Advantage, claims operations, member experience, and healthcare cost assumptions. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a corporate leadership announcement, not a financial results or policy story. When reading the source, focus on who was appointed, what business unit they will lead, and when the change takes effect. The interpretation would change if later reporting showed a broader restructuring, a departure from another insurer, or a strategy shift tied to Medicaid operations.",
+            "glossary": [
+              {
+                "term": "Medicaid",
+                "definition": "A U.S. public health coverage program for eligible low-income people and certain other groups.",
+                "whyItMatters": "Humana’s Medicaid business depends on how this program is administered and funded."
+              },
+              {
+                "term": "senior vice president",
+                "definition": "A high-level executive role just below the top leadership team.",
+                "whyItMatters": "This title shows the importance of the role within Humana’s leadership structure."
+              }
+            ]
+          }
+        },
+        {
+          "id": "humana-3-40567",
+          "title": "Humana’s Incoming Medicaid President Will Lead Business in 11 States",
+          "kicker": "Stock Titan",
+          "summary": "Humana says its incoming Medicaid president, Holland, will start on Aug. 17 and will lead the company’s Medicaid business across 11 states. The business serves more than 1.6 million members. Holland is joining from Johns Hopkins Health Plans and will report to Aaron Martin. For Humana’s Medicaid operations, this signals a leadership transition over a large multi-state membership base.",
+          "emailSummary": "The Medicaid business serves more than 1.6 million members. Holland will start Aug. 17 after leading Johns Hopkins Health Plans and will report…",
+          "whyItMatters": "This matters because leadership changes in a large Medicaid business can affect strategy, operations, and how coverage is managed for more than 1.6 million members across multiple states.",
+          "dataSignals": [
+            "Humana mention"
+          ],
+          "sourceLabel": "Stock Titan · Aug 10, 2:17 PM ET",
+          "sourceUrl": "https://www.stocktitan.net/news/HUM/james-p-holland-to-join-humana-as-medicaid-slpp0gfef7n3.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPeVpfamJuY0dGRDNTNWRTcGNMbVFtNklxNV95RzVrTm0ySGxWR0RUdkp5ZkZkMzRma29oSzd6WnlsQmc2WkNiQi1TdVZOR3RoN3NoeWVWU1hraDZBQ3RLS0JueFctaHd2VktZX3FaczloNVNpTW1kaEg3MENNUDBPWGE0SV82X21sWXpGbDRQNDFoQTRDdzlYalJwTXU?oc=5",
+          "publishedAt": "2026-08-10T18:17:29+00:00",
+          "glossary": [
+            {
+              "term": "Medicaid",
+              "definition": "A government health insurance program for people who meet certain income or eligibility requirements."
+            },
+            {
+              "term": "members",
+              "definition": "People enrolled in a health plan."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a leadership-change story in health insurance, so the key details are who is moving, what business they will run, how big that business is, and when the change takes effect. When reading the source, pay attention to whether the role is purely managerial or tied to a broader strategy shift; that would change how much impact the move could have on Humana’s Medicaid operations.",
+            "glossary": [
+              {
+                "term": "Medicaid",
+                "definition": "A government health insurance program for people who meet certain income or eligibility requirements.",
+                "whyItMatters": "It defines the line of business being led and the rules and customer base involved."
+              },
+              {
+                "term": "members",
+                "definition": "People enrolled in a health plan.",
+                "whyItMatters": "The size of the member base shows how large and operationally important this business is."
+              }
+            ]
           }
         }
       ]
     },
     {
       "id": "kentucky_healthcare",
-      "updatedLabel": "Recent fallback: no qualified 24h items",
+      "updatedLabel": "Last 24 hours",
       "emptyMessage": "No qualified Kentucky Healthcare / US Healthcare stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "kentucky_healthcare-1-76361",
-          "title": "UK HealthCare expands options for patients with persistent AFib",
-          "kicker": "UKNow",
-          "summary": "After years of living with atrial fibrillation and unsuccessful attempts to restore a normal heart rhythm, 78-year-old Kathie Kok found relief through a hybrid treatment approach at UK HealthCare. Her experience highlights how physicians are expanding options for patients with persistent AFib, a condition that can increase the risk of stroke, heart failure and other serious complications. In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved. For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky. The source is UKNow; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "After years of living with atrial fibrillation and unsuccessful attempts to restore a normal heart rhythm, 78-year-old Kathie Kok found relief t…",
-          "whyItMatters": "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs.",
-          "dataSignals": [
-            "article trigger",
-            "source credibility",
-            "practical impact"
-          ],
-          "sourceLabel": "UKNow · Aug 6, 3:00 AM ET",
-          "sourceUrl": "https://uknow.uky.edu/uk-healthcare/uk-healthcare-expands-options-patients-persistent-afib",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOMGpWWmNLQjJUcXY0TkJUMkFiWjVPMmNSVm5MNmV4UjF1WExKMG5lT1NiREFyUVZWeVB5bWpWYWRNVkt3UWlYNDUydTlURDlBYnhnMTQ3OGFOWEhya1pyMURlYkVEWlUzeE5BVWdLYzFfMmw0dzJBLVR4VmdETEhHSnpIRWpHN09xc016U1JQcEkweXRa?oc=5",
-          "publishedAt": "2026-08-06T07:00:33+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about UK HealthCare expands options for patients with persistent AFib. This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "kentucky_healthcare-2-32282",
-          "title": "Why are your legs tingling? Here’s what it could mean",
+          "id": "kentucky_healthcare-1-72548",
+          "title": "How breastfeeding support turned one mom into a milk donor",
           "kicker": "Norton Healthcare",
-          "summary": "Tingly legs could be more than sitting wrong. Learn the causes, when it’s serious and treatment options from specialists at Norton Leatherman Spine. In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved. For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky. The source is Norton Healthcare; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Tingly legs could be more than sitting wrong. Learn the causes, when it’s serious and treatment options from specialists at Norton Leatherman Sp…",
-          "whyItMatters": "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs.",
+          "summary": "A Louisville mother says help from a lactation consultant supported her through breastfeeding challenges. She later became a milk donor. The story points to how lactation support can help parents continue breastfeeding and, in some cases, contribute donated milk to others.",
+          "emailSummary": "A Louisville mom shares how breastfeeding support from a lactation consultant helped her overcome challenges — and later become a milk donor.",
+          "whyItMatters": "This matters because access to breastfeeding support can improve infant feeding outcomes and expand the pool of donated human milk for families who need it.",
           "dataSignals": [
             "article trigger",
             "source credibility",
             "practical impact"
           ],
-          "sourceLabel": "Norton Healthcare · Aug 3, 4:34 PM ET",
-          "sourceUrl": "https://nortonhealthcare.com/news/why-are-my-legs-tingling-causes-of-tingly-legs",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOc2VGSHktZXFSNjg1R0FxTEV1bUJ6NF9YbGR2UXFZSTZfVjF2UWU4SzlNX0dXYTFRZTFzUWUzM2N1YldrTC0zTDl4d2otXzN3ODVaNGFPdUo3SHFWMFo4S3NlTFVUUktYX2l4WVN3dkdrQk1EV1ZaMWUwSVN1a0RvVDI2QU94a1E?oc=5",
-          "publishedAt": "2026-08-03T20:34:15+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about Why are your legs tingling? Here’s what it could mean. This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "kentucky_healthcare-3-7416",
-          "title": "Eligible Kentuckians could lose coverage under Medicaid changes",
-          "kicker": "Forward Kentucky",
-          "summary": "Forget the “fraud” – it’s the new paperwork that is going to harm people. In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved. For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky. The source is Forward Kentucky; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Forget the “fraud” – it’s the new paperwork that is going to harm people.",
-          "whyItMatters": "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs.",
-          "dataSignals": [
-            "Kentucky healthcare",
-            "Medicaid signal"
+          "sourceLabel": "Norton Healthcare · Aug 10, 6:39 AM ET",
+          "sourceUrl": "https://nortonhealthcare.com/news/lactation-consultant-breastfeeding-supply-help",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOVW4zLVZ4TE9PdmdocDhoN0hWOURlbjQwVmRJV3UtcmxnQmk4dzg0cC1DQjhjYU5HcWMydEs1UTNNbG5tSXY0TEdYVHUwOGtvNGxSRm5URHN5RWVya2R1dTVwZmlDMEdodmZiMktWbE9YSThyM1NEdVg4ZUtUWm1jQm4xQUNMVWM?oc=5",
+          "publishedAt": "2026-08-10T10:39:53+00:00",
+          "glossary": [
+            {
+              "term": "lactation consultant",
+              "definition": "A healthcare professional who helps parents with breastfeeding and milk supply issues."
+            },
+            {
+              "term": "milk donor",
+              "definition": "A person who gives extra breast milk for use by other babies, often through a milk bank or similar program."
+            }
           ],
-          "sourceLabel": "Forward Kentucky · Aug 7, 5:01 PM ET",
-          "sourceUrl": "https://www.forwardky.com/eligible-kentuckians-could-lose-coverage-under-medicaid-changes/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNenZvVGwwMHhDLXAzOUtwMlJrNnFrRXJDTWxONnJoNHg0R2Q5d3NNNjQ5VmlPdTJCYlZ4N25ybHE2S21SVkVIZFBxWXZEQk0wUG1UTmx0em1PX2k2SlQtdUxYTjVsaXVYZVhNX0pwZTRQRmFxQ3hnYXVkdjRwQ24wNGZ0ZzVRX2hSdkFOdjgyYmp6dDM4?oc=5",
-          "publishedAt": "2026-08-07T21:01:49+00:00",
-          "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Eligible Kentuckians could lose coverage under Medicaid changes. This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a human-interest healthcare story about breastfeeding support and community milk donation. When reading the source, focus on the specific role the lactation consultant played and how that support changed the mother’s experience. If more detail were available, the most important thing to check would be whether the donation went through a formal milk bank or another program, since that affects how donated milk is screened and used.",
+            "glossary": [
+              {
+                "term": "lactation consultant",
+                "definition": "A healthcare professional who helps parents with breastfeeding and milk supply issues.",
+                "whyItMatters": "Their guidance can determine whether breastfeeding is successful and whether a parent can later donate milk."
+              },
+              {
+                "term": "milk donor",
+                "definition": "A person who gives extra breast milk for use by other babies, often through a milk bank or similar program.",
+                "whyItMatters": "Donated milk can be important for infants whose families cannot produce enough milk themselves."
+              }
+            ]
           }
         },
         {
-          "id": "kentucky_healthcare-4-54492",
-          "title": "SEN. MEREDITH NAMED 2026 LEGISLATIVE HERO BY KENTUCKY HOSPITAL ASSOCIATION",
-          "kicker": "kysenaterepublicans.com",
-          "summary": "FRANKFORT, Ky. (Aug. 4, 2026) —Sen. Stephen Meredith, R-Leitchfield, has been recognized by the Kentucky Hospital Association (KHA) with its 2026 Legislative Hero Award in recognition of his leadership on health care policy and longstanding support of Kentucky. In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved. For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky. The source is kysenaterepublicans.com; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "FRANKFORT, Ky. (Aug. 4, 2026) —Sen. Stephen Meredith, R-Leitchfield, has been recognized by the Kentucky Hospital Association (KHA) with its 202…",
-          "whyItMatters": "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs.",
+          "id": "kentucky_healthcare-2-94107",
+          "title": "Opinion – Melanie Landrum: Kentucky hospitals are helping turn the tide on the opioid crisis",
+          "kicker": "Northern Kentucky Tribune",
+          "summary": "Melanie Landrum’s opinion piece says Kentucky hospitals are helping reverse the opioid crisis, and it opens with a woman who called an emergency department asking not whether treatment was available, but whether she would be judged for needing it. The framing suggests the piece focuses on hospital-based addiction care and the importance of reducing stigma so people will seek help. Based on the title and description, the central point is that hospitals are part of the response to opioid use disorder, not just places for emergency treatment.",
+          "emailSummary": "When a Kentucky woman called an emergency department earlier this year, she wasn’t asking whether treatment was available. Through tears, she wa…",
+          "whyItMatters": "This matters because hospital access and stigma can determine whether people with opioid use disorder seek care early enough to survive and recover.",
           "dataSignals": [
             "Kentucky healthcare",
             "hospital operations"
           ],
-          "sourceLabel": "kysenaterepublicans.com · Aug 6, 11:04 AM ET",
-          "sourceUrl": "https://kysenaterepublicans.com/press-releases/2026/8/6/nts33bseq17bboafr6ynqwmqdkpr5e",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUGxhTXdydUlnWFJXenptRkpNdGQtRFpzbVVvYVNWMHdSaWQ3ajB4bF9iWnZoSjZ0OTN5ejNJeXFmWkhmTEpnbFlVVWdWeU5YMllFek44eXdaN0tQTnh5Vlc0bzlQOE9Eb0g5RzgzcXNRMjlxbzBnQUJXUzlvMWhGS0xvUmZZa2pJYXVrLWdJQQ?oc=5",
-          "publishedAt": "2026-08-06T15:04:52+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about SEN. MEREDITH NAMED 2026 LEGISLATIVE HERO BY KENTUCKY HOSPITAL ASSOCIATION. This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "kentucky_healthcare-5-53500",
-          "title": "Eastern Kentucky program aims to boost regional healthcare workforce",
-          "kicker": "wmky.org",
-          "summary": "Some community health centers in eastern Kentucky are training and educating potential employees to fill medical workforce gaps. In plain English, this is a healthcare access and operations story: the important details are who is affected in Kentucky, what service or policy changed, and whether cost, staffing, or care access is involved. For Dustin, the useful read is whether this changes local healthcare access, hospital operations, payer pressure, public programs, or community health signals in Kentucky. The source is wmky.org; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Some community health centers in eastern Kentucky are training and educating potential employees to fill medical workforce gaps.",
-          "whyItMatters": "This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs.",
-          "dataSignals": [
-            "Kentucky healthcare",
-            "workforce pressure"
+          "sourceLabel": "Northern Kentucky Tribune · Aug 11, 12:32 AM ET",
+          "sourceUrl": "https://nkytribune.com/2026/08/opinion-melanie-landrum-kentucky-hospitals-are-helping-turn-the-tide-on-the-opioid-crisis/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNcWdqVkJod1A5WlU2d2ozb0l5OWNPNVpzdlcwdHl0OUpiQ0llQVQ2SzE0T0xtekxlQk5aamJsUEV3akxBel9ZQlR4SDExamUyTGcyWlZKa1ZwUWRFSFdyMHRQWElsczdWa0N5b1l2SGJjMGtDd0d5cVpQUjFnc28ybDVqdjZyMjIzZ2s2RnRVblR6VXhZRVFMeXJmVUxOdWx4SEFrNUxvbWlFNW9SMGt0MjNGb1E4WmgyNmFyaTBB?oc=5",
+          "publishedAt": "2026-08-11T04:32:13+00:00",
+          "glossary": [
+            {
+              "term": "opioid crisis",
+              "definition": "A widespread public health problem involving addiction, overdoses, and deaths related to opioid drugs."
+            },
+            {
+              "term": "emergency department",
+              "definition": "The part of a hospital that provides immediate care for urgent or life-threatening problems."
+            },
+            {
+              "term": "stigma",
+              "definition": "Negative judgment or shame attached to a condition or behavior."
+            }
           ],
-          "sourceLabel": "wmky.org · Aug 5, 12:39 PM ET",
-          "sourceUrl": "https://www.wmky.org/news/2026-08-05/eastern-kentucky-program-aims-to-boost-regional-healthcare-workforce",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWG9MNF9PSXJ2RWtvaEFTRzRCZEhNcFgzLUl5RmkzNmJ6clcySl9EMmFvSGNRX1FIeHBRNnpSZFA0QzRPMDB3aXNnWmF3Smsyb0MzUkpfX2U4U1ljcGg2dl9RaEFjZnpPUzVaYkE3Tlk3c2VHbzYyMGpDWGo5RzJNekNZZnk3bGZfVWV0d1lFNFRJNHVFam1hbVZaT2N4X2ZIdzc2bWM0cEQ?oc=5",
-          "publishedAt": "2026-08-05T16:39:00+00:00",
-          "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Eastern Kentucky program aims to boost regional healthcare workforce. This matters because Kentucky healthcare stories can affect local access, hospital operations, workforce pressure, public programs, and care costs. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is an opinion piece, so it is meant to argue a viewpoint rather than report a neutral event-by-event account. When reading it, pay attention to the evidence used to support the claim that hospitals are helping with opioid treatment, and whether the argument is about access, outcomes, or attitudes toward addiction. If the source includes concrete hospital programs or outcome data, that would strengthen the claim; if it stays mostly anecdotal, it is making a moral and policy case more than a statistical one.",
+            "glossary": [
+              {
+                "term": "opioid crisis",
+                "definition": "A widespread public health problem involving addiction, overdoses, and deaths related to opioid drugs.",
+                "whyItMatters": "It is the larger health emergency the piece says Kentucky hospitals are helping address."
+              },
+              {
+                "term": "emergency department",
+                "definition": "The part of a hospital that provides immediate care for urgent or life-threatening problems.",
+                "whyItMatters": "It is the setting in the story where a patient sought help for treatment."
+              },
+              {
+                "term": "stigma",
+                "definition": "Negative judgment or shame attached to a condition or behavior.",
+                "whyItMatters": "The call described in the story shows how stigma can keep people from asking for care."
+              }
+            ]
           }
         }
       ]
@@ -650,145 +749,263 @@
       "emptyMessage": "No qualified Analytics stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "analytics-1-93026",
-          "title": "Google To Launch AI Reporting Tools For Ads, Analytics 08/10/2026",
-          "kicker": "MediaPost",
-          "summary": "Google has announced AI and agentic experiences for Google Ads and Google Analytics to help advertisers perform tasks and uncover insights faster. In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process. For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing. The source is MediaPost; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Google has announced AI and agentic experiences for Google Ads and Google Analytics to help advertisers perform tasks and uncover insights faste…",
-          "whyItMatters": "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner.",
+          "id": "analytics-1-61340",
+          "title": "UN Data Analytics and Business Intelligence Internship 2026 in Uganda: Apply by August 19 2026",
+          "kicker": "Global South Opportunities",
+          "summary": "The United Nations is accepting applications for a Data Analytics and Business Intelligence Intern at the UN Regional Service Centre in Entebbe, Uganda. The posting says applicants should apply by August 19, 2026. For analytics professionals, this is a standard hiring notice rather than a market-moving event, but it signals an opportunity tied to UN data and reporting work in the region.",
+          "emailSummary": "The United Nations has opened applications for a Data Analytics and Business Intelligence Intern position at the UN Regional Service Centre in E…",
+          "whyItMatters": "This matters because internships at a UN regional service centre can shape the local pipeline of analytics talent and indicate where international organizations are building data capacity.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "MediaPost · Aug 10, 12:00 AM ET",
-          "sourceUrl": "https://www.mediapost.com/publications/article/417122/google-to-launch-ai-reporting-tools-for-ads-analy.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSXhjeENLSll1UldoZFNXNzV5UGZxYU44R3U3RjZsTnpKRmJaVEp3T3IxZ3psV2hDa3BValBPMENwOUV2Nlpfa3ViZUI4YS15RDk5NmQ5VFR5Z0o2SVh6QmRTSjdtdFlCSXdxQnYxbnJkSHdqTzBGTDJwQ0t3V0RmWkNES0d3cktEcnIxZlZDUHV3VEt0eDE3S0F2ZWIwbTlpZnozNGMyV3BKdUhf?oc=5",
-          "publishedAt": "2026-08-10T04:00:10+00:00",
+          "sourceLabel": "Global South Opportunities · Aug 10, 7:50 AM ET",
+          "sourceUrl": "https://www.globalsouthopportunities.com/2026/08/10/internship-117/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8tRTV1OHVUcUhjSGx4Y0xfNnpDd0lHXzRxa3dwUUxFd3haZ0cta1lVOXp5UmFSaEZYTGVJZTI0akhnNmRkTW5STUJaeTlUdTRWOUhQNUJDZEVCVWl6cG93S0NMN3JsZmNhZzV3MWpJTDVSTnlPR1E?oc=5",
+          "publishedAt": "2026-08-10T11:50:26+00:00",
           "glossary": [
             {
-              "term": "agentic",
-              "definition": "AI software that can plan and take steps toward a task instead of only answering one prompt."
+              "term": "Data Analytics",
+              "definition": "The process of examining data to find patterns, answer questions, and support decisions."
+            },
+            {
+              "term": "Business Intelligence",
+              "definition": "Tools and methods used to turn data into reports, dashboards, and decision-making insights."
+            },
+            {
+              "term": "UN Regional Service Centre",
+              "definition": "A United Nations office that supports operations and services for the organization in a region."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Google To Launch AI Reporting Tools For Ads, Analytics 08/10/2026. This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner. The main terms to understand are agentic workflow, agentic. Read for what changed, who is affected, why it matters now, and what happens next.",
+            "explanationText": "This is a hiring announcement, so the key things to watch are the employer, the location, the role focus, and the application deadline. Because the description is brief, the safest interpretation is limited to what is explicitly stated: an internship is open in Entebbe for analytics and business intelligence work. If the full posting includes duties, required skills, or remote/on-site details, those would change how specialized or accessible the role really is.",
             "glossary": [
               {
-                "term": "agentic workflow",
-                "definition": "A workflow where AI is expected to plan steps, use tools, and move work forward instead of only answering a single question.",
-                "whyItMatters": "This is where AI starts touching real operations, so permissions, logs, and safety controls matter as much as the model output."
+                "term": "Data Analytics",
+                "definition": "The process of examining data to find patterns, answer questions, and support decisions.",
+                "whyItMatters": "It is the core skill area the internship is focused on."
               },
               {
-                "term": "agentic",
-                "definition": "AI software that can plan and take steps toward a task instead of only answering one prompt.",
-                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon."
+                "term": "Business Intelligence",
+                "definition": "Tools and methods used to turn data into reports, dashboards, and decision-making insights.",
+                "whyItMatters": "It suggests the role may involve reporting and dashboard work, not just raw data analysis."
+              },
+              {
+                "term": "UN Regional Service Centre",
+                "definition": "A United Nations office that supports operations and services for the organization in a region.",
+                "whyItMatters": "It tells you the internship is tied to operational support inside the UN system."
               }
             ]
           }
         },
         {
-          "id": "analytics-2-72426",
-          "title": "RK Swamy's subsidiaries approve merger to simplify analytics business structure",
-          "kicker": "Storyboard18",
-          "summary": "RK Swamy Ltd has informed exchanges that its wholly owned subsidiaries, Hansa Customer Equity and Dsquare Solutions, have approved a scheme of amalgamation aimed at streamlining operations, improving resource utilisation and reducing compliance requirements. In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process. For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing. The source is Storyboard18; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "RK Swamy Ltd has informed exchanges that its wholly owned subsidiaries, Hansa Customer Equity and Dsquare Solutions, have approved a scheme of a…",
-          "whyItMatters": "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner.",
+          "id": "analytics-2-36547",
+          "title": "Google brings AI insights, dashboards and benchmarking to Ads and Analytics",
+          "kicker": "bestmediainfo.com",
+          "summary": "Google is adding AI-generated insights, prompt-based dashboards, benchmarking, and new Ask Advisor capabilities across Google Ads and Google Analytics. The update suggests more of the analysis and setup work in Google’s advertising and measurement tools will be handled through AI prompts and automated recommendations. For analytics teams, that could mean faster reporting and comparison work inside Google’s own products.",
+          "emailSummary": "The updates bring AI-generated insights, prompt-based dashboards, benchmarking and new Ask Advisor capabilities across Google Ads and Google Ana…",
+          "whyItMatters": "This matters because it could change how marketers and analysts build dashboards, compare performance, and interpret results inside the Google ecosystem.",
           "dataSignals": [
-            "analytics workflow"
+            "analytics workflow",
+            "dashboard / reporting"
           ],
-          "sourceLabel": "Storyboard18 · Aug 10, 4:31 AM ET",
-          "sourceUrl": "https://www.storyboard18.com/amp/agency-news/rk-swamys-subsidiaries-approve-merger-to-simplify-analytics-business-structure-107264.htm",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOM0xtRW1xRWFSaTgwUHotZEY1am1rZ0hjc3A2czVYZmF4d2FjTGZxYU54RmlxbGNnR0lWQlFnUFNtWGFUaTIwUGJ0cVZrckwzN0txWWVUbGN4bFFTSmx6czRmTVRYaUhaZGhabi1HZGdVZGMydDV5azZjdkxhNU4zQWJ0MnZjVkp5SGl4dWJQMEh5MTc4TGRrYW5Zb3czV1hoS1ZxX3puem50N01GMmQ4QlljbTBxN1dEaHdXdVFiNWFMdnVkbnB5aFVuRkQ4NjTSAc8BQVVfeXFMTjNMbUVtcUVhUmk4MFB6LWRGNWpta2dIY3NwNnM1WGZheHdhY0xmcWFOeEZpcWxjZ0dJVkJRZ1BTbVhhVGkyMFBidHFWa3JMMzdLcVllVGxjeGxRU0psenM0Zk1UWGlIWmRoWm4tR2RnVWRjMnQ1eWs2Y3ZMYTVOM0FidDJ2Y1ZKeUhpeHViUDBIeTE3OExka2FuWW93M1dYaEtWcV96bnpudDdNRjJkOEJZY20wcTdXRGh3V3VRYjVhTHZ1ZG5weWhVbkZEODY0?oc=5",
-          "publishedAt": "2026-08-10T08:31:53+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about RK Swamy's subsidiaries approve merger to simplify analytics business structure. This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "analytics-3-74668",
-          "title": "9 Best Polar Analytics Alternatives for Shopify Brands in 2026",
-          "kicker": "Ask Luca",
-          "summary": "Leaving Polar Analytics? Compare 9 alternatives on reasoning depth, pricing, and setup time, with a stage-by-stage fit guide. Discover your pick. In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process. For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing. The source is Ask Luca; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Leaving Polar Analytics? Compare 9 alternatives on reasoning depth, pricing, and setup time, with a stage-by-stage fit guide. Discover your pick.",
-          "whyItMatters": "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner.",
-          "dataSignals": [
-            "analytics workflow"
-          ],
-          "sourceLabel": "Ask Luca · Aug 10, 4:10 AM ET",
-          "sourceUrl": "https://ask-luca.com/blogs/polar-analytics-alternatives",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5PYXlWV2xiVEVtS2tMTUtvNi1FaVhLd3RSMVJoMU5YemhjLVlwX3QxcEp3bVo5RHJya3pCNjhwdklLVGhuOGR0VGFuV0otWEI1bHhrSGdfdzZHZmU2YS16cDB0RGVxdw?oc=5",
-          "publishedAt": "2026-08-10T08:10:47+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about 9 Best Polar Analytics Alternatives for Shopify Brands in 2026. This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "analytics-4-45207",
-          "title": "How Agentic Automation Is Redefining the Future of Enterprise Integration",
-          "kicker": "Analytics Insight",
-          "summary": "Enterprises have spent the better part of two decades wiring systems together, moving data from one application to another, and building rules-based workflows t. In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process. For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing. The source is Analytics Insight; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Enterprises have spent the better part of two decades wiring systems together, moving data from one application to another, and building rules-b…",
-          "whyItMatters": "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner.",
-          "dataSignals": [
-            "analytics workflow"
-          ],
-          "sourceLabel": "Analytics Insight · Aug 10, 3:56 AM ET",
-          "sourceUrl": "https://www.analyticsinsight.net/amp/story/automation/how-agentic-automation-is-redefining-the-future-of-enterprise-integration",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQm1VRFlEYVpwSENxVUtRdFloNGdIbk15UUJ0TzlsU1h5TkFRY2lwZ09rSVFyb0ZqaXF3YmN1LU1lNmdrYUxZTEFWN0w3WHRlMlpWcmR4ZHRzcGtFLVdyRXhVMXVhZS1kd090VzNKMW01N1hfT0hCaDFPUUxMdm9fV3lZbFZXaDVTWTlmVGZLdEpJaEIyYzlFQi1ydmdCSnVCb056cHZ3VTI0RlhMN0d5cXNEQjNHUG82dmxMQ010VlhTc1FOX3fSAcYBQVVfeXFMUEJtVURZRGFacEhDcVVLUXRZaDRnSG5NeVFCdE85bFNYeU5BUWNpcGdPa0lRcm9Gamlxd2JjdS1NZTZna2FMWUxBVjdMN1h0ZTJaVnJkeGR0c3BrRS1XckV4VTF1YWUtZHdPdFczSjFtNTdYX09IQmgxT1FMTHZvX1d5WWxWV2g1U1k5ZlRmS3RKSWhCMmM5RUItcnZnQkp1Qm9OenB2d1UyNEZYTDdHeXFzREIzR1BvNnZsTENNdFZYU3NRTl93?oc=5",
-          "publishedAt": "2026-08-10T07:56:57+00:00",
+          "sourceLabel": "bestmediainfo.com · Aug 11, 12:20 AM ET",
+          "sourceUrl": "https://bestmediainfo.com/mediainfo/advertising/google-brings-ai-insights-dashboards-and-benchmarking-to-ads-and-analytics-12249338",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQZzIySWhkNUw5Y29WTWdUUUlDYXJqS0ZWTnFQempxTGtvSmplSERaTUNMTlBrR3lveGdhWUh1aG9BUk1hOGFnLWpvNGgyU3A0MTVVNGc3YnBNOWJXWTRubDhIM1RTUzdFXzhXcFJRYll0MFNIWHM0VXc4bjlrSkVpNnFRWi14cXZHb1J3dHZHbVpEN0VBMV9HdlYweXhPeGhWWElWc2FBTVdEZGpqS0JvQ0R2OGdoeElpTTBWMnlFOXp1Vmh6TWVCcGF0ONIBywFBVV95cUxQZzIySWhkNUw5Y29WTWdUUUlDYXJqS0ZWTnFQempxTGtvSmplSERaTUNMTlBrR3lveGdhWUh1aG9BUk1hOGFnLWpvNGgyU3A0MTVVNGc3YnBNOWJXWTRubDhIM1RTUzdFXzhXcFJRYll0MFNIWHM0VXc4bjlrSkVpNnFRWi14cXZHb1J3dHZHbVpEN0VBMV9HdlYweXhPeGhWWElWc2FBTVdEZGpqS0JvQ0R2OGdoeElpTTBWMnlFOXp1Vmh6TWVCcGF0OA?oc=5",
+          "publishedAt": "2026-08-11T04:20:22+00:00",
           "glossary": [
             {
-              "term": "agentic",
-              "definition": "AI software that can plan and take steps toward a task instead of only answering one prompt."
+              "term": "benchmarking",
+              "definition": "Comparing your performance against a standard, previous period, or peer group."
+            },
+            {
+              "term": "prompt-based dashboards",
+              "definition": "Dashboards that are created or adjusted by typing a natural-language request instead of building them manually."
+            },
+            {
+              "term": "AI-generated insights",
+              "definition": "Observations or summaries produced automatically by artificial intelligence from the underlying data."
+            },
+            {
+              "term": "Ask Advisor",
+              "definition": "An assistant-style feature that likely answers questions or guides users inside Google’s analytics and ads tools."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about How Agentic Automation Is Redefining the Future of Enterprise Integration. This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner. The main terms to understand are agentic workflow, business automation, agentic. Read for what changed, who is affected, why it matters now, and what happens next.",
+            "explanationText": "This is a product-update story about analytics and advertising software, not a market report or earnings story. When reading the source, pay attention to which features are being added and whether they are meant for analysis, reporting, or campaign management, because that changes who in an organization will use them. The interpretation would change if Google said these tools were only in limited testing, because that would affect how quickly teams could rely on them.",
             "glossary": [
               {
-                "term": "agentic workflow",
-                "definition": "A workflow where AI is expected to plan steps, use tools, and move work forward instead of only answering a single question.",
-                "whyItMatters": "This is where AI starts touching real operations, so permissions, logs, and safety controls matter as much as the model output."
+                "term": "benchmarking",
+                "definition": "Comparing your performance against a standard, previous period, or peer group.",
+                "whyItMatters": "Benchmarking helps you tell whether results are actually good or just look good in isolation."
               },
               {
-                "term": "business automation",
-                "definition": "Using software to complete repeatable business steps with less manual work.",
-                "whyItMatters": "Automation is where AI value becomes measurable, but it also creates new failure modes if no one owns review and rollback."
+                "term": "prompt-based dashboards",
+                "definition": "Dashboards that are created or adjusted by typing a natural-language request instead of building them manually.",
+                "whyItMatters": "This can reduce the time needed to assemble reports and surface the metrics you care about."
               },
               {
-                "term": "agentic",
-                "definition": "AI software that can plan and take steps toward a task instead of only answering one prompt.",
-                "whyItMatters": "This term appears in the article, so understanding it helps you read the source without getting lost in jargon."
+                "term": "AI-generated insights",
+                "definition": "Observations or summaries produced automatically by artificial intelligence from the underlying data.",
+                "whyItMatters": "These insights can speed up analysis, but they still need human review before decisions are made."
+              },
+              {
+                "term": "Ask Advisor",
+                "definition": "An assistant-style feature that likely answers questions or guides users inside Google’s analytics and ads tools.",
+                "whyItMatters": "It can make the tools easier to use for non-experts and accelerate routine analysis tasks."
               }
             ]
           }
         },
         {
-          "id": "analytics-5-93716",
-          "title": "Crypto Prices Today: Bitcoin Holds Near $65,000; ETF Inflows Extend Winning Streak",
-          "kicker": "Analytics Insight",
-          "summary": "Overview : Bitcoin trades near $64,963.10, holding its ground close to the $65,000 mark. Solana led major top 10 movers with a 5.12% weekly gain. US s. In plain English, this is an analytics workflow story: the important details are what changed in the tool, platform, metric, governance layer, or reporting process. For Dustin, the useful read is whether this creates a better dashboard, governed metric, data product, automation, or decision workflow worth testing. The source is Analytics Insight; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Overview : Bitcoin trades near $64,963.10, holding its ground close to the $65,000 mark. Solana led major top 10 movers with a 5.12% weekly gain…",
-          "whyItMatters": "This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner.",
+          "id": "analytics-3-28372",
+          "title": "Radico Khaitan assigned ESG rating score by CRISIL ESG Ratings & Analytics",
+          "kicker": "Business Upturn",
+          "summary": "Radico Khaitan Limited has been independently assigned an ESG rating score of 58 by CRISIL ESG Ratings & Analytics, based on public disclosures. The score is a snapshot of how the company is being assessed on environmental, social, and governance factors from information it has already made public. For analytics readers, the key point is that this is a third-party score that can be tracked over time against peers or future updates.",
+          "emailSummary": "Radico Khaitan Limited independently assigned an ESG rating score of '58' by CRISIL ESG based on public disclosures.",
+          "whyItMatters": "This matters because ESG scores can influence how investors, lenders, and analysts compare company risk, responsibility, and transparency.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Analytics Insight · Aug 10, 2:56 AM ET",
-          "sourceUrl": "https://www.analyticsinsight.net/amp/story/price-analysis/crypto-prices-today-bitcoin-holds-near-65000-etf-inflows-extend-winning-streak",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUkpGMS1DYTZTLTNIcnpKaDcxZC1iMnVQMzk4eDQxRDNJemxHSVQ5TDB5T3lpT2xDaThTamFuckNubEQ1djVtNFBvYkdBWTRERlhUQ1pDMDNVTnNpd0RETmZWbzFHZ1pYWWtkNmhCMy1ZSmlGMHo4QVRlbVRrbXJmbm5FdlppZ3pxdnpJQW5SODhWNTJWQ05jZVlMUnZ3dmJpdGRwTzl3MWFjckRhN2JSaktyTXFiN2FyMFA3YWY3VTZ2LWFTY0FwLWR5VTRmdVktMUHSAdIBQVVfeXFMTlJKRjEtQ2E2Uy0zSHJ6Smg3MWQtYjJ1UDM5OHg0MUQzSXpsR0lUOUwweU95aU9sQ2k4U2phbnJDbmxENXY1bTRQb2JHQVk0REZYVENaQzAzVU5zaXdERE5mVm8xR2daWFlrZDZoQjMtWUppRjB6OEFUZW1Ua21yZm5uRXZaaWd6cXZ6SUFuUjg4VjUyVkNOY2VZTFJ2d3ZiaXRkcE85dzFhY3JEYTdiUmpLck1xYjdhcjBQN2FmN1U2di1hU2NBcC1keVU0ZnVZLTFB?oc=5",
-          "publishedAt": "2026-08-10T06:56:45+00:00",
-          "glossary": [],
+          "sourceLabel": "Business Upturn · Aug 11, 4:29 AM ET",
+          "sourceUrl": "https://businessupturn.com/business/radico-khaitan-assigned-esg-rating-score-by-crisil-esg-ratings-analytics/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQblVRZlQ1aEVkTFN1aUJoaVd2b1VMYlBpUEh1aXBvUWZNdVZ1OS15WjJVcDRONGMydlZNZExLTkRIUFpfREpnT1JwSXdPMGJUNllhZE1RS0M5Q0tZTDJUeTBVQU5IdlVURElKVUtoajFhbC15UlpvRVV1UEYwN2trTlRPQ0VXRFBOLWtxU25RZWROd3V6WFJEMzAxT1NLa2xlajBCTm5va01HSkhyR0E?oc=5",
+          "publishedAt": "2026-08-11T08:29:12+00:00",
+          "glossary": [
+            {
+              "term": "ESG",
+              "definition": "A shorthand for environmental, social, and governance factors used to evaluate how a company operates beyond financial results."
+            },
+            {
+              "term": "ESG rating score",
+              "definition": "A numeric assessment of a company’s ESG performance or disclosures."
+            },
+            {
+              "term": "public disclosures",
+              "definition": "Information a company has officially shared with the public, such as reports, filings, or statements."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Crypto Prices Today: Bitcoin Holds Near $65,000; ETF Inflows Extend Winning Streak. This matters because analytics stories point to tools, governance, data quality, and reporting workflows that can make business decisions faster or cleaner. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a ratings-and-disclosure story, not a business operations story. When reading the source, focus on who assigned the score, what the score is, and whether it is based on disclosures, because that affects how much weight you should give it. The interpretation would change if the score were a full audit, a different rating scale, or tied to new underlying data rather than public information alone.",
+            "glossary": [
+              {
+                "term": "ESG",
+                "definition": "A shorthand for environmental, social, and governance factors used to evaluate how a company operates beyond financial results.",
+                "whyItMatters": "It frames the non-financial risks and practices that many investors and stakeholders now track."
+              },
+              {
+                "term": "ESG rating score",
+                "definition": "A numeric assessment of a company’s ESG performance or disclosures.",
+                "whyItMatters": "It gives a single figure that can be compared across companies or over time."
+              },
+              {
+                "term": "public disclosures",
+                "definition": "Information a company has officially shared with the public, such as reports, filings, or statements.",
+                "whyItMatters": "The score here is based only on what the company has already disclosed publicly."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-4-92953",
+          "title": "Boehringer Ingelheim Elevates Sabine Reinig as Global Head of Talent, HR Governance and Analytics",
+          "kicker": "hrtoday.in",
+          "summary": "Boehringer Ingelheim has elevated Sabine Reinig to Global Head of Talent, HR Governance and Analytics. She is returning to HR leadership after leading Global Commercial Excellence in the company’s Animal Health business. The move suggests a leadership shift in how the company will oversee talent, HR processes, and people analytics across its global organization.",
+          "emailSummary": "Boehringer Ingelheim has elevated Sabine Reinig as Global Head of Talent, HR Governance and Analytics. She returns to HR leadership after leadin…",
+          "whyItMatters": "This matters because leadership over HR analytics and governance can shape how a large company uses workforce data to hire, develop, and manage employees across its operations.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "hrtoday.in · Aug 11, 2:58 AM ET",
+          "sourceUrl": "https://hrtoday.in/boehringer-ingelheim-elevates-sabine-reinig-as-global-head-of-talent-hr-governance-and-analytics/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUmgzTEhnVEVjWV9zeHppdnlQUzk3UTFXMUZhaXZoM1hWZzRSOUgtU2xkVkFfRF9XUy1SSzN4U0JkMVE0UTZfaVFxY1B4b2o4S2h5ZGtUX3dUMDk0MzV0eXZuQ0lsLW93QjRMZjE5SjE1Q2FEZ0JlUWxJSXJBdzdJYnZZam5iSjRPMWQxZGROTGwzY0tzOUNOZHJ4ZDNlT0dhRGk1SlhLUnYwX0JSZThNNVJ4cEVjQUk?oc=5",
+          "publishedAt": "2026-08-11T06:58:34+00:00",
+          "glossary": [
+            {
+              "term": "HR governance",
+              "definition": "The rules, processes, and oversight used to manage human resources work consistently across an organization."
+            },
+            {
+              "term": "talent",
+              "definition": "In HR, the people an organization recruits, develops, and retains as employees."
+            },
+            {
+              "term": "commercial excellence",
+              "definition": "A business function focused on improving sales, customer, and market-performance practices."
+            },
+            {
+              "term": "analytics",
+              "definition": "The use of data and analysis to find patterns, measure performance, and support decisions."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a personnel and leadership-change story, not a hard-data report, so the key thing to watch is the role being handed to the executive and what domain she came from. The important interpretive clue is that her background includes Global Commercial Excellence in Animal Health, which suggests cross-functional leadership experience before moving into HR analytics and governance.",
+            "glossary": [
+              {
+                "term": "HR governance",
+                "definition": "The rules, processes, and oversight used to manage human resources work consistently across an organization.",
+                "whyItMatters": "It affects how employee-related decisions are standardized and controlled."
+              },
+              {
+                "term": "talent",
+                "definition": "In HR, the people an organization recruits, develops, and retains as employees.",
+                "whyItMatters": "It signals responsibility for staffing and workforce development strategy."
+              },
+              {
+                "term": "commercial excellence",
+                "definition": "A business function focused on improving sales, customer, and market-performance practices.",
+                "whyItMatters": "It shows the executive’s background before returning to HR leadership."
+              },
+              {
+                "term": "analytics",
+                "definition": "The use of data and analysis to find patterns, measure performance, and support decisions.",
+                "whyItMatters": "It is central to how HR teams track workforce trends and guide decisions."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-5-21258",
+          "title": "‘The Real AI Transformation Starts with People, Not Technology’: Benevolve’s Manisha Goel",
+          "kicker": "Analytics Insight",
+          "summary": "Manisha Goel, co-founder of Benevolve, argues that the real AI transformation begins with people rather than technology. The piece appears to push back on enterprise discussions that have focused mainly on the technology itself. For analytics teams, that suggests successful AI adoption depends as much on people, workflows, and change management as on the tools.",
+          "emailSummary": "Authored by Manisha Goel, Co-founder of BenevolveFor years, enterprise conversations around artificial intelligence (AI) have focused on technol…",
+          "whyItMatters": "This matters because AI projects in businesses often fail or stall when organizations invest in tools without preparing the teams expected to use them.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "Analytics Insight · Aug 11, 2:23 AM ET",
+          "sourceUrl": "https://www.analyticsinsight.net/amp/story/artificial-intelligence/the-real-ai-transformation-starts-with-people-not-technology-benevolves-manisha-goel",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOaHdOdlA5dGtkY3ByWlgweXlvdklyQU14WUM0a1hSVWw0dzRxckdsZEcwcFZqMjVEeVFzTmlkUG9CeW9aMjJ5aEFoMGlVUmRCd1U0MjltREZhUmZqZzBIRFFoUU1ISkV4dnZCQmRDOTZmOUloRUF1RGNjWlkwcmRzM3Jwdm5MandBakhBRTZNN0ZfSUdWQ1I4TFBYTGYwd0RrTzlRZF9nZlJ5OUh4N05xVWN4TGpCdWJSSk9qYVlHRXN4M3VRakRnYl9GcVZJa0lzNUVmdzdhaExCX0RXRU5nMzNjOVdOUdIB5gFBVV95cUxOaHdOdlA5dGtkY3ByWlgweXlvdklyQU14WUM0a1hSVWw0dzRxckdsZEcwcFZqMjVEeVFzTmlkUG9CeW9aMjJ5aEFoMGlVUmRCd1U0MjltREZhUmZqZzBIRFFoUU1ISkV4dnZCQmRDOTZmOUloRUF1RGNjWlkwcmRzM3Jwdm5MandBakhBRTZNN0ZfSUdWQ1I4TFBYTGYwd0RrTzlRZF9nZlJ5OUh4N05xVWN4TGpCdWJSSk9qYVlHRXN4M3VRakRnYl9GcVZJa0lzNUVmdzdhaExCX0RXRU5nMzNjOVdOUQ?oc=5",
+          "publishedAt": "2026-08-11T06:23:38+00:00",
+          "glossary": [
+            {
+              "term": "enterprise",
+              "definition": "A large organization or company, often with many teams, systems, and processes."
+            },
+            {
+              "term": "AI transformation",
+              "definition": "A broad business change effort that uses artificial intelligence to improve how work is done."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is an opinion or commentary piece about how organizations should think about AI adoption. When reading it, pay attention to whether the author is emphasizing training, culture, process redesign, or leadership support rather than technical capabilities. The interpretation would change if the full source were arguing for a specific AI product, deployment model, or measurable business result, but the provided text only supports a people-first framing.",
+            "glossary": [
+              {
+                "term": "enterprise",
+                "definition": "A large organization or company, often with many teams, systems, and processes.",
+                "whyItMatters": "Enterprise AI changes usually affect many people and workflows at once, so adoption is harder than in a small team."
+              },
+              {
+                "term": "AI transformation",
+                "definition": "A broad business change effort that uses artificial intelligence to improve how work is done.",
+                "whyItMatters": "The phrase signals that the story is about organizational change, not just buying new software."
+              }
+            ]
           }
         }
       ]
@@ -799,108 +1016,167 @@
       "emptyMessage": "No qualified Louisville, Kentucky stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "louisville-1-28904",
-          "title": "Former Louisville star Teddy Bridgewater steps away from NFL, retirement likely",
+          "id": "louisville-1-1927",
+          "title": "Louisville data center debate heads to Metro Council after nearly 7,000 public comments",
           "kicker": "WDRB",
-          "summary": "Teddy Bridgewater is stepping away from the NFL again, and this time it may be for good. In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy. For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity. The source is WDRB; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Teddy Bridgewater is stepping away from the NFL again, and this time it may be for good.",
-          "whyItMatters": "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home.",
+          "summary": "Louisville officials are moving toward rules for future data centers after nearly a year of debate and about 7,000 public comments. The issue is now heading to Metro Council for consideration. For Louisville, that means the city is close to setting clearer standards for where and how data centers can be developed.",
+          "emailSummary": "After nearly a year and 7,000 comments, Louisville officials are moving toward rules for future data centers.",
+          "whyItMatters": "This matters because the rules could shape where major tech infrastructure is built in Louisville and what limits developers must meet before new projects move forward.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Aug 9, 1:53 PM ET",
-          "sourceUrl": "https://www.wdrb.com/sports/former-louisville-star-teddy-bridgewater-steps-away-from-nfl-retirement-likely/article_517971de-e56c-47ca-bef9-05c6dff48a0e.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQVmpGbUhrckgwcjBtbW1YWVplQjlUbmhXQkFfQ29SQUgtb0NCMVFJVHJyU1NqMDZKYlpyN1pwVWRrSV9LOUR4aGJXWHY1RUJ5a015Sy1PeV9Hekg0dXZ3bnR0WFl4bXV2RmRLU0k2UXVuZUlUczU0RVUzSXppb2xINHVsX1A2ZEJUQTRJUklfTGlCZEVQTTE0bEhQZGtkLVZieE03YmRoYjBKTUV3eF9FUUV2aTYxZE5PZmkyd3p3Um9jZjJ1T2JFVVFpU01WdjBheUdSRWFLMGlDV0tTTHpDMEp3YlRBaTNaNkVxMQ?oc=5",
-          "publishedAt": "2026-08-09T17:53:00+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is about Former Louisville star Teddy Bridgewater steps away from NFL, retirement likely. This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "louisville-2-84147",
-          "title": "Black Business Expo highlights Louisville entrepreneurs and history",
-          "kicker": "Spectrum News NY1",
-          "summary": "The Louisville Urban League’s Black Business Expo in Louisville connected Kentucky Emancipation Day with year-round support for Black entrepreneurs. In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy. For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity. The source is Spectrum News NY1; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "The Louisville Urban League’s Black Business Expo in Louisville connected Kentucky Emancipation Day with year-round support for Black entreprene…",
-          "whyItMatters": "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home.",
-          "dataSignals": [
-            "Louisville local",
-            "business signal"
+          "sourceLabel": "WDRB · Aug 10, 10:05 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/louisville-data-center-debate-heads-to-metro-council-after-nearly-7-000-public-comments/article_a31cba09-3a2a-46cb-a3bb-1b7782b93707.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOampYUk9BYWNvMnpib0NLcHYwV3dneGRKenJKQ0pkTVdfeVBsV0NFNnBTUjJCbm1rbEJhYTJYREdnczRqT2FaTG9mR2xFSE1EUmlpVF9GanRMRlZPSUluOVZkWjZjWnJ4Y0h0LUdSTWtkSWdvWHZRby15QUNBc0JwbHNPcjVEWDJDR2tyejFUaEkwOEZQb0lPRDRyT3NSS2MxczNzc0pxWWozNWh4THJiNDdvQ0hieGZ5dFFyMFpQS3RlNi1ZWTZmZWpnUEJkMnBzNE5uVDVjT292XzJFeFYtOTEzT1NVMEg0WGdHSDlUbWRkdUhqeEE?oc=5",
+          "publishedAt": "2026-08-11T02:05:00+00:00",
+          "glossary": [
+            {
+              "term": "Metro Council",
+              "definition": "Louisville's local legislative body that votes on city rules and policies."
+            },
+            {
+              "term": "data center",
+              "definition": "A facility that houses servers and other computing equipment used to store, process, and deliver digital services."
+            }
           ],
-          "sourceLabel": "Spectrum News NY1 · Aug 9, 11:35 AM ET",
-          "sourceUrl": "https://ny1.com/nyc/all-boroughs/news/2026/08/08/black-business-expo",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE04VTVFc3RGTV9WT2V4Z29JTnhMb0pDUDhBN3QwUkNtQ3BDUnNLZ3p5S2pQWm9NV09UOUhJN2pUSmN6bDhmM3dZaU81ODhocWtqZFlQZFRiTDhQbVNQMzc2X1cxMEdlcUMtNTY2NXM1bU1ObUd6ZzlB?oc=5",
-          "publishedAt": "2026-08-09T15:35:00+00:00",
-          "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Black Business Expo highlights Louisville entrepreneurs and history. This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a local policy story about land use and development, not a technology product story. When reading the source, pay attention to whether the debate is about siting, zoning, environmental impacts, or other limits, because those details would show how strict the final rules may be. If Metro Council weakens or strengthens the proposal, that would change how easy it is for data center projects to get approved in Louisville.",
+            "glossary": [
+              {
+                "term": "Metro Council",
+                "definition": "Louisville's local legislative body that votes on city rules and policies.",
+                "whyItMatters": "Its approval would determine whether new data-center rules take effect."
+              },
+              {
+                "term": "data center",
+                "definition": "A facility that houses servers and other computing equipment used to store, process, and deliver digital services.",
+                "whyItMatters": "Data centers are the projects being discussed, so the rules would directly affect their development."
+              }
+            ]
           }
         },
         {
-          "id": "louisville-3-76278",
-          "title": "U.S. Customs and Border Protection officers confiscated counterfeit watches at Louisville port",
-          "kicker": "NewsBreak: Local News & Alerts",
-          "summary": "U.S. Customs and Border Protection officers at the Port of Louisville intercepted yet another shipment containing counterfeit watches recently. Had these w. In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy. For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity. The source is NewsBreak: Local News & Alerts; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "U.S. Customs and Border Protection officers at the Port of Louisville intercepted yet another shipment containing counterfeit watches recently.…",
-          "whyItMatters": "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home.",
+          "id": "louisville-2-19177",
+          "title": "Overnight ramp closures on I-71 in Louisville begin Monday night",
+          "kicker": "WDRB",
+          "summary": "The ramp from I-264 East to I-71 South in Louisville will be closed overnight Monday through Friday, from 8 p.m. to 6 a.m. This is a traffic disruption rather than a long-term route change, so drivers who use this connection will need to plan for nighttime detours or delays during the work week.",
+          "emailSummary": "The ramp from I-264 East to I-71 South will be closed Monday through Friday from 8 pm. to 6 a.m.",
+          "whyItMatters": "This matters because overnight ramp closures can slow freight, service calls, and late-shift commutes even when daytime traffic is unaffected.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "NewsBreak: Local News & Alerts · Aug 10, 4:36 AM ET",
-          "sourceUrl": "https://www.newsbreak.com/northern-kentucky-tribune-1710159/4818737615527-u-s-customs-and-border-protection-officers-confiscated-counterfeit-watches-at-louisville-port",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPTkxUOG9nVU05c0M5R1pEVWdIQnNFenJrUzhRekx6dWNleUdwVTBmd0x4U2ZTUnVGcUtSdkNiRFdtaEdkNXlTUGdQN05PRHVydDNKMm1zUk5FUWM2d3lfM0htYnQxYmlPVEVXazFxXzU0M2NoV21SQk5oUDJrUE1kcFBvYzFVLVNnQm1vaVp5a0ZoSDc3eXAyMHRPOFZ2ZFkyM1VZNk9zWURrQ0lRVHNLS0dud1EyVTMxZzBMMkxkVGMxNWNvWXZ3TzduR3ZYVm1zS3pmSHB6VnpqdEVTVDBuTkJ2bFdtaVd5TmN6bXFJYzR3MlNRcHY4MmdOOA?oc=5",
-          "publishedAt": "2026-08-10T08:36:32+00:00",
+          "sourceLabel": "WDRB · Aug 10, 7:04 PM ET",
+          "sourceUrl": "https://www.wdrb.com/overnight-ramp-closures-on-i-71-in-louisville-begin-monday-night/video_bed33ec3-4fce-547c-887d-143a9a1f5195.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObG42bW9CcEZZYzhBWEgyemltbDhmMWQzemhEZTh1d3NENmFuQVJGQlMwWXljbnpXTi1WX3BZQnlOX2dpMmU4NUFra3k1WmVjdzJOVFc0NTN6SnZjdTVlUEtHczBQZ0RwbHpwUDVsQTZkZ182T19rZFN2OU1CZ1NmVXFwelBtR1pqNFhSel8yYzVCWl9VdEhjemstN1FhdXBoNWZKZVdWN2dPLW5kdHItbEZGMHIwb2l5ZFktMk1WYXp0dlZqQm5hUi1UVXp0QQ?oc=5",
+          "publishedAt": "2026-08-10T23:04:16+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about U.S. Customs and Border Protection officers confiscated counterfeit watches at Louisville port. This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
+            "explanationText": "This is a transportation and construction-related traffic advisory. When reading it, pay attention to the exact ramp location, the days and hours affected, and whether the closure is overnight or all day. The practical impact would change if the closure extended beyond Friday morning or affected additional ramps or lanes.",
             "glossary": []
           }
         },
         {
-          "id": "louisville-4-56928",
-          "title": "AP Business SummaryBrief at 2:27 a.m. EDT",
+          "id": "louisville-3-6726",
+          "title": "Louisville Line Dance-A-Thon to raise money for River City Drum Corps",
           "kicker": "WDRB",
-          "summary": "WDRB is reporting on AP Business SummaryBrief at 2:27 a.m. EDT. In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy. For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity. This is included in the morning brief because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "AP Business SummaryBrief at 2:27 a.m. EDT.",
-          "whyItMatters": "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home.",
+          "summary": "A Louisville line dance-a-thon will raise money for River City Drum Corps. The event will use music, dancing, and community activities to support the group. This is a local fundraising effort, so the main impact is on community support for an arts or youth music organization in Louisville.",
+          "emailSummary": "Louisville line dance-a-thon will raise money for River City Drum Corps through music, dancing and community activities.",
+          "whyItMatters": "This matters because it can bring in money and visibility for River City Drum Corps while mobilizing local participation around a community arts fundraiser.",
           "dataSignals": [
-            "business signal"
+            "Louisville local"
           ],
-          "sourceLabel": "WDRB · Aug 10, 2:27 AM ET",
-          "sourceUrl": "https://www.wdrb.com/news/national/ap-business-summarybrief-at-2-27-a-m-edt/article_71b8c47d-82f9-5b6c-8b27-4847eb619662.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxONkw0V0pCQlkxTEN3STV4NW9mTlo3T0hhX3g5MnBscm9rUE5hYUQ3Wmw0VGtIUWZMcFNfUDVTZWJXU1MyOWpSd3YxbXdrTlA5MTY1T2ZrLS1POUhfS25oX1Z1YXl2QWI0UVlfUDZXTjhwbkJNNjlhaTBQd1otZi1tTF9uVjZSTEhoWnZMOUFUTXp3YTMyWWFPYmFVWFpfVUdXZks5VlQ0ZTVYWGhSSEtrSlZScDNydG16Rnlla2pmN18xME0?oc=5",
-          "publishedAt": "2026-08-10T06:27:35+00:00",
-          "glossary": [],
+          "sourceLabel": "WDRB · Aug 10, 5:15 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/louisville-line-dance-a-thon-to-raise-money-for-river-city-drum-corps/article_ab9a3e2b-2d11-40bf-a758-1862cee0273d.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNYlB5TXZsV0djUTdWNjgyS2lxaFJ2a2I4RUJGS0FPX1J3MDJxOVBiZGU0NHBrenpsRTZjR2taM1AxTzBQYnJFekRGMDMtQWg0bnFtd3VoazZxbGtrcFREU1BUMEpocm1SLXUyc3dLZ015TEY3bTFKZFE3UFhQbGMtRU13M25jM05wckdPRFVfRy1mYWRtbTlQQy1qWmk0TDBTUzhRNFhhNFZhdWtRWXFDdzctOVVvUXMwbl9RSmV2RUtSV2l1SV9QMUVWajVxRzRZVUtjaTRScmZnVEpyNWc?oc=5",
+          "publishedAt": "2026-08-10T21:15:00+00:00",
+          "glossary": [
+            {
+              "term": "Drum Corps",
+              "definition": "A performing group centered on drums and other musical performance, often with strong marching or rhythm-based routines."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about AP Business SummaryBrief at 2:27 a.m. EDT. This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
-            "glossary": []
+            "explanationText": "This is a short community-event fundraising story, so the key facts are who benefits, what the event is, and how it raises money. When reading the source, focus on whether it is primarily a one-time fundraiser, a recurring event, or part of a larger campaign, because that changes how significant it is for the organization and the local arts community.",
+            "glossary": [
+              {
+                "term": "Drum Corps",
+                "definition": "A performing group centered on drums and other musical performance, often with strong marching or rhythm-based routines.",
+                "whyItMatters": "Knowing the term helps explain what kind of organization is being funded and supported."
+              }
+            ]
           }
         },
         {
-          "id": "louisville-5-66287",
-          "title": "Norton Children's Seeks Regional Input As Plans Take Shape For New Jefferson County Campus",
-          "kicker": "WKDZ",
-          "summary": "Norton Children’s is asking families across Kentucky and Southern Indiana to help shape a new pediatric campus planned for Jefferson County, with community feedback already influencing the types of medical services, family amenities and accessibility features that. In plain English, this is a Louisville local signal: the important details are what changed, which people or organizations are affected, and whether it touches business, health, infrastructure, or policy. For Dustin, the useful read is whether this changes the Louisville operating environment: business, healthcare, infrastructure, utilities, public policy, or local opportunity. The source is WKDZ; this is included because it is dated, source-linked, and matched the scan filters for this section.",
-          "emailSummary": "Norton Children’s is asking families across Kentucky and Southern Indiana to help shape a new pediatric campus planned for Jefferson County, wit…",
-          "whyItMatters": "This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home.",
+          "id": "louisville-4-56198",
+          "title": "Louisville man accused of assaulting child’s mother, barricading himself with infant",
+          "kicker": "WDRB",
+          "summary": "A Louisville man was arrested after police said he attacked the mother of his child and then barricaded himself inside a home with their infant. Based on the title and description, this is a local public safety and domestic violence case involving a child and a police response. The main issue for Louisville readers is the immediate risk to family members and the seriousness of a barricade situation involving an infant.",
+          "emailSummary": "A Louisville man was arrested this weekend after police said he attacked the mother of his child and barricaded himself inside a home with their…",
+          "whyItMatters": "This matters because it signals a high-risk domestic violence incident that required police intervention and involved a child’s safety.",
           "dataSignals": [
-            "Jefferson County"
+            "Louisville local"
           ],
-          "sourceLabel": "WKDZ · Aug 9, 11:40 PM ET",
-          "sourceUrl": "https://www.wkdzradio.com/2026/08/09/norton-childrens-seeks-regional-input-as-plans-take-shape-for-new-jefferson-county-campus/news-edge/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQWjJnN1drTVdNNzBGeWZjV01TeXEwNWlsY1lrMy1rOHoxeDU4aUhLQzBwSmhqM1NwVHdKcGVjZGpZZjNNa0dXa0lGOFBBXzFrdXgydmhxakxxempMSzhrTnVhQVV6bGh3SE1jVzd0UmN4eEVRQVpBLVhhOTJyakZVMVZvWENZNnJPaXVoMzBPeUVIa0VJdHRZbWE4UU5aQUdOZmJsQVRpWldPUWVoNkNUcDVaWmFsdUhnRDYzQ2hkaTdwWkliMGJoVTJQRk9VTVdIblV3?oc=5",
-          "publishedAt": "2026-08-10T03:40:30+00:00",
+          "sourceLabel": "WDRB · Aug 10, 3:04 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/crime-reports/louisville-man-accused-of-assaulting-child-s-mother-barricading-himself-with-infant/article_f70d951c-0a08-426b-a9fc-fc86c8f12065.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMigwJBVV95cUxORmhXUFV2RGkwWEZLTnYybVlHNktPVkVYbU0wTzgwMXVpMTFfZDNiMkpYLTd1WFV6WHVBcFJaamNtWU9xbDdudUxXQzhIS1djMFl5VTJzUjlLQ2g0eWpXR0V3cHNTXzM2bFFPVzllOHFiRDlTa2xXUlFaWDlQaXozVEpaZktTWnVSdHdjOXpxdl9oSFpJR3RodTkySnM4dkpnOWw2LTRUVHV2RGxkYTVmeHIzSVJocFY0cWEwQnpoNldCYkNHTUg0X0NKbTVuUlREMW5VQXo1dDkwV3hNaUh0dEZHZE0xUGdhY2VXbDYyQ0hYaThkaDc1cmN2ZkFFbjU0M3Iw?oc=5",
+          "publishedAt": "2026-08-10T19:04:00+00:00",
+          "glossary": [
+            {
+              "term": "barricaded",
+              "definition": "To block oneself inside a place so others cannot easily enter or remove the person."
+            },
+            {
+              "term": "infant",
+              "definition": "A very young child, usually under one year old."
+            },
+            {
+              "term": "domestic violence",
+              "definition": "Abuse or violence between people in a family or intimate relationship."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a breaking local crime and public safety story, not a policy or business story. When reading the full report, pay attention to who police say was involved, what actions led to the arrest, and whether the infant was harmed or safely recovered. If later details change the sequence of events or whether charges were filed, that would affect how serious the incident appears.",
+            "glossary": [
+              {
+                "term": "barricaded",
+                "definition": "To block oneself inside a place so others cannot easily enter or remove the person.",
+                "whyItMatters": "It indicates a potentially dangerous standoff that can escalate quickly and require a specialized police response."
+              },
+              {
+                "term": "infant",
+                "definition": "A very young child, usually under one year old.",
+                "whyItMatters": "The presence of an infant raises the urgency of the situation because a vulnerable child was directly involved."
+              },
+              {
+                "term": "domestic violence",
+                "definition": "Abuse or violence between people in a family or intimate relationship.",
+                "whyItMatters": "If this case is part of a domestic violence pattern, it affects how the incident is handled by police and courts."
+              }
+            ]
+          }
+        },
+        {
+          "id": "louisville-5-27727",
+          "title": "Louisville police search for man accused of exposing himself twice at store in Hikes Point",
+          "kicker": "WDRB",
+          "summary": "Louisville police are looking for a man accused of exposing himself twice at a TJ Maxx in Hikes Point. The report only states that the alleged incidents happened at the store and that police are seeking him. For Louisville readers, this is a local public-safety story centered on an active police investigation rather than a broader policy or business issue.",
+          "emailSummary": "Louisville police are looking for a man accused of exposing himself twice at a TJ Maxx in Hikes Point.",
+          "whyItMatters": "This matters because it signals an ongoing safety and law-enforcement concern at a retail location people in the area may visit.",
+          "dataSignals": [
+            "Louisville local"
+          ],
+          "sourceLabel": "WDRB · Aug 10, 2:02 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/crime-reports/louisville-police-search-for-man-accused-of-exposing-himself-twice-at-store-in-hikes-point/article_6c0fb230-e5cf-4bac-b4aa-ab48e49dae0a.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPMDYtTTFEeUtBbmZnSGhQazctZWlLLXN5TUJrN1EwQkFESDRpU0VtSk5ubjJVaFpxUEJxOEJBaGNqeDBWSjd1YTFhRnZ4cFU3ZS1paGp0UDFEYVZxRTZ3ai1HY1JuTUJwZTBfTGlwTnBhOWpCVDMySEduWEZ0SkFIN2RnWldnLTlmODJ0ZWxpdlM2RTkwU0g1NFBLeDFHMXBHeFUzbmRjNE9jbjVNZGJmalY3LTRIZnk0Mlk2M3ZfT2pfQ05CM2duU0ZkekNRM0d0YnZVNjRsWUljTV9uZFJfeFZTQmRlNGg0X2VncllLbXJqY3NNbTV6RDhLWWtQWDJEZEd2Y21tR2VGZVMt?oc=5",
+          "publishedAt": "2026-08-10T18:02:52+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is about Norton Children's Seeks Regional Input As Plans Take Shape For New Jefferson County Campus. This matters because Louisville stories can signal local business, infrastructure, healthcare, policy, and community changes worth watching close to home. The main thing to understand is what changed and who is affected. Read for what changed, who is affected, why it matters now, and what happens next.",
+            "explanationText": "This is a brief police blotter-style public safety story, so the main thing to watch is exactly what authorities say happened and where. The interpretation would change only if police later identified the suspect, filed charges, or clarified whether the two incidents were separate or part of the same encounter.",
             "glossary": []
           }
         }
@@ -908,8 +1184,11 @@
     }
   ],
   "errors": [
-    "ai: skipped 2 stories with no fetchable content",
-    "kentucky_healthcare: skipped 8 stories with no fetchable content",
-    "louisville: skipped 10 stories with no fetchable content"
+    "ai: skipped 1 story with no fetchable content",
+    "energy: skipped 7 stories with no fetchable content",
+    "humana: skipped 3 stories with no fetchable content",
+    "kentucky_healthcare: skipped 1 story with no fetchable content",
+    "analytics: skipped 1 story with no fetchable content",
+    "louisville: skipped 5 stories with no fetchable content"
   ]
 }
