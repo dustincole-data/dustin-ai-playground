@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-12T09:01:00.409964+00:00",
-  "generatedLabel": "Aug 12, 5:01 AM ET",
+  "generatedAt": "2026-08-13T09:00:02.860175+00:00",
+  "generatedLabel": "Aug 13, 5:00 AM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -9,280 +9,266 @@
       "emptyMessage": "No qualified AI stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "ai-signal-2026-08-12_08-51-58-1",
-          "title": "SpaceXAI launched Grok Bot — persistent enterprise agents that operate your apps 24/7 (Aug 11). Multi-ag…",
+          "id": "ai-signal-2026-08-13_08-52-01-1",
+          "title": "DeepSeek V4 Pro 0813 drops on OpenRouter — $0.435/MTok, 1M ctx, dual-API format (Aug 12/13). New revisio…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "SpaceXAI launched Grok Bot, a persistent enterprise agent system that can operate apps around the clock. The description says it uses multi-agent orchestration and workflow learning, so a user can demonstrate a task once and have the bot save it as a routine. It also says the bots have their own computers, can sign into websites and apps, coordinate with each other, and keep running when a machine sleeps. It is in beta through Cursor Ultra at $200 per month and Cursor Premium Teams at $120 per seat, which suggests an early but already monetized push toward automated workplace workflows.",
-          "emailSummary": "SpaceXAI launched Grok Bot — persistent enterprise agents that operate your apps 24/7 (Aug 11). Multi-agent orchestration with workflow learning…",
-          "whyItMatters": "This matters because persistent agents could automate repetitive app-based work, changing how teams schedule, monitor, and price routine operations.",
+          "summary": "DeepSeek V4 Pro 0813 has been listed on OpenRouter at $0.435 per million tokens with a 1M token context window and support for both OpenAI-format and Anthropic-format APIs. The brief says the model uses a Mixture-of-Experts design and can plug into tools like Claude Code, Copilot, OpenCode, or Hermes. It also cites a developer reporting about $12.50 for 2 billion tokens at a 50% cache hit rate. For AI users, this suggests a lower-cost, high-context model option that may be easier to drop into existing workflows.",
+          "emailSummary": "DeepSeek V4 Pro 0813 drops on OpenRouter — $0.435/MTok, 1M ctx, dual-API format (Aug 12/13). New revision (0813 = yesterday's release). Mixture…",
+          "whyItMatters": "This matters because cheaper long-context models with broad API compatibility can lower inference costs and make it easier to switch or test models in production workflows.",
+          "dataSignals": [
+            "OpenAI signal",
+            "Anthropic signal"
+          ],
+          "sourceLabel": "openrouter.ai · Aug 13, 4:52 AM ET",
+          "sourceUrl": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-08-13T08:52:01.339834+00:00",
+          "glossary": [
+            {
+              "term": "MTok",
+              "definition": "A pricing unit meaning one million tokens, used to measure model usage costs."
+            },
+            {
+              "term": "context window",
+              "definition": "The amount of text a model can consider at once when generating a response."
+            },
+            {
+              "term": "Mixture-of-Experts",
+              "definition": "A model architecture that routes different parts of a task to different specialized sub-models."
+            },
+            {
+              "term": "cache hit",
+              "definition": "When previously processed tokens or results can be reused instead of recalculated."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a product-and-pricing update about a newly listed AI model, not a research paper or a policy story. When reading the source, pay attention to the actual usage terms—price per token, context length, and API compatibility—because those determine whether it is practical for your stack. If later reports change the price, the context limit, or independent user cost tests, that would materially change how attractive the model is.",
+            "glossary": [
+              {
+                "term": "MTok",
+                "definition": "A pricing unit meaning one million tokens, used to measure model usage costs.",
+                "whyItMatters": "It lets buyers compare model prices on the same scale."
+              },
+              {
+                "term": "context window",
+                "definition": "The amount of text a model can consider at once when generating a response.",
+                "whyItMatters": "A larger context window lets the model work with longer documents or conversations."
+              },
+              {
+                "term": "Mixture-of-Experts",
+                "definition": "A model architecture that routes different parts of a task to different specialized sub-models.",
+                "whyItMatters": "It can improve efficiency and performance compared with one monolithic model."
+              },
+              {
+                "term": "cache hit",
+                "definition": "When previously processed tokens or results can be reused instead of recalculated.",
+                "whyItMatters": "Higher cache hit rates usually reduce latency and cost."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-signal-2026-08-13_08-52-01-2",
+          "title": "Agent Plugins 1.0 ships GA in Copilot with marketplace live (Aug 12). GitHub shipped spec support across…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "GitHub says Agent Plugins 1.0 is now generally available in Copilot, and the distribution channel is live through the Awesome Copilot marketplace. The update also adds spec support across VS Code, Copilot CLI, the SDK, and the Copilot app on all plans. For teams using Copilot, this means plugins can now be installed and managed in a more official way, with enterprise controls to allow or block plugins and limit which marketplaces are used.",
+          "emailSummary": "Agent Plugins 1.0 ships GA in Copilot with marketplace live (Aug 12). GitHub shipped spec support across VS Code, Copilot CLI, SDK, and Copilot…",
+          "whyItMatters": "This matters because it turns agent plugins from a spec into a usable ecosystem, which can change how teams extend Copilot and how securely they govern those extensions.",
           "dataSignals": [
             "agent workflow",
-            "workflow controls"
+            "developer workflow"
           ],
-          "sourceLabel": "venturebeat.com · Aug 12, 4:51 AM ET",
-          "sourceUrl": "https://venturebeat.com/orchestration/spacexais-grok-bot-turns-agents-into-persistent-digital-coworkers-that-can-operate-your-apps-for-120-per-month",
+          "sourceLabel": "github.blog · Aug 13, 4:52 AM ET",
+          "sourceUrl": "https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/",
           "googleNewsUrl": null,
-          "publishedAt": "2026-08-12T08:51:58.884328+00:00",
+          "publishedAt": "2026-08-13T08:52:01.339834+00:00",
           "glossary": [
             {
-              "term": "multi-agent orchestration",
-              "definition": "A way of coordinating several AI agents so they work together on parts of the same task."
+              "term": "GA",
+              "definition": "Short for \"generally available,\" meaning a product feature is officially released for regular use."
             },
             {
-              "term": "workflow learning",
-              "definition": "A system where an AI learns a repeated process from an example and turns it into a reusable routine."
+              "term": "Copilot",
+              "definition": "GitHub's AI assistant that helps generate code and assist with developer tasks."
             },
             {
-              "term": "beta",
-              "definition": "An early release used for testing before a product is fully finalized."
+              "term": "spec",
+              "definition": "A technical specification that defines how something should work so different tools can support it consistently."
             },
             {
-              "term": "persistent enterprise agents",
-              "definition": "AI agents designed to keep running over time for business use instead of stopping after one prompt."
+              "term": "enterprise governance",
+              "definition": "Controls that let an organization manage what software or features employees can use."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a product-launch story in AI automation, not a research or policy story. When reading it, focus on what the system can actually do on its own, how it learns routines, and the pricing and access model, because those tell you whether it is a demo, a narrow tool, or a broadly deployable workplace product. Interpretation would change a lot if independent testing showed the bots are less reliable, less persistent, or more limited than the description implies.",
+            "explanationText": "This is a product release story about a platform feature moving from announcement to actual availability. When reading the source, pay attention to what is now live versus what was only defined in the earlier spec launch on Aug. 6, because that changes whether teams can use it today. The interpretation would change most if the marketplace or enterprise controls were limited in practice, but the description says the channel is live and governance options exist.",
             "glossary": [
               {
-                "term": "multi-agent orchestration",
-                "definition": "A way of coordinating several AI agents so they work together on parts of the same task.",
-                "whyItMatters": "It suggests the product is built for more complex workflows than a single bot can handle."
+                "term": "GA",
+                "definition": "Short for \"generally available,\" meaning a product feature is officially released for regular use.",
+                "whyItMatters": "GA signals that the feature is no longer just experimental and is ready for broader adoption."
               },
               {
-                "term": "workflow learning",
-                "definition": "A system where an AI learns a repeated process from an example and turns it into a reusable routine.",
-                "whyItMatters": "This determines how quickly users can automate work after showing the bot once."
+                "term": "Copilot",
+                "definition": "GitHub's AI assistant that helps generate code and assist with developer tasks.",
+                "whyItMatters": "Copilot is the main product where these plugins will be installed and used."
               },
               {
-                "term": "beta",
-                "definition": "An early release used for testing before a product is fully finalized.",
-                "whyItMatters": "Beta status means capabilities and reliability may still change."
+                "term": "spec",
+                "definition": "A technical specification that defines how something should work so different tools can support it consistently.",
+                "whyItMatters": "Spec support means the same plugin approach can work across multiple GitHub and developer tools."
               },
               {
-                "term": "persistent enterprise agents",
-                "definition": "AI agents designed to keep running over time for business use instead of stopping after one prompt.",
-                "whyItMatters": "Persistence is what makes 24/7 automation possible."
+                "term": "enterprise governance",
+                "definition": "Controls that let an organization manage what software or features employees can use.",
+                "whyItMatters": "These controls determine whether companies can safely adopt plugins without losing oversight."
               }
             ]
           }
         },
         {
-          "id": "ai-signal-2026-08-12_08-51-58-2",
-          "title": "Anthropic ships invisible watermarks on all Claude output globally (Aug 11 press, effective Aug 2). Firs…",
+          "id": "ai-signal-2026-08-13_08-52-01-3",
+          "title": "Copilot deprecates 6 models Sep 1 + Codex retires GPT-5.4 Aug 31 — two deadlines hitting in 2-3 weeks. C…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "Anthropic says it has added invisible, statistical watermarks to all Claude output worldwide, and says the change took effect on Aug. 2 even though the press announcement was on Aug. 11. The watermarking applies to every new Claude model mentioned here, including Sonnet 4.6 and Haiku 4.5, and works across API access, Claude Code, Claude Cowork, and cloud partners. The company says this is meant to support compliance with EU AI Act Article 50 and that detection tools and technical documentation are still coming. For the AI sector, this is a notable step toward making machine-generated text easier to identify at scale.",
-          "emailSummary": "Anthropic ships invisible watermarks on all Claude output globally (Aug 11 press, effective Aug 2). First major frontier lab to deploy productio…",
-          "whyItMatters": "This matters because broad, production-scale text watermarking could make it easier for platforms, regulators, and customers to verify when Claude generated content and to enforce disclosure rules.",
+          "summary": "GitHub says Copilot will deprecate six models on Sep. 1, including Claude Opus 4.5/4.6, Sonnet 4.5/4.6, Gemini 3.1 Pro, and Raptor Mini, with suggested replacements such as Opus 4.7+, Sonnet 5, and Gemini 3.6 Flash. Codex will retire GPT-5.4 on Aug. 31 and move users to GPT-5.6-terra, while GPT-5.4-mini shifts to GPT-5.6-luna. The main takeaway is that teams using these tools need to update model selections soon, or their workflows may be affected by the removals and replacement defaults.",
+          "emailSummary": "Copilot deprecates 6 models Sep 1 + Codex retires GPT-5.4 Aug 31 — two deadlines hitting in 2-3 weeks. Copilot: Claude Opus 4.5/4.6, Sonnet 4.5/…",
+          "whyItMatters": "This matters because AI teams that rely on Copilot or Codex need to update integrations, cost assumptions, and performance expectations before the cutoff dates.",
           "dataSignals": [
-            "Anthropic signal",
+            "Codex / coding agents",
+            "developer workflow",
             "model/tool release"
           ],
-          "sourceLabel": "techtimes.com · Aug 12, 4:51 AM ET",
-          "sourceUrl": "https://www.techtimes.com/articles/323873/20260811/claude-now-watermarks-text-everywhere-mark-proves-processing-not-authorship.htm",
+          "sourceLabel": "github.blog · Aug 13, 4:52 AM ET",
+          "sourceUrl": "https://github.blog/changelog/2026-07-31-upcoming-august-2026-model-deprecations-in-github-copilot/",
           "googleNewsUrl": null,
-          "publishedAt": "2026-08-12T08:51:58.884328+00:00",
+          "publishedAt": "2026-08-13T08:52:01.339834+00:00",
           "glossary": [
             {
-              "term": "watermarking",
-              "definition": "Embedding a hidden signal in content so it can later be identified as coming from a specific source."
+              "term": "deprecate",
+              "definition": "To phase out support for a product or feature so users are expected to stop relying on it."
             },
             {
-              "term": "statistical watermark",
-              "definition": "A watermark created by subtly changing word choices or patterns in a way that a detector can recognize mathematically."
+              "term": "model",
+              "definition": "An AI system version that produces outputs based on a specific training and configuration setup."
             },
             {
-              "term": "green-list scheme",
-              "definition": "A method that biases generation toward a chosen set of allowed tokens so the output leaves a recognizable pattern."
+              "term": "migration guide",
+              "definition": "Instructions for moving from one tool or version to another."
             },
             {
-              "term": "EU AI Act Article 50",
-              "definition": "A provision in the European Union's AI law that covers transparency obligations for certain AI-generated content."
+              "term": "primary source",
+              "definition": "The original publisher of the information, rather than a repost or summary."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a policy-and-product rollout story, not a model-performance story, so the key thing to watch is whether the watermarking is truly universal across all Claude surfaces and whether third-party detection actually works in practice. The interpretation would change if the watermark is easy to remove, if it only applies to some products or regions, or if regulators do not accept it as sufficient for disclosure requirements.",
+            "explanationText": "This is a product-change alert, not a market or research story. When reading the source, focus on the exact cutoff dates, the old model names being removed, and the recommended replacements, since those are the parts that affect real usage. If the source later changes the retirement dates or replacement models, that would change how urgent the migration is and which costs or capabilities teams should expect.",
             "glossary": [
               {
-                "term": "watermarking",
-                "definition": "Embedding a hidden signal in content so it can later be identified as coming from a specific source.",
-                "whyItMatters": "It is the core mechanism Anthropic says it is using to mark Claude output."
+                "term": "deprecate",
+                "definition": "To phase out support for a product or feature so users are expected to stop relying on it.",
+                "whyItMatters": "A deprecation date tells teams when they must migrate before something stops working as expected."
               },
               {
-                "term": "statistical watermark",
-                "definition": "A watermark created by subtly changing word choices or patterns in a way that a detector can recognize mathematically.",
-                "whyItMatters": "This is the type of watermark Anthropic says it embeds in generated text."
+                "term": "model",
+                "definition": "An AI system version that produces outputs based on a specific training and configuration setup.",
+                "whyItMatters": "Different model versions can change quality, speed, and cost in real workflows."
               },
               {
-                "term": "green-list scheme",
-                "definition": "A method that biases generation toward a chosen set of allowed tokens so the output leaves a recognizable pattern.",
-                "whyItMatters": "It describes the specific technique cited for how the watermark is inserted."
+                "term": "migration guide",
+                "definition": "Instructions for moving from one tool or version to another.",
+                "whyItMatters": "A migration guide helps teams switch models with fewer broken prompts or integration issues."
               },
               {
-                "term": "EU AI Act Article 50",
-                "definition": "A provision in the European Union's AI law that covers transparency obligations for certain AI-generated content.",
-                "whyItMatters": "Anthropic says compliance with this rule is one reason for the rollout."
+                "term": "primary source",
+                "definition": "The original publisher of the information, rather than a repost or summary.",
+                "whyItMatters": "Primary sources are usually the best place to verify deadlines and replacement details."
               }
             ]
           }
         },
         {
-          "id": "ai-signal-2026-08-12_08-51-58-3",
-          "title": "Muse Glimmer 30B now live on Ollama with explicit Hermes support (Aug 10). Update on yesterday's story —…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "Muse Glimmer 30B is now available on Ollama, and the update says Hermes support is explicitly included. The note says the model can be run with `ollama run muse-glimmer`, and Ollama’s blog also shows `ollama launch hermes --model muse-glimmer`. For Apple Silicon users, the MLX engine with DFlash is described as delivering a 1.5–1.8x speedup, and the model offers controllable reasoning strength settings of low, medium, high, and xhigh.",
-          "emailSummary": "Muse Glimmer 30B now live on Ollama with explicit Hermes support (Aug 10). Update on yesterday's story — the \"coming this week\" is now *right no…",
-          "whyItMatters": "This matters because it makes a larger, configurable model easier and faster to use locally, especially for Apple Silicon users and anyone building with Ollama or Hermes.",
+          "id": "ai-1-9526",
+          "title": "AI agents are turning data silos into an existential infrastructure problem",
+          "kicker": "cio.com",
+          "summary": "Separate studies from Google/MIT and Cloudera point to the same issue: AI agents cannot reliably act on data if they cannot access it, understand it, or retrieve it in real time. The story frames data silos as more than an IT nuisance, suggesting they are becoming a core infrastructure problem for organizations that want agents to do useful work. In practice, that means AI projects may fail or underperform unless companies improve how data is connected and available.",
+          "emailSummary": "Separate studies conducted by Google/MIT and Cloudera both point to the same problem: Agents can’t reliably act on data they can’t access, under…",
+          "whyItMatters": "This matters because AI agents are only as useful as the data they can reach quickly and use correctly, so siloed systems can limit real business value even when the model itself is strong.",
           "dataSignals": [
-            "model/tool release"
+            "agent workflow",
+            "data-platform signal"
           ],
-          "sourceLabel": "ollama.com · Aug 12, 4:51 AM ET",
-          "sourceUrl": "https://ollama.com/blog/muse-glimmer",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-08-12T08:51:58.884328+00:00",
+          "sourceLabel": "cio.com · Aug 12, 10:10 PM ET",
+          "sourceUrl": "https://www.cio.com/article/4208824/ai-agents-are-turning-data-silos-into-an-existential-infrastructure-problem.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNYzluWFF1enh0UnIzVjhiUjd3dDlNNmhPZ0owNnR0RzUyUGwzcTcxTmdFM1ZabV8xRHQyVExONTVfa0JXclQ5ZGVxRVhyendpb2dZRFJ6Y2hMSW83NklzeUV4RVRuT2EwTzdfQ1dBbENYeTUwWXE0YW8zM0FxMHRhbXVtS1RieUoxVlU5RkV5YlhFSzEydkhDV29BdEkzbmwtaGNYMVo5QkpXY0k1WUppY1lvM0xKaEU?oc=5",
+          "publishedAt": "2026-08-13T02:10:26+00:00",
           "glossary": [
             {
-              "term": "Ollama",
-              "definition": "A tool for running and managing AI models locally on a computer."
-            },
-            {
-              "term": "Hermes",
-              "definition": "An AI model family or runtime name referenced here as having explicit support for Muse Glimmer 30B."
-            },
-            {
-              "term": "MLX",
-              "definition": "Apple’s machine learning framework designed to run models efficiently on Apple Silicon chips."
-            },
-            {
-              "term": "GGUF",
-              "definition": "A file format commonly used to store and run quantized AI models locally."
+              "term": "AI agents",
+              "definition": "Software systems that can take actions on their own, rather than only responding with text or predictions."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a product availability and performance update, not a research result or policy story. When reading the source, pay attention to what is explicitly supported, how to launch it, and whether the speed claims apply to a specific setup like Apple Silicon with MLX and DFlash. The interpretation would change if the source were not an official blog post or if the speedup and reasoning controls were shown only in limited tests rather than general availability.",
+            "explanationText": "This is a technology-infrastructure story, not a product announcement. When reading it, focus on the relationship between data access and AI agent performance, especially the emphasis on real-time retrieval and understanding. If the full source provides concrete examples, benchmarks, or organizational fixes, those details would show how severe the problem is and what kinds of infrastructure changes actually help.",
             "glossary": [
               {
-                "term": "Ollama",
-                "definition": "A tool for running and managing AI models locally on a computer.",
-                "whyItMatters": "It is the platform where Muse Glimmer 30B is now available."
-              },
-              {
-                "term": "Hermes",
-                "definition": "An AI model family or runtime name referenced here as having explicit support for Muse Glimmer 30B.",
-                "whyItMatters": "The story says Hermes support is now explicitly included, which affects how people access or use the model."
-              },
-              {
-                "term": "MLX",
-                "definition": "Apple’s machine learning framework designed to run models efficiently on Apple Silicon chips.",
-                "whyItMatters": "The reported speedup applies to this engine on Apple hardware."
-              },
-              {
-                "term": "GGUF",
-                "definition": "A file format commonly used to store and run quantized AI models locally.",
-                "whyItMatters": "The Hugging Face GGUF repo is cited as a source, which signals a local-model distribution format."
+                "term": "AI agents",
+                "definition": "Software systems that can take actions on their own, rather than only responding with text or predictions.",
+                "whyItMatters": "Agents need reliable data access to do real work instead of just answering questions."
               }
             ]
           }
         },
         {
-          "id": "ai-1-48714",
-          "title": "OpenAI launches ChatGPT desktop app for Linux",
-          "kicker": "TechCrunch",
-          "summary": "OpenAI is bringing a dedicated ChatGPT desktop app to Linux operating systems. The announcement means Linux users will be able to access ChatGPT through a native desktop application instead of only through a browser or other interfaces.",
-          "emailSummary": "A practical AI story to scan for tool changes, risks, and useful business workflows.",
-          "whyItMatters": "This matters because it expands ChatGPT’s reach to another major desktop platform, making the tool easier to use for Linux-based workflows and potentially broadening adoption among developers and technical users.",
+          "id": "ai-2-46533",
+          "title": "Scaling AI agents with trustworthy data",
+          "kicker": "MIT Technology Review",
+          "summary": "Companies are trying to move away from older data systems so they can support AI agents that act on their own. The focus is on making those agents work with trusted data, so their actions are reliable. For the AI area, this points to data infrastructure becoming a key limiter on whether agentic systems can scale safely.",
+          "emailSummary": "How companies are freeing themselves of legacy data systems to power AI agents that deliver trusted, autonomous action.",
+          "whyItMatters": "This matters because AI agents are only as useful as the data they can trust, and weak data systems can block automation or create unreliable outputs.",
           "dataSignals": [
-            "model/tool release"
+            "agent workflow",
+            "data-platform signal"
           ],
-          "sourceLabel": "TechCrunch · Aug 11, 3:15 PM ET",
-          "sourceUrl": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZUNZR2RvNEZJMGJXLUtEbG1xMkFHRV9PRTBTTEEzdlpnY294eFlRT0Y0OGw0VEc1TjF1aUJvUG5scjZxc3Y3QXlKVG1tYlZoTUZlY0xGd1Q0Q05jUEtpQ0Y2djFfVjExaFphcWl5UW1OdG5tbWhEbUViVFVYa0txZzRMOFhKYTg?oc=5",
-          "publishedAt": "2026-08-11T19:15:35+00:00",
+          "sourceLabel": "MIT Technology Review · Aug 12, 12:51 PM ET",
+          "sourceUrl": "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPY293cTd3RzBudWhucDVKd1hUTUlqT2kzZU11RVBjQUxqcXVSdHVSNGRoYUljNVNqV1M0d3hTbVpfTl9UNUoySmxjU25yaTA5VFBubGs0ZDZOYlVjS0tFX0lSYzVWTWstX2Nwb1pJT2tXbHpYd29ZQ3pXd2lfWkpDWURIdTNCSS05cXlaZ1ZnVVByRE9YTkMw0gGcAUFVX3lxTE1SNzlWM3h4SktlMDBqY2x3QXR4c2pORHZlRXFKU2w4Qlg1bUlBUlU4NWc3RkhqLUpjTjc0X2llX1VWOUEzRzlGVVYzTU5KM3g3eWVSaEpHcEpmYTJVZkZlR0JMcV9zQlphZFk2S2VCemVfbTh2N09ieFJrMDZ6RjVZR09oUlMzcE9QbnpIU2N1VDBqRXBRTUdYdXZpdQ?oc=5",
+          "publishedAt": "2026-08-12T16:51:57+00:00",
           "glossary": [
             {
-              "term": "Linux",
-              "definition": "An open-source operating system used on computers and servers."
+              "term": "AI agents",
+              "definition": "Software systems that can make decisions and take actions with limited human input."
             },
             {
-              "term": "desktop app",
-              "definition": "A program installed and run directly on a computer rather than inside a web browser."
+              "term": "legacy data systems",
+              "definition": "Older data platforms or infrastructure that organizations still use even if they are harder to update or integrate with newer tools."
+            },
+            {
+              "term": "autonomous action",
+              "definition": "Action taken by a system on its own rather than waiting for a person to approve every step."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a product-launch story: the key thing to watch is which platform is being added and whether the app is truly native to that operating system. If the source adds details beyond the headline, the most important changes would be whether the app is available now, who can download it, and whether it has features different from the web version.",
+            "explanationText": "This is a technology strategy story about the data foundations behind AI, not a product launch or a consumer feature piece. When reading the source, pay attention to what makes data “trusted” and what legacy systems are getting in the way, because those details determine whether the argument is about real operational change or just a general AI trend. If the story shows concrete examples of data modernization or governance, that would strengthen the case that AI agents can be safely scaled; if it stays abstract, it is more of a vision piece.",
             "glossary": [
               {
-                "term": "Linux",
-                "definition": "An open-source operating system used on computers and servers.",
-                "whyItMatters": "It identifies the platform the new app is designed for, which determines who can use it."
+                "term": "AI agents",
+                "definition": "Software systems that can make decisions and take actions with limited human input.",
+                "whyItMatters": "They are the kind of AI tools this story is about, and their usefulness depends on whether they can act reliably."
               },
               {
-                "term": "desktop app",
-                "definition": "A program installed and run directly on a computer rather than inside a web browser.",
-                "whyItMatters": "A desktop app can make access faster and more integrated than using a website."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-2-74422",
-          "title": "Google’s new AI boss inherits a race to catch OpenAI and Anthropic",
-          "kicker": "CNBC",
-          "summary": "Koray Kavukcuoglu is taking charge of Google DeepMind as Google works to keep its Gemini AI model competitive with OpenAI and Anthropic. The move puts new leadership in place for one of Google’s key AI teams at a time when the company is trying to close the gap in the AI race. For the AI sector, it signals continued pressure on major players to improve model quality and market position.",
-          "emailSummary": "Koray Kavukcuoglu is taking charge of Google DeepMind as it tries to keep Gemini competitive with OpenAI and Anthropic.",
-          "whyItMatters": "This matters because leadership changes at Google DeepMind can affect how quickly Gemini improves and how strongly Google can compete in the AI market.",
-          "dataSignals": [
-            "model/tool release"
-          ],
-          "sourceLabel": "CNBC · Aug 12, 1:00 AM ET",
-          "sourceUrl": "https://www.cnbc.com/2026/08/12/google-deepmind-koray-kavukcuoglu.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1GdzdHeVhqMkp3QnhRTmNUeDdGNXFPcXUzME5SR0dSenc0OG9qcFFJYk53RE5scUVzNlpneG5panpMb2pmUWlLS0dqVDJxRGJPLW9EdFlYdW1UV3RsdjB3LUVyTU1rYTYxY19DUDZjX2JWbkZaOTR4dzZ30gF_QVVfeXFMTUZqWnlpYnMzVXlYeW9XYXFDWEVhUjdjZzIxaU1VbmdRUXI1eHhkUjRGOGxkNDQ2c3RRdnRNRGVRXzFUcDNzRXQtYW5pTjNsc1lTVzRzaGNTREtYVDRzbFdrenFBVklKRDZRVW9NSnN1LXJaYl9PZ18zYXpDd05VNA?oc=5",
-          "publishedAt": "2026-08-12T05:00:01+00:00",
-          "glossary": [
-            {
-              "term": "Google DeepMind",
-              "definition": "Google’s AI research and product group focused on building advanced artificial intelligence systems."
-            },
-            {
-              "term": "Gemini",
-              "definition": "Google’s AI model family and chatbot platform meant to compete with other leading generative AI systems."
-            },
-            {
-              "term": "OpenAI",
-              "definition": "An AI company best known for ChatGPT and other widely used generative AI products."
-            },
-            {
-              "term": "Anthropic",
-              "definition": "An AI company that builds large language models and assistant products, including Claude."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a corporate leadership and competitive-position story, not a product launch or research result. When reading the source, focus on who is being put in charge and which AI products or rivals are named, because those clues show where the company is putting pressure. If future reporting says Gemini is gaining users, improving benchmarks, or losing ground, that would change how significant this leadership shift looks.",
-            "glossary": [
-              {
-                "term": "Google DeepMind",
-                "definition": "Google’s AI research and product group focused on building advanced artificial intelligence systems.",
-                "whyItMatters": "It is one of the main teams responsible for Google’s AI strategy and model development."
+                "term": "legacy data systems",
+                "definition": "Older data platforms or infrastructure that organizations still use even if they are harder to update or integrate with newer tools.",
+                "whyItMatters": "The story centers on companies trying to move beyond these systems to support modern AI."
               },
               {
-                "term": "Gemini",
-                "definition": "Google’s AI model family and chatbot platform meant to compete with other leading generative AI systems.",
-                "whyItMatters": "Its competitiveness is a direct measure of Google’s position in the AI race."
-              },
-              {
-                "term": "OpenAI",
-                "definition": "An AI company best known for ChatGPT and other widely used generative AI products.",
-                "whyItMatters": "It is one of Google’s main competitors in advanced AI."
-              },
-              {
-                "term": "Anthropic",
-                "definition": "An AI company that builds large language models and assistant products, including Claude.",
-                "whyItMatters": "It is another major competitor shaping the pace of AI development."
+                "term": "autonomous action",
+                "definition": "Action taken by a system on its own rather than waiting for a person to approve every step.",
+                "whyItMatters": "This is the main promise of AI agents, but it also raises the stakes for data quality and trust."
               }
             ]
           }
@@ -295,253 +281,252 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-41263",
-          "title": "Is PPL (PPL) Cheap On Data Center Demand And Reaffirmed Guidance?",
-          "kicker": "simplywall.st",
-          "summary": "PPL drew attention after its Q2 2026 earnings report and its reaffirmation of full-year guidance. The company is linking its current performance to long-term power demand from data centers. At US$35.28 a share, the stock has had modest short-term moves around the earnings update, with a 3-year total shareholder return of 53.16% versus a slightly negative 1-year return. For utilities, the key question is whether data-center electricity demand can support growth and justify the stock's valuation.",
-          "emailSummary": "PPL (PPL) has moved into focus after its recent Q2 2026 earnings report and reaffirmed full year guidance. The company is tying current performa…",
-          "whyItMatters": "This matters because sustained data center power demand can affect utility load growth, earnings visibility, and how investors price regulated power companies.",
+          "id": "energy-1-99005",
+          "title": "Thousands of LG&E/KU customers experience outages across LG&E coverage area",
+          "kicker": "WAVE News",
+          "summary": "Storms moving through WAVE Country are causing power outages across the LG&E coverage area. The report says thousands of LG&E/KU customers are experiencing outages. For energy and utilities, the immediate impact is service disruption for customers while crews likely respond to storm-related damage.",
+          "emailSummary": "Storms are continuing to move through WAVE Country causing power outages in the area.",
+          "whyItMatters": "This matters because widespread outages can affect homes, businesses, and grid reliability across the Louisville area.",
           "dataSignals": [
-            "PPL mention",
-            "data-center load"
+            "LG&E / KU / PPL mention"
           ],
-          "sourceLabel": "simplywall.st · Aug 12, 2:43 AM ET",
-          "sourceUrl": "https://simplywall.st/stocks/us/utilities/nyse-ppl/ppl/news/is-ppl-ppl-cheap-on-data-center-demand-and-reaffirmed-guidan/amp",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRVg1bllVQnQ0aUFacTZ1X2wzX19fZDRJU3RJcWs0LWoxeFF0TktnZlRtWUdGMTZ6MDhCU0lDVW11dEZkTk56Qzd1ZWo2Z2NkNFRCWW5lVzZ1bmJObU1QU2d3cC1SM0V1SENGeHFSQ1pIQlVDcTIxUTNFWXkyWlJyLVI2X3gwWEtadmswcVlQcGhlNks3a3JidzFLLUExVmhZbm1Gc0x4S1FsV1JxcjBCajBJYmpJZ1BZcW4yRVNxc0dBQdIBwgFBVV95cUxPRVg1bllVQnQ0aUFacTZ1X2wzX19fZDRJU3RJcWs0LWoxeFF0TktnZlRtWUdGMTZ6MDhCU0lDVW11dEZkTk56Qzd1ZWo2Z2NkNFRCWW5lVzZ1bmJObU1QU2d3cC1SM0V1SENGeHFSQ1pIQlVDcTIxUTNFWXkyWlJyLVI2X3gwWEtadmswcVlQcGhlNks3a3JidzFLLUExVmhZbm1Gc0x4S1FsV1JxcjBCajBJYmpJZ1BZcW4yRVNxc0dBQQ?oc=5",
-          "publishedAt": "2026-08-12T06:43:08+00:00",
+          "sourceLabel": "WAVE News · Aug 12, 6:43 AM ET",
+          "sourceUrl": "https://www.wave3.com/2026/08/12/11k-lgeku-customers-experiencing-outages-across-lge-coverage-area/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQSnlXWG1UTWhJcUZqcHpndU1lNUM5bW1IUFRCaE1oMXY5dHBldFdpdjhHbHh2TXk1bXhXSEwwVDlzaWQzNjZHSmhMQjVzLXBmQjNhN2hEeWNEdlBrS1JodzZNb1pFeXh2SHBNeDFoOGpuaXFWbUxoWV9EaGpHczNMUlViUi00LVZWanVCWUVxWTgtZElQaWlJQkVTNFZlY0FH?oc=5",
+          "publishedAt": "2026-08-12T10:43:00+00:00",
           "glossary": [
             {
-              "term": "guidance",
-              "definition": "A company’s forecast for future results, such as revenue, earnings, or cash flow."
+              "term": "outage",
+              "definition": "A loss of electric service to customers or an area."
             },
             {
-              "term": "total shareholder return",
-              "definition": "The total gain or loss from owning a stock, including price changes and dividends."
+              "term": "coverage area",
+              "definition": "The geographic area a utility serves with electricity."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a short operational news item about utility service disruption during severe weather. When reading more, pay attention to how many customers are affected, whether outages are concentrated in one area or spread out, and whether the cause is weather-related damage or another grid issue. If the outage count rises or restoration times are given, that would change how serious the situation looks.",
+            "glossary": [
+              {
+                "term": "outage",
+                "definition": "A loss of electric service to customers or an area.",
+                "whyItMatters": "Outage size and spread show how much of the power system is affected."
+              },
+              {
+                "term": "coverage area",
+                "definition": "The geographic area a utility serves with electricity.",
+                "whyItMatters": "It tells you which communities may be impacted by the disruption."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-2-44240",
+          "title": "Clark County Plan Commission approves 1-year moratorium on new data centers",
+          "kicker": "WDRB",
+          "summary": "Clark County's Plan Commission voted 7-0 to support a one-year moratorium on new data center development. That means new data center projects would be paused for a year in the county if the moratorium is adopted through the next step in the process. For the energy and utilities side, this could temporarily slow added demand from large data facilities.",
+          "emailSummary": "The Clark County Plan Commission voted 7-0 Wednesday in favor of a one-year moratorium on new data center development.",
+          "whyItMatters": "This matters because data centers can drive major electricity and infrastructure demand, so a pause could affect utility planning, load growth, and local development timelines.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "WDRB · Aug 12, 9:18 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/clark-county-plan-commission-approves-1-year-moratorium-on-new-data-centers/article_57fbd406-c542-45f1-a99c-b3e10212f86b.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQWU43VWZmdlZzcS1hSU1zYTBvLWU4eG8ySWFUZVdrUWM0WHNHXzFSOUU3cERGV3RvejlaRFhoQVpXUTUtd0VqUU1kTTlwZUhNdGJTNXNnQ0JYaDZ2WEhJbWxXRkotV0g0X2Z5VFd4MFFzUlRsdGVTMVZuUS14dUg1Z3NJdmJtWnFJWXlWWEhpUDdSbVQ4Nm9Pb0VoMXJ6X3pEbXBsUzgydHc2M040dHVydVNpNHM2ck1OMlFKSnZ5UGZKVjR2LUJwdTNjZWJYR05sc09jRzZyLWE2OU9aOXEyTEctaVJXdw?oc=5",
+          "publishedAt": "2026-08-13T01:18:00+00:00",
+          "glossary": [
+            {
+              "term": "Plan Commission",
+              "definition": "A local government advisory or decision-making board that reviews development proposals and land-use rules."
+            },
+            {
+              "term": "Moratorium",
+              "definition": "A temporary halt on a certain type of activity or development."
+            },
+            {
+              "term": "Data center",
+              "definition": "A facility filled with servers and networking equipment that stores, processes, and moves digital data."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a local land-use and development policy story with direct implications for energy demand. When reading the source, pay attention to whether the moratorium is only a recommendation or becomes an actual county rule, because that changes its effect on new projects. If later reporting explains the reasons for the pause or any exemptions, that would change how serious the long-term impact is for utilities and developers.",
+            "glossary": [
+              {
+                "term": "Plan Commission",
+                "definition": "A local government advisory or decision-making board that reviews development proposals and land-use rules.",
+                "whyItMatters": "Its vote can determine whether development restrictions move forward."
+              },
+              {
+                "term": "Moratorium",
+                "definition": "A temporary halt on a certain type of activity or development.",
+                "whyItMatters": "It stops new projects from advancing while officials review the issue."
+              },
+              {
+                "term": "Data center",
+                "definition": "A facility filled with servers and networking equipment that stores, processes, and moves digital data.",
+                "whyItMatters": "Data centers are large power users, so limits on them can affect utility demand."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-3-4589",
+          "title": "A Kentucky county passes a data center moratorium — with a city-sized hole",
+          "kicker": "Louisville Public Media",
+          "summary": "Mercer County’s Fiscal Court approved a one-year moratorium on applications for data center projects. At the same time, residents in Burgin criticized an annexation proposal that would still allow one data center. The story points to local pushback against new data center development, but also shows that the restriction may not fully cover all parts of the county.",
+          "emailSummary": "The Mercer County Fiscal Court passed a one-year moratorium on data center project applications, while Burgin residents blasted an annexation pr…",
+          "whyItMatters": "This matters because data center siting affects land use, electricity demand, and local tax and infrastructure planning, so a partial moratorium can still leave a path for development in a nearby jurisdiction.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "Louisville Public Media · Aug 12, 2:46 PM ET",
+          "sourceUrl": "https://www.lpm.org/news/2026-08-12/a-kentucky-county-passes-a-data-center-moratorium-with-a-city-sized-hole",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdDhQbTNHdm51Q0hHVi0wVllPdHZZbExob2JYSUoxUFc3VlJBdE1YZWR2SmVOOW9zYmhhRlgtMzhZeWRxMl84RXR2OVBBenpNamFMX0dMYzZVTWg2NUNUSzFCUE1YclpyeVFhQXRxa0ViWEJpbXl6LWZVVE1rOV96bjVqd1lwRWlNR2pKakU0cWg2Y1YtOW1LSHNaVF9OSWpXcVFod3pjRWtOZlhv?oc=5",
+          "publishedAt": "2026-08-12T18:46:00+00:00",
+          "glossary": [
+            {
+              "term": "Fiscal Court",
+              "definition": "Kentucky’s county government body that makes decisions like passing local rules and approving ordinances."
+            },
+            {
+              "term": "Moratorium",
+              "definition": "A temporary pause on approving or processing certain kinds of applications or projects."
+            },
+            {
+              "term": "Annexation",
+              "definition": "When a city expands its boundaries to bring nearby land under city control."
+            },
+            {
+              "term": "Data center",
+              "definition": "A facility that houses computer systems and networking equipment used to store, process, and move digital data."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a local government and land-use story, not a technical data-center operations story. When reading the source, pay attention to which government body is acting, what area the rule actually covers, and whether the annexation proposal creates an exception. The interpretation would change if the annexation is approved, because the moratorium may not stop the one allowed project.",
+            "glossary": [
+              {
+                "term": "Fiscal Court",
+                "definition": "Kentucky’s county government body that makes decisions like passing local rules and approving ordinances.",
+                "whyItMatters": "It is the county authority taking action on the data center moratorium."
+              },
+              {
+                "term": "Moratorium",
+                "definition": "A temporary pause on approving or processing certain kinds of applications or projects.",
+                "whyItMatters": "It signals a short-term stop to new data center proposals while local officials consider next steps."
+              },
+              {
+                "term": "Annexation",
+                "definition": "When a city expands its boundaries to bring nearby land under city control.",
+                "whyItMatters": "Annexation can create a jurisdictional gap where a project may still be allowed even after county action."
+              },
+              {
+                "term": "Data center",
+                "definition": "A facility that houses computer systems and networking equipment used to store, process, and move digital data.",
+                "whyItMatters": "These projects can have major implications for power use, land development, and local utility planning."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-4-33022",
+          "title": "Joint venture involving PPL Corporation close to inking first generation deal",
+          "kicker": "WFMZ.com",
+          "summary": "Invitium Energy, a joint venture in which PPL holds a 51% stake, expects to sign one or more commercial agreements by the end of 2026, according to Vincent Sorgi of PPL. The update suggests the venture is moving toward its first generation deal, which would be an important milestone for the partnership. For the energy and utilities sector, the key point is that the company is still in the contracting stage rather than already delivering power or revenue from the project.",
+          "emailSummary": "Invitium Energy, of which PPL holds a 51% stake, expects to ink one or more commercial agreements by the end of 2026, said Vincent Sorgi, PPL.",
+          "whyItMatters": "This matters because a first commercial agreement would determine whether this joint venture starts becoming a real operating and financial asset for PPL and its partners.",
+          "dataSignals": [
+            "PPL mention",
+            "generation planning"
+          ],
+          "sourceLabel": "WFMZ.com · Aug 12, 2:30 PM ET",
+          "sourceUrl": "https://www.wfmz.com/news/area/lehighvalley/lehigh-county/allentown-area/joint-venture-involving-ppl-corporation-close-to-inking-first-generation-deal/article_3179c42c-4442-4efa-ad32-caa0501f79e5.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMipwJBVV95cUxQN3dfeWZBbUIxWURoYXZTNTR3ZDBFVGJhSVZTcE1melRtajJwUUhLYU9jWXZwLWVicFRya0JONV9GdGRtTk9odU93Q2xVU1lndjhsUlA4a0xWa3dnTEU5RlE2TFhHRjBHV2dqbkVpSVFKWE1QbTk2OGhtT1dwdnVxa0RVUDh4MWxoaEJYZ3RadU1yVjhjUEdkMVl4S2NUcGFZZzhiR1RHbm1xRmNtY0JMcHlMVVdxSWp1Y2tTOXlSNi14Rk1Na0M1SXE0b3F6X2R5U2JMUlVRLUxOa00taW5hVWM2b0Nrb2VOdmhDbnE0X3NFLWhMRVhJY2k3TlRYams1NlVDTGNkU3NvZVNfZ3hGWG1NUTRmeXVqWFZmRlJyTWJ6VVZKZ0Zv?oc=5",
+          "publishedAt": "2026-08-12T18:30:00+00:00",
+          "glossary": [
+            {
+              "term": "joint venture",
+              "definition": "A business arrangement where two or more companies share ownership, control, and risk in a project."
+            },
+            {
+              "term": "commercial agreement",
+              "definition": "A formal contract to buy, sell, or deliver services or products for business purposes."
+            },
+            {
+              "term": "stake",
+              "definition": "The share of ownership a company has in another business."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a business-development story, not an operating-results story, so the key thing to watch is whether the venture actually signs contracts and on what timeline. If the deal is signed by the end of 2026, that would confirm progress toward a first generation project; if it slips, it suggests the venture is taking longer to become commercially active than expected.",
+            "glossary": [
+              {
+                "term": "joint venture",
+                "definition": "A business arrangement where two or more companies share ownership, control, and risk in a project.",
+                "whyItMatters": "It tells you PPL does not fully own Invitium Energy and will share any upside or downside."
+              },
+              {
+                "term": "commercial agreement",
+                "definition": "A formal contract to buy, sell, or deliver services or products for business purposes.",
+                "whyItMatters": "Signing one is usually the step that turns a project from a plan into actual revenue-producing activity."
+              },
+              {
+                "term": "stake",
+                "definition": "The share of ownership a company has in another business.",
+                "whyItMatters": "PPL’s 51% stake means it has majority ownership and likely the most control over the venture."
+              }
+            ]
+          }
+        },
+        {
+          "id": "energy-5-4321",
+          "title": "Rural Kentucky county passes two-year data center moratorium",
+          "kicker": "wuky.org",
+          "summary": "Bell County, Kentucky, has approved a two-year moratorium on new data center construction after residents pushed for action. The move pauses development of these large, energy-intensive facilities in the rural county while other Kentucky counties continue working on zoning and regulation. For energy and utilities watchers, it signals local pushback on projects that can affect power demand, land use, and planning.",
+          "emailSummary": "In rural Bell County, Kentucky, residents’ activism led to a two-year moratorium on data center construction, while other counties continue to g…",
+          "whyItMatters": "This matters because data centers can significantly increase local electricity demand and force counties to decide whether and how to accommodate energy-intensive development.",
+          "dataSignals": [
+            "data-center load"
+          ],
+          "sourceLabel": "wuky.org · Aug 12, 9:22 AM ET",
+          "sourceUrl": "https://www.wuky.org/wuky-news/2026-08-12/rural-kentucky-county-passes-two-year-data-center-moratorium",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNN1R6SU1FSGlMcXBSWXdQRVZ5LXp2Ym84SWpQdVRJU2dyYzBiWWZ2Nl9kRHJtbzl4Q0FEbURramFjeTdSenhPVEphRWdsZmdLeDNUTjBqdnpkVEtUbG1mdC1kQkdEX3g4Zkl4WUM5WG01RThTdUNTTG54dFJ3ZVVYUzM0MFc3czdYcHJEWklQREFHR1dUbVpOcHdZanlvWXhuZ000LQ?oc=5",
+          "publishedAt": "2026-08-12T13:22:00+00:00",
+          "glossary": [
+            {
+              "term": "moratorium",
+              "definition": "A temporary stop or pause on a specific activity, often set by a government body."
             },
             {
               "term": "data center",
-              "definition": "A facility that stores and processes large amounts of digital information."
+              "definition": "A facility that houses computer servers and related equipment used to store, process, and deliver digital services and data."
+            },
+            {
+              "term": "zoning",
+              "definition": "Local rules that determine what kinds of buildings or activities are allowed in different areas."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a valuation-and-demand story, not a detailed operating breakdown. When reading the source, pay attention to the relationship between the earnings update, the guidance reaffirmation, and the claim that data centers are driving future power demand. The interpretation would change if the company later revises guidance, if data-center demand slows, or if the stock price moves enough to change the valuation argument.",
+            "explanationText": "This is a local policy and land-use story with energy implications, not a technology story about data centers themselves. When reading it, pay attention to what the county actually banned, how long the pause lasts, and whether other counties respond with stricter zoning or utility requirements. If the moratorium is later replaced by permanent rules, that would change the interpretation from a temporary slowdown to a longer-term constraint on data center development.",
             "glossary": [
               {
-                "term": "guidance",
-                "definition": "A company’s forecast for future results, such as revenue, earnings, or cash flow.",
-                "whyItMatters": "Guidance helps investors judge whether management expects performance to improve or weaken."
-              },
-              {
-                "term": "total shareholder return",
-                "definition": "The total gain or loss from owning a stock, including price changes and dividends.",
-                "whyItMatters": "It shows the full return an investor received, not just the share price move."
+                "term": "moratorium",
+                "definition": "A temporary stop or pause on a specific activity, often set by a government body.",
+                "whyItMatters": "It means no new data center construction can move forward during the two-year period."
               },
               {
                 "term": "data center",
-                "definition": "A facility that stores and processes large amounts of digital information.",
-                "whyItMatters": "Data centers are major electricity users, so their growth can increase utility demand."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-2-93904",
-          "title": "Is PPL Positioned to Capitalize on AI and Data Center Demand?",
-          "kicker": "Yahoo Finance",
-          "summary": "PPL is being described as positioned to benefit from AI-driven data center demand, backed by major load pipelines, $23 billion in planned investments, and new generation development. The story points to a utility that may see growing electricity demand as data centers expand, which could support future infrastructure spending and load growth in its service area.",
-          "emailSummary": "PPL positions for AI-driven data center demand with major load pipelines, $23B in planned investments and new generation development.",
-          "whyItMatters": "This matters because rising data center power demand can drive utility load growth, influence capital spending, and shape how much new generation and grid capacity companies like PPL need to build.",
-          "dataSignals": [
-            "PPL mention",
-            "data-center load"
-          ],
-          "sourceLabel": "Yahoo Finance · Aug 11, 1:29 PM ET",
-          "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/ppl-positioned-capitalize-ai-data-172900809.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZ2QzMGoxZm13b3pDOVFqQ0RsVEwxTUplZDhaTDB1VzdveVJQSmt2dlladTRVSVJwZXJxcHE2UHg5S0RpWV8yU3lGVkw5U1FuanV5c292VTZfaFF1ek9yejZpZ21GR2w0WFZMUlVDaEFabG9aOTJBWnJpUkVsX3d1djVDU1lFa0U5XzVBRi1pTU42NmdDUWxKbWFVSmRkZw?oc=5",
-          "publishedAt": "2026-08-11T17:29:00+00:00",
-          "glossary": [
-            {
-              "term": "data center load",
-              "definition": "The amount of electricity a data center uses from the power grid."
-            },
-            {
-              "term": "load pipeline",
-              "definition": "A set of expected future electricity customers or projects that could connect to the grid."
-            },
-            {
-              "term": "generation development",
-              "definition": "Planning and building new power-producing facilities or capacity."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a utility-growth story, not a market-moving earnings report, so the key is whether PPL’s expected demand and investment plans are concrete or just hopeful. When reading the source, watch for how much of the $23 billion is already committed, how large the data center load pipeline is, and whether new generation is actually under development. If those details are firm, the case for growth is stronger; if they are preliminary, the upside is more uncertain.",
-            "glossary": [
-              {
-                "term": "data center load",
-                "definition": "The amount of electricity a data center uses from the power grid.",
-                "whyItMatters": "Data center load is a key measure of how much new demand a utility may need to serve."
+                "definition": "A facility that houses computer servers and related equipment used to store, process, and deliver digital services and data.",
+                "whyItMatters": "These buildings can require large amounts of electricity and shape local utility planning."
               },
               {
-                "term": "load pipeline",
-                "definition": "A set of expected future electricity customers or projects that could connect to the grid.",
-                "whyItMatters": "A strong load pipeline suggests potential future growth in power demand and revenue."
-              },
-              {
-                "term": "generation development",
-                "definition": "Planning and building new power-producing facilities or capacity.",
-                "whyItMatters": "New generation can be needed when demand grows faster than existing supply."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-3-1996",
-          "title": "Kentucky residents fear AI data center could push power bills past $1,000",
-          "kicker": "The Cool Down",
-          "summary": "Kentucky residents are worried that a proposed AI data center could drive electric bills above $1,000. The reported concern is centered on high power costs, and public opposition to data center proposals is growing across the state. For Kentucky’s energy and utilities picture, the key issue is whether large new electricity demand could raise costs for households.",
-          "emailSummary": "Worries about high electric bills are at the center of many residents' complaints as public opposition to data center proposals builds across Ke…",
-          "whyItMatters": "This matters because if a data center adds major electricity demand, utilities and regulators may face pressure over how those costs are shared, which could affect customer bills statewide.",
-          "dataSignals": [
-            "data-center load"
-          ],
-          "sourceLabel": "The Cool Down · Aug 12, 12:29 AM ET",
-          "sourceUrl": "https://www.thecooldown.com/green-tech/kentucky-data-center-electricity-bills-rising/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZF94ZU9RNGg2Z2xNUFAyd1lDSzNqS3V3ZUhvOGlMTHBtYmpIZzV3ejZpMnVMMVJ6RkdmZHlmQ0x3dHVJWUxKeW91UDIzMEVOaGE5amFGNllGXzlmY3BXQTBjUDJnLW5lZ1BzNUJJVDFaUURTNS1KZ2lFeTYwWWdVampmSG01OThmOFJEelZn?oc=5",
-          "publishedAt": "2026-08-12T04:29:00+00:00",
-          "glossary": [
-            {
-              "term": "AI data center",
-              "definition": "A facility full of computers and servers used to run artificial intelligence systems and other data-heavy workloads."
-            },
-            {
-              "term": "electric bills",
-              "definition": "The amount households or businesses pay for the electricity they use."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a local energy-cost and infrastructure story, not a technology story alone. When reading the source, pay attention to whether the concern is about one specific project, a broader pattern of data center growth, or how utilities plan to recover costs. The interpretation changes most if the proposal is shown to require new generation, grid upgrades, or special pricing rules for the data center.",
-            "glossary": [
-              {
-                "term": "AI data center",
-                "definition": "A facility full of computers and servers used to run artificial intelligence systems and other data-heavy workloads.",
-                "whyItMatters": "These facilities can use very large amounts of electricity, which can affect local power supply and prices."
-              },
-              {
-                "term": "electric bills",
-                "definition": "The amount households or businesses pay for the electricity they use.",
-                "whyItMatters": "If demand rises or costs are passed through, customers can end up paying more each month."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-4-20428",
-          "title": "PPL Electric Utilities and UGI remind customers to call 811 before digging",
-          "kicker": "Times Leader",
-          "summary": "PPL Electric Utilities and UGI are marking National 811 Day by reminding customers and contractors to call 811 before starting any digging project. The message is a basic safety reminder tied to utility work: contacting 811 helps identify underground lines before excavation begins.",
-          "emailSummary": "WILKES-BARRE — In observance of National 811 Day, two area utility companies — PPL Electric and UGI — are reminding customers and contractors to…",
-          "whyItMatters": "This matters because avoiding accidental damage to buried electric or gas lines reduces outage risk, prevents injuries, and can keep small projects from becoming expensive utility emergencies.",
-          "dataSignals": [
-            "PPL mention"
-          ],
-          "sourceLabel": "Times Leader · Aug 11, 11:57 AM ET",
-          "sourceUrl": "https://www.timesleader.com/news/1751720/ppl-electric-utilities-and-ugi-remind-customers-to-call-811-before-digging",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaEFjb3lmaGlkOUVmUEFyVGVlYkdOOGlJZFFHMUlmNHNDZWVpZGUxWlRtbmFSVTlKdDNSdkVvVDlCS3JBdGRRaGswb2Z5UFlfVFFsMDYwVWhyRm9yeHRBOS1iNDhLMENfd0pKVGJYbTlKaU1Nc1IzV2lRQlNNejRGU3RDa3RYYXpzSGxRMkx4YXg4VFFYcV8wamJ0bTVrOHVlajRHSkJ6dDNIejVTZjgzRXBvaGRwUQ?oc=5",
-          "publishedAt": "2026-08-11T15:57:00+00:00",
-          "glossary": [
-            {
-              "term": "811",
-              "definition": "A nationwide phone number and referral service used to request that underground utility lines be marked before digging."
-            },
-            {
-              "term": "National 811 Day",
-              "definition": "An awareness day that promotes safe digging and the use of 811 before excavation work."
-            },
-            {
-              "term": "Underground utility lines",
-              "definition": "Buried cables or pipes that carry electricity, gas, water, or communications services."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a public-safety utility reminder, not a policy or earnings story. When reading it, focus on who is being asked to act, what the action is, and why timing matters; here, the key action is calling 811 before digging. If a story like this included new rules, penalties, or changes in coverage area, that would change how urgent or broad the guidance is.",
-            "glossary": [
-              {
-                "term": "811",
-                "definition": "A nationwide phone number and referral service used to request that underground utility lines be marked before digging.",
-                "whyItMatters": "Calling 811 is the first step to avoid hitting buried cables, pipes, or gas lines."
-              },
-              {
-                "term": "National 811 Day",
-                "definition": "An awareness day that promotes safe digging and the use of 811 before excavation work.",
-                "whyItMatters": "It is used to remind the public and contractors of the same safety steps before summer and fall digging projects."
-              },
-              {
-                "term": "Underground utility lines",
-                "definition": "Buried cables or pipes that carry electricity, gas, water, or communications services.",
-                "whyItMatters": "Striking these lines can cause outages, hazardous leaks, and repair costs."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-5-6119",
-          "title": "Beshear aims to guard against ‘harmful impacts’ of data centers",
-          "kicker": "Madison Courier",
-          "summary": "Gov. Andy Beshear says he will sign an executive order intended to protect Kentuckians from any harmful impacts from potential data centers. The order directs the state utility regulator and environmental protection officials to take action, though the provided description does not say exactly what those actions are. For Kentucky’s energy and utilities sector, this signals closer state scrutiny of large data-center projects and their potential effects on power demand and the environment.",
-          "emailSummary": "Gov. Andy Beshear says he’s signing an executive order to protect Kentuckians “against any harmful impacts from potential data centers,” directi…",
-          "whyItMatters": "This matters because data centers can drive major new electricity use and regulatory questions, affecting utility planning, rates, and environmental oversight in Kentucky.",
-          "dataSignals": [
-            "data-center load"
-          ],
-          "sourceLabel": "Madison Courier · Aug 11, 7:00 PM ET",
-          "sourceUrl": "https://www.madisoncourier.com/carroll_news_democrat/carroll_news_democrat/news/beshear-aims-to-guard-against-harmful-impacts-of-data-centers/article_08f43b11-a4ba-5557-8563-1cebc507feba.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPUlZiSXRfeFNrc09mNllYNl9aNFdRQWdaTWN6SU1kSlRzVGRJZVVRVmtDX19yd3NJYkh5UXhQUU5fSzNYSlVmQm1JVThvdHFJZnA1QjJ4c2FqTkVRdjhfNmtsLVRITVNkc2ZkTFZfVzJjenN1ZW8ySEN5MUhNN3ZQMldSUlRaU0JkV2NleVY4bkRNcVlOdUYtVzhVNktTWVdKOXhDS2ZIYzBqbzNQS2gyQXJ3YlJNcnJMT0JVNkJKSDVMYUFBdUdqZDRaV1Vvb0dna2ZtODN1YXFMSUlGZFV4RmpsbW1jekpWNGNwS1FhSS1WcW9oUEptWFB0UDdISlFSeTJrWmlCV1hTWWl0eGxJcGl0aDh4VThxeHhz?oc=5",
-          "publishedAt": "2026-08-11T23:00:00+00:00",
-          "glossary": [
-            {
-              "term": "executive order",
-              "definition": "A directive issued by a governor or other executive official that tells state agencies how to act."
-            },
-            {
-              "term": "utility regulator",
-              "definition": "The state agency or officials that oversee electric, gas, or water utilities and set rules for them."
-            },
-            {
-              "term": "environmental protection officials",
-              "definition": "State officials who enforce environmental rules and review potential pollution or other environmental impacts."
-            },
-            {
-              "term": "data center",
-              "definition": "A facility full of servers and networking equipment used to store and process digital information."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a policy and regulation story, not a project announcement, so the key question is what the executive order actually tells agencies to do. When reading the source, pay attention to whether it creates new reviews, limits, reporting requirements, or environmental safeguards. If the final order is broad, it suggests general oversight; if it names specific standards or deadlines, it signals a stronger shift in Kentucky’s approach to data-center development.",
-            "glossary": [
-              {
-                "term": "executive order",
-                "definition": "A directive issued by a governor or other executive official that tells state agencies how to act.",
-                "whyItMatters": "It can quickly change how Kentucky agencies review or respond to data-center proposals."
-              },
-              {
-                "term": "utility regulator",
-                "definition": "The state agency or officials that oversee electric, gas, or water utilities and set rules for them.",
-                "whyItMatters": "Its decisions can shape how much power data centers can use and what costs are passed along."
-              },
-              {
-                "term": "environmental protection officials",
-                "definition": "State officials who enforce environmental rules and review potential pollution or other environmental impacts.",
-                "whyItMatters": "They can require limits or safeguards if data centers affect air, water, or land."
-              },
-              {
-                "term": "data center",
-                "definition": "A facility full of servers and networking equipment used to store and process digital information.",
-                "whyItMatters": "Data centers can require large amounts of electricity and cooling, which can affect utilities and local infrastructure."
+                "term": "zoning",
+                "definition": "Local rules that determine what kinds of buildings or activities are allowed in different areas.",
+                "whyItMatters": "Zoning decisions will influence where data centers can be built and under what conditions."
               }
             ]
           }
@@ -554,24 +539,112 @@
       "emptyMessage": "No qualified Humana / Health Insurance stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "humana-1-78638",
-          "title": "Humana Slides as Investors Reassess 2026 Profit Recovery",
-          "kicker": "Quiver Quantitative",
-          "summary": "Humana shares fell 3.3% today, and the headline says investors are reassessing the company’s expected profit recovery in 2026. The provided description does not add any further reason for the move, only that the note is an analysis of what may have caused the price change. For health insurance investors, the key point is that confidence in Humana’s earnings outlook appears to be weakening.",
-          "emailSummary": "Humana (HUM) is down 3.3% today. Here is some analysis on what might have caused this price movement.",
-          "whyItMatters": "This matters because shifts in expected profit recovery can move insurer valuations quickly and signal changing investor confidence in the company’s future earnings.",
+          "id": "humana-1-25987",
+          "title": "Why Is Humana (NYSE:HUM) Betting Bigger on Medicaid and CenterWell?",
+          "kicker": "Kalkine Media",
+          "summary": "Humana is described as operating across healthcare insurance and services, with Medicaid, CenterWell, and Medicare Advantage as the main parts of its business context heading into 2026. The title says the company is betting bigger on Medicaid and CenterWell, which suggests investors should focus on how those businesses affect Humana's mix alongside Medicare Advantage. For health insurance readers, this points to a shift in where Humana is emphasizing growth and services.",
+          "emailSummary": "Humana (NYSE:HUM) operates across healthcare insurance and services, with Medicaid, CenterWell and Medicare Advantage shaping its S&P 500 busine…",
+          "whyItMatters": "This matters because changes in Humana's business mix can affect revenue stability, margins, and how exposed the company is to Medicare Advantage trends.",
           "dataSignals": [
             "Humana mention"
           ],
-          "sourceLabel": "Quiver Quantitative · Aug 11, 5:27 PM ET",
-          "sourceUrl": "https://www.quiverquant.com/news/Humana+Slides+as+Investors+Reassess+2026+Profit+Recovery",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPcUpaU1c5Z2N5Nlp0VEdfc19CNVIxSGpMZHllU292anUzMUpjS0JFUGZPZGZEYllVZjFjV1JPbVF3SllyejhWQ3pxcXB6SW5LTmR3eDV4MHdQcVVIc2NHbk11UXZhTFM5b3kzMUFNTUQ5dXo1YnpHeWg0ZE1mUjlrYkE2SlZYUTVtXzZHaVlLem1mWGs?oc=5",
-          "publishedAt": "2026-08-11T21:27:00+00:00",
-          "glossary": [],
+          "sourceLabel": "Kalkine Media · Aug 12, 10:05 AM ET",
+          "sourceUrl": "https://kalkinemedia.com/us/stocks/healthcare/why-is-humana-nysehum-betting-bigger-on-medicaid-and-centerwell",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORnFtd0g2OTdhbGpXUG5OcTRtZjZjeDFlQlFERFAwRWI3ZzFONHF0Z0hxeGtZdE15MTlHb05RZnFWMzdtaDhmckRuSDV5TXpXZzN4SVAzV0hZaTA4dGVFRWhXcXNyRjdoQjVhUlgxWTJRQk9UcnI2bHNzNWxobG1ZZlpOaXdCS05ENUpxX05sU0VvNjEyQVM5QkhfUFhzUnpsYVJnMEdoSXlxRTNXVFE?oc=5",
+          "publishedAt": "2026-08-12T14:05:00+00:00",
+          "glossary": [
+            {
+              "term": "Medicaid",
+              "definition": "A government health coverage program for low-income people and some other eligible groups."
+            },
+            {
+              "term": "CenterWell",
+              "definition": "Humana's health services brand, associated with care delivery and related healthcare services."
+            },
+            {
+              "term": "Medicare Advantage",
+              "definition": "Private insurance plans that provide Medicare benefits, often with extra services beyond original Medicare."
+            }
+          ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a market-move story, not a full company announcement, so the important thing is what the headline says about investor expectations rather than any operational detail. When reading the source, look for whether the move is tied to earnings guidance, claims trends, regulation, or broader sector sentiment; those would change how serious the reassessment is. If none of those drivers are present, the price move may be mostly sentiment-driven rather than based on a new fundamental development.",
-            "glossary": []
+            "explanationText": "This is a business-strategy story about a health insurer's mix of lines and services, not a consumer health story. When reading the source, pay attention to whether the focus is on growth, profitability, or risk in Medicaid, CenterWell, and Medicare Advantage, because that changes how the move should be interpreted. If later details show stronger margins or membership gains in one area, the significance of the shift becomes clearer; if not, it may just be a portfolio rebalancing story.",
+            "glossary": [
+              {
+                "term": "Medicaid",
+                "definition": "A government health coverage program for low-income people and some other eligible groups.",
+                "whyItMatters": "It is one of the major public insurance lines that can shape Humana's growth and risk profile."
+              },
+              {
+                "term": "CenterWell",
+                "definition": "Humana's health services brand, associated with care delivery and related healthcare services.",
+                "whyItMatters": "It signals that Humana is not only selling insurance but also expanding into services that can influence patient care and earnings."
+              },
+              {
+                "term": "Medicare Advantage",
+                "definition": "Private insurance plans that provide Medicare benefits, often with extra services beyond original Medicare.",
+                "whyItMatters": "It is a core part of Humana's business and a key benchmark for whether the company is shifting its focus."
+              }
+            ]
+          }
+        },
+        {
+          "id": "humana-2-72021",
+          "title": "How Investors Are Reacting To Humana (HUM) Medicaid Leadership Moves And Caregiver Scholarship Push",
+          "kicker": "simplywall.st",
+          "summary": "Humana Healthy Horizons in Indiana said it will work with HealthStream to sponsor 1,000 Home Health Aide scholarships and use workforce engagement and predictive analytics tools to support home-based care. Humana also reported second-quarter 2026 revenue of US$40.87 billion and net income of US$694 million, and it updated its full-year earnings guidance. The story also says Humana is reinforcing its governance and Medicaid capabilities, which points to a broader effort to support that line of business.",
+          "emailSummary": "In recent weeks, Humana Healthy Horizons in Indiana announced a collaboration with HealthStream to sponsor 1,000 Home Health Aide scholarships a…",
+          "whyItMatters": "This matters because Medicaid and home-based care improvements can affect Humana’s service capacity, cost structure, and investor view of how well it can grow in managed care.",
+          "dataSignals": [
+            "Humana mention"
+          ],
+          "sourceLabel": "simplywall.st · Aug 12, 9:43 AM ET",
+          "sourceUrl": "https://simplywall.st/stocks/us/healthcare/nyse-hum/humana/news/how-investors-are-reacting-to-humana-hum-medicaid-leadership/amp",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQdnJsODJhSTN4c1FaNC1YWURjTXRzYWZGYW1RWGM5OFlHNThPcTl3MzJ5OGNBUGRPWnFvbjE1OGdwVVJCZ3FyNkNBU2V4VzZqbnRpYjdBdkxKblFJMll6OW5tZXRZVTJtaU81ZHN6cGdGRGdIRlFDVW5xYmJDWGk1dlZBLTVWdW8tN2JUVEllRTJYekdIVGl6NTI3TE5qNF9qZmdCZ0UwWjVVME5CX3JXT2hmMjFYUTJ6YllwSDhmSnlHN1FXU3pV0gHHAUFVX3lxTFB2cmw4MmFJM3hzUVo0LVhZRGNNdHNhZkZhbVFYYzk4WUc1OE9xOXczMnk4Y0FQZE9acW9uMTU4Z3BVUkJncXI2Q0FTZXhXNmpudGliN0F2TEpuUUkyWXo5bm1ldFlVMm1pTzVkc3pwZ0ZEZ0hGUUNVbnFiYkNYaTV2VkEtNVZ1by03YlRUSWVFMlh6R0hUaXo1MjdMTmo0X2pmZ0JnRTBaNVUwTkJfcldPaGYyMVhRMnpiWXBIOGZKeUc3UVdTelU?oc=5",
+          "publishedAt": "2026-08-12T13:43:08+00:00",
+          "glossary": [
+            {
+              "term": "Medicaid",
+              "definition": "A U.S. government health insurance program for certain low-income people and families."
+            },
+            {
+              "term": "Home Health Aide",
+              "definition": "A paid caregiver who helps people with daily living tasks and basic health-related support at home."
+            },
+            {
+              "term": "Predictive analytics",
+              "definition": "Using data models to estimate future outcomes or identify likely problems before they happen."
+            },
+            {
+              "term": "Earnings guidance",
+              "definition": "A company’s forecast for future financial results, usually for revenue or profit."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a business and health-insurance story about operational changes plus financial results. When reading the source, pay attention to what is an actual operational commitment, like scholarships and analytics tools, versus what is a financial update, like revenue, net income, and guidance. The meaning changes if the guidance improves materially or if the Medicaid capability work is broader than the description suggests, but those details are not provided here.",
+            "glossary": [
+              {
+                "term": "Medicaid",
+                "definition": "A U.S. government health insurance program for certain low-income people and families.",
+                "whyItMatters": "Humana’s Medicaid business depends on how well it manages care, costs, and state program requirements."
+              },
+              {
+                "term": "Home Health Aide",
+                "definition": "A paid caregiver who helps people with daily living tasks and basic health-related support at home.",
+                "whyItMatters": "More trained aides can expand home-based care capacity and improve access for members who need in-home support."
+              },
+              {
+                "term": "Predictive analytics",
+                "definition": "Using data models to estimate future outcomes or identify likely problems before they happen.",
+                "whyItMatters": "Health plans use it to anticipate care needs, manage workforce issues, and reduce avoidable disruptions."
+              },
+              {
+                "term": "Earnings guidance",
+                "definition": "A company’s forecast for future financial results, usually for revenue or profit.",
+                "whyItMatters": "Updated guidance changes expectations for Humana’s performance and can move investor sentiment."
+              }
+            ]
           }
         }
       ]
@@ -582,43 +655,52 @@
       "emptyMessage": "No qualified Kentucky Healthcare / US Healthcare stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "kentucky_healthcare-1-14502",
-          "title": "Brighton Center Workforce Training Program helps address regional workforce needs",
-          "kicker": "Northern Kentucky Tribune",
-          "summary": "Brighton Center’s Center for Employment Training recently graduated 32 people from workforce development programs. The programs are described as being designed to meet critical employer needs in the region. That suggests the story is about a local training pipeline aimed at filling jobs with workers who have the skills employers are asking for.",
-          "emailSummary": "By Kristen Monroe Special to NKyTribune Just recently, 32 graduates from Brighton Center’s Center for Employment Training completed workforce de…",
-          "whyItMatters": "This matters because workforce training can help local employers fill hard-to-staff roles and can improve job access for residents who need new skills.",
+          "id": "kentucky_healthcare-1-2726",
+          "title": "Kentucky hospitals are helping turn the tide on the opioid crisis",
+          "kicker": "Harlan Enterprise",
+          "summary": "Kentucky hospitals are being presented as part of the response to the opioid crisis. The description says a Kentucky woman called an emergency department not to ask whether treatment was available, but whether she would be judged for needing it. That suggests the story focuses on making hospital-based care more accessible and less stigmatizing for people seeking help with opioid use.",
+          "emailSummary": "When a Kentucky woman called an emergency department earlier this year, she wasn’t asking whether treatment was available. Through tears, she wa…",
+          "whyItMatters": "This matters because hospitals can be a key access point for treatment, and reducing stigma can determine whether people seek help early or avoid care altogether.",
           "dataSignals": [
             "Kentucky healthcare",
-            "workforce pressure"
+            "hospital operations"
           ],
-          "sourceLabel": "Northern Kentucky Tribune · Aug 12, 12:38 AM ET",
-          "sourceUrl": "https://nkytribune.com/2026/08/brighton-center-workforce-training-program-helps-address-regional-workforce-needs/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQY2J2SDdkWTFycl9TWFJWWkZOQXBuMy0wOU1oOFRtMlJlcGVBeGtNNUx5ZHRtYWRYeFgzd056VHNEUmU3Ukg2azBHV2ozYWowd1gzdEJHUGNCUDRkekZlOEhzSkFGX1hpck96UTdxaWZVZlRaTkpwWUhuQ1hqaEpjZ3NBVC1EWlQtYjJKcmplLU9SRmVsb1VyX0F3eHRxSDRta1M4QnlwM2JTbkFMWlJZaW9fZw?oc=5",
-          "publishedAt": "2026-08-12T04:38:09+00:00",
+          "sourceLabel": "Harlan Enterprise · Aug 12, 10:54 AM ET",
+          "sourceUrl": "https://harlanenterprise.net/2026/08/12/melanie-landrum-kentucky-hospital-association/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZDFJWlpqTHRvY0VwMmxGMWoxX0JVS3Z3TVZqTTF1QlNUbm9uYVZrTHdJU1lHalZPdHItb1R5R3h6WTd6eUFzTUlrTVhJM1lFVkpGa3YzUG1hY2NiNkYyYWJrb3lZMTFvMnlVbDRnbTVTY0Ffb1hQOUZOQldneVRSd0F4RXMyakVMTU04OFo5RQ?oc=5",
+          "publishedAt": "2026-08-12T14:54:56+00:00",
           "glossary": [
             {
-              "term": "workforce development",
-              "definition": "Programs and services that help people gain skills for jobs and help employers find qualified workers."
+              "term": "emergency department",
+              "definition": "The part of a hospital where people get urgent medical care for immediate problems."
             },
             {
-              "term": "Center for Employment Training",
-              "definition": "A training program or training center focused on preparing people for jobs."
+              "term": "opioid crisis",
+              "definition": "A public health problem involving widespread harm from opioid drugs, including addiction, overdose, and death."
+            },
+            {
+              "term": "stigma",
+              "definition": "Negative judgment or shame attached to a person or condition."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a local workforce-and-training story, not a policy debate or a company earnings story. When reading the source, pay attention to how many people completed the program and whether the article names the jobs or employer needs it is meant to address. If later details show placement rates, specific occupations, or employer partners, that would change how strong the program appears as a solution to regional labor shortages.",
+            "explanationText": "This is a public-health story about access to care and how hospitals respond to substance-use problems. When reading the source, pay attention to whether the focus is on treatment availability, staff attitudes, or specific hospital programs, because each changes how much impact the effort may have. If the full article shows concrete results such as more patients treated, fewer overdoses, or better follow-up care, that would strengthen the case that hospitals are helping turn the tide.",
             "glossary": [
               {
-                "term": "workforce development",
-                "definition": "Programs and services that help people gain skills for jobs and help employers find qualified workers.",
-                "whyItMatters": "It is the main type of effort described in the story and explains how training connects to hiring needs."
+                "term": "emergency department",
+                "definition": "The part of a hospital where people get urgent medical care for immediate problems.",
+                "whyItMatters": "It is often the first place someone in crisis can get connected to treatment."
               },
               {
-                "term": "Center for Employment Training",
-                "definition": "A training program or training center focused on preparing people for jobs.",
-                "whyItMatters": "It is the specific Brighton Center program producing the graduates mentioned."
+                "term": "opioid crisis",
+                "definition": "A public health problem involving widespread harm from opioid drugs, including addiction, overdose, and death.",
+                "whyItMatters": "It is the larger context for why hospitals are changing how they respond."
+              },
+              {
+                "term": "stigma",
+                "definition": "Negative judgment or shame attached to a person or condition.",
+                "whyItMatters": "Stigma can stop people from asking for help even when treatment exists."
               }
             ]
           }
@@ -631,260 +713,261 @@
       "emptyMessage": "No qualified Analytics stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "analytics-1-30476",
-          "title": "Gold Price Today: MCX Gold Rose 0.52% to Rs. 1,54,568 Amid Positive Global Cues",
-          "kicker": "Analytics Insight",
-          "summary": "Gold traded higher on MCX on August 12, supported by positive global cues and healthy spot demand. August gold futures rose 0.52% to Rs. 1,54,568. The truncated description also indicates September gold was discussed, but no further details are provided here. For market watchers, the key takeaway is that both global sentiment and physical demand were pushing prices up in this session.",
-          "emailSummary": "Gold traded higher on MCX on August 12 supported by a positive global trend and healthy spot demand. August gold futures rose 0.52% to Rs. 1,54…",
-          "whyItMatters": "This matters because moves in gold prices can affect trading decisions, hedging, and inflation-sensitive portfolios.",
+          "id": "analytics-1-38518",
+          "title": "OptionMetrics Announces Intraday and Historical Options Data and Analytics on Snowflake",
+          "kicker": "AiThority",
+          "summary": "OptionMetrics says its historical options data and analytics are now available on Snowflake’s private cloud marketplace. The company describes itself as a provider for institutional investors and academic researchers worldwide. For analytics users, this means options datasets can be accessed through a cloud data platform rather than only through the vendor’s own channels.",
+          "emailSummary": "OptionMetrics, the leading historical options data and analytics provider for institutional investors and academic researchers worldwide, announ…",
+          "whyItMatters": "This matters because putting options data on Snowflake can make it easier for teams to store, query, and combine it with other data in a cloud workflow.",
+          "dataSignals": [
+            "analytics workflow",
+            "data-platform signal"
+          ],
+          "sourceLabel": "AiThority · Aug 12, 9:35 AM ET",
+          "sourceUrl": "https://aithority.com/it-and-devops/cloud/optionmetrics-announces-intraday-and-historical-options-data-and-analytics-on-snowflake/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbjJuMmtTMDREQm5Hd2pkVVA3M2tRY2xFUF9EMG8tZkI5Yk4xb3haSmFyMjRMMWNGeXNSZExMNm83Mkh6dXZOTzZDdEViQjZQcmNxZmFrY2g4VkdqalZoSDllSHhsMkRQOEpWWjVNSFlUNDhfZU5lLUJDcVRtM2x3aG9uV2ViVjJEZVRsZWs3YU8zY3hnRm5IM3pLU09VZjJtQUVyWFNiUnpESC00QlNHQ0pKRkxJZmVTOXZjeV9ScE1VbE1memtIRDl3?oc=5",
+          "publishedAt": "2026-08-12T13:35:54+00:00",
+          "glossary": [
+            {
+              "term": "options data",
+              "definition": "Information about options contracts, such as prices, volumes, and related market details."
+            },
+            {
+              "term": "historical data",
+              "definition": "Data collected from past time periods rather than only current market activity."
+            },
+            {
+              "term": "analytics",
+              "definition": "The methods and tools used to analyze data and turn it into useful findings."
+            },
+            {
+              "term": "Snowflake",
+              "definition": "A cloud data platform used to store, manage, and analyze data across organizations."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a product-distribution story in the analytics space, not a market-movement or earnings story. When reading the source, pay attention to what data is being offered, where it is being offered, and who the intended users are. If the source later adds detail about file formats, coverage, latency, or pricing, that would change how useful the offering is for analysts and researchers.",
+            "glossary": [
+              {
+                "term": "options data",
+                "definition": "Information about options contracts, such as prices, volumes, and related market details.",
+                "whyItMatters": "Options data is the core input for trading, research, and risk analysis in this story."
+              },
+              {
+                "term": "historical data",
+                "definition": "Data collected from past time periods rather than only current market activity.",
+                "whyItMatters": "Historical data lets analysts study trends, backtest strategies, and compare past behavior to current conditions."
+              },
+              {
+                "term": "analytics",
+                "definition": "The methods and tools used to analyze data and turn it into useful findings.",
+                "whyItMatters": "Analytics is what makes the raw options data useful for research and decision-making."
+              },
+              {
+                "term": "Snowflake",
+                "definition": "A cloud data platform used to store, manage, and analyze data across organizations.",
+                "whyItMatters": "Snowflake is the distribution channel that can make the data easier to access in modern cloud data stacks."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-2-55633",
+          "title": "The Future of Data Analytics: Why AI is rewriting the Analyst’s Job Description",
+          "kicker": "Databricks",
+          "summary": "AI is automating parts of data analytics such as SQL, dashboards, and ad-hoc analysis. The piece argues that this does not mean there will be fewer analysts; instead, analysts will need to focus more on judgment and less on writing queries. For analytics teams, that suggests the job is shifting toward interpreting results, setting priorities, and making decisions rather than only producing reports.",
+          "emailSummary": "AI is automating SQL, dashboards, and ad-hoc analysis. The future of data analytics isn't fewer analysts — it's analysts who lead with judgment…",
+          "whyItMatters": "This matters because it signals a change in the core skills analytics teams will need as AI takes over routine work.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Analytics Insight · Aug 12, 1:53 AM ET",
-          "sourceUrl": "https://www.analyticsinsight.net/amp/story/business/gold-price-today-mcx-gold-rose-052-to-rs-154568-amid-positive-global-cues",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR2pWNzUyalNFYlhVa1NUc2Q5aHFxcGotVC1vempmc2MzVW1JQk14LVVfTXpNczBUdlJUSThNMnZoLXJDNHIzQ210ZURNWDBHMzN3Yk9DTzFTS3VIVFFSS2tzR1ROUmtkWGtUc3F1aWYxQ2FKZnl0NlhLZVBNOF82d3QzNFNHZnprU3dvb3Z3SllHWU5sNC1zaFo0dzFvV3RoMXFBeDYxeUY2V1hRcnpDUEg2TG9IQm9jY04wRUFPZ0J3dFHSAcMBQVVfeXFMT0dqVjc1MmpTRWJYVWtTVHNkOWhxcXBqLVQtb3pqZnNjM1VtSUJNeC1VX016TXMwVHZSVEk4TTJ2aC1yQzRyM0NtdGVETVgwRzMzd2JPQ08xU0t1SFRRUktrc0dUTlJrZFhrVHNxdWlmMUNhSmZ5dDZYS2VQTThfNnd0MzRTR2Z6a1N3b292d0pZR1lObDQtc2haNHcxb1d0aDFxQXg2MXlGNldYUXJ6Q1BINkxvSEJvY2NOMEVBT2dCd3RR?oc=5",
-          "publishedAt": "2026-08-12T05:53:53+00:00",
+          "sourceLabel": "Databricks · Aug 12, 6:39 AM ET",
+          "sourceUrl": "https://www.databricks.com/blog/future-data-analytics-why-ai-rewriting-analysts-job-description",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNV1lkYjFLRERXSC1uT1dwdFJvVkpubUptaTFXMkNTejdiWnlqd0RKQmJjblB0WkpNanlDay1ubGZ2YVZTeGhDMDZRTkRZZzV0d3otMVIxdnpNUHgxVUdqUjNWQ3FMUFZRdDJGaVFGbm93ZmtCYzFKTUd5dFpuYUpYck0tUEs1djlRZmt6UDFUaEQ0R1FLSmlGTjNBQQ?oc=5",
+          "publishedAt": "2026-08-12T10:39:28+00:00",
+          "glossary": [
+            {
+              "term": "SQL",
+              "definition": "A standard language used to ask questions of databases and pull out data."
+            },
+            {
+              "term": "ad-hoc analysis",
+              "definition": "One-off analysis done to answer a specific question or investigate a new issue."
+            },
+            {
+              "term": "dashboard",
+              "definition": "A visual display of key metrics and charts used to monitor performance."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a trend piece about how AI may change analytics work, not a report on a single company or policy decision. When reading the source, pay attention to whether it is describing automation of tasks versus replacement of people, because that changes the business implication. If later reporting shows AI is affecting hiring, pay, or team structure, that would make the story more concrete than this high-level framing.",
+            "glossary": [
+              {
+                "term": "SQL",
+                "definition": "A standard language used to ask questions of databases and pull out data.",
+                "whyItMatters": "If AI automates SQL, analysts may spend less time writing queries and more time deciding what questions matter."
+              },
+              {
+                "term": "ad-hoc analysis",
+                "definition": "One-off analysis done to answer a specific question or investigate a new issue.",
+                "whyItMatters": "Automating ad-hoc analysis could speed up routine investigations and change how analysts spend their time."
+              },
+              {
+                "term": "dashboard",
+                "definition": "A visual display of key metrics and charts used to monitor performance.",
+                "whyItMatters": "If AI helps create dashboards, teams may be able to build and update reporting faster."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-3-92873",
+          "title": "Is AI Really Helping SMB or Quietly Replacing Them Faster Than We Admit?",
+          "kicker": "Analytics Insight",
+          "summary": "AI is already helping many small and midsize businesses raise productivity, save time, and increase revenue without immediate staff cuts. The larger labor impact may show up later, according to the provided takeaway. For analytics professionals, the story points to a familiar tension: near-term operational gains versus longer-term workforce disruption.",
+          "emailSummary": "Key Takeaways: AI already helps many SMBs raise productivity, save time and increase revenue without immediate staff cuts.The bigger labor impac…",
+          "whyItMatters": "This matters because SMBs are a major source of demand for analytics and AI tools, and adoption that boosts output without cutting headcount can change how quickly these tools spread and how businesses measure ROI.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "Analytics Insight · Aug 13, 3:28 AM ET",
+          "sourceUrl": "https://www.analyticsinsight.net/amp/story/artificial-intelligence/is-ai-really-helping-smb-or-quietly-replacing-them-faster-than-we-admit",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNWnpyM0lBNXpKSHdEdGgzZVE4NlExVC11bUxlbi1HYlVhVmhSQTBkMzdDcnVtTW82NUtjRWF5Ui1PWnRHek1mQmFaU0R6bjBULUhCcjJEMGdZWllaZUw3UzJYbzcwU1o0OEpwQVpIMVkwcmlvRFByZU5fSzdYOVR6YTVUQXl6ZG8xelR6VmJlLWlqb095ZVAxR1ltUTJ3WG9FU3hrTjJVOVRFQmZYTWNqeUdBSG1Bb3Myc1d2Q2VWQVNfYnRjYmpzOUZkcHRVRW1USGwtQdIB1AFBVV95cUxNWnpyM0lBNXpKSHdEdGgzZVE4NlExVC11bUxlbi1HYlVhVmhSQTBkMzdDcnVtTW82NUtjRWF5Ui1PWnRHek1mQmFaU0R6bjBULUhCcjJEMGdZWllaZUw3UzJYbzcwU1o0OEpwQVpIMVkwcmlvRFByZU5fSzdYOVR6YTVUQXl6ZG8xelR6VmJlLWlqb095ZVAxR1ltUTJ3WG9FU3hrTjJVOVRFQmZYTWNqeUdBSG1Bb3Myc1d2Q2VWQVNfYnRjYmpzOUZkcHRVRW1USGwtQQ?oc=5",
+          "publishedAt": "2026-08-13T07:28:16+00:00",
+          "glossary": [
+            {
+              "term": "SMB",
+              "definition": "A small and midsize business, usually a company with fewer employees and less revenue than a large enterprise."
+            },
+            {
+              "term": "productivity",
+              "definition": "How much work or output a business gets from the time and resources it uses."
+            },
+            {
+              "term": "labor impact",
+              "definition": "The effect a technology or policy has on jobs, staffing levels, and the kind of work people do."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a commentary-style business/technology story about AI adoption in smaller companies, not a hard-data market report. When reading the source, pay attention to whether it distinguishes between productivity gains and actual job replacement, because those are very different outcomes. Interpretation would change a lot if the full article showed measured layoffs, hiring slowdowns, or only reported efficiency improvements.",
+            "glossary": [
+              {
+                "term": "SMB",
+                "definition": "A small and midsize business, usually a company with fewer employees and less revenue than a large enterprise.",
+                "whyItMatters": "SMBs are often the first place where practical AI gains show up at scale."
+              },
+              {
+                "term": "productivity",
+                "definition": "How much work or output a business gets from the time and resources it uses.",
+                "whyItMatters": "Higher productivity is one of the main reasons businesses adopt AI tools."
+              },
+              {
+                "term": "labor impact",
+                "definition": "The effect a technology or policy has on jobs, staffing levels, and the kind of work people do.",
+                "whyItMatters": "The story's central question is whether AI changes work now or replaces workers later."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-4-4926",
+          "title": "TCS and Vodafone Join Forces to Drive AI-led Digital Transformation for UK Enterprises",
+          "kicker": "Analytics Insight",
+          "summary": "Tata Consultancy Services and Vodafone are partnering to drive AI-led digital transformation for UK enterprises. The provided description identifies TCS as a global IT services, consulting, and business solutions company, but gives no additional deal terms or implementation details. From the title alone, the key point is that the collaboration is aimed at helping UK businesses adopt AI in their digital operations.",
+          "emailSummary": "LONDON | MUMBAI, August 13, 2026: Tata Consultancy Services (TCS) (BSE: 532540, NSE: TCS), a global leader in IT services, consulting, and busin…",
+          "whyItMatters": "This matters because partnerships like this can shape how quickly enterprises adopt AI tools and modernize core systems, which affects spending, competitiveness, and demand for analytics and IT services.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "Analytics Insight · Aug 13, 3:13 AM ET",
+          "sourceUrl": "https://www.analyticsinsight.net/amp/story/press-release/tcs-and-vodafone-join-forces-to-drive-ai-led-digital-transformation-for-uk-enterprises",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPcGVDNmI5VnJySFZON0Q4VFFsbXNrZ0hFWVdYMVNoNVZucDNtS2gyaDliTW1vbHZNUElieHQtdVB6UGZsRW5DYVZQVzBNTl82d1o2STI4b2N6R3RlMUVib09oTFZqY2hsN0p3OUxoaWtvN0paRjIyUzg3c0dOak40bnBRX1p6Z2d3WTV1Wjlxc0oxSklWUUl3NzRWRE5XbVg0WFFtYTZtZFZnaUV2dDM1MFMwZTFTalhaY3hZNlRSVmp1S1dGaVVNQXVrdWRJZ283dUtZZThWNzlCU2fSAdsBQVVfeXFMT3BlQzZiOVZyckhWTjdEOFRRbG1za2dIRVlXWDFTaDVWbnAzbUtoMmg5Yk1tb2x2TVBJYnh0LXVQelBmbEVuQ2FWUFcwTU5fNndaNkkyOG9jekd0ZTFFYm9PaExWamNobDdKdzlMaGlrbzdKWkYyMlM4N3NHTmpONG5wUV9aemdnd1k1dVo5cXNKMUpJVlFJdzc0VkROV21YNFhRbWE2bWRWZ2lFdnQzNTBTMGUxU2pYWmN4WTZUUlZqdUtXRmlVTUF1a3VkSWdvN3VLWWU4Vjc5QlNn?oc=5",
+          "publishedAt": "2026-08-13T07:13:52+00:00",
+          "glossary": [
+            {
+              "term": "AI-led digital transformation",
+              "definition": "A business change effort that uses artificial intelligence as a main tool to improve processes, services, or customer experiences."
+            },
+            {
+              "term": "IT services",
+              "definition": "Companies or teams that build, run, and support technology systems for other organizations."
+            },
+            {
+              "term": "business solutions",
+              "definition": "Packaged products or services designed to solve operational or strategic problems for companies."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a corporate partnership announcement, so the main thing to watch is who is teaming up and what business outcome they say they want to achieve. Because the description is truncated, the safest reading is limited to the stated goal—AI-led digital transformation for UK enterprises—unless the full source adds deal scope, customer targets, or financial terms. Those missing details would matter if you want to judge the scale and likely impact of the partnership.",
+            "glossary": [
+              {
+                "term": "AI-led digital transformation",
+                "definition": "A business change effort that uses artificial intelligence as a main tool to improve processes, services, or customer experiences.",
+                "whyItMatters": "It shows the transformation is centered on AI rather than general software upgrades."
+              },
+              {
+                "term": "IT services",
+                "definition": "Companies or teams that build, run, and support technology systems for other organizations.",
+                "whyItMatters": "TCS operates in this market, so the partnership is part of a broader enterprise tech-services business."
+              },
+              {
+                "term": "business solutions",
+                "definition": "Packaged products or services designed to solve operational or strategic problems for companies.",
+                "whyItMatters": "This signals the deal is meant to deliver practical outcomes, not just technology for its own sake."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-5-44941",
+          "title": "Gold Price Today: MCX Gold Declined 0.27% to Rs. 1,54,468 Amid Elevated US Dollar, Brent at $88.47",
+          "kicker": "Analytics Insight",
+          "summary": "Gold prices on MCX fell 0.27% to Rs. 1,54,468 on August 13. The move came as a stronger US dollar and higher 10-year bond yields pressured gold, even after July US inflation data eased expectations of a rate hike. Brent was quoted at $88.47 in the headline, which adds broader market context for commodity pricing.",
+          "emailSummary": "Gold traded lower on MCX on August 13 amid higher US dollar and 10-year bond yields despite the US inflation data for July easing expectations o…",
+          "whyItMatters": "This matters because changes in gold pricing can affect commodity traders, investors, and hedging costs, especially when currency strength and bond yields are shifting at the same time.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "Analytics Insight · Aug 13, 1:39 AM ET",
+          "sourceUrl": "https://www.analyticsinsight.net/amp/story/business/gold-price-today-mcx-gold-declined-027-to-rs-154468-amid-elevated-us-dollar-brent-at-8847",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPSU52SUF6MlBuY1RPVTFGdS1lZG1uWUVjTjBJMjNNdE13MEVlQ0lxN0F5RHE5OTV1UUVUeFh2V0ZOeWtJUS1hX1YyeTJBQUl2Sjl6NnA4ZGNXQzZNMHd1YzR3ZEtkczlxdGYxaUtmX1IybW1wVFBsTmo5SFU5aFd2eURYUHVpdmppenB3LU8wc09VWGZTem5qa0dwWjk1ZkMwS2xwVlB6cTkzcnl1SkVfaURPUVdaVHM2Q205blBfMW9PTnA0aklCbDZFRUdvdUEtZTNJbDlWVUfSAdgBQVVfeXFMT0lOdklBejJQbmNUT1UxRnUtZWRtbllFY04wSTIzTXRNdzBFZUNJcTdBeURxOTk1dVFFVHhYdldGTnlrSVEtYV9WMnkyQUFJdko5ejZwOGRjV0M2TTB3dWM0d2RLZHM5cXRmMWlLZl9SMm1tcFRQbE5qOUhVOWhXdnlEWFB1aXZqaXpwdy1PMHNPVVhmU3puamtHcFo5NWZDMEtscFZQenE5M3J5dUpFX2lET1FXWlRzNkNtOW5QXzFvT05wNGpJQmw2RUVHb3VBLWUzSWw5VlVH?oc=5",
+          "publishedAt": "2026-08-13T05:39:24+00:00",
           "glossary": [
             {
               "term": "MCX",
-              "definition": "The Multi Commodity Exchange of India, a marketplace where commodity contracts such as gold futures are traded."
+              "definition": "The Multi Commodity Exchange of India, where commodity futures like gold are traded."
             },
             {
-              "term": "Gold futures",
-              "definition": "Contracts that lock in a price today for buying or selling gold at a later date."
+              "term": "10-year bond yields",
+              "definition": "The return investors demand to hold 10-year government bonds."
             },
             {
-              "term": "Spot demand",
-              "definition": "Immediate demand for a commodity for near-term delivery rather than future delivery."
+              "term": "Brent",
+              "definition": "A global benchmark price for crude oil."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a market-price update, not a deep analysis piece, so the main thing to watch is the direction of the price move and the stated drivers behind it. Read closely for whether the movement is tied to global cues, local demand, or both, because that changes whether the signal is likely broad or temporary. If the source later provides more detail on the September contract or global factors, that would help determine how durable the price rise may be.",
+            "explanationText": "This is a market-move story, so the main thing to watch is the cause-and-effect logic: gold fell, and the headline points to a stronger dollar and higher bond yields as the pressure points. The interpretation would change if the inflation data were strong enough to clearly revive rate-hike expectations, or if the dollar and yields were moving lower instead. In that case, gold would likely be read as reacting to a different macro driver.",
             "glossary": [
               {
                 "term": "MCX",
-                "definition": "The Multi Commodity Exchange of India, a marketplace where commodity contracts such as gold futures are traded.",
-                "whyItMatters": "It is the venue where the reported price move happened."
+                "definition": "The Multi Commodity Exchange of India, where commodity futures like gold are traded.",
+                "whyItMatters": "It tells you the price is coming from a derivatives market, not a retail spot price."
               },
               {
-                "term": "Gold futures",
-                "definition": "Contracts that lock in a price today for buying or selling gold at a later date.",
-                "whyItMatters": "Futures prices show how traders are valuing gold now and in the near term."
+                "term": "10-year bond yields",
+                "definition": "The return investors demand to hold 10-year government bonds.",
+                "whyItMatters": "Higher yields often make non-yielding assets like gold less attractive."
               },
               {
-                "term": "Spot demand",
-                "definition": "Immediate demand for a commodity for near-term delivery rather than future delivery.",
-                "whyItMatters": "Strong spot demand can help support or lift prices."
-              }
-            ]
-          }
-        },
-        {
-          "id": "analytics-2-45734",
-          "title": "Decile launches AI assistant eCommerce analytics MCP",
-          "kicker": "IT Brief UK",
-          "summary": "Decile has launched an AI assistant for eCommerce analytics using MCP, letting marketers query customer data and build audience segments inside AI chats. The description says this reduces the need to move between separate dashboards and campaign tools. For analytics teams, that points to a more conversational workflow for exploring customer data and preparing segments.",
-          "emailSummary": "Marketers can now query customer data and build audience segments inside AI chats, cutting out separate dashboards and campaign tools.",
-          "whyItMatters": "This matters because it can shorten the path from asking a data question to acting on it, which may make audience targeting and campaign setup faster for marketing teams.",
-          "dataSignals": [
-            "analytics workflow"
-          ],
-          "sourceLabel": "IT Brief UK · Aug 11, 6:09 PM ET",
-          "sourceUrl": "https://itbrief.co.uk/story/decile-launches-ai-assistant-ecommerce-analytics-mcp",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcWgxQjloQy1lNlp4TGFRVzJ2TkFkM1ByTF9JVlFIcmlqNjk0ekR0enZDa051MEt6RHNSZ3RnTi1pYWlJWmMxVU1HMkpSNGtBRTNCRXFJZ1ZVQVNOWHU1X2huYWdWZmxteEk4NlhCNVh4WGJhMFdMZW1iZW1KVVE4ZXZ3Y1VweUE?oc=5",
-          "publishedAt": "2026-08-11T22:09:00+00:00",
-          "glossary": [
-            {
-              "term": "eCommerce analytics",
-              "definition": "The practice of analyzing online shopping data such as customer behavior, purchases, and campaign performance."
-            },
-            {
-              "term": "audience segments",
-              "definition": "Groups of customers divided by shared traits or behaviors, such as frequent buyers or first-time visitors."
-            },
-            {
-              "term": "MCP",
-              "definition": "A protocol that helps AI systems connect to external tools and data sources in a standard way."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a product-launch story about applied AI in marketing analytics. When reading the source, pay attention to what the assistant can actually do—query data and build segments—and whether it replaces or simply sits on top of existing tools. The interpretation would change if the product is a narrow chat interface versus a deeper integration that can directly act on customer data and campaign systems.",
-            "glossary": [
-              {
-                "term": "eCommerce analytics",
-                "definition": "The practice of analyzing online shopping data such as customer behavior, purchases, and campaign performance.",
-                "whyItMatters": "It is the core data area this tool is meant to help marketers work with."
-              },
-              {
-                "term": "audience segments",
-                "definition": "Groups of customers divided by shared traits or behaviors, such as frequent buyers or first-time visitors.",
-                "whyItMatters": "Building segments is how marketers target messages and campaigns more precisely."
-              },
-              {
-                "term": "MCP",
-                "definition": "A protocol that helps AI systems connect to external tools and data sources in a standard way.",
-                "whyItMatters": "It suggests the assistant can interact with analytics systems rather than only answer general questions."
-              }
-            ]
-          }
-        },
-        {
-          "id": "analytics-3-62497",
-          "title": "The New Front Page: GEO Analytics for PR & Marketing Leaders",
-          "kicker": "Ragan Communications",
-          "summary": "Ragan Communications is promoting a free executive discussion for PR and marketing leaders called “The New Front Page: GEO Analytics for PR & Marketing Leaders.” The session focuses on generative engine optimization (GEO) and how communications teams can measure, improve, and protect their brand’s presence across AI-powered search experiences. In practical terms, it signals growing attention on how brands show up when people search through AI tools rather than traditional search results.",
-          "emailSummary": "Join us for this FREE expert-led executive discussion on the emerging discipline of generative engine optimization (GEO) and how communications…",
-          "whyItMatters": "This matters because AI-driven search is becoming a new place where brand visibility and reputation are shaped, so communications teams may need new metrics and tactics to track and influence it.",
-          "dataSignals": [
-            "analytics workflow"
-          ],
-          "sourceLabel": "Ragan Communications · Aug 11, 6:01 PM ET",
-          "sourceUrl": "https://www.ragan.com/store/the-new-front-page-geo-analytics-for-pr-marketing-leaders/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbk12VE9BMW1RSFllNmJtZzY3RHVxR1diTTJuRWliRVJYY3gxMEtPZDhCekxBNG1WQmVFYUI0Z242UjJuQ3BIUUdzQXNTT3ltX1pQbmRUVUd4NWN3amtiYmZBMGVaZUdBcGFtU0hQZ0JJR2FHczZzZWYzTHRoZS1IWDZGbHJ1S3pSOVBNV1I3TQ?oc=5",
-          "publishedAt": "2026-08-11T22:01:32+00:00",
-          "glossary": [
-            {
-              "term": "Generative engine optimization (GEO)",
-              "definition": "The practice of making content more likely to appear or be represented well in AI-generated answers and search experiences."
-            },
-            {
-              "term": "AI-powered search experiences",
-              "definition": "Search tools that use artificial intelligence to generate answers or summaries instead of only listing links."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a forward-looking industry education story, not a report on a completed business decision or market event. When reading the source, pay attention to the new metric or strategy ideas being proposed for GEO, since those would determine whether this is mainly a thought-leadership discussion or a practical measurement framework. The interpretation would change if the session includes specific tools, benchmarks, or case studies, because that would make it more actionable for analytics and communications teams.",
-            "glossary": [
-              {
-                "term": "Generative engine optimization (GEO)",
-                "definition": "The practice of making content more likely to appear or be represented well in AI-generated answers and search experiences.",
-                "whyItMatters": "It shifts optimization work from classic web search rankings to AI systems that summarize and recommend information."
-              },
-              {
-                "term": "AI-powered search experiences",
-                "definition": "Search tools that use artificial intelligence to generate answers or summaries instead of only listing links.",
-                "whyItMatters": "These experiences can change how people discover brands and what information they see first."
-              }
-            ]
-          }
-        },
-        {
-          "id": "analytics-4-68538",
-          "title": "Coupler.io Turns Supabase and Amazon Redshift into Always-Current Data Stores for AI Analytics",
-          "kicker": "Big News Network.com",
-          "summary": "Coupler.io says it now enables teams to store business data in Supabase and Amazon Redshift. The new connectors are meant to keep dashboards and AI tools working from one always-current source of data. Coupler.io already connects to 400+ apps, and this adds two more destinations for business data. For analytics teams, that suggests simpler data pipelines and fresher data for reporting and AI use cases.",
-          "emailSummary": "Coupler.io now enables teams to store their business data in Supabase and Amazon Redshift. The new connectors allow users to keep dashboards and…",
-          "whyItMatters": "This matters because always-current data in a central store can reduce lag between source systems and dashboards, improving the reliability of analytics and AI outputs.",
-          "dataSignals": [
-            "analytics workflow"
-          ],
-          "sourceLabel": "Big News Network.com · Aug 11, 1:57 PM ET",
-          "sourceUrl": "https://www.bignewsnetwork.com/news/279234841/couplerio-turns-supabase-and-amazon-redshift-into-always-current-data-stores-for-ai-analytics",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNcGRraHdSaUwtV1ZjbUdoSE1BN3BDRm9JWWRKdC0tRFdpLUVSMmNHSmNJOFJsUmZhOHFJTmE4V21WQUVSVmFPZ3hqWDhwdW10ZXB4TWxVZmlsRzRzNFBkQ05ZT3FSOTJHaE1hTEI5eExuU0tROGMtYktGamQyYW1wMDVNODM1UHVvM2x5QUZYY2lCaW9LUGFyR2ppbGt5NkpnUzVlLVFRZy04WXRWNGNVZUNvX25qb0JFS051WG0xbmZLNGE1aW5IVER6X1Z4WlI3QmVZX2JR?oc=5",
-          "publishedAt": "2026-08-11T17:57:00+00:00",
-          "glossary": [
-            {
-              "term": "data integration platform",
-              "definition": "Software that moves and connects data between different apps, databases, and systems."
-            },
-            {
-              "term": "connector",
-              "definition": "A feature that links one software system to another so data can flow between them."
-            },
-            {
-              "term": "Amazon Redshift",
-              "definition": "Amazon’s cloud data warehouse used to store and analyze large amounts of data."
-            },
-            {
-              "term": "Supabase",
-              "definition": "A backend platform built around a PostgreSQL database that teams often use to build apps and manage data."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a product announcement story, so the main thing to watch is what new systems are supported and what workflow problem the vendor claims to solve. The key interpretation shift would come from evidence about performance, freshness, or customer adoption; without that, the safe read is that this is an expansion of data destinations meant to simplify analytics operations.",
-            "glossary": [
-              {
-                "term": "data integration platform",
-                "definition": "Software that moves and connects data between different apps, databases, and systems.",
-                "whyItMatters": "It is the kind of tool being described here, and it determines how easily data can be centralized for analysis."
-              },
-              {
-                "term": "connector",
-                "definition": "A feature that links one software system to another so data can flow between them.",
-                "whyItMatters": "The new connectors are the specific product change that makes Supabase and Redshift usable as live data targets."
-              },
-              {
-                "term": "Amazon Redshift",
-                "definition": "Amazon’s cloud data warehouse used to store and analyze large amounts of data.",
-                "whyItMatters": "It is one of the storage systems Coupler.io now supports for analytics workflows."
-              },
-              {
-                "term": "Supabase",
-                "definition": "A backend platform built around a PostgreSQL database that teams often use to build apps and manage data.",
-                "whyItMatters": "It is the other new destination for keeping business data available to dashboards and AI tools."
-              }
-            ]
-          }
-        },
-        {
-          "id": "analytics-5-94736",
-          "title": "NVIDIA Success Story: Remarkable Growth from Video Games to AI",
-          "kicker": "Analytics Insight",
-          "summary": "NVIDIA is described as having evolved from a gaming-focused graphics company into a leading provider of AI infrastructure. The title and description point to GPUs, CUDA, and AI-specific hardware as the key pieces of that shift. For the analytics and AI space, the story is about how one chipmaker’s products became central to modern AI computing.",
-          "emailSummary": "Overview: NVIDIA evolved from a gaming-focused graphics company into a leading AI infrastructure provider through GPUs, CUDA, and AI-specific ha…",
-          "whyItMatters": "This matters because NVIDIA’s hardware and software stack helps determine how fast and how cheaply AI systems can be built and run.",
-          "dataSignals": [
-            "analytics workflow"
-          ],
-          "sourceLabel": "Analytics Insight · Aug 11, 12:09 PM ET",
-          "sourceUrl": "https://www.analyticsinsight.net/amp/story/tech-news/nvidia-success-story-remarkable-growth-from-video-games-to-ai",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUXZNUGhEUUVuWWVxMFh1WG9lN0tzaXljclRhWHFwbkxqdHdfYzJIUTAwQkdVb0pxcGNQYllMZm00c1Q3SlFWZnZwVnktMXdhUTh1eG5LR0ptQllfWjNCUXI0SVZOTDV4OXlsLW9SeDEwVHROTHBoY2dZcEt0bks3cmJ0S0dVWnJFMGU4LTkwYW9mMHEzbXFwcmJrbG14MmJXaUNXWW9kdlJUcWdJU0hQYkpSYkjSAbQBQVVfeXFMTVF2TVBoRFFFblllcTBYdVhvZTdLc2l5Y3JUYVhxcG5ManR3X2MySFEwMEJHVW9KcXBjUGJZTGZtNHNUN0pRVmZ2cFZ5LTF3YVE4dXhuS0dKbUJZX1ozQlFyNElWTkw1eDl5bC1vUngxMFR0TkxwaGNnWXBLdG5LN3JidEtHVVpyRTBlOC05MGFvZjBxM21xcHJia2xteDJiV2lDV1lvZHZSVHFnSVNIUGJKUmJI?oc=5",
-          "publishedAt": "2026-08-11T16:09:49+00:00",
-          "glossary": [
-            {
-              "term": "GPU",
-              "definition": "A graphics processing unit, a type of chip designed to handle many calculations at once."
-            },
-            {
-              "term": "CUDA",
-              "definition": "NVIDIA’s software platform that lets developers use its GPUs for general-purpose computing."
-            },
-            {
-              "term": "AI infrastructure",
-              "definition": "The computing hardware and software used to train and run artificial intelligence systems."
-            },
-            {
-              "term": "AI-specific hardware",
-              "definition": "Chips built to handle artificial intelligence tasks more efficiently than general-purpose hardware."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a business-and-technology growth story, not a market-moving earnings report. When reading it, focus on the stated drivers of NVIDIA’s shift from gaming to AI, especially the role of GPUs and CUDA, because those are what explain the company’s competitive position. If the full source adds financial results, market share, or product adoption data, that would make the scale and durability of the shift much clearer.",
-            "glossary": [
-              {
-                "term": "GPU",
-                "definition": "A graphics processing unit, a type of chip designed to handle many calculations at once.",
-                "whyItMatters": "GPUs are a core reason NVIDIA became important to both gaming and AI workloads."
-              },
-              {
-                "term": "CUDA",
-                "definition": "NVIDIA’s software platform that lets developers use its GPUs for general-purpose computing.",
-                "whyItMatters": "CUDA helps lock developers into NVIDIA’s ecosystem and makes its hardware more useful for AI."
-              },
-              {
-                "term": "AI infrastructure",
-                "definition": "The computing hardware and software used to train and run artificial intelligence systems.",
-                "whyItMatters": "Being a major AI infrastructure provider means NVIDIA sits near the center of AI deployment."
-              },
-              {
-                "term": "AI-specific hardware",
-                "definition": "Chips built to handle artificial intelligence tasks more efficiently than general-purpose hardware.",
-                "whyItMatters": "Specialized hardware can improve performance and lower the cost of AI processing."
+                "term": "Brent",
+                "definition": "A global benchmark price for crude oil.",
+                "whyItMatters": "Oil prices are often tracked alongside metals because they reflect broader market conditions."
               }
             ]
           }
@@ -897,225 +980,224 @@
       "emptyMessage": "No qualified Louisville, Kentucky stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "louisville-1-63054",
-          "title": "New renderings show latest design plans for Belvedere redevelopment project in downtown Louisville",
-          "kicker": "WDRB",
-          "summary": "New renderings show the latest design plans for the Belvedere redevelopment project in downtown Louisville. One main goal of the project is to address longstanding structural concerns, including cracks in the parking garage underneath the overlook. For downtown Louisville, that means the project is being framed not just as a redesign, but as a fix for underlying infrastructure issues that have been part of the site for some time.",
-          "emailSummary": "One main goal of the project is to address longstanding structural concerns, including cracks in the parking garage underneath the downtown Loui…",
-          "whyItMatters": "This matters because the Belvedere is a visible downtown asset, and resolving structural problems affects public safety, project costs, and how quickly the space can be reused.",
+          "id": "louisville-1-10465",
+          "title": "Kentucky farmers, businesses call on Congress to delay intoxicating hemp ban",
+          "kicker": "Louisville Public Media",
+          "summary": "Kentucky farmers and businesses are urging Congress to delay a federal ban on intoxicating hemp products that is set to take effect in November. A proposed one-month reprieve is moving through Congress, and Kentucky’s hemp industry hopes that extra time could help it protect the growing sector. The core issue is whether the ban starts as scheduled or gets pushed back briefly.",
+          "emailSummary": "A federal ban on intoxicating hemp products will go into effect in November, but an additional month’s reprieve is working its way through Congr…",
+          "whyItMatters": "This matters because the timing of the ban could directly affect Kentucky hemp growers and related businesses by changing how quickly they must adapt, sell products, or lobby for longer-term protections.",
           "dataSignals": [
             "Louisville local",
-            "development / economy"
+            "business signal"
           ],
-          "sourceLabel": "WDRB · Aug 11, 5:14 PM ET",
-          "sourceUrl": "https://www.wdrb.com/new-renderings-show-latest-design-plans-for-belvedere-redevelopment-project-in-downtown-louisville/video_83adb6d8-bd97-5e4f-9b03-ecd93fdfff16.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPU0tSVlhzQVFsakEyRzJHSVhCel8ya0xSazRaYi1YWlROU0k0V3VvdnByOUVPMWZEUEYtSGpacFhqaG1pNTFzdlFNQl9JVWhpeS1XeGtsX1l2b0dTaDRxNk1Za3BkMVQzRGN2VW5LWXU1RnFKVVhULWZIMzZVUVN4ZENERTBWOTYwUzA4cFMzN1Y4Q1pmMWNua3p3ZXQ1M2laZURDdXR2THFaOC1lT3hoMDVaSEZsd1R2SWtLZ21UUUdTdlVyNjl2UXZsMXpZUjJVWUZPcmdZamM2Q0Z1YW54MzExU0UxMlEwQmxoTEdnVk5zd2dqSk9vaVlrbw?oc=5",
-          "publishedAt": "2026-08-11T21:14:00+00:00",
+          "sourceLabel": "Louisville Public Media · Aug 12, 11:56 AM ET",
+          "sourceUrl": "https://www.lpm.org/news/2026-08-12/kentucky-farmers-businesses-call-on-congress-to-pass-extension-on-intoxicating-hemp-ban",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNSUQzTElfWnBjZldkbVhPSzBMam1XeWgzZnlidmx2eDctczhyakFhWEdlNTcyWmVNdGhhVGhRQk4waEd6a0VTT0JqME5pQ1hITS1ZMzJuZHJmWjBMeXc1RExBVnBQaG4tc01MeUhON1YwMVl2ZlEtdDV5SVg0SjM4OHl2RGthZ0hpNVdVekNwSEpjeHpscjdibmJseVlzZHk3QjFTRVY2MUMzTkNnX05nd0JxT0JxTGRFLWFidHA1Yno?oc=5",
+          "publishedAt": "2026-08-12T15:56:00+00:00",
           "glossary": [
             {
-              "term": "renderings",
-              "definition": "Visual drawings or digital images that show what a project is expected to look like once built."
+              "term": "intoxicating hemp products",
+              "definition": "Hemp-derived products that can cause a psychoactive or mind-altering effect."
             },
             {
-              "term": "redevelopment",
-              "definition": "The process of renovating or rebuilding an existing site for new or improved use."
+              "term": "federal ban",
+              "definition": "A nationwide prohibition created by the U.S. government."
             },
             {
-              "term": "structural concerns",
-              "definition": "Problems involving the strength or stability of a building or structure."
-            },
-            {
-              "term": "parking garage",
-              "definition": "A building or structure designed for parking cars, often with multiple levels."
+              "term": "reprieve",
+              "definition": "A temporary delay or pause in enforcement of a rule or penalty."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a local infrastructure and design story, so the key is whether the project is mainly cosmetic or also meant to solve safety and engineering problems. When reading the source, pay attention to what the new renderings actually change and whether the structural repairs are a core part of the plan, because that affects cost, timing, and feasibility.",
+            "explanationText": "This is a policy and industry story, not a market results story: the main thing to watch is whether Congress actually delays the ban and by how much. Read carefully for who is pushing for the delay, what products are covered, and whether the change is temporary or part of a bigger policy shift, because that changes how much breathing room Kentucky businesses really get.",
             "glossary": [
               {
-                "term": "renderings",
-                "definition": "Visual drawings or digital images that show what a project is expected to look like once built.",
-                "whyItMatters": "Renderings help people understand the planned design and judge how the redevelopment may change the site."
+                "term": "intoxicating hemp products",
+                "definition": "Hemp-derived products that can cause a psychoactive or mind-altering effect.",
+                "whyItMatters": "The ban is aimed at this specific category, so understanding the term is key to knowing which products are affected."
               },
               {
-                "term": "redevelopment",
-                "definition": "The process of renovating or rebuilding an existing site for new or improved use.",
-                "whyItMatters": "Redevelopment signals changes to the physical space, funding needs, and potential community impact."
+                "term": "federal ban",
+                "definition": "A nationwide prohibition created by the U.S. government.",
+                "whyItMatters": "A federal ban would apply broadly, overriding local or state preferences in many cases."
               },
               {
-                "term": "structural concerns",
-                "definition": "Problems involving the strength or stability of a building or structure.",
-                "whyItMatters": "Structural concerns can affect safety, timelines, and the scope of repairs needed."
-              },
-              {
-                "term": "parking garage",
-                "definition": "A building or structure designed for parking cars, often with multiple levels.",
-                "whyItMatters": "Damage to a parking garage can create safety risks and raise the cost of a redevelopment project."
+                "term": "reprieve",
+                "definition": "A temporary delay or pause in enforcement of a rule or penalty.",
+                "whyItMatters": "A reprieve would give the hemp industry more time before the ban takes effect."
               }
             ]
           }
         },
         {
-          "id": "louisville-2-85874",
-          "title": "Belvedere transformation in Louisville, Kentucky",
-          "kicker": "e-architect",
-          "summary": "Heatherwick Studio has unveiled a new design for transforming the Belvedere, described as an under-loved civic space in downtown Louisville. The announcement signals a proposed redesign for a prominent public area in the city. Based on the source details, the key takeaway is that Louisville’s downtown public realm may be getting a major visual and functional update.",
-          "emailSummary": "Heatherwick Studio has unveiled its new design for the transformation of Belvedere, an under-loved civic space in downtown Louisville.",
-          "whyItMatters": "This matters because changes to a central civic space can affect downtown foot traffic, public use, and the city’s overall image.",
-          "dataSignals": [
-            "Louisville local"
-          ],
-          "sourceLabel": "e-architect · Aug 12, 4:35 AM ET",
-          "sourceUrl": "https://www.e-architect.com/america/belvedere-transformation-louisville-kentucky",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbVJPYkNsRGxhWEFnTnpmcWNJNGd6aHN3Vmg0eS1tQm9ObmhRbFdqT21UY0d0czJsUWU4UjZlZmZ2RDhGUmNCOHNfVTVWS1VEZ2lEVkYyUnFqLW12NEFFWm82eFpEU0VXSGFEU0ZvVUtyRm5nWGJGNlhYRV9KSHFWUTJjSHhqY2M?oc=5",
-          "publishedAt": "2026-08-12T08:35:33+00:00",
-          "glossary": [
-            {
-              "term": "civic space",
-              "definition": "A public area meant for shared community use, such as plazas, squares, or promenades."
-            },
-            {
-              "term": "transform",
-              "definition": "To significantly change the design, function, or appearance of a place."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a design-and-development story about a proposed public-space redesign, not a finished construction update. When reading the source, pay attention to who is proposing the plan, what parts of Belvedere are being changed, and whether the project is conceptual or moving toward implementation. The interpretation would change if the design is only an unveiling versus an approved, funded, or scheduled buildout.",
-            "glossary": [
-              {
-                "term": "civic space",
-                "definition": "A public area meant for shared community use, such as plazas, squares, or promenades.",
-                "whyItMatters": "It helps explain that the project is about a publicly used place, not a private development."
-              },
-              {
-                "term": "transform",
-                "definition": "To significantly change the design, function, or appearance of a place.",
-                "whyItMatters": "It shows the project is more than routine maintenance and may involve a major redesign."
-              }
-            ]
-          }
-        },
-        {
-          "id": "louisville-3-38098",
-          "title": "Louisville Waterfront Botanical Gardens adds six bonsai trees from Pacific Bonsai Museum",
+          "id": "louisville-2-42206",
+          "title": "Louisville native sets Guinness World Record assembling Mr. Potato Head blindfolded",
           "kicker": "WDRB",
-          "summary": "Louisville Waterfront Botanical Gardens has received six bonsai trees from the Pacific Bonsai Museum. The donation comes as construction continues on a new Bonsai House and Garden at the site. The update suggests the bonsai collection is becoming part of the gardens’ future visitor experience.",
-          "emailSummary": "Louisville Waterfront Botanical Gardens received six bonsai trees as construction continues on a new Bonsai House and Garden.",
-          "whyItMatters": "This matters because it signals progress on a new attraction that could broaden the gardens’ appeal and add a specialized display to Louisville’s public green space offerings.",
+          "summary": "Louisville native Conor Shea set a Guinness World Record by assembling a Mr. Potato Head while blindfolded. Shea said he wants to dedicate the record to people with Usher Syndrome. The story is a human-interest feature about an unusual record and the personal meaning he attaches to it.",
+          "emailSummary": "Conor Shea said he wants to dedicate the record to people with Usher Syndrome.",
+          "whyItMatters": "This matters because it turns a novelty achievement into a visibility moment for Usher Syndrome, which can help more people recognize the condition and the challenges faced by those living with vision and hearing loss.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Aug 11, 6:18 PM ET",
-          "sourceUrl": "https://www.wdrb.com/louisville-waterfront-botanical-gardens-adds-six-bonsai-trees-from-pacific-bonsai-museum/video_4bb604a6-c219-5989-ab4e-abb564eb8b64.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOOUNYTE1saHBrM0FPbkY1ZnF6LWVRYlYyb2VzYmhUUlBISjk3VWJyalFJd0dScE5OSGFLQmZFZm5mUHNmR0ItMkN3QUNpbWVkSjVmOG5TTEVNN3BtcHRDNGdKNllycEtYU1VYSnJJaU12RWQwaEtvWFhvTjBnMEVJSFEyc05xVjNuamg3UV9tX1JMbU1mWGdtUzR3ZTBJYTNBZVctZzRsTTVBMXZpeGVZc2kycjFhZlNReTFtWGpVOVVkZE1zczZmem41QmxMYnpBWjZZRWhhVUF2aVlxTmQ1UW1HVlhjeHNhSm9rOE5R?oc=5",
-          "publishedAt": "2026-08-11T22:18:00+00:00",
+          "sourceLabel": "WDRB · Aug 12, 7:17 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/wdrb-video/louisville-native-sets-guinness-world-record-assembling-mr-potato-head-blindfolded/video_80ba34fd-d3a3-5c49-8e3b-dd1890138111.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNRl93V2FlSk5KTlFoN0xFbW1DamoxNXFIT1JJRjBiTXE3TlVXaWszSW9USENuU1plcklhNWdtRkxuM3lRX2tDb25pUW1kQXFfYnE1NDZPQnptSDJRT1NXeGcwbHF6a0xJa3ItVm9BSk5DYS0wUXdyQ3p4cWo2THEtS0xkRDIzYVJpRWVpajh0b29ERERVaHV4bDZHd3laNXVLRzd2Y0lBaUdOYjJRcTJKQVl0blp1ZnJqZG5xYzc5d21OLS13U2MxeWo4TjJqUnJiVlhmWFlXeDVkdm9hQjYtMGRLRXZlM1F4TFlTNVc5RVVVYzB6bFpHbm1DVQ?oc=5",
+          "publishedAt": "2026-08-12T23:17:00+00:00",
           "glossary": [
             {
-              "term": "bonsai",
-              "definition": "A small tree or shrub grown in a container and trained to stay miniature through pruning and shaping."
+              "term": "Guinness World Record",
+              "definition": "An officially recognized record tracked by Guinness World Records for an unusual or extreme achievement."
             },
             {
-              "term": "Pacific Bonsai Museum",
-              "definition": "A museum focused on bonsai trees and the art of growing them."
+              "term": "Mr. Potato Head",
+              "definition": "A toy made of interchangeable parts that can be assembled into different faces and body configurations."
+            },
+            {
+              "term": "Usher Syndrome",
+              "definition": "A genetic condition that can cause both hearing loss and vision loss."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a straightforward local development story about a new amenity under construction and a collection donation tied to it. When reading the source, focus on what was added, where it is going, and whether the new Bonsai House and Garden changes the gardens’ offerings or timeline. If later reporting adds details on opening dates, funding, or the size of the collection, that would change how significant the project is.",
+            "explanationText": "This is a human-interest record story, so the key thing to watch for is the link between the stunt and the reason Shea gave for dedicating it. Because the provided description is very short, the safest reading is that the only confirmed facts are the record itself and the dedication; any broader interpretation would depend on details from the full story.",
             "glossary": [
               {
-                "term": "bonsai",
-                "definition": "A small tree or shrub grown in a container and trained to stay miniature through pruning and shaping.",
-                "whyItMatters": "Bonsai is the featured collection element being added, so understanding the term clarifies what kind of attraction is being built."
+                "term": "Guinness World Record",
+                "definition": "An officially recognized record tracked by Guinness World Records for an unusual or extreme achievement.",
+                "whyItMatters": "It signals that the feat was measured against a formal standard, not just claimed as an accomplishment."
               },
               {
-                "term": "Pacific Bonsai Museum",
-                "definition": "A museum focused on bonsai trees and the art of growing them.",
-                "whyItMatters": "It identifies the source of the donated trees and shows the collection has an outside institutional connection."
+                "term": "Mr. Potato Head",
+                "definition": "A toy made of interchangeable parts that can be assembled into different faces and body configurations.",
+                "whyItMatters": "It is the object used in the record attempt, so knowing the toy helps explain why the challenge is notable."
+              },
+              {
+                "term": "Usher Syndrome",
+                "definition": "A genetic condition that can cause both hearing loss and vision loss.",
+                "whyItMatters": "It explains why Shea says he is dedicating the record to a community affected by sensory impairment."
               }
             ]
           }
         },
         {
-          "id": "louisville-4-84151",
-          "title": "Louisville Rickhouse Co.",
+          "id": "louisville-3-20921",
+          "title": "Overnight lane closures scheduled in downtown Louisville as part of I-65 corridor project",
           "kicker": "WDRB",
-          "summary": "The provided item only identifies a photo of the bar at Louisville Rickhouse Co., credited to Louisville Business First. No additional details about the business, a decision, or an event are included in the title or description. Based on what is shown, this is simply a visual reference to a Louisville venue rather than a report with substantive news.",
-          "emailSummary": "Louisville Rickhouse Co.",
-          "whyItMatters": "This matters because, for Louisville readers, it signals attention to a local hospitality business, but the available information is too limited to indicate any operational, financial, or community impact.",
+          "summary": "Some overnight lane closures in downtown Louisville are set to begin Wednesday night as part of the Interstate 65 Central Corridor project. The notice suggests drivers should expect short-term traffic impacts in the downtown area while work continues on the corridor project.",
+          "emailSummary": "Some overnight lane closures in downtown Louisville start Wednesday night as part of the Interstate 65 Central Corridor project.",
+          "whyItMatters": "This matters because overnight lane closures can affect commute timing, freight movement, and access through a key downtown route even when daytime traffic is unaffected.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Aug 11, 4:56 PM ET",
-          "sourceUrl": "https://www.wdrb.com/louisville-rickhouse-co/image_d15f9a0a-933c-4986-b081-f0e6f10b8b7e.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPa040ZlNYYkVYTnVqeWhWTEhsRm15YmRFVGFjX3ZlVHoyVVZtY2JFb0xmX3o4Z0dIOFptdmRjRDFTN0JwdFdkOE1pcE9FTWcwbnNaLWsxckpKaXFTbHUwM3g1ZTBYdzNoM0pWT2NZRGU0NG5RQ3RpOFB5bm5qZkpiVTZxR1ZxS3pOVV81RkxXZjhJcFktT3lj?oc=5",
-          "publishedAt": "2026-08-11T20:56:54+00:00",
+          "sourceLabel": "WDRB · Aug 12, 5:42 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/overnight-lane-closures-scheduled-in-downtown-louisville-as-part-of-i-65-corridor-project/article_1c00232e-8891-4387-9db2-4791675e8021.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQdU85ak9GWFk4d19EU2pPOXNjOUs1Yk5ISUx4R0IwVklPSUlfRmRHcWdpOWFkeGx5XzJpT0pNRlFkNXJTbW1FdWxhZklNTWIyazlCaW94WTlYWmljdl9BVEo5NUR5MlM2S0xrbmV6ZGpvRl9jbXRHc0w3ODdaYzE2OTBDOEF6Z2NWWEJYU29XbjdIU0p3YkU3Z21aYm1WamVJZmtyU2IyZHMxcnNtVFExRDFVQzV2eFNlNmlhcThwMzJpdG50elFPZ0lDUlNwMkJ5OWMydlRwekx0V05HZTl0ck1mNTAtd0xhbEQxanlVTHh5dGdYRlBZNw?oc=5",
+          "publishedAt": "2026-08-12T21:42:00+00:00",
+          "glossary": [
+            {
+              "term": "lane closure",
+              "definition": "A lane closure is when one or more traffic lanes are temporarily blocked from use."
+            },
+            {
+              "term": "Interstate 65 (I-65)",
+              "definition": "I-65 is a major north-south highway that runs through Louisville and connects to other states."
+            },
+            {
+              "term": "corridor project",
+              "definition": "A corridor project is a coordinated construction or improvement effort along a specific roadway section."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a traffic and infrastructure notice, not a policy or economic story. When reading the source, pay attention to when the closures start, whether they are overnight only, and which lanes or stretches are affected. If later updates show different times, directions, or additional closures, that would change how disruptive the project is for downtown travel.",
+            "glossary": [
+              {
+                "term": "lane closure",
+                "definition": "A lane closure is when one or more traffic lanes are temporarily blocked from use.",
+                "whyItMatters": "It signals where drivers may need to slow down, merge, or choose a different route."
+              },
+              {
+                "term": "Interstate 65 (I-65)",
+                "definition": "I-65 is a major north-south highway that runs through Louisville and connects to other states.",
+                "whyItMatters": "Work on this route can ripple through regional traffic and logistics beyond downtown."
+              },
+              {
+                "term": "corridor project",
+                "definition": "A corridor project is a coordinated construction or improvement effort along a specific roadway section.",
+                "whyItMatters": "It usually means repeated or staged disruptions over time, not just a one-time closure."
+              }
+            ]
+          }
+        },
+        {
+          "id": "louisville-4-24773",
+          "title": "Set times released for 2026 Bourbon & Beyond music festival in Louisville",
+          "kicker": "WDRB",
+          "summary": "Set times have been released for the 2026 Bourbon & Beyond music festival in Louisville. The festival is scheduled for Sept. 24-27 at the Highland Festival Grounds at the Kentucky Exposition Center. For local attendees, that means planning around specific performance slots rather than just the festival dates.",
+          "emailSummary": "The music festival is slated for Sept. 24-27 on the Highland Festival Grounds at the Kentucky Exposition Center.",
+          "whyItMatters": "This matters because set times determine which artists overlap, how people plan travel and lodging, and how much value attendees can get out of a multi-day festival.",
+          "dataSignals": [
+            "Louisville local"
+          ],
+          "sourceLabel": "WDRB · Aug 12, 4:46 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/set-times-released-for-2026-bourbon-beyond-music-festival-in-louisville/article_8c042651-dca0-4dd2-95c1-e14def119915.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbWZPQzJjRkJ5U3NsZ2FseDAwYkFBR1BVZ2psT3hCcTNQVEhMT2NYNzdVQzB0VjlFbkNOeVdQQklVR2RLd2lLUzN5STFGTWNIaDN0SlUzTFR3aUFaLTBUWU5NcHVHdy1yZXZOUWdFY0NJbmVoTTdvQUQtaXh5NGRQRFZSZ0I0TnYwM0FJQ2tJeFJLWDNlZzZQbm9EMGxYUVFTb3AwYk02N2JnYjZLWHhiYmJaS1JTNVBuMm5LbU5nWDROaU55UWtHcVBGeWxXd2h5bkU4TEJpYW1Vb3NqS0VlSQ?oc=5",
+          "publishedAt": "2026-08-12T20:46:00+00:00",
+          "glossary": [
+            {
+              "term": "set times",
+              "definition": "The scheduled times when each performer or band is expected to go on stage."
+            },
+            {
+              "term": "festival grounds",
+              "definition": "The designated area where the event takes place, including stages and related event space."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a live-event scheduling story, so the most useful detail is the timing, not just the lineup or dates. When reading the source, pay attention to which day and stage each act is assigned to, because those details determine conflicts and logistics. If the published schedule changes, that would alter travel plans, daily attendance choices, and the practical value of the release.",
+            "glossary": [
+              {
+                "term": "set times",
+                "definition": "The scheduled times when each performer or band is expected to go on stage.",
+                "whyItMatters": "Set times help attendees decide which acts they can actually see and which conflicts they need to avoid."
+              },
+              {
+                "term": "festival grounds",
+                "definition": "The designated area where the event takes place, including stages and related event space.",
+                "whyItMatters": "The grounds determine where crowds gather and how people move between performances."
+              }
+            ]
+          }
+        },
+        {
+          "id": "louisville-5-70023",
+          "title": "Longtime Louisville boutique closes after 24 years in the Highlands",
+          "kicker": "WDRB",
+          "summary": "A longtime Highlands clothing boutique in Louisville has closed after more than 24 years in business. The closing ends a run that lasted more than two decades in the neighborhood. For the local retail scene, it signals another neighborhood storefront disappearing from a familiar shopping district.",
+          "emailSummary": "A longtime Highlands clothing boutique has closed its doors after more than two decades in Louisville.",
+          "whyItMatters": "This matters because long-running neighborhood retailers help shape foot traffic and the character of local shopping corridors, so a closure can affect both nearby businesses and the area’s retail mix.",
+          "dataSignals": [
+            "Louisville local"
+          ],
+          "sourceLabel": "WDRB · Aug 12, 4:44 PM ET",
+          "sourceUrl": "https://www.wdrb.com/longtime-louisville-boutique-closes-after-24-years-in-the-highlands/video_d3f4f0a9-ddc5-5842-aad4-bd06b8245e63.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOODl2SDRGbVNTTU1QbldaU2MxQnRBUWxQMlFlNFZJakN6MnpGU3hzWGl1dWJDcWtYQl93Umd5dWpQSktUUGJkMlJzZDNZWC1wT0t5ZVJFSWFHZG8xQVB5dlRvMm1Tbk81Ni0ycGwxR0F3M20zaU8wOXAzTVJjSU5uNE12MjU2X2JBRFIwT0t2YW56VUFYVjl1SThtZFlWMUxGM04xamhjWFNGd1QtS2VJWWFTTEMzSjZRRlQ1WUxPdjdhS2NnMmpXaUVTU3J1LVFwdUE?oc=5",
+          "publishedAt": "2026-08-12T20:44:00+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a photo-caption item, not a full news story, so the key thing to notice is that the source text provides almost no factual claims beyond the business name and the image credit. When reading the source, the interpretation would change only if there were accompanying article text explaining an opening, renovation, sale, or other business development. Without that, the safest reading is that this is just a visual asset tied to a local business mention.",
+            "explanationText": "This is a local retail closure story, so the key fact is the business shut down after a long tenure rather than just changing ownership or relocating. When reading the source, pay attention to whether it explains the reason for closing or any follow-on plans, since that would change whether this is an isolated retirement/exit or part of a broader commercial trend.",
             "glossary": []
-          }
-        },
-        {
-          "id": "louisville-5-85806",
-          "title": "CRAWFORD | For Louisville QB Davin Wydner, the long way may be the right way",
-          "kicker": "WDRB",
-          "summary": "The piece is about Louisville quarterback Davin Wydner and frames his path as a possible “long way” to success. The description points to quarterbacks who took unconventional routes: Rodgers went through junior college before California, and Allen was barely recruited before ending up at Wyoming. Taken together, it suggests Wydner’s development may be viewed through the lens of late-blooming quarterbacks who needed time and a different path.",
-          "emailSummary": "Rodgers went through junior college before landing at California. Allen was barely recruited out of high school before eventually making his way…",
-          "whyItMatters": "This matters because quarterback development can affect how Louisville evaluates talent, patience, and future upside beyond a player’s first recruiting profile.",
-          "dataSignals": [
-            "Louisville local"
-          ],
-          "sourceLabel": "WDRB · Aug 11, 3:49 PM ET",
-          "sourceUrl": "https://www.wdrb.com/sports/crawford-for-louisville-qb-davin-wydner-the-long-way-may-be-the-right-way/article_ab100708-2a94-440b-ac04-195a08c10110.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOY1hOUllYdnJTZkZ5UWxCOTlkSktFeXBwdlVJRHJmOVI4ZHphUTlydnU2WTd6NmJwVU5Kd0JXbHNSS3ZUR0xicEZaa1RGb2dTeEl5bGkzWmFNUFZ0U2YtRHRpc1N6Vmt5bkd4S1JKdW1BTE1EM0xfeE5JWlc4VzBVMHkwZTBTZUFSSlRRTE5keGtZbGdld0twbDJfSTFuVXhIV09hNmprcDk1RTdQWnN4S21OTEJrbmRXQ2wzUGtsRDhCb2FQaGFoN2ZjWXFJZkJoSF9kYlpUaEozTmRhYk1QLTRteEpGQQ?oc=5",
-          "publishedAt": "2026-08-11T19:49:00+00:00",
-          "glossary": [
-            {
-              "term": "junior college",
-              "definition": "A two-year college program that many athletes use as a stepping stone to a four-year school."
-            },
-            {
-              "term": "recruited",
-              "definition": "The process of college programs actively pursuing and offering opportunities to a high school athlete."
-            },
-            {
-              "term": "quarterback (QB)",
-              "definition": "The offensive position that usually leads the play and throws the football."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a profile-style sports story about player development and career path, not a game recap or transaction report. When reading the source, pay attention to the comparison cases being used to frame Wydner’s trajectory, because those examples suggest the author is arguing that an unusual path can still lead to success. If the full story adds actual performance, recruiting, or roster details, that would change whether this is mainly a hopeful comparison or a concrete evaluation of Wydner’s chances.",
-            "glossary": [
-              {
-                "term": "junior college",
-                "definition": "A two-year college program that many athletes use as a stepping stone to a four-year school.",
-                "whyItMatters": "It signals an unconventional route to higher-level college football."
-              },
-              {
-                "term": "recruited",
-                "definition": "The process of college programs actively pursuing and offering opportunities to a high school athlete.",
-                "whyItMatters": "A player’s recruitment level helps indicate how highly he was initially regarded."
-              },
-              {
-                "term": "quarterback (QB)",
-                "definition": "The offensive position that usually leads the play and throws the football.",
-                "whyItMatters": "Quarterback development often drives how teams judge a player’s value and future."
-              }
-            ]
           }
         }
       ]
     }
   ],
   "errors": [
-    "ai: skipped 5 stories with no fetchable content",
-    "humana: skipped 5 stories with no fetchable content",
-    "analytics: skipped 1 story with no fetchable content",
-    "louisville: skipped 3 stories with no fetchable content"
+    "ai: skipped 4 stories with no fetchable content",
+    "energy: skipped 2 stories with no fetchable content",
+    "humana: skipped 2 stories with no fetchable content"
   ]
 }
