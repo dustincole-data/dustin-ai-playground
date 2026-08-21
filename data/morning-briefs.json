@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-20T09:00:12.922349+00:00",
-  "generatedLabel": "Aug 20, 5:00 AM ET",
+  "generatedAt": "2026-08-21T09:12:53.967100+00:00",
+  "generatedLabel": "Aug 21, 5:12 AM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -9,282 +9,279 @@
       "emptyMessage": "No qualified AI stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "ai-signal-2026-08-20_08-57-11-1",
-          "title": "OpenRouter joining Stripe ($7B+ deal) OpenRouter announced it's joining Stripe — the \"Stripe for LLMs\" b…",
+          "id": "ai-signal-2026-08-21_09-11-52-1",
+          "title": "GitHub Spec-Kit — open source spec-driven development toolkit, now mature GitHub's Spec-Kit (MIT, specif…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "OpenRouter announced it is joining Stripe in a deal described in the title as worth more than $7 billion. OpenRouter says it handles more than 10 trillion tokens a day across 400+ models and serves 10 million+ developers. The company says the product, name, and roadmap stay the same, with no integration changes, but the deal still has closing conditions. For AI developers and customers, that points to a major platform consolidation with little immediate disruption if the promise holds.",
-          "emailSummary": "OpenRouter joining Stripe ($7B+ deal) OpenRouter announced it's joining Stripe — the \"Stripe for LLMs\" becomes part of Stripe. OpenRouter proces…",
-          "whyItMatters": "This matters because a large AI infrastructure provider moving under Stripe could reshape how developers access and pay for model usage while leaving day-to-day workflows unchanged in the near term.",
-          "dataSignals": [
-            "model/tool release"
-          ],
-          "sourceLabel": "openrouter.ai · Aug 20, 4:57 AM ET",
-          "sourceUrl": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-08-20T08:57:11.650970+00:00",
-          "glossary": [
-            {
-              "term": "LLMs",
-              "definition": "Large language models, the AI systems that generate and understand text."
-            },
-            {
-              "term": "tokens",
-              "definition": "Small chunks of text that language models read and generate, often used to measure usage and cost."
-            },
-            {
-              "term": "closing conditions",
-              "definition": "Requirements that must be met before a deal is finalized."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a corporate deal story in the AI infrastructure layer, not a model-launch or product-review piece. When reading the source, focus on what is explicitly promised to stay unchanged: product, name, roadmap, and integrations. The interpretation would change if the closing conditions fail, if Stripe later alters the roadmap, or if the integration-free promise proves temporary.",
-            "glossary": [
-              {
-                "term": "LLMs",
-                "definition": "Large language models, the AI systems that generate and understand text.",
-                "whyItMatters": "OpenRouter is positioning itself as infrastructure for using these models across many providers."
-              },
-              {
-                "term": "tokens",
-                "definition": "Small chunks of text that language models read and generate, often used to measure usage and cost.",
-                "whyItMatters": "Processing 10+ trillion tokens per day signals the scale of OpenRouter's traffic and workload."
-              },
-              {
-                "term": "closing conditions",
-                "definition": "Requirements that must be met before a deal is finalized.",
-                "whyItMatters": "The move is not complete until these conditions are satisfied."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-signal-2026-08-20_08-57-11-2",
-          "title": "Microsoft patches \"CoSnitch\" Copilot data theft flaw (CVE-2026-24301) A single malicious link could auto…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "Microsoft has patched a Copilot data theft flaw tracked as CVE-2026-24301, nicknamed \"CoSnitch.\" The description says a single malicious link could auto-execute prompts and exfiltrate Gmail, Drive, and Calendar data without a click or confirmation. It involved three chained issues: an undocumented URL parameter, OAuth connector abuse that could read full email bodies, and persistent memory poisoning that survived password changes and session revocation. The flaw was reported by Varonis in December 2024 and fully patched on Aug. 18, 2026, with a CVSS score of 8.8.",
-          "emailSummary": "Microsoft patches \"CoSnitch\" Copilot data theft flaw (CVE-2026-24301) A single malicious link could auto-execute prompts and exfiltrate Gmail, D…",
-          "whyItMatters": "This matters because a flaw like this could let attackers quietly pull sensitive business and personal data from connected Google services through Microsoft Copilot, raising the risk of large-scale account and data compromise.",
-          "dataSignals": [
-            "AI operating signal",
-            "source checked"
-          ],
-          "sourceLabel": "csoonline.com · Aug 20, 4:57 AM ET",
-          "sourceUrl": "https://www.csoonline.com/article/4211342/microsoft-finally-patches-critical-one-click-copilot-vulnerability.html",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-08-20T08:57:11.650970+00:00",
-          "glossary": [
-            {
-              "term": "CVE",
-              "definition": "A Common Vulnerabilities and Exposures number is a standard ID used to track a specific security flaw."
-            },
-            {
-              "term": "OAuth",
-              "definition": "OAuth is a login and permission system that lets one app access another service's data with user authorization."
-            },
-            {
-              "term": "CVSS",
-              "definition": "The Common Vulnerability Scoring System rates how severe a security flaw is on a numerical scale."
-            },
-            {
-              "term": "session revocation",
-              "definition": "Session revocation means invalidating active sign-in sessions so a user or app can no longer keep using them."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a cybersecurity vulnerability report about a chain of weaknesses in an AI assistant and its connected services. When reading the source, focus on whether the issue required user interaction, what data sources were exposed, and whether the patch fully blocks the attack path. If any of those details change, the real-world risk changes a lot: a click-required bug is less dangerous than one that works from a single link and survives password resets.",
-            "glossary": [
-              {
-                "term": "CVE",
-                "definition": "A Common Vulnerabilities and Exposures number is a standard ID used to track a specific security flaw.",
-                "whyItMatters": "It lets defenders and vendors refer to the exact vulnerability being discussed and verify whether it is fixed."
-              },
-              {
-                "term": "OAuth",
-                "definition": "OAuth is a login and permission system that lets one app access another service's data with user authorization.",
-                "whyItMatters": "If OAuth is abused, an attacker may get access to connected email or files without stealing the password directly."
-              },
-              {
-                "term": "CVSS",
-                "definition": "The Common Vulnerability Scoring System rates how severe a security flaw is on a numerical scale.",
-                "whyItMatters": "A high score signals a more serious risk that organizations should prioritize quickly."
-              },
-              {
-                "term": "session revocation",
-                "definition": "Session revocation means invalidating active sign-in sessions so a user or app can no longer keep using them.",
-                "whyItMatters": "If a flaw survives session revocation, ordinary account cleanup may not fully remove the attacker’s access."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-signal-2026-08-20_08-57-11-3",
-          "title": "AGENTS.md standard gains steam — Cursor, Codex, and others onboard Claude Code issue #6235 (149 HN pts…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "AGENTS.md is getting broader support across AI coding tools, with Cursor and Codex already using the standard and a Claude Code GitHub issue asking for support as well. Cursor’s documentation now explicitly lists AGENTS.md support. For AI tooling, this points to a growing convention for how coding agents read project instructions, which could make workflows more portable across products.",
-          "emailSummary": "AGENTS.md standard gains steam — Cursor, Codex, and others onboard Claude Code issue #6235 (149 HN pts, 84 comments) requests AGENTS.md support…",
-          "whyItMatters": "This matters because a shared instruction format can reduce setup friction and make it easier for teams to move prompts, rules, and coding guidance between AI assistants.",
+          "summary": "GitHub Spec-Kit is an open-source, MIT-licensed toolkit for spec-driven development that now appears more mature at version 0.12.11. It uses a workflow that scaffolds a constitution, then a spec, plan, tasks, and implementation, and it works with more than 30 AI coding agents including Hermes, Claude Code, Codex CLI, Gemini CLI, Copilot, and Cursor. The toolkit can be used through /speckit.* slash commands or installable skills, with extensions, presets, and bundles for per-project customization. For AI tooling, that suggests a more standardized way to turn an idea into an implementation plan across different coding assistants.",
+          "emailSummary": "GitHub Spec-Kit — open source spec-driven development toolkit, now mature GitHub's Spec-Kit (MIT, specify init CLI) scaffolds constitution → spe…",
+          "whyItMatters": "This matters because more standardized spec-to-code workflows can reduce friction when teams use multiple AI coding tools and want more repeatable software development results.",
           "dataSignals": [
             "agent workflow",
             "Codex / coding agents",
             "developer workflow",
-            "Anthropic signal"
+            "workflow controls"
           ],
-          "sourceLabel": "agents.md · Aug 20, 4:57 AM ET",
-          "sourceUrl": "https://agents.md/",
+          "sourceLabel": "github.com · Aug 21, 5:11 AM ET",
+          "sourceUrl": "https://github.com/github/spec-kit",
           "googleNewsUrl": null,
-          "publishedAt": "2026-08-20T08:57:11.650970+00:00",
+          "publishedAt": "2026-08-21T09:11:52.705808+00:00",
           "glossary": [
             {
-              "term": "AGENTS.md",
-              "definition": "A markdown file used to store instructions for coding agents in a project."
+              "term": "open source",
+              "definition": "Software whose source code is publicly available for anyone to use, modify, and share under a license."
             },
             {
-              "term": "Claude Code",
-              "definition": "Anthropic’s coding-focused AI assistant tool."
+              "term": "MIT license",
+              "definition": "A very permissive software license that allows reuse, modification, and redistribution with few restrictions."
             },
             {
-              "term": "Cursor",
-              "definition": "An AI-powered code editor that includes agent features."
+              "term": "slash command",
+              "definition": "A command typed with a leading slash, often used inside chat or developer tools to trigger a built-in action."
             },
             {
-              "term": "Codex",
-              "definition": "An AI coding assistant or model-based tool for software tasks."
+              "term": "spec-driven development",
+              "definition": "A development approach that starts with a written specification and then derives plans and tasks from it before coding."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a tooling-adoption story, not a product-launch story: the key issue is whether a shared standard is catching on across AI coding products. When reading the source, focus on who is actually supporting AGENTS.md versus who is only requesting it, because that changes how established the standard really is. The interpretation would change a lot if support were only in one tool, or if major vendors later declined to adopt it.",
+            "explanationText": "This is a product/tooling story about an AI developer workflow, not a model release or a market event. When reading the source, pay attention to what the toolkit actually does: which steps it automates, which AI agents it supports, and how much customization it allows. The interpretation would change most if the tool were limited to a few agents, lacked customization, or was still experimental rather than mature.",
             "glossary": [
               {
-                "term": "AGENTS.md",
-                "definition": "A markdown file used to store instructions for coding agents in a project.",
-                "whyItMatters": "If multiple tools support it, teams can define one set of project rules instead of configuring each assistant separately."
+                "term": "open source",
+                "definition": "Software whose source code is publicly available for anyone to use, modify, and share under a license.",
+                "whyItMatters": "It determines whether teams can inspect, adapt, and adopt the toolkit freely."
               },
               {
-                "term": "Claude Code",
-                "definition": "Anthropic’s coding-focused AI assistant tool.",
-                "whyItMatters": "Its support for AGENTS.md would help determine whether the format becomes a broader industry convention."
+                "term": "MIT license",
+                "definition": "A very permissive software license that allows reuse, modification, and redistribution with few restrictions.",
+                "whyItMatters": "It affects how easily companies and developers can adopt the toolkit in their own projects."
               },
               {
-                "term": "Cursor",
-                "definition": "An AI-powered code editor that includes agent features.",
-                "whyItMatters": "Its documented support shows the standard is already being adopted in a mainstream developer tool."
+                "term": "slash command",
+                "definition": "A command typed with a leading slash, often used inside chat or developer tools to trigger a built-in action.",
+                "whyItMatters": "It shows one of the ways users can interact with the toolkit without leaving their workflow."
               },
               {
-                "term": "Codex",
-                "definition": "An AI coding assistant or model-based tool for software tasks.",
-                "whyItMatters": "Its adoption adds evidence that AGENTS.md is spreading beyond one vendor’s ecosystem."
+                "term": "spec-driven development",
+                "definition": "A development approach that starts with a written specification and then derives plans and tasks from it before coding.",
+                "whyItMatters": "It is the core workflow the toolkit is designed to standardize for AI-assisted coding."
               }
             ]
           }
         },
         {
-          "id": "ai-1-54250",
-          "title": "Murf AI launches Falcon 2, takes aim at OpenAI, ElevenLabs with lower-cost voice model",
-          "kicker": "CNBC TV18",
-          "summary": "Murf AI has launched Falcon 2, a voice AI model the Bengaluru startup says is designed to combine lower latency, voice quality, and lower cost. The company says the move is part of its push to compete more directly with OpenAI and ElevenLabs in voice AI. Murf AI is also considering a Series B fundraise later this year, while an IPO remains a longer-term goal as it builds out its voice-agent stack.",
-          "emailSummary": "Murf AI is stepping up its global voice AI ambitions with Falcon 2, which the Bengaluru-based startup says combines lower latency, voice quality…",
-          "whyItMatters": "This matters because cheaper, faster voice models could make voice AI more accessible for businesses and intensify competition in a market where performance and pricing both matter.",
+          "id": "ai-signal-2026-08-21_09-11-52-2",
+          "title": "Codex v0.147: Import from Claude Code / Cursor, --approve-for-me, MCP 2026-07-28 OpenAI shipped agent im…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "OpenAI shipped Codex v0.147 with import support for agent settings and work history from Claude Code, Claude Cowork, and Cursor, available in both the desktop app and CLI with /import. The release also adds a --approve-for-me auto-approval flag, Portable Agent Plugins with cross-catalog search, MCP 2026-07-28 support, and conversation sections. For AI tooling, this points to a push to make Codex easier to adopt and more interoperable with other agent environments.",
+          "emailSummary": "Codex v0.147: Import from Claude Code / Cursor, --approve-for-me, MCP 2026-07-28 OpenAI shipped agent imports (instructions, settings, skills, p…",
+          "whyItMatters": "This matters because smoother imports and broader protocol support can reduce switching costs for users and make Codex more attractive in a competitive AI coding-tool market.",
           "dataSignals": [
+            "agent workflow",
+            "Codex / coding agents",
+            "developer workflow",
+            "OpenAI signal"
+          ],
+          "sourceLabel": "releasebot.io · Aug 21, 5:11 AM ET",
+          "sourceUrl": "https://releasebot.io/updates/openai/codex",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-08-21T09:11:52.705808+00:00",
+          "glossary": [
+            {
+              "term": "CLI",
+              "definition": "A command-line interface, which lets users control software by typing commands into a terminal."
+            },
+            {
+              "term": "MCP",
+              "definition": "Model Context Protocol, a standard for connecting AI tools to external data sources and services."
+            },
+            {
+              "term": "Portable Agent Plugins",
+              "definition": "Plugins designed to work across different agent catalogs or ecosystems rather than only one app."
+            },
+            {
+              "term": "auto-approval flag",
+              "definition": "A setting that automatically approves certain actions or requests without asking the user each time."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a product-update story, so the key thing to watch is what is newly supported and how that changes compatibility with other tools. The most important interpretation shift would come from whether these features are mainly about convenience for existing users or a real step toward easier migration and broader ecosystem integration.",
+            "glossary": [
+              {
+                "term": "CLI",
+                "definition": "A command-line interface, which lets users control software by typing commands into a terminal.",
+                "whyItMatters": "It shows the feature is available beyond the desktop app, which matters for developers who work in terminals."
+              },
+              {
+                "term": "MCP",
+                "definition": "Model Context Protocol, a standard for connecting AI tools to external data sources and services.",
+                "whyItMatters": "Support for MCP can expand what an AI agent can access and do across different systems."
+              },
+              {
+                "term": "Portable Agent Plugins",
+                "definition": "Plugins designed to work across different agent catalogs or ecosystems rather than only one app.",
+                "whyItMatters": "This can make add-ons more reusable and reduce lock-in to a single AI platform."
+              },
+              {
+                "term": "auto-approval flag",
+                "definition": "A setting that automatically approves certain actions or requests without asking the user each time.",
+                "whyItMatters": "It can speed up agent workflows, but it also changes the balance between convenience and control."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-signal-2026-08-21_09-11-52-3",
+          "title": "Claude Code: 50% weekly limit boost extended through Aug 31, \"hope to make permanent\" Anthropic extended…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "Anthropic extended Claude Code’s 50% weekly limit boost through Aug. 31 and said, \"We hope to make this a permanent change,\" marking the fourth extension. The update also adds ANTHROPIC_DEFAULT_MODEL so new sessions start on a chosen model, archive plugin source installation from a ZIP over HTTPS, cross-session notify_when_idle and SendMessage features, and a self-hosted runner for Team and Enterprise users. For AI users, this points to higher usage capacity and more control over how Claude Code starts and runs across sessions.",
+          "emailSummary": "Claude Code: 50% weekly limit boost extended through Aug 31, \"hope to make permanent\" Anthropic extended the 50% boost for the 4th time with new…",
+          "whyItMatters": "This matters because higher limits and new admin/runtime options can make Claude Code more practical for heavier day-to-day development work and enterprise deployment.",
+          "dataSignals": [
+            "Anthropic signal",
             "model/tool release"
           ],
-          "sourceLabel": "CNBC TV18 · Aug 20, 4:11 AM ET",
-          "sourceUrl": "https://www.cnbctv18.com/business/startup/murf-ai-launches-falcon-2-takes-aim-at-openai-elevenlabs-lower-cost-voice-model-us-india-markets-19973477.htm/amp",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQcmZDMGprMHUtVE1NZFhOaDRmNmc5N3oxbkpXTTA3UUNHbUZzVnI5bXVnRnBFWXhIU1NEYjRGcWZaVDlQbjdmVUVhdEhILWlINWktdlpzQ0ZBY1lHbWFyazBSYURvcjNzT2tjTXVjSGNKemxxcV82WUVYTjZQLU0wZ3pFajhyVFhONlJXUDlsYUh6dmd6YVpqUTVoVnR3Q29nT3JaaTd2cjBzYzVnTVFEa0l2NzE5SU5WbGdybm9mU3FZbVJaNFZPTnVvc1lVcXpSRmJUc0ludkZ1UUJLUDlReEtRb01VSVdFUkY00gHrAUFVX3lxTFByZkMwamswdS1UTU1kWE5oNGY2Zzk3ejFuSldNMDdRQ0dtRnNWcjltdWdGcEVZeEhTU0RiNEZxZlpUOVBuN2ZVRWF0SEgtaUg1aS12WnNDRkFjWUdtYXJrMFJhRG9yM3NPa2NNdWNIY0p6bHFxXzZZRVhONlAtTTBnekVqOHJUWE42UldQOWxhSHp2Z3phWmpRNWhWdHdDb2dPclppN3ZyMHNjNWdNUURrSXY3MTlJTlZsZ3Jub2ZTcVltUlo0Vk9OdW9zWVVxelJGYlRzSW52RnVRQktQOVF4S1FvTVVJV0VSRjQ?oc=5",
-          "publishedAt": "2026-08-20T08:11:29+00:00",
+          "sourceLabel": "apidog.com · Aug 21, 5:11 AM ET",
+          "sourceUrl": "https://apidog.com/blog/claude-code-limits-extension-august-2026/",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-08-21T09:11:52.705808+00:00",
           "glossary": [
             {
-              "term": "latency",
-              "definition": "The delay between a request and the system’s response."
+              "term": "weekly limit boost",
+              "definition": "A temporary increase in how much a user can use the product each week."
             },
             {
-              "term": "Series B",
-              "definition": "A later-stage private funding round that companies use to scale after earlier startup investment rounds."
+              "term": "env var",
+              "definition": "Short for environment variable, a setting used by software to control behavior without changing the code."
             },
             {
-              "term": "IPO",
-              "definition": "An initial public offering, when a private company first sells shares to the public."
-            },
-            {
-              "term": "voice-agent stack",
-              "definition": "The set of software components used to build systems that can speak, listen, and act on user commands."
+              "term": "self-hosted runner",
+              "definition": "A job-execution service that runs on a company’s own infrastructure instead of a vendor’s cloud."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a business and product-launch story about competition in AI voice technology. When reading the source, pay attention to what the company says Falcon 2 improves, because the key claim is the tradeoff between speed, quality, and cost. The interpretation would change if independent testing shows the model does not actually outperform rivals on those metrics, or if the fundraising and IPO timeline shifts.",
+            "explanationText": "This is a product-update story, so the main thing to watch is which changes are about capacity versus control: the limit boost affects how much people can use Claude Code, while the other items change setup and workflow. Interpretation would change if the boost stops being temporary, if the model-setting feature becomes the default behavior, or if the self-hosted runner materially expands enterprise adoption.",
             "glossary": [
               {
-                "term": "latency",
-                "definition": "The delay between a request and the system’s response.",
-                "whyItMatters": "Lower latency usually means the voice model sounds more natural and responsive in real use."
+                "term": "weekly limit boost",
+                "definition": "A temporary increase in how much a user can use the product each week.",
+                "whyItMatters": "It affects how often developers can run Claude Code without hitting usage caps."
               },
               {
-                "term": "Series B",
-                "definition": "A later-stage private funding round that companies use to scale after earlier startup investment rounds.",
-                "whyItMatters": "A Series B can provide capital for product growth, hiring, and market expansion."
+                "term": "env var",
+                "definition": "Short for environment variable, a setting used by software to control behavior without changing the code.",
+                "whyItMatters": "It lets users choose the default model for new Claude Code sessions."
               },
               {
-                "term": "IPO",
-                "definition": "An initial public offering, when a private company first sells shares to the public.",
-                "whyItMatters": "An IPO can signal a company is maturing and may change how it is funded and valued."
-              },
-              {
-                "term": "voice-agent stack",
-                "definition": "The set of software components used to build systems that can speak, listen, and act on user commands.",
-                "whyItMatters": "A stronger stack can make voice assistants more capable and competitive."
+                "term": "self-hosted runner",
+                "definition": "A job-execution service that runs on a company’s own infrastructure instead of a vendor’s cloud.",
+                "whyItMatters": "It gives Team and Enterprise customers more control over security, compliance, and deployment."
               }
             ]
           }
         },
         {
-          "id": "ai-2-47261",
-          "title": "The Enterprise Journey, Reimagined with AI Agents",
-          "kicker": "Microsoft",
-          "summary": "Microsoft is highlighting Maven’s AI agents as a way for enterprises to do more than answer customer questions. The pitch is that these agents can help resolve issues faster, improve customer satisfaction, and deliver better outcomes at scale. For AI teams, this points to a shift from basic chat support toward automated action and issue resolution in enterprise workflows.",
-          "emailSummary": "What if customer support could do more than answer questions? Discover how Maven's AI agents help enterprises resolve issues faster, improve cus…",
-          "whyItMatters": "This matters because AI agents could reduce support workload, speed up response times, and improve service quality for organizations that handle large volumes of customer requests.",
+          "id": "ai-1-77101",
+          "title": "How AI Agent Data Residency Actually Works When Your Vendor Won't Say",
+          "kicker": "Startup Fortune",
+          "summary": "AI agent data residency is becoming a key factor in enterprise AI buying decisions, according to the title and description. The description says founders are losing reviews because they cannot say where data is stored or processed. For enterprises, that means vendors may be rejected even if the product itself is strong when they cannot clearly explain data location and handling.",
+          "emailSummary": "AI agent data residency requirements are becoming the deciding factor in enterprise AI procurement, and founders keep losing reviews because the…",
+          "whyItMatters": "This matters because unclear data residency can block enterprise deals, especially for customers with security, compliance, or jurisdiction requirements.",
           "dataSignals": [
-            "agent workflow"
+            "agent workflow",
+            "data-platform signal"
           ],
-          "sourceLabel": "Microsoft · Aug 19, 5:31 PM ET",
-          "sourceUrl": "https://www.microsoft.com/en-us/startups/blog/resolution-not-deflection-how-maven-uses-ai-agents-to-transform-the-enterprise-customer-journey/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNMmpwbEFUZUF0ODA4UDhlUmFxbjVDbTNMTWZCcU1xejV6a2pYN3E0ZmVySEU3TU4weWlMVWswTlUzYTlCRDRkUm9TejZza1dUaDQzV0hPNFdOOXVTSTVzTnBJNUpIa0FMNWM5RURfQ2NCb2w4ejlKcjJ4YWFiUUJHRjdkQ2RCLTVzWVBCa1p1bThRSkdmeVNyQWJScENPVV9yczMtZnZ6dkRlaHk4aWpSeVlrSDVGZk4zQVFYTzRuT1lJcWowOGtFNExWNFc1ZVN4cS01UlN3SXBwdw?oc=5",
-          "publishedAt": "2026-08-19T21:31:11+00:00",
+          "sourceLabel": "Startup Fortune · Aug 20, 5:43 PM ET",
+          "sourceUrl": "https://startupfortune.com/how-ai-agent-data-residency-actually-works-when-your-vendor-wont-say/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcGt2dnVtWTVZNHpLREs1a1NMdnZQb3pyTmFxZEtfQ2g0ekJSaW9iWWpQcUpJeVo5WlFxbkdNQmJ3Y3BKZ3hqNGRIcG4ybmUwMGc3a1ZhZFNldVd6NVFwZnZfRHQ3dDk5c0xJVldncUZzOXI4Yl9WRFhFZm9yaUdGN285SjB4d0o0MmVUSTlvaWpLZ0NPSjRCT0kwd3E?oc=5",
+          "publishedAt": "2026-08-20T21:43:51+00:00",
           "glossary": [
             {
-              "term": "AI agents",
-              "definition": "Software systems that can take steps toward a goal on behalf of a user, not just generate text."
+              "term": "data residency",
+              "definition": "The requirement that data be stored or processed in a specific country or region."
             },
             {
-              "term": "enterprise",
-              "definition": "A large organization or business that uses technology at scale."
+              "term": "enterprise AI procurement",
+              "definition": "The process large organizations use to evaluate and purchase AI products."
             },
             {
-              "term": "customer satisfaction",
-              "definition": "How well a service meets customer needs and expectations."
+              "term": "AI agent",
+              "definition": "Software that can take actions on its own to complete tasks using AI."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a product/technology announcement story, so the main thing to watch is the claimed business outcome, not just the AI branding. Read closely for what the agents are said to do, whether they are resolving issues or only assisting humans, and whether the source provides evidence or only a promise. If later reporting shows real deployment results, limitations, or failures, that would materially change how strong the claim is.",
+            "explanationText": "This is a procurement and compliance story, not a product-launch story. When reading the source, pay attention to what the vendor can prove about where data goes, because that can matter more than features in enterprise sales. If the story shows a way to verify residency or a regulatory requirement driving buyer behavior, that changes whether this is a marketing problem, a legal problem, or a deal-breaker for AI adoption.",
             "glossary": [
               {
-                "term": "AI agents",
-                "definition": "Software systems that can take steps toward a goal on behalf of a user, not just generate text.",
-                "whyItMatters": "The term signals a move from simple chatbots to tools that can actually help complete support tasks."
+                "term": "data residency",
+                "definition": "The requirement that data be stored or processed in a specific country or region.",
+                "whyItMatters": "Customers may only buy AI tools if they can control where their data lives."
               },
               {
-                "term": "enterprise",
-                "definition": "A large organization or business that uses technology at scale.",
-                "whyItMatters": "It suggests the product is aimed at operational use in bigger companies, where reliability and scale matter."
+                "term": "enterprise AI procurement",
+                "definition": "The process large organizations use to evaluate and purchase AI products.",
+                "whyItMatters": "Procurement checks often decide whether a vendor gets approved or turned down."
               },
               {
-                "term": "customer satisfaction",
-                "definition": "How well a service meets customer needs and expectations.",
-                "whyItMatters": "It is a key measure of whether AI support tools are actually improving the user experience."
+                "term": "AI agent",
+                "definition": "Software that can take actions on its own to complete tasks using AI.",
+                "whyItMatters": "Agents often touch sensitive business data, which raises residency and compliance concerns."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-2-90220",
+          "title": "Anthropic Races Toward an IPO While Open Source Models Close In on Claude",
+          "kicker": "Startup Fortune",
+          "summary": "Anthropic is reportedly aiming for a $2 trillion IPO while facing growing pressure from Chinese open source models such as Kimi K3. The description says those models are narrowing Claude’s coding advantage, and OpenRouter’s market share has fallen to 13.3%. In practical terms, the story points to a high-valuation race happening alongside intensifying competition in AI coding tools and model distribution.",
+          "emailSummary": "Anthropic targets a $2T IPO as Chinese open source models like Kimi K3 erode Claude's coding lead and OpenRouter market share drops to 13.3%.",
+          "whyItMatters": "This matters because shifts in model quality and market share can quickly change who captures developer demand, investor confidence, and long-term platform power in AI.",
+          "dataSignals": [
+            "article trigger",
+            "source credibility",
+            "practical impact"
+          ],
+          "sourceLabel": "Startup Fortune · Aug 20, 12:47 PM ET",
+          "sourceUrl": "https://startupfortune.com/anthropic-races-toward-an-ipo-while-open-source-models-close-in-on-claude/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcjNPNVpnRHplczBWeVdZQkxiWXJpNmtBT3pTZEZ2SkZfVnFsNDZRQUJpeHhaQnVLX0cxQ28wRzIwRkxmak8xYXdidjFUR3MtV0VCWWY3YzJCZzlWaDBSa0g3UFE4TXBCeEVwZlZEYzZnREQ3MVJjY0pfNV9UbjFFMTAweEVuMTVYNTVvdUJ1UEozYWJZUFV0bE5ZcXEwM2tjOGRN?oc=5",
+          "publishedAt": "2026-08-20T16:47:51+00:00",
+          "glossary": [
+            {
+              "term": "IPO",
+              "definition": "An initial public offering, when a company sells shares to the public for the first time."
+            },
+            {
+              "term": "open source model",
+              "definition": "An AI model whose code or weights are made available for others to use, modify, or build on."
+            },
+            {
+              "term": "market share",
+              "definition": "The portion of a market controlled by one company or product."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a competition-and-financing story in the AI sector: one company is pursuing a very large public-market valuation while rivals are closing the performance gap. When reading the source, pay attention to whether the numbers reflect real user adoption, benchmark performance, or investor speculation, because each would mean something different. If Claude’s coding lead keeps shrinking or OpenRouter’s share keeps falling, the interpretation shifts from isolated pressure to a broader competitive slowdown for Anthropic.",
+            "glossary": [
+              {
+                "term": "IPO",
+                "definition": "An initial public offering, when a company sells shares to the public for the first time.",
+                "whyItMatters": "It affects how much capital a company can raise and how the market values its business."
+              },
+              {
+                "term": "open source model",
+                "definition": "An AI model whose code or weights are made available for others to use, modify, or build on.",
+                "whyItMatters": "Open source models can spread quickly and pressure closed products by lowering switching costs."
+              },
+              {
+                "term": "market share",
+                "definition": "The portion of a market controlled by one company or product.",
+                "whyItMatters": "A falling market share can signal weakening adoption or stronger competition."
               }
             ]
           }
@@ -297,226 +294,244 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-5855",
+          "id": "energy-1-23469",
           "title": "PPL (PPL) Stock Looks Discounted Following Pennsylvania Data Center Power News",
-          "kicker": "simplywall.st",
-          "summary": "PPL’s stock has risen 55.7% over the past three years, but broader valuation checks still look cautious, suggesting the share price may already reflect a lot of optimism. Recent headlines about a large Pennsylvania power venture with Blackstone add a potential growth story that investors must balance against that weaker value score. For the utilities sector, the key question is whether new data-center-related power demand can justify the stock’s current valuation.",
+          "kicker": "Sahm",
+          "summary": "PPL stock has risen 55.7% over the past three years, but broader valuation checks are described as more cautious. The story frames this as a question of whether the current share price already reflects much of the upside. Recent headlines about a large Pennsylvania data center appear to be part of the backdrop for why the stock is being viewed as potentially discounted.",
           "emailSummary": "PPL stock has returned 55.7% over the past three years, yet its broader valuation checks lean more cautious. This raises a question about how mu…",
-          "whyItMatters": "This matters because utility investors need to judge whether expected new power demand is strong enough to support earnings growth and justify paying up for the stock.",
+          "whyItMatters": "This matters because utility investors care whether expected power demand is already priced in, since that affects both valuation and how much room the stock has to run.",
           "dataSignals": [
             "PPL mention",
             "data-center load"
           ],
-          "sourceLabel": "simplywall.st · Aug 19, 2:46 PM ET",
-          "sourceUrl": "https://simplywall.st/stocks/us/utilities/nyse-ppl/ppl/news/ppl-ppl-stock-looks-discounted-following-pennsylvania-data-c/amp",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORzdQNGtIWjVsNGIwUWFjSXNDcDdtVWxzbzZWSi0zSUJXVFd6aV82UEU2UlBhMTcydWVSODFmMlFKbHl2LTNVbi1RSDVfNkVkNDNLbmJWTlVBY1p4SW5idTN0UEVEcHNBNHlsdjlkR2RtMXZ1ZG5UUWwybnRHSW5wcHQzSGFNRlhzekdVVGJhMXlHSmg4OG5kX0lmSWt4YUUxbHY3bXV6eFl2MHdYc043Q3RZei1sTVFmUkFpUU9IdlRFd9IBwgFBVV95cUxORzdQNGtIWjVsNGIwUWFjSXNDcDdtVWxzbzZWSi0zSUJXVFd6aV82UEU2UlBhMTcydWVSODFmMlFKbHl2LTNVbi1RSDVfNkVkNDNLbmJWTlVBY1p4SW5idTN0UEVEcHNBNHlsdjlkR2RtMXZ1ZG5UUWwybnRHSW5wcHQzSGFNRlhzekdVVGJhMXlHSmg4OG5kX0lmSWt4YUUxbHY3bXV6eFl2MHdYc043Q3RZei1sTVFmUkFpUU9IdlRFdw?oc=5",
-          "publishedAt": "2026-08-19T18:46:11+00:00",
+          "sourceLabel": "Sahm · Aug 20, 7:36 AM ET",
+          "sourceUrl": "https://www.sahmcapital.com/news/content/ppl-ppl-stock-looks-discounted-following-pennsylvania-data-center-power-news-2026-08-19",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNeHJDWTVoMnNOZzJhRjR2OUVZMm51ZXRTN1UyQTBzNFRsT1hVNWl5NWtSVmhOSTNHRDR5SWZfelJ6VmVfWFVtT2FDUkZwWmRhbDV1bG5QaDZ6NThnU29XRE8wa05NT3FkaHpTMnVyWjJBcDJpZUd2dW1HU3Fxb013YnVXWUdWREZSUDRyc3lTSFRLZkE4amhDWWU5RmhHdlBNMUFYeWM3NmszeEVJN25ydm4zQ2g3alpxNnotVlRraF9IajQzSFFZ?oc=5",
+          "publishedAt": "2026-08-20T11:36:42+00:00",
           "glossary": [
             {
-              "term": "valuation",
-              "definition": "A way of estimating how expensive or cheap a stock is relative to the business behind it."
+              "term": "valuation checks",
+              "definition": "A set of measures used to judge whether a stock looks cheap or expensive relative to its fundamentals or peers."
+            },
+            {
+              "term": "share price",
+              "definition": "The current market price of one share of a company’s stock."
             },
             {
               "term": "data center",
-              "definition": "A facility full of servers and computing equipment that uses large amounts of electricity."
-            },
-            {
-              "term": "power venture",
-              "definition": "A business project or partnership focused on generating, supplying, or developing electricity-related infrastructure."
+              "definition": "A facility filled with servers and networking equipment that stores, processes, and moves digital data."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a valuation-and-growth story, not a report of a completed business deal or earnings release. When reading the source, pay attention to whether the market is being asked to price in future demand from the Pennsylvania power venture, because that is what would change the interpretation. If the venture turns out to be larger or more certain than it sounds here, the stock’s cautious value score could look too conservative; if not, the “discounted” case is weaker.",
+            "explanationText": "This is a valuation-driven market story, not an operational earnings update. When reading it, focus on whether the stock’s recent gains have already captured the expected benefit from data center-driven power demand. If the data center news turns out to be larger, more certain, or more profitable than implied here, that would support the bullish case; if not, the cautious valuation view matters more.",
             "glossary": [
               {
-                "term": "valuation",
-                "definition": "A way of estimating how expensive or cheap a stock is relative to the business behind it.",
-                "whyItMatters": "Valuation helps investors decide whether PPL’s current price leaves room for more gains or already prices in the good news."
+                "term": "valuation checks",
+                "definition": "A set of measures used to judge whether a stock looks cheap or expensive relative to its fundamentals or peers.",
+                "whyItMatters": "These checks help investors decide if a share price leaves upside on the table or already reflects expected growth."
+              },
+              {
+                "term": "share price",
+                "definition": "The current market price of one share of a company’s stock.",
+                "whyItMatters": "For utilities, the share price is what investors compare against future demand and earnings expectations."
               },
               {
                 "term": "data center",
-                "definition": "A facility full of servers and computing equipment that uses large amounts of electricity.",
-                "whyItMatters": "Data centers can create major new electricity demand, which can boost a utility’s growth outlook."
-              },
-              {
-                "term": "power venture",
-                "definition": "A business project or partnership focused on generating, supplying, or developing electricity-related infrastructure.",
-                "whyItMatters": "The venture could signal new revenue opportunities or capital needs for PPL."
+                "definition": "A facility filled with servers and networking equipment that stores, processes, and moves digital data.",
+                "whyItMatters": "Large data centers can drive major electricity demand, which can affect a utility’s growth outlook."
               }
             ]
           }
         },
         {
-          "id": "energy-2-90202",
-          "title": "TVA will consider a new electricity rate for data centers this week",
-          "kicker": "WKMS",
-          "summary": "The Tennessee Valley Authority is set to discuss a special electricity rate for large industrial customers at its quarterly board meeting Thursday. That group would include many data centers. If approved or advanced, the change could affect how much large power users pay for electricity in the TVA service area.",
-          "emailSummary": "The Tennessee Valley Authority is set to discuss a special rate for large industrial customers, which will include many data centers, at its qua…",
-          "whyItMatters": "This matters because electricity pricing for data centers can influence where these facilities are built, how much they cost to operate, and what revenue and load growth local utilities see.",
+          "id": "energy-2-70247",
+          "title": "New study shows Kentucky data center could generate up to $435 million in local tax revenue",
+          "kicker": "WDRB",
+          "summary": "A new study says a typical 400-megawatt data center in Kentucky could generate up to $435 million in local tax revenue. The analysis examined the economic impact over the project’s two-year construction period and its first 10 years of operation. For the Energy / Utilities sector, the key takeaway is that very large data centers can meaningfully affect local government finances as well as power demand.",
+          "emailSummary": "The analysis looked at the potential economic impact of a typical 400-megawatt data center in Kentucky over its two-year construction period and…",
+          "whyItMatters": "This matters because large data centers can bring major tax revenue while also shaping electricity planning, infrastructure needs, and utility load growth in the communities that host them.",
           "dataSignals": [
             "data-center load",
             "rate / bill impact"
           ],
-          "sourceLabel": "WKMS · Aug 19, 11:12 AM ET",
-          "sourceUrl": "https://www.wkms.org/energy/2026-08-19/tva-will-consider-a-new-electricity-rate-for-data-centers-this-week",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVDlwSDRrNVJIOGs2UEdvVmdoMmttdEFOYW5BdXVVTVJHRC1PeGxHc01RSlNMbWVTNHlvUURFTkd3MEJ3Ql90SGdPcEZDTFRDZTVJU2tMQzV3aUdJeDh4NHZzUVp0eUxZdEo2Y1BCQXpwLXpYb21vSENfZjA2b0VLNWFBd0txeXZxVUVOSXpucG55SHN4aU5RbWxQMTdSNzNMUTVJM0V6QXdpZw?oc=5",
-          "publishedAt": "2026-08-19T15:12:00+00:00",
+          "sourceLabel": "WDRB · Aug 20, 6:35 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/new-study-shows-kentucky-data-center-could-generate-up-to-435-million-in-local-tax/article_2c69d2fe-6f96-4229-92a0-39827aebc7e8.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQYlJVaXRIbGZrTkFRQV9VQWdoSlN6MWYwT3R5LWtMczF5eDlvdFFpMm95VmhLaHFjWmQ4TFBnSVRCSDlXWUUwano0NUJvTkpZLXlZMFMwbEZzMm81NXVYR0pRSXBXRXhVWlBJQk93X280YU5Cb0lOMENaTnJOaVJqZ1lnODFOclB3cTRUXzhEX0pTdlBPZ3djLUt6NmNDejN0c0RSbmxhZWw5YXNQNUtaTll6bkY1MnFRY1lBSlpCcUk1cGVTOXdfcEs1T3NDY0xNYm1CdlBmNlUyNUxhbkVFSmJGeldsa18yUURRNGpMdw?oc=5",
+          "publishedAt": "2026-08-20T22:35:00+00:00",
           "glossary": [
-            {
-              "term": "Tennessee Valley Authority (TVA)",
-              "definition": "A federally owned utility that generates and sells electricity across parts of the Tennessee Valley region."
-            },
-            {
-              "term": "industrial customer",
-              "definition": "A business or facility that uses large amounts of electricity for production or operations."
-            },
             {
               "term": "data center",
               "definition": "A facility full of servers and networking equipment that stores, processes, and moves digital data."
             },
             {
-              "term": "board meeting",
-              "definition": "A formal meeting where an organization's governing board reviews and discusses policy or rate decisions."
+              "term": "megawatt",
+              "definition": "A unit of power equal to one million watts, often used to describe the size of an electricity load or power plant."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a utility-rate story, so the key thing to watch is whether the TVA is only discussing the idea or moving toward an actual approved rate. The words \"special rate\" and \"large industrial customers\" are the main clues about who would be affected. If the proposal is aimed specifically at data centers, that would matter for regional power demand and for the economics of new facilities; if it is broader, the impact could be wider than data centers alone.",
+            "explanationText": "This is an economic-impact story tied to energy infrastructure: it focuses on what a large data center could mean for tax revenue in Kentucky, not on the technical design of the facility. When reading the source, pay attention to the assumed size of the data center, the time window used in the analysis, and whether the study is describing a typical project or a specific proposed site. If those assumptions change, the tax and utility implications could change a lot.",
             "glossary": [
-              {
-                "term": "Tennessee Valley Authority (TVA)",
-                "definition": "A federally owned utility that generates and sells electricity across parts of the Tennessee Valley region.",
-                "whyItMatters": "TVA's rate decisions affect large power users across the region, including data centers."
-              },
-              {
-                "term": "industrial customer",
-                "definition": "A business or facility that uses large amounts of electricity for production or operations.",
-                "whyItMatters": "Special rates for industrial customers can significantly change operating costs for the biggest users of power."
-              },
               {
                 "term": "data center",
                 "definition": "A facility full of servers and networking equipment that stores, processes, and moves digital data.",
-                "whyItMatters": "Data centers are heavy electricity users, so their rates can be a major utility and economic-development issue."
+                "whyItMatters": "Data centers are major electricity users, so their size and location can affect utility demand and local infrastructure planning."
               },
               {
-                "term": "board meeting",
-                "definition": "A formal meeting where an organization's governing board reviews and discusses policy or rate decisions.",
-                "whyItMatters": "Important utility pricing changes often begin at board meetings before any final action is taken."
+                "term": "megawatt",
+                "definition": "A unit of power equal to one million watts, often used to describe the size of an electricity load or power plant.",
+                "whyItMatters": "A 400-megawatt facility is very large, which signals substantial energy demand and possible grid impacts."
               }
             ]
           }
         },
         {
-          "id": "energy-3-20821",
-          "title": "China Pushes AI Data Centers Into Rural West to Tap Surplus Power",
-          "kicker": "finance.biggo.com",
-          "summary": "China is rapidly expanding data center construction in rural western provinces such as Guizhou and Inner Mongolia. The stated aim is to move AI data centers into areas with surplus power in the west. For energy and utilities, that points to demand shifting toward regions with available electricity generation rather than major population centers.",
-          "emailSummary": "China is rapidly expanding data center construction in rural western provinces such as Guizhou and Inner Mongolia under its \"Eastern Data Wester…",
-          "whyItMatters": "This matters because where large data centers are built can reshape regional power demand, transmission needs, and investment in generation and grid infrastructure.",
+          "id": "energy-3-87013",
+          "title": "Deutsche Bank AG Acquires 393,748 Shares of PPL Corporation $PPL",
+          "kicker": "MarketBeat",
+          "summary": "Deutsche Bank AG increased its stake in PPL Corporation by 23.7% in the second quarter, according to a filing with the Securities and Exchange Commission. The filing says Deutsche Bank now owns 2,056,733 shares of the utilities provider. For investors watching the sector, this is a sign of a large institutional holder adding to a regulated utility position.",
+          "emailSummary": "Deutsche Bank AG lifted its stake in shares of PPL Corporation (NYSE:PPL - Free Report) by 23.7% during the second quarter, according to its mos…",
+          "whyItMatters": "This matters because changes in large institutional ownership can signal how major investors view a utility company’s prospects and can influence market attention around the stock.",
           "dataSignals": [
-            "data-center load"
+            "PPL mention"
           ],
-          "sourceLabel": "finance.biggo.com · Aug 19, 2:35 PM ET",
-          "sourceUrl": "https://finance.biggo.com/news/d27e4240-be1f-4ee7-a93a-3a9451b0463c",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5UNVJSM3lTMWswTUpJbUhpRFZMMVNmTjB1RnBPazBJOFBFMklnVjM3VTdlblFtNkRrZy1oRVU2czFwLTVXckREaXhSdjVkU2dNbTBuSV9Obl9qdng1NmQ1VGpueW9Ba3JmZW9sbkFOTEFDTFlvbmc?oc=5",
-          "publishedAt": "2026-08-19T18:35:00+00:00",
+          "sourceLabel": "MarketBeat · Aug 21, 4:10 AM ET",
+          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-deutsche-bank-ag-acquires-393748-shares-of-ppl-corporation-ppl-2026-08-21/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMUNKeFliUUlUNUZVQXI1WTdyczAwRlBEU0R1NVVCLU5iY3lvcTVTbTZaSHVoMGRqX0ZtY05kX1lDeFJ4MUEwdnBpT0hqSkE3X3ZZc0hjdlF5ZUlLT1FxWUJpbzlFVjlBeHNzVHJ1VVJhdzhPRVpXRDVGd1FvdGhpWGNKUGdFeTNFRHFBZ24wZmRyeXpQS05Za21DQ2FjaEpGSFhlTUlyVkhBaDZGNEZ1eDVoUjZKY3RhWWVZeVY1RVk?oc=5",
+          "publishedAt": "2026-08-21T08:10:13+00:00",
           "glossary": [
             {
-              "term": "Eastern Data Western…",
-              "definition": "A policy or program name referring to shifting data-related computing from eastern China to western regions."
+              "term": "stake",
+              "definition": "The amount of a company’s stock that an investor owns."
+            },
+            {
+              "term": "institutional investor",
+              "definition": "A large organization such as a bank, fund, or insurer that invests money on behalf of clients or members."
+            },
+            {
+              "term": "SEC filing",
+              "definition": "A formal report submitted to the U.S. Securities and Exchange Commission about ownership or financial activity."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a supply-and-infrastructure story, not a consumer energy-price story. When reading the source, pay attention to where the data centers are being placed and whether the move is driven by cheaper or more available electricity. The interpretation would change if the expansion is mainly a policy push versus a real grid-capacity advantage, because those imply very different effects on utilities and transmission planning.",
+            "explanationText": "This is an ownership-change story, not an operating-results story, so the main thing to watch is the size and direction of the share change. A larger purchase or sale can matter more when it comes from a major institution like Deutsche Bank, but the interpretation changes if the filing reflects passive portfolio rebalancing rather than a deliberate bullish or bearish bet.",
             "glossary": [
               {
-                "term": "Eastern Data Western…",
-                "definition": "A policy or program name referring to shifting data-related computing from eastern China to western regions.",
-                "whyItMatters": "If the story refers to a formal policy, it suggests government-directed relocation rather than isolated private investment."
+                "term": "stake",
+                "definition": "The amount of a company’s stock that an investor owns.",
+                "whyItMatters": "It shows how much exposure an investor has to the company’s performance."
+              },
+              {
+                "term": "institutional investor",
+                "definition": "A large organization such as a bank, fund, or insurer that invests money on behalf of clients or members.",
+                "whyItMatters": "Institutional moves can be a stronger market signal than small individual trades."
+              },
+              {
+                "term": "SEC filing",
+                "definition": "A formal report submitted to the U.S. Securities and Exchange Commission about ownership or financial activity.",
+                "whyItMatters": "These filings are the source for verifying who owns what in a public company."
               }
             ]
           }
         },
         {
-          "id": "energy-4-70000",
-          "title": "Local officials weigh safeguards as data center concerns grow",
-          "kicker": "Messenger-Inquirer",
-          "summary": "Daviess County resident Rene Kuegel started researching data centers after talk spread earlier this year about one potentially coming to the city. The story points to local officials considering safeguards as concerns about data centers grow. In practical terms, this signals that any proposed project may face closer public scrutiny over its local impacts.",
-          "emailSummary": "Daviess County resident Rene Kuegel began researching data centers when talk of one potentially coming to the city began circulating earlier thi…",
-          "whyItMatters": "This matters because data center siting can affect energy use, land use, and local infrastructure decisions in the community.",
+          "id": "energy-4-74798",
+          "title": "Kentucky leaders debate role in AI data center boom",
+          "kicker": "WKYT",
+          "summary": "Kentucky leaders are debating how the state should position itself in the country’s artificial intelligence boom. The discussion is being driven by proposals for new data centers in eastern, central, and western Kentucky. For the energy and utilities sector, that points to potentially larger electricity demand and new infrastructure questions if those projects move forward.",
+          "emailSummary": "Kentucky is working to find its place in the nation's artificial intelligence boom, with proposals for new data centers emerging in the eastern…",
+          "whyItMatters": "This matters because large data centers can significantly increase power demand and affect planning for generation, transmission, and local utility capacity across Kentucky.",
           "dataSignals": [
             "data-center load"
           ],
-          "sourceLabel": "Messenger-Inquirer · Aug 19, 7:00 PM ET",
-          "sourceUrl": "https://www.messenger-inquirer.com/news/local/local-officials-weigh-safeguards-as-data-center-concerns-grow/article_a053db80-ae80-5c71-83a5-35c19fd4cee8.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOa0JVSUhSQy1nTFpoUTZuOTVzdG5WVEdua29xRlBSbVhRYi03UmdNR3cxUm5iSEVrcTBrWEUxdmpuR0pUWjlFaFN2WFFSS202S1JHZkFQTHZZT2ZYWjBZZWlNSDc2TlhvWlNxWG01b3MzNmN4UzdrN1pJWVo0THlIRW9CR1FCMWxHdmRTM0JVZC1TV3FxNFVzVHFiQTFWeXF1RFkteGZnMmNmR2NiYmlEa21ZaXdIVEE2eTNkSmtYV2ZtMXU2Ymd2Zlc1VTFIYlRJM1YxZkw4MlQ5VkVEek9KVEJIRko2eWc3bkpJRURn?oc=5",
-          "publishedAt": "2026-08-19T23:00:00+00:00",
+          "sourceLabel": "WKYT · Aug 20, 10:19 PM ET",
+          "sourceUrl": "https://www.wkyt.com/2026/08/21/kentucky-leaders-debate-role-ai-data-center-boom/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa3VJdWR1bVJhWVdlU1hQUHh1a1pNVlVqN3VXTV9scFJ3VU5lZU5aQ3c2UFRWRHdSXzY3ejhlRGd1VEtJYUxwd25lb0RmM2llcGx2eXZvdWpWUDNPZTBUWjVFNWJEV3ItZmVUUVFxQVZwZ2ZuMGVXb2ttYnV0dmVsaHRxajZZRW1k?oc=5",
+          "publishedAt": "2026-08-21T02:19:00+00:00",
           "glossary": [
+            {
+              "term": "artificial intelligence (AI) boom",
+              "definition": "A rapid increase in investment, development, and use of AI technologies and the businesses that support them."
+            },
             {
               "term": "data center",
-              "definition": "A facility full of computer servers and related equipment used to store, process, and move digital data."
+              "definition": "A facility full of servers and other equipment used to store, process, and move digital information."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a local government and community-oversight story, not a technical deep dive about the data center itself. When reading the source, pay attention to which safeguards officials are considering and what specific concerns residents raise, since those details determine whether the project is treated as a routine development or a higher-impact utility issue. The meaning would change if the site were confirmed, if safeguards were adopted, or if officials found the concerns to be minor.",
+            "explanationText": "This is a policy-and-infrastructure story, not a technology product story. When reading the source, pay attention to where the proposed data centers would go and how state leaders frame Kentucky’s role, because that will signal whether the state is trying to attract development, manage grid impacts, or both. The interpretation would change if the proposals are large-scale or if utilities say they can support them without major upgrades.",
             "glossary": [
               {
+                "term": "artificial intelligence (AI) boom",
+                "definition": "A rapid increase in investment, development, and use of AI technologies and the businesses that support them.",
+                "whyItMatters": "AI growth is the reason new data centers are being proposed and is the main driver of expected electricity demand."
+              },
+              {
                 "term": "data center",
-                "definition": "A facility full of computer servers and related equipment used to store, process, and move digital data.",
-                "whyItMatters": "Data centers can create questions about power demand, noise, water use, and tax benefits when they are proposed locally."
+                "definition": "A facility full of servers and other equipment used to store, process, and move digital information.",
+                "whyItMatters": "Data centers are major electricity users, so their location can affect utility load and infrastructure needs."
               }
             ]
           }
         },
         {
-          "id": "energy-5-88963",
-          "title": "Data center moratorium ordinance passes unanimously in Lyon County",
-          "kicker": "WPSD Local 6",
-          "summary": "Lyon County magistrates unanimously passed a moratorium ordinance on data centers, after continued discussion with Judge Executive Jaime Green-Smith. The description says local leaders raised concerns that the Lake Barkley area may not be suitable for a data center. For energy and utilities, this signals a pause on major development while officials weigh local fit and potential impacts before allowing such projects.",
-          "emailSummary": "The Lake Barkley area may not be suitable for a data center, Lyon County magistrates and Judge Executive Jaime Green-Smith said in continued dis…",
-          "whyItMatters": "This matters because a moratorium can delay or stop large power- and land-intensive data center projects, affecting local utility planning, grid demand, and economic development.",
+          "id": "energy-5-99117",
+          "title": "OpenSearch Enhances Alerting with PPL, Unified Alert Manager for SREs",
+          "kicker": "TechGig",
+          "summary": "OpenSearch has added new alerting features aimed at site reliability engineers, including support for Piped Processing Language (PPL) and a unified Alert Manager. The company says the changes are meant to make alerting more nuanced and to improve incident response and observability management. For teams that run critical systems, this points to better control over when alerts fire and how they are handled.",
+          "emailSummary": "OpenSearch has unveiled new alerting capabilities designed for site reliability engineers (SREs), including a Piped Processing Language (PPL) fo…",
+          "whyItMatters": "This matters because stronger alerting and incident coordination can help operations teams spot problems faster and reduce downtime in systems that must stay reliable.",
           "dataSignals": [
-            "data-center load"
+            "PPL mention"
           ],
-          "sourceLabel": "WPSD Local 6 · Aug 19, 5:25 PM ET",
-          "sourceUrl": "https://www.wpsdlocal6.com/news/data-center-moratorium-ordinance-passes-unanimously-in-lyon-county/article_3e62c03d-096f-42d0-b78d-d1f7e51be074.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNa2xqSnQtalRpR3E1dHhiOXZRYm91ajFWWWptbEpwRXdva19ZUjV2S1Rzc3dCWC05T0dCbUdfVUc5dGdMeDFNejVLVGlqZE1xZnlwVWYyWVY4bnI5ajZXdVROak1vd2FVcXlKaDlCS2JOYnp5Nm1DWERkMzgyUk9qeVd4VjBOZ3k4RmZMeWJ4ci0tZXU1Y0RkMG9HYTZZaXZ3T0RZQnh1bmR1ZDJ6MUc1OTBoSG9KcFB2dEpOemJzd1pFLS1oQWVxVzhRdUhodGo2X0w0ZW5qZlQ5cWRtMGJGRUNR?oc=5",
-          "publishedAt": "2026-08-19T21:25:31+00:00",
+          "sourceLabel": "TechGig · Aug 20, 8:20 PM ET",
+          "sourceUrl": "https://techgig.com/news/cloud-infrastructure/opensearch-enhances-alerting-with-ppl-unified-alert-manager-for-sres/133390329",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZ2lEbW0tRmp0dzhaUndqSHQwbF9KLVRCQUtKalI4VnhqU3k5cFNXQjdUd1ZqWjRxZnc0S01LaDZxcTZVUHlFRUZTREI3QnAxNWVXYjBUUE5PMXRWMHIzVmdyVU1iS3lGN0Z2WmNYTXZPeFg3cllTTHVwZW9tekJpTjlTLVlQTG1aMXIxMVFUY0YyQ19iWW5pYUFRbklLVlhTQ0RmdVYtNUozcWxTZzRFckx4c0hOaUJ4T18xcGNsa1lvZ9IBxwFBVV95cUxQODE5ZEY4ZUtBclYxUDNyX0hOd0J0bjBPanhydm5jaGNfWnA4TVlFNGYzM1k4UTJKOGpqaE1VTG9TRngtOEJDWWx5ZTdyYzVRNGc0bFNHbDc3UkFMeUx2a1VJcThCSGhmWmtGM3JMLVlHWkpzNmVkR3lseEdoWXpGcHVPQkZoc3I1aVFvTElweU5yaEtlQTVFN1dmai13TjYycVFXd3ZLdEtVb2JPQUVBSzdwTTNZV0VyS1dBSjhvM1lkUEVoVERB?oc=5",
+          "publishedAt": "2026-08-21T00:20:22+00:00",
           "glossary": [
             {
-              "term": "moratorium",
-              "definition": "A temporary ban or pause on a specific activity or type of project."
+              "term": "OpenSearch",
+              "definition": "An open-source search and analytics platform used to store, query, and monitor data."
             },
             {
-              "term": "magistrates",
-              "definition": "Elected county officials who help make local government decisions."
+              "term": "Site Reliability Engineer (SRE)",
+              "definition": "An engineer focused on keeping software systems stable, available, and performant."
             },
             {
-              "term": "Judge Executive",
-              "definition": "The chief elected county official in some Kentucky counties, similar to a county executive."
+              "term": "Piped Processing Language (PPL)",
+              "definition": "A query language that lets users chain data-processing steps together in a pipeline."
+            },
+            {
+              "term": "Observability",
+              "definition": "The practice of understanding a system’s health by collecting and analyzing logs, metrics, and traces."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a local government and land-use story, not a technical energy report. When reading it, focus on what the ordinance actually does, whether it is temporary or permanent, and what county officials cite as the reason for concern. The interpretation would change if later reporting shows the moratorium is narrowly targeted, quickly replaced by new rules, or tied to specific utility or zoning constraints.",
+            "explanationText": "This is a product-update story about monitoring and incident response tools, not a market or policy story. When reading the source, focus on what the new features do—especially whether they change how alerts are defined, grouped, or routed—and whether they are aimed at reducing noise or speeding response. The interpretation changes if the update is mostly a usability improvement versus a deeper change in how alert logic works.",
             "glossary": [
               {
-                "term": "moratorium",
-                "definition": "A temporary ban or pause on a specific activity or type of project.",
-                "whyItMatters": "It means data center development is being held up while officials decide what rules or limits should apply."
+                "term": "OpenSearch",
+                "definition": "An open-source search and analytics platform used to store, query, and monitor data.",
+                "whyItMatters": "It is the software adding the new alerting features in this story."
               },
               {
-                "term": "magistrates",
-                "definition": "Elected county officials who help make local government decisions.",
-                "whyItMatters": "They are the body that approved the ordinance, so their vote determines whether the pause takes effect."
+                "term": "Site Reliability Engineer (SRE)",
+                "definition": "An engineer focused on keeping software systems stable, available, and performant.",
+                "whyItMatters": "The new alerting tools are specifically designed for this role."
               },
               {
-                "term": "Judge Executive",
-                "definition": "The chief elected county official in some Kentucky counties, similar to a county executive.",
-                "whyItMatters": "This office is central to county-level decisions about land use and development."
+                "term": "Piped Processing Language (PPL)",
+                "definition": "A query language that lets users chain data-processing steps together in a pipeline.",
+                "whyItMatters": "It can make alert rules more precise by allowing more flexible ways to define conditions."
+              },
+              {
+                "term": "Observability",
+                "definition": "The practice of understanding a system’s health by collecting and analyzing logs, metrics, and traces.",
+                "whyItMatters": "The new Alert Manager is meant to improve observability management, which affects how teams monitor systems."
               }
             ]
           }
@@ -529,201 +544,101 @@
       "emptyMessage": "No qualified Humana / Health Insurance stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "humana-1-41425",
-          "title": "First National Bank of Omaha Takes Position in Humana Inc. $HUM",
+          "id": "humana-1-44231",
+          "title": "Tocqueville Asset Management L.P. Buys Shares of 66,567 Humana Inc. $HUM",
           "kicker": "MarketBeat",
-          "summary": "First National Bank of Omaha bought a new position in Humana Inc. during the second quarter, according to its latest filing with the SEC. The fund purchased 2,766 shares of the health insurance company. For Humana, this is a straightforward institutional ownership update rather than an operating or earnings announcement.",
-          "emailSummary": "First National Bank of Omaha purchased a new position in shares of Humana Inc. (NYSE:HUM - Free Report) during the second quarter, according to…",
-          "whyItMatters": "This matters because changes in institutional holdings can signal how large investors are positioning around a health insurer's stock.",
+          "summary": "Tocqueville Asset Management L.P. bought a new stake in Humana Inc. during the second quarter, according to the company’s latest filing with the Securities and Exchange Commission. The purchase totaled 66,567 shares. For Humana investors, this is a routine institutional ownership update that shows a fund adding exposure to the stock, but it does not by itself say anything about the firm’s operating results or outlook.",
+          "emailSummary": "Tocqueville Asset Management L.P. bought a new stake in shares of Humana Inc. (NYSE:HUM - Free Report) during the second quarter, according to t…",
+          "whyItMatters": "This matters because institutional buying can signal where professional investors are putting capital, which may influence how the market reads demand for Humana shares.",
           "dataSignals": [
             "Humana mention"
           ],
-          "sourceLabel": "MarketBeat · Aug 20, 4:12 AM ET",
-          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-first-national-bank-of-omaha-takes-position-in-humana-inc-hum-2026-08-20/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNRVNZY0pLYl8wdDlMTXBxUE1ScVdfZnk2LXhvWFJadl9WcVdQaEpOODluWWQwNkpHeC1jOG1OZUx6SEFwNEhmUXpFOGVZS2pabzNJY0hYd1FQZFhhdEhhanA3a2N0V1NucG9WTS1jdlZCUmcxb1d2NWI1cVpENHVGUmxpbFVVcGFfeEVxN1gzbXFfVVJoc2djMTc3bFVnYWJKRjRwaVljd2ZBQkJqaFZBOGFhZFdZM0tqbHduNy1aVQ?oc=5",
-          "publishedAt": "2026-08-20T08:12:23+00:00",
+          "sourceLabel": "MarketBeat · Aug 20, 6:12 AM ET",
+          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-tocqueville-asset-management-lp-buys-shares-of-66567-humana-inc-hum-2026-08-20/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPcE54QkFXLUZKUF92VUdDQWFEa3RFRDhlNmx4TW9Ed1RPOGc1NGNESWVWVGRRTkxwdEdUTGtMRTUtWGZaeHp6YTA0UkVNZHpCX00yMUVLSTdjWWpmdnIwYk45VVBSX0dmeUNYeWxJZjYwZldnLURid0NYTkhGVVRMMTl1MDZMT0ZFMXdFR00xc3VqNGhPTDRISWN1ZE5RdS1faElyMjIwWm42Q2JFSUQzVkczdnBMZHlYS1V2R01kRWpmdE44R0VJ?oc=5",
+          "publishedAt": "2026-08-20T10:12:59+00:00",
           "glossary": [
-            {
-              "term": "position",
-              "definition": "An investment holding in a particular stock or asset."
-            },
-            {
-              "term": "SEC filing",
-              "definition": "A formal report submitted to the U.S. Securities and Exchange Commission that discloses financial or ownership information."
-            },
-            {
-              "term": "institutional investor",
-              "definition": "A large organization such as a bank, fund, or insurer that invests money on behalf of others."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is an ownership or trading-signal story, not a business-performance story. When reading the source, focus on who bought shares, how many, and when the transaction happened; those details matter more than the headline wording. Interpretation would change if the filing showed a much larger stake, repeated buying, or selling instead of a new purchase.",
-            "glossary": [
-              {
-                "term": "position",
-                "definition": "An investment holding in a particular stock or asset.",
-                "whyItMatters": "It shows whether an investor is buying, selling, or already owns the company’s shares."
-              },
-              {
-                "term": "SEC filing",
-                "definition": "A formal report submitted to the U.S. Securities and Exchange Commission that discloses financial or ownership information.",
-                "whyItMatters": "These filings are the source for tracking who owns what in publicly traded companies."
-              },
-              {
-                "term": "institutional investor",
-                "definition": "A large organization such as a bank, fund, or insurer that invests money on behalf of others.",
-                "whyItMatters": "Institutional buying or selling can affect trading sentiment and liquidity."
-              }
-            ]
-          }
-        },
-        {
-          "id": "humana-2-72005",
-          "title": "290,935 Shares in Humana Inc. $HUM Acquired by Mitsubishi UFJ Asset Management Co. Ltd.",
-          "kicker": "MarketBeat",
-          "summary": "Mitsubishi UFJ Asset Management Co. Ltd. reported in a recent SEC 13F filing that it bought a new stake in Humana Inc. during the second quarter. The filing says the fund acquired 290,935 shares of the health insurer. This is a disclosure about an institutional investor's position in Humana, which can be a signal of investor interest in the company.",
-          "emailSummary": "Mitsubishi UFJ Asset Management Co. Ltd. acquired a new stake in shares of Humana Inc. (NYSE:HUM - Free Report) in the second quarter, according…",
-          "whyItMatters": "This matters because large institutional trades can influence perceptions of demand for Humana shares and may affect how investors gauge market confidence in the insurer.",
-          "dataSignals": [
-            "Humana mention"
-          ],
-          "sourceLabel": "MarketBeat · Aug 19, 6:01 AM ET",
-          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-290935-shares-in-humana-inc-hum-acquired-by-mitsubishi-ufj-asset-management-co-ltd-2026-08-19/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPTjlQS2lkM3VYYnN3WmR1b1FGVDVpUjdYa21ZdWgtbUtGaFhkLW0tSTQyX1pXY2tBeUR1aFJxLVFMMlVtWTlQRXhYTTRwbXdyTzJSLVh5N3poRGE1cDlQLTA2YXdtenF0N0R0bnV2X2dlbnQwOGpkWk83NDlDWXdGVlI2Unl2MlpzeDRYUUlHNG9JQlR3WDFuaGxvSzFqR3Z6WWtNUjlRZDJ6Y09GSlRvS3ppU0VvTXdUaE1RQmNBMm9pTmtPZTZIVXZUNnB5MC14akppMEg3SjVodk0?oc=5",
-          "publishedAt": "2026-08-19T10:01:47+00:00",
-          "glossary": [
-            {
-              "term": "13F filing",
-              "definition": "A quarterly report that certain large investment managers must file with the U.S. Securities and Exchange Commission showing some of their stock holdings."
-            },
             {
               "term": "stake",
-              "definition": "An ownership position in a company, usually measured by the number of shares held."
+              "definition": "An ownership position in a company’s stock."
             },
             {
               "term": "institutional investor",
-              "definition": "A large organization, such as an asset manager or pension fund, that invests money on behalf of others."
+              "definition": "A large organization that invests money, such as a hedge fund, asset manager, or pension fund."
+            },
+            {
+              "term": "Securities and Exchange Commission (SEC)",
+              "definition": "The U.S. agency that oversees securities markets and requires certain company and investor disclosures."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a holdings-disclosure story, not an operating-results story, so the key thing to watch is who bought or sold shares and how large the position is. The interpretation would change if the filing showed a much larger or smaller position, or if it were a sale instead of a new stake, because that would suggest a different level of conviction about Humana.",
+            "explanationText": "This is a market-ownership story, not an operating-performance story. When reading it, focus on who bought, how much they bought, and whether the filing reflects a new position or an increase in an existing one. The interpretation would change if the source showed a much larger position, a sale instead of a purchase, or a broader pattern of buying or selling by multiple institutions.",
             "glossary": [
               {
-                "term": "13F filing",
-                "definition": "A quarterly report that certain large investment managers must file with the U.S. Securities and Exchange Commission showing some of their stock holdings.",
-                "whyItMatters": "It is the source used to see what big funds own and how their positions are changing."
-              },
-              {
                 "term": "stake",
-                "definition": "An ownership position in a company, usually measured by the number of shares held.",
-                "whyItMatters": "It tells you how much of the company an investor has bought."
+                "definition": "An ownership position in a company’s stock.",
+                "whyItMatters": "It tells you the investor has a financial interest in Humana’s share price."
               },
               {
                 "term": "institutional investor",
-                "definition": "A large organization, such as an asset manager or pension fund, that invests money on behalf of others.",
-                "whyItMatters": "Institutional buying or selling can move markets and signal broader sentiment."
+                "definition": "A large organization that invests money, such as a hedge fund, asset manager, or pension fund.",
+                "whyItMatters": "These investors often trade in large sizes and can affect market sentiment."
+              },
+              {
+                "term": "Securities and Exchange Commission (SEC)",
+                "definition": "The U.S. agency that oversees securities markets and requires certain company and investor disclosures.",
+                "whyItMatters": "The filing is the source confirming the share purchase."
               }
             ]
           }
         },
         {
-          "id": "humana-3-91791",
-          "title": "Q2 Earnings Highlights: Humana (NYSE:HUM) Vs The Rest Of The Health Insurance Providers Stocks",
-          "kicker": "Yahoo Finance",
-          "summary": "This piece is a Q2 earnings-season roundup focused on health insurance provider stocks, starting with Humana (NYSE:HUM). It says the story looks back at some of the most exciting and less exciting second-quarter results in the sector. For readers tracking healthcare insurers, it signals a comparison of Humana against peer companies rather than a standalone company update.",
-          "emailSummary": "As the craze of earnings season draws to a close, here’s a look back at some of the most exciting (and some less so) results from Q2. Today, we…",
-          "whyItMatters": "This matters because Q2 earnings results can shift expectations for insurance premiums, medical costs, and stock performance across the health insurance sector.",
+          "id": "humana-2-37666",
+          "title": "Insurance moves: Sedgwick, ALKEME, ICW Specialty, C3, Humana, Ameritas",
+          "kicker": "Insurance Business",
+          "summary": "Insurance Business is highlighting several company moves, with two points spelled out in the description. ICW Specialty says its legacy workers' comp LPT platform is its fourth product line launched in 12 months. Humana's new chief medical officer is also expected to influence how AI changes care delivery at one of the country's largest health plans. For brokers and health insurance watchers, the takeaway is that both product expansion and AI-driven care strategy are moving quickly.",
+          "emailSummary": "ICW Specialty's legacy workers' comp LPT platform is its fourth product line in 12 months. Humana's new CMO shapes how AI changes care delivery…",
+          "whyItMatters": "This matters because changes in insurance product offerings and Humana’s care-delivery strategy can affect what brokers can place, how plans manage costs, and how health coverage decisions get made.",
           "dataSignals": [
             "Humana mention"
           ],
-          "sourceLabel": "Yahoo Finance · Aug 19, 3:26 PM ET",
-          "sourceUrl": "https://finance.yahoo.com/healthcare/articles/q2-earnings-highlights-humana-nyse-192602153.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQalBiMGJIVFNPLXRjUFpaX01qbDVYaTdOWW5MZk9zV0pORDV3OEROLW5KWnhUU0ZBQnFOYTZ6cFMtNUxhVzJRM2VsTGZiSGdZYlBrTWZRMEY5VE1KcEF4WE5QMTlpN3VPUjZ5d2dpdlpkeU1IN0l1bmlsSVZxaEU3dG9Na3ZWOFk5cWF0LWxySkk3NnRIVFREaXliRQ?oc=5",
-          "publishedAt": "2026-08-19T19:26:02+00:00",
+          "sourceLabel": "Insurance Business · Aug 21, 4:56 AM ET",
+          "sourceUrl": "https://www.insurancebusinessmag.com/us/news/breaking-news/insurance-moves-sedgwick-alkeme-icw-specialty-c3-humana-ameritas-586984.aspx",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNSjVaVjZ5dWgzNzVZQzhNWTFKbmNyd1dFTnFMR20tYjRUMVJtNmxEbmstWXpqVURqQzZZb0otYkZRQ3pSSElQWFR3QzZRb0dHS25pYmw0dHVPejQ3dDlrSW1LcS1fYi1HRVhBanZwRFlsd3BwNlZDNk9lSU5nTzc3YmMtNFNHYklMRlB5dHY2WXJFZzBBRGxhYUZ5MjNaYTd6bnJNNUNNWlFSaF9GT081dVNzUFY0UUlNRzFBTFJ1VWFMeXRLaTBsd0JEWGtjQjBN?oc=5",
+          "publishedAt": "2026-08-21T08:56:47+00:00",
           "glossary": [
             {
-              "term": "Q2",
-              "definition": "The second quarter of a company’s financial year, usually covering three months."
+              "term": "LPT",
+              "definition": "Loss portfolio transfer, an insurance transaction where a company transfers a block of existing claims and related risk to another carrier."
             },
             {
-              "term": "Earnings season",
-              "definition": "The period when publicly traded companies report their latest financial results."
+              "term": "workers' comp",
+              "definition": "Workers' compensation insurance, which covers medical costs and lost wages for employees injured on the job."
             },
             {
-              "term": "NYSE",
-              "definition": "The New York Stock Exchange, one of the major U.S. stock exchanges."
+              "term": "CMO",
+              "definition": "Chief medical officer, the executive responsible for clinical strategy and medical decision-making in a health plan or healthcare organization."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a sector comparison story, not a deep-dive into one company’s fundamentals. When reading the source, pay attention to how Humana is positioned relative to other health insurance providers and whether the comparison is based on revenue, profits, guidance, or market reaction. Interpretation would change if the full article shows Humana outperforming or underperforming peers on earnings or outlook.",
+            "explanationText": "This is an industry-brief style insurance story, so the key is to separate concrete moves from broad framing. Pay attention to the named companies and the specific actions mentioned, because those are the only firm facts here. If the source shows that these are strategic launches or leadership changes rather than routine updates, that changes whether the story is about near-term market impact or just company news.",
             "glossary": [
               {
-                "term": "Q2",
-                "definition": "The second quarter of a company’s financial year, usually covering three months.",
-                "whyItMatters": "Quarterly results are a standard way investors compare performance over time."
+                "term": "LPT",
+                "definition": "Loss portfolio transfer, an insurance transaction where a company transfers a block of existing claims and related risk to another carrier.",
+                "whyItMatters": "It signals a shift in how old workers' comp liabilities are being packaged and sold, which can create new brokerage and underwriting opportunities."
               },
               {
-                "term": "Earnings season",
-                "definition": "The period when publicly traded companies report their latest financial results.",
-                "whyItMatters": "Markets often react strongly to these reports, especially in comparison articles like this one."
+                "term": "workers' comp",
+                "definition": "Workers' compensation insurance, which covers medical costs and lost wages for employees injured on the job.",
+                "whyItMatters": "It is the underlying insurance line for ICW Specialty's product, so changes here affect employers and brokers."
               },
               {
-                "term": "NYSE",
-                "definition": "The New York Stock Exchange, one of the major U.S. stock exchanges.",
-                "whyItMatters": "It identifies where Humana’s shares are listed and traded."
-              }
-            ]
-          }
-        },
-        {
-          "id": "humana-4-75157",
-          "title": "Humana Is Dropping Plans That Cover 600,000 Medicare Members in 2027. The Letters Arrive in September.",
-          "kicker": "AOL.ca",
-          "summary": "Humana plans to drop health insurance plans that cover about 600,000 Medicare members in 2027, and affected members will receive letters in September. The notice is not just a warning: it also triggers certain member rights and deadlines. For Medicare beneficiaries, the timing matters because the letter starts a limited window to act before coverage changes take effect.",
-          "emailSummary": "A Humana termination letter looks like bad news, but it quietly unlocks a set of rights most members never knew they had, and those rights expir…",
-          "whyItMatters": "This matters because Medicare members who lose a plan may need to choose new coverage quickly to avoid gaps in care or unexpected costs.",
-          "dataSignals": [
-            "Humana mention"
-          ],
-          "sourceLabel": "AOL.ca · Aug 19, 8:59 PM ET",
-          "sourceUrl": "https://www.aol.ca/articles/humana-dropping-plans-cover-600-210221000.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5seC1uWFpLUmVNOFZCR1VJTWVGS2tGOEhoUWNCUnZiVTZfVUpQZmxEYS1uaWdwWVlKVUNkS19wOWdHS242R0ZkSXpVSmR6endBdUZ6a1pQX1V0UGgtdlE4TGZjODFaR2g4LTB3VHVGdlRkZmhySGtFaWZRV19iU1k?oc=5",
-          "publishedAt": "2026-08-20T00:59:16+00:00",
-          "glossary": [
-            {
-              "term": "Medicare",
-              "definition": "The U.S. federal health insurance program mainly for people age 65 and older and some younger people with disabilities."
-            },
-            {
-              "term": "termination letter",
-              "definition": "A formal notice that a health plan is ending or that a person is being removed from it."
-            },
-            {
-              "term": "special enrollment period",
-              "definition": "A limited time when a person can change or sign up for health coverage outside the usual enrollment window because of a qualifying event."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a consumer-impact health insurance story about plan exits and member rights, not a clinical or medical-treatment story. When reading the source, pay attention to the timing: who is affected, when the letters arrive, and what deadline starts running after notice is sent. The interpretation would change if the company is dropping only certain plans versus ending broader coverage, or if the notices create different rights than the headline suggests.",
-            "glossary": [
-              {
-                "term": "Medicare",
-                "definition": "The U.S. federal health insurance program mainly for people age 65 and older and some younger people with disabilities.",
-                "whyItMatters": "The story is about changes to coverage for Medicare enrollees, so the rules that apply are Medicare rules."
-              },
-              {
-                "term": "termination letter",
-                "definition": "A formal notice that a health plan is ending or that a person is being removed from it.",
-                "whyItMatters": "This letter can start deadlines and special enrollment rights for affected members."
-              },
-              {
-                "term": "special enrollment period",
-                "definition": "A limited time when a person can change or sign up for health coverage outside the usual enrollment window because of a qualifying event.",
-                "whyItMatters": "If members get this right, they can switch plans after losing coverage instead of waiting months."
+                "term": "CMO",
+                "definition": "Chief medical officer, the executive responsible for clinical strategy and medical decision-making in a health plan or healthcare organization.",
+                "whyItMatters": "Humana's CMO can shape how AI is used in care delivery, which may change plan operations and member experience."
               }
             ]
           }
@@ -736,76 +651,197 @@
       "emptyMessage": "No qualified Kentucky Healthcare / US Healthcare stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "kentucky_healthcare-1-30760",
-          "title": "Louisville VA Medical Center In Kentucky Delays Expected Opening To 2027",
-          "kicker": "Healthcare Design Magazine",
-          "summary": "The $970 million Louisville Veterans Affairs Medical Center in Louisville, Kentucky, is now expected to open in 2027. The change is a delay from whatever earlier opening plan was in place and means veterans in the area will have to wait longer for the new facility. For healthcare in Louisville, it keeps attention on how long major public medical projects can take and when new capacity will actually come online.",
-          "emailSummary": "The $970 million Louisville Veterans Affairs Medical Center is now expected to open in 2027 in Louisville, Ky.",
-          "whyItMatters": "This matters because a delayed VA hospital can postpone access to expanded veterans’ care and delay the local healthcare and construction benefits tied to a major public investment.",
+          "id": "kentucky_healthcare-1-29405",
+          "title": "Local advocates warn of impact as major medicaid changes loom in Kentucky",
+          "kicker": "WLKY",
+          "summary": "Major changes are coming to Kentucky Medicaid next year, according to the source. Local advocates are warning that those changes could affect people who rely on the program. For Kentucky healthcare, the key point is that a large public insurance program is shifting and could change coverage or access for some residents.",
+          "emailSummary": "Major changes are coming to Kentucky Medicaid next year. Here's what you need to know.",
+          "whyItMatters": "This matters because Medicaid is a major source of health coverage for Kentucky residents, so policy changes can affect whether people can get care and how providers are paid.",
           "dataSignals": [
             "Kentucky healthcare",
-            "Louisville healthcare"
+            "Medicaid signal"
           ],
-          "sourceLabel": "Healthcare Design Magazine · Aug 19, 7:14 PM ET",
-          "sourceUrl": "https://healthcaredesignmagazine.com/news/louisville-va-medical-center-in-kentucky-delays-expected-opening-to-2027/165340/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQc0xJSjM0d3A3MU52ZFBQR2N0Q1NzTFRyQkZFbWNwWGhXX1J4VFAtY1Jza0hDbXdld2tGOE1HNi01c01sOEVqdFRsZzk3TFZxQ1VCd19PZHhOWlk1NnQtNUNWZHVRcklhdldIeVo0UGx4a0RoN3JCMlhQODdoSll1c2FrYzdFbzVzeXFKb1hsX0tJUmpyLTk0eDBWZFREUHUxc3EyLS1DN3I0SjZFckVjQnJORTdXb0I3UjlmTGJmbw?oc=5",
-          "publishedAt": "2026-08-19T23:14:40+00:00",
+          "sourceLabel": "WLKY · Aug 20, 6:33 PM ET",
+          "sourceUrl": "https://www.wlky.com/article/advocates-major-medicaid-changes-kentucky/73487645",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdjRlU2Ftd002dk5NYW50SGtwbHhZZXptSUQ3NjItOFUxQ2JqNlJiN3RlbnJKMWtQYU4xLUlPT1MyLXF1a0I1S0hyNDBZUXZUR1VLb19iUFZQSF9OVFk3ZUs5RWNDYzlTajR1bFAyZFNqNlItOTA1djVIaFBYN0duQXdqTHh1QQ?oc=5",
+          "publishedAt": "2026-08-20T22:33:00+00:00",
           "glossary": [
             {
-              "term": "Veterans Affairs Medical Center",
-              "definition": "A hospital or medical facility operated for U.S. military veterans by the Department of Veterans Affairs."
+              "term": "Medicaid",
+              "definition": "A joint federal and state health insurance program for certain low-income people, children, pregnant women, older adults, and people with disabilities."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a project-timeline story about a large healthcare facility, so the key detail is the new expected opening date and the size of the investment. When reading the source, look for whether the delay is a simple schedule shift or tied to funding, construction, or planning problems; that would change what the delay means for service delivery and local economic activity.",
+            "explanationText": "This is a policy and healthcare-access story, so the main thing to watch is what specific Medicaid changes are being proposed or taking effect and who they would affect. The interpretation changes a lot depending on whether the changes tighten eligibility, alter benefits, or shift administrative rules, because each one has different effects on patients, hospitals, and state spending.",
             "glossary": [
               {
-                "term": "Veterans Affairs Medical Center",
-                "definition": "A hospital or medical facility operated for U.S. military veterans by the Department of Veterans Affairs.",
-                "whyItMatters": "It tells you this is a federal healthcare project serving veterans, not a private hospital development."
+                "term": "Medicaid",
+                "definition": "A joint federal and state health insurance program for certain low-income people, children, pregnant women, older adults, and people with disabilities.",
+                "whyItMatters": "Changes to Medicaid can directly affect who has health coverage and how they access medical care."
               }
             ]
           }
         },
         {
-          "id": "kentucky_healthcare-2-53899",
-          "title": "McGarvey Fights Medicaid Cuts at ElderServe in Louisville",
-          "kicker": "Hoodline",
-          "summary": "A West Louisville senior center, ElderServe, is being affected by federal Medicaid cuts. Rep. McGarvey said closing it is not an option. The story signals that the cuts could put pressure on a local healthcare-adjacent service used by seniors in Louisville, even if the exact operational impact is not spelled out in the description.",
-          "emailSummary": "A West Louisville senior center is caught in the fallout of federal Medicaid cuts. Rep. McGarvey says closure is not an option.",
-          "whyItMatters": "This matters because Medicaid funding changes can affect whether local senior services stay open and how many older adults can keep using them.",
+          "id": "kentucky_healthcare-2-42375",
+          "title": "MedAdvance 2026 unites healthcare professionals to missions with IMB",
+          "kicker": "Kentucky Today",
+          "summary": "More than 300 healthcare professionals, students, church leaders, missionaries and volunteers gathered Aug. 13-15 at Idlewild Baptist Church in Lutz, Florida, for MedAdvance 2026. The conference is described as a way to connect healthcare workers with missions through IMB. For the healthcare and faith-based missions space, that suggests an organized effort to recruit and equip people with medical backgrounds for mission work.",
+          "emailSummary": "More than 300 healthcare professionals, students, church leaders, missionaries and volunteers gathered at Idlewild Baptist Church in Lutz, Flori…",
+          "whyItMatters": "This matters because it shows how healthcare talent is being mobilized for mission-related work, which can affect volunteer pipelines, training needs, and the reach of faith-based health outreach.",
           "dataSignals": [
-            "Louisville healthcare",
-            "Medicaid signal"
+            "Kentucky healthcare"
           ],
-          "sourceLabel": "Hoodline · Aug 19, 6:26 PM ET",
-          "sourceUrl": "https://hoodline.com/2026/08/mcgarvey-says-west-louisville-s-elderserve-closure-is-off-the-table-amid-medicaid-cuts/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX2VpNzBhQ0M5NjBnNElnX3VIOEdWUktmQ1JueW9USHYwS0NKOGhQR1QxQktBZlVGYkE3VnFjeXFZcVFlbDJZNVVmQVAtdl90NVNmcVFmTExNekNuSm9MZ1JCMXVDWWhXNHhGMldJRUF6UHk5VlRFM3VEc0pES3UwXzh3RUJYMExhem5rVGFwcEVwRWJBNnRSb21kOWYwV3RTbVV1aVh6RmRUckpFbWVEMTFheDhyam8?oc=5",
-          "publishedAt": "2026-08-19T22:26:51+00:00",
+          "sourceLabel": "Kentucky Today · Aug 20, 5:36 PM ET",
+          "sourceUrl": "https://www.kentuckytoday.com/news/medadvance-2026-unites-healthcare-professionals-to-missions-with-imb/article_e7602acb-84d7-4855-8614-3edabebe573f.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQQmZqeHRWQkphVEl5MlBQNDlBdXpaUkN6TUdtV3dScFV6UzdDOGd6aW55OWZFcVhfZ3hQQTFIWTFMY190T3FtYlg4UnJBNlZ0bWRPc2RDb2xsSlQyR2RQbTVwNGxVSnpuWlFmRGk5T1hxdTM0a2NBVXAwV2FMR2lnNV9HYkUyQVFiWnVBVWVLc1VycHlqN3hENVozUGxfRTVxRGpzTGxncHNBOVNxOEUyQS1TaFNwWjU0RXVta3JpRjR4amx5RTRmUFFESW53WWUwallrbUNsOHc2UjhITDU1LS1PVjdIVWdV?oc=5",
+          "publishedAt": "2026-08-20T21:36:00+00:00",
           "glossary": [
             {
-              "term": "Medicaid",
-              "definition": "A government health insurance program for eligible low-income people and some other qualifying groups."
+              "term": "IMB",
+              "definition": "A mission organization referenced in the title as the group connected to MedAdvance 2026."
             },
             {
-              "term": "federal cuts",
-              "definition": "Reductions in money or support coming from the U.S. government."
+              "term": "missions",
+              "definition": "Organized religious outreach or service work, often carried out outside a local congregation."
+            },
+            {
+              "term": "medical missions",
+              "definition": "Mission work that uses healthcare skills to serve people in need."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a public-policy and local-services story, not a clinical healthcare story. When reading the source, pay attention to what kind of support ElderServe receives and whether the concern is about funding, eligibility, or service access. The interpretation would change if the full article shows the center is directly funded by Medicaid, only indirectly affected, or already has a concrete backup plan.",
+            "explanationText": "This is a conference and recruiting story centered on faith-based healthcare missions rather than a clinical or policy story. When reading the source, pay attention to who attended, who organized it, and how the event frames the role of healthcare workers in missions. If the full story adds details about training, destinations, or partnerships, that would change how specific the conference's impact is.",
             "glossary": [
               {
-                "term": "Medicaid",
-                "definition": "A government health insurance program for eligible low-income people and some other qualifying groups.",
-                "whyItMatters": "Cuts to Medicaid can reduce funding or coverage for services that many seniors and low-income residents depend on."
+                "term": "IMB",
+                "definition": "A mission organization referenced in the title as the group connected to MedAdvance 2026.",
+                "whyItMatters": "It identifies the missionary network or sponsor behind the event, which shapes what kind of work participants may be preparing for."
               },
               {
-                "term": "federal cuts",
-                "definition": "Reductions in money or support coming from the U.S. government.",
-                "whyItMatters": "If federal funding drops, local organizations that rely on it may have to cut services or find new funding."
+                "term": "missions",
+                "definition": "Organized religious outreach or service work, often carried out outside a local congregation.",
+                "whyItMatters": "It explains the purpose of the conference and why healthcare professionals are being brought together."
+              },
+              {
+                "term": "medical missions",
+                "definition": "Mission work that uses healthcare skills to serve people in need.",
+                "whyItMatters": "It is the practical bridge between healthcare professions and the conference's mission focus."
+              }
+            ]
+          }
+        },
+        {
+          "id": "kentucky_healthcare-3-2306",
+          "title": "Baptist Health Louisville NICU Expands, Renamed Kosair for Kids",
+          "kicker": "Hoodline",
+          "summary": "Baptist Health Louisville has expanded its NICU by adding 11 more beds. The unit has also been renamed to honor Kosair for Kids. For local healthcare, that suggests more capacity for newborn intensive care at Baptist Health Louisville and a visible partnership with a well-known children’s charity.",
+          "emailSummary": "Baptist Health Louisville just doubled down on newborn care — 11 more NICU beds and a new name honoring Kosair for Kids.",
+          "whyItMatters": "This matters because added NICU capacity can ease pressure on newborn care services and improve access for families who need specialized infant treatment.",
+          "dataSignals": [
+            "Louisville healthcare"
+          ],
+          "sourceLabel": "Hoodline · Aug 20, 11:36 AM ET",
+          "sourceUrl": "https://hoodline.com/2026/08/louisville-nicu-adds-11-beds-renamed-for-kosair-for-kids-amid-kentucky-preterm-crisis/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaUF2dXZ6am5PdVZRSldPblhjQnNXZ3RQSTZVelZxcWpta2ZGQVlodS0zNnV5ZjRLbjlyLW41ZXRFUllBMEFGWVlMOGUtb0VYZlVBN2kwLTd1TWdnODN2M0w4b2ZKaF91eUd6THZNd3V2dEZyZEsySjY1TW5tWWRvdzQwSTl3VFVHM0dlTUxCdWRvZzdUSEJLc0QwQVV1N3lfUEtIWmVRQkU4N3hQdGFrdUdrdkhuUQ?oc=5",
+          "publishedAt": "2026-08-20T15:36:19+00:00",
+          "glossary": [
+            {
+              "term": "NICU",
+              "definition": "Neonatal Intensive Care Unit, a hospital unit for newborns who need close medical monitoring and advanced care."
+            },
+            {
+              "term": "Kosair for Kids",
+              "definition": "A children’s charity and donor organization in Kentucky that supports pediatric healthcare and related services."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a healthcare capacity story with a naming/partnership angle. When reading the source, pay attention to the concrete operational change — 11 more NICU beds — versus the symbolic change — the renaming in honor of Kosair for Kids. If future reporting adds details like staffing, funding, or patient-volume changes, that would help show whether the expansion materially improves access and outcomes or is mainly a branding acknowledgment.",
+            "glossary": [
+              {
+                "term": "NICU",
+                "definition": "Neonatal Intensive Care Unit, a hospital unit for newborns who need close medical monitoring and advanced care.",
+                "whyItMatters": "It tells you this expansion is about specialized care for the most fragile newborns, not general pediatric beds."
+              },
+              {
+                "term": "Kosair for Kids",
+                "definition": "A children’s charity and donor organization in Kentucky that supports pediatric healthcare and related services.",
+                "whyItMatters": "The new name signals a formal recognition of the group’s role in supporting the unit."
+              }
+            ]
+          }
+        },
+        {
+          "id": "kentucky_healthcare-4-26462",
+          "title": "Kentucky hospitals are helping turn the tide on the opioid crisis",
+          "kicker": "Kentucky Lantern",
+          "summary": "Kentucky overdose deaths fell nearly 23% in 2025, which the headline frames as part of hospitals helping turn the tide on the opioid crisis. The message is that the decline is a major achievement, but the effort still needs to continue.",
+          "emailSummary": "In 2025 alone, overdose deaths fell nearly 23 percent in Kentucky — a remarkable achievement. But we can't stop now.",
+          "whyItMatters": "This matters because a sharp drop in overdose deaths suggests healthcare interventions may be making a real difference, but the opioid crisis remains active and could worsen if that momentum fades.",
+          "dataSignals": [
+            "Kentucky healthcare",
+            "hospital operations"
+          ],
+          "sourceLabel": "Kentucky Lantern · Aug 20, 7:37 AM ET",
+          "sourceUrl": "https://kentuckylantern.com/2026/08/20/kentucky-hospitals-are-helping-turn-the-tide-on-the-opioid-crisis/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOT2ltM191M3pLSWNOdGVXVF9USDlGRUhWWkE1SnFaZ1dOR2pVN3EzXzUzUXRUN0F4N1h1MHFNM1ZLWWVvN1BWTTFBOWZFMV8xY0JVLWV3ck51bFNCclVtb1dHa0V4eGVzcTIwOFJINy11elVQYm9fRk1TOVhldTJuMUZoS1lRemdrU09fZHFtMFQ2MjhObzRNY00tQ2F4NmEyTFN3Y2l2NTY?oc=5",
+          "publishedAt": "2026-08-20T11:37:37+00:00",
+          "glossary": [],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a public-health story about outcomes, not just policy or politics, so the key thing to watch is the change in overdose deaths and what the headline credits for it. If later reporting shows the drop is temporary, uneven across regions, or driven by a one-time factor, that would change how impressive or sustainable the improvement really is.",
+            "glossary": []
+          }
+        },
+        {
+          "id": "kentucky_healthcare-5-67420",
+          "title": "Insurance cuts and inflation are driving the Kentucky doctor shortage, local physicians warn",
+          "kicker": "WBKO",
+          "summary": "Local physicians say Kentucky is facing a shortage of nearly 3,000 doctors, leaving large parts of the state without care. They warn that insurance cuts and inflation are making the problem worse. For Kentucky healthcare, that points to harder access to routine and specialized care, especially in underserved areas.",
+          "emailSummary": "A shortage of nearly 3,000 doctors is leaving vast areas of Kentucky without care. Local physicians say insurance companies are making the crisi…",
+          "whyItMatters": "This matters because fewer doctors can mean longer waits, more travel, and less access to care for Kentucky patients, especially outside major population centers.",
+          "dataSignals": [
+            "Kentucky healthcare"
+          ],
+          "sourceLabel": "WBKO · Aug 20, 7:18 PM ET",
+          "sourceUrl": "https://www.wbko.com/2026/08/20/insurance-cuts-inflation-are-driving-kentucky-doctor-shortage-local-physicians-warn/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdGJHWnltM000Nnh5djEwSmVjbk1UMFdTR2l0enpWVFBYUWVfZFFxcjZQcXVjVjVsUUpySks3d0l6SXpIV295VkNBQ19NbUFLV1k5bV9nSkg4cGtxT21DNmwzd3JMNTY4OVJYSzBlSi0wQkFDdXpEODFScHFMQ1ZLZER2TjNmNUlEeDA0RXRQU09JYy1DZzF2eWhOd3ZsMlZaSEZfXzl1M3BTNGdLVzhqN2xqRzJ1OTjSAcsBQVVfeXFMUGVuN1hEOG9oc3BYRnVmOUFfSEsxWl9wUnpZLVpUNUN5Y2RrV2E2dnlpbDc1NkhRMk9WSGNNeXdnMjUyNDY2b0R1c1NJOGZGbVZTWVlMRHZILWRyUnJ1TUlYVGptWXdYdTZBM25YRktqRWFGNTlTS0hOYzRwemd5SXQ5dzdFSnZjUVNUbkxpWlFadmw2cW8ta1l3dnpvWFMzeUVQek43dndzQTZzN2Nic0steV9hV0JydjUxT0JSRnJCLWwwckhJMXUwN28?oc=5",
+          "publishedAt": "2026-08-20T23:18:00+00:00",
+          "glossary": [
+            {
+              "term": "doctor shortage",
+              "definition": "A situation where there are not enough physicians to meet patient demand."
+            },
+            {
+              "term": "insurance companies",
+              "definition": "Businesses that pay for or manage health coverage and decide what services they will reimburse."
+            },
+            {
+              "term": "inflation",
+              "definition": "A general rise in prices over time."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a healthcare access story: it is about whether people can actually find a doctor, not just whether coverage exists on paper. When reading the source, pay attention to what evidence is offered for the shortage and how insurance payment changes are described, because those details determine whether the problem is mainly workforce supply, financing, or both. If the story shows the shortage is concentrated in certain counties or specialties, that would change how severe the impact is for patients and hospitals.",
+            "glossary": [
+              {
+                "term": "doctor shortage",
+                "definition": "A situation where there are not enough physicians to meet patient demand.",
+                "whyItMatters": "It helps explain why some communities cannot easily get appointments or nearby care."
+              },
+              {
+                "term": "insurance companies",
+                "definition": "Businesses that pay for or manage health coverage and decide what services they will reimburse.",
+                "whyItMatters": "Their payment rules can affect whether doctors can afford to practice in a region."
+              },
+              {
+                "term": "inflation",
+                "definition": "A general rise in prices over time.",
+                "whyItMatters": "Higher costs can squeeze medical practices and make shortages worse."
               }
             ]
           }
@@ -818,241 +854,217 @@
       "emptyMessage": "No qualified Analytics stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "analytics-1-89951",
-          "title": "How AI Is Creating a New Era of Personalized Business Intelligence",
+          "id": "analytics-1-95671",
+          "title": "Governing the Data Behind the Policy: How Ashok Mallempati Is Strengthening Data Governance in U.S. Insurance",
           "kicker": "Analytics Insight",
-          "summary": "Business intelligence has traditionally focused on helping organizations understand what already happened. The piece says AI is creating a new era of personalized business intelligence, suggesting analytics tools are becoming more tailored to individual users or needs. In practical terms, this points to BI shifting from broad reporting toward more customized insights.",
-          "emailSummary": "For years, business intelligence has largely been about helping organizations understand what already happened. Companies collected information…",
-          "whyItMatters": "This matters because more personalized BI can help teams get faster, more relevant answers from their data instead of digging through generic dashboards.",
+          "summary": "Ashok Mallempati's work in enterprise master data management has expanded into peer-reviewed research, international recognition, and technical leadership, according to the description. The title frames that work as part of strengthening data governance in U.S. insurance, which suggests the focus is on how insurance data is organized and controlled.",
+          "emailSummary": "Ashok Mallempati's work in enterprise master data management has expanded into peer-reviewed research, international recognition, technical lead…",
+          "whyItMatters": "This matters because stronger data governance in insurance can improve data quality, consistency, and decision-making across policy, claims, and reporting systems.",
+          "dataSignals": [
+            "analytics workflow",
+            "governance controls"
+          ],
+          "sourceLabel": "Analytics Insight · Aug 21, 2:16 AM ET",
+          "sourceUrl": "https://www.analyticsinsight.net/amp/story/data-science/governing-the-data-behind-the-policy-how-ashok-mallempati-is-strengthening-data-governance-in-us-insurance",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPakZ4TERieC15QkFGb2ltLWhnTHdnbWt6SjNJQThkM01hb3ItMkhycmRMM0lma2wtUjhvY2ZnWnNucE9mVm9qWlhvel9lVl9kRGxaa3JnNzVwLVRDeTVOMnJDa3dLT0JGNUJhZEdwREI4RXlYeC1IeXk1R0d5Rkt1OU1wUlNiX1prRUk1cl91RjVYRmZCeDRzd2ZVbkkxZlBoNDJiYl9PY3l5aC01SzZRdUJuaklqU2Y2RU1SMmRYamNRdGNGVU85djY3UldRdFhQQi1ncDVRYlUzb1JDd1JQMHZQM002TlpIajBZaUhUY0lSLUo10gH0AUFVX3lxTE9qRnhMRGJ4LXlCQUZvaW0taGdMd2dta3pKM0lBOGQzTWFvci0ySHJyZEwzSWZrbC1SOG9jZmdac25wT2ZWb2paWG96X2VWX2REbFprcmc3NXAtVEN5NU4yckNrd0tPQkY1QmFkR3BEQjhFeVh4LUh5eTVHR3lGS3U5TXBSU2JfWmtFSTVyX3VGNVhGZkJ4NHN3ZlVuSTFmUGg0MmJiX09jeXloLTVLNlF1Qm5qSWpTZjZFTVIyZFhqY1F0Y0ZVTzl2NjdSV1F0WFBCLWdwNVFiVTNvUkN3UlAwdlAzTTZOWkhqMFlpSFRjSVItSjU?oc=5",
+          "publishedAt": "2026-08-21T06:16:32+00:00",
+          "glossary": [
+            {
+              "term": "Enterprise master data management (MDM)",
+              "definition": "A set of processes and tools for keeping an organization's core business data, like customer or policy records, consistent and accurate across systems."
+            },
+            {
+              "term": "Data governance",
+              "definition": "The rules, roles, and controls used to manage how data is collected, stored, shared, and protected."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a profile-style analytics story focused on a person’s work rather than a single market event or product launch. When reading the source, pay attention to whether it describes actual insurance-industry changes, academic research, or professional recognition, because that affects how directly the work translates into business impact. If the full article adds concrete examples, metrics, or insurer adoption, that would make the significance much stronger than the title and description alone suggest.",
+            "glossary": [
+              {
+                "term": "Enterprise master data management (MDM)",
+                "definition": "A set of processes and tools for keeping an organization's core business data, like customer or policy records, consistent and accurate across systems.",
+                "whyItMatters": "In insurance, MDM helps different teams rely on the same trusted data instead of conflicting versions."
+              },
+              {
+                "term": "Data governance",
+                "definition": "The rules, roles, and controls used to manage how data is collected, stored, shared, and protected.",
+                "whyItMatters": "Good governance reduces errors and helps insurers use data safely for operations, compliance, and analytics."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-2-90147",
+          "title": "The Future of AI-Powered Business Intelligence: From Data Insights to Voice Experiences",
+          "kicker": "Analytics Insight",
+          "summary": "The piece points to a shift in business intelligence from static dashboards and delayed report reviews toward AI-powered tools that can deliver insights through voice experiences. The description says BI used to mean pulling a report, waiting for a data team member to explain it, and then acting on it, which suggests a move toward faster, more direct access to answers. For analytics teams, that means the interface for using data may matter as much as the data itself.",
+          "emailSummary": "In the past, business intelligence primarily meant dashboards. After a day or two, pull a report, wait for a member of the data team to explain…",
+          "whyItMatters": "This matters because faster, easier access to insights can reduce bottlenecks between data teams and business users and change how quickly organizations make decisions.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Analytics Insight · Aug 20, 2:11 AM ET",
-          "sourceUrl": "https://www.analyticsinsight.net/amp/story/artificial-intelligence/how-ai-is-creating-a-new-era-of-personalized-business-intelligence",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNRHRrRGdwYTBtdC03dnVQWTNfS29CNFNTQV9MTkZOTXdEVUEycHljRW5OVWJCVUhyY20xaTdhMEhPSDFmV0ZXSENKN19maFptTUNORW4tcC1vYk1CaHg0TVJNbXVPVlV4M2VOa0ZxLTdUX0FsLXJ2ZUpsbmRiaFp2aWVLX1NnTXQybVhWSmJEcWNfWk9kZFRvSFEwY1kzWWgzOGEwb0FFOTNJbFhaNFFmbEh4dERjcjVqZVNSNjJkZ2hVSDNYSWNrMW5FUlBFQdIBzgFBVV95cUxNRHRrRGdwYTBtdC03dnVQWTNfS29CNFNTQV9MTkZOTXdEVUEycHljRW5OVWJCVUhyY20xaTdhMEhPSDFmV0ZXSENKN19maFptTUNORW4tcC1vYk1CaHg0TVJNbXVPVlV4M2VOa0ZxLTdUX0FsLXJ2ZUpsbmRiaFp2aWVLX1NnTXQybVhWSmJEcWNfWk9kZFRvSFEwY1kzWWgzOGEwb0FFOTNJbFhaNFFmbEh4dERjcjVqZVNSNjJkZ2hVSDNYSWNrMW5FUlBFQQ?oc=5",
-          "publishedAt": "2026-08-20T06:11:35+00:00",
+          "sourceLabel": "Analytics Insight · Aug 20, 11:12 AM ET",
+          "sourceUrl": "https://www.analyticsinsight.net/amp/story/artificial-intelligence/the-future-of-ai-powered-business-intelligence-from-data-insights-to-voice-experiences",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPN2NXbWtZOTRVR2NvSjdNLUZOanNBOGJDcWJSRFRFcUoyZGRIWGY1TXNzbzFKeWE2a2ZIcDVLTUJ6bHhXYXJuN0pxNVEyOWNEV2dDRHpDc2U2Umxlc2VGLVZfRzJydlhRa2pPRnQyOTJRaU9HaEVJZFg5VnJ0ZXF2UzZtVlhaLUVFSEpxSXNpa2plNVQyQW9HUUJncms4VWROVDZpdVo0OXpUajZ1ZzdsOFh1RFVQSVlrX3dnM2dBRDMzd0FtYnpZbjFCZGlUTmVMT3JfRFo1djRpUnhQdmRPMkg3bHBwRU5B0gHoAUFVX3lxTE83Y1dta1k5NFVHY29KN00tRk5qc0E4YkNxYlJEVEVxSjJkZEhYZjVNc3NvMUp5YTZrZkhwNUtNQnpseFdhcm43SnE1UTI5Y0RXZ0NEekNzZTZSbGVzZUYtVl9HMnJ2WFFrak9GdDI5MlFpT0doRUlkWDlWcnRlcXZTNm1WWFotRUVISnFJc2lramU1VDJBb0dRQmdyazhVZE5UNml1WjQ5elRqNnVnN2w4WHVEVVBJWWtfd2czZ0FEMzN3QW1ielluMUJkaVROZUxPcl9EWjV2NGlSeFB2ZE8ySDdscHBFTkE?oc=5",
+          "publishedAt": "2026-08-20T15:12:32+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a trend piece about how AI is changing analytics products and how people use them. When reading the source, pay attention to what “personalized” means in practice: whether it refers to tailored dashboards, recommendations, natural-language queries, or role-specific reporting. The interpretation would change if the story shows concrete product features or business outcomes, versus only describing a general industry direction.",
+            "explanationText": "This is a trend story about how analytics products are changing, not a report about one company or one dataset. When reading the source, pay attention to whether it describes a real product shift, a broad market prediction, or just a vision for the future. The interpretation would change if the article shows concrete adoption or results rather than only describing where BI tools may be headed.",
             "glossary": []
           }
         },
         {
-          "id": "analytics-2-62756",
-          "title": "Salesforce debuts Tableau AI agents, drives analytics to action in South Korea - CHOSUNBIZ",
-          "kicker": "Chosunbiz",
-          "summary": "Salesforce introduced Tableau AI agents at a Seoul event in South Korea, with a focus on shifting Tableau from generating insights to helping users take action. The announcement frames this as an \"agentic analytics\" move, where analytics is meant to drive execution rather than stop at dashboards and reports. For analytics teams, that suggests Tableau is being positioned as a more active workflow tool, not just a visualization platform.",
-          "emailSummary": "Salesforce debuts Tableau AI agents, drives analytics to action in South Korea Seoul event spotlights Tableaus agentic analytics shift from insi…",
-          "whyItMatters": "This matters because it points to a change in how analytics tools may be used in practice, with AI agents potentially reducing the gap between finding an insight and acting on it.",
+          "id": "analytics-3-22873",
+          "title": "Salesforce Says AI Agent Proliferation Creates 'Tech Debt' for Enterprises — Tableau Differentiates with Agentic Analytics",
+          "kicker": "finance.biggo.com",
+          "summary": "Matthew Miller, vice president of product management at Tableau, said in Seoul that Salesforce sees rapid AI agent proliferation as creating \"tech debt\" for enterprises. He also said Tableau is differentiating itself with \"agentic analytics,\" positioning the product as part of Salesforce’s AI strategy. Based on the title and description, the story is about how Salesforce is framing AI agents as both a challenge for companies and an opportunity for Tableau in analytics.",
+          "emailSummary": "Matthew Miller, vice president of product management at Tableau, a Salesforce-owned data analytics platform, drew a line in Seoul against predic…",
+          "whyItMatters": "This matters because it suggests enterprise analytics vendors are now competing on how well they can manage AI-driven complexity, not just on dashboards and reporting.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Chosunbiz · Aug 20, 4:08 AM ET",
-          "sourceUrl": "https://biz.chosun.com/en/en-it/2026/08/20/ZCRLJS5QWFF35DMKU54MFASM3I/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5jYzk0TUt2Qkg3RDliZm1fQm5KcEZ0RDFLelBLbEJDdkVRb3FySy1vRWFsVjZSWndmUzFSNDRITkVIbW1zbDY0ZlJidFpLbUFEc1o3bDhzdVFqQ3dhVWdmVkl5cEpQWmdTQjVRRU1QVHBiYWhYNlpuSmdR0gGOAUFVX3lxTFA1T0RNSGJENnd1MDlELWItQklreXNRcXRvN0xfdHJMZGh0YXBWdzBUaEUyY3I3dFd6WXFYUlpnYmtIRlBMUk5hbFFmTUIydUVsblpraGw1TGJVYU4yMlRDRkhKTllXc1g0U0syWWlUOTBqS0UwX1RBUWZ6cXZsTk5SNlVmR3ZiODJLUUxJTXc?oc=5",
-          "publishedAt": "2026-08-20T08:08:00+00:00",
+          "sourceLabel": "finance.biggo.com · Aug 20, 6:32 AM ET",
+          "sourceUrl": "https://finance.biggo.com/news/e55bb90e-cf6f-4980-bc2c-02d306716f99",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9QUnVnVE1MaTlxLUFfUjFmczZUbW1TSGtsZmdqREhNQUhsbV9xckdiMmEzRXJzOVpZRnAwQzlKakREVHF0VDRkYjBLajRTdEVLekV3M1MteFlSTzBfX1ctZkIzVE9lUjdPVjItYWhpMDhvQ3FHS3c?oc=5",
+          "publishedAt": "2026-08-20T10:32:33+00:00",
           "glossary": [
             {
-              "term": "Tableau",
-              "definition": "A data visualization and business intelligence platform used to explore, analyze, and present data."
-            },
-            {
-              "term": "AI agents",
-              "definition": "Software that can take steps on a user's behalf, rather than only answering questions or showing results."
+              "term": "tech debt",
+              "definition": "Extra complexity and future cleanup created when systems are built or adopted quickly without enough long-term planning."
             },
             {
               "term": "agentic analytics",
-              "definition": "An analytics approach where AI helps move from analysis to action, not just from data to insight."
+              "definition": "An analytics approach that uses AI agents to help carry out data tasks or respond to questions more autonomously."
+            },
+            {
+              "term": "AI agent",
+              "definition": "A software system that can act on a user’s behalf by taking steps toward a goal with limited supervision."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a product and strategy story, not a performance or financial report, so the key is the direction Salesforce is taking Tableau. Read for what the company says these AI agents are supposed to do, especially whether they only summarize data or actually trigger actions. If the full story includes examples, integrations, or limits, those details would determine how meaningful the shift really is.",
+            "explanationText": "This is a product and strategy story, not a financial results story, so the main thing to watch is how Salesforce is defining the problem and what Tableau is claiming as its answer. When reading the source, pay attention to whether \"tech debt\" is being used as a broad caution or tied to specific enterprise pain points, because that changes how concrete the argument is.",
             "glossary": [
               {
-                "term": "Tableau",
-                "definition": "A data visualization and business intelligence platform used to explore, analyze, and present data.",
-                "whyItMatters": "It is the product at the center of the announcement, so knowing it helps frame what is changing."
-              },
-              {
-                "term": "AI agents",
-                "definition": "Software that can take steps on a user's behalf, rather than only answering questions or showing results.",
-                "whyItMatters": "The story is specifically about adding agents, which signals a more automated style of analytics."
+                "term": "tech debt",
+                "definition": "Extra complexity and future cleanup created when systems are built or adopted quickly without enough long-term planning.",
+                "whyItMatters": "If AI agents add tech debt, companies may face more maintenance, integration, and governance work later."
               },
               {
                 "term": "agentic analytics",
-                "definition": "An analytics approach where AI helps move from analysis to action, not just from data to insight.",
-                "whyItMatters": "This is the main concept in the announcement and explains the strategic shift being described."
+                "definition": "An analytics approach that uses AI agents to help carry out data tasks or respond to questions more autonomously.",
+                "whyItMatters": "This is the feature Tableau is using to stand out in a crowded analytics market."
+              },
+              {
+                "term": "AI agent",
+                "definition": "A software system that can act on a user’s behalf by taking steps toward a goal with limited supervision.",
+                "whyItMatters": "The story centers on how more of these tools can create both productivity gains and operational burden."
               }
             ]
           }
         },
         {
-          "id": "analytics-3-77182",
-          "title": "FouAnalytics Announces Global Availability of Premium Feature -- Content-Level Brand Safety Analytics With Full Page-URL Reporting",
-          "kicker": "PR Newswire",
-          "summary": "FouAnalytics says its premium feature, Content-Level Brand Safety Analytics with Full Page-URL Reporting, is now globally available. The announcement is framed as a product availability update, and the feature appears aimed at helping users assess brand safety at the content and page-URL level. For analytics teams, this suggests more granular reporting on where ads or content appear online.",
-          "emailSummary": "/PRNewswire/ -- FouAnalytics today announced global availability of its premium feature Content-Level Brand Safety Analytics with Full Page-URL…",
-          "whyItMatters": "This matters because more precise brand-safety reporting can help advertisers and publishers reduce risk and make placement decisions with better visibility into specific pages and content.",
-          "dataSignals": [
-            "analytics workflow"
-          ],
-          "sourceLabel": "PR Newswire · Aug 19, 1:22 PM ET",
-          "sourceUrl": "https://www.prnewswire.com/news-releases/fouanalytics-announces-global-availability-of-premium-feature----content-level-brand-safety-analytics-with-full-page-url-reporting-302855543.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNMHAyWkhrR2JaaFZEX0RlM3JUQjh4VWZ3VG40NE5BQXlWcDY4NllrQ1NNUjBrb1p5M1RSM2dnWE9DVDlPM25KZXFJRGNMUHoxeEtwME9JSDR0V3lHZ3RRZjBjaDlpeHRXWklxaFR3YTFnSkg3STRQaGg0b0NCR0l2S3dvUEdUTVlwNFZYWHJLUmFocHBYak5OVVphZjE0cDk5aDFYNWh6MkRRYTkzaUNSNTEtU2hRbC1sTUFvM21INFkyWWZWMERiQU1WdFNFSFAxWHNzbFp3UDVrTEJPWXRLYzQzaU11RU1rcEpSSm1wc1VPWHNsYlZ4VWJiNWpCRmNMcjdxejF4OWlDZER6ZDRxbzM3ajA?oc=5",
-          "publishedAt": "2026-08-19T17:22:00+00:00",
-          "glossary": [
-            {
-              "term": "brand safety",
-              "definition": "The practice of keeping ads or branded content away from material that could harm a brand’s image."
-            },
-            {
-              "term": "content-level analytics",
-              "definition": "Analysis that evaluates data at the individual piece of content rather than only at a site or platform level."
-            },
-            {
-              "term": "page-URL reporting",
-              "definition": "Reporting that ties results to a specific webpage address."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a product announcement, so the key thing to watch is what capability is being released and how specifically it is described. Because the description is brief, the safest interpretation is limited to the stated availability and the advertised reporting granularity; any business impact beyond that would depend on the full release details.",
-            "glossary": [
-              {
-                "term": "brand safety",
-                "definition": "The practice of keeping ads or branded content away from material that could harm a brand’s image.",
-                "whyItMatters": "It is the core use case for the feature being announced."
-              },
-              {
-                "term": "content-level analytics",
-                "definition": "Analysis that evaluates data at the individual piece of content rather than only at a site or platform level.",
-                "whyItMatters": "It indicates the product can give more detailed placement insights."
-              },
-              {
-                "term": "page-URL reporting",
-                "definition": "Reporting that ties results to a specific webpage address.",
-                "whyItMatters": "It lets users identify exactly which pages are associated with a result."
-              }
-            ]
-          }
-        },
-        {
-          "id": "analytics-4-19784",
-          "title": "Google’s agentic Ads and Analytics dashboards change reporti",
-          "kicker": "marketscale.com",
-          "summary": "Google is rolling out AI dashboards and Gemini-based agent tools in Google Ads and Google Analytics. The change shifts reporting toward guided actions and tighter data governance. For analytics teams, that suggests more built-in assistance for interpreting performance and taking next steps, along with more emphasis on controlling how data is accessed and used.",
-          "emailSummary": "Google is rolling out AI dashboards and Gemini-based agent tools in Google Ads and Analytics, shifting reporting toward guided actions and tight…",
-          "whyItMatters": "This matters because it could change how teams monitor campaigns and analyze performance, making workflows more automated while also increasing the importance of governance and access controls.",
+          "id": "analytics-4-49095",
+          "title": "FDA clears ZEISS Clinic 360 ophthalmic analytics dashboard",
+          "kicker": "Glance by Eyes On Eyecare",
+          "summary": "FDA has cleared ZEISS Clinic 360, an ophthalmic analytics dashboard that is described as an all-in-one software solution. The product is cloud- and browser-based, integrates into ophthalmic workflows, and is designed for flexible, scalable data management for patient care. In practical terms, this signals a regulated digital tool aimed at helping eye-care practices organize and use clinical data more efficiently.",
+          "emailSummary": "All-in-one, cloud / browser-based software solution integrates into ophthalmic workflows with flexible and scalable data management for patient…",
+          "whyItMatters": "This matters because FDA clearance can make it easier for eye-care providers to adopt the software, which could improve how patient data is managed inside clinical workflows.",
           "dataSignals": [
             "analytics workflow",
             "dashboard / reporting"
           ],
-          "sourceLabel": "marketscale.com · Aug 19, 11:00 AM ET",
-          "sourceUrl": "https://www.marketscale.com/industries/marketing-tech/googles-new-agentic-dashboards-in-ads-and-analytics-push-reporting-into-the-workflow-and-that-changes-how-enterprises-govern-marketing-data",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMingJBVV95cUxPYUtZejQyTFJJVjdEaEJpbVNjN2duWEFMTGlhbmxHMmxJb0ZMZGhGVDRGaS1YNzN4Z3NHTHI5eXB1Z3ZMM1BpNFdWREZPOThYRFdGb2NhZHBQaDFxOG8zb2k4TVlMZjhWQk00djQ1cXZINFFrd1JBQThPaGI0QUpySGVGT1NaOWlqa2haNXpRbFBma1A5ekZCeHI5cThUdk9pZ29hX0xoT2tpN2ZzemlfRGFjaHhxVkVGX1dSb1ZMUjducDdGSWZsOUJZYzMyc2U3LWZ0djRMcGxYOUN5eWRCLTcxeC1sUzV0WExUVTRuZ1FyaHNvY2JiUmhSNHhGYXVuUkMzY19VR3V0SWtqQ0hYZ0xFbFFTaXlVX1lKaEJB?oc=5",
-          "publishedAt": "2026-08-19T15:00:15+00:00",
+          "sourceLabel": "Glance by Eyes On Eyecare · Aug 20, 6:57 AM ET",
+          "sourceUrl": "https://glance.eyesoneyecare.com/stories/2026-08-20/fda-clears-zeiss-clinic-360-ophthalmic-analytics-dashboard/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZ2NZZ2ROdjBhaklvRDNOMW83RFV1QndPeVpRbmo2T2xIQ2x6NU1tbWloYjg3U0VWMTVBb2tvS0JYaHpoR2RYVnNlWHp1MmEzS2R3eUhmeTFVdVA1ZUNNZ09pSVlvTmRHMTFEQkNYV3BhaU9JMUdRczRrX25QckRHNTdJdVV6WXptcVhYWm9zWERfbDkzSkY0VkMxYnI4MzVhb0FYbDc5ZGlINW15cDl0Qw?oc=5",
+          "publishedAt": "2026-08-20T10:57:31+00:00",
           "glossary": [
             {
-              "term": "Gemini",
-              "definition": "Google’s family of AI models and tools used to generate or assist with content and tasks."
+              "term": "FDA clearance",
+              "definition": "A regulatory decision from the U.S. Food and Drug Administration that allows a medical product to be marketed for its intended use."
             },
             {
-              "term": "Google Ads",
-              "definition": "Google’s advertising platform for creating, managing, and measuring online ad campaigns."
+              "term": "cloud-based",
+              "definition": "Software that runs over the internet instead of being installed only on one local computer or server."
             },
             {
-              "term": "Google Analytics",
-              "definition": "Google’s web and app analytics platform for tracking traffic, user behavior, and performance."
+              "term": "browser-based",
+              "definition": "Software that works inside a web browser, such as Chrome or Safari, without needing a separate desktop app."
             },
             {
-              "term": "data governance",
-              "definition": "The rules and controls that determine who can access data, how it is used, and how it is protected."
+              "term": "ophthalmic workflows",
+              "definition": "The step-by-step processes used in eye care practices to handle patient visits, tests, and treatment decisions."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a product-change story about analytics software, not a results story. When reading the source, pay attention to what Google says is actually changing in the dashboards, what actions the AI can guide users toward, and what new controls are being added. The interpretation would change if the rollout is limited, optional, or restricted to certain users, because that would affect how broadly these tools alter reporting workflows.",
+            "explanationText": "This is a product-and-regulatory story, not a clinical results story, so the key question is what the software does and what the FDA decision allows. When reading the source, pay attention to the exact scope of the clearance and whether the dashboard is meant for data management, decision support, or both, because that changes how significant the product is for clinics.",
             "glossary": [
               {
-                "term": "Gemini",
-                "definition": "Google’s family of AI models and tools used to generate or assist with content and tasks.",
-                "whyItMatters": "Gemini is the engine behind the new agent tools, so it determines what kinds of guidance and automation users get."
+                "term": "FDA clearance",
+                "definition": "A regulatory decision from the U.S. Food and Drug Administration that allows a medical product to be marketed for its intended use.",
+                "whyItMatters": "It indicates the product has passed a formal review step that can affect whether clinics are willing or able to use it."
               },
               {
-                "term": "Google Ads",
-                "definition": "Google’s advertising platform for creating, managing, and measuring online ad campaigns.",
-                "whyItMatters": "Changes here affect how advertisers report on campaign results and decide what to do next."
+                "term": "cloud-based",
+                "definition": "Software that runs over the internet instead of being installed only on one local computer or server.",
+                "whyItMatters": "This usually affects how easily a clinic can access data across locations and devices."
               },
               {
-                "term": "Google Analytics",
-                "definition": "Google’s web and app analytics platform for tracking traffic, user behavior, and performance.",
-                "whyItMatters": "New AI features in Analytics can change how data is explored, interpreted, and acted on."
+                "term": "browser-based",
+                "definition": "Software that works inside a web browser, such as Chrome or Safari, without needing a separate desktop app.",
+                "whyItMatters": "This can make deployment and use simpler for staff because it reduces installation and maintenance steps."
               },
               {
-                "term": "data governance",
-                "definition": "The rules and controls that determine who can access data, how it is used, and how it is protected.",
-                "whyItMatters": "Tighter governance can limit misuse and help organizations trust AI-driven reporting."
+                "term": "ophthalmic workflows",
+                "definition": "The step-by-step processes used in eye care practices to handle patient visits, tests, and treatment decisions.",
+                "whyItMatters": "If software fits these workflows well, it is more likely to be adopted and used effectively."
               }
             ]
           }
         },
         {
-          "id": "analytics-5-35939",
-          "title": "Analytics enters agentic era as AI delivers insights first",
-          "kicker": "디지털투데이",
-          "summary": "Salesforce Tableau product management vice president Matthew Miller says analytics has entered an “agentic analytics” era, where AI delivers insights to users first. He says AI agents can understand user needs, remember work patterns, and adapt to an organization’s terminology. Miller described three shifts: from passive to active analytics, from descriptive to advanced analysis, and from expert-only outputs to results anyone can understand. He also pointed to Tableau’s Knowledge Engine and Decision Engine as part of that approach.",
-          "emailSummary": "Salesforce global Tableau product management vice president Matthew Miller defined the current moment as an “agentic analytics” era in which ins…",
-          "whyItMatters": "This matters because it signals a move toward analytics tools that can surface and explain insights more proactively, potentially making data work faster and more accessible across an organization.",
+          "id": "analytics-5-66549",
+          "title": "Scaling the data platform powering ChatGPT",
+          "kicker": "Databricks",
+          "summary": "Databricks and OpenAI have partnered to make OpenAI’s frontier models, including GPT-5, available natively inside the Databricks platform. In practical terms, that means Databricks users can access those models directly in the platform instead of stitching together separate tools. For analytics teams, this points to tighter integration between data infrastructure and advanced AI model use.",
+          "emailSummary": "Databricks and OpenAI have partnered to make OpenAI's frontier models, including GPT-5, available natively inside the Databricks platform.",
+          "whyItMatters": "This matters because bringing frontier models into a data platform can make it easier for organizations to build and deploy AI features where their data already lives.",
           "dataSignals": [
-            "analytics workflow"
+            "article trigger",
+            "source credibility",
+            "practical impact"
           ],
-          "sourceLabel": "디지털투데이 · Aug 20, 2:30 AM ET",
-          "sourceUrl": "https://www.digitaltoday.co.kr/en/view/94933/analytics-enters-agentic-era-ai-delivers-insights-first",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcExtNWVOT080Z0ZTcUJvUFoyaVlhSXJGT2Z3WnNaYmpJR3MyWVBmcEp5MkFJV21KT0gxWTNwRGJIbVVYWEtQY3pXYk02SFg0M01oQlF6M2tpVkR2bWlXRnk0clJ1WnVMaUFTc0U1NzAxdEVMZXVTQXdPZEtTSlpRQTd6RFlSMzk2d0pxdV82cnVhRjA3YTVROEJoMk5yYnZQa2c?oc=5",
-          "publishedAt": "2026-08-20T06:30:07+00:00",
+          "sourceLabel": "Databricks · Aug 20, 10:00 AM ET",
+          "sourceUrl": "https://www.databricks.com/customers/openai",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9Vai12V0JnODN5cU1KQUdVYUxFS0dNbk0wUXdhZnZMRVdzNkVtOS05MzdDTEFlMWVBU2NVT3ZUQ2YwcGt1WEZhcjFtM25MbjFZY216RURB?oc=5",
+          "publishedAt": "2026-08-20T14:00:21+00:00",
           "glossary": [
             {
-              "term": "agentic analytics",
-              "definition": "An analytics approach where AI agents actively help produce and deliver insights rather than waiting for a user to ask for them."
+              "term": "frontier models",
+              "definition": "The most advanced AI models available from a provider, usually with the newest capabilities and highest performance."
             },
             {
-              "term": "AI agents",
-              "definition": "Software systems that can act on behalf of users by understanding context and adapting their behavior."
-            },
-            {
-              "term": "descriptive analysis",
-              "definition": "Analysis that explains what happened using past data."
-            },
-            {
-              "term": "Knowledge Engine",
-              "definition": "A product capability meant to help systems organize and use knowledge when generating answers or insights."
+              "term": "platform",
+              "definition": "A software environment where users can store, process, analyze, and build applications on data."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a trend story about how analytics software is changing, not a report of a specific company result or policy decision. When reading it, pay attention to the claimed shift in user experience: the key question is whether tools can truly understand context, terminology, and work patterns well enough to make insights useful without a specialist. The interpretation would change if these capabilities are only aspirational marketing, versus features already producing reliable results in real-world use.",
+            "explanationText": "This is a partnership/feature announcement, so the key thing to watch is what is actually being made available and where it is available. If the source later specifies pricing, rollout timing, security controls, or limits on which models are included, that would change how broad or useful the integration is for real users.",
             "glossary": [
               {
-                "term": "agentic analytics",
-                "definition": "An analytics approach where AI agents actively help produce and deliver insights rather than waiting for a user to ask for them.",
-                "whyItMatters": "It describes the core shift in how analytics tools are expected to work in this story."
+                "term": "frontier models",
+                "definition": "The most advanced AI models available from a provider, usually with the newest capabilities and highest performance.",
+                "whyItMatters": "This tells you the partnership is about top-tier model access, not just basic AI features."
               },
               {
-                "term": "AI agents",
-                "definition": "Software systems that can act on behalf of users by understanding context and adapting their behavior.",
-                "whyItMatters": "The story says these agents are what make the new analytics approach possible."
-              },
-              {
-                "term": "descriptive analysis",
-                "definition": "Analysis that explains what happened using past data.",
-                "whyItMatters": "Miller contrasts this with more advanced analytics as part of the field’s progression."
-              },
-              {
-                "term": "Knowledge Engine",
-                "definition": "A product capability meant to help systems organize and use knowledge when generating answers or insights.",
-                "whyItMatters": "It is one of the Tableau components Miller highlights in this analytics approach."
+                "term": "platform",
+                "definition": "A software environment where users can store, process, analyze, and build applications on data.",
+                "whyItMatters": "Knowing this helps explain why native access can reduce extra integration work."
               }
             ]
           }
@@ -1065,172 +1077,188 @@
       "emptyMessage": "No qualified Louisville, Kentucky stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "louisville-1-30760",
-          "title": "Louisville VA Medical Center In Kentucky Delays Expected Opening To 2027",
-          "kicker": "Healthcare Design Magazine",
-          "summary": "The $970 million Louisville Veterans Affairs Medical Center in Louisville is now expected to open in 2027. That is a delay from the earlier expected opening date implied by the headline, and it pushes back when the facility will start serving veterans in the area. For Louisville, this means the region will wait longer for the benefits of a major new VA medical facility.",
-          "emailSummary": "The $970 million Louisville Veterans Affairs Medical Center is now expected to open in 2027 in Louisville, Ky.",
-          "whyItMatters": "This matters because a delayed opening keeps veterans and the local health system waiting longer for added care capacity, services, and the economic activity tied to a major hospital project.",
+          "id": "louisville-1-54369",
+          "title": "Baptist Health Louisville unveils expanded Kosair for Kids NICU",
+          "kicker": "WDRB",
+          "summary": "Baptist Health Louisville has unveiled a newly named Kosair for Kids NICU after a $2 million investment. The expansion added 11 beds and more clinical space so the unit can serve more newborns and families. For Louisville, this points to increased neonatal care capacity at a major hospital, which can matter for both access and patient flow.",
+          "emailSummary": "Baptist Health Louisville unveiled its newly named Kosair for Kids NICU following a $2 million investment that added 11 beds and expanded clinic…",
+          "whyItMatters": "This matters because more NICU beds and space can improve access to specialized newborn care for families in the Louisville area.",
           "dataSignals": [
             "Louisville local",
             "healthcare angle"
           ],
-          "sourceLabel": "Healthcare Design Magazine · Aug 19, 7:14 PM ET",
-          "sourceUrl": "https://healthcaredesignmagazine.com/news/louisville-va-medical-center-in-kentucky-delays-expected-opening-to-2027/165340/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQc0xJSjM0d3A3MU52ZFBQR2N0Q1NzTFRyQkZFbWNwWGhXX1J4VFAtY1Jza0hDbXdld2tGOE1HNi01c01sOEVqdFRsZzk3TFZxQ1VCd19PZHhOWlk1NnQtNUNWZHVRcklhdldIeVo0UGx4a0RoN3JCMlhQODdoSll1c2FrYzdFbzVzeXFKb1hsX0tJUmpyLTk0eDBWZFREUHUxc3EyLS1DN3I0SjZFckVjQnJORTdXb0I3UjlmTGJmbw?oc=5",
-          "publishedAt": "2026-08-19T23:14:40+00:00",
+          "sourceLabel": "WDRB · Aug 20, 6:58 AM ET",
+          "sourceUrl": "https://www.wdrb.com/news/baptist-health-louisville-unveils-expanded-kosair-for-kids-nicu/article_33ca560b-cab5-4aff-be52-95fb830023db.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxObkxFTGVfOWx0ZmF2REpWenE1a3ItcG1oeGRMd0tVNTZ6cGdWVWdUd3NUZEtScXBIY3h4TXJjSDZtX1d3OEw1aVduajBHSEZsZU1lWU55ZUVrNUhBSXhMcWpDTlExejJRaUZFZS1YeXhBMUxjZXl6Z2N1YzVYRnpiYWhuamVYZnhKdFQxTjRZdmUwR1Z3Y1BxWW1pNGJYeS1kVkVIVFpJbWI5aGlzbHRJRzg2TU9xaHBNTHA5dGwxT08tVERtc3MwZGZpS2s4Y3lYcl9peVNB?oc=5",
+          "publishedAt": "2026-08-20T10:58:00+00:00",
           "glossary": [
             {
-              "term": "Veterans Affairs (VA) Medical Center",
-              "definition": "A hospital or clinic run by the U.S. Department of Veterans Affairs that provides healthcare to eligible veterans."
+              "term": "NICU",
+              "definition": "Neonatal Intensive Care Unit, a hospital unit for newborns who need specialized medical care."
+            },
+            {
+              "term": "clinical space",
+              "definition": "The physical rooms and treatment areas used by medical staff to care for patients."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a project-delivery and public-health infrastructure story: the key issue is when a large, publicly funded medical center will actually open. When reading the source, pay attention to the dollar amount and the revised timeline, because those are the only concrete details given here. A different interpretation would require new information about why the opening moved, whether costs changed, or whether the delay affects scope; none of that is stated in the provided text.",
+            "explanationText": "This is a local health-care capacity story, not a policy debate or a clinical research report. When reading the source, pay attention to the size of the investment, the number of beds added, and whether the change is a rename, an expansion, or both. If later reporting shows staffing changes, referral patterns, or patient outcomes, that would change how meaningful the expansion is beyond the headline capacity increase.",
             "glossary": [
               {
-                "term": "Veterans Affairs (VA) Medical Center",
-                "definition": "A hospital or clinic run by the U.S. Department of Veterans Affairs that provides healthcare to eligible veterans.",
-                "whyItMatters": "It is the type of facility being built, so its opening date affects when local veterans can use it."
+                "term": "NICU",
+                "definition": "Neonatal Intensive Care Unit, a hospital unit for newborns who need specialized medical care.",
+                "whyItMatters": "It tells you this is high-acuity care for the most medically vulnerable babies."
+              },
+              {
+                "term": "clinical space",
+                "definition": "The physical rooms and treatment areas used by medical staff to care for patients.",
+                "whyItMatters": "More clinical space can mean the unit can handle more patients and work more efficiently."
               }
             ]
           }
         },
         {
-          "id": "louisville-2-80689",
-          "title": "Louisville arson investigators looking for suspect accused of setting fire to Shively business",
+          "id": "louisville-2-30767",
+          "title": "Louisville councilman says more needs to be done for people living in homeless camps",
           "kicker": "WDRB",
-          "summary": "Louisville Fire Department investigators are asking for help identifying a suspect accused of setting a fire at a business in Shively. Officials say the blaze caused up to $200,000 in damage. The main takeaway is that this is an active arson investigation with potentially significant property losses for a local business.",
-          "emailSummary": "The Louisville Fire Department is asking for help identifying a suspect accused of setting a fire that caused up to $200,000 in damage at a busi…",
-          "whyItMatters": "This matters because arson can create major repair costs, disrupt operations, and affect safety and insurance claims for businesses in the Louisville area.",
+          "summary": "Councilman Dan Seum, a Republican representing District 13, is drawing attention to conditions inside homeless camps in the Louisville area, including one in a wooded part of Shively. The report says he believes more needs to be done for people living in these camps. For Louisville, this points to ongoing pressure on local leaders to address unsafe or inadequate living conditions for unhoused residents.",
+          "emailSummary": "Councilman Dan Seum (R-13) is calling attention to the conditions inside homeless camps, including one tucked away in a wooded area in Shively.",
+          "whyItMatters": "This matters because conditions in homeless camps can affect public health, safety, and how city and county leaders prioritize shelter and outreach resources.",
           "dataSignals": [
-            "Louisville local",
-            "business signal"
+            "Louisville local"
           ],
-          "sourceLabel": "WDRB · Aug 19, 3:51 PM ET",
-          "sourceUrl": "https://www.wdrb.com/news/crime-reports/louisville-arson-investigators-looking-for-suspect-accused-of-setting-fire-to-shively-business/article_260b97b6-ce06-4f96-ad98-46938b7c421a.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQNmRNRTRWS1RFN0pFakY4eUdUMmR2YzBYSlI1WklMYVp4WFg5OW5GT0o4SFA4YkVzdEZDT2xWeVYxQjQxbVVEUXZRR3hyOVJlV1VuUDR5aUVZQzB3XzRPSjMwbWcyRUdnSzFFRUdvTWJaYWR1WU1LdkhlODRCOFZlUnBkRUhXRWw0dE9EX0lqRHVtV2VrYWg1eHBnZi14VC1qb3JPY3RITE5UM2lKNGtHNTBmZ2syUE5iRzNTYWZ4WDFNb2lFaVJFanptY2FVZnMyMFNlYnc1X3Y0NGtPRERCNktETW9mNUZJNnh1eFBGb2hfZFVOU1Uwb1dzdjNQVHMwdnpGMWszZ3ZDeDNTR3FYY1NB?oc=5",
-          "publishedAt": "2026-08-19T19:51:00+00:00",
+          "sourceLabel": "WDRB · Aug 20, 10:16 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/louisville-councilman-says-more-needs-to-be-done-for-people-living-in-homeless-camps/article_3be8141d-9734-49a1-958c-9268a5ec51fc.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOaTdmQ1VhRVplYUpxNmwwS1VDeWphT2w5QnhGb0tiU2xRVDczNFZ4a0dzSXA5TXg5MDI0UzNtRGxta2l0SEhRZTVra3lrVHh6c2tUSEVybUpEMUZya0hkeUVvU3FIWklWYlp3cG9SeGJlMHRHNnM5SnE4OFY5N1RTU2tWRjMyYndzanZ6RE9uaFJKd25yVENRbWdWWU9qUEpPdGhYbjFKaWFTaDFlZVR3M2pGUVp6SlVsc29ncnZOSlpoMnB0cVdVelZhSmUzVkJUdVBlVGdUZzVOMFVJeFRNR2JNV1h0c0tjN3kzei1ORVItQQ?oc=5",
+          "publishedAt": "2026-08-21T02:16:00+00:00",
           "glossary": [
             {
-              "term": "arson",
-              "definition": "The crime of deliberately setting a fire."
+              "term": "homeless camps",
+              "definition": "Informal outdoor places where people experiencing homelessness live, often without permanent housing or basic services."
+            },
+            {
+              "term": "District 13",
+              "definition": "A local council district represented by one elected official."
             },
             {
               "term": "Shively",
-              "definition": "A city in Jefferson County, Kentucky, within the Louisville metro area."
+              "definition": "A city in the Louisville metro area."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a public-safety and property-damage story, not a policy or economic trend piece. When reading the source, pay attention to whether investigators identify a suspect, confirm the fire was intentionally set, and provide an updated damage estimate. If the damage amount or cause changes, that would affect both the seriousness of the case and the business’s recovery outlook.",
+            "explanationText": "This is a local government and public-safety story focused on homelessness conditions rather than a policy vote or funding decision. When reading the source, pay attention to whether officials describe immediate concerns, propose concrete actions, or simply raise awareness, because that changes how much follow-through to expect. The meaning would shift most if the full report shows a specific plan, enforcement action, or service expansion rather than just a statement of concern.",
             "glossary": [
               {
-                "term": "arson",
-                "definition": "The crime of deliberately setting a fire.",
-                "whyItMatters": "Knowing this term helps readers understand that investigators believe the fire was intentional, not accidental."
+                "term": "homeless camps",
+                "definition": "Informal outdoor places where people experiencing homelessness live, often without permanent housing or basic services.",
+                "whyItMatters": "They are the specific living conditions being discussed, so understanding the term is key to the story."
+              },
+              {
+                "term": "District 13",
+                "definition": "A local council district represented by one elected official.",
+                "whyItMatters": "It identifies the area and responsibility of the councilman speaking in the story."
               },
               {
                 "term": "Shively",
-                "definition": "A city in Jefferson County, Kentucky, within the Louisville metro area.",
-                "whyItMatters": "It identifies the local community where the fire happened and where residents or businesses may be affected."
+                "definition": "A city in the Louisville metro area.",
+                "whyItMatters": "It gives the location of one camp mentioned in the report."
               }
             ]
           }
         },
         {
-          "id": "louisville-3-43450",
-          "title": "St. James Court Art Show celebrates 70th anniversary in Old Louisville",
+          "id": "louisville-3-44088",
+          "title": "Videos show drivers passing stopped JCPS bus dropping off students in southeast Louisville",
           "kicker": "WDRB",
-          "summary": "The St. James Court Art Show will return to Old Louisville Oct. 2-4 for its 70th anniversary. The annual event is expected to feature hundreds of artists and draw thousands of visitors. For Louisville, that means a major recurring cultural event is coming back with a large crowd and a broad lineup of exhibitors.",
-          "emailSummary": "The annual art show returns Oct. 2-4, featuring hundreds of artists and thousands of visitors in Old Louisville.",
-          "whyItMatters": "This matters because a large, long-running event like this can drive foot traffic, tourism, and neighborhood activity in Old Louisville.",
+          "summary": "Parents captured three drivers on three separate occasions passing a stopped JCPS bus on Cooper Chapel Road near the Heritage Creek neighborhood in southeast Louisville. The bus was stopped while dropping off students, and the videos show vehicles going past it anyway. For Louisville families and schools, that points to a road-safety problem around student drop-off that can put children at risk.",
+          "emailSummary": "Parents captured three drivers on three separate occasions passing a bus stopped on Cooper Chapel Road near the Heritage Creek neighborhood.",
+          "whyItMatters": "This matters because passing a stopped school bus can endanger children getting on or off the bus and signals a local traffic safety issue that depends on driver compliance.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Aug 19, 10:44 PM ET",
-          "sourceUrl": "https://www.wdrb.com/st-james-court-art-show-celebrates-70th-anniversary-in-old-louisville/video_f733cef5-da02-592a-9b6b-909d71f6adad.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPYUE4YTVJcXhHb0NmOVZzaFY4S3FBNUJ0QTR5RWh4WjZfZ21jeVpYQ0JLZ3R3U2g0bmhtZEg0QnoteDdhTEZ5b1FtTVZZWUMxOFJESGU1Q2NpeHVUOG45bUh1WjRJZVZfLUFxWWlMOHB5ZHludUlHd2p5UU1oU3VVSUZoclZTeUxMeVB5Z3FLLXVXNU83M01YWUV1Snh0N0lwNEhWZ3lPWWN3Q0VFalhNUzBIQWZ2a2dCS3BtaUo0LVNlVTB2M2RwdjZrOEtVLXJOUWczdA?oc=5",
-          "publishedAt": "2026-08-20T02:44:00+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a community event preview, so the main things to watch are the dates, the scale of participation, and the setting in Old Louisville. If later reporting adds details about attendance, logistics, or economic impact, that would change how significant the event is for local businesses and residents.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "louisville-4-80654",
-          "title": "Louisville woman arrested in connection with hit-and-run that seriously injured teen riding bike",
-          "kicker": "WDRB",
-          "summary": "Louisville Metro Police said 52-year-old Julie Willis was taken into custody five days after an Aug. 14 hit-and-run crash at Dixie Highway and Valley Station Road. The crash seriously injured a teen riding a bike. For Louisville, this points to a major traffic-safety and enforcement case tied to a busy roadway intersection.",
-          "emailSummary": "Louisville Metro Police said 52-year-old Julie Willis was taken into custody five days after the Aug. 14 crash at Dixie Highway and Valley Stati…",
-          "whyItMatters": "This matters because hit-and-run crashes involving serious injuries can affect road safety, police enforcement priorities, and public concern about dangerous driving in the area.",
-          "dataSignals": [
-            "Louisville local"
-          ],
-          "sourceLabel": "WDRB · Aug 19, 10:30 PM ET",
-          "sourceUrl": "https://www.wdrb.com/news/crime-reports/louisville-woman-arrested-in-connection-with-hit-and-run-that-seriously-injured-teen-riding-bike/article_42cd5aae-642b-42bb-82d3-be71271337b0.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPY2ltd1BLYm53Zkd6WklwQjhLWlpTTVJDVm9WSzZ6dEN3UGJEdTRnbkNvbkpJTDdtSGU0TVJNUEI5ZFlqc0xZUGNLVl8xQldvUHV0dzg0d21rMXlSV1JFTXdOSERPQ2dRcDZBZ1FkSGQ2YnJHZEowdC1CTDRGb2c1UkctV1ROOW1NdGlSQWRMU0RlbDVwa3lmaXNMQV9lcjlMeWx0ZnhrRUZQVnNUU1ltM3dGRmVvMHN6ZzluVUY4NFltTDk0aGZFazVhd2F5ZUM0YUs3VGU0OGR2U294SThVOXVRUGh4WmxEU3o4d3JKZnBzUGlzRy1wckp0RkR0SEUydmp6S3N3TnFhMGt4Z0c3MGVFSHA?oc=5",
-          "publishedAt": "2026-08-20T02:30:00+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a local public-safety story about an arrest tied to a traffic crash. When reading the source, pay attention to the reported date of the crash, the location, the injury severity, and what police say about the arrest, since those are the facts that shape the case. Any change in the interpretation would come from new details about charges, fault, or the circumstances of the collision.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "louisville-5-49373",
-          "title": "Louisville man accused of shooting, stealing Flock cameras",
-          "kicker": "WDRB",
-          "summary": "A Louisville man pleaded not guilty after police accused him of shooting and stealing Flock cameras. Flock cameras are used for security and license-plate monitoring, so the case appears to involve damage to public or private surveillance equipment as well as theft. The immediate takeaway is that police are treating this as a criminal case tied to enforcement technology in the city.",
-          "emailSummary": "A Louisville man pleaded not guilty after police accused him of shooting and stealing Flock cameras.",
-          "whyItMatters": "This matters because damage to surveillance cameras can disrupt local public-safety and investigative tools, while the criminal case shows how seriously such attacks are treated.",
-          "dataSignals": [
-            "Louisville local"
-          ],
-          "sourceLabel": "WDRB · Aug 19, 6:53 PM ET",
-          "sourceUrl": "https://www.wdrb.com/louisville-man-accused-of-shooting-stealing-flock-cameras/video_b07597fb-eb08-569e-bbed-cec019b16c8d.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQUZHRS12eFZfZTF3R3JTd0IydHB4cXZ5Z0dzQm1heHRzNE9Kdm43ZmJ4NTN2ZjRlNlhHWkhOVmJrYjAyc056aU52SUNwRUFiN0ZlVm1LUkR1cHJtNGxNd1Y2M2g3UEthV3VsNThjQkhMaU5ROG96UTdpUnN5NGZaYVRTUVNPOXU5ZTAxOXlTOVVJdXRkX0t0UjZVUndlMGtQX0ZDUGpzRWhDZGRGcFJpYU5BNWRXODBab2RmWlpkWi1wWHo2?oc=5",
-          "publishedAt": "2026-08-19T22:53:00+00:00",
+          "sourceLabel": "WDRB · Aug 20, 9:38 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/education/videos-show-drivers-passing-stopped-jcps-bus-dropping-off-students-in-southeast-louisville/article_00807a91-78f4-471f-93e3-442ec42af605.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOckhPWE5TeGxHM0hmQ1hKRElfM21VanVHdmlpYUZobEIxeFFob0NRZWprVzI5SXpNLW1DdldvQW9UOUtReWhpekxYd1dRUkhkZFlsWG1xOXdoZUVkZS1FaG9LWS1nR29RbDd1ZzFaRHhpbFZaZDRBUVpIbThkY2VhbHpieWdpdGVGbTIwRlNSM1dJb3pjbHdkbktfY0ZKU1dmejVFdVRERW1CR2d6LVVUMjVYdnN5SFNiOWdMcGdkbGdQQ3pDX0MzaW1LckV5di01UlRXbnpVUjBKc1EzVWhMNkd4bDEzTHVhRlF0elFRd01TNjFnNVRDN3h1Uzc4U3c2VWFVdkVHMA?oc=5",
+          "publishedAt": "2026-08-21T01:38:00+00:00",
           "glossary": [
             {
-              "term": "Flock cameras",
-              "definition": "Camera systems used by police, neighborhoods, or businesses to capture vehicle and area footage, often including license plates."
+              "term": "JCPS",
+              "definition": "Jefferson County Public Schools, the public school district serving Louisville and Jefferson County."
             },
             {
-              "term": "pleaded not guilty",
-              "definition": "A court plea saying the accused person denies the charges and will contest them."
+              "term": "stopped school bus",
+              "definition": "A bus that has halted to pick up or drop off students, typically with warning signals active."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a short criminal-justice story centered on an arrest accusation and an initial court plea. When reading the source, focus on the exact conduct police allege and whether the cameras were city, business, or neighborhood equipment, since that affects the impact on local surveillance coverage. If later reporting adds details about where the cameras were taken from or how many were damaged, that would change how serious the disruption is.",
+            "explanationText": "This is a local public-safety story, not a policy or budget story. When reading the source, pay attention to who observed the behavior, where it happened, and how many times it was captured, because those details tell you whether this looks isolated or repeated. If later reporting shows enforcement action, injuries, or a broader pattern, that would change how serious the situation appears.",
             "glossary": [
               {
-                "term": "Flock cameras",
-                "definition": "Camera systems used by police, neighborhoods, or businesses to capture vehicle and area footage, often including license plates.",
-                "whyItMatters": "These cameras are part of the surveillance network that can help identify vehicles and support investigations."
+                "term": "JCPS",
+                "definition": "Jefferson County Public Schools, the public school district serving Louisville and Jefferson County.",
+                "whyItMatters": "It identifies the school system involved in the bus route and student safety issue."
               },
               {
-                "term": "pleaded not guilty",
-                "definition": "A court plea saying the accused person denies the charges and will contest them.",
-                "whyItMatters": "It means the case will move forward rather than being resolved by an admission of guilt."
+                "term": "stopped school bus",
+                "definition": "A bus that has halted to pick up or drop off students, typically with warning signals active.",
+                "whyItMatters": "Passing it can create immediate danger for children crossing or near the road."
               }
             ]
+          }
+        },
+        {
+          "id": "louisville-4-69113",
+          "title": "More than 20% of Louisville carjackings are committed by minors, police reports show",
+          "kicker": "WDRB",
+          "summary": "Police reports reviewed by WDRB show that more than 20% of Louisville carjackings are committed by minors. The story is based on city records, which WDRB dug through to better understand who is behind these crimes. For Louisville, that points to juvenile involvement as a notable share of a specific violent theft problem.",
+          "emailSummary": "WDRB dug through city record to get a better understanding of who is committing these crimes.",
+          "whyItMatters": "This matters because it helps city leaders, police, schools, and youth services gauge how much of Louisville’s carjacking problem involves minors and whether prevention efforts need to focus more on young offenders.",
+          "dataSignals": [
+            "Louisville local"
+          ],
+          "sourceLabel": "WDRB · Aug 20, 6:13 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/crime-reports/more-than-20-of-louisville-carjackings-are-committed-by-minors-police-reports-show/article_70f34cad-de98-43b3-a58b-2568f19c0b34.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPblNrUUIxQjR1N2NVc3ZjOHkxYUNBOXN4X21TTkRIdkVqMDZDeDcyLTBQclY3RWtrSDdRNlVvdzJVQkJXTlkzZDZIMEY3azdEU2xHSlBSMExiZ2ZZcEo3OEhuQ0lJYVN2d011YWl5YWVhLWlqVEZRQ1BmYnY0QVBubGlMZDZ5UWNCN214Q3NCcm53TTl5VDFsVVB2N2p3WU1KdU5aR0ltcy1PbDRfRFgwQUJ5VEYwTTFCSFFMUnhESGdkT2pYRDM5YVZNME1hQ1Z3WVhxUFp4UjJrSHNlUUM0OVRJRE41ZzhheWJyRWdQZkNJQ0ZFbGV3R19jTFRXS1JIYUE?oc=5",
+          "publishedAt": "2026-08-20T22:13:04+00:00",
+          "glossary": [],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a data-driven local crime story, so the key thing to watch is how the records define and count carjackings and minors. The takeaway could change if the records cover only a limited time period, use a narrow definition, or reflect reporting practices rather than every incident. The source matters because the headline’s share is only as reliable as the underlying city records WDRB reviewed.",
+            "glossary": []
+          }
+        },
+        {
+          "id": "louisville-5-75936",
+          "title": "The sights and sounds of the 2026 Kentucky State Fair",
+          "kicker": "Louisville Public Media",
+          "summary": "The 122nd Kentucky State Fair began Thursday morning under sunny skies in Louisville. The title and description frame it as a look at the fair’s atmosphere, with sights and sounds centered on the event’s opening day. For Louisville, it signals the start of a major annual gathering that draws local attention and activity.",
+          "emailSummary": "The 122nd Kentucky State Fair kicked off Thursday morning with sunny skies and fair-filled cheer.",
+          "whyItMatters": "This matters because the state fair is a large seasonal event that affects local foot traffic, tourism, and community activity in Louisville.",
+          "dataSignals": [
+            "Louisville local"
+          ],
+          "sourceLabel": "Louisville Public Media · Aug 20, 4:57 PM ET",
+          "sourceUrl": "https://www.lpm.org/news/2026-08-20/the-sights-and-sounds-of-the-2026-kentucky-state-fair",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeFUtVDFNSi1obi1Wa0NXQTF1ZWNRWlF4UnZ1UXdCZ1VSdE5RN0tBRlFtb2d6M2k0U0toelJEZUhtdGYtSERLNEllWEt6a1N1MTVFUjBmX2xZUXktYmJESF9RUFFWblRHU2ctdlpUWFBLVWU3aEQ2N2dJME52RmtLUDNqb05kcG5fVU1kS09fd0M2ZVk?oc=5",
+          "publishedAt": "2026-08-20T20:57:00+00:00",
+          "glossary": [],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a scene-setting event story rather than a policy or business update. When reading the source, pay attention to the specific sensory details and any mention of turnout, vendors, or crowd mood, because those are what show how the fair is going. If later reporting mentions attendance, weather disruptions, or operational issues, that would change whether the fair is simply festive or also economically significant.",
+            "glossary": []
           }
         }
       ]
     }
   ],
   "errors": [
-    "ai: skipped 11 stories with no fetchable content",
+    "ai: skipped 8 stories with no fetchable content",
     "energy: skipped 2 stories with no fetchable content",
-    "humana: skipped 2 stories with no fetchable content",
-    "kentucky_healthcare: skipped 3 stories with no fetchable content",
-    "analytics: skipped 1 story with no fetchable content",
-    "louisville: skipped 8 stories with no fetchable content"
+    "humana: skipped 3 stories with no fetchable content",
+    "kentucky_healthcare: skipped 1 story with no fetchable content",
+    "louisville: skipped 3 stories with no fetchable content"
   ]
 }
