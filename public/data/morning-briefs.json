@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-30T09:00:03.785722+00:00",
-  "generatedLabel": "Aug 30, 5:00 AM ET",
+  "generatedAt": "2026-08-31T09:00:15.071066+00:00",
+  "generatedLabel": "Aug 31, 5:00 AM ET",
   "lookbackHours": 24,
   "briefs": [
     {
@@ -9,272 +9,284 @@
       "emptyMessage": "No qualified AI stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "ai-signal-2026-08-30_08-58-02-1",
-          "title": "OpenViking hits 33K stars with native Hermes memory integration. A context database for AI agents — stor…",
+          "id": "ai-signal-2026-08-31_08-53-13-1",
+          "title": "Simon Willison's full teardown of ChatGPT Work (yesterday). Two products under one tab: Work Cloud (Plus…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "OpenViking is a context database for AI agents that stores memories, resources, and skills as a virtual filesystem using the viking:// protocol. The description says Hermes now has a built-in memory provider for it via “hermes memory setup openviking.” It also reports tiered loading levels (L0, L1, L2) that cut token spend by 34–91% in benchmarks and memory accuracy of 80–83%, compared with 24–57% for native approaches. For AI builders, that suggests a more efficient way to give agents persistent context without paying full token costs every time.",
-          "emailSummary": "OpenViking hits 33K stars with native Hermes memory integration. A context database for AI agents — stores memories, resources, and skills as a…",
-          "whyItMatters": "This matters because better memory handling can make AI agents cheaper, more accurate, and more practical to run at scale.",
+          "summary": "Simon Willison published a teardown of ChatGPT Work, describing it as two products under one tab: Work Cloud for Plus users and above, and Work Local, which was formerly Codex and is now aimed at non-developers. The features he highlights include code execution with full internet access, a headless Chrome browser with JavaScript, a persistent shared filesystem across sessions, sub-agents, scheduled prompt automations, and “ChatGPT Sites” for one-prompt website deployment on Cloudflare Workers. He also points to a safety risk when private data, untrusted content, and an exfiltration channel are all present together. For AI teams, that means the product looks powerful but also raises real governance and security questions.",
+          "emailSummary": "Simon Willison's full teardown of ChatGPT Work (yesterday). Two products under one tab: Work Cloud (Plus/$20+ only) and Work Local (former Codex…",
+          "whyItMatters": "This matters because these capabilities could turn ChatGPT into a much more autonomous work environment, while also increasing the chance of data leakage or unsafe agent behavior in enterprise and consumer use.",
           "dataSignals": [
             "agent workflow",
-            "developer workflow"
+            "Codex / coding agents",
+            "safety / governance"
           ],
-          "sourceLabel": "github.com · Aug 30, 4:58 AM ET",
-          "sourceUrl": "https://github.com/volcengine/OpenViking",
+          "sourceLabel": "simonwillison.net · Aug 31, 4:53 AM ET",
+          "sourceUrl": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
           "googleNewsUrl": null,
-          "publishedAt": "2026-08-30T08:58:02.419077+00:00",
+          "publishedAt": "2026-08-31T08:53:13.544532+00:00",
           "glossary": [
             {
-              "term": "context database",
-              "definition": "A storage system designed to hold the background information an AI agent can pull in while it works."
+              "term": "headless Chrome",
+              "definition": "A version of the Chrome browser that runs without a visible window, so software can automate web pages behind the scenes."
             },
             {
-              "term": "virtual filesystem",
-              "definition": "A way of organizing data so it looks like folders and files even if it is stored differently underneath."
+              "term": "JavaScript (JS)",
+              "definition": "A programming language used by many websites to make pages interactive and dynamic."
             },
             {
-              "term": "tiered loading",
-              "definition": "Loading information in levels, from small summaries to full detail depending on need."
+              "term": "persistent shared filesystem",
+              "definition": "A storage area that keeps files across sessions so the same workspace can be reused later."
             },
             {
-              "term": "AGPLv3",
-              "definition": "A software license that requires modified versions of the code to remain open under the same license terms when used over a network."
+              "term": "Cloudflare Workers",
+              "definition": "A serverless platform for running code at Cloudflare’s edge without managing traditional servers."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a product-and-benchmark story about AI infrastructure, not a general AI research claim. When reading the source, pay attention to whether the performance numbers come from the project’s own benchmarks and what comparison baseline they use, because that changes how impressive the gains are. The interpretation would change most if independent tests confirm the token savings and accuracy gains, or if the integration proves easy to use in real deployments.",
+            "explanationText": "This is a product teardown and safety-analysis story, not a policy announcement or benchmark report. When reading the source, focus on which features are actually confirmed versus how the author interprets their implications, especially around agent autonomy and data handling. If the claims about internet access, persistence, or deployment are accurate, the interpretation shifts from a simple chatbot upgrade to a much more capable and risk-sensitive AI workspace.",
             "glossary": [
               {
-                "term": "context database",
-                "definition": "A storage system designed to hold the background information an AI agent can pull in while it works.",
-                "whyItMatters": "It helps explain how the system keeps long-term information available without re-sending everything in each prompt."
+                "term": "headless Chrome",
+                "definition": "A version of the Chrome browser that runs without a visible window, so software can automate web pages behind the scenes.",
+                "whyItMatters": "It lets an AI browse and interact with websites programmatically, which expands what it can do and what it can access."
               },
               {
-                "term": "virtual filesystem",
-                "definition": "A way of organizing data so it looks like folders and files even if it is stored differently underneath.",
-                "whyItMatters": "It suggests memories and skills can be addressed in a structured, familiar format for agents and tools."
+                "term": "JavaScript (JS)",
+                "definition": "A programming language used by many websites to make pages interactive and dynamic.",
+                "whyItMatters": "Full JS support means the AI can handle modern websites more reliably, including pages that load content after the initial page opens."
               },
               {
-                "term": "tiered loading",
-                "definition": "Loading information in levels, from small summaries to full detail depending on need.",
-                "whyItMatters": "It is the main mechanism behind the reported token savings and memory performance."
+                "term": "persistent shared filesystem",
+                "definition": "A storage area that keeps files across sessions so the same workspace can be reused later.",
+                "whyItMatters": "Persistence makes the tool more useful for ongoing projects, but it also means sensitive data can remain available longer."
               },
               {
-                "term": "AGPLv3",
-                "definition": "A software license that requires modified versions of the code to remain open under the same license terms when used over a network.",
-                "whyItMatters": "It affects how companies can adopt, modify, and distribute the software."
+                "term": "Cloudflare Workers",
+                "definition": "A serverless platform for running code at Cloudflare’s edge without managing traditional servers.",
+                "whyItMatters": "If ChatGPT can deploy there in one prompt, it lowers the barrier to publishing web apps and increases the need to review what gets deployed."
               }
             ]
           }
         },
         {
-          "id": "ai-signal-2026-08-30_08-58-02-2",
-          "title": "Tencent Hy4 preview live on OpenRouter — $0.83/$2.50 per million. 770B total / 49B active MoE, 1M contex…",
+          "id": "ai-signal-2026-08-31_08-53-13-2",
+          "title": "Claude Code v2.1.248–251: --restricted mode added, plus security patches. Restricted mode strips command…",
           "kicker": "Hermes Daily AI Brief",
-          "summary": "Tencent’s Hy4 preview is now available on OpenRouter, with pricing listed at $0.83 per million input tokens and $2.50 per million output tokens. The model is described as a 770B-parameter mixture-of-experts system with 49B active parameters, a 1M-token context window, and an Apache 2.0 license. It is also available globally through OpenRouter and Tencent Cloud TokenHub, and is presented as being designed for coding agents and complex tool-use workflows. For AI users, this signals another large open-weight model entering broad commercial access with unusually long context and explicit API pricing.",
-          "emailSummary": "Tencent Hy4 preview live on OpenRouter — $0.83/$2.50 per million. 770B total / 49B active MoE, 1M context, Apache 2.0. Open-sourced Aug 28, weig…",
-          "whyItMatters": "This matters because easier global access, published pricing, and a very long context window can change which models teams choose for coding, automation, and agent workflows.",
+          "summary": "Claude Code v2.1.248–251 adds a new --restricted mode and includes security patches. In restricted mode, command and code execution tools plus WebFetch are removed, file tools are limited to the working directory, bypassPermissions is refused, and settings files are ignored. Version v2.1.251 also adds PreModelSwitch and PostModelSwitch hooks and fixes symlink path-traversal and plugin command traversal issues. For AI tool users, this is mainly about tighter control over what the agent can access and safer handling of file and plugin paths.",
+          "emailSummary": "Claude Code v2.1.248–251: --restricted mode added, plus security patches. Restricted mode strips command/code tools and WebFetch, keeps file too…",
+          "whyItMatters": "This matters because tighter tool restrictions and path-traversal fixes reduce the chance that an AI coding assistant can access or execute beyond its intended scope, which is important for secure deployment in real workflows.",
           "dataSignals": [
-            "agent workflow",
-            "workflow controls"
-          ],
-          "sourceLabel": "tencent.com · Aug 30, 4:58 AM ET",
-          "sourceUrl": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-08-30T08:58:02.419077+00:00",
-          "glossary": [
-            {
-              "term": "mixture-of-experts (MoE)",
-              "definition": "A model design that uses a larger pool of expert sub-models but only activates some of them for each request."
-            },
-            {
-              "term": "active parameters",
-              "definition": "The subset of model parameters that are used during a given inference step."
-            },
-            {
-              "term": "token",
-              "definition": "A chunk of text the model reads or generates, roughly a word or part of a word."
-            },
-            {
-              "term": "Apache 2.0",
-              "definition": "A permissive open-source license that allows broad use, modification, and redistribution with few restrictions."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a product-and-platform update, not a research paper: the main things to watch are price, access channels, license, and model capabilities like context length. When reading the source, pay attention to whether the model is truly open-weight, where it is hosted, and how the pricing compares with alternatives. Interpretation would change if the pricing is promotional, the context claim is limited in practice, or the model is not as broadly available as the announcement suggests.",
-            "glossary": [
-              {
-                "term": "mixture-of-experts (MoE)",
-                "definition": "A model design that uses a larger pool of expert sub-models but only activates some of them for each request.",
-                "whyItMatters": "It helps explain how a very large model can be cheaper to run than its total size suggests."
-              },
-              {
-                "term": "active parameters",
-                "definition": "The subset of model parameters that are used during a given inference step.",
-                "whyItMatters": "This is a better indicator of runtime cost and speed than total parameter count alone."
-              },
-              {
-                "term": "token",
-                "definition": "A chunk of text the model reads or generates, roughly a word or part of a word.",
-                "whyItMatters": "Pricing and context limits are usually measured in tokens, so they determine cost and how much text the model can handle."
-              },
-              {
-                "term": "Apache 2.0",
-                "definition": "A permissive open-source license that allows broad use, modification, and redistribution with few restrictions.",
-                "whyItMatters": "It affects whether companies can adopt the model in products without heavy licensing barriers."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-signal-2026-08-30_08-58-02-3",
-          "title": "\"Domain-Driven Agents\" essay proposes .workflow.json project manifest. The thesis: LLMs fail on brownfie…",
-          "kicker": "Hermes Daily AI Brief",
-          "summary": "A \"Domain-Driven Agents\" essay proposes a .workflow.json project manifest for software projects. It argues that LLMs struggle with brownfield code because the code does not clearly mark domain boundaries, and suggests a root-level JSON file that declares bounded contexts, glossaries, and agent skills. The proposal would make projects easier for agents to understand and onboard into, especially for codebases with lots of existing complexity.",
-          "emailSummary": "\"Domain-Driven Agents\" essay proposes .workflow.json project manifest. The thesis: LLMs fail on brownfield code because the code lacks explicit…",
-          "whyItMatters": "This matters because clearer project metadata could make AI tools more reliable when navigating legacy code, reducing confusion and setup time for real-world software teams.",
-          "dataSignals": [
-            "agent workflow",
-            "workflow controls"
-          ],
-          "sourceLabel": "coldtake.dev · Aug 30, 4:58 AM ET",
-          "sourceUrl": "https://coldtake.dev/blog/domain-driven-agents",
-          "googleNewsUrl": null,
-          "publishedAt": "2026-08-30T08:58:02.419077+00:00",
-          "glossary": [
-            {
-              "term": "brownfield code",
-              "definition": "Existing software that is already built and usually messy or complex to change."
-            },
-            {
-              "term": "bounded context",
-              "definition": "A clearly defined area in a system where a specific set of terms, rules, and responsibilities apply."
-            },
-            {
-              "term": "cross-repo context map",
-              "definition": "A map that connects related concepts or boundaries across multiple repositories."
-            },
-            {
-              "term": "agent skills",
-              "definition": "Capabilities or tasks an AI agent is expected to perform in a project."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a technical proposal story, not a report about a product launch or policy change. When reading the source, focus on the structure it proposes — the manifest, the domain boundaries, and the validation step — because those details determine whether the idea is just conceptual or actually usable. The interpretation would change if the essay shows the manifest works on real codebases, or if it only remains a theoretical pattern for AI-assisted development.",
-            "glossary": [
-              {
-                "term": "brownfield code",
-                "definition": "Existing software that is already built and usually messy or complex to change.",
-                "whyItMatters": "The essay says LLMs fail more often on this kind of code, so the problem is biggest in real production systems rather than clean examples."
-              },
-              {
-                "term": "bounded context",
-                "definition": "A clearly defined area in a system where a specific set of terms, rules, and responsibilities apply.",
-                "whyItMatters": "Declaring these boundaries could help an agent understand where one part of a codebase ends and another begins."
-              },
-              {
-                "term": "cross-repo context map",
-                "definition": "A map that connects related concepts or boundaries across multiple repositories.",
-                "whyItMatters": "A generator for this map would help the model build a broader picture of a distributed codebase."
-              },
-              {
-                "term": "agent skills",
-                "definition": "Capabilities or tasks an AI agent is expected to perform in a project.",
-                "whyItMatters": "Listing skills in a manifest could tell the AI what it is allowed or intended to do in that codebase."
-              }
-            ]
-          }
-        },
-        {
-          "id": "ai-1-8067",
-          "title": "OpenAI, Anthropic and Over 100 Firms Warn AI Cyberattacks Are Months Away",
-          "kicker": "Startup Fortune",
-          "summary": "OpenAI, Anthropic, Microsoft and more than 100 firms are warning that AI-driven cyberattacks on hospitals and water systems could be only months away. The warning cites a CrowdStrike estimate of an 89% surge in attacks. For AI and security, this suggests major vendors expect the threat to move from theory to near-term operational risk, especially for critical infrastructure.",
-          "emailSummary": "OpenAI, Anthropic, Microsoft and 100+ firms warn AI cyberattacks on hospitals and water systems are months away, citing CrowdStrike's 89% attack…",
-          "whyItMatters": "This matters because AI-enabled attacks on hospitals and water systems could disrupt essential services and force faster investment in cyber defenses, monitoring, and incident response.",
-          "dataSignals": [
+            "Anthropic signal",
             "model/tool release"
           ],
-          "sourceLabel": "Startup Fortune · Aug 29, 7:11 AM ET",
-          "sourceUrl": "https://startupfortune.com/openai-anthropic-and-over-100-firms-warn-ai-cyberattacks-are-months-away/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSUlScnZONzQwbzVnQmwzS05VVW51Y2NzWHhQLW5FZ2RnMVN2WVUyWFlKcFk3RlhVSXQ0V2R1RUxlZmZaYWZkMHdjZEVWQ1lCNlAxSlVjdXNDbjNaNmh1YXRLV0E0REZzT3Rudlc3Q19IMGRKUlFqUnM1SmRUU01zNGNkUG4wRHhfQ1pnQXNvR1BDaXRWWWlPblFEYXZvREdic0E?oc=5",
-          "publishedAt": "2026-08-29T11:11:31+00:00",
+          "sourceLabel": "code.claude.com · Aug 31, 4:53 AM ET",
+          "sourceUrl": "https://code.claude.com/docs/en/changelog",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-08-31T08:53:13.544532+00:00",
           "glossary": [
             {
-              "term": "cyberattack",
-              "definition": "A malicious attempt to break into, damage, or disrupt computer systems or networks."
+              "term": "restricted mode",
+              "definition": "An operating mode that deliberately limits what the AI tool can do or access."
             },
             {
-              "term": "critical infrastructure",
-              "definition": "Systems and services that are vital to public safety and daily life, such as hospitals and water systems."
+              "term": "WebFetch",
+              "definition": "A tool that lets the AI retrieve content from the web."
             },
             {
-              "term": "surge",
-              "definition": "A large and sudden increase."
+              "term": "bypassPermissions",
+              "definition": "A setting or action that would override normal permission checks."
+            },
+            {
+              "term": "path traversal",
+              "definition": "A security flaw where a program can be tricked into accessing files outside the intended directory."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a risk-warning story, not a report of a confirmed attack. When reading the source, pay attention to who is issuing the warning, what targets are named, and what evidence is cited for the threat level. If the underlying attack trend or timeline changes, the interpretation shifts from an urgent near-term warning to a broader long-term concern.",
+            "explanationText": "This is a software release/security update, so the key thing to watch is what capabilities were removed, what safety checks were tightened, and what bugs were fixed. Interpretation changes if the changes are only packaging-level versus actual security hardening; here, the description points to real access restrictions and traversal fixes rather than cosmetic changes.",
             "glossary": [
               {
-                "term": "cyberattack",
-                "definition": "A malicious attempt to break into, damage, or disrupt computer systems or networks.",
-                "whyItMatters": "The story is about a specific increase in this kind of threat, not just general computer problems."
+                "term": "restricted mode",
+                "definition": "An operating mode that deliberately limits what the AI tool can do or access.",
+                "whyItMatters": "It lowers the risk of unintended commands, network access, or file exposure."
               },
               {
-                "term": "critical infrastructure",
-                "definition": "Systems and services that are vital to public safety and daily life, such as hospitals and water systems.",
-                "whyItMatters": "These are the targets named in the warning, so attacks here can have real-world consequences beyond data loss."
+                "term": "WebFetch",
+                "definition": "A tool that lets the AI retrieve content from the web.",
+                "whyItMatters": "Removing it in restricted mode reduces outside data access and possible security exposure."
               },
               {
-                "term": "surge",
-                "definition": "A large and sudden increase.",
-                "whyItMatters": "The cited 89% surge is the evidence used to support the warning about growing attack activity."
+                "term": "bypassPermissions",
+                "definition": "A setting or action that would override normal permission checks.",
+                "whyItMatters": "Refusing it helps keep the tool from exceeding approved access boundaries."
+              },
+              {
+                "term": "path traversal",
+                "definition": "A security flaw where a program can be tricked into accessing files outside the intended directory.",
+                "whyItMatters": "Fixing it helps prevent unauthorized file access through symlinks or crafted paths."
               }
             ]
           }
         },
         {
-          "id": "ai-2-36560",
-          "title": "OpenAI to end model access to Cursor after acquisition by Elon Musk's SpaceX",
+          "id": "ai-signal-2026-08-31_08-53-13-3",
+          "title": "codex mcp-server is deprecated (official, Aug 24). OpenAI says use the Codex app server, or the official…",
+          "kicker": "Hermes Daily AI Brief",
+          "summary": "OpenAI says the codex mcp-server is deprecated as of Aug. 24 and recommends using the Codex app server instead. It also points people using Claude Code to the official Codex plugin for Claude Code (openai/codex-plugin-cc) to call Codex from that environment. For AI users, this means one older integration path is being retired and the official replacement paths are now the ones to watch.",
+          "emailSummary": "codex mcp-server is deprecated (official, Aug 24). OpenAI says use the Codex app server, or the official Codex plugin for Claude Code (openai/co…",
+          "whyItMatters": "This matters because teams using Codex integrations need to shift to supported connection methods before the deprecated server becomes harder to rely on or maintain.",
+          "dataSignals": [
+            "Codex / coding agents",
+            "developer workflow",
+            "OpenAI signal",
+            "MCP / integration"
+          ],
+          "sourceLabel": "github.com · Aug 31, 4:53 AM ET",
+          "sourceUrl": "https://github.com/openai/codex-plugin-cc",
+          "googleNewsUrl": null,
+          "publishedAt": "2026-08-31T08:53:13.544532+00:00",
+          "glossary": [
+            {
+              "term": "deprecated",
+              "definition": "Officially marked as an older option that should no longer be used for new work."
+            },
+            {
+              "term": "MCP server",
+              "definition": "A server that exposes capabilities through the Model Context Protocol so an AI app can connect to external tools or services."
+            },
+            {
+              "term": "plugin",
+              "definition": "An add-on that extends another application with extra features or integrations."
+            },
+            {
+              "term": "Claude Code",
+              "definition": "Anthropic's coding-focused environment for working with AI inside development tasks."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a product-integration update, not a technical research story: the main issue is which supported connector or plugin to use. When reading the source, pay attention to whether a change is a deprecation notice, a replacement recommendation, or just informational guidance. The interpretation would change if OpenAI were announcing a full shutdown, a security issue, or a broader API change; here it is mainly a routing update to official paths.",
+            "glossary": [
+              {
+                "term": "deprecated",
+                "definition": "Officially marked as an older option that should no longer be used for new work.",
+                "whyItMatters": "Deprecation signals that a tool may lose support or be phased out, so users should plan a replacement."
+              },
+              {
+                "term": "MCP server",
+                "definition": "A server that exposes capabilities through the Model Context Protocol so an AI app can connect to external tools or services.",
+                "whyItMatters": "If an MCP server is deprecated, any workflows built on it may need to be moved to a different integration."
+              },
+              {
+                "term": "plugin",
+                "definition": "An add-on that extends another application with extra features or integrations.",
+                "whyItMatters": "Using the official plugin is the recommended way to keep the integration working with supported software."
+              },
+              {
+                "term": "Claude Code",
+                "definition": "Anthropic's coding-focused environment for working with AI inside development tasks.",
+                "whyItMatters": "The notice specifically affects how Codex is called from this tool, which matters for developers using both systems together."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-1-54125",
+          "title": "Google takes aim at Anthropic, Microsoft with budget-friendly AI pricing",
           "kicker": "CNBC",
-          "summary": "OpenAI plans to end model access through Cursor on Nov. 12. The move is tied to concerns after SpaceX’s $60 billion acquisition of the coding startup. For the AI sector, this suggests access to major models can change quickly when a startup’s ownership or business ties shift.",
-          "emailSummary": "OpenAI plans to end model access through Cursor on Nov. 12, citing concerns after SpaceX’s $60 billion acquisition of the coding startup.",
-          "whyItMatters": "This matters because changes in model access can affect product availability, developer workflows, and competitive positioning for AI-powered tools.",
+          "summary": "Google is pushing budget-friendly pricing for AI agents in an effort to undercut Microsoft and Anthropic. The report says this is happening as enterprise spending on AI continues to rise. For the AI market, that points to intensifying price competition among major providers as businesses decide which platform to buy.",
+          "emailSummary": "CNBC’s MacKenzie Sigalos joins “Access Middle East” to report on Google’s push to undercut Microsoft and Anthropic on AI agent pricing as enterp…",
+          "whyItMatters": "This matters because lower AI agent pricing could push enterprise buyers toward cheaper platforms and force competitors to respond with better pricing or value.",
           "dataSignals": [
-            "model/tool release"
+            "pricing / limits"
           ],
-          "sourceLabel": "CNBC · Aug 29, 3:05 PM ET",
-          "sourceUrl": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiekFVX3lxTE90bmQ0enBvenh2RFZzWDJtV2FWRnFMVzNRMEJrbG1RSmtWbnZ6MU1XcHV0TUJ1dll3YkJJM1RSMUgyRWVsV3NTeHpUV1JOeEZVb01TRkctT0c0NjZIc0haWFVTdzVkSmFLM1htanRGeVJZMmxNb2NaWnBn0gF_QVVfeXFMTnNMYVB6Q3hkc1l0NnRTSVhOeU5uT21nbUxOZDZjU2ota0tocTk2a3JjOWdxeUp0M2ttVUpHNk1ZTlB5MWp6QkR5c21aUlduUERGbzRZenhNZ1ZIQVVWTWt6RmJJdW8xcVAtRW05NnIxVGI5UE1uaVA4Q0V6NWd4cw?oc=5",
-          "publishedAt": "2026-08-29T19:05:55+00:00",
+          "sourceLabel": "CNBC · Aug 31, 12:40 AM ET",
+          "sourceUrl": "https://www.cnbc.com/video/2026/08/31/google-takes-aim-at-anthropic-microsoft-with-budget-friendly-ai-pricing.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQa1NMQThidUVBbFMzbkpJWDQwZU5Rb0xvODcwUG1MME5JLTcxZ3owVDBSM2FRSWRCZ3ptZ2RneDZfYU5SejBIdmJxQmg4aFFBcU5ndkpQVVpBYkxKalVBVFNrWl9mUm9vZEdueDlkbmE2TDNDLTJCOEx5R0o4T3A2dGxKY2pUZXg2YjZCV3lHckxmSHBGcnNMQk14Q1NaVi1DOXdacmEtS0ZXLVVlVm85OHdpVks?oc=5",
+          "publishedAt": "2026-08-31T04:40:21+00:00",
           "glossary": [
             {
-              "term": "model access",
-              "definition": "Permission for an app or service to use an AI model through an API or other integration."
+              "term": "AI agents",
+              "definition": "Software systems that can carry out tasks or decisions with some degree of autonomy using artificial intelligence."
             },
             {
-              "term": "acquisition",
-              "definition": "A deal where one company buys another company."
+              "term": "enterprise spending",
+              "definition": "Money that companies spend on tools, services, and software for business use."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a business-and-platform-relationships story in AI, not a technical model-performance story. When reading the source, pay attention to who controls the startup, which model access is being ended, and the effective date. The interpretation would change if the access change were temporary, if there were a new agreement, or if the acquisition details were different than stated here.",
+            "explanationText": "This is a market-competition story about pricing in the AI sector, not a product-launch or technical-model story. When reading the source, focus on who is being targeted, what is being discounted, and whether the price move is meant to win customers or pressure rivals. The interpretation would change if the report showed this pricing applies only to a narrow product, a short-term promo, or a broader shift in Google’s enterprise strategy.",
             "glossary": [
               {
-                "term": "model access",
-                "definition": "Permission for an app or service to use an AI model through an API or other integration.",
-                "whyItMatters": "If access is cut off, the product may need to switch models or change features."
+                "term": "AI agents",
+                "definition": "Software systems that can carry out tasks or decisions with some degree of autonomy using artificial intelligence.",
+                "whyItMatters": "These are the products whose pricing and adoption can shape enterprise AI spending."
               },
               {
-                "term": "acquisition",
-                "definition": "A deal where one company buys another company.",
-                "whyItMatters": "Acquisitions can trigger changes in partnerships, access rights, and vendor relationships."
+                "term": "enterprise spending",
+                "definition": "Money that companies spend on tools, services, and software for business use.",
+                "whyItMatters": "Rising enterprise spending suggests there is a growing market for vendors to compete over."
+              }
+            ]
+          }
+        },
+        {
+          "id": "ai-2-46780",
+          "title": "OpenAI Is Buying So Many Mac Minis and Studios That Apple Can't Keep Up",
+          "kicker": "Startup Fortune",
+          "summary": "OpenAI has reportedly bought tens of thousands of Apple Mac minis and Mac Studios to support AI agent training. Apple CEO Tim Cook says the resulting shortage of those devices will last for months. For AI infrastructure, this suggests unusually strong demand for Apple hardware as part of model or agent development, not just cloud servers.",
+          "emailSummary": "OpenAI bought tens of thousands of Apple Mac minis and Mac Studios for AI agent training, and Tim Cook says Apple's shortage will last months.",
+          "whyItMatters": "This matters because hardware availability can become a bottleneck for AI training and deployment, affecting how quickly teams can build and scale systems.",
+          "dataSignals": [
+            "model/tool release"
+          ],
+          "sourceLabel": "Startup Fortune · Aug 30, 8:56 PM ET",
+          "sourceUrl": "https://startupfortune.com/openai-is-buying-so-many-mac-minis-and-studios-that-apple-cant-keep-up/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObWxZUFJILUZFQUJfdGlOOUtnNENDTUk5eFExYmtGRlZncGJsR1dQUlRpYnNVWEJOZ0hTMVEyelVNSVZteGc3dnRlcXNNSmRYTFRTS2pySzFJdERCdzNOZmxfcVdKb2pPaUprckxsbXRMb2w4c0dyQmlJQ1VQUWRabkNFQUVRaUZVT05lVHpVeVdHMm9HMHNxRy1nd2RHeW8?oc=5",
+          "publishedAt": "2026-08-31T00:56:13+00:00",
+          "glossary": [
+            {
+              "term": "AI agents",
+              "definition": "Software systems that can take actions toward a goal with limited step-by-step human guidance."
+            },
+            {
+              "term": "Training",
+              "definition": "The process of teaching an AI system by exposing it to data or tasks so it can improve performance."
+            },
+            {
+              "term": "Mac mini",
+              "definition": "A small desktop computer made by Apple."
+            },
+            {
+              "term": "Mac Studio",
+              "definition": "A higher-end desktop computer made by Apple for demanding creative and technical work."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a hardware-and-AI infrastructure story, not a model-release story. When reading it, focus on the scale of the purchases and the claimed reason for them, because that determines whether this is a one-off procurement issue or a sign of broader AI compute demand. If the source later shows the purchases are for something other than training, or that the shortage is limited to certain configurations, that would change how important the story is.",
+            "glossary": [
+              {
+                "term": "AI agents",
+                "definition": "Software systems that can take actions toward a goal with limited step-by-step human guidance.",
+                "whyItMatters": "The story says the devices are being used for agent training, so this is the workload driving the purchases."
+              },
+              {
+                "term": "Training",
+                "definition": "The process of teaching an AI system by exposing it to data or tasks so it can improve performance.",
+                "whyItMatters": "Training demand is what is creating the large hardware purchase and the shortage."
+              },
+              {
+                "term": "Mac mini",
+                "definition": "A small desktop computer made by Apple.",
+                "whyItMatters": "OpenAI reportedly bought many of these, making them part of the supply constraint."
+              },
+              {
+                "term": "Mac Studio",
+                "definition": "A higher-end desktop computer made by Apple for demanding creative and technical work.",
+                "whyItMatters": "Its use here shows OpenAI is buying powerful consumer/prosumer hardware for AI work."
               }
             ]
           }
@@ -287,134 +299,110 @@
       "emptyMessage": "No qualified Energy / Utilities stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "energy-1-43892",
-          "title": "PPL land deal in Archbald, Upvalley paves way for massive data center power plants",
-          "kicker": "Scranton Times-Tribune",
-          "summary": "A PPL Corp. joint venture has secured land from Dunmore businessman Dominick DeNaples in Archbald, Upvalley for plans to build at least two large power plants intended to serve data centers. PPL says the plans are still very preliminary, so the deal signals an early-stage step toward new power infrastructure rather than a final development decision. For energy and utilities, the key point is that data-center growth is already shaping where new generation may be built.",
-          "emailSummary": "A PPL Corp. joint venture secured the land from Dunmore businessman Dominick DeNaples to build at least two massive power plants for data center…",
-          "whyItMatters": "This matters because large data centers can drive major new electricity demand, which can change utility planning, local land use, and the timing of power infrastructure investments.",
+          "id": "energy-1-19154",
+          "title": "PPL Corporation $PPL Shares Bought by BTG Pactual Asset Management US LLC",
+          "kicker": "MarketBeat",
+          "summary": "BTG Pactual Asset Management US LLC increased its holdings in PPL Corporation by 306.1% in the second quarter, according to a filing with the Securities and Exchange Commission. The firm owned 403,390 shares of PPL after the increase. This is an ownership-change story, not an operating update, so it signals investor buying interest in a regulated utility rather than a change in PPL’s business performance.",
+          "emailSummary": "BTG Pactual Asset Management US LLC raised its holdings in shares of PPL Corporation (NYSE:PPL - Free Report) by 306.1% during the second quarte…",
+          "whyItMatters": "This matters because large institutional buying can affect sentiment around a utility stock and may signal how professional investors view its income and stability profile.",
           "dataSignals": [
-            "PPL mention",
-            "data-center load"
+            "PPL mention"
           ],
-          "sourceLabel": "Scranton Times-Tribune · Aug 29, 11:17 AM ET",
-          "sourceUrl": "https://www.thetimes-tribune.com/2026/08/29/ppl-secures-11-plus-square-miles-in-archbald-upvalley-for-power-plants/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPejZPTThNLUZWSVpudHdLMXM4OGFuNXFjckV3OWVPTGNzV2k5M2hrMjBGaE9KQW5ZVENoVmp1V3l5dXFpYkVhMVZlY2dZY2NuaWdRSkNla0tuMW5HUno4V3dUeV8wYVBRaG9abm9kOTNJWVNlUzFNNEhJb1Z3X3R0NUVpS05xY2tISXBHQkRxUmYwRlJSUUtHN0hoV1FIU1RuMHB5bk1ySUd1WlJyVTdWV3QydDJwZw?oc=5",
-          "publishedAt": "2026-08-29T15:17:37+00:00",
+          "sourceLabel": "MarketBeat · Aug 31, 4:50 AM ET",
+          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-ppl-corporation-ppl-shares-bought-by-btg-pactual-asset-management-us-llc-2026-08-31/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNSlRxSTh4QjFlWHp2NmNEa3JEazZkelFaZWVmUmpFSmo4QXFicUliREpxajZJRm53UjVQUEVMQ2lKQnpVNnl1MGxPLVdTc2lMTV8xU1pSWmJPV2J2VzZ0cGR4WnN0Mmdxam1yQUMzQndtTXRJTDZ1QlE3S0Y0S3l0Skl6QnRJRGxLUjVNTVpzY2tnV2RaTkpqSGFPNUppajRmZHdlSWU2ZnU1VnliM1dzNkJEWWdUcm0yMWZxSENNMDdxU3pBM1RPMktUNTdTUQ?oc=5",
+          "publishedAt": "2026-08-31T08:50:59+00:00",
           "glossary": [
             {
-              "term": "joint venture",
-              "definition": "A business arrangement where two or more companies work together on a specific project or asset."
+              "term": "institutional investor",
+              "definition": "An organization such as an asset manager, pension fund, or bank that invests large amounts of money on behalf of others."
             },
             {
-              "term": "data center",
-              "definition": "A facility full of computers and networking equipment that stores, processes, and moves digital information."
+              "term": "holdings",
+              "definition": "The securities or shares that an investor owns."
             },
             {
-              "term": "power plant",
-              "definition": "A facility that generates electricity for homes, businesses, or industrial users."
+              "term": "Securities and Exchange Commission (SEC)",
+              "definition": "The U.S. government agency that oversees securities markets and requires many investors and companies to file public disclosures."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is an early-stage infrastructure and utility development story, not a finished project announcement. When reading the source, pay attention to whether the land deal turns into formal permits, financing, and construction plans, because those steps would show the project is moving from preliminary interest to committed investment. If any of those pieces change, the significance for electricity demand, local development, and utility planning would change too.",
+            "explanationText": "This is a market-ownership story, not a utility-operations story, so the key thing to watch is who is buying or selling and how much. The interpretation would change if the filing showed a sale instead of a purchase, or if the position size were much smaller than it appears here.",
             "glossary": [
               {
-                "term": "joint venture",
-                "definition": "A business arrangement where two or more companies work together on a specific project or asset.",
-                "whyItMatters": "It shows this land and power project is being pursued through a shared ownership or partnership structure, which can affect control and financing."
+                "term": "institutional investor",
+                "definition": "An organization such as an asset manager, pension fund, or bank that invests large amounts of money on behalf of others.",
+                "whyItMatters": "Institutional investors often trade in size, so their moves can influence stock demand and market perception."
               },
               {
-                "term": "data center",
-                "definition": "A facility full of computers and networking equipment that stores, processes, and moves digital information.",
-                "whyItMatters": "Data centers are major electricity users, so their location can drive demand for new power plants and grid upgrades."
+                "term": "holdings",
+                "definition": "The securities or shares that an investor owns.",
+                "whyItMatters": "Changes in holdings show whether an investor is adding to or cutting a position."
               },
               {
-                "term": "power plant",
-                "definition": "A facility that generates electricity for homes, businesses, or industrial users.",
-                "whyItMatters": "The story is about building generation capacity, which is the core supply side of the utility system."
+                "term": "Securities and Exchange Commission (SEC)",
+                "definition": "The U.S. government agency that oversees securities markets and requires many investors and companies to file public disclosures.",
+                "whyItMatters": "SEC filings are the source for verified ownership changes and other market-relevant disclosures."
               }
             ]
           }
         },
         {
-          "id": "energy-2-10194",
-          "title": "Corient Private Wealth LP Purchases Shares of 355,126 PPL Corporation $PPL",
+          "id": "energy-2-30319",
+          "title": "Kingsview Wealth Management LLC Acquires Shares of 34,974 PPL Corporation $PPL",
           "kicker": "MarketBeat",
-          "summary": "Corient Private Wealth LP bought a new stake in PPL Corporation during the second quarter, according to its latest filing with the Securities and Exchange Commission. The firm purchased 355,126 shares of the utilities provider. For the utilities sector, this is a routine ownership update that can signal how large investors are positioning themselves in a regulated power company.",
-          "emailSummary": "Corient Private Wealth LP purchased a new stake in shares of PPL Corporation (NYSE:PPL - Free Report) during the 2nd quarter, according to its m…",
-          "whyItMatters": "This matters because large institutional purchases can affect investor sentiment and help indicate whether money managers see value in a utility stock like PPL.",
+          "summary": "Kingsview Wealth Management LLC bought a new stake in PPL Corporation in the second quarter, acquiring 34,974 shares, according to its latest Form 13F filing with the SEC. PPL is a utilities provider traded on the NYSE under ticker PPL. For the utilities sector, this is a routine institutional ownership update that shows one investment firm added exposure to the company.",
+          "emailSummary": "Kingsview Wealth Management LLC acquired a new stake in PPL Corporation (NYSE:PPL - Free Report) in the 2nd quarter, according to the company in…",
+          "whyItMatters": "This matters because institutional buying can signal investor interest in a regulated utility and may affect how the market views demand for the stock.",
           "dataSignals": [
             "PPL mention"
           ],
-          "sourceLabel": "MarketBeat · Aug 30, 4:10 AM ET",
-          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-purchases-shares-of-355126-ppl-corporation-ppl-2026-08-30/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOamhBV1NuamxLME9FSmFZYUVrR0FhMHoxNVozc05oS3dTVzVxOXBKMVN5TjJoT1U5WjJnOEpXNzRiN2xWS2g4NG5Xc0FXQXdHZEF6a3NOQ0VTcHJ4NVEtU2JQZk9JSC16QUFUWWZ5OEdGQ2IxUEUxZHpMN0RINWlRcngyVWhMX3haTVBJWTNkRzlLVElnV1I3UVpyOFMxdVN4bWs0djVJS0RkT2JWWlJVWk5HYXgybHlGbC1LUnc2eG9jU1U3bjNCNTExR09TZw?oc=5",
-          "publishedAt": "2026-08-30T08:10:36+00:00",
+          "sourceLabel": "MarketBeat · Aug 30, 5:41 AM ET",
+          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-kingsview-wealth-management-llc-acquires-shares-of-34974-ppl-corporation-ppl-2026-08-30/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQVWREbUF4UkpMN2dhZ2o0MnFFdjZtLWhkeFhKZnppSG5ESEFNMHBjZDJrTU9Za1pLaWxXdVJUMzFZZmFIUnFCQVhWWmtyZWRwSWI5OVBGczQxdVZMTkpVOUIxWjFlRUlsRXQ4bTBzajRsdmxXemJSMnQ0MDhLM3JPOE9OMXFpLUlpRS05elhxQ1JnTGw2MFdXT3JiRGJDSXdTcGdLVVNPeWJNU2pZcjNnTnR4LS1mWmpkT2gxQkREWmVmU0ZRZUF6ME0wTThTM01DT3ln?oc=5",
+          "publishedAt": "2026-08-30T09:41:07+00:00",
           "glossary": [
+            {
+              "term": "Form 13F",
+              "definition": "A quarterly filing that institutional investment managers submit to the SEC showing certain U.S. stock holdings."
+            },
+            {
+              "term": "SEC",
+              "definition": "The U.S. Securities and Exchange Commission, the federal agency that oversees securities markets and company disclosures."
+            },
             {
               "term": "stake",
               "definition": "An ownership position in a company, usually through shares."
             },
             {
-              "term": "Securities and Exchange Commission (SEC)",
-              "definition": "The U.S. government agency that oversees securities markets and requires many companies and investors to file public reports."
-            },
-            {
-              "term": "utilities provider",
-              "definition": "A company that supplies essential services such as electricity, gas, or water."
+              "term": "NYSE",
+              "definition": "The New York Stock Exchange, a major U.S. stock exchange."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a market-ownership story, not a story about PPL's operations or earnings. When reading it, pay attention to who bought the shares, how many were purchased, and the reporting period, because those details show the scale and timing of the move. The interpretation would change if the filing showed a sale, a much larger or smaller position, or if the investor were increasing an existing stake rather than starting a new one.",
+            "explanationText": "This is an institutional ownership story, not an operating update about PPL’s business or utilities service. When reading the source, focus on who bought shares, how many, and the reporting period, because those details tell you what changed; the meaning would shift if the filing showed a sale, a much larger position, or a position increase instead of a new stake.",
             "glossary": [
+              {
+                "term": "Form 13F",
+                "definition": "A quarterly filing that institutional investment managers submit to the SEC showing certain U.S. stock holdings.",
+                "whyItMatters": "It is the source of the ownership change reported here."
+              },
+              {
+                "term": "SEC",
+                "definition": "The U.S. Securities and Exchange Commission, the federal agency that oversees securities markets and company disclosures.",
+                "whyItMatters": "It is the regulator that receives the filing used to confirm the purchase."
+              },
               {
                 "term": "stake",
                 "definition": "An ownership position in a company, usually through shares.",
-                "whyItMatters": "It shows that an investor now has a financial interest in the company."
+                "whyItMatters": "It tells you the fund now owns part of PPL through stock holdings."
               },
               {
-                "term": "Securities and Exchange Commission (SEC)",
-                "definition": "The U.S. government agency that oversees securities markets and requires many companies and investors to file public reports.",
-                "whyItMatters": "Its filings are the source for tracking major investment moves."
-              },
-              {
-                "term": "utilities provider",
-                "definition": "A company that supplies essential services such as electricity, gas, or water.",
-                "whyItMatters": "Utility companies are often regulated and are important for judging defensive sector demand."
-              }
-            ]
-          }
-        },
-        {
-          "id": "energy-3-77040",
-          "title": "PPL stock holds firm as dividend and capex stay in view",
-          "kicker": "AD HOC NEWS",
-          "summary": "PPL stock is trading at $34.08 as of August 29, 2026, and the company has a market value of $25.65 billion. The headline says the stock is holding firm while investors continue to focus on its dividend and capital spending plans. For utilities, that usually means the market is weighing income from payouts against how much the company needs to invest in its system.",
-          "emailSummary": "PPL stock is trading at $34.08 as of August 29, 2026, with a $25.65 billion market cap and a 52-week.",
-          "whyItMatters": "This matters because utility valuations often depend on whether dividend income is secure and whether heavy capital spending will support or pressure future earnings and stock performance.",
-          "dataSignals": [
-            "PPL mention"
-          ],
-          "sourceLabel": "AD HOC NEWS · Aug 29, 7:51 AM ET",
-          "sourceUrl": "https://www.ad-hoc-news.de/boerse/news/corporate-news/ppl-stock-holds-firm-as-dividend-and-capex-stay-in-view/70020160",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOaksyOE45em9TMExaVWJKRDlkWUlsUXRiQjQ4MWRCOXBjeFU4TXFjN1RKbnotcWZmNmxoTG9JMV9kajZuYTI1THhtWkFYQk1mUEptcVZJMXpxNnRrNzNyMGVtNGU1dWNOczBBMlFTMWRkUFhHdzR3OGZxMmdqczNxWmZBZ1NNMnNfM0M5ME53RFh6LTdsZ1NMWUt0WmxvcTdvZjZLdm1XTGZ4X1JkWWlRODhNUEJOYTZaR2c?oc=5",
-          "publishedAt": "2026-08-29T11:51:17+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a market-moving stock brief, not a deep earnings story, so the key is the balance between price, dividend appeal, and investment spending. When reading the source, pay attention to whether the company is maintaining its payout and whether capex is rising or falling, because that can change how investors view a utility's risk and return. If later details show the dividend is being increased, cut, or covered more tightly, that would materially change the interpretation.",
-            "glossary": [
-              {
-                "term": "data center",
-                "definition": "A large building full of servers. For utilities, it can mean a big new electricity customer that may need grid upgrades.",
-                "whyItMatters": "Data centers can consume huge amounts of electricity, so they can change utility forecasts, infrastructure plans, and customer-bill debates."
-              },
-              {
-                "term": "large load",
-                "definition": "A customer or facility that uses enough electricity to affect utility planning, grid equipment, or rates.",
-                "whyItMatters": "Large loads matter because one customer can be big enough to change planning assumptions for the whole grid area."
+                "term": "NYSE",
+                "definition": "The New York Stock Exchange, a major U.S. stock exchange.",
+                "whyItMatters": "It identifies where PPL’s shares trade."
               }
             ]
           }
@@ -427,151 +415,228 @@
       "emptyMessage": "No qualified Humana / Health Insurance stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "humana-1-51927",
-          "title": "Empowered Funds LLC Makes New $12.05 Million Investment in Humana Inc. $HUM",
+          "id": "humana-1-5503",
+          "title": "Rakuten Investment Management Inc. Makes New $7.64 Million Investment in Humana Inc. $HUM",
           "kicker": "MarketBeat",
-          "summary": "Empowered Funds LLC bought a new stake in Humana Inc. during the second quarter, acquiring 30,339 shares, according to its latest SEC filing. MarketBeat values the purchase at about $12.05 million. For Humana, this is a routine ownership update that signals one fund added exposure to the health insurer, but it does not by itself show a change in the company’s business or outlook.",
-          "emailSummary": "Empowered Funds LLC acquired a new stake in Humana Inc. (NYSE:HUM - Free Report) during the 2nd quarter, according to its most recent filing wit…",
-          "whyItMatters": "This matters because large institutional trades can influence how investors read demand for Humana stock and may hint at professional confidence in the company.",
+          "summary": "Rakuten Investment Management Inc. bought a new stake in Humana Inc. during the second quarter, according to a Securities and Exchange Commission filing. The purchase was 19,637 shares and was reported as a $7.64 million investment in the insurance provider. For Humana, this is a data point showing institutional interest, but the description does not say anything about a change in business performance or strategy.",
+          "emailSummary": "Rakuten Investment Management Inc. bought a new stake in shares of Humana Inc. (NYSE:HUM - Free Report) in the second quarter, according to the…",
+          "whyItMatters": "This matters because institutional buying can signal how large investors view Humana’s value and prospects, which can affect market sentiment around the stock.",
           "dataSignals": [
             "Humana mention"
           ],
-          "sourceLabel": "MarketBeat · Aug 30, 4:06 AM ET",
-          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-empowered-funds-llc-makes-new-1205-million-investment-in-humana-inc-hum-2026-08-30/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOeTlaWGdPbkU0dTdRSVRRZnVjdWMzTjg3NlVBUWE5ZTlCYVdvTTRxRmQ4Y1owdDFYc2JwTnJWM3lFR2NSQ004VXpXcjA2emc2d1NwWkd3NEhUQ0x3R1JPTFg4V18xUXRhdnpNQ1pOUnNFXzVFcHZaeEQ4elV5dTJGRHdRcWFVaWVMRHVsRmF6TVdKTktrM25Ka0Z2ajlubFJYRlBCQm93UW5lWmNjbmVPV01rTFlyRUtZOWpHQ0x3SFhGZHFqNHN4aFk2Z2I?oc=5",
-          "publishedAt": "2026-08-30T08:06:39+00:00",
+          "sourceLabel": "MarketBeat · Aug 30, 5:30 AM ET",
+          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-rakuten-investment-management-inc-makes-new-764-million-investment-in-humana-inc-hum-2026-08-30/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPYnpkNXNfTVdfcU95SnJPZ1BoR1JRYkpyVFRwblRfaWNXeEphMGlOaFJwYjVTQi1lMElhd0tKeEhWYkZ2QXRRRXpHdWJMdGd5UnRHa2F4ZW1EelZMMFVLSWM4dUhMQkRNYllfaFlXdmZzTHVMRjI4eERNd1MxSWltRHNsMVFVLUFnZ1BDS09sQXoyTFFMVkJ0UG5xVUNxWUV2T29Lajl5Z1JhX19RM0Exb3g2cXRvRVhsZzBUYmRacy1YRzFYNjh1eGx2c2lFNS1VUklfWmZUVGpqVzkwZEE?oc=5",
+          "publishedAt": "2026-08-30T09:30:55+00:00",
           "glossary": [
             {
               "term": "stake",
-              "definition": "An ownership position in a company’s stock."
+              "definition": "An ownership position in a company’s shares."
             },
-            {
-              "term": "SEC filing",
-              "definition": "A formal report submitted to the U.S. Securities and Exchange Commission about securities holdings or transactions."
-            },
-            {
-              "term": "institutional investor",
-              "definition": "A large organization that invests money on behalf of clients or members, such as a fund."
-            }
-          ],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a stock-ownership news item, not an operating update about Humana’s insurance business. When reading the source, focus on who bought, how many shares they bought, and whether the filing indicates a new position or just an adjustment. The meaning changes most if the position is unusually large, part of a broader trend among funds, or accompanied by a company-specific business development.",
-            "glossary": [
-              {
-                "term": "stake",
-                "definition": "An ownership position in a company’s stock.",
-                "whyItMatters": "It tells you the investor has bought shares and now has financial exposure to the company."
-              },
-              {
-                "term": "SEC filing",
-                "definition": "A formal report submitted to the U.S. Securities and Exchange Commission about securities holdings or transactions.",
-                "whyItMatters": "It is the source used to verify the share purchase and its size."
-              },
-              {
-                "term": "institutional investor",
-                "definition": "A large organization that invests money on behalf of clients or members, such as a fund.",
-                "whyItMatters": "Moves by these investors can affect trading sentiment and are often watched closely."
-              }
-            ]
-          }
-        },
-        {
-          "id": "humana-2-74832",
-          "title": "Corient Private Wealth LP Invests $10.44 Million in Humana Inc. $HUM",
-          "kicker": "MarketBeat",
-          "summary": "Corient Private Wealth LP bought a new position in Humana Inc. during the second quarter, according to its most recent SEC filing. The firm purchased 624,775 shares of the insurance provider, a stake MarketBeat says was worth $10.44 million. For Humana watchers, this is a snapshot of institutional buying activity rather than an operating update on the company itself.",
-          "emailSummary": "Corient Private Wealth LP bought a new position in shares of Humana Inc. (NYSE:HUM - Free Report) in the second quarter, according to the compan…",
-          "whyItMatters": "This matters because large institutional purchases can signal investor confidence and may affect how the market perceives demand for Humana shares.",
-          "dataSignals": [
-            "Humana mention"
-          ],
-          "sourceLabel": "MarketBeat · Aug 30, 3:56 AM ET",
-          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-corient-private-wealth-lp-invests-1044-million-in-humana-inc-hum-2026-08-30/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMnAwX25fd0tYZWlOYTZ3a2g3RklkbjFnelpWUUNULVhqUXduV1liQzNVT3hZU3hrbHBwekt1bHBMcDNvUTlWMnNFNzRyX05nQldIdVg3VGtnSDdaaWcydHRJYXg3SFphaU9DaF9PSTRNckpSUWFtbHRHeWRBSlp6OVp3MWJFVnpUYkxDeEhqVGpEU0o4VFlaazg0ZmFGc2pMV253YVZmMGRFV3dlR1hfUTdEa1o0RG9sN2dmbjFEWm9TU1E?oc=5",
-          "publishedAt": "2026-08-30T07:56:37+00:00",
-          "glossary": [
             {
               "term": "SEC filing",
               "definition": "A formal report submitted to the U.S. Securities and Exchange Commission."
             },
             {
-              "term": "institutional investor",
-              "definition": "A large organization, such as a wealth manager or fund, that invests money on behalf of clients or members."
-            },
-            {
-              "term": "position",
-              "definition": "An amount of a stock or other security that an investor holds."
+              "term": "second quarter",
+              "definition": "The three-month period from April through June."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is an ownership-change story, not a business-performance story. When reading it, focus on who bought or sold, how much they bought, and whether the filing reflects a new stake or a change in an existing one. The interpretation would change if the filing showed a sale, a much smaller stake, or a later update from the company that changed the ownership picture.",
+            "explanationText": "This is a market-activity story, not an operating-results story: it reports an investor’s stock purchase rather than Humana’s earnings, products, or guidance. When reading the source, pay attention to the size of the position, the timing, and whether the filing reflects a new buy, an increase, or a reduction. The interpretation would change if the filing showed a much larger position, a sale, or if there were accompanying company news about fundamentals.",
             "glossary": [
+              {
+                "term": "stake",
+                "definition": "An ownership position in a company’s shares.",
+                "whyItMatters": "It shows that the investor now has direct exposure to Humana’s stock performance."
+              },
               {
                 "term": "SEC filing",
                 "definition": "A formal report submitted to the U.S. Securities and Exchange Commission.",
-                "whyItMatters": "It is the source for confirming major investment moves and ownership changes."
+                "whyItMatters": "These filings are the source for tracking who bought or sold shares and in what amount."
               },
               {
-                "term": "institutional investor",
-                "definition": "A large organization, such as a wealth manager or fund, that invests money on behalf of clients or members.",
-                "whyItMatters": "Institutional trading can move markets and often gets watched for sentiment signals."
-              },
-              {
-                "term": "position",
-                "definition": "An amount of a stock or other security that an investor holds.",
-                "whyItMatters": "A new position means the investor started owning the stock, not just trading around it."
+                "term": "second quarter",
+                "definition": "The three-month period from April through June.",
+                "whyItMatters": "It tells you when the purchase happened and helps place it in the company’s reporting timeline."
               }
             ]
           }
         },
         {
-          "id": "humana-3-99248",
-          "title": "United Capital Financial Advisors LLC Invests $2.58 Million in Humana Inc. $HUM",
-          "kicker": "MarketBeat",
-          "summary": "United Capital Financial Advisors LLC bought a new stake in Humana Inc. during the second quarter, purchasing 6,495 shares. The filing says the position was worth about $2.58 million. For Humana, this is a routine ownership update showing a new institutional investor position rather than an operating or earnings change.",
-          "emailSummary": "United Capital Financial Advisors LLC purchased a new stake in shares of Humana Inc. (NYSE:HUM - Free Report) during the second quarter, accordi…",
-          "whyItMatters": "This matters because changes in institutional ownership can signal how professional investors are positioning around a health insurer's stock.",
+          "id": "humana-2-41858",
+          "title": "Humana Medicare Advantage Exit Could Give 600,000 Members a Rare Medigap Opportunity",
+          "kicker": "Coinpaper",
+          "summary": "Humana is exiting some Medicare Advantage plans, which will affect roughly 600,000 members. The change creates coverage decisions for those enrollees and may open a rare chance to get Medigap coverage. For people in Medicare, the key issue is what alternative coverage they can move to and whether they can use this opportunity to reduce gaps in out-of-pocket costs.",
+          "emailSummary": "Humana’s Medicare Advantage exits will affect roughly 600,000 members, creating important coverage decisions and a potentially valuable Medigap…",
+          "whyItMatters": "This matters because a large plan exit can force members to switch coverage and may temporarily make it easier for some people to buy supplemental insurance that is often harder to get later.",
           "dataSignals": [
-            "Humana mention"
+            "Humana mention",
+            "Medicare Advantage"
           ],
-          "sourceLabel": "MarketBeat · Aug 29, 6:10 AM ET",
-          "sourceUrl": "https://www.marketbeat.com/instant-alerts/filing-united-capital-financial-advisors-llc-invests-258-million-in-humana-inc-hum-2026-08-29/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQWEQ2LVo0dFNjcHdHdVd2c19NNF9tWGdfVU1jcEg5b25NYkVPTFRIRGpZSGJ5WUdwNWROWGlHanMtVzhfRDgyRUEzdzdNTmZfZm9CUHdyVlYzYWctcThkdjVIVGhHUFpfUU5SdTdMVkI2dmNHWER2TUNPbElBazVFYTlIZFlpZnlLNWZ0MHVad1MzbTY3NTBCMkJFMW43T1MtME1YMlg0VFU1dEFzaEVSTUIxaVdqcTJSSXIybWZLaHBQZnR4eDEzaXhPdTBOaktDUnc?oc=5",
-          "publishedAt": "2026-08-29T10:10:50+00:00",
+          "sourceLabel": "Coinpaper · Aug 31, 2:02 AM ET",
+          "sourceUrl": "https://coinpaper.com/35019/humana-medicare-advantage-exit-could-give-600000-members-a-rare-medigap-opportunity",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMGYxbURLbmMwYXJoVUd0NXMyemZUaGRqTGFKOUx4bm03Y0lEanJTMzE4MFl6Y2NFd0Rqa1hkS0IxZm5FaW55Z0FxbWt2TkRkUVd6V3lHRV9FckFXaldTdV9aRGo0eFp2cWtSQlN2TlI3TU9jZm1fal9tR2VaeFlWR2tKV3B4c2hnOTRvaFdtT0hHS2xNXzNZLWtPVklZbDZOcE5vemZCNkZSS3M3cnBTTA?oc=5",
+          "publishedAt": "2026-08-31T06:02:46+00:00",
           "glossary": [
             {
-              "term": "stake",
-              "definition": "An ownership position in a company, usually through shares of stock."
+              "term": "Medicare Advantage",
+              "definition": "A private insurance plan that provides Medicare benefits instead of Original Medicare."
             },
             {
-              "term": "SEC",
-              "definition": "The U.S. Securities and Exchange Commission, the agency that requires public companies and large investors to disclose certain financial information."
-            },
-            {
-              "term": "institutional investor",
-              "definition": "An organization like a fund or advisory firm that invests money on behalf of clients or members."
+              "term": "Medigap",
+              "definition": "Supplemental insurance sold by private companies to help pay some costs not covered by Original Medicare, such as deductibles and copayments."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a holdings-disclosure story, not an operating-results story, so the key detail is the size and timing of the new purchase. When reading the source, pay attention to whether the filing shows a new position, an increase, or a reduction, because that changes how strongly it suggests investor conviction. The interpretation would change if the filing were part of a broader pattern of multiple funds buying or selling Humana at the same time.",
+            "explanationText": "This is a health insurance coverage-change story, not a clinical story, so the main thing to watch is who is affected and what options they have next. The interpretation would change if the source said these are full-plan terminations versus smaller service-area exits, or if it specified whether members have guaranteed access to Medigap without underwriting.",
             "glossary": [
               {
-                "term": "stake",
-                "definition": "An ownership position in a company, usually through shares of stock.",
-                "whyItMatters": "It shows that an investor now has direct exposure to the company's stock price."
+                "term": "Medicare Advantage",
+                "definition": "A private insurance plan that provides Medicare benefits instead of Original Medicare.",
+                "whyItMatters": "If a Humana plan exits, members enrolled in Medicare Advantage may need to pick a new way to get their Medicare coverage."
               },
               {
-                "term": "SEC",
-                "definition": "The U.S. Securities and Exchange Commission, the agency that requires public companies and large investors to disclose certain financial information.",
-                "whyItMatters": "SEC filings are the source of this ownership news and make the investment visible to the public."
+                "term": "Medigap",
+                "definition": "Supplemental insurance sold by private companies to help pay some costs not covered by Original Medicare, such as deductibles and copayments.",
+                "whyItMatters": "A rare opportunity to buy Medigap can matter because it may help members limit out-of-pocket medical costs after a plan change."
+              }
+            ]
+          }
+        },
+        {
+          "id": "humana-3-21614",
+          "title": "Humana to exit Medicare Advantage plans for 2027, affecting 600,000 members",
+          "kicker": "eciks.org",
+          "summary": "Humana expects to exit Medicare Advantage plans in 2027, affecting 600,000 members. The company says it expects to recapture about 40% of those members in other Humana plans while working toward a 3% profit margin by 2028. For health insurance, this points to a major product pullback aimed at improving profitability, with potential disruption for enrollees who may need to switch coverage.",
+          "emailSummary": "Humana expects to recapture about 40% of the 600,000 affected members in other company plans as it pursues a 3% profit margin by 2028.",
+          "whyItMatters": "This matters because a large Medicare Advantage exit can shift coverage options for seniors and signal how insurer profit targets are reshaping plan availability.",
+          "dataSignals": [
+            "Humana mention",
+            "Medicare Advantage"
+          ],
+          "sourceLabel": "eciks.org · Aug 30, 11:58 PM ET",
+          "sourceUrl": "https://eciks.org/24209-humana-medicare-advantage-exits-2027-2",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Ua29FbERDeTlJZlFoeDd6THBTbTg1VEd4emJEUDI4bHIzeDQyRFFfNnNiREtSeHBzbUNEWFRFcE44dVNSbGlNemFScVVjM0hwcFNlTTM4Z25VVjJnb05zQl82LUVrRWFHUlBjUzZQTQ?oc=5",
+          "publishedAt": "2026-08-31T03:58:01+00:00",
+          "glossary": [
+            {
+              "term": "Medicare Advantage",
+              "definition": "Private insurance plans that provide Medicare benefits instead of Original Medicare."
+            },
+            {
+              "term": "profit margin",
+              "definition": "The percentage of revenue a company keeps as profit after costs."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a business and insurance strategy story, not a clinical one. When reading the source, focus on the scale of the membership loss, the timing of the exit in 2027, and the goal to reach a 3% profit margin by 2028. The interpretation would change if the company later narrows the exit, adjusts the timing, or recovers more than the expected 40% of members in other plans.",
+            "glossary": [
+              {
+                "term": "Medicare Advantage",
+                "definition": "Private insurance plans that provide Medicare benefits instead of Original Medicare.",
+                "whyItMatters": "It is the coverage line Humana says it will leave, so it determines which members are affected."
               },
               {
-                "term": "institutional investor",
-                "definition": "An organization like a fund or advisory firm that invests money on behalf of clients or members.",
-                "whyItMatters": "Institutional buying or selling can affect trading sentiment around a stock."
+                "term": "profit margin",
+                "definition": "The percentage of revenue a company keeps as profit after costs.",
+                "whyItMatters": "Humana's stated margin target explains why it is changing its plan strategy."
+              }
+            ]
+          }
+        },
+        {
+          "id": "humana-4-18306",
+          "title": "Humana's Non-Renewal Notices Offer Unexpected Medigap Opportunities for Medicare Advantage Members",
+          "kicker": "SSBCrack",
+          "summary": "Humana is sending non-renewal notices to some Medicare Advantage members, and the title says those notices may create unexpected opportunities to buy Medigap coverage. The description says the notices can be unsettling for members, especially given recent company announcements, though it does not provide those details here. For consumers in this area, the key issue is that a change in Humana coverage may affect what Medicare-related coverage options are available next.",
+          "emailSummary": "A notice of non-renewal from Humana can be unsettling for members of its Medicare Advantage (MA) plans, especially with recent announcements tha…",
+          "whyItMatters": "This matters because a plan non-renewal can force Medicare members to quickly evaluate alternative coverage and may open a limited path into Medigap that is not normally easy to access.",
+          "dataSignals": [
+            "Humana mention",
+            "Medicare Advantage"
+          ],
+          "sourceLabel": "SSBCrack · Aug 30, 11:50 PM ET",
+          "sourceUrl": "https://news.ssbcrack.com/humanas-non-renewal-notices-offer-unexpected-medigap-opportunities-for-medicare-advantage-members/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOWlFIZEFDR0VaTGRxemIyUmk3VExtM0xTZUJtNUc1LS0tTTlmTDA3Sk5xdGZpM0Foa0pkY29fZWJ6Tl8wMUxrdkQ0N0pTT1FPdndQSlA5LWlWOXlXT2dJWTJEOHluWVRXbEFLbnZtYUJMTS1Qd2xtVVU3cGxLOUdudlRjejNzT2hvaUExLVdIQmxZQWdGX2dQSG5iYUpYT3l2aHBoeVVJU1h2VDA4UGhaMEdPUXJaSzlMZ1UxZDM5NlRudw?oc=5",
+          "publishedAt": "2026-08-31T03:50:53+00:00",
+          "glossary": [
+            {
+              "term": "Medicare Advantage (MA)",
+              "definition": "A private insurance plan that provides Medicare benefits instead of Original Medicare."
+            },
+            {
+              "term": "Medigap",
+              "definition": "Supplemental insurance sold by private companies that helps pay some costs Original Medicare does not cover."
+            },
+            {
+              "term": "non-renewal notice",
+              "definition": "A formal notice that an insurance plan will not continue when its current term ends."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a health insurance coverage story about how a plan change can affect Medicare members' next options. When reading the source, pay attention to who is receiving the notice, whether it applies to all or only some members, and whether the notice creates any special enrollment or guaranteed-issue rights. The interpretation changes most if the notices are broad versus limited, or if they specifically preserve access to Medigap without medical underwriting.",
+            "glossary": [
+              {
+                "term": "Medicare Advantage (MA)",
+                "definition": "A private insurance plan that provides Medicare benefits instead of Original Medicare.",
+                "whyItMatters": "If an MA plan is ending or changing, members may need to switch coverage or compare other Medicare options."
+              },
+              {
+                "term": "Medigap",
+                "definition": "Supplemental insurance sold by private companies that helps pay some costs Original Medicare does not cover.",
+                "whyItMatters": "A non-renewal notice can matter because it may affect when and whether a person can get Medigap coverage."
+              },
+              {
+                "term": "non-renewal notice",
+                "definition": "A formal notice that an insurance plan will not continue when its current term ends.",
+                "whyItMatters": "This notice can trigger deadlines and force members to find replacement coverage quickly."
+              }
+            ]
+          }
+        },
+        {
+          "id": "humana-5-94852",
+          "title": "Humana to Exit Medicare Advantage Plans Impacting 600,000 Members by 2027",
+          "kicker": "SSBCrack",
+          "summary": "Humana plans to exit Medicare Advantage plans by 2027, according to the headline and description. The move would affect about 600,000 members. For Medicare beneficiaries and the insurance market, that suggests a large reshuffling of coverage options and enrollment if the exit proceeds on that timeline.",
+          "emailSummary": "In a significant development for Medicare beneficiaries, Humana has announced plans to exit its Medicare Advantage (MA) plans by 2027, affecting…",
+          "whyItMatters": "This matters because a major insurer leaving a large Medicare product line could disrupt coverage choices for hundreds of thousands of older adults and force plan switches across the market.",
+          "dataSignals": [
+            "Humana mention",
+            "Medicare Advantage"
+          ],
+          "sourceLabel": "SSBCrack · Aug 30, 11:25 PM ET",
+          "sourceUrl": "https://news.ssbcrack.com/humana-to-exit-medicare-advantage-plans-impacting-600000-members-by-2027/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxON052ZUgwQ0pSZ2J1OGptaFAtZHlTLVU0NnIxc1FmVk1ZdlFSalVDME9kYTVPcGpBOG0zMUlpdllsWjEwMFl0c0UzT2pwa3c1ejFTZ0NTM19rbGh4UE0xclE4bkJweUFMT3RzNGFRVFZzZU1ld09QV1phYS13VHlINjY0UHN1T09lNEZkaWZsMnRGTE9Lb25GLWF1eHBkc3FI?oc=5",
+          "publishedAt": "2026-08-31T03:25:36+00:00",
+          "glossary": [
+            {
+              "term": "Medicare Advantage",
+              "definition": "A private insurance alternative to traditional Medicare that bundles Medicare-covered benefits through an approved health plan."
+            },
+            {
+              "term": "members",
+              "definition": "People enrolled in a health insurance plan."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a health insurance market story about a carrier changing its participation in a major Medicare product. When reading the source, the key points are the timeline, the scale of affected enrollment, and whether the exit is partial or full. What would change the interpretation is any detail showing whether Humana is withdrawing from all Medicare Advantage business or only certain plans, regions, or contract types.",
+            "glossary": [
+              {
+                "term": "Medicare Advantage",
+                "definition": "A private insurance alternative to traditional Medicare that bundles Medicare-covered benefits through an approved health plan.",
+                "whyItMatters": "It is the specific coverage type Humana says it will exit, so it determines which members are affected."
+              },
+              {
+                "term": "members",
+                "definition": "People enrolled in a health insurance plan.",
+                "whyItMatters": "The number of members affected indicates how many people may need to find new coverage."
               }
             ]
           }
@@ -580,9 +645,51 @@
     },
     {
       "id": "kentucky_healthcare",
-      "updatedLabel": "No new non-repeated stories in last 10 days",
+      "updatedLabel": "Last 24 hours",
       "emptyMessage": "No qualified Kentucky Healthcare / US Healthcare stories found in the last 24 hours.",
-      "articles": []
+      "articles": [
+        {
+          "id": "kentucky_healthcare-1-80962",
+          "title": "NKY Chamber presents monthly Community Award to St. Elizabeth Healthcare",
+          "kicker": "Northern Kentucky Tribune",
+          "summary": "The Northern Kentucky Chamber of Commerce presented St. Elizabeth Healthcare with the Northern Kentucky Community Award during its August Board of Directors/Board of Advisors meeting. The announcement identifies St. Elizabeth as the recipient of a local community recognition from the chamber, which suggests the organization is being honored for its role in the region.",
+          "emailSummary": "Staff report The Northern Kentucky Chamber of Commerce presented St. Elizabeth Healthcare with the Northern Kentucky Community Award during its…",
+          "whyItMatters": "This matters because recognition from a major regional business group can signal St. Elizabeth Healthcare’s standing in the Northern Kentucky community and its local impact beyond direct patient care.",
+          "dataSignals": [
+            "Kentucky healthcare"
+          ],
+          "sourceLabel": "Northern Kentucky Tribune · Aug 31, 12:36 AM ET",
+          "sourceUrl": "https://nkytribune.com/2026/08/nky-chamber-presents-monthly-community-award-to-st-elizabeth-healthcare/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONzlDbUFLU09md0JMclZ5WXQ4OWIycmFMTGFmcmZBeGhuZkV1aVFKZjFHQWw3NDJ5d2VZX3lLeC1hS19BOVdqZTliREhuWUhncVZLMUxXODlXbE40Ym9LN2hHX2NHd3JkOG9mcjA2LUxnUURITnliT2M1Y3ZuQWhIOXZGVlg5cFhUWnd2QW1ZV3pXU21ScU9pOWxQTW95c0JHMEhXS3Zn?oc=5",
+          "publishedAt": "2026-08-31T04:36:10+00:00",
+          "glossary": [
+            {
+              "term": "Board of Directors",
+              "definition": "A group of people who oversee an organization’s overall direction and major decisions."
+            },
+            {
+              "term": "Board of Advisors",
+              "definition": "A group that provides guidance and advice to an organization, usually without having formal governing power."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a short recognition story, not a policy or operations report. When reading the source, focus on who gave the award, who received it, and the setting, since those are the only concrete facts provided. If later reporting adds the reason for the award or any related projects, that would change how significant this recognition appears to be.",
+            "glossary": [
+              {
+                "term": "Board of Directors",
+                "definition": "A group of people who oversee an organization’s overall direction and major decisions.",
+                "whyItMatters": "The award was announced at a meeting of this governing group, which shows it came through a formal chamber setting."
+              },
+              {
+                "term": "Board of Advisors",
+                "definition": "A group that provides guidance and advice to an organization, usually without having formal governing power.",
+                "whyItMatters": "Its presence in the meeting description indicates the award was part of a broader chamber leadership gathering."
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "analytics",
@@ -590,173 +697,233 @@
       "emptyMessage": "No qualified Analytics stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "analytics-1-88406",
-          "title": "Excel to Power BI to Tableau: The Analytics Career Roadmap",
-          "kicker": "Buttondown",
-          "summary": "The title frames a career roadmap for people in data analytics, moving from Excel to Power BI to Tableau. The description says it is aimed at people preparing for a data analytics career and assumes they have used Excel and watched dashboard tutorials. That suggests the piece is likely about building practical skills in commonly used analytics tools and how they fit together in a learning path.",
-          "emailSummary": "If you are preparing yourself for a career in data analytics, chances are that you have used Excel and watched tutorials on how to make dashboar…",
-          "whyItMatters": "This matters because knowing which tools are commonly expected in analytics roles helps job seekers prioritize the skills most likely to improve employability and day-to-day productivity.",
+          "id": "analytics-1-3849",
+          "title": "Operationalizing GenAI in financial services for conversational reporting with Snowflake Cortex AI",
+          "kicker": "Nasscom",
+          "summary": "Financial services is being presented as one of the most active industries for enterprise GenAI adoption, with the focus on making it operational for conversational reporting. The title points to Snowflake Cortex AI as the tool being used for that work. For analytics teams, this suggests a push toward natural-language access to reporting and faster self-serve analysis inside regulated financial workflows.",
+          "emailSummary": "Financial services has quickly become one of the most active industries for enterprise GenAI adoptio.",
+          "whyItMatters": "This matters because conversational reporting can reduce the friction between business users and data, which may speed up decision-making in financial services if it is implemented reliably and securely.",
           "dataSignals": [
-            "analytics workflow",
-            "BI tooling"
+            "data-platform signal"
           ],
-          "sourceLabel": "Buttondown · Aug 30, 2:42 AM ET",
-          "sourceUrl": "https://buttondown.com/sparktechblog/archive/excel-to-power-bi-to-tableau-the-analytics-career/",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNnVvWHg5NUhlX1Mwb1QwaUp0ZV9vZDlSQTZjTnRabnJWcjdZcHl3NXM5eDFIT2VJc0N3VWRmVmFmYXB5Y0VTWU9fdnFFQkN0c1VHM1ZRSEVzUndfOWRzRHpHTEluTjdqSTBGSUpDOVNJdTZNazNfenZMV3lwLTExZW5QdC0yOEZXeHZyYlRHYmx0X3ZRMzRiUzB4SQ?oc=5",
-          "publishedAt": "2026-08-30T06:42:44+00:00",
+          "sourceLabel": "Nasscom · Aug 31, 12:21 AM ET",
+          "sourceUrl": "https://community.nasscom.in/communities/ai-inside/operationalizing-genai-financial-services-conversational-reporting-snowflake",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNOTNkS0R5eVRSRENBMVYyYURxWDZMc3BUTHRPdkVjV1RvVGhwcFNqUmJyR1ItOFYzVl94UTNKeFQ5d290TVNxMlNEVW1CSTlUcTV5S0k0SlBLa21idkRnekRoS3B2TXlNTU93SkVBWWk1MkhwcS1LMWw3UURVdi1sZ053N0NXMUVQQmxZUE1QdnFkQjRON0w0amJUb1NMdkRYSzFQV2NXSWt6XzkzRXIzYUw0U3l4SWZfdE1aanZjSl9xSVVOTWc?oc=5",
+          "publishedAt": "2026-08-31T04:21:00+00:00",
           "glossary": [
             {
-              "term": "dashboard",
-              "definition": "A visual display that brings together charts, metrics, and filters in one place."
+              "term": "GenAI",
+              "definition": "Generative AI, a type of artificial intelligence that can create or transform text, images, code, or other content."
             },
             {
-              "term": "Power BI",
-              "definition": "Microsoft's business intelligence tool for building reports and interactive data visualizations."
+              "term": "Conversational reporting",
+              "definition": "A way of asking data questions in plain language and getting answers back as a dialogue instead of through traditional dashboards or queries."
             },
             {
-              "term": "Tableau",
-              "definition": "A data visualization platform used to create interactive charts and dashboards."
+              "term": "Snowflake Cortex AI",
+              "definition": "Snowflake's AI layer for building and using AI features on data stored in the Snowflake platform."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a career-advice and skills-development story, not a report about a company or market event. When reading the source, focus on the order of tools it recommends and whether it is describing a learning sequence, a job-market expectation, or both. The interpretation would change if the full piece argues for one tool over another, or if it frames the path as optional rather than standard.",
+            "explanationText": "This is a technology adoption story about applying GenAI to analytics workflows in financial services, not a product review or market forecast. When reading the source, pay attention to which reporting tasks are being automated, how they handle data security and governance, and whether the use case is interactive analysis or just a chat interface on top of existing reports. If the full article shows concrete deployments, measurable gains, or compliance controls, that would make the story much more significant than a general industry trend piece.",
             "glossary": [
               {
-                "term": "dashboard",
-                "definition": "A visual display that brings together charts, metrics, and filters in one place.",
-                "whyItMatters": "Dashboards are a core way analysts share insights with nontechnical stakeholders."
+                "term": "GenAI",
+                "definition": "Generative AI, a type of artificial intelligence that can create or transform text, images, code, or other content.",
+                "whyItMatters": "It is the core technology being operationalized in this story."
               },
               {
-                "term": "Power BI",
-                "definition": "Microsoft's business intelligence tool for building reports and interactive data visualizations.",
-                "whyItMatters": "It is widely used in workplaces, so learning it can expand job options."
+                "term": "Conversational reporting",
+                "definition": "A way of asking data questions in plain language and getting answers back as a dialogue instead of through traditional dashboards or queries.",
+                "whyItMatters": "It changes how users interact with analytics by lowering the skill needed to retrieve insights."
               },
               {
-                "term": "Tableau",
-                "definition": "A data visualization platform used to create interactive charts and dashboards.",
-                "whyItMatters": "Tableau is another common analytics tool, especially in reporting and business intelligence roles."
+                "term": "Snowflake Cortex AI",
+                "definition": "Snowflake's AI layer for building and using AI features on data stored in the Snowflake platform.",
+                "whyItMatters": "It indicates the specific platform being used to bring GenAI into reporting workflows."
               }
             ]
           }
         },
         {
-          "id": "analytics-3-62854",
-          "title": "Brightly and WNS on Predictive Analytics Maturity",
-          "kicker": "Procurement Magazine",
-          "summary": "Kevin Clark from Siemens and Mita Gupta at WNS assess how mature procurement is at using predictive analytics. The piece appears to focus on the current state of that capability rather than announcing a product or policy change. For analytics teams, it signals that procurement is being evaluated through a more advanced data lens, where forecasting and decision support matter more than simple reporting.",
-          "emailSummary": "Kevin Clark from Siemens and Mita Gupta at WNS assess procurement's predictive analytics maturity.",
-          "whyItMatters": "This matters because procurement analytics maturity affects how well organizations can anticipate spend, risk, and supply issues before they happen.",
+          "id": "analytics-2-51982",
+          "title": "Tiger Analytics Named an OpenAI Select Partner",
+          "kicker": "CXOToday.com",
+          "summary": "Tiger Analytics says it has been named an OpenAI Select Partner in the OpenAI Partner Network. The network is a global program for partners that build, sell, and deliver AI solutions with OpenAI. For analytics and AI buyers, this suggests Tiger Analytics has been recognized for its industry expertise and delivery capabilities and may be better positioned to package OpenAI-based solutions for clients.",
+          "emailSummary": "Tiger Analytics, a global leader in AI and analytics, today announced that it has been named an OpenAI Select Partner within the OpenAI Partner…",
+          "whyItMatters": "This matters because partnerships like this can affect which firms businesses choose for AI implementation, support, and deployment.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Procurement Magazine · Aug 30, 3:39 AM ET",
-          "sourceUrl": "https://procurementmag.com/articles/brightly-and-wns-on-predictive-analytics-maturity",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSzZJcDd0VFpEcTdIMnQwOURoYnhKZG0zNllWQjY5SWdlZnptWGJqU0RoeGkwaWJOd0Mxb3kxS3ZzSE1mTk56WFctZkxRaVNyR2MzOUVvbXdSMkw0cXkzUjgtalg1eEFrR2UzWGpPTDVldk1lQVdOOGYzaTE0YXFvOUlVeUJUQVFwQzdsNjRR?oc=5",
-          "publishedAt": "2026-08-30T07:39:22+00:00",
+          "sourceLabel": "CXOToday.com · Aug 31, 3:26 AM ET",
+          "sourceUrl": "https://cxotoday.com/media-coverage/tiger-analytics-named-an-openai-select-partner/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPTEN4UW9fVGxyYk1ndzR1WFVfVng5MTU1eXEzd2MtaE14S1E3azNCbFBSQXJUUWNXdlNVUUN5WlpJa1dpSVVmM2NDR3V6QldIUVVEOWdJR3dJcjFxd2dtSl83SjM2V3ZIc25oZUxoR3NkWUczZThqUFBiTV9zbGNCdWpWTDhMNWQtd2Vv?oc=5",
+          "publishedAt": "2026-08-31T07:26:28+00:00",
           "glossary": [
             {
-              "term": "predictive analytics",
-              "definition": "The use of data and statistical models to estimate what is likely to happen next."
+              "term": "OpenAI Select Partner",
+              "definition": "A partner designation in OpenAI's network for companies that meet specific criteria to work with OpenAI on customer solutions."
             },
             {
-              "term": "procurement",
-              "definition": "The process of buying goods and services for an organization."
+              "term": "OpenAI Partner Network",
+              "definition": "A program that connects approved partners who help build, sell, and deliver AI solutions using OpenAI technology."
             },
             {
-              "term": "maturity",
-              "definition": "A measure of how developed or advanced a process or capability is."
+              "term": "AI solutions",
+              "definition": "Software or services that use artificial intelligence to automate tasks, analyze data, or support decisions."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is an assessment or commentary piece, not a hard-news story about a single event. When reading it, focus on what criteria the speakers use to judge maturity, since that determines whether the conclusion is about tools, adoption, data quality, or business impact. If those criteria change, the interpretation of how advanced procurement analytics really is would change too.",
+            "explanationText": "This is a partnership announcement, not a product launch or financial report. When reading the source, pay attention to what the designation actually is and whether it changes Tiger Analytics's ability to sell or deliver OpenAI-based work. Interpretation would change only if the full story adds concrete details such as service offerings, customer wins, or revenue impact.",
             "glossary": [
               {
-                "term": "predictive analytics",
-                "definition": "The use of data and statistical models to estimate what is likely to happen next.",
-                "whyItMatters": "It is the core capability being discussed, and higher maturity usually means better forecasting and decision-making."
+                "term": "OpenAI Select Partner",
+                "definition": "A partner designation in OpenAI's network for companies that meet specific criteria to work with OpenAI on customer solutions.",
+                "whyItMatters": "It signals a company may have a closer relationship with OpenAI and a stronger role in delivering OpenAI-based services."
               },
               {
-                "term": "procurement",
-                "definition": "The process of buying goods and services for an organization.",
-                "whyItMatters": "The story is about how procurement teams use analytics to make purchasing decisions smarter and more proactive."
+                "term": "OpenAI Partner Network",
+                "definition": "A program that connects approved partners who help build, sell, and deliver AI solutions using OpenAI technology.",
+                "whyItMatters": "It is the channel through which companies may access partner support and go-to-market opportunities around OpenAI tools."
               },
               {
-                "term": "maturity",
-                "definition": "A measure of how developed or advanced a process or capability is.",
-                "whyItMatters": "It indicates whether predictive analytics is experimental, established, or embedded in everyday work."
+                "term": "AI solutions",
+                "definition": "Software or services that use artificial intelligence to automate tasks, analyze data, or support decisions.",
+                "whyItMatters": "This is the product category affected by the partnership, so it shapes what clients may buy or deploy."
               }
             ]
           }
         },
         {
-          "id": "analytics-4-11708",
-          "title": "Best AI Tools for Dividend Stock Research in 2026",
+          "id": "analytics-3-92428",
+          "title": "Anthropic Sued Over Copyrighted Songs: Sony, Warner Seek Damages",
           "kicker": "Analytics Insight",
-          "summary": "This piece says AI can help investors identify dividend opportunities by processing large volumes of financial and market data quickly. It appears to be an overview of different AI tools for dividend stock research in 2026, though the provided description is cut off before any specific tools or comparisons are named. For analytics-minded investors, the main takeaway is that AI is being framed as a speed and screening aid for dividend research, not a replacement for evaluating the underlying company data.",
-          "emailSummary": "Overview: AI can help investors identify dividend opportunities by processing large volumes of financial and market data quickly.Different AI to…",
-          "whyItMatters": "This matters because better screening tools can help investors find dividend candidates faster and compare more data than they could manually.",
+          "summary": "Sony Music Publishing and Warner Chappell Music sued Anthropic on August 28, accusing it of mass copyright infringement over copyrighted songs. The case was filed in Northern California. For the analytics and AI space, this points to another high-stakes legal challenge over how generative AI companies use copyrighted training or output material.",
+          "emailSummary": "Sony Music Publishing and Warner Chappell Music sued Anthropic on August 28 over alleged mass copyright infringement. The lawsuit, filed in Nort…",
+          "whyItMatters": "This matters because copyright lawsuits can raise the cost and risk of building and deploying AI systems that rely on large content datasets.",
           "dataSignals": [
             "analytics workflow"
           ],
-          "sourceLabel": "Analytics Insight · Aug 30, 3:34 AM ET",
-          "sourceUrl": "https://www.analyticsinsight.net/amp/story/stocks/best-ai-tools-for-dividend-stock-research-in-2026",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRG5ZaEYzVVRNWU9GQjdnUXVqWkVGMGdFS2RrT0F6OERZVzU4R2d4NGh3Ukhoc2daVDl3WjBJdllpQXVJZl8zdE9WcWpIUkVLMGlzWnhqblRxbDdVZkQyd3VNS19iaURPQzFwdWdWT3p3c0F6V3o2RU5SbTFHWDVsZU1yMHphWk9XVEthZnZEQ2M4c01qZDZudmdrQWRCamN10gGgAUFVX3lxTFBEblloRjNVVE1ZT0ZCN2dRdWpaRUYwZ0VLZGtPQXo4RFlXNThHZ3g0aHdSSGhzZ1pUOXdaMEl2WWlBdUlmXzN0T1ZxakhSRUswaXNaeGpuVHFsN1VmRDJ3dU1LX2JpRE9DMXB1Z1ZPendzQXpXejZFTlJtMUdYNWxlTXIwemFaT1dUS2FmdkRDYzhzTWpkNm52Z2tBZEJqY3U?oc=5",
-          "publishedAt": "2026-08-30T07:34:38+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a tools-and-workflow story, not a market event story. When reading the source, focus on what kinds of data the AI tools use and whether they are presented as research assistants, screening tools, or decision-makers. The interpretation would change if the article claims measurable performance benefits, specific model names, or a clear ranking of tools versus just describing broad capabilities.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "analytics-5-53518",
-          "title": "Why Your Car’s USB,12V Ports Charge Phones, What Could Replace Them",
-          "kicker": "Analytics Insight",
-          "summary": "Cars' 12V accessory sockets became a common way to charge phones even though they were not originally designed for electronics. The story says this charging method became a standard by accident rather than by design, and it points to USB-C Power Delivery as the technology that could replace it. For automotive and consumer tech, that suggests a shift from legacy ports toward a more modern charging standard.",
-          "emailSummary": "Overview: The 12V accessory socket was never designed for electronics. It became a charging standard by accident, not by design.USB-C Power Deli…",
-          "whyItMatters": "This matters because the charging ports built into vehicles affect how drivers power devices today and what automakers may standardize in future models.",
-          "dataSignals": [
-            "analytics workflow"
-          ],
-          "sourceLabel": "Analytics Insight · Aug 30, 1:32 AM ET",
-          "sourceUrl": "https://www.analyticsinsight.net/amp/story/gadgets/why-your-cars-usb12v-ports-charge-phones-what-could-replace-them",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSm40LUNjYnYtZG1nNnlEV0tZNGRteDctcG9jZ2hLOXc4WGw0WTJYZWJwWUYydUw5Mlp4M3FDTE5mbzJ3S3BDWFU5eVJEYWRneG8yMF9qRFVnR3ZheGxqWUE0RDBjRDFnSFBBcjZEeEhleUJtamxoc21LZW5vRUdPOGxtaXY0VFZ4SndfaVpXeUN3M3FoMm9zcElOY25KWGVCMG1ITTBnSVdoaWg4OHVaekVfcDhvZ9IBtgFBVV95cUxNSm40LUNjYnYtZG1nNnlEV0tZNGRteDctcG9jZ2hLOXc4WGw0WTJYZWJwWUYydUw5Mlp4M3FDTE5mbzJ3S3BDWFU5eVJEYWRneG8yMF9qRFVnR3ZheGxqWUE0RDBjRDFnSFBBcjZEeEhleUJtamxoc21LZW5vRUdPOGxtaXY0VFZ4SndfaVpXeUN3M3FoMm9zcElOY25KWGVCMG1ITTBnSVdoaWg4OHVaekVfcDhvZw?oc=5",
-          "publishedAt": "2026-08-30T05:32:46+00:00",
+          "sourceLabel": "Analytics Insight · Aug 31, 3:03 AM ET",
+          "sourceUrl": "https://www.analyticsinsight.net/amp/story/news/anthropic-sued-over-copyrighted-songs-sony-warner-seek-damages",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQcWxGZGFTUG5zSVEtSWZRR1RnWmp5STl4SEl6X213YXJ3YzZ0aDVhRk9VcmhQR0dxOTQ5R1NMdWcwVHBxQ0lVMmNoQVZURXBodEFXVGNUWDZEM2N4RjdPcXQ2WFo1ZTFrUmd2NHJQbVppUHhkRVkyYzV4X0xfS21Ob1ZDOERXbVh6NW9IaUdwX3BHRUhIRU5LbW13Nklvb2xFRkVWOWQwekNTQ1Q1cnlr0gGvAUFVX3lxTFBxbEZkYVNQbnNJUS1JZlFHVGdaanlJOXhISXpfbXdhcndjNnRoNWFGT1VyaFBHR3E5NDlHU0x1ZzBUcHFDSVUyY2hBVlRFcGh0QVdUY1RYNkQzY3hGN09xdDZYWjVlMWtSZ3Y0clBtWmlQeGRFWTJjNXhfTF9LbU5vVkM4RFdtWHo1b0hpR3BfcEdFSEhFTkttbXc2SW9vbEVGRVY5ZDB6Q1NDVDVyeWs?oc=5",
+          "publishedAt": "2026-08-31T07:03:59+00:00",
           "glossary": [
             {
-              "term": "12V accessory socket",
-              "definition": "A car power outlet that provides 12 volts and was originally meant for accessories like cigarette lighters or other low-power devices."
+              "term": "copyright infringement",
+              "definition": "Using protected creative work without permission in a way that the law says violates the owner's rights."
             },
             {
-              "term": "USB-C",
-              "definition": "A small, reversible USB connector used for charging and data transfer."
-            },
-            {
-              "term": "Power Delivery",
-              "definition": "A charging standard that lets devices and chargers negotiate higher power levels safely over USB-C."
+              "term": "damages",
+              "definition": "Money a court may order one side to pay the other as compensation for harm caused."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a technology-and-industry change story: it compares an old, accidental standard with a newer charging standard that may replace it. When reading the source, pay attention to whether it is talking about current use, future vehicle design, or just the technical advantages of USB-C. The interpretation would change if the full piece shows automakers are already adopting USB-C broadly versus merely discussing it as a possible replacement.",
+            "explanationText": "This is a legal and business-risk story about AI, not a product or earnings story. When reading the source, pay attention to who is suing, what content is alleged to have been misused, and where the case was filed, since those details shape the scope of the dispute. The interpretation would change if the lawsuit were dismissed, settled, or narrowed, because that would alter how much legal exposure it creates for Anthropic and similar AI firms.",
             "glossary": [
               {
-                "term": "12V accessory socket",
-                "definition": "A car power outlet that provides 12 volts and was originally meant for accessories like cigarette lighters or other low-power devices.",
-                "whyItMatters": "It is the legacy in-car power source being discussed as a charging option for phones."
+                "term": "copyright infringement",
+                "definition": "Using protected creative work without permission in a way that the law says violates the owner's rights.",
+                "whyItMatters": "It is the core legal claim in the lawsuit and determines whether damages or other penalties could follow."
               },
               {
-                "term": "USB-C",
-                "definition": "A small, reversible USB connector used for charging and data transfer.",
-                "whyItMatters": "It is the connector type mentioned as a likely replacement for older car charging ports."
+                "term": "damages",
+                "definition": "Money a court may order one side to pay the other as compensation for harm caused.",
+                "whyItMatters": "The size of any damages can materially affect the financial risk for the company being sued."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-4-76631",
+          "title": "Crypto Prices Today: Bitcoin Holds Near $77,500 as Solana, Hyperliquid Lead Gains After Jackson Hole Selloff",
+          "kicker": "Analytics Insight",
+          "summary": "Bitcoin is trading near $77,492, up 0.5%, and holding above support near $77,000 after a Jackson Hole selloff. Solana and Hyperliquid each rose more than 3% and led gains among major crypto assets. The takeaway for crypto markets is that some prices are stabilizing after recent weakness, with a few altcoins outperforming Bitcoin in the short term.",
+          "emailSummary": "Overview: Bitcoin trades near $77,492, up 0.5%, holding above support near $77,000. Solana and Hyperliquid each climbed above 3%, leading gains…",
+          "whyItMatters": "This matters because near-term price strength or support levels can signal whether the crypto market is recovering after a selloff or still vulnerable to further declines.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "Analytics Insight · Aug 31, 2:45 AM ET",
+          "sourceUrl": "https://www.analyticsinsight.net/amp/story/price-analysis/crypto-prices-today-bitcoin-holds-near-77500-as-solana-hyperliquid-lead-gains-after-jackson-hole-selloff",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQdmZhb2wzRTA1TDJEeEtyYS1nSC1XZ25fZ1V0MUJhX2VpM1NkSmZfTXZQSk52SXFmOUN5RVp5LWFHVWdHenpnN2g4bW9nSnU5b0ZoRTVCOV9KTzhRTElvMkQyb3BELTdaamNfcVNZSFN3elVESHptV0JUZ19XdS1VTXJ1M1NwaEZNWlZKcEZNRmJjaUVaMnNGYU5aUC1RS3F2dVUzMG1ncXRZZV8zd3pIZmRKVlBRYVlKckdncjRkcjRkUWJzWkpubHdfWnUtejVET0k2QWdydzFSMWJEQ2tTTmZFLXBUQXJHV3R2V2dnREVZb0JD0gH0AUFVX3lxTFB2ZmFvbDNFMDVMMkR4S3JhLWdILVdnbl9nVXQxQmFfZWkzU2RKZl9NdlBKTnZJcWY5Q3lFWnktYUdVZ0d6emc3aDhtb2dKdTlvRmhFNUI5X0pPOFFMSW8yRDJvcEQtN1pqY19xU1lIU3d6VURIem1XQlRnX1d1LVVNcnUzU3BoRk1aVkpwRk1GYmNpRVoyc0ZhTlpQLVFLcXZ1VTMwbWdxdFllXzN3ekhmZEpWUFFhWUpyR2dyNGRyNGRRYnNaSm5sd19adS16NURPSTZBZ3J3MVIxYkRDa1NOZkUtcFRBckdXdHZXZ2dERVlvQkM?oc=5",
+          "publishedAt": "2026-08-31T06:45:55+00:00",
+          "glossary": [
+            {
+              "term": "support",
+              "definition": "A price level where an asset has tended to stop falling because buyers step in."
+            },
+            {
+              "term": "selloff",
+              "definition": "A fast drop in asset prices driven by heavy selling."
+            },
+            {
+              "term": "altcoins",
+              "definition": "Cryptocurrencies other than Bitcoin."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a market update story, not a company or policy story, so the main thing to watch is price action and whether key levels are holding after a recent drop. The interpretation changes if Bitcoin loses the cited support near $77,000 or if the gains in Solana and Hyperliquid widen into a broader rally; if not, the move may just be a short-lived bounce.",
+            "glossary": [
+              {
+                "term": "support",
+                "definition": "A price level where an asset has tended to stop falling because buyers step in.",
+                "whyItMatters": "If Bitcoin stays above support, traders may see that as a sign of resilience; if it breaks below, sentiment can weaken quickly."
               },
               {
-                "term": "Power Delivery",
-                "definition": "A charging standard that lets devices and chargers negotiate higher power levels safely over USB-C.",
-                "whyItMatters": "It explains why USB-C can do more than basic charging and why it could supplant older outlets."
+                "term": "selloff",
+                "definition": "A fast drop in asset prices driven by heavy selling.",
+                "whyItMatters": "The reference to a Jackson Hole selloff explains why the current move is being watched as a possible recovery."
+              },
+              {
+                "term": "altcoins",
+                "definition": "Cryptocurrencies other than Bitcoin.",
+                "whyItMatters": "When altcoins like Solana and Hyperliquid lead gains, it can show investors are taking more risk beyond Bitcoin."
+              }
+            ]
+          }
+        },
+        {
+          "id": "analytics-5-14051",
+          "title": "Apple Watch Series 12, Ultra 4 Could Get New Health Tracking Features",
+          "kicker": "Analytics Insight",
+          "summary": "Apple is rumored to be preparing health-related updates for its next smartwatches, the Apple Watch Series 12 and Apple Watch Ultra 4. The description only confirms that both models could get \"useful health updates\" and that one of the rumored features involves an \"always-on\" health capability, but it cuts off before saying exactly what it is. If true, the story points to Apple continuing to push its watches as health-monitoring devices rather than just general-purpose wearables.",
+          "emailSummary": "Apple could be preparing some useful health updates for its next smartwatches. The Apple Watch Series 12 and Apple Watch Ultra 4 are rumored to…",
+          "whyItMatters": "This matters because new health features can change how consumers, clinicians, and app developers use smartwatch data, and they can influence whether Apple’s next watches stand out in a crowded wearables market.",
+          "dataSignals": [
+            "analytics workflow"
+          ],
+          "sourceLabel": "Analytics Insight · Aug 31, 2:25 AM ET",
+          "sourceUrl": "https://www.analyticsinsight.net/amp/story/news/apple-watch-series-12-ultra-4-could-get-new-health-tracking-features",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUzJ3WlBKZVYtVlFLcVZabGFER1JHTVhSLVRLYTJZWnV6Skd4TXNfWnJOWWQyZzA2YWdWcVRIRjBWMjk0bDQ3Q1NuRktSaU1LNHBLRWNXeGpNYXp2M3EwLUZMODJ5YmRCVkhxMUNhX0lCZnQtSlBvMktQMmFfUVdqd21sN3VlbXBtcllzRzRIMHdac0U2ZnVpV2hkUkpyT0d2cHItU0VVYjJmVENMUTBMTE9GNllGVFHSAbcBQVVfeXFMTVMyd1pQSmVWLVZRS3FWWmxhREdSR01YUi1US2EyWVp1ekpHeE1zX1pyTllkMmcwNmFnVnFUSEYwVjI5NGw0N0NTbkZLUmlNSzRwS0VjV3hqTWF6djNxMC1GTDgyeWJkQlZIcTFDYV9JQmZ0LUpQbzJLUDJhX1FXandtbDd1ZW1wbXJZc0c0SDB3WnNFNmZ1aVdoZFJKck9HdnByLVNFVWIyZlRDTFEwTExPRjZZRlRR?oc=5",
+          "publishedAt": "2026-08-31T06:25:45+00:00",
+          "glossary": [
+            {
+              "term": "Always-on",
+              "definition": "A feature that stays active continuously instead of turning on only when a user checks it."
+            },
+            {
+              "term": "Smartwatch",
+              "definition": "A wrist-worn computer that can show notifications, run apps, and track health or fitness data."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a product-rumor story, not a confirmed launch announcement, so the key thing to watch is the wording: \"could\" and \"rumored\" mean the features are not official yet. The interpretation would change if Apple confirms the exact health feature, because then the story would shift from speculation to a concrete product update with clearer implications for users and competitors.",
+            "glossary": [
+              {
+                "term": "Always-on",
+                "definition": "A feature that stays active continuously instead of turning on only when a user checks it.",
+                "whyItMatters": "If Apple adds an always-on health feature, it could make tracking more seamless and more useful throughout the day."
+              },
+              {
+                "term": "Smartwatch",
+                "definition": "A wrist-worn computer that can show notifications, run apps, and track health or fitness data.",
+                "whyItMatters": "The story is about new capabilities in Apple’s smartwatch line, so this is the device category being updated."
               }
             ]
           }
@@ -769,144 +936,190 @@
       "emptyMessage": "No qualified Louisville, Kentucky stories found in the last 24 hours.",
       "articles": [
         {
-          "id": "louisville-1-38463",
-          "title": "Louisville basketball coach Pat Kelsey throws first pitch at Slugger Field",
+          "id": "louisville-1-68243",
+          "title": "Kentucky's Alex Afari Jr. takes 5th-year eligibility fight to Louisville court Monday",
           "kicker": "WDRB",
-          "summary": "Louisville basketball coach Pat Kelsey appeared at Slugger Field for a special night, where he handed out bobbleheads and threw a strike on the first pitch. The description points to a promotional, community-facing event rather than a sports decision or business move. For Louisville readers, it signals a public-relations moment that ties a major local coach to another hometown sports venue.",
-          "emailSummary": "Louisville coach Pat Kelsey handed out bobbleheads and threw a strike during a special night at Slugger Field.",
-          "whyItMatters": "This matters because local sports figures often serve as visible connectors across Louisville teams and venues, shaping fan engagement and community interest.",
+          "summary": "A Jefferson County judge is set to return Monday morning to a rapidly expanding legal fight over fifth-year college eligibility involving Kentucky linebacker Alex Afari Jr. The case is being heard in Louisville and appears to center on whether Afari can keep playing in an additional college season. For the Louisville area, it is a local court dispute with implications for college athletics and player eligibility rules.",
+          "emailSummary": "A Jefferson County judge will return Monday morning to a rapidly expanding legal fight over fifth-year college eligibility, with Kentucky lineba…",
+          "whyItMatters": "This matters because a court ruling could affect whether a local college athlete can keep competing and may influence similar eligibility disputes beyond this one player.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Aug 29, 11:01 PM ET",
-          "sourceUrl": "https://www.wdrb.com/louisville-basketball-coach-pat-kelsey-throws-first-pitch-at-slugger-field/video_d8200da1-e058-5d71-a06f-3cf1bb8af403.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxObFQxREN3cDYwWFYyT3ZPN2FnM3c4X2xoNUlDNzJ5WDdmc215MjN3eU9XSU5BOWxjQVhRcHN6Nk9SRmozNXc0MnNqQVlSZVBIaDR5YlRkdTBRY3QzVXpRU0RRR0RrWmQ1LWdBMDVZdEFlaHFKMVRPOU1OLUFmMVNTQ09TZkJJU1hNdHp0d2o2eXl1NHpTalgtR05URXpvSVJEdmxURFNwMmJNV3FTMERqWWkyX3pXVE9XVTRTclFSVVJBYXU0U2dUaEVuaHQ2NVVfM083SkpkRm1nTW8?oc=5",
-          "publishedAt": "2026-08-30T03:01:00+00:00",
+          "sourceLabel": "WDRB · Aug 30, 1:43 PM ET",
+          "sourceUrl": "https://www.wdrb.com/sports/kentuckys-alex-afari-jr-takes-5th-year-eligibility-fight-to-louisville-court-monday/article_38eb9208-7161-4a76-9270-6c1472b4392e.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNZjNFV2FPNXZPZVpncHpramtuWmFfNFh2eC1RT1BDSkpWMFNSREZzQ0FMSkhvcF9mQW5JVnB2Rk04N3hJbDVkV05wa1ZNMF9iOE5ma29VbDZybXY3R2tUVW5YbTBHbVQxYTU0Vnkwd1pvMnpWWUlSemNFUkk4MmwxbnRtQlFpT1hjZzVsYlNuYkthSjMycUxiU1BVWTJRNVI5R1VqT2laRDRCUHhIOXE4UzE5QldTTjdVaUJLZUlvN0stcnNBdERDQndQWS1FZXFha3VzS2UtZDh6bzVUUndSV0ZZMnh0bVBHU3lhYi1QSHVXR1U?oc=5",
+          "publishedAt": "2026-08-30T17:43:00+00:00",
           "glossary": [
             {
-              "term": "first pitch",
-              "definition": "A ceremonial pitch thrown before a baseball game starts, usually by a guest or local celebrity."
-            },
-            {
-              "term": "bobbleheads",
-              "definition": "Collectible figurines with heads mounted on springs, often given away at sports games as promotional items."
-            },
-            {
-              "term": "Slugger Field",
-              "definition": "Louisville's baseball stadium, home to the city's professional baseball team."
+              "term": "fifth-year eligibility",
+              "definition": "A rule issue about whether a college athlete can play in a fifth season of competition instead of ending eligibility after the usual period."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a short local sports/community story focused on a public appearance, not a game result or coaching decision. When reading the source, pay attention to the event itself and the promotional context around it; if more detail appeared, it would change the interpretation from a simple appearance to something with broader team, fundraising, or civic implications.",
+            "explanationText": "This is a legal-and-sports story, not a game recap, so the key thing to watch is the judge’s decision and whether the dispute is about one player or a broader rule. The interpretation would change if the court issues an order that affects other athletes, schools, or eligibility standards beyond Alex Afari Jr.",
             "glossary": [
               {
-                "term": "first pitch",
-                "definition": "A ceremonial pitch thrown before a baseball game starts, usually by a guest or local celebrity.",
-                "whyItMatters": "It signals a public appearance meant to promote the event and build fan interest."
-              },
-              {
-                "term": "bobbleheads",
-                "definition": "Collectible figurines with heads mounted on springs, often given away at sports games as promotional items.",
-                "whyItMatters": "They are a common attendance incentive and part of team marketing."
-              },
-              {
-                "term": "Slugger Field",
-                "definition": "Louisville's baseball stadium, home to the city's professional baseball team.",
-                "whyItMatters": "It is the venue where the promotional appearance took place."
+                "term": "fifth-year eligibility",
+                "definition": "A rule issue about whether a college athlete can play in a fifth season of competition instead of ending eligibility after the usual period.",
+                "whyItMatters": "It determines whether a player may remain on the team and keep competing in games."
               }
             ]
           }
         },
         {
-          "id": "louisville-2-57491",
-          "title": "Valley High School students gather for vigil after classmate shot near Louisville bus stop",
+          "id": "louisville-2-69815",
+          "title": "Jack Harlow shares his love of reading by giving away free books at Louisville book store",
           "kicker": "WDRB",
-          "summary": "Valley High School students gathered at a Louisville bus stop on Saturday to remember a classmate who was shot on Tuesday. The report centers on the vigil and the school community’s response to the shooting. For Louisville, it points to a local safety and trauma issue affecting students and their families.",
-          "emailSummary": "Valley High School students gathered Saturday at a Louisville bus stop to remember their classmate after Tuesday.",
-          "whyItMatters": "This matters because violence near school transportation can affect student safety, attendance, and the sense of security around everyday routes in Louisville.",
+          "summary": "Jack Harlow gave away free books at a Louisville bookstore, drawing hundreds of fans who lined up for blocks in the heat to meet him. Fans were able to choose any book they wanted, up to $50. The event points to a celebrity-backed boost for a local bookstore and a simple literacy-friendly promotion that brought a large crowd downtown.",
+          "emailSummary": "Hundreds of fans wrapped around several blocks in the heat to get a chance to meet him. Fans could pick any book they wanted, up to $50, thanks…",
+          "whyItMatters": "This matters because a high-profile giveaway can drive traffic to a Louisville business while also putting books in more readers’ hands.",
           "dataSignals": [
             "Louisville local"
           ],
-          "sourceLabel": "WDRB · Aug 29, 10:45 PM ET",
-          "sourceUrl": "https://www.wdrb.com/news/valley-high-school-students-gather-for-vigil-after-classmate-shot-near-louisville-bus-stop/article_0b52c14d-65cd-45a2-bca3-c49d17137f6e.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQUk14WWRZMEZjMTFORGlyQTl1YmdDTVprclJyWF82OTAydzZ6YnB1RUJCclVTdUh6WkN5aWZPeXNlczlBQTRmZ0RGMDJ2R1doVGRFMmM2ZFJxYW1yM0xuUVYtcVFfOHdpSWV6RUphU3dMMkNkOHFlYzB6THlHWkF6S1pvM0M3ZjhKb2JuMmlIZVAwdlVHdFdMTkNXN2ZmLTNSREY1STJ5alpQLWFhRmJOenV5aUdFbldhcWNNc0RVQUxFdkw0TFRyYThReHJRMW12NGRvQjdZMk1HSjNuNkp3WTJmUXY4dFIwLWtPLWNUSS1DdGE0V0pEOUt3?oc=5",
-          "publishedAt": "2026-08-30T02:45:00+00:00",
-          "glossary": [],
-          "learningPage": {
-            "title": "What this means",
-            "explanationText": "This is a community-response story tied to a violent incident, so the key thing to watch is what is actually confirmed about when and where the vigil happened and what event it was honoring. If you read further, the details that would most change the interpretation are who was involved, whether anyone was arrested or charged, and whether the shooting was random or targeted.",
-            "glossary": []
-          }
-        },
-        {
-          "id": "louisville-4-62501",
-          "title": "Suspect detained after a man was shot in the leg in Louisville's Southside neighborhood",
-          "kicker": "WDRB",
-          "summary": "Louisville Metro Police say a man was shot in the leg just after 5 a.m. Saturday in the 100 block of Hartwell Court in the Southside neighborhood. LMPD Officer Chris Baker said a suspect was detained after the shooting. Based on the provided details, this is a local public-safety incident with an immediate police response.",
-          "emailSummary": "LMPD Officer Chris Baker said the shooting happened just after 5 a.m. Saturday morning at the 100 block of Hartwell Court.",
-          "whyItMatters": "This matters because shootings can affect neighborhood safety, police resources, and residents’ sense of security in the Southside area.",
-          "dataSignals": [
-            "Louisville local"
-          ],
-          "sourceLabel": "WDRB · Aug 29, 9:06 AM ET",
-          "sourceUrl": "https://www.wdrb.com/news/crime-reports/suspect-detained-after-a-man-was-shot-in-the-leg-in-louisvilles-southside-neighborhood/article_0e7e5c30-3031-43e5-880d-18fe222d34cd.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOc2RKSzB5NnhBUlZ5ZHNZUEhBRzFvOXBWeElzMmh1a0lsR0FiSF8yWlBjamRmbENOd0o0cDJRdXQtZ2JtYW5tTzdkWnVub1pCN0JOMDVaMlpDV3ZSemJra3pxcDJ4Vkg3SU90VGJSVnFkQUZ6bzJUWVdoNFU3a1BhRS1QYUttcW5SWjYxUkFRMU9mUjU4T2ZhX2pFRHVNNGlEMWlzUWNMUUNidDNZZUU4S1hLTnpIV0tyLUZmd1JITnkxQWk3MzNtaFROZm40d0JITnVqUjB2NVJCZXROZHlxT3BEcE9RZE1QdS01b19rVGdqbjc4aWdJcGFWMmZyazZ0aENKR1pOYw?oc=5",
-          "publishedAt": "2026-08-29T13:06:00+00:00",
+          "sourceLabel": "WDRB · Aug 30, 8:14 PM ET",
+          "sourceUrl": "https://www.wdrb.com/news/jack-harlow-shares-his-love-of-reading-by-giving-away-free-books-at-louisville-book/article_1f4ab178-94ab-4205-85b0-51fa925a00c1.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOU3hnTXdBTjV3b0tuaElFVzJNVl9uZHh4UEcybGU0SE16b3VvdEVPYTVzRHNSUzYyclYyeXJmVjVWX01JcjVyRFE1MEM1VkI2ZmhCemNVbDREOFhJUWh2bnpJWlRLTTVGa1NITWNjZlZ6R09qN0dBd3NVZlZXRHlSZEVrYWNBRi1fcFhhVW5XcDhqd2lVaDctT3Q3dDhaN3FvV01saF9GYkZXT3ZoRTRSdVBZNUIySkZPMURCNXRzLU9Lc2ZEN0gxQVh4UVFCQXVTOVRYZnZrSHdMb09qb2JXS3lNcTkxdWx0VDdTWEcxUDk?oc=5",
+          "publishedAt": "2026-08-31T00:14:00+00:00",
           "glossary": [
             {
-              "term": "LMPD",
-              "definition": "Louisville Metro Police Department, the city’s police force."
-            },
-            {
-              "term": "detained",
-              "definition": "Held by police for questioning or control, but not necessarily formally arrested or charged."
+              "term": "bookstore",
+              "definition": "A retail shop that sells books."
             }
           ],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a breaking local crime story, so the key thing to watch is the confirmed facts: time, place, the injury reported, and what police say about the suspect. Any later reporting could change the interpretation if charges are filed, if the detention becomes an arrest, or if police clarify whether the shooting was targeted or accidental.",
+            "explanationText": "This is a local community/event story centered on a celebrity appearance and a bookstore promotion. When reading the source, focus on the scale of the turnout, the book giveaway terms, and whether the event was mainly about fan engagement, literacy support, or business promotion. What would change the interpretation is any detail about who funded the books, whether the books were free to everyone or only fans who met him, and whether the event was tied to a larger campaign.",
             "glossary": [
               {
-                "term": "LMPD",
-                "definition": "Louisville Metro Police Department, the city’s police force.",
-                "whyItMatters": "It identifies which agency is handling the response and any follow-up investigation."
-              },
-              {
-                "term": "detained",
-                "definition": "Held by police for questioning or control, but not necessarily formally arrested or charged.",
-                "whyItMatters": "It signals that police had identified someone connected to the incident, but the legal outcome may still change."
+                "term": "bookstore",
+                "definition": "A retail shop that sells books.",
+                "whyItMatters": "The story centers on a local bookstore serving as the venue for the giveaway."
               }
             ]
           }
         },
         {
-          "id": "louisville-5-64094",
-          "title": "6 Best Towns Near Louisville For Retirees",
-          "kicker": "WorldAtlas",
-          "summary": "WorldAtlas highlights six towns within two hours of Louisville as appealing places for retirees. The towns are described as combining affordable homes, walkable history, river trails, and senior services for Kentucky retirees. For the Louisville area, the piece points to nearby retirement options that mix lower housing costs with amenities that may matter to older residents.",
-          "emailSummary": "Six towns within two hours of Louisville pair affordable homes with walkable history, river trails, and senior services built for Kentucky retir…",
-          "whyItMatters": "This matters because it can shape where retirees choose to live, which affects local housing demand, service needs, and regional population patterns around Louisville.",
+          "id": "louisville-3-47848",
+          "title": "$100M Northern Kentucky development with 2 hotels, corporate headquarters moves forward",
+          "kicker": "WKRC",
+          "summary": "A $100 million development in Northern Kentucky is moving forward and is planned to include two hotels and a corporate headquarters. The project is expected to create 145 new jobs and generate $9.8 million in annual payroll for Florence. For the Louisville area, this points to continued business and hospitality growth just across the river, with job and payroll gains concentrated in Northern Kentucky.",
+          "emailSummary": "The development will create 145 new jobs and $9.8 million in annual payroll for Florence.",
+          "whyItMatters": "This matters because a large mixed-use project with new jobs and payroll can strengthen the regional economy and affect travel, lodging, and business activity in the Louisville metro area.",
           "dataSignals": [
-            "Louisville local"
+            "development / economy"
           ],
-          "sourceLabel": "WorldAtlas · Aug 29, 8:30 AM ET",
-          "sourceUrl": "https://www.worldatlas.com/cities/6-best-towns-near-louisville-for-retirees.html",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONnVqakd0eDlWWkxnY1h2aF9Tb0g2SlVVWmFGa0JURzdqZVNjSVBmMDVBQ3hRd2tYM2ZIUmh1VmJwOWxTekd5WXoyZ0hXLUNpRzJ1b1pRbm1oS21OTVk1UkYzMkF5cFN2UFF4aTI3ZDQzZVVuclpWblA2ZkgwV0tweGt0bEhlVHM?oc=5",
-          "publishedAt": "2026-08-29T12:30:00+00:00",
+          "sourceLabel": "WKRC · Aug 31, 1:58 AM ET",
+          "sourceUrl": "https://local12.com/news/local/100-million-northern-kentucky-development-hotels-corporate-headquarters-athena-hospitality-houston-road-turfway",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNeWY0U2cxdENINEt1Ykw2YUhFUFBtREItZ2d0Zm5SRGxxWmZReWp2ZVA3OUpLQXQ4cFBDUHBtdFdEQllNemg4d1pZYWFLc3JseVpiaFU5UjR1c1l0c0RRRnEwSzBldXZBM1pWMmdjUDNpYTQwb3otb295YjBzT2ZQSmJSd2NqOUFzVlFCZURuX05Qd25yRmg0R3RFRlFfZEwwcWhQdnkzUFE4NGNSLTJhdURlV3RPaWR6ampRVkx4MXBaUXFpZ0RIVDBVQ3BDRWliUUZqdEhPYzdNQQ?oc=5",
+          "publishedAt": "2026-08-31T05:58:31+00:00",
+          "glossary": [
+            {
+              "term": "corporate headquarters",
+              "definition": "The main office where a company’s top leaders and central functions are based."
+            },
+            {
+              "term": "annual payroll",
+              "definition": "The total amount a business expects to pay workers in wages and salaries over one year."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a local economic development story, so the key things to watch are the scale of the project, the types of buildings involved, and the promised job and payroll numbers. Those details help show whether the development is mainly about hospitality, office growth, or both. If the final project changes in size, job count, or tenant mix, that would change how meaningful the impact is for the region.",
+            "glossary": [
+              {
+                "term": "corporate headquarters",
+                "definition": "The main office where a company’s top leaders and central functions are based.",
+                "whyItMatters": "It usually brings higher-paying office jobs and can attract related business activity."
+              },
+              {
+                "term": "annual payroll",
+                "definition": "The total amount a business expects to pay workers in wages and salaries over one year.",
+                "whyItMatters": "It gives a rough sense of how much income a project will inject into the local economy."
+              }
+            ]
+          }
+        },
+        {
+          "id": "louisville-4-83832",
+          "title": "CRAWFORD | The Unveiling: Will Stein has remade Kentucky. Now we find out what he built",
+          "kicker": "WDRB",
+          "summary": "Will Stein is described as having remade Kentucky, and now the piece says it is time to see what he actually built. The description uses a football metaphor, saying he has been one of the best \"chefs\" in college football for three years and now \"owns the restaurant,\" which suggests a bigger role and more direct responsibility. The basic takeaway is that this is a look at what his work has produced and what that might mean going forward.",
+          "emailSummary": "For three years, Will Stein has been one of the best chefs in college football. Now he owns the restaurant. This is different.",
+          "whyItMatters": "This matters because it frames whether the success was mostly tied to Stein’s ideas and leadership, which helps readers judge how durable that success might be if the situation changes.",
+          "dataSignals": [
+            "article trigger",
+            "source credibility",
+            "practical impact"
+          ],
+          "sourceLabel": "WDRB · Aug 30, 6:00 AM ET",
+          "sourceUrl": "https://www.wdrb.com/sports/uk-sports/crawford-the-unveiling-will-stein-has-remade-kentucky-now-we-find-out-what-he-built/article_2f9ab424-6566-4e59-84b2-1fea2fc26ba9.html",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOX2EyWk9yWEhHUTNlUGY3WEVZbFVwcHdiX0Q1NXVKc01DdlEzYXF1T25YaW42TVZUN2pkLVpoX3d6R3NBam9OTjhCcmJjRWVEb0djcTI3b3Y2ZnByT1pRZk4xN05BRDZqQWxEOUZKT0xIYkk5MkMzWVpGbG9FQTVGc1pJb0tzZHdjUmNoWER1QjVtLUZ1UHJtalJWTDBEbDk3ZkFEakgtcHdfMFhqcmt1em9uX2thTDJ2TjZSWWl1ODFPZDc1ZUQtb0F5bTYxY0JoZXJKWWxvek8zUWpVRUFiSFByQjR3aU1RVE5YZ0p4bElfckhscG1vc1dlcGhmSS1H?oc=5",
+          "publishedAt": "2026-08-30T10:00:00+00:00",
           "glossary": [],
           "learningPage": {
             "title": "What this means",
-            "explanationText": "This is a lifestyle and relocation guide, not a policy or breaking-news story. When reading it, pay attention to the criteria being used to rank the towns — affordability, walkability, outdoor access, and senior support — because those are the features driving the recommendation. If any town in the full story lacks one of those features, that would change how strong the case is for retirees.",
+            "explanationText": "This is a commentary or analysis-style sports story rather than a straight news brief, so the key thing to watch is the author’s argument about credit and control. The metaphor suggests a shift from contributing within someone else’s setup to being fully responsible for the result. What would change the interpretation is evidence that the success came from Stein personally versus from the broader system around him.",
             "glossary": []
+          }
+        },
+        {
+          "id": "louisville-5-80962",
+          "title": "NKY Chamber presents monthly Community Award to St. Elizabeth Healthcare",
+          "kicker": "Northern Kentucky Tribune",
+          "summary": "The Northern Kentucky Chamber of Commerce gave St. Elizabeth Healthcare its Northern Kentucky Community Award during the chamber’s August Board of Directors/Board of Advisors meeting. The recognition signals that the organization was singled out by the local business community for its community contribution, although the source does not say what specific work earned the award.",
+          "emailSummary": "Staff report The Northern Kentucky Chamber of Commerce presented St. Elizabeth Healthcare with the Northern Kentucky Community Award during its…",
+          "whyItMatters": "This matters because local awards can signal which employers and institutions are being recognized for community impact, which can affect reputation and partnerships in the Louisville-area regional market.",
+          "dataSignals": [
+            "healthcare angle"
+          ],
+          "sourceLabel": "Northern Kentucky Tribune · Aug 31, 12:36 AM ET",
+          "sourceUrl": "https://nkytribune.com/2026/08/nky-chamber-presents-monthly-community-award-to-st-elizabeth-healthcare/",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONzlDbUFLU09md0JMclZ5WXQ4OWIycmFMTGFmcmZBeGhuZkV1aVFKZjFHQWw3NDJ5d2VZX3lLeC1hS19BOVdqZTliREhuWUhncVZLMUxXODlXbE40Ym9LN2hHX2NHd3JkOG9mcjA2LUxnUURITnliT2M1Y3ZuQWhIOXZGVlg5cFhUWnd2QW1ZV3pXU21ScU9pOWxQTW95c0JHMEhXS3Zn?oc=5",
+          "publishedAt": "2026-08-31T04:36:10+00:00",
+          "glossary": [
+            {
+              "term": "Northern Kentucky Chamber of Commerce",
+              "definition": "A business organization that represents and supports companies in the Northern Kentucky region."
+            },
+            {
+              "term": "Board of Directors",
+              "definition": "The group of people who oversee an organization’s strategy and major decisions."
+            },
+            {
+              "term": "Board of Advisors",
+              "definition": "A group that gives guidance and perspective to an organization, usually without direct governing power."
+            }
+          ],
+          "learningPage": {
+            "title": "What this means",
+            "explanationText": "This is a brief recognition story, not a policy or earnings story. When reading the source, pay attention to who is giving the award, who received it, and whether the article explains the reason for the honor. If later reporting adds the criteria or the specific community work being recognized, that would change how meaningful the award appears.",
+            "glossary": [
+              {
+                "term": "Northern Kentucky Chamber of Commerce",
+                "definition": "A business organization that represents and supports companies in the Northern Kentucky region.",
+                "whyItMatters": "It is the group making the recognition, so it shows who is signaling community value in the region."
+              },
+              {
+                "term": "Board of Directors",
+                "definition": "The group of people who oversee an organization’s strategy and major decisions.",
+                "whyItMatters": "Knowing this helps explain why the award was presented at a formal governance meeting."
+              },
+              {
+                "term": "Board of Advisors",
+                "definition": "A group that gives guidance and perspective to an organization, usually without direct governing power.",
+                "whyItMatters": "It indicates the award was announced in a business-leadership setting, not a public ceremony."
+              }
+            ]
           }
         }
       ]
     }
   ],
   "errors": [
+    "ai: skipped 2 stories with no fetchable content",
+    "energy: skipped 2 stories with no fetchable content",
     "kentucky_healthcare: skipped 1 story with no fetchable content",
-    "analytics: skipped 1 story with no fetchable content",
-    "louisville: skipped 6 stories with no fetchable content"
+    "louisville: skipped 9 stories with no fetchable content"
   ]
 }
